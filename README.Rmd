@@ -31,3 +31,4 @@ Type URL with filename, e.g., <href src="https://fawda123.github.io/oss2017_synt
 ### Info
 
 * `data-raw` - put raw data files here, e.g., .xlsx., .txt., .csv
+* `R` - R scripts

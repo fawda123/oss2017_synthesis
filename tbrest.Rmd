@@ -5,11 +5,17 @@ output:
   keep_md: yes
 ---
 
-```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
+Load libraries:
+```{r message = F, warning = F}
 library(tidyverse)
 library(readxl)
 library(ggmap)
+library(lubridate)
+```
 
+Barplots of restoration projects by category, year:
+
+```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
 fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 dat <- fl %>% 
   read_csv %>% 
@@ -49,6 +55,8 @@ ggplot(dat, aes(acre, group = tech, fill = tech)) +
   )
 ```
 
+Map of restoration sites and acreage reported:
+
 ```{r warning = F, message = F, fig.width = 6, fig.height = 6}  
 toplo <- filter(dat, lat > 27.3 & lat < 28.2)  
 
@@ -67,6 +75,8 @@ pbase <- ggmap(map) +
   scale_size(range = c(2, 11))
 pbase
 ````
+
+Load data:
 
 ```{r warning = F, message = F, fig.width = 8, fig.height = 6}
 loads <- read_excel('data-raw/loads.xlsx')
@@ -97,5 +107,104 @@ ggplot(dat, aes(x = yr, y = val, group = yr)) +
   scale_y_log10('kg or m3 per month')
 
 ```
+
+WQ data:
+
+```{r warning = F, message = F}
+wqdat_raw <- read_csv('data-raw/epchc_clean_data_07162017.csv')
+
+# rename, select relevant columns, integrate variables across depths
+# annual averages by site, variable
+wqdat <- wqdat_raw %>% 
+  rename(
+    yr = YEAR,
+    mo = month,
+    dttm = SampleTime,
+    stat = epchc_station, 
+    lat = Latitude, 
+    lon = Longitude, 
+    seg = bay_segment, 
+    sallo = Sal_Bottom_ppth, 
+    salmd = Sal_Mid_ppth,
+    salhi = Sal_Top_ppth, 
+    dolo = DO_Bottom_mg_L,
+    domd = DO_Mid_mg_L, 
+    dohi = DO_Top_mg_L,
+    chla = chl_a
+  ) %>% 
+  select(stat, yr, mo, dttm, lat, lon, seg, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
+  gather('var', 'val', sallo:chla) %>% 
+  mutate(val = as.numeric(val)) %>% 
+  spread('var', 'val') %>% 
+  rowwise() %>%
+  mutate(
+    sal = mean(c(sallo, salmd, salhi), na.rm = TRUE),
+    do = mean(c(dolo, domd, dohi), na.rm = TRUE)
+  ) %>%
+  select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
+  gather('var', 'val', chla:do) %>% 
+  group_by(stat, yr, seg, var, lat, lon) %>% 
+  summarise(val = mean(val, na.rm = TRUE)) %>% 
+  ungroup %>% 
+  mutate(
+    yrcat = cut(yr, 
+      breaks = c(-Inf, 1985, 1995, 2005, Inf), 
+      labels = c('1975-1985', '1986-1995', '1996-2005', '2005-2016')
+    )
+  )
+```
+
+Plot of ten-year averages:
+```{r message = F, warning = F, fig.width = 8, fig.height = 11}
+# take ten-year averages
+wqdat_ten <- wqdat %>%
+  group_by(stat, yrcat, seg, lat, lon, var) %>% 
+  summarise(val = mean(val, na.rm = TRUE))
+
+# extent
+ext <- make_bbox(wqdat_ten$lon, wqdat_ten$lat)
+map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
+
+# base map
+pbase <- ggmap(map) +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  ) +
+  guides(fill=guide_legend(''), size = guide_legend('')) 
+colpal <- 'Set2'
+
+# do map
+doplo <- filter(wqdat_ten, var %in% 'do')
+pbase + 
+  geom_point(data = doplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
+  scale_size('', range = c(2, 11)) + 
+  scale_fill_distiller(palette = colpal) +
+  facet_wrap(~yrcat) + 
+  guides(fill=guide_legend(''), size = guide_legend('')) +
+  ggtitle('DO mg/L') 
+
+# sal map
+salplo <- filter(wqdat_ten, var %in% 'sal')
+pbase + 
+  geom_point(data = salplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
+  scale_size('', range = c(2, 11)) + 
+  scale_fill_distiller(palette = colpal) +
+  facet_wrap(~yrcat) + 
+  guides(fill=guide_legend(''), size = guide_legend('')) +
+  ggtitle('Sal ppt') 
+
+# do map
+chlplo <- filter(wqdat_ten, var %in% 'chla')
+pbase + 
+  geom_point(data = chlplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
+  scale_size('', range = c(2, 11)) + 
+  scale_fill_distiller(palette = colpal) +
+  facet_wrap(~yrcat) +
+  ggtitle('Chl-a ug/L') 
+
+```
+
 
          
