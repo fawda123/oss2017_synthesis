@@ -12,7 +12,7 @@ output:
 
 ### Getting the repo
 
-```{bash}
+```bash
 
 # do this to get the repo
 git clone https://www.github.com/fawda13/oss2017_synthesis.git
