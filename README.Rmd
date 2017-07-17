@@ -24,6 +24,9 @@ git add -A
 git commit -m "informative message"
 git push
 ```
+### View info online
+
+Type URL with filename, e.g., <href src="https://fawda123.github.io/oss2017_synthesis/tbrest">https://fawda123.github.io/oss2017_synthesis/tbrest</href>
 
 ### Info
 
