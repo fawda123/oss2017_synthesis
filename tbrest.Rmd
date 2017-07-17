@@ -1,0 +1,101 @@
+---
+title: "Exploratory plots of restoration activities in TB"
+output: 
+  html_document:
+  keep_md: yes
+---
+
+```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
+library(tidyverse)
+library(readxl)
+library(ggmap)
+
+fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
+dat <- fl %>% 
+  read_csv %>% 
+  select(Latitude, Longitude, Project_Completion_Date, `Restoration Category`, `Activity-1`, `Acres-1`) %>% 
+  rename(
+    lat = Latitude, 
+    lon = Longitude, 
+    date = Project_Completion_Date, 
+    tech = `Restoration Category`, 
+    type = `Activity-1`, 
+    acre = `Acres-1`
+  ) %>% 
+  mutate(
+    lat = as.numeric(lat),
+    lon = as.numeric(lon),
+    date = as.numeric(date),
+    tech = toupper(tech)
+  )
+head(dat)
+
+ggplot(dat, aes(tech, group = date, fill = factor(date))) + 
+  geom_bar(position = 'dodge') + 
+  theme_bw() + 
+  coord_flip() + 
+  theme(
+    axis.title.x = element_blank(), 
+    legend.title = element_blank()
+    )
+
+ggplot(dat, aes(acre, group = tech, fill = tech)) + 
+  geom_histogram() + 
+  scale_x_log10('Acres') + 
+  facet_wrap(~tech) + 
+  theme_bw() + 
+  theme(
+    legend.position = 'none'
+  )
+```
+
+```{r warning = F, message = F, fig.width = 6, fig.height = 6}  
+toplo <- filter(dat, lat > 27.3 & lat < 28.2)  
+
+# extent
+ext <- make_bbox(toplo$lon, toplo$lat)
+map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
+
+# base map
+pbase <- ggmap(map) +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  ) +
+  geom_point(data = toplo, aes(size = acre, fill = tech), pch = 21, colour = 'black', alpha = 0.8) + 
+  scale_size(range = c(2, 11))
+pbase
+````
+
+```{r warning = F, message = F, fig.width = 8, fig.height = 6}
+loads <- read_excel('data-raw/loads.xlsx')
+
+dat <- loads %>% 
+  filter(!`Bay Segment` %in% c(5, 6, 7)) %>% 
+  rename(
+    seg = `Bay Segment`,
+    h2o = `H2O Load (m3/month)`,
+    tn = `TN Load (kg/month)`,
+    tp = `TP Load (kg/month)`, 
+    tss = `TSS Load (kg/month)`,
+    bod = `BOD Load (kg/month)`, 
+    yr = Year, 
+    mo = Month
+    ) %>% 
+  gather('var', 'val', h2o:bod) %>% 
+  mutate(
+    val = as.numeric(val),
+    seg = factor(seg, levels = c('1', '2', '3', '4'), labels = c('OTB', 'HB', 'MTB', 'LTB'))
+    ) %>% 
+  group_by(seg, yr, mo, var) %>% 
+  summarise(val = sum(val, na.rm = TRUE))
+
+ggplot(dat, aes(x = yr, y = val, group = yr)) + 
+  geom_boxplot() + 
+  facet_grid(var~seg, scales = 'free_y') + 
+  scale_y_log10('kg or m3 per month')
+
+```
+
+         
