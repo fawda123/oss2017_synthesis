@@ -1,0 +1,951 @@
+HeaderID,Bay_Segment
+8,Hillsborough Bay
+10,Hillsborough Bay
+11,Hillsborough Bay
+14,Hillsborough Bay
+15,Hillsborough Bay
+16,Hillsborough Bay
+17,Hillsborough Bay
+19,Hillsborough Bay
+20,Hillsborough Bay
+21,Hillsborough Bay
+22,Hillsborough Bay
+23,Hillsborough Bay
+25,Hillsborough Bay
+26,Hillsborough Bay
+27,Hillsborough Bay
+28,Hillsborough Bay
+29,Hillsborough Bay
+30,Hillsborough Bay
+31,Hillsborough Bay
+32,Hillsborough Bay
+33,Hillsborough Bay
+34,Middle Tampa Bay
+35,Hillsborough Bay
+36,Hillsborough Bay
+37,Hillsborough Bay
+38,Hillsborough Bay
+39,Hillsborough Bay
+40,Hillsborough Bay
+41,Hillsborough Bay
+42,Hillsborough Bay
+43,Hillsborough Bay
+44,Hillsborough Bay
+45,Hillsborough Bay
+46,Hillsborough Bay
+47,Hillsborough Bay
+48,Old Tampa Bay
+49,Old Tampa Bay
+50,Old Tampa Bay
+51,Old Tampa Bay
+53,Old Tampa Bay
+55,Old Tampa Bay
+56,Old Tampa Bay
+57,Old Tampa Bay
+58,Old Tampa Bay
+59,Old Tampa Bay
+60,Old Tampa Bay
+61,Old Tampa Bay
+62,Old Tampa Bay
+64,Old Tampa Bay
+65,Old Tampa Bay
+66,Old Tampa Bay
+67,Old Tampa Bay
+68,Old Tampa Bay
+69,Old Tampa Bay
+70,Old Tampa Bay
+71,Boca Ciega Bay
+72,Old Tampa Bay
+73,Old Tampa Bay
+74,Old Tampa Bay
+77,Middle Tampa Bay
+78,Middle Tampa Bay
+80,Middle Tampa Bay
+81,Middle Tampa Bay
+82,Middle Tampa Bay
+84,Middle Tampa Bay
+85,Middle Tampa Bay
+86,Middle Tampa Bay
+87,Lower Tampa Bay
+88,Lower Tampa Bay
+89,Lower Tampa Bay
+90,Lower Tampa Bay
+91,Manatee River
+92,Manatee River
+93,Lower Tampa Bay
+94,Boca Ciega Bay
+95,Lower Tampa Bay
+96,Lower Tampa Bay
+97,Lower Tampa Bay
+98,Boca Ciega Bay
+99,Boca Ciega Bay
+100,Boca Ciega Bay
+101,Boca Ciega Bay
+102,Boca Ciega Bay
+103,Boca Ciega Bay
+104,Boca Ciega Bay
+105,Boca Ciega Bay
+106,Boca Ciega Bay
+107,Boca Ciega Bay
+108,Boca Ciega Bay
+109,Boca Ciega Bay
+110,Boca Ciega Bay
+112,Boca Ciega Bay
+113,Boca Ciega Bay
+115,Old Tampa Bay
+116,Old Tampa Bay
+122,Hillsborough Bay
+123,Hillsborough Bay
+124,Boca Ciega Bay
+125,Middle Tampa Bay
+126,Middle Tampa Bay
+127,Old Tampa Bay
+128,Boca Ciega Bay
+129,Boca Ciega Bay
+130,Boca Ciega Bay
+131,Boca Ciega Bay
+132,Boca Ciega Bay
+133,Old Tampa Bay
+134,Old Tampa Bay
+135,Old Tampa Bay
+139,Old Tampa Bay
+140,Old Tampa Bay
+141,Old Tampa Bay
+142,Old Tampa Bay
+143,Old Tampa Bay
+144,Old Tampa Bay
+145,Old Tampa Bay
+146,Old Tampa Bay
+147,Old Tampa Bay
+148,Hillsborough Bay
+149,Hillsborough Bay
+158,Hillsborough Bay
+166,All Segments
+172,Hillsborough Bay
+174,All Segments
+194,Middle Tampa Bay
+195,Old Tampa Bay
+196,Middle Tampa Bay
+197,Middle Tampa Bay
+198,Middle Tampa Bay
+218,All Segments
+219,All Segments
+220,Hillsborough Bay
+246,All Segments
+250,Middle Tampa Bay
+253,Hillsborough Bay
+254,Not Entered
+255,Hillsborough Bay
+256,Not Entered
+258,Old Tampa Bay
+259,Hillsborough Bay
+261,Not Entered
+265,Hillsborough Bay
+269,Not Entered
+272,Not Entered
+273,Not Entered
+275,Middle Tampa Bay
+282,All Segments
+283,All Segments
+284,Old Tampa Bay
+286,Hillsborough Bay
+288,Hillsborough Bay
+293,Hillsborough Bay
+294,Hillsborough Bay
+295,Hillsborough Bay
+296,Hillsborough Bay
+298,Hillsborough Bay
+331,Boca Ciega Bay
+332,Boca Ciega Bay
+333,Boca Ciega Bay
+334,Boca Ciega Bay
+354,Boca Ciega Bay
+358,Boca Ciega Bay
+364,Boca Ciega Bay
+365,Boca Ciega Bay
+367,Middle Tampa Bay
+369,All Segments
+370,Boca Ciega Bay
+371,Boca Ciega Bay
+372,Boca Ciega Bay
+373,Boca Ciega Bay
+374,Boca Ciega Bay
+375,Boca Ciega Bay
+377,Boca Ciega Bay
+378,All Segments
+394,Hillsborough Bay
+395,Hillsborough Bay
+396,Hillsborough Bay
+397,Hillsborough Bay
+398,Hillsborough Bay
+399,Hillsborough Bay
+400,Hillsborough Bay
+401,Hillsborough Bay
+402,Hillsborough Bay
+403,Hillsborough Bay
+404,Hillsborough Bay
+405,All Segments
+415,All Segments
+419,All Segments
+421,All Segments
+430,All Segments
+431,All Segments
+432,All Segments
+433,All Segments
+435,All Segments
+436,All Segments
+438,All Segments
+441,All Segments
+443,All Segments
+446,All Segments
+447,All Segments
+449,All Segments
+451,All Segments
+453,All Segments
+454,Lower Tampa Bay
+455,All Segments
+456,Hillsborough Bay
+457,Hillsborough Bay
+458,Hillsborough Bay
+459,Hillsborough Bay
+460,All Segments
+461,Hillsborough Bay
+462,Middle Tampa Bay
+463,Hillsborough Bay
+464,Old Tampa Bay
+465,Old Tampa Bay
+466,Old Tampa Bay
+467,Old Tampa Bay
+468,Lower Tampa Bay
+470,Boca Ciega Bay
+471,Boca Ciega Bay
+472,Boca Ciega Bay
+473,Old Tampa Bay
+474,Boca Ciega Bay
+475,Boca Ciega Bay
+476,Boca Ciega Bay
+477,Old Tampa Bay
+478,Middle Tampa Bay
+479,Old Tampa Bay
+480,Boca Ciega Bay
+481,Old Tampa Bay
+482,Old Tampa Bay
+483,Old Tampa Bay
+484,Old Tampa Bay
+485,Old Tampa Bay
+486,Old Tampa Bay
+487,Hillsborough Bay
+488,Hillsborough Bay
+489,Hillsborough Bay
+490,Hillsborough Bay
+491,Hillsborough Bay
+492,Hillsborough Bay
+494,Hillsborough Bay
+495,Hillsborough Bay
+496,Hillsborough Bay
+497,Lower Tampa Bay
+498,Hillsborough Bay
+499,Old Tampa Bay
+500,Middle Tampa Bay
+501,Manatee River
+502,Hillsborough Bay
+504,Boca Ciega Bay
+505,Old Tampa Bay
+506,Old Tampa Bay
+507,Boca Ciega Bay
+508,Old Tampa Bay
+509,Middle Tampa Bay
+510,Middle Tampa Bay
+511,Old Tampa Bay
+512,Old Tampa Bay
+514,Hillsborough Bay
+515,Boca Ciega Bay
+516,Middle Tampa Bay
+519,Hillsborough Bay
+520,Middle Tampa Bay
+521,Hillsborough Bay
+522,Hillsborough Bay
+523,All Segments
+524,Old Tampa Bay
+525,Middle Tampa Bay
+526,Hillsborough Bay
+527,All Segments
+528,All Segments
+529,Terra Ceia Bay
+530,All Segments
+531,All Segments
+532,All Segments
+533,Boca Ciega Bay
+534,Hillsborough Bay
+535,Hillsborough Bay
+536,Old Tampa Bay
+537,Middle Tampa Bay
+538,Hillsborough Bay
+539,Middle Tampa Bay
+540,Hillsborough Bay
+541,Middle Tampa Bay
+542,Old Tampa Bay
+543,Lower Tampa Bay
+544,Middle Tampa Bay
+545,Old Tampa Bay
+546,Boca Ciega Bay
+547,Old Tampa Bay
+548,Old Tampa Bay
+549,Lower Tampa Bay
+550,Boca Ciega Bay
+551,All Segments
+552,All Segments
+553,All Segments
+554,All Segments
+555,All Segments
+556,All Segments
+557,Old Tampa Bay
+558,All Segments
+559,All Segments
+560,All Segments
+561,Lower Tampa Bay
+562,Boca Ciega Bay
+563,Old Tampa Bay
+564,Hillsborough Bay
+565,Boca Ciega Bay
+566,Hillsborough Bay
+567,All Segments
+568,Hillsborough Bay
+569,All Segments
+570,Hillsborough Bay
+571,Hillsborough Bay
+572,Boca Ciega Bay
+573,Boca Ciega Bay
+574,Old Tampa Bay
+575,Middle Tampa Bay
+576,Boca Ciega Bay
+577,Lower Tampa Bay
+578,Middle Tampa Bay
+579,Hillsborough Bay
+580,All Segments
+581,All Segments
+582,Old Tampa Bay
+583,Hillsborough Bay
+584,Terra Ceia Bay
+585,Hillsborough Bay
+586,All Segments
+587,All Segments
+588,All Segments
+589,All Segments
+590,Hillsborough Bay
+591,Hillsborough Bay
+592,Hillsborough Bay
+593,Terra Ceia Bay
+594,All Segments
+595,All Segments
+596,Hillsborough Bay
+597,Boca Ciega Bay
+598,Boca Ciega Bay
+599,All Segments
+600,Hillsborough Bay
+601,Hillsborough Bay
+602,Hillsborough Bay
+603,All Segments
+604,Hillsborough Bay
+605,All Segments
+606,Lower Tampa Bay
+607,Middle Tampa Bay
+608,All Segments
+609,All Segments
+610,All Segments
+611,Lower Tampa Bay
+612,Hillsborough Bay
+613,Hillsborough Bay
+614,Hillsborough Bay
+615,Middle Tampa Bay
+616,All Segments
+617,Hillsborough Bay
+618,All Segments
+619,Old Tampa Bay
+620,All Segments
+621,Terra Ceia Bay
+622,Old Tampa Bay
+623,All Segments
+624,All Segments
+625,Hillsborough Bay
+626,All Segments
+627,Old Tampa Bay
+628,All Segments
+629,All Segments
+630,Hillsborough Bay
+631,All Segments
+632,Lower Tampa Bay
+633,Lower Tampa Bay
+634,Old Tampa Bay
+635,All Segments
+636,All Segments
+637,Hillsborough Bay
+638,Hillsborough Bay
+639,Middle Tampa Bay
+640,All Segments
+641,Hillsborough Bay
+642,All Segments
+643,Lower Tampa Bay
+644,Boca Ciega Bay
+645,All Segments
+646,Old Tampa Bay
+647,Old Tampa Bay
+648,Middle Tampa Bay
+649,Lower Tampa Bay
+650,Middle Tampa Bay
+651,Old Tampa Bay
+652,Old Tampa Bay
+653,Boca Ciega Bay
+654,Hillsborough Bay
+655,Hillsborough Bay
+656,Middle Tampa Bay
+657,All Segments
+658,Old Tampa Bay
+659,Hillsborough Bay
+660,Lower Tampa Bay
+661,All Segments
+662,All Segments
+663,Hillsborough Bay
+664,Terra Ceia Bay
+665,Middle Tampa Bay
+666,Hillsborough Bay
+667,Boca Ciega Bay
+668,Hillsborough Bay
+669,Boca Ciega Bay
+671,Boca Ciega Bay
+672,Boca Ciega Bay
+673,Boca Ciega Bay
+674,Boca Ciega Bay
+679,Old Tampa Bay
+680,Hillsborough Bay
+681,Manatee River
+682,Terra Ceia Bay
+683,Hillsborough Bay
+684,Hillsborough Bay
+685,Hillsborough Bay
+686,Hillsborough Bay
+687,Hillsborough Bay
+688,Hillsborough Bay
+689,Old Tampa Bay
+691,Old Tampa Bay
+692,All Segments
+693,All Segments
+694,Hillsborough Bay
+695,Middle Tampa Bay
+696,Hillsborough Bay
+697,All Segments
+698,All Segments
+699,All Segments
+703,Old Tampa Bay
+706,Old Tampa Bay
+707,Middle Tampa Bay
+708,All Segments
+709,Hillsborough Bay
+710,Hillsborough Bay
+711,Hillsborough Bay
+712,Hillsborough Bay
+713,Hillsborough Bay
+714,Manatee River
+715,All Segments
+719,Hillsborough Bay
+720,Hillsborough Bay
+723,Hillsborough Bay
+736,Old Tampa Bay
+739,All Segments
+740,All Segments
+742,Hillsborough Bay
+754,All Segments
+756,Middle Tampa Bay
+757,Boca Ciega Bay
+758,Boca Ciega Bay
+759,Boca Ciega Bay
+761,Old Tampa Bay
+762,Hillsborough Bay
+763,Hillsborough Bay
+764,Hillsborough Bay
+765,Hillsborough Bay
+766,Hillsborough Bay
+767,Lower Tampa Bay
+768,Hillsborough Bay
+769,Manatee River
+770,Boca Ciega Bay
+771,Old Tampa Bay
+772,Hillsborough Bay
+773,Hillsborough Bay
+774,Hillsborough Bay
+775,Hillsborough Bay
+776,Middle Tampa Bay
+777,Lower Tampa Bay
+778,Terra Ceia Bay
+779,Manatee River
+780,Boca Ciega Bay
+781,Old Tampa Bay
+782,Hillsborough Bay
+783,Hillsborough Bay
+784,Hillsborough Bay
+785,Manatee River
+786,Middle Tampa Bay
+787,Lower Tampa Bay
+788,Terra Ceia Bay
+789,Manatee River
+790,Boca Ciega Bay
+791,Old Tampa Bay
+792,Hillsborough Bay
+793,Hillsborough Bay
+794,Hillsborough Bay
+795,Manatee River
+796,Middle Tampa Bay
+797,Lower Tampa Bay
+798,Terra Ceia Bay
+799,Manatee River
+800,Boca Ciega Bay
+801,Boca Ciega Bay
+802,Middle Tampa Bay
+803,Boca Ciega Bay
+804,Hillsborough Bay
+805,Hillsborough Bay
+806,Boca Ciega Bay
+807,Boca Ciega Bay
+808,Hillsborough Bay
+809,Hillsborough Bay
+810,Hillsborough Bay
+811,Hillsborough Bay
+812,Hillsborough Bay
+814,Hillsborough Bay
+816,Hillsborough Bay
+817,Hillsborough Bay
+818,Hillsborough Bay
+819,Boca Ciega Bay
+821,All Segments
+822,All Segments
+823,All Segments
+824,All Segments
+825,All Segments
+826,Hillsborough Bay
+827,Hillsborough Bay
+828,Hillsborough Bay
+829,Hillsborough Bay
+830,All Segments
+831,Old Tampa Bay
+832,Old Tampa Bay
+833,Hillsborough Bay
+834,Hillsborough Bay
+835,Old Tampa Bay
+836,Old Tampa Bay
+837,All Segments
+838,Old Tampa Bay
+839,Boca Ciega Bay
+840,All Segments
+841,Hillsborough Bay
+842,Hillsborough Bay
+843,Hillsborough Bay
+844,Hillsborough Bay
+845,Hillsborough Bay
+846,Hillsborough Bay
+847,Hillsborough Bay
+848,Hillsborough Bay
+849,Hillsborough Bay
+850,Hillsborough Bay
+851,Hillsborough Bay
+852,Hillsborough Bay
+853,Hillsborough Bay
+854,Hillsborough Bay
+855,Hillsborough Bay
+856,Hillsborough Bay
+857,Hillsborough Bay
+858,All Segments
+859,Boca Ciega Bay
+860,Hillsborough Bay
+861,All Segments
+862,Hillsborough Bay
+863,Boca Ciega Bay
+864,Hillsborough Bay
+865,Hillsborough Bay
+866,Hillsborough Bay
+867,All Segments
+868,Hillsborough Bay
+869,Hillsborough Bay
+870,Middle Tampa Bay
+871,Hillsborough Bay
+872,Hillsborough Bay
+873,Middle Tampa Bay
+874,Old Tampa Bay
+875,Hillsborough Bay
+876,Middle Tampa Bay
+877,Hillsborough Bay
+878,Hillsborough Bay
+879,Hillsborough Bay
+880,Hillsborough Bay
+881,Middle Tampa Bay
+882,Middle Tampa Bay
+883,Old Tampa Bay
+884,Old Tampa Bay
+885,Hillsborough Bay
+886,Hillsborough Bay
+887,Middle Tampa Bay
+888,Middle Tampa Bay
+889,Hillsborough Bay
+890,Hillsborough Bay
+891,Middle Tampa Bay
+892,Old Tampa Bay
+893,Hillsborough Bay
+894,Middle Tampa Bay
+895,Lower Tampa Bay
+896,Lower Tampa Bay
+897,Middle Tampa Bay
+898,Middle Tampa Bay
+899,Middle Tampa Bay
+900,Middle Tampa Bay
+901,Manatee River
+902,Manatee River
+903,Terra Ceia Bay
+904,Terra Ceia Bay
+905,Lower Tampa Bay
+906,Lower Tampa Bay
+907,Middle Tampa Bay
+908,Middle Tampa Bay
+909,Middle Tampa Bay
+910,Middle Tampa Bay
+911,Manatee River
+912,Manatee River
+913,Terra Ceia Bay
+914,Terra Ceia Bay
+915,Lower Tampa Bay
+916,Middle Tampa Bay
+917,Middle Tampa Bay
+918,Manatee River
+919,Terra Ceia Bay
+920,Hillsborough Bay
+921,Hillsborough Bay
+922,Hillsborough Bay
+923,Boca Ciega Bay
+924,Boca Ciega Bay
+925,Old Tampa Bay
+926,Old Tampa Bay
+927,Old Tampa Bay
+928,Lower Tampa Bay
+929,Lower Tampa Bay
+930,Manatee River
+931,Manatee River
+932,Manatee River
+933,Manatee River
+934,Manatee River
+935,Lower Tampa Bay
+936,Lower Tampa Bay
+937,Middle Tampa Bay
+938,Middle Tampa Bay
+939,Lower Tampa Bay
+940,Manatee River
+941,Manatee River
+942,Manatee River
+943,Terra Ceia Bay
+944,Lower Tampa Bay
+945,Manatee River
+946,Manatee River
+947,Lower Tampa Bay
+948,Lower Tampa Bay
+949,Lower Tampa Bay
+950,Lower Tampa Bay
+951,Lower Tampa Bay
+952,Lower Tampa Bay
+953,Lower Tampa Bay
+954,Lower Tampa Bay
+955,Manatee River
+956,Manatee River
+957,Manatee River
+958,Manatee River
+959,Lower Tampa Bay
+960,Lower Tampa Bay
+961,Lower Tampa Bay
+962,Lower Tampa Bay
+963,Lower Tampa Bay
+964,Manatee River
+965,Manatee River
+966,Manatee River
+967,Lower Tampa Bay
+968,Lower Tampa Bay
+969,All Segments
+970,Lower Tampa Bay
+971,Manatee River
+972,All Segments
+973,All Segments
+974,Hillsborough Bay
+975,Hillsborough Bay
+978,All Segments
+979,All Segments
+980,Boca Ciega Bay
+981,Boca Ciega Bay
+982,All Segments
+983,All Segments
+984,All Segments
+985,Boca Ciega Bay
+986,Boca Ciega Bay
+987,Hillsborough Bay
+988,Boca Ciega Bay
+989,Old Tampa Bay
+990,Hillsborough Bay
+991,Hillsborough Bay
+992,Hillsborough Bay
+993,Hillsborough Bay
+994,Hillsborough Bay
+995,Hillsborough Bay
+996,Middle Tampa Bay
+997,Hillsborough Bay
+998,Old Tampa Bay
+999,Boca Ciega Bay
+1000,Hillsborough Bay
+1001,Hillsborough Bay
+1002,Hillsborough Bay
+1003,Hillsborough Bay
+1004,All Segments
+1006,Boca Ciega Bay
+1007,Boca Ciega Bay
+1008,Boca Ciega Bay
+1010,Manatee River
+1011,Old Tampa Bay
+1012,Old Tampa Bay
+1013,Boca Ciega Bay
+1014,Manatee River
+1015,Terra Ceia Bay
+1016,Manatee River
+1017,Old Tampa Bay
+1018,Hillsborough Bay
+1019,Hillsborough Bay
+1021,Old Tampa Bay
+1022,Old Tampa Bay
+1023,Old Tampa Bay
+1024,Old Tampa Bay
+1025,Boca Ciega Bay
+1026,Boca Ciega Bay
+1027,Old Tampa Bay
+1028,Old Tampa Bay
+1030,Old Tampa Bay
+1031,Old Tampa Bay
+1032,Boca Ciega Bay
+1033,Old Tampa Bay
+1035,Boca Ciega Bay
+1036,Old Tampa Bay
+1037,Old Tampa Bay
+1038,Boca Ciega Bay
+1039,Boca Ciega Bay
+1040,Old Tampa Bay
+1041,Boca Ciega Bay
+1043,Boca Ciega Bay
+1045,Boca Ciega Bay
+1046,Not Entered
+1051,Old Tampa Bay
+1052,Old Tampa Bay
+1053,Old Tampa Bay
+1054,Old Tampa Bay
+1056,Hillsborough Bay
+1057,All Segments
+1058,All Segments
+1059,All Segments
+1060,Hillsborough Bay
+1061,All Segments
+1062,Hillsborough Bay
+1063,Hillsborough Bay
+1064,Hillsborough Bay
+1065,Hillsborough Bay
+1066,Middle Tampa Bay
+1067,Hillsborough Bay
+1068,All Segments
+1069,Hillsborough Bay
+1070,Hillsborough Bay
+1071,Hillsborough Bay
+1072,Hillsborough Bay
+1073,Hillsborough Bay
+1074,Hillsborough Bay
+1075,Hillsborough Bay
+1076,Hillsborough Bay
+1077,Hillsborough Bay
+1078,Hillsborough Bay
+1079,Hillsborough Bay
+1080,Hillsborough Bay
+1081,Hillsborough Bay
+1082,Hillsborough Bay
+1083,Hillsborough Bay
+1144,Hillsborough Bay
+1148,Not Entered
+1149,Old Tampa Bay
+1152,Old Tampa Bay
+1155,Hillsborough Bay
+1159,Hillsborough Bay
+1160,Hillsborough Bay
+1164,Hillsborough Bay
+1165,Manatee River
+1166,Manatee River
+1169,Hillsborough Bay
+1170,Not Entered
+1173,Hillsborough Bay
+1175,Hillsborough Bay
+1176,Hillsborough Bay
+1177,Hillsborough Bay
+1178,Hillsborough Bay
+1179,Hillsborough Bay
+1182,Hillsborough Bay
+1184,Hillsborough Bay
+1186,Hillsborough Bay
+1187,Hillsborough Bay
+1189,Hillsborough Bay
+1190,Hillsborough Bay
+1192,Hillsborough Bay
+1193,Manatee River
+1194,Manatee River
+1195,Hillsborough Bay
+1197,Hillsborough Bay
+1198,Hillsborough Bay
+1200,Hillsborough Bay
+1201,Hillsborough Bay
+1202,Boca Ciega Bay
+1203,Hillsborough Bay
+1204,Hillsborough Bay
+1205,Old Tampa Bay
+1206,Hillsborough Bay
+1207,Hillsborough Bay
+1208,Old Tampa Bay
+1209,Hillsborough Bay
+1210,Hillsborough Bay
+1211,Old Tampa Bay
+1212,Old Tampa Bay
+1213,Hillsborough Bay
+1214,Hillsborough Bay
+1215,Hillsborough Bay
+1216,Hillsborough Bay
+1217,Hillsborough Bay
+1218,All Segments
+1219,Hillsborough Bay
+1220,Old Tampa Bay
+1221,Hillsborough Bay
+1222,Hillsborough Bay
+1223,Hillsborough Bay
+1224,Hillsborough Bay
+1226,Old Tampa Bay
+1227,Hillsborough Bay
+1228,Hillsborough Bay
+1229,Hillsborough Bay
+1230,Hillsborough Bay
+1231,Hillsborough Bay
+1232,Hillsborough Bay
+1233,Hillsborough Bay
+1235,Old Tampa Bay
+1236,Old Tampa Bay
+1241,Manatee River
+1242,Manatee River
+1243,Manatee River
+1245,Manatee River
+1246,Manatee River
+1247,Manatee River
+1248,Old Tampa Bay
+1249,Manatee River
+1250,Old Tampa Bay
+1251,Hillsborough Bay
+1252,Boca Ciega Bay
+1253,Boca Ciega Bay
+1254,Not Entered
+1255,Hillsborough Bay
+1256,Lower Tampa Bay
+1257,Old Tampa Bay
+1258,Middle Tampa Bay
+1259,Boca Ciega Bay
+1260,Manatee River
+1261,Manatee River
+1262,Manatee River
+1263,Middle Tampa Bay
+1264,Manatee River
+1265,Boca Ciega Bay
+1266,Boca Ciega Bay
+1267,Boca Ciega Bay
+1268,Old Tampa Bay
+1269,Boca Ciega Bay
+1270,Boca Ciega Bay
+1271,Boca Ciega Bay
+1272,Boca Ciega Bay
+1273,Old Tampa Bay
+1274,Old Tampa Bay
+1275,Hillsborough Bay
+1277,Hillsborough Bay
+1278,Old Tampa Bay
+1279,Old Tampa Bay
+1281,Manatee River
+1282,Hillsborough Bay
+1283,Hillsborough Bay
+1284,Hillsborough Bay
+1285,Hillsborough Bay
+1286,Hillsborough Bay
+1287,Hillsborough Bay
+1288,Hillsborough Bay
+1289,Hillsborough Bay
+1290,Hillsborough Bay
+1291,Hillsborough Bay
+1292,Hillsborough Bay
+1293,Hillsborough Bay
+1294,Hillsborough Bay
+1295,Hillsborough Bay
+1296,Hillsborough Bay
+1297,Hillsborough Bay
+1298,Old Tampa Bay
+1299,Boca Ciega Bay
+1300,Hillsborough Bay
+1301,Hillsborough Bay
+1302,Hillsborough Bay
+1303,Hillsborough Bay
+1304,Old Tampa Bay
+1305,Middle Tampa Bay
+1306,Middle Tampa Bay
+1307,Boca Ciega Bay
+1308,Not Entered
+1309,Old Tampa Bay
+1311,Old Tampa Bay
+1312,Lower Tampa Bay
+1313,Old Tampa Bay
+1314,Hillsborough Bay
+1317,Hillsborough Bay
+1326,Middle Tampa Bay
+1327,Hillsborough Bay
+1328,Hillsborough Bay
+1331,Hillsborough Bay
+1332,Manatee River
+1335,Manatee River
+1336,Hillsborough Bay
+1337,Hillsborough Bay
+1339,Hillsborough Bay
+1343,Boca Ciega Bay
+1345,Old Tampa Bay
+1346,Old Tampa Bay
+1347,Boca Ciega Bay
+1350,Manatee River
+1351,Manatee River
+1353,Lower Tampa Bay
+1354,Manatee River
+1357,Old Tampa Bay
+1358,Old Tampa Bay
+1362,Old Tampa Bay
+1365,Boca Ciega Bay
+1366,Hillsborough Bay
+1368,Old Tampa Bay
+1369,Old Tampa Bay
+1370,Old Tampa Bay
+1371,Old Tampa Bay
+1372,Old Tampa Bay
+1374,Middle Tampa Bay
+1375,Boca Ciega Bay
+1376,Old Tampa Bay
+1377,Middle Tampa Bay
+1378,Boca Ciega Bay
+1379,Old Tampa Bay
+1380,Middle Tampa Bay
+1381,Boca Ciega Bay
+1382,Boca Ciega Bay
+1383,Old Tampa Bay
+1384,Boca Ciega Bay
+1384,Boca Ciega Bay
+1384,Old Tampa Bay
+1385,Boca Ciega Bay
+1386,Boca Ciega Bay
+1387,Boca Ciega Bay
+1390,Old Tampa Bay
+1391,Old Tampa Bay
+1392,Old Tampa Bay
+1393,Old Tampa Bay
+1394,Old Tampa Bay
