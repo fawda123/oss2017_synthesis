@@ -1,7 +1,5 @@
 # Exploratory plots of restoration activities in TB
 
-Load libraries:
-
 
 ```r
 library(tidyverse)
@@ -13,8 +11,6 @@ library(stringi)
 ```
 
 ## Restoration data
-
-Barplots of restoration projects by category, year:
 
 
 ```r
@@ -33,16 +29,16 @@ habdat <- fl %>%
     acre = `Acres-1`
   ) %>% 
   mutate(
+    id = stri_rand_strings(nrow(.), length = 4),
     lat = as.numeric(lat),
     lon = as.numeric(lon),
     date = as.numeric(date),
     tech = toupper(tech)
   ) %>% 
-  filter(lat > 27.3 & lat < 28.2)  
+  filter(lat > 27.3 & lat < 28.2) 
 
 # habitat restoration station locs
 habstat <- habdat %>% 
-  mutate(id = stri_rand_strings(nrow(habdat), length = 4)) %>% 
   select(id, lat, lon) %>% 
   unique
 
@@ -61,15 +57,15 @@ head(habdat)
 ```
 
 ```
-## # A tibble: 6 x 4
-##    date                   tech          type  acre
-##   <dbl>                  <chr>         <chr> <dbl>
-## 1  2005       WETLAND CREATION Establishment  14.0
-## 2  1998       WETLAND CREATION Establishment   3.0
-## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8
-## 4  2004         EXOTIC CONTROL   Enhancement 123.9
-## 5  2006             EXCAVATION Establishment  20.0
-## 6  2006             EXCAVATION Establishment  26.0
+## # A tibble: 6 x 5
+##    date                   tech          type  acre    id
+##   <dbl>                  <chr>         <chr> <dbl> <chr>
+## 1  2005       WETLAND CREATION Establishment  14.0  PqpP
+## 2  1998       WETLAND CREATION Establishment   3.0  SPzW
+## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8  NYhA
+## 4  2004         EXOTIC CONTROL   Enhancement 123.9  zSUZ
+## 5  2006             EXCAVATION Establishment  20.0  KIDT
+## 6  2006             EXCAVATION Establishment  26.0  Djl3
 ```
 Locations of habitat restoration projects:
 
@@ -81,12 +77,12 @@ head(habstat)
 ## # A tibble: 6 x 3
 ##      id      lat       lon
 ##   <chr>    <dbl>     <dbl>
-## 1  Fqqc 27.93133 -82.73820
-## 2  Nrzi 27.95087 -82.54180
-## 3  C4Qc 27.88977 -82.39888
-## 4  BeJ0 27.88994 -82.40340
-## 5  vjlb 27.97370 -82.71504
-## 6  8Yju 27.97370 -82.71504
+## 1  PqpP 27.93133 -82.73820
+## 2  SPzW 27.95087 -82.54180
+## 3  NYhA 27.88977 -82.39888
+## 4  zSUZ 27.88994 -82.40340
+## 5  KIDT 27.97370 -82.71504
+## 6  Djl3 27.97370 -82.71504
 ```
 
 ## Load data
@@ -157,7 +153,6 @@ wqdat <- wqdat_raw %>%
     do = mean(c(dolo, domd, dohi), na.rm = TRUE)
   ) %>%
   select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
-  gather('var', 'val', chla:do) %>% 
   mutate(
     dy = 1
   ) %>% 
@@ -204,15 +199,15 @@ head(wqdat)
 ```
 
 ```
-## # A tibble: 6 x 4
-##    stat   datetime   var   val
-##   <int>     <date> <chr> <dbl>
-## 1    47 1974-01-01  chla    NA
-## 2    60 1974-01-01  chla    NA
-## 3    46 1974-01-01  chla     3
-## 4    64 1974-01-01  chla     2
-## 5    66 1974-01-01  chla    NA
-## 6    40 1974-01-01  chla    NA
+## # A tibble: 6 x 5
+##    stat   datetime  chla   sal    do
+##   <int>     <date> <dbl> <dbl> <dbl>
+## 1    47 1974-01-01    NA  21.1   7.9
+## 2    60 1974-01-01    NA  21.3   8.2
+## 3    46 1974-01-01     3  17.4   8.3
+## 4    64 1974-01-01     2  19.1   8.2
+## 5    66 1974-01-01    NA  21.3   8.1
+## 6    40 1974-01-01    NA  22.0   8.4
 ```
 
 ## Distance to restoration sites {.tabset}
@@ -255,12 +250,12 @@ head(wqmtch)
 ## # A tibble: 6 x 8
 ##    stat      lon     lat    id    lat.1     lon.1     dist   rnk
 ##   <int>    <dbl>   <dbl> <chr>    <dbl>     <dbl>    <dbl> <int>
-## 1    47 -82.6202 27.9726  rOH9 27.99817 -82.61724 2861.746     1
-## 2    47 -82.6202 27.9726  1lG6 27.99911 -82.61671 2971.000     2
-## 3    47 -82.6202 27.9726  IZkU 27.97310 -82.57360 4581.869     3
-## 4    47 -82.6202 27.9726  EqEM 27.99967 -82.58379 4678.879     4
-## 5    47 -82.6202 27.9726  iLFR 28.01691 -82.63240 5075.789     5
-## 6    47 -82.6202 27.9726  Dsua 28.01178 -82.58063 5843.654     6
+## 1    47 -82.6202 27.9726  GoIk 27.99817 -82.61724 2861.746     1
+## 2    47 -82.6202 27.9726  v0lM 27.99911 -82.61671 2971.000     2
+## 3    47 -82.6202 27.9726  g5FE 27.97310 -82.57360 4581.869     3
+## 4    47 -82.6202 27.9726  6fvh 27.99967 -82.58379 4678.879     4
+## 5    47 -82.6202 27.9726  14V3 28.01691 -82.63240 5075.789     5
+## 6    47 -82.6202 27.9726  eC1t 28.01178 -82.58063 5843.654     6
 ```
 
 ### Closest 

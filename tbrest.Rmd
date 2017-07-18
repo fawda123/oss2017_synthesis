@@ -8,8 +8,6 @@ output:
     toc_float: true
 ---
 
-Load libraries:
-
 ```{r message = F, warning = F}
 library(tidyverse)
 library(readxl)
@@ -37,16 +35,16 @@ habdat <- fl %>%
     acre = `Acres-1`
   ) %>% 
   mutate(
+    id = stri_rand_strings(nrow(.), length = 4),
     lat = as.numeric(lat),
     lon = as.numeric(lon),
     date = as.numeric(date),
     tech = toupper(tech)
   ) %>% 
-  filter(lat > 27.3 & lat < 28.2)  
+  filter(lat > 27.3 & lat < 28.2) 
 
 # habitat restoration station locs
 habstat <- habdat %>% 
-  mutate(id = stri_rand_strings(nrow(habdat), length = 4)) %>% 
   select(id, lat, lon) %>% 
   unique
 
@@ -132,7 +130,6 @@ wqdat <- wqdat_raw %>%
     do = mean(c(dolo, domd, dohi), na.rm = TRUE)
   ) %>%
   select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
-  gather('var', 'val', chla:do) %>% 
   mutate(
     dy = 1
   ) %>% 
