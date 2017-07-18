@@ -8,6 +8,8 @@ library(tidyverse)
 library(readxl)
 library(ggmap)
 library(lubridate)
+library(geosphere)
+library(stringi)
 ```
 
 ## Restoration data
@@ -19,7 +21,7 @@ Barplots of restoration projects by category, year:
 fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 
 # clean up habitat restoration data
-dat <- fl %>% 
+habdat <- fl %>% 
   read_csv %>% 
   select(Latitude, Longitude, Project_Completion_Date, `Restoration Category`, `Activity-1`, `Acres-1`) %>% 
   rename(
@@ -35,24 +37,27 @@ dat <- fl %>%
     lon = as.numeric(lon),
     date = as.numeric(date),
     tech = toupper(tech)
-  )
-head(dat)
+  ) %>% 
+  filter(lat > 27.3 & lat < 28.2)  
+head(habdat)
 ```
 
 ```
 ## # A tibble: 6 x 6
 ##        lat       lon  date                   tech          type  acre
 ##      <dbl>     <dbl> <dbl>                  <chr>         <chr> <dbl>
-## 1 27.23300 -82.09700  2006       LAND ACQUISITION    Protection  50.0
-## 2 27.93133 -82.73820  2005       WETLAND CREATION Establishment  14.0
-## 3 27.95087 -82.54180  1998       WETLAND CREATION Establishment   3.0
-## 4 27.88977 -82.39888  2005 HYDROLOGIC RESTORATION   Enhancement  12.8
-## 5 27.88994 -82.40340  2004         EXOTIC CONTROL   Enhancement 123.9
-## 6 27.97370 -82.71504  2006             EXCAVATION Establishment  20.0
+## 1 27.93133 -82.73820  2005       WETLAND CREATION Establishment  14.0
+## 2 27.95087 -82.54180  1998       WETLAND CREATION Establishment   3.0
+## 3 27.88977 -82.39888  2005 HYDROLOGIC RESTORATION   Enhancement  12.8
+## 4 27.88994 -82.40340  2004         EXOTIC CONTROL   Enhancement 123.9
+## 5 27.97370 -82.71504  2006             EXCAVATION Establishment  20.0
+## 6 27.97370 -82.71504  2006             EXCAVATION Establishment  26.0
 ```
 
 ```r
-ggplot(dat, aes(tech, group = date, fill = factor(date))) + 
+save(habdat, file = 'data/habdat.RData', compress = 'xz')
+
+ggplot(habdat, aes(tech, group = date, fill = factor(date))) + 
   geom_bar(position = 'dodge') + 
   theme_bw() + 
   coord_flip() + 
@@ -65,7 +70,7 @@ ggplot(dat, aes(tech, group = date, fill = factor(date))) +
 ![](tbrest_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ```r
-ggplot(dat, aes(acre, group = tech, fill = tech)) + 
+ggplot(habdat, aes(acre, group = tech, fill = tech)) + 
   geom_histogram() + 
   scale_x_log10('Acres') + 
   facet_wrap(~tech) + 
@@ -81,7 +86,7 @@ Map of restoration sites and acreage reported:
 
 
 ```r
-toplo <- filter(dat, lat > 27.3 & lat < 28.2)  
+toplo <- habdat
 
 # extent
 ext <- make_bbox(toplo$lon, toplo$lat)
@@ -107,7 +112,7 @@ pbase
 ```r
 loads <- read_excel('data-raw/loads.xlsx')
 
-dat <- loads %>% 
+lddat <- loads %>% 
   filter(!`Bay Segment` %in% c(5, 6, 7)) %>% 
   rename(
     seg = `Bay Segment`,
@@ -127,7 +132,7 @@ dat <- loads %>%
   group_by(seg, yr, mo, var) %>% 
   summarise(val = sum(val, na.rm = TRUE))
 
-ggplot(dat, aes(x = yr, y = val, group = yr)) + 
+ggplot(lddat, aes(x = yr, y = val, group = yr)) + 
   geom_boxplot() + 
   facet_grid(var~seg, scales = 'free_y') + 
   scale_y_log10('kg or m3 per month')
@@ -191,7 +196,11 @@ wqdat <- wqdat_raw %>%
 # take ten-year averages
 wqdat_ten <- wqdat %>%
   group_by(stat, yrcat, seg, lat, lon, var) %>% 
-  summarise(val = median(val, na.rm = TRUE))
+  summarise(val = median(val, na.rm = TRUE)) %>% 
+  ungroup
+
+# save file
+save(wqdat_ten, file = 'data/wqdat_ten.RData', compress = 'xz')
 
 # extent
 ext <- make_bbox(wqdat_ten$lon, wqdat_ten$lat)
@@ -251,5 +260,118 @@ pbase +
 
 ![](tbrest_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
+## Distance to restoration sites {.tabset}
+
+
+```r
+# load restoration and wq data 
+data(habdat)
+data(wqdat_ten)
+
+# assign unique id to hab projs
+habdat <- habdat %>% 
+  mutate(id = stri_rand_strings(nrow(habdat), length = 4))
+
+# hab project locations and id
+tomtch <- habdat %>% 
+  select(id, lon, lat)
+
+# get station locations
+wqstat <- wqdat_ten %>% 
+  select(stat, seg, lon, lat) %>% 
+  unique
+
+# get this many closest to each station
+mtch <- 20
+
+# match habitat restoration locations with wq stations by closest mtch locations
+wqmtch <- wqstat %>% 
+  group_by(stat) %>% 
+  nest %>% 
+  mutate(
+    clo = map(data, function(sta){
+
+      # get top mtch closest restoration projects to each station
+      dists <- distm(rbind(sta[, -1], tomtch[, -1])) %>%
+        .[-1, 1] %>% 
+        data.frame(tomtch, dist = .) %>% 
+        arrange(dist) %>% 
+        .[1:mtch, ] %>% 
+        data.frame(sta, ., rnk = 1:mtch)
+      
+      return(dists)
+      
+    })
+  ) %>% 
+  select(-data) %>% 
+  unnest
+
+head(wqmtch)
+```
+
+```
+## # A tibble: 6 x 9
+##    stat   seg      lon     lat    id     lon.1    lat.1      dist   rnk
+##   <int> <chr>    <dbl>   <dbl> <chr>     <dbl>    <dbl>     <dbl> <int>
+## 1     6    HB -82.4774 27.8893  0wVE -82.48064 27.88898  320.8786     1
+## 2     6    HB -82.4774 27.8893  ot97 -82.48583 27.89488 1036.0181     2
+## 3     6    HB -82.4774 27.8893  JfqI -82.48891 27.90075 1704.9387     3
+## 4     6    HB -82.4774 27.8893  Pbae -82.48678 27.87472 1867.1113     4
+## 5     6    HB -82.4774 27.8893  J9IA -82.48708 27.87427 1925.3468     5
+## 6     6    HB -82.4774 27.8893  oUpq -82.45352 27.91001 3291.4160     6
+```
+
+### Closest 
+
+```r
+## 
+# plots
+
+# extent
+ext <- make_bbox(habdat$lon, habdat$lat)
+map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
+
+# base map
+pbase <- ggmap(map) +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  ) +
+  geom_point(data = habdat, aes(x = lon, y = lat), fill  = 'green', size = 3, pch = 21) +
+  geom_point(data = wqstat, aes(x = lon, y = lat))
+
+# closest
+toplo1 <- filter(wqmtch, rnk %in% 1)
+
+pbase + 
+  geom_segment(data = toplo1, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+```
+
+![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+
+### Closest five
+
+```r
+# closest five
+toplo2 <- filter(wqmtch, rnk %in% c(1:5))
+
+pbase + 
+  geom_segment(data = toplo2, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+```
+
+![](tbrest_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+
+### Closest twenty
+
+```r
+# closest twenty
+toplo3 <- filter(wqmtch, rnk %in% c(1:20))
+
+pbase + 
+  geom_segment(data = toplo3, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+```
+
+![](tbrest_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
          

@@ -15,6 +15,8 @@ library(tidyverse)
 library(readxl)
 library(ggmap)
 library(lubridate)
+library(geosphere)
+library(stringi)
 ```
 
 ## Restoration data
@@ -25,7 +27,7 @@ Barplots of restoration projects by category, year:
 fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 
 # clean up habitat restoration data
-dat <- fl %>% 
+habdat <- fl %>% 
   read_csv %>% 
   select(Latitude, Longitude, Project_Completion_Date, `Restoration Category`, `Activity-1`, `Acres-1`) %>% 
   rename(
@@ -41,10 +43,12 @@ dat <- fl %>%
     lon = as.numeric(lon),
     date = as.numeric(date),
     tech = toupper(tech)
-  )
-head(dat)
+  ) %>% 
+  filter(lat > 27.3 & lat < 28.2)  
+head(habdat)
+save(habdat, file = 'data/habdat.RData', compress = 'xz')
 
-ggplot(dat, aes(tech, group = date, fill = factor(date))) + 
+ggplot(habdat, aes(tech, group = date, fill = factor(date))) + 
   geom_bar(position = 'dodge') + 
   theme_bw() + 
   coord_flip() + 
@@ -53,7 +57,7 @@ ggplot(dat, aes(tech, group = date, fill = factor(date))) +
     legend.title = element_blank()
     )
 
-ggplot(dat, aes(acre, group = tech, fill = tech)) + 
+ggplot(habdat, aes(acre, group = tech, fill = tech)) + 
   geom_histogram() + 
   scale_x_log10('Acres') + 
   facet_wrap(~tech) + 
@@ -66,7 +70,7 @@ ggplot(dat, aes(acre, group = tech, fill = tech)) +
 Map of restoration sites and acreage reported:
 
 ```{r warning = F, message = F, fig.width = 6, fig.height = 6}  
-toplo <- filter(dat, lat > 27.3 & lat < 28.2)  
+toplo <- habdat
 
 # extent
 ext <- make_bbox(toplo$lon, toplo$lat)
@@ -82,14 +86,14 @@ pbase <- ggmap(map) +
   geom_point(data = toplo, aes(size = acre, fill = tech), pch = 21, colour = 'black', alpha = 0.8) + 
   scale_size(range = c(2, 11))
 pbase
-````
+```
 
 ## Load data
 
 ```{r warning = F, message = F, fig.width = 8, fig.height = 6}
 loads <- read_excel('data-raw/loads.xlsx')
 
-dat <- loads %>% 
+lddat <- loads %>% 
   filter(!`Bay Segment` %in% c(5, 6, 7)) %>% 
   rename(
     seg = `Bay Segment`,
@@ -109,7 +113,7 @@ dat <- loads %>%
   group_by(seg, yr, mo, var) %>% 
   summarise(val = sum(val, na.rm = TRUE))
 
-ggplot(dat, aes(x = yr, y = val, group = yr)) + 
+ggplot(lddat, aes(x = yr, y = val, group = yr)) + 
   geom_boxplot() + 
   facet_grid(var~seg, scales = 'free_y') + 
   scale_y_log10('kg or m3 per month')
@@ -170,7 +174,11 @@ wqdat <- wqdat_raw %>%
 # take ten-year averages
 wqdat_ten <- wqdat %>%
   group_by(stat, yrcat, seg, lat, lon, var) %>% 
-  summarise(val = median(val, na.rm = TRUE))
+  summarise(val = median(val, na.rm = TRUE)) %>% 
+  ungroup
+
+# save file
+save(wqdat_ten, file = 'data/wqdat_ten.RData', compress = 'xz')
 
 # extent
 ext <- make_bbox(wqdat_ten$lon, wqdat_ten$lat)
@@ -223,5 +231,96 @@ pbase +
   ggtitle('Chl-a ug/L') 
 ```
 
+## Distance to restoration sites {.tabset}
+
+```{r}
+# load restoration and wq data 
+data(habdat)
+data(wqdat_ten)
+
+# assign unique id to hab projs
+habdat <- habdat %>% 
+  mutate(id = stri_rand_strings(nrow(habdat), length = 4))
+
+# hab project locations and id
+tomtch <- habdat %>% 
+  select(id, lon, lat)
+
+# get station locations
+wqstat <- wqdat_ten %>% 
+  select(stat, seg, lon, lat) %>% 
+  unique
+
+# get this many closest to each station
+mtch <- 20
+
+# match habitat restoration locations with wq stations by closest mtch locations
+wqmtch <- wqstat %>% 
+  group_by(stat) %>% 
+  nest %>% 
+  mutate(
+    clo = map(data, function(sta){
+
+      # get top mtch closest restoration projects to each station
+      dists <- distm(rbind(sta[, -1], tomtch[, -1])) %>%
+        .[-1, 1] %>% 
+        data.frame(tomtch, dist = .) %>% 
+        arrange(dist) %>% 
+        .[1:mtch, ] %>% 
+        data.frame(sta, ., rnk = 1:mtch)
+      
+      return(dists)
+      
+    })
+  ) %>% 
+  select(-data) %>% 
+  unnest
+
+head(wqmtch)
+```
+
+### Closest 
+```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+## 
+# plots
+
+# extent
+ext <- make_bbox(habdat$lon, habdat$lat)
+map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
+
+# base map
+pbase <- ggmap(map) +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  ) +
+  geom_point(data = habdat, aes(x = lon, y = lat), fill  = 'green', size = 3, pch = 21) +
+  geom_point(data = wqstat, aes(x = lon, y = lat))
+
+# closest
+toplo1 <- filter(wqmtch, rnk %in% 1)
+
+pbase + 
+  geom_segment(data = toplo1, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+```
+
+### Closest five
+```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+# closest five
+toplo2 <- filter(wqmtch, rnk %in% c(1:5))
+
+pbase + 
+  geom_segment(data = toplo2, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+```
+
+### Closest twenty
+```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+# closest twenty
+toplo3 <- filter(wqmtch, rnk %in% c(1:20))
+
+pbase + 
+  geom_segment(data = toplo3, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+```
 
          

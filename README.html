@@ -123,13 +123,13 @@ $(document).ready(function () {
 <h2>README</h2>
 <div id="getting-the-repo" class="section level3">
 <h3>Getting the repo</h3>
-<pre class="bash"><code>
-# do this to get the repo
+<pre class="bash"><code># do this to get the repo
 git clone https://www.github.com/fawda13/oss2017_synthesis.git
 
-# do this every time you want to commit
+# do this every time before you make changes
 git pull
-# make changes
+
+# do this after you make changes
 git add -A
 git commit -m &quot;informative message&quot;
 git push</code></pre>
@@ -140,7 +140,9 @@ git push</code></pre>
 </div>
 <div id="info" class="section level3">
 <h3>Info</h3>
+<p>Folders:</p>
 <ul>
+<li><code>data</code> RData files, load with <code>data(filename)</code></li>
 <li><code>data-raw</code> - put raw data files here, e.g., .xlsx., .txt., .csv</li>
 <li><code>R</code> - R scripts</li>
 </ul>
