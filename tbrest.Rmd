@@ -161,9 +161,10 @@ wqdat <- wqdat_raw %>%
   mutate(
     yrcat = cut(yr, 
       breaks = c(-Inf, 1985, 1995, 2005, Inf), 
-      labels = c('1975-1985', '1986-1995', '1996-2005', '2005-2016')
+      labels = c('1974-1985', '1986-1995', '1996-2005', '2005-2016')
     )
   )
+head(wqdat)
 ```
 
 ### Plot of ten-year medians {.tabset}
