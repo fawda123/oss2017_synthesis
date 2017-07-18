@@ -155,8 +155,7 @@ wqdat <- wqdat_raw %>%
     dttm = SampleTime,
     stat = epchc_station, 
     lat = Latitude, 
-    lon = Longitude, 
-    seg = bay_segment, 
+    lon = Longitude,
     sallo = Sal_Bottom_ppth, 
     salmd = Sal_Mid_ppth,
     salhi = Sal_Top_ppth, 
@@ -165,7 +164,7 @@ wqdat <- wqdat_raw %>%
     dohi = DO_Top_mg_L,
     chla = chl_a
   ) %>% 
-  select(stat, yr, mo, dttm, lat, lon, seg, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
+  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
   gather('var', 'val', sallo:chla) %>% 
   mutate(val = as.numeric(val)) %>% 
   spread('var', 'val') %>% 
@@ -176,28 +175,61 @@ wqdat <- wqdat_raw %>%
   ) %>%
   select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
   gather('var', 'val', chla:do) %>% 
-  group_by(stat, yr, seg, var, lat, lon) %>% 
-  summarise(val = median(val, na.rm = TRUE)) %>% 
-  ungroup %>% 
   mutate(
-    yrcat = cut(yr, 
-      breaks = c(-Inf, 1985, 1995, 2005, Inf), 
-      labels = c('1974-1985', '1986-1995', '1996-2005', '2005-2016')
-    )
+    dy = 1
+  ) %>% 
+  unite('datetime', yr, mo, dy, sep = '-') %>% 
+  mutate(
+    datetime = as.Date(datetime, format = '%Y-%m-%d')
   )
+
+# get station locations
+wqstat <- wqdat %>% 
+  select(stat, lon, lat) %>% 
+  unique
+
+# remove denormalized rows
+wqdat <- wqdat %>% 
+  select(-lon, -lat)
+  
+save(wqstat, file= 'data/wqstat.RData', compress = 'xz')
+save(wqdat, file = 'data/wqdat.RData', compress = 'xz')
+```
+
+Water quality station lat/lon:
+
+```r
+head(wqstat)
+```
+
+```
+## # A tibble: 6 x 3
+##    stat      lon     lat
+##   <int>    <dbl>   <dbl>
+## 1    47 -82.6202 27.9726
+## 2    60 -82.6316 27.9899
+## 3    46 -82.6593 27.9904
+## 4    64 -82.6833 27.9794
+## 5    66 -82.6397 27.9278
+## 6    40 -82.5873 27.9291
+```
+
+Water quality data:
+
+```r
 head(wqdat)
 ```
 
 ```
-## # A tibble: 6 x 8
-##    stat    yr   seg   var     lat      lon       val     yrcat
-##   <int> <int> <chr> <chr>   <dbl>    <dbl>     <dbl>    <fctr>
-## 1     6  1974    HB  chla 27.8893 -82.4774 18.000000 1974-1985
-## 2     6  1974    HB    do 27.8893 -82.4774  6.900000 1974-1985
-## 3     6  1974    HB   sal 27.8893 -82.4774 21.500000 1974-1985
-## 4     6  1975    HB  chla 27.8893 -82.4774 17.000000 1974-1985
-## 5     6  1975    HB    do 27.8893 -82.4774  5.033333 1974-1985
-## 6     6  1975    HB   sal 27.8893 -82.4774 23.050000 1974-1985
+## # A tibble: 6 x 4
+##    stat   datetime   var   val
+##   <int>     <date> <chr> <dbl>
+## 1    47 1974-01-01  chla    NA
+## 2    60 1974-01-01  chla    NA
+## 3    46 1974-01-01  chla     3
+## 4    64 1974-01-01  chla     2
+## 5    66 1974-01-01  chla    NA
+## 6    40 1974-01-01  chla    NA
 ```
 
 ### Plot of ten-year medians {.tabset}
@@ -208,12 +240,22 @@ head(wqdat)
 ```r
 # take ten-year averages
 wqdat_ten <- wqdat %>%
-  group_by(stat, yrcat, seg, lat, lon, var) %>% 
+  left_join(wqstat, by = 'stat') %>% 
+  mutate(
+    yr = year(datetime)
+  ) %>% 
+  group_by(stat, yr, var, lat, lon) %>% 
+  summarise(val = median(val, na.rm = TRUE)) %>% 
+  ungroup %>% 
+  mutate(
+    yrcat = cut(yr, 
+      breaks = c(-Inf, 1985, 1995, 2005, Inf), 
+      labels = c('1974-1985', '1986-1995', '1996-2005', '2005-2016')
+    )
+  ) %>% 
+  group_by(stat, yrcat, lat, lon, var) %>% 
   summarise(val = median(val, na.rm = TRUE)) %>% 
   ungroup
-
-# save file
-save(wqdat_ten, file = 'data/wqdat_ten.RData', compress = 'xz')
 
 # extent
 ext <- make_bbox(wqdat_ten$lon, wqdat_ten$lat)
@@ -240,7 +282,7 @@ pbase +
   ggtitle('DO mg/L') 
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 #### Salinity
 
@@ -256,7 +298,7 @@ pbase +
   ggtitle('Sal ppt') 
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 #### Chlorophyll
 
@@ -271,7 +313,7 @@ pbase +
   ggtitle('Chl-a ug/L') 
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ## Distance to restoration sites {.tabset}
 
@@ -279,7 +321,7 @@ pbase +
 ```r
 # load restoration and wq data 
 data(habdat)
-data(wqdat_ten)
+data(wqstat)
 
 # assign unique id to hab projs
 habdat <- habdat %>% 
@@ -288,11 +330,6 @@ habdat <- habdat %>%
 # hab project locations and id
 tomtch <- habdat %>% 
   select(id, lon, lat)
-
-# get station locations
-wqstat <- wqdat_ten %>% 
-  select(stat, seg, lon, lat) %>% 
-  unique
 
 # get this many closest to each station
 mtch <- 20
@@ -305,7 +342,7 @@ wqmtch <- wqstat %>%
     clo = map(data, function(sta){
 
       # get top mtch closest restoration projects to each station
-      dists <- distm(rbind(sta[, -1], tomtch[, -1])) %>%
+      dists <- distm(rbind(sta, tomtch[, -1])) %>%
         .[-1, 1] %>% 
         data.frame(tomtch, dist = .) %>% 
         arrange(dist) %>% 
@@ -323,15 +360,15 @@ head(wqmtch)
 ```
 
 ```
-## # A tibble: 6 x 9
-##    stat   seg      lon     lat    id     lon.1    lat.1      dist   rnk
-##   <int> <chr>    <dbl>   <dbl> <chr>     <dbl>    <dbl>     <dbl> <int>
-## 1     6    HB -82.4774 27.8893  QFqi -82.48064 27.88898  320.8786     1
-## 2     6    HB -82.4774 27.8893  9Mbl -82.48583 27.89488 1036.0181     2
-## 3     6    HB -82.4774 27.8893  FciP -82.48891 27.90075 1704.9387     3
-## 4     6    HB -82.4774 27.8893  Napq -82.48678 27.87472 1867.1113     4
-## 5     6    HB -82.4774 27.8893  nKNJ -82.48708 27.87427 1925.3468     5
-## 6     6    HB -82.4774 27.8893  SlJQ -82.45352 27.91001 3291.4160     6
+## # A tibble: 6 x 8
+##    stat      lon     lat    id     lon.1    lat.1     dist   rnk
+##   <int>    <dbl>   <dbl> <chr>     <dbl>    <dbl>    <dbl> <int>
+## 1    47 -82.6202 27.9726  VvLL -82.61724 27.99817 2861.746     1
+## 2    47 -82.6202 27.9726  DaYf -82.61671 27.99911 2971.000     2
+## 3    47 -82.6202 27.9726  R9Hz -82.57360 27.97310 4581.869     3
+## 4    47 -82.6202 27.9726  L2M0 -82.58379 27.99967 4678.879     4
+## 5    47 -82.6202 27.9726  oSq9 -82.63240 28.01691 5075.789     5
+## 6    47 -82.6202 27.9726  1epg -82.58063 28.01178 5843.654     6
 ```
 
 ### Closest 
@@ -361,7 +398,7 @@ pbase +
   geom_segment(data = toplo1, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ### Closest five
 
@@ -373,7 +410,7 @@ pbase +
   geom_segment(data = toplo2, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 ### Closest twenty
 
@@ -385,6 +422,6 @@ pbase +
   geom_segment(data = toplo3, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
          

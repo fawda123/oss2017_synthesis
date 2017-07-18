@@ -134,8 +134,7 @@ wqdat <- wqdat_raw %>%
     dttm = SampleTime,
     stat = epchc_station, 
     lat = Latitude, 
-    lon = Longitude, 
-    seg = bay_segment, 
+    lon = Longitude,
     sallo = Sal_Bottom_ppth, 
     salmd = Sal_Mid_ppth,
     salhi = Sal_Top_ppth, 
@@ -144,7 +143,7 @@ wqdat <- wqdat_raw %>%
     dohi = DO_Top_mg_L,
     chla = chl_a
   ) %>% 
-  select(stat, yr, mo, dttm, lat, lon, seg, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
+  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
   gather('var', 'val', sallo:chla) %>% 
   mutate(val = as.numeric(val)) %>% 
   spread('var', 'val') %>% 
@@ -155,15 +154,34 @@ wqdat <- wqdat_raw %>%
   ) %>%
   select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
   gather('var', 'val', chla:do) %>% 
-  group_by(stat, yr, seg, var, lat, lon) %>% 
-  summarise(val = median(val, na.rm = TRUE)) %>% 
-  ungroup %>% 
   mutate(
-    yrcat = cut(yr, 
-      breaks = c(-Inf, 1985, 1995, 2005, Inf), 
-      labels = c('1974-1985', '1986-1995', '1996-2005', '2005-2016')
-    )
+    dy = 1
+  ) %>% 
+  unite('datetime', yr, mo, dy, sep = '-') %>% 
+  mutate(
+    datetime = as.Date(datetime, format = '%Y-%m-%d')
   )
+
+# get station locations
+wqstat <- wqdat %>% 
+  select(stat, lon, lat) %>% 
+  unique
+
+# remove denormalized rows
+wqdat <- wqdat %>% 
+  select(-lon, -lat)
+  
+save(wqstat, file= 'data/wqstat.RData', compress = 'xz')
+save(wqdat, file = 'data/wqdat.RData', compress = 'xz')
+```
+
+Water quality station lat/lon:
+```{r}
+head(wqstat)
+```
+
+Water quality data:
+```{r}
 head(wqdat)
 ```
 
@@ -174,12 +192,22 @@ head(wqdat)
 ```{r message = F, warning = F, fig.width = 8, fig.height = 11}
 # take ten-year averages
 wqdat_ten <- wqdat %>%
-  group_by(stat, yrcat, seg, lat, lon, var) %>% 
+  left_join(wqstat, by = 'stat') %>% 
+  mutate(
+    yr = year(datetime)
+  ) %>% 
+  group_by(stat, yr, var, lat, lon) %>% 
+  summarise(val = median(val, na.rm = TRUE)) %>% 
+  ungroup %>% 
+  mutate(
+    yrcat = cut(yr, 
+      breaks = c(-Inf, 1985, 1995, 2005, Inf), 
+      labels = c('1974-1985', '1986-1995', '1996-2005', '2005-2016')
+    )
+  ) %>% 
+  group_by(stat, yrcat, lat, lon, var) %>% 
   summarise(val = median(val, na.rm = TRUE)) %>% 
   ungroup
-
-# save file
-save(wqdat_ten, file = 'data/wqdat_ten.RData', compress = 'xz')
 
 # extent
 ext <- make_bbox(wqdat_ten$lon, wqdat_ten$lat)
@@ -237,7 +265,7 @@ pbase +
 ```{r}
 # load restoration and wq data 
 data(habdat)
-data(wqdat_ten)
+data(wqstat)
 
 # assign unique id to hab projs
 habdat <- habdat %>% 
@@ -246,11 +274,6 @@ habdat <- habdat %>%
 # hab project locations and id
 tomtch <- habdat %>% 
   select(id, lon, lat)
-
-# get station locations
-wqstat <- wqdat_ten %>% 
-  select(stat, seg, lon, lat) %>% 
-  unique
 
 # get this many closest to each station
 mtch <- 20
@@ -263,7 +286,7 @@ wqmtch <- wqstat %>%
     clo = map(data, function(sta){
 
       # get top mtch closest restoration projects to each station
-      dists <- distm(rbind(sta[, -1], tomtch[, -1])) %>%
+      dists <- distm(rbind(sta, tomtch[, -1])) %>%
         .[-1, 1] %>% 
         data.frame(tomtch, dist = .) %>% 
         arrange(dist) %>% 

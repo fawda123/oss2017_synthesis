@@ -26,3 +26,9 @@ Folders:
 * `data` RData files, load with `data(filename)`
 * `data-raw` - put raw data files here, e.g., .xlsx., .txt., .csv
 * `R` - R scripts
+
+RData files (these should be text files?) in `data`, normalized (maybe?):
+
+* `habdat.RData` restoration projects for habitat
+* `wqdat.RData` TB water quality data by site, date, var, val
+* `wqstat.RData` TB water quality stations as lat/lon
