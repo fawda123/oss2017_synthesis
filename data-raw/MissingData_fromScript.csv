@@ -1,0 +1,1004 @@
+HeaderID,ProjectName,OngoingInitiation,DiscontinuedDate,CompletionDate,ActualProjectCost,FundingSource,ProjectDescriptionText,NonPointProject,PointProject,ProjectLatitude,ProjectLongitude
+1395,NA,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1394,Water Atlas,0,0,0,NA,NULL,NULL,1,1,0,0
+1393,Pinellas Co. Adopt-A-Pond Program,0,0,0,NA,NULL,NULL,1,1,0,0
+1392,Pinellas Co. Landscape Ordinance,0,0,0,NA,NULL,NULL,1,1,0,0
+1391,Pinellas Co. Pet Waste Ordinance,0,0,0,NA,NULL,NULL,1,1,0,0
+1390,Pinellas Co Fertilizer Ordinance,2010,0,0,NA,NULL,NULL,1,1,0,0
+1389,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1387,Long Branch Stormwater Pond Improvement BMP 6,2016,0,0,NA,NULL,NULL,1,1,0,0
+1386,Starkey Stormwater Pond Improvement WL94,2017,0,0,NA,NULL,NULL,1,1,0,0
+1385,Starkey Wetland Enhancement M10,2017,0,0,NA,NULL,NULL,1,1,0,0
+1384,Eagle Lake Stormwater Ponds,2017,0,0,NA,NULL,NULL,1,1,0,0
+1383,Roosevelt Stormwater Ponds,2017,0,0,NA,NULL,NULL,1,1,0,0
+1382,Lake Seminole Alum Treatment Subbasin 2,2012,0,0,NA,NULL,NULL,1,1,0,0
+1373,Street Sweeping,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1369,Street Sweeping,2014,0,0,"45,000",NULL,Annual Street Sweeping reported In NPDES report.,1,1,0,0
+1368,NHARP,0,0,0,NA,NULL,The Northwest Hillsborough Aquifer Recharge Project (NHARP) is an innovative water resource project that utilizes highly treated reclaimed water to recharge an aquifer that has been impacted by salt water intrusion. The Hillsborough County Public Utilitie,1,1,28.036389,-82.636389
+1367,SHARE,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1364,BWA Pond A Dredging,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1363,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1362,Eagle Lake Park Water Quality Improvements Project,0,0,0,NA,"Penny for Pinellas, TBERF Grant","Overview
+This SMF is located within the Allenâ€™s Creek Watershed, and consists of an 8.1 acre natural pond
+(node NH0010) in the Watershed Model. Runoff enters the pond from approximately 84.2 acres of
+basin area, which includes residential areas to the",1,1,27.938186,-82.766679
+1361,Eagle Lake Park Water Quality Improvement,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1360,BMP Street Sweeping Year 3,0,0,0,NA,NA,NULL,1,1,0,0
+1359,BMP Street Sweeping Year 2,0,0,0,NA,NA,NULL,1,1,0,0
+1358,BMP Street Sweeping,2013,0,0,"45,000",NA,"Annual Street Sweeping contract. All city curbed streets are swept once a month and twice a month in February, March and April.   205 pounds of Nitrogen as removed due to Street Sweeping the City.",1,1,27.990853,-82.693155
+1357,Stormwater Education and Outreach,0,0,0,NA,NA,NULL,1,1,0,0
+1356,NPS,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1355,BWA Pond A Dredging,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1354,Manatee County SEWRF Upgrades,2013,0,0,"9,866,747",Utility rates,"Construction of two (2) 10 million gallon reclaimed water storage tanks at the Manatee County SEWRF.
+ Upgrades to pump stations and connection to the MARS transmission line.  Upgrades expected to
+improve distribution and efficient use of reclaimed water",1,1,0,0
+1353,MARS Reclaimed Network Upgrades,2014,0,0,"4,890,000",Utility rates,"Installation of meters between service areas, and control valves for remote operation and redirection of reclaimed water flow.  Installation of telemetry at the water reclamation facilities, and the MARS pump stations.  Upgrades will improve the distribut",1,1,0,0
+1352,Testing,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1351,Deep Well Injection at SWWRF,2015,0,0,"6,627,000",Utility rates,"Construction of a Class V injection well approximately to 1,200 feet at the SWWRF to add additional wet weather disposal.",1,1,0,0
+1350,Deep Well Injection at NWRF,2010,0,0,"9,997,719","Utility rates, Utility bonds (RZEDB)",Construct a Class 1 Deep Injection Well and Class V recharge well for the NWRF.  Wells will improve and increase wet weather storage of treated wastewate that would otherwise be distributed for land application via the MARS line.,1,1,0,0
+1349,Deep Well Injection- SWWRF,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1348,Stormwater,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1347,N Rena Dr. Improvements,2015,2016,0,"1,250,000",Penny for Pinellas,Alternatives to alleviate flooding and improve water quality in the Rena Drive area.,1,1,27.985,-82.731
+1346,Sun Sierra MHP Drainage Improvements,2015,2016,0,"1,075,000",Penny for Pinellas,"Reduce flooding at the Sun Sierra MHP through conveyance improvements and construction of a 
+wet detention pond.",1,1,27.885,-82.724
+1345,Cross Bayou Improvements,2016,0,0,NA,Penny for Pinellas,"Improve conveyance through Cross Bayou Canal and reduce duration of flooding inluding 
+sediment and exotic vegetation removal.",1,1,27.888,-82.712
+1344,McKay Creek Water Quality Improvements near Hickory Dr,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1343,Lealman Pond,0,0,0,NA,NULL,NULL,1,1,27.825,-82.719
+1342,McKay Creek at Hickory Dr.,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1341,NNPPSS 445566,0,0,0,NA,NULL,NULL,1,1,27.312,-81.45
+1340,NPS 3456789,0,0,0,NA,NULL,NULL,1,1,27.45,-81.999
+1339,NPS Test 6789,2011,0,2015,"1,000,000",Ad valoreum,Descriptive text here,1,1,27.333,-81.45
+1338,PS Test,0,0,0,NA,NULL,NULL,1,1,27.5,-81.45
+1337,NPS Project 123,2015,0,2016,"1,500,000","TMDL Grant,
+CoOp Funding Project
+",This is a NPS load reduction project in Hillsborough Bay segment.,1,1,27.5,-81.5
+1336,NPS Project 1234,2015,0,2016,"1,000,000","TMDL Grant,
+Co-op Funding Project",A file was attached.  This is a NPS load reduction project.,1,1,27.5,-81.4
+1335,PS Test,2011,0,2015,10000000,"SWFWMD Coop, Ad valoreum",Moving discharge to reuse.,1,1,27.5,-81.556
+1334,Testing 12345,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1333,Testing 123,2011,0,2015,5000,Yes,Testing decoment,1,1,27.5,-81.9
+1332,New Record Test,2011,0,2015,1000,Funding Secure,NULL,1,1,27.5,-82.1
+1331,Database Debacle,2012,0,2015,500,Ad-valoreum,Bay improvements,1,1,27.5,-82.1
+1330,Testing Infinity,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1329,Testing Database 3,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1328,Testing Database 2,2013,0,2015,"1,000,000",Co-Op,A very good project,1,1,27.05,-81.35
+1325,Manatee-Hillsborough Conservation Land Corridor Connection,0,0,0,NA,NULL,NULL,1,1,0,0
+1324,Braden River Park,0,0,0,NA,NULL,NULL,1,1,0,0
+1323,East Bradenton Wetland Park,0,0,0,NA,NULL,NULL,1,1,27.4829485,-82.5300753
+1322,test Sarasota 3,0,0,0,NA,NULL,NULL,1,1,0,0
+1321,test Sarasota 2,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1320,test Sarasota,0,0,0,NA,NULL,NULL,1,1,0,0
+1319,bmap test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1318,FDEP BMAP Example,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1316,Street Sweeping in Alafia River Basin,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1315,NA,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1310,Street Sweeping,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1308,Street Sweeping,0,0,0,NA,NULL,NULL,1,1,0,0
+1306,Bicycle Paths,2007,0,0,NA,NULL,NULL,1,1,27.769684,-82.63401
+1303,Routine Maintenance Erosion Control,2007,0,0,NA,NULL,NULL,1,1,27.934967,-81.999207
+1302,Illicit Discharge Complaint Investigation,2007,0,0,NA,NULL,NULL,1,1,27.955591,-82.001953
+1301,Drainage Maintenance on Blackwater Creek,2007,0,0,NA,NULL,NULL,1,1,28.092881,-82.044268
+1300,New River and Hillsborough River Watershed Management Plans in Pasco County,2007,0,0,NA,NULL,NULL,1,1,28.21577713,-82.26768494
+1297,City of Tampa Riverwalk Project,2007,0,0,NA,NULL,NULL,1,1,27.947441,-82.461491
+1294,River Tower Park Shoreline Restoration and Stormwater Improvements,2009,0,0,NA,NULL,NULL,1,1,28.021536,-82.457486
+1292,Plant City Sewer Line Maintenance Program,2007,0,0,NA,NULL,NULL,1,1,28.016914,-82.124291
+1291,Plant City Spill Prevention/Response Program,2007,0,0,NA,NULL,NULL,1,1,28.016914,-82.124291
+1290,Lake Thonotosassa Diagnostic Assessment and Water Quality Treatment Project,2007,0,0,NA,NULL,NULL,1,1,28.016914,-82.124291
+1289,Plant City Inflow and Infiltration (I&I) Program,2007,0,0,NA,NULL,NULL,1,1,28.016914,-82.124291
+1288,Plant City Grease Management Program,2007,0,0,NA,NULL,NULL,1,1,28.016914,-82.124291
+1287,Plant City Lift Station Security Program,2007,0,0,NA,NULL,NULL,1,1,28.016914,-82.124291
+1286,Plant City Lift Station Maintenance,2007,0,0,NA,NULL,NULL,1,1,28.016914,-82.124291
+1285,Plant City Lift Station Auxiliary Power Program,2007,0,0,NA,NULL,NULL,1,1,28.016914,-82.124291
+1284,Plant City Stormwater Inlet Marking Program,2007,0,0,NA,NA,NULL,1,1,28.016914,-82.124291
+1281,Robinson Preserve Expansion,2012,0,0,NA,NULL,"Additional land acquisition for preservation - 
+200 acres (from projected golf course to 
+preserve)",1,1,27.517863,-82.669042
+1280,Decrease TN &/or TP,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1278,City-Wide Reclaim Service,0,0,0,NA,NULL,NULL,1,1,0,0
+1277,Itchepackesassa Creek Regional Stormwater Treatment Wetland,2009,0,0,"$4,783,619.00","Polk County BoCC
+SWFWMD - SWIM","Construction of a 70+ acre wetland facility to  treat water from 
+Itchpackesassa Creek to improve water quality downstream.",1,1,28.107196,-82.094937
+1276,Itchepackesassa Creek Regional Stormwater Treatment Wetland,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1275,City of Plant City Environmental Education Program,0,0,0,NA,NA,NULL,1,1,28.01759,-82.116966
+1272,City of Seminole Park Development,0,0,0,NA,NULL,"Demo of 6.5 acres of commerical development for 
+restoration and park development",1,1,27.9381,-82.7824
+1270,Silver Lake Sediment Inactivation,2012,0,0,"100,000",FDOT,"Conduct a feasibility evaluation of sediment 
+phosphorus inactivation in Silver Lake and 
+implementation of the recommended chemical 
+application",1,1,0,-82.66943
+1269,Lake Seminole Sediment Removal,2017,0,0,"16,732,300","Penny for Pinellas, and SWFWMD grant","Dredging of sediment from Lake Seminole to 
+improve lake water quality.  ONE TIME load removal estimate.",1,1,27.85015,-82.78048
+1264,Lake Manatee Watershed Study,0,0,0,NA,NULL,"Watershed study for future use planning.  
+Includes elevation data collection and 
+modelling surface water flow.",1,1,27.481568,-82.322385
+1263,5th A/S Nutrient Removal Baffle Box,2008,0,0,"1,399,998",NULL,"Designed to treat first 1/2"" of runoff from 
+watershed. Flows in excess of the 1/2"" of runoff 
+bypass baffle box.",1,1,27.766077,-82.661849
+1262,Manatee County SWWRF Upgrade,2012,0,0,NA,"Utilities rates, Utilities bonds (RZEDB)","Upgrades to countys Southwest Water Reclamation Facility (SWWRF) to improve nitrogen removal efficiencies (projected 55% N reduction, but tbd).  Will affect all reclaimed water coming from the SWWRF distributed via MARS system.",1,1,27.45234528,-82.63132167
+1260,Duette Preserve Wetlands Restoration,2012,0,0,"200,000",NULL,"1400 acres of existing preserve to be 
+converted to wetlands & wetland habitat for 
+surface water treatment",1,1,27.59238056,-82.10111167
+1257,Sherwood Yard Street Sweeping Facility,2010,0,0,NA,Stormwater Utility Fee,"Construct a to process and manage the liquid 
+and solid waste collected during street 
+sweeping activities, sediment sump, ditch and 
+catch basin cleaning.",1,1,27.980714,-82.756606
+1255,Bayshore Blvd Reclaimed Water Expansion,2012,0,0,550000,"Federal SPAP grant:  $300,000","Expansion of reclaim water system along Bayshore Boulevard Linear Park.  3,960 LF of reclaim water mains.  Anticipated irrigation demand of 47,00 gpd.",1,1,27.919428,-82.491277
+1254,Howard Park Sewer Connection,0,0,0,NA,NA,NULL,1,1,28.15359,-82.787733
+1253,Ft. DeSoto Water Circulation Infrastructure,0,0,0,"862,200","Penny for Pinellas, SWFWMD grant",NULL,1,1,27.620577,-82.720699
+1252,Joe's Creek Greenway Park,2012,0,0,"397,200","Penny for Pinellas, CDBG Federal Grant","Continued phased development of park facility on both sides of Joe's Creek including bank stabilization, installation of 2nd pedestrian bridge to complete circular walking path, and provide pedestrian access to lands on the north side of the creek.",1,1,27.81521,-82.69279
+1250,Creek Erosion Control Programs,2017,0,0,NA,NULL,Erosion control along countywide conveyances.,1,1,27.82936086,-82.70095825
+1248,Weedon Island Salt Marsh Restoration,2017,0,0,"500,000","Penny for Pinellas
+SWFWMD Grant","Selected mosquito ditches adjacent to the shoreline and the uplands are altering intertidal influences. As a consequence, it is likely that these alterations have resulted in an even aged stand of natives far more susceptible to exotic species encro",1,1,27.845,-82.601
+1247,Illicit Discharge Detection & Elimination,1990,0,0,NA,NULL,"Illicit discharge investigation is an NPDES 
+Permit requirment. We investigate and 
+perform corrective actions on any illicit 
+discharges affecting our MS4. Our poactive 
+inspection program has prevented many 
+potential problems and identified unrepo",1,1,27.383124,-82.453675
+1244,NA,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1243,Florida Yards & Neighborhoods,0,0,0,NA,NULL,"The FY&N Program helps reduce the nutrient 
+load in stormwater runoff, and addresses the 
+serious problems of water shortages and 
+disappearing habitats by enlisting Floridians in 
+the battle to save our natural resources. It is 
+implemented through",1,1,27.367834,-82.459937
+1240,Nichols Facility Closure,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1239,Nichols Closure,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1238,Green Bay Discharge Diversion,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1237,Green Bay Discharge Diversion,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1236,Pond project,2012,0,0,NA,NULL,"Progress is decommissioning wastewater 
+ponds on site.",1,1,27.856774,-82.601469
+1234,NA,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1233,Green Bay discharge diversion to Progress Energy,2013,0,0,NA,NULL,NULL,1,1,27.8330666,-81.8761819
+1232,Enclosure of 10/4 Transfer Point,0,0,2010,NA,NULL,"Enclosure of conveyor transfer point 10/4, 
+reducing material loss and product runoff.",1,1,0,0
+1231,Shiploader System Upgrades,0,0,2009,NA,NULL,"â€¢	Installation of stainless steel and 
+aluminum pans underneath the entire 
+shiploader to collect any overflow or spillage, 
+minimizing material losses and product runoff.",1,1,0,0
+1230,Regrade Berms and Swales,0,0,2008,"$17,616.09",NULL,Regrading berms and swales along dock-front.,1,1,27.918834,-82.41985
+1229,Enclosure of 10/4 transfer point,0,0,2010,NA,NULL,Enclosure of product transfer point 10/4.,1,1,27.86714745,-82.35780285
+1226,South Bayshore Blvd,2010,0,0,3017298,"Ad valorum, WMLTF, DEP 319(h) Grant","This project is in response to a FY2010 Cooperative Funding 
+request by the City of Safety Harbor to design, permit
+and construct best management practices (BMP's) targeted to 
+improve water quality, address impaired waterbodies
+(WBID 1569, 1574 and 1",1,1,27.987333,-82.690333
+1224,River Tower SWIM Improvements,2005,0,0,2590000,NULL,"This stormwater retrofit project will include 
+construction of a diversion structure in-line with 
+an existing 78"" FDOT storm sewer line along 
+the east side of I-275.  The diversion structure 
+will redirect lower flows to a wet detention 
+pond to be",1,1,28.02255019,-82.45791678
+1218,Sediment Trap NSBB:  Brorien St,2010,0,0,NA,NULL,"Installation of a SunTree NSBB at Brorein St on 
+west bank of the Hillsborough River.  Total 
+treated acres is approximately 3 acres.",1,1,27.94357032,-82.45707925
+1203,TBEP Test 8-23-2012,2007,0,2008,"$250,000",TBEF,Some text here.,1,1,27.5,-82.3
+1202,Cladas_Test,0,0,2011,245000,NULL,Just testing,1,1,27.38,-82.032
+1201,Robles Park Stormwater Improvements,2010,0,0,NA,SWFWMD Cooperative Funding,"This is a SWFWMD-initiative project with 
+funding assistance from the City and FDOT.  
+The ultimate goal of the project is to construct 
+stormwater improvements that will provide 
+stormwater treatment and pollutant removal 
+from approximately 180 acr",1,1,27.973436,-82.454922
+1200,Floating Wetland Island Nutrient Abatement,0,0,0,"$250,000",Cooperatively funded project with the SWFWMD,"Today, approximately 30 percent of the 
+reclaimed water produced by the County is 
+reused in the Hillsborough Bay drainage 
+basin. This basin also represents the area 
+where most of the future growth in reclaimed 
+water customers is projected. Howeve",1,1,0,0
+1199,Floating Wetland Island Nutrient Abatement,0,0,0,NA,NULL,NULL,1,1,0,0
+1198,New River Bacteria Source Assessment,2010,0,2011,NA,NULL,"Bacteria source tracking study results in the New
+River subbasin of the Hillsborough River watershed.",1,1,0,0
+1197,TBEP Test July 2012 Test 3,0,0,0,NA,NA,NULL,1,1,0,0
+1196,TBEP Test July 2012 Test 2,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1195,Testing Project Entry july 2012,2009,0,2010,"1,250,000",NULL,NULL,1,1,27.5,-82.41
+1194,Agricultural BMPs,2008,0,0,NA,NULL,"Agricultural BMPs are practical, cost-effective 
+actions that agricultural producers can take to 
+reduce the amount of pesticides, fertilizers, 
+animal waste, and other pollutants entering 
+our water resources, and to increase water-
+use efficiencies",1,1,27.481471,-82.41394
+1193,Agricultural BMPs,2008,0,0,NA,NULL,"Agricultural BMPs are practical, cost-effective 
+actions that agricultural producers can take to 
+reduce the amount of pesticides, fertilizers, 
+animal waste, and other pollutants entering 
+our water resources, and to increase water-
+use efficiencies",1,1,27.535065,-82.345276
+1192,Agricultural BMPs,2008,0,0,NA,NULL,"Agricultural BMPs are practical, cost-effective 
+actions that agricultural producers can take to 
+reduce the amount of pesticides, fertilizers, 
+animal waste, and other pollutants entering 
+our water resources, and to increase water-
+use efficiencies",1,1,27.751608,-82.054138
+1191,Agricultural BMPs,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1190,Agricultural BMPs,2008,0,0,NA,NULL,"Agricultural BMPs are practical, cost-effective 
+actions that agricultural producers can take to 
+reduce the amount of pesticides, fertilizers, 
+animal waste, and other pollutants entering 
+our water resources, and to increase water-
+use efficiencies",1,1,27.732161,-82.040405
+1189,Agicultural BMPs,2008,0,0,NA,NULL,"Agricultural BMPs are practical, cost-effective 
+actions that agricultural producers can take to 
+reduce the amount of pesticides, fertilizers, 
+animal waste, and other pollutants entering 
+our water resources, and to increase water-
+use efficiencies",1,1,27.732161,-82.040405
+1188,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1187,Agricultural BMPs,2008,0,0,NA,NULL,"Agricultural BMPs are practical, cost-effective 
+actions that agricultural producers can take to 
+reduce the amount of pesticides, fertilizers, 
+animal waste, and other pollutants entering 
+our water resources, and to increase water-
+use efficiencies",1,1,27.732161,-82.040405
+1185,New River Bacteria Source Assessment,0,0,0,NA,NULL,NULL,1,1,0,0
+1183,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1181,BMP Implementation,0,0,0,NA,NA,NULL,1,1,0,0
+1180,TAC Test,0,0,0,NA,NA,NULL,1,1,0,0
+1179,Reclaimed Water Reservoir Floating Wetland Island,2013,0,0,"$250,000",Cooperatively funded project with the SWFWMD.,"Today, approximately 30 percent of the 
+reclaimed water produced by the County is 
+reused in the Hillsborough Bay drainage 
+basin. This basin also represents the area 
+where most of the future growth in reclaimed 
+water customers is projected. Howeve",1,1,28.248678,-82.267285
+1178,TBEP PS,2011,0,2012,"20,000,000",Cooperative funding,Descriptive text,1,1,27.9,-82.41
+1177,TBEP NPS Project,2007,0,2011,"3,500,999",Ad valorum,NULL,1,1,27.855,-82.409
+1176,TBEP PS Test,2010,0,2012,"3,500,999",CIP,TB Loads file >1MB,1,1,27.853,-82.2
+1175,"TBEP Test Project April 04, 2012",2008,0,2010,1250000,Co-operative funding,Description,1,1,27.852109,-82.153015
+1174,test,0,0,0,NA,NA,NULL,1,1,0,0
+1173,TBEP Test Project,2007,0,2009,"1,250,000",319h Grant,Test files,1,1,27.945,-82.409
+1172,test,0,0,0,NA,NA,NULL,1,1,0,0
+1171,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1170,test,0,0,0,NA,NA,NULL,1,1,0,0
+1169,NMC Test,2011,0,2012,"125,000",319h Grant,Plans for creek restoration.,1,1,27.9,-82.3
+1168,123test,0,0,0,NA,NA,NULL,1,1,0,0
+1167,1234test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1166,201032-2 - I-75 at SR 70 Interchange,2012,0,0,NA,NULL,"FPID 201032-2 will improve the I-75 and SR 70 
+interchange in Manatee County including 
+stormwater treatment facilities.",1,1,27.44,-82.46
+1164,Dog Waste Signs,2008,0,0,$300/Year,Utilities Revenues,"Ongoing program that involves the installation 
+of signs that say â€œDog Waste Transmits 
+Disease and Contaminates our Water: Leash 
+and Pick Up After Your Dogâ€ù in public areas 
+where dog waste has become a notable 
+problem",1,1,28.01077036,-82.12486267
+1163,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1162,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1161,test,0,0,0,NA,NA,NULL,1,1,0,0
+1159,Illicit Discharge Complaint Investigations,1993,0,0,NA,NULL,Illicit discharge investigations are a part of our NPDES Permit requirments in which we investigate and perform corrective actions on any illicit discharges affecting our MS4.,1,1,27.95316489,-81.91543579
+1158,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1157,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1156,TEST 2,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1155,TEST,0,0,0,8000000,NULL,blah blah blah,1,1,0,0
+1154,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1153,test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1152,Josh's Test March 16,2012,0,0,"$5,000",AMEC F&A,Some Description here,1,1,36.4,-86.38
+1151,GM test,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1150,TEST,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1149,Brians Test,0,0,0,NA,NA,NULL,1,1,0,0
+1148,Ed's Test Project,2010,0,0,"1,250,000",Ad valoreum,Description,1,1,27.945,-82.409
+1147,NA,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1146,NA,NA,NA,NA,NULL,NA,NULL,NA,NA,NA,NA
+1145,NA,0,0,0,NA,NA,NULL,1,1,0,0
+1144,Testing Project Entry,2012,0,0,"$5,000",NA,NULL,1,1,28.35,-86.38
+1143,Testing Project Entry,0,0,0,NA,NA,NULL,1,1,0,0
+1142,NA,0,0,0,NA,NA,NULL,1,1,0,0
+1082,Septic Tank Abandonment or Connection to Sanitary Sewer,0,0,0,$0.00,COL General Fund - Utility Fund,Identification & quantification of nutrient reductions achieved by eliminating septic tanks in the City of Lakeland and surrounding areas.,1,1,28.019236,-82.21548
+1081,Enclosure of the 9/4 Transfer Point,0,0,2009,$0.00,NULL,Enclosure of product transfer point 9/4.,1,1,27.86714745,-82.35780285
+1079,Tampa Bay Regional Surface Water Treatment Plant Expansion,2008,2009,0,$0.00,NULL,same as ID 1078 - different basin,1,1,28.019236,-82.21548
+1077,Tampa Bay Water Regional Surface Water Treatment Plant,0,2009,0,$0.00,NULL,NULL,1,1,28.019236,-82.21548
+1076,Tampa Bay Water Regional Surface Water Treatment Plant,0,2009,0,$0.00,NULL,NULL,1,1,28.019236,-82.21548
+1075,Tampa Bay Water Regional Surface Water Treatment Plant,0,2009,2006,$0.00,NA,NA,1,0,28.019236,-82.21548
+1074,Tampa Bay Water Regional Surface Water Treatment Plant,0,2008,2006,$0.00,NA,NA,1,0,28.019236,-82.21548
+1073,Tampa Bay Water Regional Surface Water Treatment Plant,0,2009,2005,$0.00,NA,NA,1,0,28.019236,-82.21548
+1055,SR 583/56th Street CDS,0,0,0,$0.00,NA,NA,0,0,27.86714745,-82.35780285
+1049,Margaret Manor Subdivision Drainage Improvements,0,0,0,"$1,425,000.00",LOST,The City will install a drainage system within the Margaret Manor subdivision to collect and convey the stormwater to McKay Creek.,0,0,27.86714745,-82.35780285
+1040,Stormwater Filtration Units,0,0,0,$0.00,NA,This project consists of installation of in-line treatment systems at various locations throughout the City to improve water quality.,0,0,28.012172,-82.609611
+1038,Alum Treatment Facility Improvements,0,0,0,"$450,000.00","stormwater fund, grant","The operation of the alum treatment system contributes to compliance with the City of Largo Municipal Stormwater Permit and pending Total Maximum Daily Load regulations, which are administered by the Florida Department of Environmental Protection.",0,0,27.826351,-82.752508
+1037,Annual Stormwater Replacement Program,0,0,0,$0.00,LOST,The purpose of this program is to replace substandard and failing stormwater pipe and subsurface drains throughout the City of Largo.,0,0,28.012172,-82.609611
+1035,131st Avenue/131st Place Sewer Extension Project,0,0,0,$0.00,NA,Planned for 2009. Will eliminate 6-8 septic systems in the McKay Creek Drainage basin.,0,0,27.826351,-82.752508
+1034,10th Street SW Sewer Extension Project,0,0,0,$0.00,NA,Proposed for FY 2008 (Pending easement acquisition). This proejct will eliminate 5 septic tanks near Taylor Lake in McKay Creek Drainage basin.,0,0,27.86714745,-82.35780285
+1030,Lucymar Subdivision Drainage Improvements,2012,2012,0,"$350,000.00",Community Development - CDBG,"The proposed improvements include evaluation, redesign and reconstruction of the drainage system within the Lucymar subdivision.",1,1,28.012172,-82.609611
+1029,Suncoast Hospital Drainage Ditch Improvements,0,0,0,"$1,400,000.00",Community Development -LOST,"The purpose of this project is to make improvements to the drainage ditch that runs along the south side of the Suncoast Hospital, from Indian Rocks Road  to Pocahontas Drive.",0,0,27.86714745,-82.35780285
+1028,Kent Place Drainage Ditch Improvements,0,0,0,"$2,120,000.00",Community Development - LOST,The purpose of this project is to make improvements to segments of two (2) drainage ditches located in the Allen's Creek basin.,0,0,28.012172,-82.609611
+1027,Longbow Lane Drainage Improvements,0,0,0,"$350,000.00",Community Development - LOST,"This project will establish drainage outfalls to area channels and lakes, and repair or replace existing drainage outfalls from the neighborhood to the Allen's Creek drainage system.",0,0,28.012172,-82.609611
+1026,Privately-owned collection and transmission system program,0,0,0,$0.00,permit fees,"A permit-based, inspection/education/enforcement program that has significantly reduced sanitary sewer overflows throughout Largo Sewer District.",0,0,27.826351,-82.752508
+1025,Commercial User Program,0,0,0,$0.00,permit fees,"A permit-based, inspection/education/enforcement program that has significantly reduced sanitary sewer overflows throughout Largo Sewer District.",0,0,27.826351,-82.752508
+1017,Bacteria at Ben T. Davis Beach,0,0,0,$0.00,NA,"Replacing 2,800 ft. of sewage pipes near Ben T. Davis beach.",0,0,28.012172,-82.609611
+1009,P2 Week - Electronic Waste,0,0,0,$0.00,NA,EPC-HC has partnered with Hills. Co. Solid Waste Mgmt. Dept. for electronic waste recycling this year.,0,0,27.86714745,-82.35780285
+1005,NA,0,0,0,$0.00,NA,NA,0,0,27.86714745,-82.35780285
+1004,Green City,0,0,0,$0.00,NA,City is working towards a Sierra Club designation as a Green City and a Cool City.,0,0,27.79,-82.442
+1001,C2 Transfer Point Enclosure,2006,0,0,$0.00,Company funds,"A new expanded enclosure to house the 
+entire Ã¢â‚¬Å“footprintÃ¢â‚¬Âù of the conveyor belt 
+at the C2/C3 transfer point.",1,1,27.918834,-82.41985
+999,Tropicanca Field Stormwater Enhancements and Education,0,0,0,"$818,500.00",NA,NA,0,0,27.826351,-82.752508
+995,Support for Mulitple Public Education Projects,0,0,0,$0.00,NA,"Support for many public education projects such as Fantasy Island restoration, Bay Spirit Vess with Florida Aquarium, Hillsborough Bay Boater's Guide.",0,0,28.019236,-82.21548
+994,Longshore Bar / Wave Energy Study / Restoration,0,0,0,$0.00,NA,TPA will provide bathymetric surveying support and cost estimation for the proposed longshore bar pilot project being contemplate for submerged lands south of MacDill AFB.,0,0,28.019236,-82.21548
+979,Support reduced pollution from recreational boaters,0,0,0,$0.00,NA,2003 update attached.  FDEP has continued to conduct clean marina/boatyard workshops as well as participating in other public outreach events.,0,0,27.79,-82.442
+978,Intensive mercury monitoring sites,0,0,0,$0.00,NA,"Discussions with EPA may lead to establishing 2 intensive mercury monitoring sites in Florida, one in Tampa, one in Everglades.",0,0,27.79,-82.442
+976,Design and Implementation of Low Impact Development Strategy,0,0,0,$0.00,NA,The City is currently processing its Evaluation & Appraisal Report (EAR) as part of the overall Comprehensive Plan update.,0,0,27.86714745,-82.35780285
+974,Reduce Occurrences of Municipal Sewer Overflows to Tampa Bay,0,0,0,$0.00,NULL,The City of Tampa has embarked on several parallel initiatives to reduce the number of wastewater overflows in its system of over 2000 miles of pipe.,1,1,27.86714745,-82.35780285
+973,Assess the extent of existing invasions in Tampa Bay,0,0,0,$0.00,NA,2003 update record attached.,0,0,27.79,-82.442
+972,Technical Support for implementing watershed management strategies to address TMDLs,0,0,0,$0.00,NA,2003 update file attached.,0,0,27.79,-82.442
+971,Additional Wetland Buffers for Larger Developments,0,0,0,$0.00,ad valorum,The Manatee County Planning Dept. has begun requesting larger than required wetland buffers in the large planned development communities located north of the Manatee River.,0,0,27.504968,-82.356166
+970,Clean Marina Requirement,0,0,0,$0.00,ad valorum,Ongoing effort of promoting the Clean Marinas Program during the development review process.  This includes participation in the program written as stipulations in the approval process for new marinas.,0,0,27.59344,-82.675961
+966,Aquifer Storage & Recovery - North WWTP,2004,2006,0,$0.00,ad valorum,"Installation and use of Aquifer Storage and Recovery wells at the county's North Wastewater Treatment Plant, near the Buffalo Canal. The ASR wells will be used for the storage of reclaimed water, which can then be distributed more efficiently.",1,1,27.571698,-82.478015
+963,Berth 12 improvements,0,0,0,$0.00,NA,"Bert 12 at the Port, located along the southwest edge of the Port, will be deepened by dredging.  Rip-rap will be placed at the south end of the dredged area at a 2:1 slope to provide slope stabilization and provide a hard bottom habitat.",0,0,27.59344,-82.675961
+962,Informational Kiosk,0,0,0,$0.00,NA,"Informational kiosk to be constructed at the Piney Point boat ramp (on the north side of the Port) as part of mitigation activities.  The kiosk will contain information regarding surrounding bay habitats and wildlife, and other info for boaters/anglers.",0,0,27.59344,-82.675961
+961,Seagrass Protection,0,0,0,$0.00,NA,A 400 acre area of seagrass beds in and around Port Manatee has been designated a 'non-combuustion engine area' and is marked with signs.,0,0,27.59344,-82.675961
+960,Port Security,0,0,0,$0.00,NA,Offers a 'community watch' traning program for anglers wishing to fish at the Port.,0,0,27.59344,-82.675961
+956,Visitors Center at Emerson Point Park,0,0,0,"$800,000.00",NA,Visitors center at the Emrson Point Park/Robinson Preserve. Public education regarding coastal habitats and ecosystems.,0,0,27.504968,-82.356166
+955,Prairie Schooner at Duette Park,0,0,0,"$60,000.00",NA,"Eco-tourism project at Duette Park.  Upland community education for the public by transporting them through the park, at the headwaters of the Manatee River.",0,0,27.504968,-82.356166
+954,Blueways Guide,0,0,0,"$20,000.00",NA,Has distributed over 10K copies of this public education brochure describing kayak/canoe paddling routes through waterways in/around County. Brochure also includes descriptions of commonly observed wildlife and habitats.,0,0,27.59344,-82.675961
+951,Gladiolus/North Shore Basin Project,2005,0,0,"$270,000.00",SWIM grant/Ad valorum,Approx. 20 right-of-way easements located between existing residences within the city will be converted to stormwater treatment swales. Culverts connected to the swales will also be outfitted with oil&grease removal best mgmt practices.,1,1,27.535131,-82.737666
+950,Artificial Reef Ball Program,0,0,0,"$37,000.00","ad valorum, grants",Man.Co. obtained grant to promot the installation of small reef balls at permitted locations throughout waters adjacent to Man.Co. Using grant funds from 2001 for construction and placement of reef balls.,0,0,27.59344,-82.675961
+946,East County Transit Route,0,0,0,"$1,800,000.00",FDOT grant,Extending Manatee County public transportation to eastern portions of the County.  Coverage area includes east to Lakewood Ranch Blvd and north to SR64. Recommended calculating Nox reduction using Caltrans/Air Resource Board report submitted.,0,0,27.504968,-82.356166
+945,Water Taxi,0,2006,0,$0.00,FDOT grant,Anticipated route of the taxi is from Crosley Museum to Bradenton Beach to Anna Maria pier. Recommended calculating Nox reduction using Caltrans/Air Resource Board report submitted.,0,0,27.504968,-82.356166
+940,Duette Land Acquisition,2006,0,0,"$88,000.00",ad valorum,Proposed purchase of 50 acres of former agricultural property for preservation and eventual conversion to uplands habitat.,1,1,27.59039,-82.122852
+931,Parrish Life Estate,0,0,0,"$88,000.00",Ad valorum,"Acquisition of approximately 500 acres contiguous with the north side of Duette Park (i.e., the headwaters of the Manatee River) for preservation and habitat restoration.",1,0,27.55636238,-82.18715229
+929,Robinsons Preserve,2006,0,0,"$4,000,000.00",Ad valorum,140 acre wetland restoration project on 400 acre site.  Much of the property was used for agriculture use prior to conservation.,1,1,27.517668,-82.667251
+927,Lake Tarpon Water Quality Area 63 Alum Treatment,2006,2010,0,"$520,000.00",NULL,"Waters discarging to Lake Tarpon will be retrofitted with an alum injection system to achieve a 90% reduction in TP, 40% reduction in TN, and 90% reduction in TSS.",1,1,28.012172,-82.609611
+926,Lake Tarpon Water Quality Area 23 Alum Treatment,2006,2010,0,"$570,000.00",NULL,"Waters discharging into Lake Tarpon will be retrofitted with an alum injection system to achieve a 90% reduction in TP, 40% reduction in TN, and 90% reduction in TSS.",1,1,28.012172,-82.609611
+869,Tampa Bypass Canal Water Quality Protection Plan,0,0,0,"$75,000.00",Tampa Bay Water Uniform Rate cost per year,"Addresses water quality issues related to source 
+water protection including constituents of interest 
+based on finished water quality, operation of the 
+Regional Water Treatment Plant, and the Regional 
+Reservoir.",1,1,28.019236,-82.21548
+868,Alafia River Water Quality Protection Plan (WQPP),2004,0,0,"$75,000.00",Tampa Bay Water Uniform Rate cost per year,"The Alafia River Water Quality Protection Plan 
+addresses water quality issues related to source 
+water protection.",1,1,28.019236,-82.21548
+867,Source Water Protection - Land Use and Development Review Program,0,0,0,"$100,000.00",Tampa Bay Water Annual Uniform Rate per year project cost.,NULL,1,1,27.79,-82.442
+866,Wellfield Environmental Management Programs,0,0,0,"$1,300,000.00",Tampa Bay Water Annual Uniform Rate,NA,0,0,28.019236,-82.21548
+865,Hydrobiological Monitoring Program,1999,0,0,"$1,200,000.00",Tampa Bay Water Annual Uniform Rate,NULL,1,1,28.019236,-82.21548
+864,Downstream Augmentation Project,2004,2011,0,"$186,000,000.00","Capital Bonds by Tampa Bay Water, SWFWMD co-funding, State and Federal funding",NULL,1,1,28.019236,-82.21548
+863,"Irrigation, Evaluation Training Program",0,0,0,NA,Cost per workshop,NULL,1,1,27.826351,-82.752508
+862,Landscape and Irrigation Permit and Code Enforcement Training Program,2004,0,0,NA,Cost per workshop,NULL,1,1,28.019236,-82.21548
+861,Evaluating implementation of multiple irrigation and landscape ordinances in the Tampa Bay region,0,0,0,NA,NULL,NULL,1,1,27.79,-82.442
+860,Green Building Program,0,0,0,NA,NULL,"The Green Building Program promotes both energy 
+and water conservation in home building and 
+purchasing through an annual series of workshops.  
+Funding support to insure that 'green' practices 
+include water conservation and landscape bmps in 
+mate",1,1,28.019236,-82.21548
+859,Support for Florida Yards & Neighborhoods water conservation program,0,0,0,205000,Tampa Bay Water Annual Uniform Rate,2003 update - attached,1,1,27.826351,-82.752508
+858,Support of CCMP actions,0,0,0,$0.00,NA,Attached letter to FWC/FWRI indicates actions FWRI is taking to implement CCMP goals.,0,0,27.79,-82.442
+857,"Mulberry, Closure of Mulberry phosphogypsym stack",0,0,0,$0.00,NULL,Details to be provided in early November 2005.,1,1,27.89402,-81.973124
+854,Bartow Operations Phosphogypsum Stack System Closure,2007,0,0,"$60,000,000.00",self,"Closure of 900 acre phosphogypsum stack 
+system. Results in the elimination of trated 
+process water discharges containing elevated 
+N and P by 2010, siginificant reductions 
+beginnings 2007 to 2008. Also represents 
+permanent closure of former opera",1,1,27.866425,-81.928348
+853,"Plant City Phosphate Complex, Process Water Balance Improvements, Prevention Project",0,0,0,$0.00,NULL,"Three projects to reduce the volume of process water generated within the phosphogypsum stack system to avoid or eliminate future potential discharge of treated water, which contains elevated nitrogen and phosphorous.",1,1,28.160614,-82.153796
+846,"Mosaic Mulberry, Transfer of Mulberry Phosphates process water",0,2005,2005,$0.00,NA,Implemented the transfer process water and treated water from the Mulberry Facility to the Bartow Facility to discharge into the Peace River Basin rather than the Alafia River.,1,1,27.89402,-81.973124
+840,South Cross Bayou Water Reclamation Facility Tour and Education Program,0,0,0,"$95,000.00",County funds and basin board,"Pinellas County Utilities, in partnership with Pinellas County Schools, developed a Discover a Cleaner Tomorrow Tour and Education Program at its newly renovated South Cross Bayou Water Reclamation Facility in St. Petersburg.",0,0,27.79,-82.442
+839,Water: Educate to Conserve Through the Arts,0,0,0,"$40,000.00",NA,Theater presentation program consists of professional artists performing interactive water resource presentations.,0,0,27.826351,-82.752508
+838,Tampa-Water Conservation Education Theatre Project,0,0,0,$0.00,"SWFWMD, Hills.Co Arts Council, Hills. Co. Water Dept., City Tampa Water Dept.","An in-school, arts-based project that fosters individual responsibility to protect and conserve southwest Florida's water resources.",0,0,28.012172,-82.609611
+837,Water Conservation Hotel and Motel Program (Water CHAMP),0,0,0,"$27,000.00",NA,Provides education to hotel/motel management and guests with the goal of reducing water use.,0,0,27.79,-82.442
+836,Starkey Park Exhibits,0,0,0,"$178,000.00","Pasco Co., Pasco School District, Fl. Save our Rivers",An environmental center was constructed in 2002. Watershed education goals.,0,0,28.012172,-82.609611
+835,Honeymoon Island Park Exhibits,0,0,0,"$35,000.00",Honeymoon Island State Park,"District will provide funding for the develoment, construction and installation of educational components as recomemended by the Park's consultant. Designed to educate visitors on watershed mgmt, water quality, flood protection, natural systems protection",0,0,28.012172,-82.609611
+834,Hillsborough River Watershed Education,0,0,0,"$14,700.00",Tampa Mayor's Beautification Program,The Mayor's Beautification Program (MBP) will research and develop a community education program plan for residents in the watershed.,0,0,28.019236,-82.21548
+833,Stormwater Education Program at The Florida Aquarium,0,0,0,"$73,000.00",NA,"The Florida Aquarium is developing a new focal point for stormwater education that will introduce an estimated 600K visitors annualy to the Florida water story, the water cycle and stormwater education.",0,0,28.019236,-82.21548
+832,Brooker Creek Watershed Education,0,0,0,$0.00,NA,The Pilot Brooker Creek Watershed Education Program provides watershed-specific information to a selected audience in a variety of ways.,0,0,28.012172,-82.609611
+831,Brooker Creek Exhibits,0,0,0,NA,NA,Provides for watershed education exhibits at the Brooker Creek Preserve Environmental Education Center.,0,0,28.012172,-82.609611
+830,North Tampa Pipeline,2007,0,0,$0.00,NULL,"Working to secure federal, SWFWMD and local funds. Could provide more than 28 mgd of reclaimed per day during dry season, conserving 18.7 mgd of drinking water.",1,1,27.79,-82.442
+825,Best Management Practices for Maintenance of Low-Volume Toilets,0,0,0,"$95,000.00",Ad valorum,BMPs for maintenance of low-volume toilets program will encourage the proper selection and replacement of toilet flappers.,0,0,27.79,-82.442
+824,Water Conservation Messaging,0,0,0,"$500,000.00",NA,A general public service announcement effort focuses on the traditional 'dry season' of March through May.,0,0,27.79,-82.442
+823,SWFWMD Florida-Friendly Landscaping Promotion,0,0,0,"$65,000.00",NA,"Will promote adoption of FY&N Florida-friendly landscape principles to homeowners, builders and developers, landscape business and professionals.",0,0,27.79,-82.442
+822,Landscape Education Coordination Initiative,0,0,0,$0.00,in house,"The Landscape Education Coordination Initiative will provide consistent education to landscaping professionals, growers and irrigation contractors regarding appropriate plant choice, growing best management practices, landscape installation, maintenance.",0,0,27.79,-82.442
+821,"Community Water-Wise Awards Program for Hillsborough, Pasco and Pinellas Counties",0,0,0,35000,"Alafia, Hills, Northwest Hills and Pinellas-Anclote River Basin Boards","The Community Water-Wise Program recognizes 
+homeowners, government entities, commercial 
+building owners and builders who have created 
+water-efficient, yet aesthetically pleasing landscapes 
+in Hills., Pasco and Pinellas Counties.",1,1,27.79,-82.442
+820,Lake Tarpon - SWIM Plan Implementation,0,0,0,"$16,000.00",NA,"Original SWIM Plan was completed in 1989 and revised in 1994.  Proposed prjects concentrate on decreasing stormwater loading, hydrologic and habitat restoration in Brooker Creek Watershed, the major surface water tributary to Lake Tarpon.",0,0,27.86714745,-82.35780285
+818,Ribbon of Green Restoration Site,2002,0,0,"$71,826.00",NA,.62 acre parcel iprovements include total shoreline restoration/revegetation on portion of seawalled and riprapped shoreline.,1,1,27.955258,-82.464764
+817,River Garden Stabilization Study,2003,0,0,"$299,439.00",NA,"A 3.5 acre park; river bank suffers from erosion, crumbling sewalls. Project focuses on developing habitat, water quality by establishing wetlands along the west bank of the river.",1,1,27.967857,-82.476088
+816,Reed Property Shoreline Restoration,0,0,0,"$605,114.00",NA,"Reed Park site is composed of a mesic hammock, 600 linear feet of dilapidated seawall along the River, and a stormwater creek which traverses the property carrying runoff. Project would restore riparian shoreline and includes stormwater polishing.",0,0,28.019236,-82.21548
+813,Stormwater Filtration Devices,0,0,0,$0.00,NA,22 stormceptor units,0,0,27.86714745,-82.35780285
+760,Newmans Branch Restoration,0,0,0,$0.00,"NOAA, NFWF",restoration of 11.9 acres of disturbed habitat along Newman Branch Creek.  Will restore native plant communities which will help filter stormwater runoff before it reaches the Bay. Unable to quantify nutrient uptake at this point.,0,0,27.86714745,-82.35780285
+756,St. Petersburg Municipal Marina - Clean Marina Program,0,0,0,$0.00,Marina Enterprise Fund,Subbasin # 594.  Designation awarded to the City of St. Petersburg Municipal Marina.,0,0,27.662673,-82.215645
+753,Coastal Ocean Monitoring and Prediction System (COMPS),0,0,0,$0.00,NA,"Provides data for West Florida coastal management issues such as safety and efficiency of marine navigation, search & rescue efforts and making accurate predictions of coastal flooding caused by storm surge.",0,0,27.86714745,-82.35780285
+752,Physical Oceanographic Real-Time System (PORTS),0,0,0,$0.00,NA,"PORTS improves navigational safety and protects the environment by collecting and relaying water level, current and meteorological data.",0,0,27.86714745,-82.35780285
+751,Web-Based Integrated Land Management Plan,2001,0,0,$0.00,NULL,"Electronic, integrated land management plan accessed at: www.cargill-neb.com/cargill",1,1,27.86714745,-82.35780285
+748,Brownfields Assessment Demonstration Pilot Project,0,0,0,"$200,000.00",NA,Site assessments of properties locate in the City's Channel District target area.,0,0,27.86714745,-82.35780285
+747,EMPACT,0,0,0,$0.00,NA,"The EMPACT grant is with the State of Floirda Department of Health, who have passed along funds to each of the 10 counties' Health Departments for data collection.",0,0,27.86714745,-82.35780285
+744,Volunteer Hands-On Restoration Projects 2004,0,0,0,$0.00,NA,multiple hand-on projects done by Tampa BayWatch volunteers.,0,0,27.86714745,-82.35780285
+743,Burning grass to supplement coal at power plant,0,0,0,$0.00,NA,Burning of Bahia grass to supplement traditional coal or oil.,0,0,27.86714745,-82.35780285
+741,NA,0,0,0,$0.00,NA,NA,0,0,27.86714745,-82.35780285
+740,NOAA SIMmetry Port of Tampa Pilot Project,0,0,0,$0.00,NA,GIS maps database which could be used to visualize the impacts of events such as storm surges or oil spills. 2005-2010 update included in desc file.,0,0,27.79,-82.442
+739,Smithsonian Environmental Research Center (SERC) Exotic Study,0,0,0,$0.00,NA,weblink to SERC study: http://www.serc.si.edu/labs/marine_invasions/index.jsp. 2005-2010 update included in desc file also.,0,0,27.79,-82.442
+738,Newman Branch Creek Habitat Restoration,0,0,0,"$301,464.00",NA,Twelve acres of low salinity habitat on the southeastern shoreline of Tampa Bay will be restored.  Apollo Beach.,0,0,27.86714745,-82.35780285
+737,Tampa Shoreline Restoration Initiative,0,0,0,"$1,262,042.00",NA,"Approximately 100,000 linear feet of natural shoreline and associated wildlife habitat will be restored.",0,0,27.86714745,-82.35780285
+736,Pinellas County Adopt-A-Pond,0,0,0,"$27,500.00",NA,Educate homeowners on the importance of stormwater pond management.,0,0,28.012172,-82.609611
+735,Students for Wildlife,0,0,0,"$100,000.00",NA,Development of environmental education program for Tampa Bay students.,0,0,27.86714745,-82.35780285
+734,Bay Grasses in Classes Operations Manual,0,0,0,"$13,400.00",NA,Creation of an operations manual and cirriculum for the Bay Grasses in Classes Program.,0,0,27.86714745,-82.35780285
+733,Pinellas County Classroom Teacher Grants,0,0,0,"$65,980.00",NA,Mini-grants will be awarded to public school educators (K-12) to create environmental education experiences.,0,0,27.86714745,-82.35780285
+732,Brooker Creek Environmental Education Center,0,0,0,"$813,000.00",NA,"Creation of an Environmental Education Center to introduce the public to the concept of watersheds, etc.",0,0,27.86714745,-82.35780285
+731,Youth for a Change!,0,0,0,"$31,560.00",NA,"Suncoast Earth Force will recruit, train and support two local educators ina year long professional development program.",0,0,27.86714745,-82.35780285
+730,Environmental Mobile Outreach Program,0,0,0,"$49,000.00",NA,"Mobile outreach program designed to reach approximatly 4,000 additional students annually.",0,0,27.86714745,-82.35780285
+729,Wonderful Water Exhibit: A Great Splash,0,0,0,"$302,824.00",NA,"A 1,500 sq. ft. Wonderful Water Exhibit.",0,0,27.86714745,-82.35780285
+728,NA,0,0,0,$0.00,NA,NA,0,0,27.86714745,-82.35780285
+727,Environmental Education Database for Tampa Bay,0,0,0,"$15,500.00",NA,Creation of a database of environmental education programs taking place in the Tampa Bay watershed.,0,0,27.86714745,-82.35780285
+726,Invasive Marine Species Workshop Sponsorship,0,0,0,"$4,123.00",NA,"A workshop held in November 2002 to synthesizze the current understanding of invasive species, prioritize research needs and identify knowledge gaps.",0,0,27.86714745,-82.35780285
+725,Oiled Wildlife Response System,0,0,0,"$11,700.00",NA,A mobile emergency response unit that will be used to treat oiled wildlife after a spill.,0,0,27.86714745,-82.35780285
+724,Restore America's Estuaries,0,0,0,"$125,000.00",NOAA/NMFS - match,several projects funded by NMFS. Bay Grasses in Classes; Community Based Salt Marsh Projects; Sewall Oyster; Oyster Bars. Contact Peter Clark @ Tampa Baywatch for details.,0,0,27.86714745,-82.35780285
+723,Portfields - Port Revitalization Project,0,0,0,$0.00,NA,Portfields project emphasizes developing environmentally sound port facilities.,0,0,28.019236,-82.21548
+722,Tampa Electric Company Powerline Redfish Nursery Habitat Creation Project,0,0,0,"$200,000.00",NULL,NULL,1,1,27.86714745,-82.35780285
+721,NA,0,0,0,$0.00,NA,NA,0,0,27.86714745,-82.35780285
+720,Balm-Boyette,0,0,0,$0.00,NA,NA,0,0,28.019236,-82.21548
+717,Alderman's Ford Preserve,0,0,0,$0.00,NA,971 acres on the Alaria River downstream of Alderman's Ford Park.,0,0,27.86714745,-82.35780285
+716,Fish Hawk Creek,0,0,0,$0.00,NA,An extension from the Alafia Corridor along Fish Hawk Creek with an upland connection to Bell Creek and connects to Balm Boyette Scrub.,0,0,27.86714745,-82.35780285
+715,Florida Green Lodging Website,0,0,0,$0.00,NA,Florida Green Lodging locator website.  An on-line resource to assist both visitors and residents to locate environmentally friendly hotels and motels in Florida.,0,0,27.79,-82.442
+714,Ware's Creek Flood Reduction,2011,0,0,"$4,600,000.00",City of Bradenton also,Project involves replacing four bridges and improving the existing stormwater management systems at three locations.,1,1,27.481496,-82.577983
+710,Picnic Island Bayou,0,0,0,"$230,000.00",NA,Land purchase from CSX Transportation by City Council.,0,0,28.019236,-82.21548
+708,Multiple BH-1 projects,0,0,0,$0.00,NA,Multiple habitat restoration projects within watershed.,0,0,27.79,-82.442
+707,Clearwater's Brownfields Pilot project,0,0,0,$0.00,NA,"Clearwater's Brownfileds Pilot funded assessments on a 14-acre site once cooupied by a department store's automotive service center.  After cleanup, the site was purchased for $1.5M by Information Management Resources as it new headquarters.",0,0,27.662673,-82.215645
+706,WPC Master Plan,0,0,0,"$365,776.00",NA,Analyze the existing water pollution control facilities producing a master plan that will outline how the City will meet regulatory and demand requirements for specified future timeframes.,0,0,28.012172,-82.609611
+704,NA,0,0,0,$0.00,NA,NA,0,0,27.86714745,-82.35780285
+703,Allen's Creek Habitat Restoration Project,0,0,0,$0.00,"Pinellas-Anclote Basin Board, Penny for Pinellas",attach file g/misty/apdbase/pinco/bh103allenscreek.doc,1,0,28.012172,-82.609611
+702,Little Bayou Park Habitat Restoration Project,0,0,0,$0.00,NA,"Creation of an underwater reef habitat, removal of seawall and addition of boardwark, nature trail,educational signs, and native plants.",0,0,27.86714745,-82.35780285
+701,Brownfields Assessment Demonstration Pilot,0,0,0,"$7,500,000.00",NA,The Pilot targets brownfields activities in the state Enterprise Zone and the Business Retention Target Area west of the city's Central Business District.,0,0,27.86714745,-82.35780285
+700,Port of St. Petersburg Dredging Study,0,0,0,"$1,200,000.00",NA,"A three-year study which will involve mapping the port, boring through the sandy bottom to determine the amount of muck to be removed. Completed study will be presented to Council for final decision.",0,0,27.86714745,-82.35780285
+699,"Natural gas expansion project adding ""Reburn"" for three units at Manatee County power plant",0,0,0,"$600,000,000.00",Florida Power and Light,"Two oil-fueled units will be able to co-fire both oil and natural gas and addition of one natural gas firing unit used to produce electricity for Manatee County. 2003 Update: expected 40% Nox reduction during high loads, depends on capacity. See LOG.",0,0,27.79,-82.442
+698,New standards to reduce entrainment for aging power plants,0,2006,0,$0.00,NA,NA,0,0,27.79,-82.442
+697,"""Water Conservation: Reflect, Connect, Celebrate""",0,0,0,$0.00,NA,Water conservation and education program using District grants and volunteers.,0,0,27.79,-82.442
+694,English Creek Surface Water Treatment Area - Site 2,0,2008,0,"$854,528.00",NA,Stortwater treatment using a treatment train of wet detention pond and constructed wetlands for a 153 acre drainage basin on English Creek.,1,0,28.019236,-82.21548
+693,Portfield Initiative Pilot Project,0,0,0,$0.00,Other Participant NOAA,Portfields is a NOAA-lead federal interagency project that focuses on the redevelopment of brownfields in port and harbor areas.,0,0,27.79,-82.442
+691,MacDill Oyster Reef Project,0,0,0,$0.00,Tampa BayWatch,Installation of 910 oyster reef units along southeast shoreline of MacDill Air Force Base.,0,0,28.012172,-82.609611
+690,Water Conservation Restroom Trailer,0,0,0,$0.00,NA,"A restroom trailer featuring a state-of-the-art re-circulation system with a companion educational campaign -""12 Simple Ways to Save Water"".",0,0,27.86714745,-82.35780285
+689,Stormwater Sediment Traps Pilot Project,0,0,0,"$450,000.00",NA,"Sediment traps designed to catch 60 to 80 percent of small particles of dirt, sand and gravel before they reach the Hillsborough River and Tampa Bay.",0,0,28.012172,-82.609611
+688,Summerfield and Eagles Reclaimed,0,0,0,$0.00,NA,2003 update-Water department reports Summerfield plant off-line for 4-5 years and Eagles for several.,0,0,28.019236,-82.21548
+680,City of Lakeland Reclaimed,0,2008,2000,$0.00,NA,"City of Lakeland (from Report) Mr. Don Shculender of Lakeland was contacted in 2000.  He stated that out of 10 MGD, 25%-33% will goto reuse.  There is a possiblity that the city is expanding their power plant and will take all the effluent and go to 100%.",0,1,28.019236,-82.21548
+676,Green Industries Best Management Practices Training,0,0,0,$0.00,NA,"A workshop to provide training to corporate, governmental, evnironmental and others on new BMP's for lawn and landscape. 2003 update: This class is really an example of a component of DB ID# 332&333.",0,0,27.86714745,-82.35780285
+674,Brownfields Redevelopment Program in Cross Bayou Watershed,2003,2006,0,$0.00,NULL,"The Board of County Commissiooners adopted a resolution July 1, 2003 adopting program guidelines for a Brownfields Redevelopment Program. 2003 Update. Don't see any necessary updates at this time - we just started.",1,1,27.826351,-82.752508
+672,Pinellas County Island Management Plan,0,0,0,$0.00,NA,Office of Coastal and Aquatic Managed Areas; Tampa Bay Aquatic and Buffer Preserves Program.  Hard copy document in Pinellas County file.,0,0,27.826351,-82.752508
+670,NA,0,0,0,$0.00,NA,NA,0,0,27.86714745,-82.35780285
+668,Public Involvement Initiative/South Hillsborough County,1994,0,0,$500.00,Bay Mini-Grants 1994 - Cockroach Aquatic Preserve mgmt. Action Team (CAPMAT),Project will address problems associated with stormwater runoff and develop newsletter and speaker's bureau to reach south Hillsborough residents and agriculture groups.,0,0,28.019236,-82.21548
+667,Shell Key Bird Nesting and Protection Sign,1994,0,0,$500.00,"Bay Mini-Grant, 1994 -St. Petersburg Audubon Society","Design, construction and installation of interpretive signage to educate the key's visitors about the importance of barrier islands as bird nesting sites.",0,0,27.826351,-82.752508
+666,Austin Davis Library/Environmental Landscaping Demonstration Site,1994,0,0,"$2,500.00",Bay Mini-Grant 1994; Hills. Co. Public Utilities,"Provides for development of a model Florida yard that will promote native plants, water conservation and reduced use of fertilizer and pesticides.  Site will be used for tours and special workshops.",0,0,28.019236,-82.21548
+665,Egmont Key Seagrass Protection,1994,0,0,"$2,800.00",Mini-Grant 1994; Egmont Alliance,Project to mark dense seagrass beds with buoys will limit boat access above the beds and resultant destruction of seagrasses.  Interpretive signage on the island will be installed to enhance boater understanding of seagrass fragility.,0,0,27.662673,-82.215645
+664,Emerson Point Mangrove Restoration,1994,0,0,"$3,000.00",Bay Mini-Grant 1994; Manatee County Soil & Water Conservation District,"Restoration of Emerson Point mangrove habitat, which was severly damaged by the 1993 ""No Name Storm"".  Training workshops for volunteers will provide for ongoing restorations and maintenance within the county.",0,0,27.547346,-82.58009
+663,Operation BayWorks/Business for A Cleaner Future,1994,0,0,"$4,000.00",Bay Mini-Grant 1994; Hillsborough County Engineering,NA,0,0,28.019236,-82.21548
+662,Coastal Wetland Nursery Model,1994,0,0,"$4,300.00",Bay Mini-Grant 1994; Tampa BayWatch and Lakewood High School,NA,0,0,27.79,-82.442
+661,Environmental Landscaping for Commercial Developers,1994,0,0,"$4,500.00","Mini-Grant 1994; Tampa Audubon Society, Westshore Alliance",NA,0,0,27.79,-82.442
+660,Alternative Pest Control for Ornamental Crops,1994,0,0,"$4,956.12",Mini-Grant 1994 - Manatee Commercial Horticulture Advisory Committee/Manatee Extension,"Six-month test project will utilize predatory bugs on ornamental crops in lieu of pesticides, followed by site tours and results distribution - and a workshop for Florida Nurserymen & Growers Association (FNGA).",0,0,27.59344,-82.675961
+659,Field studies at Audubon Resource Center at Lettuce Lake Park (ARC at the PARK),2002,0,0,"$7,500.00",Tampa Audubon,"Students from private schools in Hills. County will participate in a four-hour field study at ARC at the PARK.  Emphasis on hands-on learning experiences such as dip-netting, microscope use, and water quality studies.",0,0,28.019236,-82.21548
+658,Teacher Education Program,2002,0,0,"$6,062.00",Tampa BayWatch,Develop a teacher education program for 10-12 eighth grade teachers to include hands-on bay restoration work.  Training will be used as a foundation for classroom cirriculum to teach importance of Tampa Bay.,0,0,28.012172,-82.609611
+657,Least Tern education program,2002,0,0,"$3,341.30",St. Pete. Audubon Society,"Audubon members will produce and distribute educational materials about rooftop nesting of least terns, a threatened species.",0,0,27.79,-82.442
+656,Shoreline stabilization at Egmont Key State Park,2002,0,0,"$7,035.00",Egmont Key Alliance,"Planting of 6-7,000 native beach plants on dunes, berms and upland beaches in front of the historical structures.  Plants will provide wildlife habitat and help to stabilize new sand received from the Bayboro Harbor dredging project.",0,0,27.662673,-82.215645
+655,Exotic plant removal at E.G. Simmons Park,2002,0,0,"$7,500.00",Ruskin Community Development Found.,Removal of exotic plant species at E.G. Simmons Park and replanting with native plants.  Interpretive signs will also be produced and included in project.,0,0,28.019236,-82.21548
+654,Brazilian pepper removal at McKay Nature Park,2002,0,0,"$5,000.00",Tampa Audubon,"Brazilian pepper removal at McKay Bay Nature Park, replaing with native plants.",0,0,28.019236,-82.21548
+653,Water Quality Study and Restoration Project at Lake Skipper,2002,0,0,"$3,000.00",Dixie Hollins High School,Two ecology classes will participate in an intensive water quality study and restoration project.  Funds will be used to purchase water quality testing/monitoring equipment.,0,0,27.826351,-82.752508
+652,Weedon Island Preserve stormwater treatment project,2002,0,0,"$7,500.00",Boy Scout Troop 267,"Project includes replacing Bahia and St. Augustine grasses at a stormwater treatment system with native, drought-tolerant grass to conserve water, create habitat and prevent erosion.",0,0,28.012172,-82.609611
+651,Brazilian pepper removal,2002,0,0,"$3,950.00",Association of Overlook,Removal of invasive plants from common property along a tidal stream in condo community.  Residents will work with Extension service experts to remove dense Brazilian pepper and replace with native plants.,0,0,28.012172,-82.609611
+650,Pitching in to Protect Rosie's Habitat,2002,0,0,"$4,181.00",Keep Pinellas Beautiful,A program to educate public and private elementary school students about the effects of urban litter on estuaries.,0,0,27.662673,-82.215645
+649,Educational signs for portable display,2002,0,0,NA,NA,Educational signs will be created for a portable display to take to Manatee County events.  Display is designed to inform and recruit citizens to become involved with Keep Manatee Beautiful.,0,0,27.59344,-82.675961
+648,Seagrass Community Stewardship: Developing Grassroots Leadership,2002,0,0,"$6,255.00",Eckerd College,A volunteer corps will be trained to provide extensive monitoring and analysis of seagrass habitat after the completion of the Ft. DeSoto tidal exchange restoration project.,0,0,27.662673,-82.215645
+647,Brooker Creek Preserve preservation project,2002,0,0,"$7,397.00",Friends of Brooker Creek Preserve,Restoration of disturbed areas at Brooker Creek Preserve.  Native species will be planted along with an educational butterfly garden exhibit.,0,0,28.012172,-82.609611
+646,Artificial oyster reef installation,2001,0,0,"$7,290.00",Bayshore Beautiful Homeowners Assoc.,"Creation and installation of artificial reef balls at a section of Bayshore Blvd. to reduce wave erosion and create habitat for fish, mussels, and crabs.  One hundred and twenty seven (127)  reef balls were installed in March 2003.",0,0,28.012172,-82.609611
+645,Junior Master Gardener (JMG) program,2001,0,0,"$1,316.00",Hills. County Coop. Extension Service,A program to teach horticultural and environmental science.  Includes a youth handbook and teacher guide.  At the end of the cirriculum the children participate in a community environmental service project.,0,0,27.79,-82.442
+644,Boca Ciega Bay Boaters Guide,2001,0,0,"$4,750.00",St. Pete. Audubon/Audubon of Fla.,"Creation of a boaters guide specific to Boca Ciega Bay.  Guide will highlight boat ramps, canoe and kayak launch sites and boating speed zones.",0,0,27.826351,-82.752508
+643,Boaters and Anglers Environmental Service Centers,2001,0,0,"$3,600.00",Keep Manatee Beautiful,Fifteen service Centers at local boat rams will be expanded and updated with new information of environmentally friendly responsible boating.  Kiosks will feature maps and trash bags.,0,0,27.59344,-82.675961
+642,Tampa Bay: Species of Concern,2001,0,0,"$7,500.00",The Pier Aquarium,Tampa Bay: Species of Concern - a new exhibit focusing on endangered animals found in Tampa Bay.  An exhibit housed at the Aquarium in addition to companion education materials provided at the Education Station for adults and children.,0,0,27.79,-82.442
+641,Manatee and seagrass awareness program,2001,0,0,"$5,000.00",Cockroach Bay Users Group (CBUG),Production of educational materials designed to teach boaters how to operate safely in areas of Cockroach Bay frequented by manatees.  Materials will be distributed by CBUG volunteers at local boat rams and marinas.,0,0,28.019236,-82.21548
+640,Eco-Neighborhood program,2001,0,0,"$2,695.00",St. Pete. Audubon Society,"Members of St. Pete. Audubon will teach urban neighborhoods how to enhance backyard wildlife and protect local bird nesting colonies.  Program includes a slide show, reference notebook and nature hike.",0,0,27.79,-82.442
+639,Global Rivers Environmental Educational Network (GREEN),2001,0,0,"$80,440.00","Suncoast Earth Force $40,220",Pinellas Co. students will learn the importance of watersheds and use their newfound knowledge to implement a bay improvement project of their choice.  Awarded mini-grants in 2001 and 2002.,0,0,27.662673,-82.215645
+638,Art-O-Fishal Fun camp program,2001,0,0,NA,Florida Aquarium,At-risk students from Title I schools will attend a week-long camp blending art and science with hands-on field trips on Tampa Bay.  At the end of the camp student artwork will be displayed at the Tampa Museum of Art. Grant awarded 2 years,0,0,28.019236,-82.21548
+637,Remotely Operated Vehicles (ROVs),2001,0,0,"$2,755.42",Hillsborough Community College,Junior and senior high school students participating on field trips led by HCC scientists will assemble a ROV and use it to explore Tampa Bay from a new perspective - under the water.,0,0,28.019236,-82.21548
+636,Production of a portable display,2000,0,0,$550.00,Lowry Park Zoo,Creation of a portable display informing citizens about manatee rescue and salvage operations.,0,0,27.79,-82.442
+635,Brochure explaining proper hook removal technique,2000,0,0,"$2,100.00","Save Our Seabirds, Inc.","Production of a brochure explaining the proper technique for removing hook and line safely from seabirds. Production and distribution of 25,000 brochures.",0,0,27.79,-82.442
+634,Install environmentally friendly plants at Philippe Park,2000,0,0,"$2,500.00",Pinellas Native Plant Society,Replace existing St. Augustine grass covering the Indian mound at Philippe Park with environmentally friendly plants. Planted over 350 native plants including native sod.,0,0,28.012172,-82.609611
+633,Air potato removal and field trips - Spud Busters,2000,0,0,"$19,455.00",Around the Bend Nature Tours,"Funds used to finance field trips for middle school age children to Emerson Point Park.  Students will learn to identify native and exotic plant species, remove exotic air potato plants and take a nature walk. Awarded a grant in 2000, 2001, and 2002.",0,0,27.59344,-82.675961
+632,Purchase replacement costumes,2000,0,0,"$2,000.00",Museum of Science and Industry,"Purchase replacement costumes for the Marine Gang, and environmetal troupe.  Supported the creation of five new costume characters.",0,0,27.59344,-82.675961
+631,Brazilian Pepper removal,2000,0,0,"$1,380.00",Tampa Baywatch,Purchase tools and equipment that will be used by community volunteers to remove Barzilian pepper trees throughout the bay area.,0,0,27.79,-82.442
+630,Navigational buoys for Cockroach Bay,2000,0,0,"$4,900.00",Cockroach Bay Users Group (C-BUG),Purchase of navigational buoys to be installed at Cockroach Bay to protect seagrasses from boat propeller damage.,0,0,28.019236,-82.21548
+629,Creation and installation of artifical reef balls,2000,0,0,"$3,010.00",Admiral Farragut Academy,Students located at the school will build and install artificial reef balls to create habitat for marine life along seawalls.,0,0,27.79,-82.442
+628,Update Frog Listening Network field identification cards and other related activities,2000,0,0,"$2,200.00",Hills. River Greenways Task Force,Funds used to update field identification cards used to train volunteers who participate in the Frog Listening Network.,0,0,27.79,-82.442
+627,Brazilian pepper removal along Rocky Creek,2000,0,0,"$1,000.00",Town 'N Country Homeowners Assoc.,For equipment and supplies to remove Brazilian pepper trees from a public greenway along Rocky Creek.  The group removed 250 Brazilian pepper trees.,0,0,28.012172,-82.609611
+626,Inner City Outings program,2000,0,0,"$1,280.00",Sierra  Club of Tampa Bay,The program offers inner-city children an opportunity of participate in outdoor experiences and environmental service projects.  Nearly 40 children and chaperones participated in the outings program.,0,0,27.79,-82.442
+625,Creation of workbook and slide show to monitor and improve water quality at a local lake,1999,0,0,$750.00,Independent Day School of Tampa,Workbook and slideshow will be used to describe students' efforts to monitor and improve water quality at a lake near the school.  Work products will be shared with students at other schools.,0,0,28.019236,-82.21548
+624,GIS maps showing white ibis feeding areas and isolated wetlands,1999,0,0,"$5,000.00",Tampa Audubon Society,Maps created to show locations of isolated wetlands that serve as important feeding grounds for white ibis and other species. Project will include an educational campaign targeted to landowners.,0,0,27.79,-82.442
+623,"Video showcasing Cockroach Bay, Bishop's Harbor and Terra Ceia Bay",1999,0,0,"$5,000.00",Andrea Brunais and Hills. Govt. TV,"Production of a video showcasing environmentally important areas such as Cockroach Bay, Bishop's Harbor and Terra Ceia Bay.  To be aired on government access and potentially public TV.",0,0,27.79,-82.442
+622,Installation of fish cleaning stations,1999,0,0,"$5,000.00",TBRPC,Fish cleaning stations were not installed. Project was changed to install informational signs and creation of brochures educating general public about the dangers of feeding birds and proper hook removal techniques.,0,0,28.012172,-82.609611
+621,Emerson Point Nature Center video and field trips,1999,0,0,"$5,000.00",Manatee/Sarasota Fish and Game Assoc. and Manatee School Board,"Production of a video on the natural and cultural history of Emerson Point, to be shown to schoolkids prior to field trips to the property.  Video will also be show in the Nature Center as an introduction to the area.",0,0,27.547346,-82.58009
+620,Community Environmental workdays associated with Pinellas County's Millennium Celebration,1999,0,0,"$3,000.00",Pinellas County Coop. Ext. Service,Community environmental workdays associated with Pinellas County's Millennium Celebration.  Funding will purchase native plants and materials needed for volunteer habitat restoration projects.,0,0,27.79,-82.442
+619,Outdoor Educational Displays along Bayshore Drive,1999,0,0,"$1,900.00",City of Safety Harbor Rec. Dept.,Construction and installation of two outdoor educational displays for the city greenway along Bayshore Drive.,0,0,28.012172,-82.609611
+618,Stormwater Education Campaign including survey,1999,0,0,"$3,000.00",Neighbors Against Stormwater Pollution (NASP),Survey of residents in Culbreath Isles to assess quantities of fertilizer and lawn care chemicals being used.  Utilization of survey results as the foundation of a neighborhood stormwater education campaign to improve water quality.,0,0,27.79,-82.442
+616,Interactive Educational Exhibit on Frogs,1999,0,0,"$5,000.00",Florida Aquarium and Hills. River Greenways Task Force,"Development of an interactive educational exhibit on frogs and their importance as biological indicators.  In addition to the permanent exhibit, Aquarium volunteers will recruit and train interested residents to participate in the Frog Listening Network.",0,0,27.79,-82.442
+615,Canoe/Kayak Trail at Cockroach Bay,1999,0,0,NA,NA,Creation of a canoe/kayak trail at Cockroach Bay.,0,0,27.662673,-82.215645
+614,Hands-On learning programs at Camp Bayou,1999,0,0,"$5,000.00",Ruskin Community Development Foundation Bay Mini-Grant 1999,Purchase educational materials for two hands-on learning programs at the Camp Bayou Environmental Center.,0,0,28.019236,-82.21548
+613,Nest Boxes and Nature Walks,1999,0,0,"$5,000.00",Audubon Resource Center at Lettuce Lake Park - Bay Mini Grant 1999,"A hands-on learning program for 75 kids fromeconomically disadvantaged neighborhoods along urban Hills. River. Kids will create and install nest boxes, and take a nature walk.",0,0,28.019236,-82.21548
+612,Hillsborough Bay Boaters Guide,1999,0,0,"$3,200.00",Concerned Citizens of Gibsonton Bay Mini grant 1999,Development and distribution of a localized Boaters Guide to Hillsborough Bay.,0,0,28.019236,-82.21548
+611,Informational Kiosk,1998,0,0,"$3,500.00",Egmont Key Alliance Bay Mini Grant 1998,"A large kiosk on Egmont Key chronicling the history, geology and environmental threats facing this island.  Project never completed.",1,1,27.59344,-82.675961
+610,Promotion of environmentally friendly operating practices,0,0,0,"$3,000.00",Marine Industries Association of Greater Tampa Bay 1998 Bay Mini-Grant,Workshops promoting environmentally friendly practices for marinas and boatyards.  Project never completed.,0,0,27.79,-82.442
+609,Regional Oceans Conference for students (ROCS),1998,0,0,"$6,700.00",Florida Aquarium,A one-day teleconference on bay issues that will pair middle school students with local scientists to discuss and develop solutions to problems facing Tampa Bay. Awarded in 1998 and 2000.,0,0,27.79,-82.442
+608,Tampa Bay Walks the Talk,1998,0,0,"$3,000.00",Pier Aquarium of St. Petersburg Bay Mini-Grant 1998,"An interactive, self-guided trail that features stations on water quality, recycling, water conservation and wildlife of Tampa Bay.",0,0,27.79,-82.442
+607,Shoreline restoration,2001,1998,0,"$7,500.00",St. Paul's School (1998 project discontinued),"project discontinued in 1998 due to permit and other issues.
+Shoreline restoration at Allen's Creek.",0,0,27.662673,-82.215645
+606,Creation of kiosks,1998,0,0,"$3,000.00",Keep Manatee Beautiful - 1998 Bay Mini-Grant,Construction of five (5) informational kiosks at boat ramps and waterfront parks in Manatee County.  Kiosks will provide environmentally friendly boating practices and trash bags.,0,0,27.59344,-82.675961
+605,"Portable ""Suitcase"" Exhibits on manatees and estuaries",1998,0,0,"$4,000.00",FDEP/FMRI Bay Mini-Grant 1998,"Development of portable ""suitcase"" exhibits on manatees and the Tampa Bay Estuary.  Suitcases will contain videos, classroom activities and teaching guides loaned to teachers in Pinellas, Hillsborough and Manatee Counties.",0,0,27.79,-82.442
+604,Fishing line recycling program,1998,0,0,"$3,000.00",C-BUG - 1998  Bay Mini-Grant,A fishing line recycling program in Cockroach Bay that will provide recycling bins at local bait shops and boat ramps and individual recycling containers that anglers can carry on their boats.,0,0,28.019236,-82.21548
+603,Tampa Bay Beach Buddies,1998,0,0,"$5,000.00","USF Marine Science, Tampa Bay Parrotheads and Marketing Works",A classroom program to help educate students about the environmental hazards of marine debris.  Program includes a poster with classroom activities and internet site.,0,0,27.79,-82.442
+602,Water quality monitoring and improvement,1998,0,0,$750.00,"Bay Mini-Grant 1998
+Independent Day School of Tampa",Creation of a slide show and worksbook describing students' efforts to monitor and improve water quality at a lake near their school.  The slide program and workbook will be shared with students at other schools.,0,0,28.019236,-82.21548
+600,Lake Egypt Improvement Project,2001,0,0,"$322,942.00",NA,Evaluation of stormwater pollution to the lake and various pollution control devices and development of a stormwater model for the sub-basin.,1,1,28.01186,-82.49221
+599,Shallow Irrigation Well Rebate project,0,0,0,NA,Utilities Department,potable reduction project,0,0,27.79,-82.442
+596,Seven projects to reduce flooding in Hillsborough County,0,0,0,"$980,000.00",NA,"projects include a variety of flood control, stormwater collection, water quality treatment, land acquisition projects.  None are targeted at specific water quality improvements.",0,0,28.019236,-82.21548
+595,Household Hazardous Waste Brochure,2000,0,0,NA,NA,NA,0,0,27.79,-82.442
+594,Virtual Watershed Excursion,2000,0,0,NA,NA,NA,0,0,27.79,-82.442
+592,Desalination Plant - Apollo Beach,2001,0,0,"$110,000,000.00",$85M - cost represents 90% of construction cost only paid by SWFWMD.,Seawater desalination at Big Bend Power Plant.,0,0,28.019236,-82.21548
+591,Hillsborough Lake Management Program (LaMP),2000,0,0,"$240,000.00",NULL,"Program provides technical assistance to lake owners to develop scientifically sound management strategies and 
+improve water quality. Also funds Lakewatch to have increased presence and provide technical advice.",1,1,28.019236,-82.21548
+590,Efficient Irrigation Rebate Project,0,0,0,"$187,500.00",NA,NA,0,0,28.019236,-82.21548
+589,Water Conservation - Toilet Rebates,1999,0,0,"$2,600,000.00",NA,NA,0,0,27.79,-82.442
+588,Quality of Water Improvement Program (QWIP),0,0,0,"$32,000.00",NA,Artesian wells have a detrimental inpact on District's water sources and must be properly plugged.  This project provides funding assistance to landowners to come into compliance with the statue.,0,0,27.79,-82.442
+587,Partnership Agreement to Resolve Water Supply Problems,0,0,0,"$183,000,000.00",$183M to develop alternative water sources; $90M for water conservation projects.,"The Northern Tampa Bay New Water Supply and Groundwater Withdrawl Reductioon Agreement provides for the development of new and alterntative water supply sources;  38 mgd of new water supply by Dec. 31, 2002 and a total of 85 mgd by Dec. 31, 2007.",0,0,27.79,-82.442
+586,Revised Minimum Flows and Levels (MFL) and Recovery Plan for Priority Water Bodies in the Tampa Bay,0,0,0,NA,NA,NA,0,0,27.79,-82.442
+585,Green Swamp Conservation Easement,0,0,0,"$5,300,000.00",NA,NA,0,0,28.019236,-82.21548
+583,Temple Terrace Stormwater Retrofit,0,2005,0,"$367,560.00",NA,Project is the same as Broadway Outfall ID# 601.  Delete this project.,1,0,28.019236,-82.21548
+582,Race Track Road Stormwater Improvement (Double Branch Creek Improvements),0,2005,2003,"$949,656.00",NA,Project provides flood protection and waer quality improvements and natural system benefits.,1,0,28.012172,-82.609611
+581,Community Education Grants,0,0,0,"$132,500.00",NA,Offers up to $5K in grant funds to groups or individuals who will help others learn more about protecting water resources in their neighborhood.,0,0,27.79,-82.442
+580,Water Resources Education Programs for Public Schools,0,0,0,NA,NA,The Florida Aquarium's Water Resources Community Education & Outreach Program focuses on educating youth and teachers about regional water resources and watersheds.,0,0,27.79,-82.442
+579,Bullfrog Creek Restoration Project (Balm Road Marsh),0,0,0,"$1,741,356.00",NA,NA,0,0,28.019236,-82.21548
+578,Millennium Islands for Millennium Children,2000,0,0,"$3,220.00",NA,Planting native plant species at the 85 acre Hammock Park.,0,0,27.662673,-82.215645
+577,Egmont Key Exotic Plant Control,2000,0,0,"$35,000.00",NA,Removal of invasive exotic trees and shrubs and replace with native plant speces.,0,0,27.59344,-82.675961
+576,High School Wetland Nursery Program,2000,0,0,"$65,860.00",NA,Participating schools create marsh grass nurseries. Nursery-grown marsh plants and then used as part of a restoraiton project.,0,0,27.826351,-82.752508
+575,Bird Colony Protection in Pinellas County,2000,0,0,"$30,400.00","AudubonFla-$15,200",A comprehensive survey and census of coastal nesting colonies in Pinellas County.,0,0,27.662673,-82.215645
+574,Weekiwachee Spring - Acquisition,0,0,0,"$16,500,000.00",NA,PROJECT NOT WITHIN TAMPA BAY WATERSHED.,0,0,28.012172,-82.609611
+573,Lake Seminole Watershed Pollution Reduction Project,0,2009,0,"$2,900,000.00",NULL,"The project consists of constructing up to five 
+aluminum sulfate stormwater pollution management 
+systems and a Lake Seminole Bypass Canal 
+diversion system.",1,1,27.826351,-82.752508
+572,Cross Bayou Canal two-phase watershed management plan,0,0,0,NA,no cost listed for Phase 2,"Implementing a two-phase watershed management plan.  Both phases will provide the county and the District with alternatives for stormwater infrastructure improvements, habitat restoration and water quality enhancement projects within Cross Bayou Canal.",0,0,27.826351,-82.752508
+571,North Tampa Pipeline Feasibility Study,2002,0,0,"$200,000.00",NA,NA,0,0,28.019236,-82.21548
+570,Hillsborough County Adopt-A-Pond,1993,0,0,"$40,000.00",Stormwater Utility,"Teaches citizens to manage ponds, reduce stormwater pollution and increases habitat.",1,1,28.019236,-82.21548
+569,The Evaluation of Aquifer Storage and Recovery (ASR),0,0,0,"$179,460.00",NA,Specifically designed wells are being used to inject escess treated water during the rainy season into the underground aquifer.,0,0,27.79,-82.442
+568,Celebrate! Water Conservation Summit,2002,0,0,NA,Several partners-see article attached.,Elementary school-aged students in Pinellas and Hillsborough County attend a summit focused on water conservation.,0,0,28.019236,-82.21548
+567,Community Education Grants-2002,2002,0,0,"$70,000.00",NA,NA,0,0,27.79,-82.442
+566,Water Conservation Project,0,0,0,"$286,000.00",NA,NA,0,0,28.019236,-82.21548
+564,Port Redwing Habitat Restoration,0,0,0,NA,NA,NA,0,0,28.019236,-82.21548
+563,Stevenson Creek,0,0,0,"$1,000,000.00",NA,NA,0,0,28.012172,-82.609611
+562,Shell Creek Watershed Quality Improvement,0,0,0,"$1,250,000.00",SWFWMD,SWFWMD could not find information on this project.,0,0,27.826351,-82.752508
+561,Phillippi Creek Septic Tank Replacement,0,0,0,"$1,500,000.00",SWFWMD,SWFWMD could not find information on this project,0,0,27.59344,-82.675961
+560,Development of a 3-D Water Quality Model,2001,0,0,"$75,000.00","PCEF-$37,500, USFColl.Mar.Sci-$37,500",NA,0,0,27.79,-82.442
+559,Assessing Optimal Seagrass Planting Strategies,2001,0,0,"$122,000.00","PCEF-$61,000, USF-$61,000",NA,0,0,27.79,-82.442
+558,"Tampa Bay Environmental Journal, Soundings",2001,0,0,"$189,500.00","$90K in 2002; 99,500 in 2003",NA,0,0,27.79,-82.442
+557,Caretta Cruiser,2001,0,0,"$57,390.00","PCEF-$28,150; ClwAquarium-$29,240",NA,0,0,28.012172,-82.609611
+556,Fishing Pier Signage,2001,0,0,"$146,231.00","PCEF-$60,231; SaveOurSeabirds-$86,000",NA,0,0,27.79,-82.442
+555,"A Public Education Exhibit on Invasive Species, Invaders!",2001,0,0,"$164,982.00","PCEF-$82,482; FLAquarium-$82,500; SWFWMD Basin Boards-$66,000; NOAA",NA,0,0,27.79,-82.442
+554,Environmental Distance Learning,2001,0,0,"$1,535,300.00","PCEF-$465,000; Pin.Cty.-$1,070,300",NA,0,0,27.79,-82.442
+553,Estuarine Research Federation Conference Student Sponsorship,2001,0,0,"$50,000.00","PCEF-$25,000; ERF/TBEP-$25,000",NA,0,0,27.79,-82.442
+552,Water Walk,2001,0,0,"$100,000.00","PCEF-$50,000; PierAqu.-$50,000",NA,0,0,27.79,-82.442
+551,Project Oceanography:Fish Restoration and Harmful Algal Bloom Videos,2001,0,0,"$27,377.00","PCEF-$12,081; USFColl.Mar.Sci.-$15,296",NA,0,0,27.79,-82.442
+550,Clam Bayou Habitat Restoration,2000,0,0,"$120,000.00","PCEF-$30,000; SWFWMD-$30,000 for 2000
+PCEF-$30,000; CityGulfport-$30,000 for 2001","This particular project is combined with Clam Bayou ""Phase 3"" as identified by SWFWMD",0,0,27.826351,-82.752508
+549,Egmont Key Exotic Plant Control,2001,0,0,"$35,000.00","PCEF-$17,500; USFish&Wildlife-$17,500",NA,0,0,27.59344,-82.675961
+548,Dunedin Park Restoration,2001,0,0,"$3,220.00","PCEF-$1,610; ClwMarineAqu.-$1,610",NA,0,0,28.012172,-82.609611
+547,High School Wetland Nursery Program,2001,0,0,"$65,860.00","PCEF-$32,930; Tampa BayWatch-$32,930",NA,0,0,28.012172,-82.609611
+546,City of Largo Coastal Habitat Restoration,2001,0,0,"$174,500.00","PCEF-$49,500; CityLargoParksRecs-$125,000",Project associated with the construction of a regional stormwater treatment facility (aluminum sulfate injection system). Largo Central Park Master Plan calls for restoration of an additional 50 acres of upland and wetland habitats.,0,0,27.826351,-82.752508
+544,Exotic Plant Removal in Cockroach Bay,2001,0,0,"$49,000.00","PCEF-24,000; Hills.Co.Res.Mgmt.-$25,000",NA,0,0,27.662673,-82.215645
+543,Fort DeSoto Bridge Construction,2001,0,0,"$1,600,000.00",NA,Design and construction of bridges to restore circulation to the back bays and improve ecological health.,0,0,27.59344,-82.675961
+542,Tampa Bay Seagrass Restoration,2001,0,0,"$299,600.00","PCEF-$149,600",NA,0,0,28.012172,-82.609611
+541,Boyd Hill Nature Park Restoration,2001,0,0,"$81,500.00","PCEF-$40,750",NA,0,0,27.662673,-82.215645
+540,Exotic Plant Removal in the Tampa Bay Watershed,2001,0,0,"$95,000.00","PCEF-$30,000; Hills.Co.Res.Mgmt,-$65,000",NA,0,0,28.019236,-82.21548
+539,Pinellas County Bird Conservation,2001,0,0,"$30,400.00","PCEF-$15,200; Aud.FL-$15,200",NA,0,0,27.662673,-82.215645
+537,A Program to Monitor Native and Exotic Anuran Species in Pinellas County,2001,0,0,"$60,000.00","PCEF-$30,000; Hills.Riv.Grn.TaskForce-$30,000",NA,0,0,27.662673,-82.215645
+536,A Comprehensive Bird Protection Program for Tampa Bay Audubon of Florida/Coastal Islands Sanctuaries,2000,0,0,"$80,000.00","PCEF-$40,000; Coastal Islands Sanct.-$40,000",NA,0,0,28.012172,-82.609611
+533,Evaluation of an Oyster Reef,2002,0,0,"$95,406.00","PCEF-$42,764; USFColl.Mar.Sci-$52,642",NA,0,0,27.826351,-82.752508
+532,The Effectiveness of Bycatch Reduction Devices on Crab Pots,2002,0,0,"$41,017.00","PCEF-$20,413; UofNoFla-$20,604",NA,0,0,27.79,-82.442
+531,Efficacy of Regulation and Education for Influencing Boater Behavior,2002,0,0,"$109,630.00","PCEF-$39,035; FWC/FMRI-$70,595",NA,0,0,27.79,-82.442
+530,Ballast Water and Invasive Aquatic Species Study,2002,0,0,"$408,794.00","PCEF-$158,251; FWC/FMRI-$250,543",NA,0,0,27.79,-82.442
+529,Spud-Busting Student Field Experience,2002,0,0,"$19,560.00","PCEF-$7,200; AroundBendNatureTours-$12,360",NA,0,0,27.547346,-82.58009
+528,Tampa Bay Kids Take Action,2002,0,0,"$32,300.00","PCEF-$13,000; USF Mar.Sci.-$19,300",NA,0,0,27.79,-82.442
+527,Environmental Distance Learning III,2002,0,0,"$917,070.00",NA,NA,0,0,27.79,-82.442
+526,Bayside Field Studies,2002,0,0,"$67,074.00","PCEF-$17,074; Fl.Aquarium-$50,000",NA,0,0,28.019236,-82.21548
+525,Pinellas County Island restoration,2002,0,0,"$76,250.00","PCEF-$37,000; FDEP Coastal Aquatic-$39,250",NA,0,0,27.662673,-82.215645
+524,Howard Park Beach Sea Oats,2002,0,0,"$21,506.00","PCEF-$7,700; Pin.Co.ParksDept.-$13,806",NA,0,0,28.012172,-82.609611
+523,A Guide to Natural Areas in Tampa Bay,2002,0,0,"$21,730.00","PCEF-$10,000; Wildlife Fellowship-$11,730",NA,0,0,27.79,-82.442
+522,Scrub-Jay Habitat Restoration,2002,0,0,"$194,350.00","PCEF-$96,350; Hills.Co.Resource Mgmt-$98,000",NA,0,0,28.019236,-82.21548
+521,Recording Manatee Movements in Tampa Bay,2002,0,0,"$58,898.00","PCEF-$29,449; FWC-$29,449",NA,0,0,28.019236,-82.21548
+520,Manatee and Seagrass Protection Program,2002,0,0,"$63,200.00","PCEF-$31,000; C-BUG-$32,200",NA,0,0,27.662673,-82.215645
+519,Juvenile Red Drum Habitat Identification,2002,0,0,"$182,110.00","PCEF-$86,730; MOTE-$95,380",NA,0,0,28.019236,-82.21548
+518,14th International Pectinid Workshop Sponsorship,2002,0,0,"$48,000.00","PCEF-$5,000; USF-$43,000",NA,0,0,27.86714745,-82.35780285
+517,Colonial Waterbird Protection and Restoration,2002,0,0,"$195,320.00",for years 2003 and 2003,NA,0,0,27.86714745,-82.35780285
+516,Boyd Hill Invasive Plant Removal,2002,0,0,"$600,000.00","PCEF $300,000",NA,0,0,27.662673,-82.215645
+515,City of Largo Central Park Habitat Restoration/Enhancement Project,0,0,0,"$428,087.00",NA,Project has been developed in association with the construction of a regional stormwater treatment facility (aluminum sulfate injection system),0,0,27.826351,-82.752508
+513,Habitat Enhancement/Restoration Project on the Lancaster Tract,0,0,0,"$503,810.00",NA,located on Allen's Creek.,0,0,27.86714745,-82.35780285
+504,Lake Seminole Stormwater Unit,0,0,0,NA,NA,"The project consists of constructing a stormwater unit in the city's municipal separate storm sewer system located within the basin, which ultimately drains into Boca Ciega and Tampa Bay.",0,0,27.826351,-82.752508
+503,North Greenwood Demonstration Project,0,0,0,NA,NA,PROJECT MARKED DISCONTINUED AS IT DOES NOT DRAIN TO TAMPA BAY.  PROJECT DRAINS TO STEVENSON CREEK THEN THE CLEAWATER HARBOR.,0,0,27.86714745,-82.35780285
+502,Brandon Feeder Roads - Final Design and Mitigation Design at Cockroach Bay,0,0,0,NA,NA,Part of the 640-acre Cockroach Bay site.  Wetland mitigation being constructed on County ELAPP land.,0,0,28.019236,-82.21548
+500,Little Manatee CWM,0,0,0,NA,NULL,"Four-Corners mine has applied for 2 NPDES 
+industrial outfalls",1,1,27.662673,-82.215645
+499,Clearwater Town Pond Regional Stormwater Treatment Facility,0,2006,2003,"$10,010,089.00",NA,Design and construction of a regional stormwater management facility that will provide both stormwater treatment and flood control for approx. 100 acres of downtown Clearwater.,1,0,28.012172,-82.609611
+498,Big Bend - Improvement of dissolved oxygen levels,0,0,0,NA,NA,NA,0,0,28.019236,-82.21548
+495,Comprehensive Plans,0,0,0,NA,NA,Hills. Co. has adopted policies into their Comprehensive Plans to incorporate our CCMP goals.,0,0,28.019236,-82.21548
+493,Summary of Water Conservation Educational Programs,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+490,New Tampa Flatwoods - land acquisition,0,0,0,"$3,000,000.00",NA,NA,0,0,28.019236,-82.21548
+489,Bahia Beach - land acquisition,0,0,0,"$656,512.00",NA,NA,0,0,28.019236,-82.21548
+486,McMullen Property - Land acquisition,0,0,0,"$21,400,000.00",Penny for Pinellas,NA,0,0,28.012172,-82.609611
+483,Brooker Creek Watershed Management Plan,0,0,0,NA,NA,NA,0,0,28.012172,-82.609611
+481,Bayside Bridge Pond Retrofit,0,0,0,"$275,781.00",NA,Excavate and recountour Pond 5 to provide significantly more water quality treatment as well as habitat benefits through the removal of exotics and installation of desirable vegetation.,1,0,28.012172,-82.609611
+478,Sawgrass Lake Improvement / Restoration,2011,0,0,"$4,089,261.00",NULL,"Site clean up and restoration including limited 
+water quality monitoring program at select 
+stations. 
+http://www.swfwmd.state.fl.us/projects/sawgr
+ass/habitat.php",1,1,27.662673,-82.215645
+473,Roosevelt Creek Stormwater - Phase II,0,2009,0,NA,NA,Phase II is very similar in design and will expand Phase I.,1,0,28.012172,-82.609611
+471,Joe's Creek @ 62nd Avenue,1990,0,0,NA,NULL,100+ acres purchased primarily for preservation purposes.  A small portion was purchased for drainage improvements.,1,1,27.826351,-82.752508
+470,Lake Seminole clean-up,2006,0,0,"16,700,000",NULL,"850,000 cubic yards of sediment will be removed from the bottom of the lake.",1,1,27.826351,-82.752508
+468,Expand and Improve Reclaimed Water System,0,0,0,NA,"City's portion $1,297,630",Expand and improve St. Petersburg's reclaimed water system by permitting and construction of a 10 MGD reclaimed water storage tank and other necessary equipment.,0,0,27.59344,-82.675961
+463,STAR Water Conservation Programs,1990,0,0,NA,NA,NA,0,0,28.019236,-82.21548
+462,Adding new transplant sites to encourage scallop growth,2003,0,0,NA,NULL,NULL,1,1,27.662673,-82.215645
+460,Re-writing HAZMAT Annex,0,0,0,NA,NA,Participation in the Prepardness Subcommittee of the United States Coast Guard Area Committee.,0,0,27.79,-82.442
+459,Artificial Reef Program,0,0,0,NA,Program began in 1986,EPCHC administers an Artificial Reef program that has created 8 permitted reefs within Tampa Bay.,0,0,28.019236,-82.21548
+458,"Settlement offer from Mulberry Phosphates' insurance carrier, AIU",0,0,0,"$1,300,000.00",NA,EPCHC continues to support and develop strategies for mitigating freshwater and estuarine impacts of the Mulberry Spill.,0,0,28.019236,-82.21548
+457,Reclaimed water to cool boilers,0,0,0,NA,total project cost; $12-$14M,Reclaimed water pipeline from Falkenburg and South County wastwater treatment plants to Cargill Fertilizer will supply up to 1.2 MGD of reclaimed water to cool boilers.,1,1,28.019236,-82.21548
+456,Prescribed burn on parcels Northwest A & B,0,0,0,NA,NULL,cargill-neb.com;,1,1,28.019236,-82.21548
+455,Maintenance Dredging,0,0,0,NA,NA,"2003 Update: ""We do it every year"".",0,0,27.79,-82.442
+454,Reburn Pollution Prevention Equipment,0,2006,0,NA,NA,40% reduction in Nox; 411 TPY reduction,0,0,27.59344,-82.675961
+453,Public Involvement and Education,0,0,0,NA,NA,NA,0,0,27.79,-82.442
+452,Improve fueling and bilge-pumping for recreational boaters,0,0,0,NA,NA,Program for marinas to engage in voluntary compliance exceeding that which is required by statute and regulations.,0,0,27.86714745,-82.35780285
+451,Develop detailed spill response plans,0,0,0,NA,NA,"FDEP reviews fueling operations and management during DRI or marina permitting, and conducts annual inspections of marinas with diesel fuel to ensure adequate response capabilities are in place.",0,0,27.79,-82.442
+450,integrated ship tracking system for the bay and permanently fund the PORTS system,0,0,0,NA,NA,"FDEP Bureau of Emergency Response (BER) has, and will continue to, participate on the ACP scientific support subcommittee and other committees, and respond in the event of a spill.",0,0,27.86714745,-82.35780285
+449,Develop a long-term dredging and dredged material management plan,0,0,0,NA,NA,"document has been prepared which identifies dredged material volume and quality, potential placement options, and specific beneficial uses of dredged material.",0,0,27.79,-82.442
+448,Investigate cumulative impacts of power plant entrainment on fisheries,0,0,0,NA,NA,"EPA Region IV has proposed that Tampa Bay be considered as a case study on the cumulative impacts of power plants. If this study is approved, a locally financed study will not be necessary.",0,0,27.86714745,-82.35780285
+447,Establish and enforce manatee protection zones,0,0,0,NA,NA,Permitting staff participated in ABM discussions for the establishment of manatee protection zone within Tampa Bay.,0,0,27.79,-82.442
+446,Support increased on-water enforcement,0,0,0,NA,NA,It was recommended that legislative action not to be taken regarding Salt Water Fishing License revenues.,0,0,27.79,-82.442
+445,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+444,Improve compliance with and enforcement of wetland permits,0,0,0,NA,NA,Permitting staff continues to strive to improve compliance and enforcement of permits that authorize wetland impacts.,0,0,27.86714745,-82.35780285
+443,Support waterfront homeowners enhancement of shorelines and limit runoff,0,0,0,NA,NA,"Permitting staff continues to encourage the construction of vegetated buggers, swale and berms, and native planting to reduce pollutant discharge and to capture ad retain runoff.",0,0,27.79,-82.442
+442,Improve management of parking and vehicle access along causeways,0,0,0,NA,NA,Permitting staff participate in the selection of coastal areas to be recommended as restricted or no vehicle access.,0,0,27.86714745,-82.35780285
+441,Restrict impacts to hard-bottom communities,0,0,0,NA,NA,Resources permitting staff continues to follow guidelines aimed at reducing propeller scarring of seagrasses. 2003 Update includes specific mitigation site information.,0,0,27.79,-82.442
+440,Support reduction of propeller scarring,0,0,0,NA,NA,Implementation of projects to reduce propeller scarring,0,0,27.86714745,-82.35780285
+439,NA,0,2006,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+438,Support Implement Mitigation Criteria for Tampa Bay,0,0,0,NA,NA,"FDEP have and will continue to participate directly in the FDOT mitigation process, review all mitigation permits, and implement restoration-site mitigation projects.",0,0,27.79,-82.442
+437,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+436,Healthy Beaches Tampa Bay,1999,0,0,NA,NA,NA,0,0,27.79,-82.442
+435,Maintenance plans identifying overflow areas within their sewage collection systems,0,0,0,NA,NA,"The FDEP and TBEP will establish a task force to review current policies relating to sewer overflows, suggest improvements, and develop basic guidelines for improved operation and maintenance.",0,0,27.79,-82.442
+434,Support for IPM,0,0,0,NA,NA,"In response to aerial spraying to control medflies, FDEPÃ¢â‚¬â„¢s Water Quality Assessment Section and Technical Services staff have been, and will continue to be, involved in monitoring Malathion for surface water exceedances.",0,0,27.86714745,-82.35780285
+433,Clean Marina Program,1996,0,0,NA,NA,NA,0,0,27.79,-82.442
+432,Household Hazardous Waste (HHW),1992,0,0,NA,NA,NA,0,0,27.79,-82.442
+431,United States Coast Guard (USCG) Battery Project,0,0,0,NA,United States Coast Guard,NA,0,0,27.79,-82.442
+430,Residuals and Septage Tracking and Compliance (RETRACE),0,0,0,NA,NA,NA,0,0,27.79,-82.442
+429,Support for design standards for septic systems,0,0,0,NA,NA,"FDEP recommends working with DOH on the development of this plan, which might include an Environmental Septage Design Standards and Monitoring Activities Workshop.",0,0,27.86714745,-82.35780285
+428,Require standardized monitoring of wasterwater discharges,0,0,0,NA,NA,"FDEP data entry has been centralized for discharge monitoring report (DMR) data for dischargers to state surface waters, and it is entered within 30 days of submittal.",0,0,27.86714745,-82.35780285
+427,FDEP Surface Water Assessments,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+426,NPDES permitting authority,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+425,Hillsborough County Reclaimed Aquifer Storage and Recovery (ASR),0,2005,0,NA,NA,Aquifer storage and recovery of reclaimed water from the Northwest Regional Water Reclamation Facility to enhance the reuse capacity.,0,1,27.86714745,-82.35780285
+424,Tampa Water Resource Recovery Project,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+423,Support of reclaimed where it benefits the Bay,0,0,0,NA,NA,"The encouragement and promotion of water reuse have been established in Chapters 403 and 373, Florida Statutes, as formal state objectives.",0,0,27.86714745,-82.35780285
+422,Support of public and business energy conservation,0,0,0,NA,NA,"FDEP developed curriculum for students focusing on how to be more conscious of the environment and how individual actions impact the environment (air, water, and waste)",0,0,27.86714745,-82.35780285
+421,Support of Atmospheric Deposition,0,0,0,NA,NA,"Office of Air Programs Communication and Outreach in Tallahassee addresses air and energy issues, including promotion of business and public energy conservation.",0,0,27.79,-82.442
+420,Support Best Management Practices on Farms,0,0,0,NA,NA,Several projects implemented to support BMPs on farms.,0,0,27.86714745,-82.35780285
+418,Promote Brownfield development,0,0,0,NA,NA,Year 2000 Update: FDEP continues to promote Brownfield development to discourage new development of natural undisturbed areas and curtail urban sprawl.,0,0,27.86714745,-82.35780285
+417,Support retrofitting existing stormwater sources,0,0,0,NA,NA,FDEP Bureau of Submerged Lands and Environmental Resources continues to require retrofitting of existing stormwater sources to the extent property development proposes to change runoff or drainage patterns.,0,0,27.86714745,-82.35780285
+416,Promote use of porus surfaces,0,0,0,NA,NA,FDEP Bureau of Submerged Lands and Environmental Resources continues to encourage the minimization of proposed paved areas and where possible.,0,0,27.86714745,-82.35780285
+415,P2 Stormwater Pollution Prevention Program,0,0,0,NA,NA,"P2 will provide free, non-regulatory information and assistance regarding industrial processes for source reduction, waste minimization and on-site recycling, and on-site technical assistance.",0,0,27.79,-82.442
+414,Florida Yards & Neighborhoods support,0,0,0,NA,NA,"Florida  Yards & Neighborhoods Program (FY&N) is an educational outreach program of the University of Florida Cooperative Extension Service.
+Year 2000 Update/revisions:No Change.",0,0,27.86714745,-82.35780285
+412,FDEP Phosphate Management Program,0,0,0,NA,NA,"On December 7, 1997 Mulberry Phosphate, Inc. (MPI) discharged approximately 50 to 60 million gallons of acidic process wastewater into Skinned Sapling Creek and the North Prong of the Alafia River.",0,0,27.86714745,-82.35780285
+411,Alafia River Task Force (ARTF),0,0,0,NA,NA,"In May 1992, the FDEP convened the Alafia River Task Force (ARTF) to make recommendations for point and non-point source nutrient and pollutant load reductions and pro-active river restoration projects.",0,0,27.86714745,-82.35780285
+410,Blue Sink,0,0,0,NA,NA,FDEP is the lead agency in the 1998 reapplication for an EPA Sustainable Development Challenge Grant to support the restoration of Blue Sink  (the 1997 application was denied).,0,0,27.86714745,-82.35780285
+409,Hillsborough River Integration and Coordination Committee (HRICC),0,0,0,NA,NA,"FDEP will continue to lead the Hillsborough River Integration and Coordination Committee (HRICC), which was formed in 1995 in response to legislative initiation of the Ã¢â‚¬Å“Hillsborough River and Bay Ecosystem Demonstration Project.""",0,0,27.86714745,-82.35780285
+408,Stormwater Permitting program,0,0,0,NA,NA,"Through its Stormwater Permitting program, FDEP works with partner agencies, local governments and others to develop appropriate stormwater treatment systems for sites that are expected to be sources of high nitrogen runoff.",0,0,27.86714745,-82.35780285
+407,Total Maximum Daily Loads (TMDLs) for Tampa Bay segments,0,0,0,NA,NA,"FDEP and EPA have incorporated the Tampa Bay Nitrogen Management Strategy into nitrogen Total Maximum Daily Loads (TMDLs) for Tampa Bay segments, one of the first approved TMDLs for Florida.",0,0,27.86714745,-82.35780285
+406,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+405,Establish an integrated ship tracking system and permanently fund PORTS,1998,0,0,"$360,000.00","cost of updates - $250,000; St. Pete Port Authority, private shippers, State",Tampa Port Authority financially supports and provides technical assistance for enhancing navigational safety through the Physical Oceanographic Real-Time System (PORTS). 2005-2010 update in desc file also.,0,0,27.79,-82.442
+404,Develop a long-term dredging and dredged material plan for Tampa Bay,0,0,0,"$5,000.00",NA,Tampa Port AuthorityÃ¢â‚¬â„¢s 25-year FDEP permit includes an approved Dredge Management Plan that is reviewed every 5 years. 2003 Update and 2005-2010 update in desc file attached.,0,0,28.019236,-82.21548
+403,Improve compliance with and enforcement of wetland permits,0,0,0,NA,NA,Covered through overall cost of TPA Marine Construction Permitting/Sovereign Lands Management Program. 2003 update and 2005-2010 in desc file.,0,0,28.019236,-82.21548
+402,Encourage waterfront homeowners to enhance shorelines and limit runoff,0,0,0,"$16,000.00",NA,"The Tampa Port Authority Marine Construction Permitting has established rules designed to encourage shoreline stabilization via native plants, rip-rap materials, etc. as opposed to vertical seawalls.",0,0,28.019236,-82.21548
+401,Restrict impacts to hard-bottom communities in Tampa Bay,0,0,0,NA,FDOT also,"The Tampa Port Authority maintains close liaison with EPCHC, SWFWMD, FDEP and ACOE in regard to protection of hard-bottom communities in Hillsborough County through its permit program.",0,0,28.019236,-82.21548
+400,Establish and implement mitigation criteria,0,0,0,NA,NA,NA,0,0,28.019236,-82.21548
+398,Install pump-out facilities for recreational and live-aboards,0,0,0,NA,also USCG,The Tampa Port Authority requires USCG approved pump-out facilities at all public marinas located on sovereign lands under TPA lease.,0,0,28.019236,-82.21548
+397,Reduce pollution from recreational boaters,0,0,0,"$75,000.00",NA,The TPA encourages incorporation of the FDEPÃ¢â‚¬â„¢s Clean Marina program and marina siting via its marine construction permitting program. 2005-2010 update in desc file.,0,0,28.019236,-82.21548
+396,Address hot spots of contamination,0,0,0,"$30,000.00",NA,Part of the PortÃ¢â‚¬â„¢s long-term maintenance dredging permit compliance. 2005-2010 update in desc file.,0,0,28.019236,-82.21548
+395,Master Plan/Strategic Plan,0,0,0,"$500,000.00",NA,2003 Update in attached desc file. 2005-2010 update included also.,0,0,28.019236,-82.21548
+394,Stormwater Pollution Prevention Plan (SWPPP),0,0,0,NA,Port of Tampa businesses,educational program to its tenants in regard to proper practices to reduce discharges of contaminants through stormwater. Updates through 2010 in attached desc file.,0,0,28.019236,-82.21548
+393,Public Involvement and Education,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+392,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+391,NA,0,0,0,"$100,000.00",Cost is per mapping event,NA,0,0,27.86714745,-82.35780285
+390,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+388,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+387,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+386,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+385,NA,0,0,0,"$170,000.00",NA,NA,0,0,27.86714745,-82.35780285
+384,NA,1995,0,0,"$153,831,102.00",NA,NA,0,0,27.86714745,-82.35780285
+383,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+382,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+381,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+380,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+379,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+378,Integrated Vessel Tracking System,0,0,0,NA,City funding - federal grant,"In June 1998, St. Petersburg allocated $500,000 in funds left over from a port development grant to finance the VTIS system. The Tampa Port Authority is also providing a significant portion of the operating costs of the system.",0,0,27.79,-82.442
+377,Develop and implement a long-term dredge maintenance program for seventeen small boat channels,0,0,0,"$3,200,000.00",Penny for Pinellas,Develop and implement a long-term dredge maintenance program for seventeen small boat channels surrounding its shoreline,0,0,27.826351,-82.752508
+376,NA,0,0,0,"$30,000.00",NA,The City of St. Petersburg has enhanced its waterway enforcement of environmental regulations with daily patrols of its 180 miles of shoreline and 84 square miles of roadway.,0,0,27.86714745,-82.35780285
+375,Four separate restoration projects,0,0,0,"$700,000.00",NA,Four separate restoration projects totalling 20 acres,0,0,27.826351,-82.752508
+374,Establish water quality standards for saltwater beaches,0,0,0,"$8,960.00",Sewer use fees,From March through October water samples are collected weekly from North Shore and Maximo Beach and are analyzed for fecal and total coliform.  These beaches are sampled monthly November through February.,0,0,27.826351,-82.752508
+373,Identify overflow areas and address them in their maintenance plan,0,0,0,"$8,000,000.00",sewer use fees,The City of St. Petersburg has continued to implement the recommendations contained in the Sanitary Sewer Evaluation Study SSES document produced in 1998.,0,0,27.826351,-82.752508
+372,Improve opportunities for hazardous waste disposal,0,0,0,"$26,000.00",Sanitation fees,The City of St. Petersburg co-sponsors annual household chemical waste collection events with Pinellas County to educate and provide opportunities for the public to dispose of environmentally hazardous material properly.,0,0,27.826351,-82.752508
+371,Require standardized monitoring of wastewater discharges,0,0,0,"$120,000.00",Sewer use fees,"The Grease Management Ordinance originally adopted by City Council in June, 2002 will be revisited in the coming pretreatment year to refine various aspects of the program to make implementation and enforcement procedures easier to perform and track.",0,0,27.826351,-82.752508
+370,Expand central sewer system to areas served by septic tanks,0,0,0,NA,Sewer use fees,"The City continues to monitor those properties with septic tanks.  At this time, less than 100 properties are identified as having septic tanks.",0,0,27.826351,-82.752508
+369,Expand and Improve Reclaimed Water System,0,0,0,NA,Sewer Use Fees,"Continuing evaluation for storing reclaimed in the aquifer, recovery and expansion of reuse sytem. Background testing of ASR well completed in 2001.",0,0,27.79,-82.442
+368,Promote Business Energy Conservation,0,2005,0,"$5,000,000.00",NA,"2003 update: 'This goal can be eliminated',",0,0,27.86714745,-82.35780285
+366,Low Impact Development,0,2005,0,NA,NA,"St. Petersburg has completed testing of the use of grassy alleys, and have concluded that they cannot cost-effectively install and maintain grass-like alleys. Will continue to monitor turf grass advancements for consideration in the future.",0,0,27.86714745,-82.35780285
+365,Assist businesses in implementing BMPs to reduce stormwater pollution,0,0,0,"$50,000.00",Ad Valorum,"Developed and administer an erosion and sediment control training/outreach program for construction site operators, including a construction site inspection checklist that is issued to and reviewed with all appropriate permit applicants.",0,0,27.826351,-82.752508
+364,Support for FY&N Program,0,0,0,NA,Ad valorum,"(FY&N) is an educational outreach program of the University of Florida Cooperative Extension Service. Two neighborhoods involved in the FY&N program, with a total of 1200 acres",0,0,27.826351,-82.752508
+363,Pollution prevention programs,0,0,0,NA,Ad Valorum,Pinellas County will distribute educational material and offers use of the County's local government access TV channel for public service announcements. 2003 update: educational activities are part of the Pinellas County pollution prevention program.,0,0,27.86714745,-82.35780285
+362,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+361,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+360,NA,0,0,0,NA,NA,Pinellas County will participate in these activities as appropriate. Year 2000 Update: No change.,0,0,27.86714745,-82.35780285
+359,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+358,Pinellas County on-water enforcement,0,0,0,"$377,000.00",Green fund - taxes,"Year 2000 revisions/updates: Update pending.  Pinellas County has no direct action to take, but workshops we were to participate in to consider funding options for enforcement have not taken place. Year 2003 update: gmistyapbasepincofw104onwaterenforc",0,0,27.826351,-82.752508
+357,Minimum seasonal freshwater inflows,0,0,0,NA,NA,Pinellas County has no waters for which SWFWMD plans to develop MLFs within County borders. Watershed management plans include reestablishing the natural timing and volume of streamflows.,0,0,27.86714745,-82.35780285
+356,Seagrass Transect Monitoring,0,0,0,NA,NA,"Baywide seagrass conditions monitoring program as been implemented by Hillsborough, Manatee and Pinellas counties, City of Tampa, SWFWMD, EPCHC and FMRI.",0,0,27.86714745,-82.35780285
+355,compliance with and enforcement of wetland permits,0,0,0,NA,NA,Pinellas County will participate in the workshop and consider recommendations from the workshop for implementation.,0,0,27.86714745,-82.35780285
+354,Protect the Waterfront,0,0,0,NA,NA,Part of the FY&N cirriculum.,0,0,27.826351,-82.752508
+353,vehicle access along causeways,0,0,0,NA,NA,"Gandy Bridge Causeway has been converted to a linear park, and ramps and canoe launch areas are currently under design.",0,0,27.86714745,-82.35780285
+352,Reduce impacts to hard-bottom communities,0,0,0,NA,NA,Year 2000 revisions/updates:   Still awaiting study of hard bottoms to find if there are any in Pinellas County waters.,0,0,27.86714745,-82.35780285
+349,Clean Marina Program,0,0,0,NA,NULL,"Update pending receipt of information on the Good 
+Mate Marina Program (which Pinellas is participating 
+in). 2003 update-no additional information provided.",1,1,27.86714745,-82.35780285
+348,Sewage pump-out facilities,0,0,0,NA,Ad Valorum,2003 update: Educational activities are part of the Pinellas County pollution prevention program.,0,0,27.86714745,-82.35780285
+347,Reduction in municipal sewer overflows,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+346,NA,0,0,0,NA,NA,Not applicable to Pinellas County,0,0,27.86714745,-82.35780285
+345,Toxic Contaminants Reduction,0,0,0,NA,Ad Valorum,Year 2000 revisions/updates: Update pending receipt of  information regarding Good Mate Marina Program. 2003 update: educational activities are part of the Pinellas County pollution prevention program.,0,0,27.86714745,-82.35780285
+344,Promoto proper hazardous waste disposal,0,0,0,NA,Ad valorum,2003 update: educational activities are part of the Pinellas County pollution preventioon program.,0,0,27.86714745,-82.35780285
+343,Benthic monitoring,0,0,0,NA,NA,2003 update: nothing has changed,0,0,27.86714745,-82.35780285
+342,define environmental performance or design standards,0,0,0,NA,NA,This action will be revisited following the Healthy Beaches Tampa Bay project (initiated in February 1999). 2003 update: not returned,0,0,27.86714745,-82.35780285
+341,Standardized monitoring of wastewater discharges,0,0,0,NA,NA,2003 update: no change.,0,0,27.86714745,-82.35780285
+340,Expand sewer service to septic tank users in selected areas,0,0,0,NA,NA,2003 update: Must have cooperation of cities.,0,0,27.86714745,-82.35780285
+339,business energy conservation,0,0,0,NA,NA,2003 update - not returned to A. Squires,0,0,27.86714745,-82.35780285
+337,BMP's on farms,0,0,0,NA,NA,2003 update: not applicable to Pinellas County Action Plan -marked discontinued.,0,0,27.86714745,-82.35780285
+336,promote urban compact development,0,0,0,NA,NA,"Pinellas County will participate in the Conference, and will implement recommendations from the conference as is appropriate for the County. 2003 update- no changes",0,0,27.86714745,-82.35780285
+335,Stormwater treatment for redeveloped properties,0,0,0,NA,NA,Pinellas County Code already requires properties being redeveloped to meet appropriate stormwater treatment requirements. 2003 update-no changes,0,0,27.86714745,-82.35780285
+334,Participation in workshop,0,0,0,NA,NA,"2003 update: no action yet, no meeting planned",0,0,27.826351,-82.752508
+333,"FY&N classes, Water-Wise Awards and Workshops",0,0,0,NA,included in ID# 331,"FY&N classes, Water-Wise Awards and Workshops",0,0,27.826351,-82.752508
+332,Training in Green Industries BMPs,0,0,0,NA,included in ID# 331,Employees from private industry and governmental entities are trained in Green Industries BMPs.,0,0,27.826351,-82.752508
+331,Florida Yards & Neighborhoods (FY&N) and similar pollution prevention programs,0,0,0,NA,see text description for cost break-out through year 2006,An educational outreach program of the University of Florida Extension.,0,0,27.826351,-82.752508
+330,Public Education and Information,0,0,0,"$17,924.00","Keep Manatee Beautiful, Manatee Teens, Boat US",NA,0,0,27.86714745,-82.35780285
+329,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+328,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+327,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+326,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+325,NA,0,0,0,"$4,000.00",NA,NA,0,0,27.86714745,-82.35780285
+324,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+323,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+322,NA,0,0,0,"$2,292.00",NA,NA,0,0,27.86714745,-82.35780285
+321,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+320,Multiple restoration projects,0,0,0,"$728,500.00",NA,need to break out as separate projects,0,0,27.86714745,-82.35780285
+319,NA,0,0,0,"$15,600.00",Dept. of Health,NA,0,0,27.86714745,-82.35780285
+318,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+317,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+316,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+315,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+314,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+313,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+312,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+311,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+310,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+309,Implement Monitoring Program,0,0,0,"$40,000.00","$12,000 annual operating costs.",Sites currently being monitored.,0,0,27.86714745,-82.35780285
+308,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+307,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+306,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+305,Implementation of IPM,0,0,0,NA,NA,IPM for County employees.,0,0,27.86714745,-82.35780285
+304,FY&N Implementing BMP's,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+303,FY&N,0,0,0,"$100,000.00",NA,FY&N,0,0,27.86714745,-82.35780285
+302,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+301,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+300,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+297,Creation of a septic tank maintenance pamphlet,0,0,0,NA,NA,2003 update: project discontinued.,0,0,27.86714745,-82.35780285
+295,Expand central sewer to areas now using septic,0,2005,0,NA,NA,"2003 update-county is still analyzing, but it appears to be cost prohibitive.",0,0,28.019236,-82.21548
+294,Hillsborough County Reclaimed Aquifer Storage and Recovery (ASR),0,0,0,NA,NULL,Aquifer storage and recovery of reclaimed water from the Northwest Regional Water Reclamation Facility to enhance the reuse capacity. 2003 update: in desc file.,1,1,28.019236,-82.21548
+292,Support energy conservation for public and businesses,0,0,0,NA,NA,2003 update in desc file.,0,0,27.86714745,-82.35780285
+289,NA,0,2005,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+288,Support implementation of BMPs,0,0,0,NA,NA,2003 update: added to desc file.,0,0,28.019236,-82.21548
+287,NA,0,2005,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+286,Adopt integrated pest management policies,0,0,0,NA,NA,"In 1998, Hillsborough County adopted a resolution requiring the use of Integrated Pest Management techniques at all county facilities, including parks, office complexes and schools.",0,0,28.019236,-82.21548
+285,Assist businesses in implementing site management practices to reduce stormwater runoff,0,0,0,NA,NA,"Hillsborough CountyÃ¢â‚¬â„¢s Ã¢â‚¬Å“Operation BayworksÃ¢â‚¬Âù targets businesses and industries, providing information concerning best management practices for waste disposal, landscaping, parking design, etc",0,0,27.86714745,-82.35780285
+284,Continue support for Florida Yards & Neighborhoods and similar pollution prevention programs.,0,0,0,"$6,000.00",NULL,Continue support for Florida Yards & Neighborhoods and similar pollution prevention programs. 2003 update in desc file,1,1,27.86714745,-82.35780285
+283,Support towards implementation of mitigation criteria for Tampa Bay,0,0,0,NA,NA,"The FWC Office of Environmental Services (OES) has worked with wetland regulatory agencies in evaluating wetland mitigation projects in reference to design, fish and wildlife habitat functions, and success criteria.",0,0,27.79,-82.442
+282,Support towards implementation of action plan,0,0,0,NA,NA,"Currently, (1999-2000) the FWC has taken a leadership role in developing and implementing the Coastal Conservation Corridor Plan for the Tampa Bay region in cooperation with other NEP participants.",0,0,27.79,-82.442
+281,Update spill response plans for priority areas,0,0,0,NA,NA,The next five-year Area Contingency Plan (ACP)  revision is scheduled to be completed in October 2005.,0,0,27.86714745,-82.35780285
+280,Implment long-term dredge material management plan,0,0,0,NA,NA,EPCHC staff has been actively involved in determining and or recommending beneficial uses of dredge disposal for productive purposes for the bay.,0,0,27.86714745,-82.35780285
+279,NA,0,2006,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+278,Support bay scallop research,0,0,0,NA,NA,The primary goal of the project is to initiate large-scale spawning and subsequent field planting of the bay scallop at various locations in Tampa Bay.,0,0,27.86714745,-82.35780285
+277,Establish and enforce manatee protection zones,0,0,0,"$200,000.00",NA,"The Pollution Recovery Fund (managed by EPCHC) and the Gardinier Settlement Trust Fund (co-managed by EPCHC and FDEP) have also provided more than $200,000 in funding to projects related to manatee habitat protection.",0,0,27.86714745,-82.35780285
+276,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+275,Apollo Beach restoration,0,0,0,NA,NA,"SWIM project consists of regrading and revegetating about 37 acres of distrubed land to create a series of intertidal marshes, open water features, and transitional and upland habitats near Tampa Bay.",0,0,27.662673,-82.215645
+274,Little Manatee River - Land Acquisition,0,0,0,"$9,656,685.00","PIA = $351,534",current-field and row crop; future use-single family; no reduction - Misty,0,0,27.86714745,-82.35780285
+273,Alafia River Corridor - Land Acquisition,1994,0,0,"$13,491,310.00",NA,future uses; 923.4=single family; 77.8=medium density; 2091=single family; 929=single family - Misty,1,1,27.826852,-82.132505
+272,Violet Cury Nature Preserve - Land Acquisition,1995,0,0,"$1,846,783.00","FCT=$923,391",future use-medium density residential - Misty,1,1,28.095985,-82.438696
+271,Upper Little Manatee River - Land Acquisition,0,0,0,"$2,201,088.00",NA,future use-single family residential - Misty,0,0,27.86714745,-82.35780285
+270,The Kitchen (FKA Bullfrog/Kitchen/Gibson) Land Acquisition,1997,0,0,"$264,900.00",NULL,"current use-landfill, future use-single family residential - Misty",1,1,27.86714745,-82.35780285
+269,Rhodine Scrub (FKA Rhodine Road) Land Acquisition,1997,0,0,"$70,006.00",NULL,future use-medium density residential - Misty,1,1,27.826752,-82.289782
+268,Port Tampa Restoration - Land Acquisition,0,0,0,"$1,100,000.00",NA,future use-multifamily residential - Misty,0,0,27.86714745,-82.35780285
+266,McKay Bay Palm River Greenway - Land Acquisition,0,0,0,"$350,255.00","GW&T = $315,000","current use-commercial, future use-commercial; no reduction - Misty",0,0,27.86714745,-82.35780285
+265,Massie/Zack (McIntosh) - Land Acquisition,1998,0,0,"$1,125,000.00",NA,McIntosh Park a 400-acre ELAPP purchase.,1,1,28.071189,-82.129162
+264,Golden Aster Scrub - Land Acquisition,1995,0,0,"$3,089,452.00",NULL,future use-industrial - Misty,1,1,27.86714745,-82.35780285
+263,Florida College - Land Acquisition,0,0,0,"$1,800,000.00","FCT = $900,000",future use-medium density residential - Misty,0,0,27.86714745,-82.35780285
+262,Cypress Street Restoration Park - Land Acquisition,0,0,0,"$3,956,000.00",NA,future use-multifamily residential - Misty,0,0,27.86714745,-82.35780285
+261,Cypress Creek Preserve West/Phase 1 - Land Acquisition,1996,0,0,"$9,620,060.00",NULL,"current use-ag pasture, future use-single family residential; no reduction - Misty",1,1,28.041175,-82.365839
+260,Cockroach Creek Greenway - Land Acquisition,2001,0,0,"$1,346,348.00",NULL,"current use-ag pasture, future use-single family residential; no reduction - Misty",1,1,27.86714745,-82.35780285
+259,Bullfrog Creek Scrub - Land Acquisition,1996,0,0,"$4,749,122.00","GFWFC=$1,905,000",future use - multifamily residential - Misty,1,1,28.019236,-82.21548
+258,Brooker Creek Headwaters - Land Acquisition,0,0,0,"$4,710,473.00",NA,future use - medium density residential,0,0,28.012172,-82.609611
+257,Brooker Creek Buffer Preserve - Land Acquisition,0,0,0,"$1,406,840.00",NA,future use - single family residential; no reduction - Misty,0,0,27.86714745,-82.35780285
+251,Reviewing flow and salinity conditions on Alafia and Little Manatee rivers,0,0,0,"$2,000,000.00",Funding for the next 5 years,EPCHC continues its participation in the SWFWMD rulemaking process as a commenting party.,0,0,27.86714745,-82.35780285
+250,Monitor seagrass recovery in Cockroach Bay,0,0,0,"$3,000.00",NA,Year 2000 Update: EPC has been monitoring seagrass beds in Tampa Bay at selected transects for the last two years and is planning to continue this effort indefinitely.,0,0,27.662673,-82.215645
+249,Expand habitat mapping and monitoring,0,0,0,NA,NA,EPCHC continues to cooperate in the seagrass monitoring program and participate in the Southwest Florida Seagrass Working Group.,0,0,27.86714745,-82.35780285
+248,Improve compliance and enforcement of wetland permits,0,0,0,NA,NA,EPC regulates wetlands through a permitting process as outlined in the rules of the commission.,0,0,27.86714745,-82.35780285
+247,Encourage waterfront homeowners to enhance shorelines and limit runoff,0,0,0,NA,NA,EPCHC routinely reviews all dredge and fill applications in Hillsborough County that might affect shoreline characteristics.,0,0,27.86714745,-82.35780285
+246,Assist with mapping hard bottom areas,0,0,0,NA,NA,"EPCHC staff continues to support mapping of hard bottom areas and has, along with the Terra Ceia Aquatic Preserve Manager, worked to raise awareness about the shortage of available data related to hard-bottom communities.",0,0,27.79,-82.442
+245,Restrict impacts to hard bottoms,0,0,0,NA,NA,EPCHC administers an Artificial Reef program that has created 8 permitted reefs within Tampa Bay.,0,0,27.86714745,-82.35780285
+244,Reduce propeller scarring,0,0,0,"$300,000.00",NA,"Through the Pollution Recovery Fund (PRF) and Gardinier Settlement Trust Fund (GSTF), EPCHC has continued to provide grants for seagrass monitoring and restoration, primarily in and near Cockroach Bay.",0,0,27.86714745,-82.35780285
+243,Implement mitigation criteria for Tampa Bay,0,0,0,NA,NA,"Through the TBEP, EPCHC also participates in the Federal Mitigation Action Plan (MAP) program, which is currently developing watershed-based mitigation methods.",0,0,27.86714745,-82.35780285
+242,Habitat Master Plan for Tampa Bay committee member,0,0,0,NA,NA,"EPCHC's Wetland Division will help process any permits as expeditiously as possible in order to facilitate the objectives of this action plan. Year 2000 Update: No revisions, EPC's commitment is ongoing. 2003 update: attached description file",0,0,27.86714745,-82.35780285
+241,Establish water quality standards for saltwater beaches,0,0,0,NA,NA,"EPCHC and DOH are currently drafting an updated memorandum of understanding (MOU) defining the agenciesÃ¢â‚¬â„¢ responsibilities on issues of mutual interest, including water quality at public swimming beaches.",0,0,27.86714745,-82.35780285
+240,Continue support of FY&N and similar pollution prevention initiatiaves,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+239,Reduce pollution from recreational boaters,0,0,0,NA,NA,Bayside Marina was designated by FDEP as Hillsborough CountyÃ¢â‚¬â„¢s first Ã¢â‚¬Å“Clean MarinaÃ¢â‚¬Âù in 2005.,0,0,27.86714745,-82.35780285
+238,Improve opportunities for hazardous waste disposal,0,0,0,"$330,000.00",NA,"EPCHC SQG program performed 6,203 on-site inspections, mailed out 98,000 notifications to affected businesses and distributed 17,500 pieces of literature",0,0,27.86714745,-82.35780285
+237,Address hot spots of toxic contamination,0,0,0,"$200,000.00",NA,During  2005 EPCHC also plans to work with the Tampa Port Authority to conduct sediment quality monitoring in specific areas under TPA jurisdiction.,0,0,27.86714745,-82.35780285
+236,Expand central sewer to areas currently served by septic systems,0,0,0,NA,NA,The EPCHC water quality monitoring program provides bacteriological data that may be helpful in identifying areas where sanitary nuisances are being caused by poorly-functioning septic systems.,0,0,27.86714745,-82.35780285
+235,Require standardized monitoring of wastewater discharges,0,0,0,NA,NA,EPCHC is building its own duplicate database.,0,0,27.86714745,-82.35780285
+234,Expand the use of reclaimed where it benefits the bay,0,0,0,NA,NA,EPCHC is currently a participant with DEP and others in team permitting for some projects that have the potential for considering reuse of water.,0,0,27.86714745,-82.35780285
+232,Agreement with TECO resulting in N0x emissions; Gannon and Big Bend plants,0,0,0,NA,NA,2003 update: attached text description,0,0,27.86714745,-82.35780285
+231,Continue Atmospheric Deposition Studies,0,0,0,NA,NA,2003 update: text description,0,0,27.86714745,-82.35780285
+230,NA,0,2005,0,NA,NA,EPCHCÃ¢â‚¬â„¢s benthic and water quality monitoring programs may indirectly help evaluate the success of this action plan.,0,0,27.86714745,-82.35780285
+229,NA,0,2005,0,NA,NA,EPCHC's benthic and water quality monitoring programs may indirectly help evaluate the success of this action plan.,0,0,27.86714745,-82.35780285
+228,Encourage BMP's on farms,0,0,0,NA,"University of Florida, State of Florida, Hills. Co.",EPC will continue to work with BMPs for dairies. and other agricultural operations through its industrial waste management functions,0,0,27.86714745,-82.35780285
+227,East Bay Industries - Monitoring,0,0,0,"$4,000.00",NA,NA,0,0,27.86714745,-82.35780285
+226,Enforce timely completion of consent orders,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+225,NA,0,2005,0,NA,NA,EPCHCÃ¢â‚¬â„¢s benthic and water quality monitoring programs may help evaluate the success of this action plan.,0,0,27.86714745,-82.35780285
+224,NA,0,0,0,NA,NA,EPCHCÃ¢â‚¬â„¢s benthic and water quality monitoring programs may help evaluate the success of this action plan.,0,0,27.86714745,-82.35780285
+223,NA,0,0,0,NA,NA,EPCHCÃ¢â‚¬â„¢s benthic and water quality monitoring programs may help evaluate the success of this action plan.,0,0,27.86714745,-82.35780285
+222,NA,0,2005,0,NA,NA,EPCHCÃ¢â‚¬â„¢s benthic and water quality monitoring programs may help evaluate the success of this action plan. Year 2000 Update: Hillsborough County  government has adapted an integrated pest management program for its facilities.,0,0,27.86714745,-82.35780285
+221,BMP's for businesses,0,0,0,"$400,000.00",NA,SQG program continues through 2005- see ID# 137,0,0,27.86714745,-82.35780285
+219,atmospheric deposition technical assistance,1998,0,0,"$42,000.00",NA,"EPA will continue to provide technical assistance to TBEP, and will provide technical assistance and/or future commitments identified and agreed to in the atmospheric deposition action plan.",0,0,27.79,-82.442
+218,Impacts of Power Plant entrainment - New Standards to Reduce Entrainment,0,0,0,NA,NA,"Impacts of Power Plant entrainment- 2003 update: ALSO A WEB LINK TO THIS REPORT
+URL: http://www.epa.gov/waterscience/316b/devdoc/.  New standards to reduce entrainment to take effect 2004.",0,0,27.79,-82.442
+217,Manatee protection,0,0,0,NA,NA,The City of Clearwater has posted manatee protection zones and citizen education displays at selected marinas. Year 2000 Update: Ongoing. 2003 update: City does not provide any enforcement.,0,0,27.86714745,-82.35780285
+216,On-water enforcement,0,0,0,NA,NA,"2003 update-'City will support, but does not provide enforcement'.",0,0,27.86714745,-82.35780285
+215,Environmental Permitting improvements,0,0,0,NA,NA,The City has reorganized the Public Works Department to provide better service delivery and improved compliance related to environmental permitting,0,0,27.86714745,-82.35780285
+214,Support mitigation criteria for Tampa Bay,0,0,0,NA,NA,The City of Clearwater will continue to support the TBEPÃ¢â‚¬â„¢s efforts to establish mitigation criteria for Tampa Bay and to identify potential priority sites for investigation.,0,0,27.86714745,-82.35780285
+212,Maintain pump-out facilities,0,0,0,NA,NA,constructed and will continue to maintain sewage pump-out facilities at its Marina. 2003 Update: outside watershed.,0,0,27.86714745,-82.35780285
+211,Support Healthy Beaches project,0,0,0,NA,NA,"will take part in a committee to review standards, parameters and sampling techniques. 2003 update - no changes made",0,0,27.86714745,-82.35780285
+210,Sewer System Evaluation Study and Self Audit Program,0,0,0,"$2,800,000.00",NULL,"Capital improvement plan to improve its 
+wastewater collection system by reducing 
+infiltration of water into the system for Phase 
+1.",1,1,27.86714745,-82.35780285
+209,Promote IPM,0,0,0,NA,NA,no further action is recommended at this time. 2003 update - no changes made,0,0,27.86714745,-82.35780285
+208,Promote P2,0,0,0,NA,NA,"The City of Clearwater, although having no marinas in Tampa Bay, will promote the P2 program for the City Marina through the use of uniform procedures for materials management. 2003 update-no changes",0,0,27.86714745,-82.35780285
+207,Amnesty days for hazardous materials,0,0,0,NA,NA,continues to promote an amnesty day for the handling and disposal of hazardous materials for small business and residential hazardous materials. 2003 update-no changes,0,0,27.86714745,-82.35780285
+206,NA,0,0,0,NA,NA,The City of Clearwater will support TBEP in assessing sediment contamination clean up and monitoring sediment chemistry and benthic communities in the bay.  Year 2000 Update: ongoing. 2003 update-no changes,0,0,27.86714745,-82.35780285
+205,Revise HRS rules to incorporate environmental performance or design standards for septic systems,0,0,0,NA,NA,This action will be revisited following the Healthy Beaches Tampa Bay project,0,0,27.86714745,-82.35780285
+204,Standardized discharge monitoring reports,0,0,0,NA,NA,The City of Clearwater continues to work with FDP to implement reporting requirements under existing facility operations permits.  Year 2000 Update: Ongoing. 2003 update 'done',0,0,27.86714745,-82.35780285
+203,Expansion of central sewer collection,2001,0,0,NA,NULL,"The City of Clearwater continues to implement 
+a program for the expansion of central sewer 
+collection. Feasibility study scheduled for 
+2001. 2003 update - project done. Feasibility 
+study update in 2010. The complete build-out 
+of this project wil",1,1,27.86714745,-82.35780285
+202,City-wide plan for its reclaimed water,0,0,0,NA,NA,Redirection of effluent currently discharging to Tampa Bay scheduled for 2001- 2005. 2003 update - project done.,0,0,27.86714745,-82.35780285
+201,Green Light Program literature distribution,0,0,0,NA,NA,No Green Light Program literature has been received to disseminate by the City. 2003 update - 'not doing',0,0,27.86714745,-82.35780285
+200,Continue atmospheric deposition studies,0,0,0,NA,NA,"continue to coordinate the ongoing research activities addressing atmospheric deposition in Tampa Bay and its watershed, including eight separate but related projects.",0,0,27.86714745,-82.35780285
+199,Brownfields Development,0,2004,0,NA,NA,"The CityÃ¢â‚¬â„¢s Brownfields project covers 1,842 acres within the downtown core and approximately 100 potential contamination sites. 2003 update-'does not affect Tampa Bay'",0,0,27.86714745,-82.35780285
+198,Encourage alternative stormwater treatment methods,0,0,0,NA,NULL,"Encourages alternative stormwater treatment methods, such as in-line stormwater retrofit structures for the removal of floating trash and organic debris, and regional stormwater facilities which employ Ã¢â‚¬Ëœtreatment trainÃ¢â‚¬â„¢ designs",1,1,27.662673,-82.215645
+197,Land Development Code,0,0,0,NA,NA,Allows the use of turf block and grass parking on church and recreational facilities when approved by Planning and Development Services. Land Development Code implemented in 1999.,0,0,27.662673,-82.215645
+196,Promote use of BMP's on City-owned facilities,0,0,0,NA,NULL,NULL,1,1,27.662673,-82.215645
+195,Assist business with implementation of BMP's,0,0,0,NA,NULL,NULL,1,1,28.012172,-82.609611
+194,Continue support for FY&N,0,0,0,NA,NULL,"Will continue to seek opportunities to promote 
+FY&N concepts through public education, 
+including brochures and handout information, 
+promotion of the program during routine site 
+visits and public interaction",1,1,27.662673,-82.215645
+192,Tampa Bay Dredging and Dredged Material Management Committee,0,0,0,NA,"TBEP, Tampa Port. Costs unknown","The project will result in a Baywide Plan which will incorporate all existing plans, plus beneficial uses and a status of all known placements sites including capacity and known or foreseeable constraints.",0,0,27.86714745,-82.35780285
+190,Increase On-Water Enforcement,0,0,0,NA,NA,"A request for information on the use of saltwater fishing license revenues and funding levels for law enforcement was sent in early 2000, and the response will be published in the next State of Tampa Bay Report.",0,0,27.86714745,-82.35780285
+188,Hard Bottom Habitat Workshop,0,0,0,"$2,000.00","FDEP,TBEP",Preliminary discussions have been held with the FDEPÃ¢â‚¬â„¢s Aquatic and Buffer Preserves staff about a joint workshop.,0,0,27.86714745,-82.35780285
+185,Distribution of Clean Marinas literature,0,0,0,NA,Undetermined,The Council will distribute information to those marinas that expressed interest in installing pump-out facilities and information about the Clean Marinas program,0,0,27.86714745,-82.35780285
+184,Monitoring water quality at popular beaches,0,0,0,"$6,000.00",Unidentified at this time.,"TBRPC/ABM production of a daily/weekly update of water quality conditions at popular beaches will begin, dependent upon funding, following completion of the study.",0,0,27.86714745,-82.35780285
+183,Safety walk-throughs,0,0,0,NA,NA,"This issue is no longer in the FDOTÃ¢â‚¬â„¢s NPDES permit, and FDOT is no longer funding this sort of activity.",0,0,27.86714745,-82.35780285
+182,Identification of Pest Management Practices,0,0,0,NA,NA,"TBRPC/ABM will survey land managers in 1999 to identify pest management practices on public lands and private agricultural interests throughout the Tampa Bay watershed, including road rights-of-way",0,0,27.86714745,-82.35780285
+181,Future of the Region Conference on Urban Development and Redevelopment,0,0,0,NA,Potentially the Florida Dept. of Community Affairs,The Tampa Bay Regional Planning Council/ABM plans to conduct a Future of the Region Conference on Urban Development and Redevelopment.,0,0,27.86714745,-82.35780285
+180,NA,0,0,0,NA,NA,The City of Tampa will participate in any committees once they have been formed.,0,0,27.86714745,-82.35780285
+179,NA,0,0,0,NA,NA,The City of Tampa and the City of Clearwater will participate in the management committee once it is formed.  Year 2000 Update:City is participating in the management committee.,0,0,27.86714745,-82.35780285
+178,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+177,City of Tampa Manatee Protection Patrol,0,0,0,NA,NA,"The City of Tampa Marine Patrol unit consists of 6 sworn officers and a Sergeant who patrol the waterways of the City 7 days a week, primarily during the prime boating hours of the day.",0,0,27.86714745,-82.35780285
+176,Establish and maintain minimum seasonal freshwater flows downstream of dams,0,0,0,NA,NA,2003 update- City and SWFWMD have cooperated in data collections and are in the process of analyzing the data.,0,0,27.86714745,-82.35780285
+175,NA,0,0,0,NA,NA,The City of Tampa has taken the lead in developing the seagrass monitoring procedures and will continue to cooperate in the Baywide Monitoring Report and the Database. Year 2000 Update: No change.,0,0,27.86714745,-82.35780285
+174,Encourage waterfront residents to enhance shorelines and limit runoff from yards,0,0,0,NA,NA,The City of Tampa will continue to distribute information provided by the TBEP and others. Year 2000 Update: None.,0,0,27.79,-82.442
+173,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+172,Upland Habitat Ordinance,0,0,0,NA,NA,2003 update-attached document,0,0,28.019236,-82.21548
+171,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+168,NA,0,0,0,NA,NA,Year 2000 Update: The Dept. of Sanitary Sewers Maintenance section maintains overflows from line blockages. This section maintains these lines on an as needed basis.,0,0,27.86714745,-82.35780285
+167,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+166,Household Hazardous Waste Collection Program,0,0,0,"$60,000.00",operating budget,2003 update - City holds 2 household hazardous waste collection events per year.,0,0,27.79,-82.442
+164,NA,0,0,0,NA,NA,"The City of Tampa will assist in sediment chemistry monitoring as needed and feasible, and continue to assist in reviewing the benthic monitoring program. Year 2000 Update: No change.",0,0,27.86714745,-82.35780285
+163,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+162,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+161,Expand Central Sewer Service to areas served by septic systems,0,0,0,NA,NA,The City of Tampa has enacted an ordinance to require utilization of central sewer for new development where central sewer is available or feasible.  Year 2000 Update: No change.,0,0,27.86714745,-82.35780285
+160,City of Tampa Potable ASR Project - Rome Avenue Park Site,0,0,0,"$11,000,000.00","SWFWMD, Hillsborough River Basin Board, Northwest Basin Board",NA,0,0,27.86714745,-82.35780285
+159,Tampa Water Resource Recovery Project,0,0,0,NA,NA,Revisions/update:  This is no longer a project,0,0,27.86714745,-82.35780285
+158,South Tampa Area Reclaim Project (STAR),2001,0,0,"$21,000,000.00","Northwest Hillsborough River Basin Board, Hillsborough River Basin Board, EPA",The City of Tampa is also examining the use of some flow from the Howard F. Curren AWTP for irrigation in the STAR Project (South Tampa Area Reclaim Project).,1,1,28.019236,-82.21548
+157,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+156,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+155,NA,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+154,Improve compliance with agricultural ground and surface water management plans,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+153,Promote urban compact development,0,0,0,NA,NA,"The City of Tampa will participate in the Conference, and will implement whatever recommendations it finds appropriate. Year 2000 Update: No Change. Year 2003 Update-attached description document.",0,0,27.86714745,-82.35780285
+152,Require older properties being redeveloped to meet current stormwater treatment standards or provide,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+151,Reduce Impervious Paved Surfaces,0,0,0,NA,NA,2003 update - added to attached document,0,0,27.86714745,-82.35780285
+150,Encourage local governments to adopt integrated pest management policies and use environmentally ben,0,0,0,NA,NA,NA,0,0,27.86714745,-82.35780285
+149,Assist businesses in implementing site management practices to reduce stormwater runoff,0,0,0,NA,NULL,The City of Tampa will develop landscape guidelines to reduce runoff from commercial sites and make this information available to the development community. Year 2000 Update: No change. Text only.,1,1,27.86714745,-82.35780285
+148,Continue support for Florida Yards & Neighborhoods and similar pollution prevention programs.,0,0,0,NA,NA,Text only.,0,0,28.019236,-82.21548
+141,Anclote River Land Acquisition-2,0,0,2001,"$50,000.00",NA,NA,0,0,28.012172,-82.609611
+140,Anclote River Land Acquisition-1,0,0,2001,"$46,500.00",NA,NA,0,0,28.012172,-82.609611
+139,Wall Springs Land Acquisition-1,0,0,0,"$1,474,000.00",NA,NA,0,0,28.012172,-82.609611
+136,Southwest Florida Regional Ambient Monitoring Program (RAMP),0,0,0,NA,NA,"The goal of the RAMP, is to provide bay-wide and inter-bay, monitoring strategies that will support the efforts by the Estuary Programs. Text only.",0,0,27.86714745,-82.35780285
+134,Lake Tarpon Septic Tank Removal,2008,2012,0,"$2,510,000.00",Utility fees and assessments.,"Treatment efficiency - 100% per Eric 12/02. Need 
+current load.",1,1,28.012172,-82.609611
+133,North County Subdivision Reclaimed Water Systems,0,0,0,"$8,814,797.00",NA,"Design and construction of reclaimed water distribution systems to provide service to the residents of the subdivisions of Highland Lakes, Estates at Cobbs Landing, Alderman Ridge.",0,0,28.012172,-82.609611
+130,North Gulf Beaches Reclaimed Water System,0,0,0,"$17,000,000.00",NA,"Design and construction of reclaimed water transmission and distribution systems to provide service to Indian Shores, Indian Rocks Beach, Belleair Beach and Belleair Shores.",0,0,27.826351,-82.752508
+128,"Pinellas Park Reclaimed Water System, Phase IV",0,0,0,NA,City of Pinellas Park,This project represents a further phase of construction of reclaimed water infrastructure within the City of Pinellas Park as the city implements its reclaimed water program.,1,1,27.826351,-82.752508
+127,Clearwater/Oldsmar Reclaimed Water Interconnect,2000,0,0,"$10,954,910.00",NA,The cities of Clearwater and Oldsmar will provide a combined total of 3.8 million gallons per day of reclaimed water produced at city water reclamation facilities.,0,1,28.012172,-82.609611
+121,Mulberry Phosphate Investigative Task Force Member,0,0,0,NA,No additional costs.,No nitrogen reductions - text only.,0,0,27.86714745,-82.35780285
+120,Active member of NMC,0,0,0,NA,No additional costs.,"No nitrogen reductions - text only.No revisions, EPCHCÃ¢â‚¬â„¢s commitment to the Consortium is ongoing.",0,0,27.86714745,-82.35780285
+118,Monthly surface water quality monitoring,0,0,0,"$400,000.00",NA,No nitrogen reductions - text only.EPCHC continues to implement its monthly water quality monitoring program in Tampa Bay and its tributaries.,0,0,27.86714745,-82.35780285
+116,Development and implementation of a City-wide plan for expansion of reclaimed water service,0,0,0,NA,Jointy City/SWFWMD,Clearwater is currently developing a city-wide plan for its reclaimed water system which will ultimately redirect 16.1 mgd of effluent currently entering Tampa Bay.,0,1,28.012172,-82.609611
+113,Augmentation Of Reuse To Meet The Nitrogen Reduction Goals,0,2003,0,NA,Pinellas County,The augmentation of the system with alternate sources of water was recommended to allow the system to be expanded with additional connections to the system. Discontinued 2003.,0,0,27.826351,-82.752508
+112,South Cross Bayou Reuse,1998,2006,0,"$264,000,000.00",Pinellas County,Wastewater reuse will be expanded to reduce contribution to Tampa Bay by implementing a program to provide reclaimed water in areas where alternative sources to potable water are not available.,0,1,27.826351,-82.752508
+110,Lake Seminole Alum Injection/Pond Creation (Basin 2),2002,0,0,"$3,376,000.00","Pinellas County sales tax, SWFWMD. Total cost $3,376,000",Pond creation/alum injection. Year 2000 Update: no change in plans.,1,0,27.826351,-82.752508
+109,Joe's Creek Pond Creation,0,2006,0,NA,Pinellas County sales tax.   PROJECT ON HOLD.  MAY NOT EVER DO (per Eric 12/02),Pond Creation (JoeÃ¢â‚¬â„¢s Creek Det Area #2); pond area 14.5 acres. Year 2000 Update: no change in plans.PROJECT ON HOLD.  MAY NOT EVER DO (per Eric 12/02),1,0,27.826351,-82.752508
+97,Citrus Improved Management Of Irrigation And Fertilization,0,2006,0,NA,Agricultural Businesses. Estimated project cost  paid by grants and producers.,"An estimated 98% of the 24,000 acres of citrus in Manatee County is currently using micro-irrigation  Reduction efficiency supplied by Man. Cty.",1,0,27.59344,-82.675961
+96,Row Crop Conversion To Micro-Irrigation,0,2006,0,NA,Agricultural businesses,"The potential acreage for drip has increased to approximately 20,000 acres.  Of that, an estimated 65% of 13,000 acres is now drip irrigated.  Reduction efficiency supplied by Man. Cty.",1,0,27.59344,-82.675961
+95,Tampa Bay Estuarine System (Terra Ceia Bay) Land Acquisition,2001,0,0,"$7,500,000.00","SWFWMD and various grants, Total Project Cost $7.5 million",Acquisition of wetland and upland habitat within the Terra Ceia Bay Aquatic Preserve. Year 2000 Update: None - completed since 1995.,0,0,27.59344,-82.675961
+93,Ordinance Restrictions For Landspreading Of Domestic And Citrus Wastewater Residuals,0,2006,0,NA,"Permit Fees, County ad valorem, haulers and landowners",strict regulations of transporting and landspreading domestic and citrus wastewater residuals for beneficial uses.  Reduction efficiency supplied by Man. Cty.,1,0,27.59344,-82.675961
+90,Florida Yards And Neighborhoods Program,0,0,0,NA,"Grants, County ad valorum",Reduction efficiency supplied by Man. Cty.,1,0,27.59344,-82.675961
+78,Urban Retrofit Projects,0,2006,0,"$120,000.00","Developers - Administrative expenses estimated at $50,000/yr.","The City requires redevelopment to retrofit an average of 6 to 7 acres of urban land use per year, including stormwater treatment for all retrofit acres. Treatment efficiency: (ERD Report). Year 2000 Update: Administrative expenses estimated at $50,000/yr",1,0,27.662673,-82.215645
+74,Lake Tarpon Pond Creation (Basin 63),2007,2010,0,"$750,000.00","Pinellas County sales tax, possibly seek grant funding (SWFWMD).",Pond creation (This is one of the highest loading areas to Lake Tarpon.  Uncertain as yet as to whether there is sufficient room for a full pond - may require alum treatment). Year 2000 Update: Currently planned for initiation in 2003; completion in 2006.,1,1,28.012172,-82.609611
+73,Lake Tarpon Pond Creation/Rehabilitation (Basin 23),2007,2010,0,"$625,000.00","Pinellas County sales tax, possibly seek grant funding (SWFWMD).","No land available to create a full pond, but may be possible to rehabilitate area for some treatment.  Either alum treatment or natural treatment in wetland.",1,1,28.012172,-82.609611
+72,Long Branch Creek Pond Creation,0,2006,0,NA,Pinellas County sales tax.  PROJECT ON HOLD,Stormwater pond creation; pond area 35 acres. Year 2000 Update: No change in current plans.,1,0,28.012172,-82.609611
+71,FY & N Concepts For County Buildings And Lands,0,0,0,NA,NA,Year 2000 Update: Update information pending. Insert document SW103ID71,0,0,27.826351,-82.752508
+70,Florida Yards & Neighborhoods Program,2001,0,0,"$158,500.00",Funding secured thru 9/02. Renewal of grant expected.,A grant-funded citizen education and action program that teaches residents how to create a Florida-friendly yard that enhances the natural environment.,0,0,28.012172,-82.609611
+69,FY & N Florida Schoolyard Program,0,0,0,NA,SWFWMD up to $10K annually,Public and private schools are notified annually of the School Garden Grant Program to create a Florida-friendly teaching garden.,0,0,28.012172,-82.609611
+68,Pending Land Acquisitions,0,0,0,"$80,000,000.00","State Preservation 2000 funds,  Pinellas County. Partial funding secured. Total cost $80M",Update information pending calculation of loads from lands actually purchased within this time period.,0,0,28.012172,-82.609611
+66,Lake Tarpon Pond Creation (Basin 6),0,0,0,NA,"Pinellas County sales tax, SWFWMD, Tarpon Springs, FDOT","Pond creation, alum treatment; pond size 2 acres with alum treatment and sediment traps. (Lake Tarpon Plan Task Report 3.2.5 by Coastal Environmental).",1,0,28.012172,-82.609611
+60,Clearwater Mall Retrofit Project,0,1998,0,NA,"SWFWMD, City of Clearwater",Year 2000 Update: Delete - project determined to be not feasible.,1,0,28.012172,-82.609611
+51,Stormwater Reinspection,0,2004,0,NA,City of Clearwater - Not Currently Implementing,Project on hold.,1,0,28.012172,-82.609611
+47,Citrus Conversion To Microjet Irrigation,0,2006,0,NA,Agricultural Businesses,"Area treated=28,200 acres. Reduction efficiency supplied. Lead entity?",1,0,28.019236,-82.21548
+46,Vegetable Crop Conversion To Micro-Irrigation,0,2006,0,NA,Agricultural businesses,"There were approximately 9000 acres of vegetables grown in Hillsborough County, with approximately 40% (3600) utilizing drip irrigation.  This has resulted in  water savings over more conventional systems and a decrease in fertilizer applied. Lead entity?",1,0,28.019236,-82.21548
+45,Strawberry Crop Conversion To Micro-Irrigation,0,2006,0,NA,Agricultural Businesses,Area treated=5400 acres; reduction efficiency supplied; need lead entity -DEP or Manatee County?,1,0,28.019236,-82.21548
+44,Plant City Reuse Program,1997,0,0,NA,"City of Plant City, SWFWMD","Plant City has now rerouted the majority of its effluent to CF Industries for process water, with a permitted discharge to East Canal (ultimately Blackwater Creek) year round.",1,1,28.017315,-82.125394
+43,Whole Farm Planning,0,0,0,NA,NA,"Farmers participating in the program will implement state-of-the-art BMPs and meet all statutory standards, in return for a more efficient and palatable regulatory climate.",0,0,28.019236,-82.21548
+42,Land Limited BMPs For Dairy Farms In Areas Of Urbanization Within The Hillsborough R. Watershed2,0,0,0,NA,"EPA 319 Grant, DEP, University of Florida and Maple Lane Dairy",Construction of a Vegetated Treatment System and Overland Flow System for Nutrient Removal at Maple Lane Dairy. Area treated=43 acres; reduction efficiency=needed.,1,0,28.019236,-82.21548
+1072,Tampa Bay Water Regional Surface Water Treatment Plant,0,2009,2005,$0.00,NA,NA,1,0,28.019236,-82.21548
+41,Land Limited BMPs For Dairy Farms In Areas Of Urbanization Within The Hillsborough R. Watershed,0,0,0,NA,"EPA 310 Grant, University of Florida, FDEP, Dairy farmers, Private manure entrepeneur","Demonstration of On-site, In-Vessel Dairy Manure Digestion. Area treated=120 acres; reduction efficiency=needed.",1,0,28.019236,-82.21548
+1071,Tampa Bay Water Regional Surface Water Treatment Plant,0,2009,2004,$0.00,NA,NA,1,0,28.019236,-82.21548
+1070,Tampa Bay Water Regional Surface Water Treatment Plant,0,2009,2004,$0.00,NA,NA,1,0,28.019236,-82.21548
+1068,Hillsborough County Pet Waste Campaign,0,2009,2009,$0.00,NULL,"In order to develop a successful pet waste 
+education program, the County desires to 
+receive input from the public on their views 
+and existing habits with their pets.",1,1,27.86714745,-82.35780285
+1062,"City of Plant City, Reuse at CF Industries-Plant City Facility",0,0,0,"$17,000,000.00",NULL,"Upgrade of the City's Wastewater Treatment 
+plant to meet FDEP Part III public access reuse 
+standards and construction of a pipeline from 
+treatment facility to CF Industries, Plant City 
+complex.",1,1,28.019236,-82.21548
+1061,Lakeland Methane to Energy project - Phase I,0,0,0,"$150,000.00",O&M,Offset energy production using fossil fuels with renewable (digester gas) fuel.,0,0,27.79,-82.442
+1060,Lakeland Water to TECO,2008,0,0,$0.00,SWFWMD grant/TECO,"Remove present Lakeland discharge from Alafia 
+River for utilization as cooling water at TECO Polk 
+Power Station. 30-Year project.",1,1,28.019236,-82.21548
+29,Reduction/Increases in Bulk Loading Rates (Florida Phosphate Council Members,0,2002,0,NA,NA,Discontinued since each fertilizer company submits their own projects. (per Bruce DeGrove 11/02),0,0,28.019236,-82.21548
+1059,Lakeland Hi-Efficiency Burners,0,0,0,$0.00,Lakeland Electric,Reduction of atmospheric deposition of nitrogen by installation of high-efficiency burners at McIntosh Power Production site. The amount is quantified but the dispersion is under study.,0,0,27.79,-82.442
+1058,Lakeland SCR Project,0,0,0,$0.00,Lakeland Electric,Reduction of atmospheric deposition of nitrogen by installation of  SCR equipment at McIntosh Power Production site. The anticipated amount is qualified but the dispersion is under study.,0,0,27.79,-82.442
+1057,Lakeland Methane to Energy project - Phase II,0,0,0,"$950,000.00",To be determined,Offset energy production using fossil fuels with renewal (digester gas) fuel. No new emissions will be generated at the fuel is being burned without energy recovery already.,0,0,27.79,-82.442
+1056,River Tower Stormwater Retrofit,0,0,0,$0.00,NULL,Currently under design,1,1,28.021363,-82.457406
+23,Pollution Prevention Programs,0,0,0,NA,NULL,"Supplements include Adopt-A-Pond, 
+stormdrain stenciling, and public awareness 
+programs.  Reduction supplied by Hills. Co. 
+4687 drains marked through 2016",1,1,28.019236,-82.21548
+22,Florida Yards And Neighborhood Program,0,0,0,NA,NULL,Public awareness programs raise water conservation awareness and implement pollution reduction initiatives. 2003 update: added to desc file.,1,1,28.019236,-82.21548
+1050,Sunset Manor Subdivision Drainage Improvement,0,0,0,"$1,270,000.00",LOST,The improvements will consist of stabilizing the channel slopes to prevent ongoing bank erosion and improve maintenance access.,0,0,27.86714745,-82.35780285
+17,Tampa Water Resource Recovery Project(s),0,2003,0,NA,NA,This is no longer a project.,0,0,28.019236,-82.21548
+1047,Church Creek Drainage Improvements,0,0,0,"$1,734,500.00",LOST,The purpose of this project is to reconstruct failing stormwater collection systems and improve the existing substandard collection system.,0,0,27.86714745,-82.35780285
+16,Florida Yards & Neighborhoods/Water Resources Public Education,1993,0,0,NA,"Water Utility Fees, Total Project Cost $0",Ongoing public education programs to reduce water usage/pollution.,0,0,28.019236,-82.21548
+1045,Stormwater Monitoring System,0,0,0,"$25,000.00",NULL,"The Streets and Drainage Division of the Public Works Department installed a wireless radio frequency based stormwater management database system to record rainfall events, DO levels and water level data in the CityÃ¢â‚¬â„¢s stormwater system.",1,1,27.826351,-82.752508
+1042,NA,0,0,0,$0.00,NA,NA,0,0,27.86714745,-82.35780285
+1039,Downtown Drainage Retention Ponds Improvements,0,0,0,"$900,000.00","Tree Fund, LOST","The purpose of this project is to replace the underdrain systems of the Downtown Drainage Ponds, which are located south of West Bay Drive and west of Seminole Boulevard near the Bayhead sports complex.",0,0,27.826351,-82.752508
