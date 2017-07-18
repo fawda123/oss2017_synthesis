@@ -1,16 +1,9 @@
----
-title: "Exploratory plots of restoration activities in TB"
-output: 
-  html_document:
-    keep_md: yes
-    code_folding: hide
-    toc: true
-    toc_float: true
----
+# Exploratory plots of restoration activities in TB
 
 Load libraries:
 
-```{r message = F, warning = F}
+
+```r
 library(tidyverse)
 library(readxl)
 library(ggmap)
@@ -21,7 +14,8 @@ library(lubridate)
 
 Barplots of restoration projects by category, year:
 
-```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
+
+```r
 fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 
 # clean up habitat restoration data
@@ -43,7 +37,21 @@ dat <- fl %>%
     tech = toupper(tech)
   )
 head(dat)
+```
 
+```
+## # A tibble: 6 x 6
+##        lat       lon  date                   tech          type  acre
+##      <dbl>     <dbl> <dbl>                  <chr>         <chr> <dbl>
+## 1 27.23300 -82.09700  2006       LAND ACQUISITION    Protection  50.0
+## 2 27.93133 -82.73820  2005       WETLAND CREATION Establishment  14.0
+## 3 27.95087 -82.54180  1998       WETLAND CREATION Establishment   3.0
+## 4 27.88977 -82.39888  2005 HYDROLOGIC RESTORATION   Enhancement  12.8
+## 5 27.88994 -82.40340  2004         EXOTIC CONTROL   Enhancement 123.9
+## 6 27.97370 -82.71504  2006             EXCAVATION Establishment  20.0
+```
+
+```r
 ggplot(dat, aes(tech, group = date, fill = factor(date))) + 
   geom_bar(position = 'dodge') + 
   theme_bw() + 
@@ -52,7 +60,11 @@ ggplot(dat, aes(tech, group = date, fill = factor(date))) +
     axis.title.x = element_blank(), 
     legend.title = element_blank()
     )
+```
 
+![](tbrest_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
+```r
 ggplot(dat, aes(acre, group = tech, fill = tech)) + 
   geom_histogram() + 
   scale_x_log10('Acres') + 
@@ -63,9 +75,12 @@ ggplot(dat, aes(acre, group = tech, fill = tech)) +
   )
 ```
 
+![](tbrest_files/figure-html/unnamed-chunk-2-2.png)<!-- -->
+
 Map of restoration sites and acreage reported:
 
-```{r warning = F, message = F, fig.width = 6, fig.height = 6}  
+
+```r
 toplo <- filter(dat, lat > 27.3 & lat < 28.2)  
 
 # extent
@@ -82,11 +97,14 @@ pbase <- ggmap(map) +
   geom_point(data = toplo, aes(size = acre, fill = tech), pch = 21, colour = 'black', alpha = 0.8) + 
   scale_size(range = c(2, 11))
 pbase
-````
+```
+
+![](tbrest_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ## Load data
 
-```{r warning = F, message = F, fig.width = 8, fig.height = 6}
+
+```r
 loads <- read_excel('data-raw/loads.xlsx')
 
 dat <- loads %>% 
@@ -113,12 +131,14 @@ ggplot(dat, aes(x = yr, y = val, group = yr)) +
   geom_boxplot() + 
   facet_grid(var~seg, scales = 'free_y') + 
   scale_y_log10('kg or m3 per month')
-
 ```
+
+![](tbrest_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 ## WQ data
 
-```{r warning = F, message = F}
+
+```r
 wqdat_raw <- read_csv('data-raw/epchc_clean_data_07162017.csv')
 
 # rename, select relevant columns, integrate variables across depths
@@ -166,7 +186,8 @@ wqdat <- wqdat_raw %>%
 
 #### DO
 
-```{r message = F, warning = F, fig.width = 8, fig.height = 11}
+
+```r
 # take ten-year averages
 wqdat_ten <- wqdat %>%
   group_by(stat, yrcat, seg, lat, lon, var) %>% 
@@ -195,11 +216,13 @@ pbase +
   facet_wrap(~yrcat) + 
   guides(fill=guide_legend(''), size = guide_legend('')) +
   ggtitle('DO mg/L') 
-
 ```
 
+![](tbrest_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+
 #### Salinity
-```{r message = F, warning = F, fig.width = 8, fig.height = 11}
+
+```r
 # sal map
 salplo <- filter(wqdat_ten, var %in% 'sal')
 pbase + 
@@ -211,8 +234,11 @@ pbase +
   ggtitle('Sal ppt') 
 ```
 
+![](tbrest_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+
 #### Chlorophyll
-```{r message = F, warning = F, fig.width = 8, fig.height = 11}
+
+```r
 # chl map
 chlplo <- filter(wqdat_ten, var %in% 'chla')
 pbase + 
@@ -222,6 +248,8 @@ pbase +
   facet_wrap(~yrcat) +
   ggtitle('Chl-a ug/L') 
 ```
+
+![](tbrest_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
          
