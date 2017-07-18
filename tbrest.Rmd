@@ -21,8 +21,6 @@ library(stringi)
 
 ## Restoration data
 
-Barplots of restoration projects by category, year:
-
 ```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
 fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 
@@ -45,47 +43,28 @@ habdat <- fl %>%
     tech = toupper(tech)
   ) %>% 
   filter(lat > 27.3 & lat < 28.2)  
-head(habdat)
+
+# habitat restoration station locs
+habstat <- habdat %>% 
+  mutate(id = stri_rand_strings(nrow(habdat), length = 4)) %>% 
+  select(id, lat, lon) %>% 
+  unique
+
+# normalized habitat data
+habdat <- habdat %>% 
+  select(-lat, -lon)
+
 save(habdat, file = 'data/habdat.RData', compress = 'xz')
-
-ggplot(habdat, aes(tech, group = date, fill = factor(date))) + 
-  geom_bar(position = 'dodge') + 
-  theme_bw() + 
-  coord_flip() + 
-  theme(
-    axis.title.x = element_blank(), 
-    legend.title = element_blank()
-    )
-
-ggplot(habdat, aes(acre, group = tech, fill = tech)) + 
-  geom_histogram() + 
-  scale_x_log10('Acres') + 
-  facet_wrap(~tech) + 
-  theme_bw() + 
-  theme(
-    legend.position = 'none'
-  )
+save(habstat, file = 'data/habstat.RData', compress = 'xz')
 ```
 
-Map of restoration sites and acreage reported:
-
-```{r warning = F, message = F, fig.width = 6, fig.height = 6}  
-toplo <- habdat
-
-# extent
-ext <- make_bbox(toplo$lon, toplo$lat)
-map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
-
-# base map
-pbase <- ggmap(map) +
-  theme_bw() +
-  theme(
-    axis.title.x = element_blank(),
-    axis.title.y = element_blank()
-  ) +
-  geom_point(data = toplo, aes(size = acre, fill = tech), pch = 21, colour = 'black', alpha = 0.8) + 
-  scale_size(range = c(2, 11))
-pbase
+Habitat restoration projects:
+```{r}
+head(habdat)
+```
+Locations of habitat restoration projects:
+```{r}
+head(habstat)
 ```
 
 ## Load data
@@ -134,8 +113,7 @@ wqdat <- wqdat_raw %>%
     dttm = SampleTime,
     stat = epchc_station, 
     lat = Latitude, 
-    lon = Longitude, 
-    seg = bay_segment, 
+    lon = Longitude,
     sallo = Sal_Bottom_ppth, 
     salmd = Sal_Mid_ppth,
     salhi = Sal_Top_ppth, 
@@ -144,7 +122,7 @@ wqdat <- wqdat_raw %>%
     dohi = DO_Top_mg_L,
     chla = chl_a
   ) %>% 
-  select(stat, yr, mo, dttm, lat, lon, seg, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
+  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
   gather('var', 'val', sallo:chla) %>% 
   mutate(val = as.numeric(val)) %>% 
   spread('var', 'val') %>% 
@@ -155,102 +133,43 @@ wqdat <- wqdat_raw %>%
   ) %>%
   select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
   gather('var', 'val', chla:do) %>% 
-  group_by(stat, yr, seg, var, lat, lon) %>% 
-  summarise(val = median(val, na.rm = TRUE)) %>% 
-  ungroup %>% 
   mutate(
-    yrcat = cut(yr, 
-      breaks = c(-Inf, 1985, 1995, 2005, Inf), 
-      labels = c('1974-1985', '1986-1995', '1996-2005', '2005-2016')
-    )
+    dy = 1
+  ) %>% 
+  unite('datetime', yr, mo, dy, sep = '-') %>% 
+  mutate(
+    datetime = as.Date(datetime, format = '%Y-%m-%d')
   )
+
+# get station locations
+wqstat <- wqdat %>% 
+  select(stat, lon, lat) %>% 
+  unique
+
+# remove denormalized rows
+wqdat <- wqdat %>% 
+  select(-lon, -lat)
+  
+save(wqstat, file= 'data/wqstat.RData', compress = 'xz')
+save(wqdat, file = 'data/wqdat.RData', compress = 'xz')
+```
+
+Water quality station lat/lon:
+```{r}
+head(wqstat)
+```
+
+Water quality data:
+```{r}
 head(wqdat)
-```
-
-### Plot of ten-year medians {.tabset}
-
-#### DO
-
-```{r message = F, warning = F, fig.width = 8, fig.height = 11}
-# take ten-year averages
-wqdat_ten <- wqdat %>%
-  group_by(stat, yrcat, seg, lat, lon, var) %>% 
-  summarise(val = median(val, na.rm = TRUE)) %>% 
-  ungroup
-
-# save file
-save(wqdat_ten, file = 'data/wqdat_ten.RData', compress = 'xz')
-
-# extent
-ext <- make_bbox(wqdat_ten$lon, wqdat_ten$lat)
-map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
-
-# base map
-pbase <- ggmap(map) +
-  theme_bw() +
-  theme(
-    axis.title.x = element_blank(),
-    axis.title.y = element_blank()
-  ) +
-  guides(fill=guide_legend(''), size = guide_legend('')) 
-colpal <- 'Set2'
-
-# do map
-doplo <- filter(wqdat_ten, var %in% 'do')
-pbase + 
-  geom_point(data = doplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
-  scale_size('', range = c(2, 11)) + 
-  scale_fill_distiller(palette = colpal) +
-  facet_wrap(~yrcat) + 
-  guides(fill=guide_legend(''), size = guide_legend('')) +
-  ggtitle('DO mg/L') 
-
-```
-
-#### Salinity
-```{r message = F, warning = F, fig.width = 8, fig.height = 11}
-# sal map
-salplo <- filter(wqdat_ten, var %in% 'sal')
-pbase + 
-  geom_point(data = salplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
-  scale_size('', range = c(2, 11)) + 
-  scale_fill_distiller(palette = colpal) +
-  facet_wrap(~yrcat) + 
-  guides(fill=guide_legend(''), size = guide_legend('')) +
-  ggtitle('Sal ppt') 
-```
-
-#### Chlorophyll
-```{r message = F, warning = F, fig.width = 8, fig.height = 11}
-# chl map
-chlplo <- filter(wqdat_ten, var %in% 'chla')
-pbase + 
-  geom_point(data = chlplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
-  scale_size('', range = c(2, 11)) + 
-  scale_fill_distiller(palette = colpal) +
-  facet_wrap(~yrcat) +
-  ggtitle('Chl-a ug/L') 
 ```
 
 ## Distance to restoration sites {.tabset}
 
 ```{r}
 # load restoration and wq data 
-data(habdat)
-data(wqdat_ten)
-
-# assign unique id to hab projs
-habdat <- habdat %>% 
-  mutate(id = stri_rand_strings(nrow(habdat), length = 4))
-
-# hab project locations and id
-tomtch <- habdat %>% 
-  select(id, lon, lat)
-
-# get station locations
-wqstat <- wqdat_ten %>% 
-  select(stat, seg, lon, lat) %>% 
-  unique
+data(habstat)
+data(wqstat)
 
 # get this many closest to each station
 mtch <- 20
@@ -263,9 +182,9 @@ wqmtch <- wqstat %>%
     clo = map(data, function(sta){
 
       # get top mtch closest restoration projects to each station
-      dists <- distm(rbind(sta[, -1], tomtch[, -1])) %>%
+      dists <- distm(rbind(sta, habstat[, -1])) %>%
         .[-1, 1] %>% 
-        data.frame(tomtch, dist = .) %>% 
+        data.frame(habstat, dist = .) %>% 
         arrange(dist) %>% 
         .[1:mtch, ] %>% 
         data.frame(sta, ., rnk = 1:mtch)
@@ -286,7 +205,7 @@ head(wqmtch)
 # plots
 
 # extent
-ext <- make_bbox(habdat$lon, habdat$lat)
+ext <- make_bbox(habstat$lon, habstat$lat)
 map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
 
 # base map
@@ -296,7 +215,7 @@ pbase <- ggmap(map) +
     axis.title.x = element_blank(),
     axis.title.y = element_blank()
   ) +
-  geom_point(data = habdat, aes(x = lon, y = lat), fill  = 'green', size = 3, pch = 21) +
+  geom_point(data = habstat, aes(x = lon, y = lat), fill  = 'green', size = 3, pch = 21) +
   geom_point(data = wqstat, aes(x = lon, y = lat))
 
 # closest

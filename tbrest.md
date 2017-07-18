@@ -39,72 +39,55 @@ habdat <- fl %>%
     tech = toupper(tech)
   ) %>% 
   filter(lat > 27.3 & lat < 28.2)  
+
+# habitat restoration station locs
+habstat <- habdat %>% 
+  mutate(id = stri_rand_strings(nrow(habdat), length = 4)) %>% 
+  select(id, lat, lon) %>% 
+  unique
+
+# normalized habitat data
+habdat <- habdat %>% 
+  select(-lat, -lon)
+
+save(habdat, file = 'data/habdat.RData', compress = 'xz')
+save(habstat, file = 'data/habstat.RData', compress = 'xz')
+```
+
+Habitat restoration projects:
+
+```r
 head(habdat)
 ```
 
 ```
-## # A tibble: 6 x 6
-##        lat       lon  date                   tech          type  acre
-##      <dbl>     <dbl> <dbl>                  <chr>         <chr> <dbl>
-## 1 27.93133 -82.73820  2005       WETLAND CREATION Establishment  14.0
-## 2 27.95087 -82.54180  1998       WETLAND CREATION Establishment   3.0
-## 3 27.88977 -82.39888  2005 HYDROLOGIC RESTORATION   Enhancement  12.8
-## 4 27.88994 -82.40340  2004         EXOTIC CONTROL   Enhancement 123.9
-## 5 27.97370 -82.71504  2006             EXCAVATION Establishment  20.0
-## 6 27.97370 -82.71504  2006             EXCAVATION Establishment  26.0
+## # A tibble: 6 x 4
+##    date                   tech          type  acre
+##   <dbl>                  <chr>         <chr> <dbl>
+## 1  2005       WETLAND CREATION Establishment  14.0
+## 2  1998       WETLAND CREATION Establishment   3.0
+## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8
+## 4  2004         EXOTIC CONTROL   Enhancement 123.9
+## 5  2006             EXCAVATION Establishment  20.0
+## 6  2006             EXCAVATION Establishment  26.0
 ```
+Locations of habitat restoration projects:
 
 ```r
-save(habdat, file = 'data/habdat.RData', compress = 'xz')
-
-ggplot(habdat, aes(tech, group = date, fill = factor(date))) + 
-  geom_bar(position = 'dodge') + 
-  theme_bw() + 
-  coord_flip() + 
-  theme(
-    axis.title.x = element_blank(), 
-    legend.title = element_blank()
-    )
+head(habstat)
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
-
-```r
-ggplot(habdat, aes(acre, group = tech, fill = tech)) + 
-  geom_histogram() + 
-  scale_x_log10('Acres') + 
-  facet_wrap(~tech) + 
-  theme_bw() + 
-  theme(
-    legend.position = 'none'
-  )
 ```
-
-![](tbrest_files/figure-html/unnamed-chunk-2-2.png)<!-- -->
-
-Map of restoration sites and acreage reported:
-
-
-```r
-toplo <- habdat
-
-# extent
-ext <- make_bbox(toplo$lon, toplo$lat)
-map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
-
-# base map
-pbase <- ggmap(map) +
-  theme_bw() +
-  theme(
-    axis.title.x = element_blank(),
-    axis.title.y = element_blank()
-  ) +
-  geom_point(data = toplo, aes(size = acre, fill = tech), pch = 21, colour = 'black', alpha = 0.8) + 
-  scale_size(range = c(2, 11))
-pbase
+## # A tibble: 6 x 3
+##      id      lat       lon
+##   <chr>    <dbl>     <dbl>
+## 1  Fqqc 27.93133 -82.73820
+## 2  Nrzi 27.95087 -82.54180
+## 3  C4Qc 27.88977 -82.39888
+## 4  BeJ0 27.88994 -82.40340
+## 5  vjlb 27.97370 -82.71504
+## 6  8Yju 27.97370 -82.71504
 ```
-
-![](tbrest_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ## Load data
 
@@ -138,7 +121,7 @@ ggplot(lddat, aes(x = yr, y = val, group = yr)) +
   scale_y_log10('kg or m3 per month')
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 ## WQ data
 
@@ -155,8 +138,7 @@ wqdat <- wqdat_raw %>%
     dttm = SampleTime,
     stat = epchc_station, 
     lat = Latitude, 
-    lon = Longitude, 
-    seg = bay_segment, 
+    lon = Longitude,
     sallo = Sal_Bottom_ppth, 
     salmd = Sal_Mid_ppth,
     salhi = Sal_Top_ppth, 
@@ -165,7 +147,7 @@ wqdat <- wqdat_raw %>%
     dohi = DO_Top_mg_L,
     chla = chl_a
   ) %>% 
-  select(stat, yr, mo, dttm, lat, lon, seg, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
+  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
   gather('var', 'val', sallo:chla) %>% 
   mutate(val = as.numeric(val)) %>% 
   spread('var', 'val') %>% 
@@ -176,123 +158,70 @@ wqdat <- wqdat_raw %>%
   ) %>%
   select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
   gather('var', 'val', chla:do) %>% 
-  group_by(stat, yr, seg, var, lat, lon) %>% 
-  summarise(val = median(val, na.rm = TRUE)) %>% 
-  ungroup %>% 
   mutate(
-    yrcat = cut(yr, 
-      breaks = c(-Inf, 1985, 1995, 2005, Inf), 
-      labels = c('1974-1985', '1986-1995', '1996-2005', '2005-2016')
-    )
+    dy = 1
+  ) %>% 
+  unite('datetime', yr, mo, dy, sep = '-') %>% 
+  mutate(
+    datetime = as.Date(datetime, format = '%Y-%m-%d')
   )
+
+# get station locations
+wqstat <- wqdat %>% 
+  select(stat, lon, lat) %>% 
+  unique
+
+# remove denormalized rows
+wqdat <- wqdat %>% 
+  select(-lon, -lat)
+  
+save(wqstat, file= 'data/wqstat.RData', compress = 'xz')
+save(wqdat, file = 'data/wqdat.RData', compress = 'xz')
+```
+
+Water quality station lat/lon:
+
+```r
+head(wqstat)
+```
+
+```
+## # A tibble: 6 x 3
+##    stat      lon     lat
+##   <int>    <dbl>   <dbl>
+## 1    47 -82.6202 27.9726
+## 2    60 -82.6316 27.9899
+## 3    46 -82.6593 27.9904
+## 4    64 -82.6833 27.9794
+## 5    66 -82.6397 27.9278
+## 6    40 -82.5873 27.9291
+```
+
+Water quality data:
+
+```r
 head(wqdat)
 ```
 
 ```
-## # A tibble: 6 x 8
-##    stat    yr   seg   var     lat      lon       val     yrcat
-##   <int> <int> <chr> <chr>   <dbl>    <dbl>     <dbl>    <fctr>
-## 1     6  1974    HB  chla 27.8893 -82.4774 18.000000 1974-1985
-## 2     6  1974    HB    do 27.8893 -82.4774  6.900000 1974-1985
-## 3     6  1974    HB   sal 27.8893 -82.4774 21.500000 1974-1985
-## 4     6  1975    HB  chla 27.8893 -82.4774 17.000000 1974-1985
-## 5     6  1975    HB    do 27.8893 -82.4774  5.033333 1974-1985
-## 6     6  1975    HB   sal 27.8893 -82.4774 23.050000 1974-1985
+## # A tibble: 6 x 4
+##    stat   datetime   var   val
+##   <int>     <date> <chr> <dbl>
+## 1    47 1974-01-01  chla    NA
+## 2    60 1974-01-01  chla    NA
+## 3    46 1974-01-01  chla     3
+## 4    64 1974-01-01  chla     2
+## 5    66 1974-01-01  chla    NA
+## 6    40 1974-01-01  chla    NA
 ```
-
-### Plot of ten-year medians {.tabset}
-
-#### DO
-
-
-```r
-# take ten-year averages
-wqdat_ten <- wqdat %>%
-  group_by(stat, yrcat, seg, lat, lon, var) %>% 
-  summarise(val = median(val, na.rm = TRUE)) %>% 
-  ungroup
-
-# save file
-save(wqdat_ten, file = 'data/wqdat_ten.RData', compress = 'xz')
-
-# extent
-ext <- make_bbox(wqdat_ten$lon, wqdat_ten$lat)
-map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
-
-# base map
-pbase <- ggmap(map) +
-  theme_bw() +
-  theme(
-    axis.title.x = element_blank(),
-    axis.title.y = element_blank()
-  ) +
-  guides(fill=guide_legend(''), size = guide_legend('')) 
-colpal <- 'Set2'
-
-# do map
-doplo <- filter(wqdat_ten, var %in% 'do')
-pbase + 
-  geom_point(data = doplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
-  scale_size('', range = c(2, 11)) + 
-  scale_fill_distiller(palette = colpal) +
-  facet_wrap(~yrcat) + 
-  guides(fill=guide_legend(''), size = guide_legend('')) +
-  ggtitle('DO mg/L') 
-```
-
-![](tbrest_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
-
-#### Salinity
-
-```r
-# sal map
-salplo <- filter(wqdat_ten, var %in% 'sal')
-pbase + 
-  geom_point(data = salplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
-  scale_size('', range = c(2, 11)) + 
-  scale_fill_distiller(palette = colpal) +
-  facet_wrap(~yrcat) + 
-  guides(fill=guide_legend(''), size = guide_legend('')) +
-  ggtitle('Sal ppt') 
-```
-
-![](tbrest_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
-
-#### Chlorophyll
-
-```r
-# chl map
-chlplo <- filter(wqdat_ten, var %in% 'chla')
-pbase + 
-  geom_point(data = chlplo, aes(x = lon, y = lat, size = val, fill = val), pch = 21, colour = 'black', alpha = 0.8) + 
-  scale_size('', range = c(2, 11)) + 
-  scale_fill_distiller(palette = colpal) +
-  facet_wrap(~yrcat) +
-  ggtitle('Chl-a ug/L') 
-```
-
-![](tbrest_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 ## Distance to restoration sites {.tabset}
 
 
 ```r
 # load restoration and wq data 
-data(habdat)
-data(wqdat_ten)
-
-# assign unique id to hab projs
-habdat <- habdat %>% 
-  mutate(id = stri_rand_strings(nrow(habdat), length = 4))
-
-# hab project locations and id
-tomtch <- habdat %>% 
-  select(id, lon, lat)
-
-# get station locations
-wqstat <- wqdat_ten %>% 
-  select(stat, seg, lon, lat) %>% 
-  unique
+data(habstat)
+data(wqstat)
 
 # get this many closest to each station
 mtch <- 20
@@ -305,9 +234,9 @@ wqmtch <- wqstat %>%
     clo = map(data, function(sta){
 
       # get top mtch closest restoration projects to each station
-      dists <- distm(rbind(sta[, -1], tomtch[, -1])) %>%
+      dists <- distm(rbind(sta, habstat[, -1])) %>%
         .[-1, 1] %>% 
-        data.frame(tomtch, dist = .) %>% 
+        data.frame(habstat, dist = .) %>% 
         arrange(dist) %>% 
         .[1:mtch, ] %>% 
         data.frame(sta, ., rnk = 1:mtch)
@@ -323,15 +252,15 @@ head(wqmtch)
 ```
 
 ```
-## # A tibble: 6 x 9
-##    stat   seg      lon     lat    id     lon.1    lat.1      dist   rnk
-##   <int> <chr>    <dbl>   <dbl> <chr>     <dbl>    <dbl>     <dbl> <int>
-## 1     6    HB -82.4774 27.8893  QFqi -82.48064 27.88898  320.8786     1
-## 2     6    HB -82.4774 27.8893  9Mbl -82.48583 27.89488 1036.0181     2
-## 3     6    HB -82.4774 27.8893  FciP -82.48891 27.90075 1704.9387     3
-## 4     6    HB -82.4774 27.8893  Napq -82.48678 27.87472 1867.1113     4
-## 5     6    HB -82.4774 27.8893  nKNJ -82.48708 27.87427 1925.3468     5
-## 6     6    HB -82.4774 27.8893  SlJQ -82.45352 27.91001 3291.4160     6
+## # A tibble: 6 x 8
+##    stat      lon     lat    id    lat.1     lon.1     dist   rnk
+##   <int>    <dbl>   <dbl> <chr>    <dbl>     <dbl>    <dbl> <int>
+## 1    47 -82.6202 27.9726  rOH9 27.99817 -82.61724 2861.746     1
+## 2    47 -82.6202 27.9726  1lG6 27.99911 -82.61671 2971.000     2
+## 3    47 -82.6202 27.9726  IZkU 27.97310 -82.57360 4581.869     3
+## 4    47 -82.6202 27.9726  EqEM 27.99967 -82.58379 4678.879     4
+## 5    47 -82.6202 27.9726  iLFR 28.01691 -82.63240 5075.789     5
+## 6    47 -82.6202 27.9726  Dsua 28.01178 -82.58063 5843.654     6
 ```
 
 ### Closest 
@@ -341,7 +270,7 @@ head(wqmtch)
 # plots
 
 # extent
-ext <- make_bbox(habdat$lon, habdat$lat)
+ext <- make_bbox(habstat$lon, habstat$lat)
 map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
 
 # base map
@@ -351,7 +280,7 @@ pbase <- ggmap(map) +
     axis.title.x = element_blank(),
     axis.title.y = element_blank()
   ) +
-  geom_point(data = habdat, aes(x = lon, y = lat), fill  = 'green', size = 3, pch = 21) +
+  geom_point(data = habstat, aes(x = lon, y = lat), fill  = 'green', size = 3, pch = 21) +
   geom_point(data = wqstat, aes(x = lon, y = lat))
 
 # closest
