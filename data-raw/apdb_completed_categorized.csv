@@ -75,7 +75,7 @@ Unique_Project_ID,Project_Name,Bay_Segment,Lead_Entity,Project_Activity,Project_
 1074,development of standardized mitigation guidelines,All Segments,Pinellas County,Nonpoint_Source,Education,2000,NA,27.86714745,-82.35780285,,NA
 1075,Seagrass scar reduction efforts,All Segments,Pinellas County,Habitat_Protection,Protection_Management,1997,NA,27.86714745,-82.35780285,,"$74,000.00 "
 1076,Urban retrofit projects,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Management,2004,118.8,27.79,-82.442,,"$50,000.00 "
-1077,Multiple habitat restoration and protection projects,Hillsborough Bay,Tampa Port Authority,Habitat_Protection,_Management,2004,NA,28.019236,-82.21548,,"$400,000.00 "
+1077,Multiple habitat restoration and protection projects,Hillsborough Bay,Tampa Port Authority,Habitat_Protection,Protection_Management,2004,NA,28.019236,-82.21548,,"$400,000.00 "
 1078,Support consent orders for clean up of fertilizer facilities,Hillsborough Bay,FDEP,Point_Source,Regulation,2000,NA,27.79,-82.442,,NA
 1079,Tampa Bay Water Regional Surface Water Treatment Plant,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2003,72440,28.019236,-82.21548,,"$84,000,000.00 "
 1080,Kapok Restoration Project,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Treatment_Train,2006,644,28.012172,-82.609611,,"$13,514,272.00 "
@@ -231,7 +231,7 @@ Unique_Project_ID,Project_Name,Bay_Segment,Lead_Entity,Project_Activity,Project_
 1230,Peanut Creek Restoration,Lower Tampa Bay,Manatee County,Habitat_Enhancement,Hydrologic_Restoration,2002,NA,27.59344,-82.675961,,"$926,000.00 "
 1231,Seagrass Mitigation,Lower Tampa Bay,Manatee County,Habitat_Enhancement,Management,2002,NA,27.59344,-82.675961,,$0.00 
 1232,Grassy Point Project,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2002,115.5,27.491669,-82.705239,,"$347,000.00 "
-1233,Seagrass Protection as mitigation,Lower Tampa Bay,Manatee County,Habitat_Protection,_Management,2004,NA,27.59344,-82.675961,,"$2,400.00 "
+1233,Seagrass Protection as mitigation,Lower Tampa Bay,Manatee County,Habitat_Protection,Protection_Management,2004,NA,27.59344,-82.675961,,"$2,400.00 "
 1234,Perico Harbor Clean Marina,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2001,NA,27.59344,-82.675961,,$0.00 
 1235,Septic Tank Setback Ordinance,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2004,NA,27.59344,-82.675961,,$0.00 
 1236,Seagrass Protection Ordinance 04-72,Lower Tampa Bay,Manatee County,Habitat_Protection,Protection_Management,2004,NA,27.59344,-82.675961,,"$100,000.00 "
