@@ -23,14 +23,14 @@ fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 # clean up habitat restoration data
 habdat <- fl %>% 
   read_csv %>% 
-  select(Latitude, Longitude, Project_Completion_Date, `Restoration Category`, `Activity-1`, `Acres-1`) %>% 
+  select(Latitude, Longitude, Project_Completion_Date, `Type`, `Project_Technology`, `Project_Activity`) %>% 
   rename(
     lat = Latitude, 
     lon = Longitude, 
     date = Project_Completion_Date, 
-    tech = `Restoration Category`, 
-    type = `Activity-1`, 
-    acre = `Acres-1`
+    tech = `Project_Technology`, 
+    type = `Type`,
+    activity = `Project_Activity`
   ) %>% 
   mutate(
     id = stri_rand_strings(nrow(.), length = 4),
@@ -63,14 +63,14 @@ head(habdat)
 
 ```
 ## # A tibble: 6 x 5
-##    date                   tech          type  acre    id
-##   <dbl>                  <chr>         <chr> <dbl> <chr>
-## 1  2005       WETLAND CREATION Establishment  14.0  bF48
-## 2  1998       WETLAND CREATION Establishment   3.0  8EX8
-## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8  govs
-## 4  2004         EXOTIC CONTROL   Enhancement 123.9  v5jh
-## 5  2006             EXCAVATION Establishment  20.0  lHl6
-## 6  2006             EXCAVATION Establishment  26.0  5jmu
+##    date        type                   tech            activity    id
+##   <dbl>       <chr>                  <chr>               <chr> <chr>
+## 1  2005 Enhancement HYDROLOGIC_RESTORATION Habitat_Enhancement  gUoB
+## 2  2004 Enhancement         EXOTIC_CONTROL Habitat_Enhancement  8GJw
+## 3  2005 Enhancement         EXOTIC_CONTROL Habitat_Enhancement  UTIw
+## 4  2006 Enhancement HYDROLOGIC_RESTORATION Habitat_Enhancement  C8CH
+## 5  2000 Enhancement         EXOTIC_CONTROL Habitat_Enhancement  o7eT
+## 6  1989 Enhancement HYDROLOGIC_RESTORATION Habitat_Enhancement  RuVF
 ```
 Locations of habitat restoration projects:
 
@@ -82,47 +82,13 @@ head(habstat)
 ## # A tibble: 6 x 3
 ##      id      lat       lon
 ##   <chr>    <dbl>     <dbl>
-## 1  bF48 27.93133 -82.73820
-## 2  8EX8 27.95087 -82.54180
-## 3  govs 27.88977 -82.39888
-## 4  v5jh 27.88994 -82.40340
-## 5  lHl6 27.97370 -82.71504
-## 6  5jmu 27.97370 -82.71504
+## 1  gUoB 27.88977 -82.39888
+## 2  8GJw 27.88994 -82.40340
+## 3  UTIw 27.88181 -82.39783
+## 4  C8CH 27.97370 -82.71504
+## 5  o7eT 27.81921 -82.28548
+## 6  RuVF 27.99817 -82.61724
 ```
-
-## Load data
-
-
-```r
-loads <- read_excel('data-raw/loads.xlsx')
-
-lddat <- loads %>% 
-  filter(!`Bay Segment` %in% c(5, 6, 7)) %>% 
-  rename(
-    seg = `Bay Segment`,
-    h2o = `H2O Load (m3/month)`,
-    tn = `TN Load (kg/month)`,
-    tp = `TP Load (kg/month)`, 
-    tss = `TSS Load (kg/month)`,
-    bod = `BOD Load (kg/month)`, 
-    yr = Year, 
-    mo = Month
-    ) %>% 
-  gather('var', 'val', h2o:bod) %>% 
-  mutate(
-    val = as.numeric(val),
-    seg = factor(seg, levels = c('1', '2', '3', '4'), labels = c('OTB', 'HB', 'MTB', 'LTB'))
-    ) %>% 
-  group_by(seg, yr, mo, var) %>% 
-  summarise(val = sum(val, na.rm = TRUE))
-
-ggplot(lddat, aes(x = yr, y = val, group = yr)) + 
-  geom_boxplot() + 
-  facet_grid(var~seg, scales = 'free_y') + 
-  scale_y_log10('kg or m3 per month')
-```
-
-![](tbrest_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 ## WQ data
 
@@ -256,12 +222,12 @@ head(wqmtch)
 ## # A tibble: 6 x 3
 ##    stat    id   rnk
 ##   <int> <chr> <int>
-## 1    47  f3gF     1
-## 2    47  CLVT     2
-## 3    47  SKKd     3
-## 4    47  TUZe     4
-## 5    47  NB0b     5
-## 6    47  VkUx     6
+## 1    47  RuVF     1
+## 2    47  ZM4l     2
+## 3    47  ejOG     3
+## 4    47  NAod     4
+## 5    47  NDWF     5
+## 6    47  pYg5     6
 ```
 
 ### Closest 
@@ -296,7 +262,7 @@ pbase +
   geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 ### Closest five
 
@@ -308,7 +274,7 @@ pbase +
   geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ### Closest twenty
 
@@ -320,7 +286,7 @@ pbase +
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ## Summarizing effects of restoration projects
 
@@ -335,7 +301,6 @@ chldat <- wqdat %>%
 
 wqchng <- wqmtch %>% 
   left_join(habdat, by = 'id') %>% 
-  select(-acre) %>% 
   mutate(
     date = paste0(date, '-07-01'),
     date = as.Date(date, format = '%Y-%m-%d')
@@ -402,15 +367,15 @@ head(wqchng)
 ```
 
 ```
-## # A tibble: 6 x 8
-##     rnk  stat    id       date                   tech          type
-##   <int> <int> <chr>     <date>                  <chr>         <chr>
-## 1     1     6  lHGQ 1995-07-01 SUBSTRATE MODIFICATION Establishment
-## 2     2     6  PVgz 2005-07-01         OYSTER HABITAT Establishment
-## 3     3     6  SRbg 2007-07-01         OYSTER HABITAT Establishment
-## 4     4     6  VgMZ 1990-07-01       WETLAND PLANTING Establishment
-## 5     5     6  r2OZ 2003-07-01         OYSTER HABITAT Establishment
-## 6     6     6  v0L6 2004-07-01       WETLAND PLANTING Establishment
-## # ... with 2 more variables: bef <dbl>, aft <dbl>
+## # A tibble: 6 x 9
+##     rnk  stat    id       date          type           tech
+##   <int> <int> <chr>     <date>         <chr>          <chr>
+## 1     1     6  Z7An 1995-07-01 Establishment      SALTMARSH
+## 2     2     6  hT0v 2005-07-01 Establishment OYSTER_HABITAT
+## 3     3     6  RgUU 2007-07-01 Establishment OYSTER_HABITAT
+## 4     4     6  qqpl 1990-07-01 Establishment      MANGROVES
+## 5     5     6  ivY2 2003-07-01 Establishment OYSTER_HABITAT
+## 6     6     6  ufvl 2004-07-01 Establishment      SALTMARSH
+## # ... with 3 more variables: activity <chr>, bef <dbl>, aft <dbl>
 ```
 

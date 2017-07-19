@@ -29,14 +29,14 @@ fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 # clean up habitat restoration data
 habdat <- fl %>% 
   read_csv %>% 
-  select(Latitude, Longitude, Project_Completion_Date, `Restoration Category`, `Activity-1`, `Acres-1`) %>% 
+  select(Latitude, Longitude, Project_Completion_Date, `Type`, `Project_Technology`, `Project_Activity`) %>% 
   rename(
     lat = Latitude, 
     lon = Longitude, 
     date = Project_Completion_Date, 
-    tech = `Restoration Category`, 
-    type = `Activity-1`, 
-    acre = `Acres-1`
+    tech = `Project_Technology`, 
+    type = `Type`,
+    activity = `Project_Activity`
   ) %>% 
   mutate(
     id = stri_rand_strings(nrow(.), length = 4),
@@ -68,38 +68,6 @@ head(habdat)
 Locations of habitat restoration projects:
 ```{r}
 head(habstat)
-```
-
-## Load data
-
-```{r warning = F, message = F, fig.width = 8, fig.height = 6}
-loads <- read_excel('data-raw/loads.xlsx')
-
-lddat <- loads %>% 
-  filter(!`Bay Segment` %in% c(5, 6, 7)) %>% 
-  rename(
-    seg = `Bay Segment`,
-    h2o = `H2O Load (m3/month)`,
-    tn = `TN Load (kg/month)`,
-    tp = `TP Load (kg/month)`, 
-    tss = `TSS Load (kg/month)`,
-    bod = `BOD Load (kg/month)`, 
-    yr = Year, 
-    mo = Month
-    ) %>% 
-  gather('var', 'val', h2o:bod) %>% 
-  mutate(
-    val = as.numeric(val),
-    seg = factor(seg, levels = c('1', '2', '3', '4'), labels = c('OTB', 'HB', 'MTB', 'LTB'))
-    ) %>% 
-  group_by(seg, yr, mo, var) %>% 
-  summarise(val = sum(val, na.rm = TRUE))
-
-ggplot(lddat, aes(x = yr, y = val, group = yr)) + 
-  geom_boxplot() + 
-  facet_grid(var~seg, scales = 'free_y') + 
-  scale_y_log10('kg or m3 per month')
-
 ```
 
 ## WQ data
@@ -264,7 +232,6 @@ chldat <- wqdat %>%
 
 wqchng <- wqmtch %>% 
   left_join(habdat, by = 'id') %>% 
-  select(-acre) %>% 
   mutate(
     date = paste0(date, '-07-01'),
     date = as.Date(date, format = '%Y-%m-%d')
