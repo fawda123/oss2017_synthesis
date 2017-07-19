@@ -36,7 +36,8 @@ habdat <- fl %>%
     lat = as.numeric(lat),
     lon = as.numeric(lon),
     date = as.numeric(date),
-    tech = toupper(tech)
+    tech = toupper(tech),
+    type = toupper(type)
   ) %>% 
   filter(lat > 27.3 & lat < 28.2) %>% 
   filter(!is.na(date))
@@ -50,8 +51,8 @@ habstat <- habdat %>%
 habdat <- habdat %>% 
   select(-lat, -lon)
 
-save(habdat, file = 'data/habdat.RData', compress = 'xz')
-save(habstat, file = 'data/habstat.RData', compress = 'xz')
+#save(habdat, file = 'data/habdat.RData', compress = 'xz')
+#save(habstat, file = 'data/habstat.RData', compress = 'xz')
 ```
 
 Habitat restoration projects:
@@ -81,7 +82,8 @@ bmpdat <- bmp_tr %>%
     lat = as.numeric(lat),
     lon = as.numeric(lon),
     date = as.numeric(date),
-    tech = toupper(tech)
+    tech = toupper(tech),
+    type = toupper(type)
   ) %>% 
   filter(lat > 27.3 & lat < 28.2) %>% 
   filter(!is.na(date))
@@ -99,11 +101,11 @@ save(bmpdat, file = 'data/bmpdat.RData', compress = 'xz')
 save(bmpstat, file = 'data/bmpstat.RData', compress = 'xz')
 ```
 
-Habitat restoration projects:
+BMP-Treatment projects:
 ```{r}
 head(bmpdat)
 ```
-Locations of habitat restoration projects:
+Locations of BMP Treatment projects:
 ```{r}
 head(bmpstat)
 ```
@@ -111,4 +113,7 @@ head(bmpstat)
 Combine cleaned up datasets
 ```{r}
 all_projects <- rbind(habdat, bmpdat)
+checkdata <- all_projects %>%
+             select(tech) %>%
+             unique()
 ```
