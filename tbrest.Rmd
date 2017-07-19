@@ -171,7 +171,7 @@ data(habstat)
 data(wqstat)
 
 # get this many closest to each station
-mtch <- 10
+mtch <- 20
 
 # match habitat restoration locations with wq stations by closest mtch locations
 wqmtch <- wqstat %>% 
@@ -236,7 +236,7 @@ pbase +
 toplo2 <- filter(toplo, rnk %in% c(1:5))
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ### Closest twenty
@@ -245,7 +245,7 @@ pbase +
 toplo3 <- filter(toplo, rnk %in% c(1:20))
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ## Summarizing effects of restoration projects

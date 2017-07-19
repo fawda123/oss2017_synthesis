@@ -62,12 +62,12 @@ head(habdat)
 ## # A tibble: 6 x 5
 ##    date                   tech          type  acre    id
 ##   <dbl>                  <chr>         <chr> <dbl> <chr>
-## 1  2005       WETLAND CREATION Establishment  14.0  7ogp
-## 2  1998       WETLAND CREATION Establishment   3.0  XFoH
-## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8  xmzd
-## 4  2004         EXOTIC CONTROL   Enhancement 123.9  Dqii
-## 5  2006             EXCAVATION Establishment  20.0  x8A3
-## 6  2006             EXCAVATION Establishment  26.0  WzAV
+## 1  2005       WETLAND CREATION Establishment  14.0  2Z7u
+## 2  1998       WETLAND CREATION Establishment   3.0  9uZ3
+## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8  N06V
+## 4  2004         EXOTIC CONTROL   Enhancement 123.9  0w3K
+## 5  2006             EXCAVATION Establishment  20.0  Di8V
+## 6  2006             EXCAVATION Establishment  26.0  RV9Z
 ```
 Locations of habitat restoration projects:
 
@@ -79,12 +79,12 @@ head(habstat)
 ## # A tibble: 6 x 3
 ##      id      lat       lon
 ##   <chr>    <dbl>     <dbl>
-## 1  7ogp 27.93133 -82.73820
-## 2  XFoH 27.95087 -82.54180
-## 3  xmzd 27.88977 -82.39888
-## 4  Dqii 27.88994 -82.40340
-## 5  x8A3 27.97370 -82.71504
-## 6  WzAV 27.97370 -82.71504
+## 1  2Z7u 27.93133 -82.73820
+## 2  9uZ3 27.95087 -82.54180
+## 3  N06V 27.88977 -82.39888
+## 4  0w3K 27.88994 -82.40340
+## 5  Di8V 27.97370 -82.71504
+## 6  RV9Z 27.97370 -82.71504
 ```
 
 ## Load data
@@ -221,7 +221,7 @@ data(habstat)
 data(wqstat)
 
 # get this many closest to each station
-mtch <- 10
+mtch <- 20
 
 # match habitat restoration locations with wq stations by closest mtch locations
 wqmtch <- wqstat %>% 
@@ -253,12 +253,12 @@ head(wqmtch)
 ## # A tibble: 6 x 3
 ##    stat    id   rnk
 ##   <int> <chr> <int>
-## 1    47  Jefm     1
-## 2    47  YODC     2
-## 3    47  jC2W     3
-## 4    47  LDda     4
-## 5    47  MlzR     5
-## 6    47  eWCh     6
+## 1    47  IaNm     1
+## 2    47  5cG7     2
+## 3    47  lE8V     3
+## 4    47  VjEh     4
+## 5    47  WElL     5
+## 6    47  f68c     6
 ```
 
 ### Closest 
@@ -302,7 +302,7 @@ pbase +
 toplo2 <- filter(toplo, rnk %in% c(1:5))
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ![](tbrest_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
@@ -314,7 +314,7 @@ pbase +
 toplo3 <- filter(toplo, rnk %in% c(1:20))
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ![](tbrest_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
@@ -402,12 +402,12 @@ head(wqchng)
 ## # A tibble: 6 x 8
 ##     rnk  stat    id       date                   tech          type
 ##   <int> <int> <chr>     <date>                  <chr>         <chr>
-## 1     1     6  NRws 1995-07-01 SUBSTRATE MODIFICATION Establishment
-## 2     2     6  SRko 2005-07-01         OYSTER HABITAT Establishment
-## 3     3     6  yxBx 2007-07-01         OYSTER HABITAT Establishment
-## 4     4     6  r28M 1990-07-01       WETLAND PLANTING Establishment
-## 5     5     6  yV1j 2003-07-01         OYSTER HABITAT Establishment
-## 6     6     6  2n0O 2004-07-01       WETLAND PLANTING Establishment
+## 1     1     6  fFdL 1995-07-01 SUBSTRATE MODIFICATION Establishment
+## 2     2     6  C7J8 2005-07-01         OYSTER HABITAT Establishment
+## 3     3     6  1sy2 2007-07-01         OYSTER HABITAT Establishment
+## 4     4     6  tiKZ 1990-07-01       WETLAND PLANTING Establishment
+## 5     5     6  BHHY 2003-07-01         OYSTER HABITAT Establishment
+## 6     6     6  16ID 2004-07-01       WETLAND PLANTING Establishment
 ## # ... with 2 more variables: bef <dbl>, aft <dbl>
 ```
 
