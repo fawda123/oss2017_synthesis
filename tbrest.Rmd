@@ -17,7 +17,7 @@ library(geosphere)
 library(stringi)
 library(tibble)
 knitr::knit('tbrest.Rmd', tangle = TRUE)
-file.copy('tbrest.R', 'R/tbrest.R')
+file.copy('tbrest.R', 'R/tbrest.R', overwrite = TRUE)
 file.remove('tbrest.R')
 ```
 
