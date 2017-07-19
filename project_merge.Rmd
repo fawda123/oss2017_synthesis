@@ -51,8 +51,8 @@ habstat <- habdat %>%
 habdat <- habdat %>% 
   select(-lat, -lon)
 
-#save(habdat, file = 'data/habdat.RData', compress = 'xz')
-#save(habstat, file = 'data/habstat.RData', compress = 'xz')
+save(habdat, file = 'data/habdat.RData', compress = 'xz')
+save(habstat, file = 'data/habstat.RData', compress = 'xz')
 ```
 
 Habitat restoration projects:
@@ -112,8 +112,15 @@ head(bmpstat)
 
 Combine cleaned up datasets
 ```{r}
-all_projects <- rbind(habdat, bmpdat)
+restdata <- rbind(habdat, bmpdat)
+reststat <- rbind(habstat, bmpstat)
+save(restdata, file = 'data/restdat.RData', compress = 'xz')
+save(reststat, file = 'data/reststat.RData', compress = 'xz')
+
 checkdata <- all_projects %>%
+             select(type) %>%
+             unique()
+checkdata2 <- all_projects %>%
              select(tech) %>%
              unique()
 ```
