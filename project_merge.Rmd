@@ -42,10 +42,7 @@ habdat <- fl %>%
   filter(!is.na(date))
 
 # habitat restoration station locs
-habstat <- habdat %>% ```{r}
-head(bmpstat)
-```
-
+habstat <- habdat %>% 
   select(id, lat, lon) %>% 
   unique
 
