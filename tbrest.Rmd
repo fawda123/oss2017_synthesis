@@ -24,50 +24,19 @@ file.remove('tbrest.R')
 ## Restoration data
 
 ```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
-fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
-
-# clean up habitat restoration data
-habdat <- fl %>% 
-  read_csv %>% 
-  select(Latitude, Longitude, Project_Completion_Date, `Type`, `Project_Technology`, `Project_Activity`) %>% 
-  rename(
-    lat = Latitude, 
-    lon = Longitude, 
-    date = Project_Completion_Date, 
-    tech = `Project_Technology`, 
-    type = `Type`,
-    activity = `Project_Activity`
-  ) %>% 
-  mutate(
-    id = stri_rand_strings(nrow(.), length = 4),
-    lat = as.numeric(lat),
-    lon = as.numeric(lon),
-    date = as.numeric(date),
-    tech = toupper(tech)
-  ) %>% 
-  filter(lat > 27.3 & lat < 28.2) %>% 
-  filter(!is.na(date))
-
-# habitat restoration station locs
-habstat <- habdat %>% 
-  select(id, lat, lon) %>% 
-  unique
-
-# normalized habitat data
-habdat <- habdat %>% 
-  select(-lat, -lon)
-
-save(habdat, file = 'data/habdat.RData', compress = 'xz')
-save(habstat, file = 'data/habstat.RData', compress = 'xz')
+data(restdat)
+data(reststat)
+restdat <- get('all_projects')
+reststat <- get('all_proj_stat')
 ```
 
 Habitat restoration projects:
 ```{r}
-head(habdat)
+head(restdat)
 ```
 Locations of habitat restoration projects:
 ```{r}
-head(habstat)
+head(reststat)
 ```
 
 ## WQ data
@@ -137,10 +106,6 @@ head(wqdat)
 ## Distance to restoration sites {.tabset}
 
 ```{r}
-# load restoration and wq data 
-data(habstat)
-data(wqstat)
-
 # get this many closest to each station
 mtch <- 20
 
@@ -152,9 +117,9 @@ wqmtch <- wqstat %>%
     clo = map(data, function(sta){
    
       # get top mtch closest restoration projects to each station
-      dists <- distm(rbind(sta, habstat[, -1])) %>%
+      dists <- distm(rbind(sta, reststat[, -1])) %>%
         .[-1, 1] %>% 
-        data.frame(id = habstat$id, dist = ., stringsAsFactors = F) %>% 
+        data.frame(id = reststat$id, dist = ., stringsAsFactors = F) %>% 
         arrange(dist) %>% 
         .[1:mtch, ] %>% 
         select(-dist) %>% 
@@ -178,10 +143,10 @@ head(wqmtch)
 # combine lat/lon for the plot
 toplo <- wqmtch %>% 
   left_join(wqstat, by = 'stat') %>% 
-  left_join(habstat, by = 'id')
+  left_join(reststat, by = 'id')
 
 # extent
-ext <- make_bbox(habstat$lon, habstat$lat)
+ext <- make_bbox(reststat$lon, reststat$lat)
 map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
 
 # base map
