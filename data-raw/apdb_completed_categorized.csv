@@ -1,611 +1,335 @@
-Unique_ID,Header_ID,Project_Name,Bay_Segment,Lead_Entity,Project_Activity,Project_Technology,Completion_Date,TP_Reduction_lbs_yr,TN_Reduction_lbs_yr,TSS_Reduction_lbs_yr,ProjectName,OngoingInitiation,DiscontinuedDate,CompletionDate,ActualProjectCost,FundingSource,ProjectDescription,ProjectDescriptionText,NonPointProject,PointProject,IsActive,PrimaryActionPlanID,LeadEntityID,ProjectLatitude,ProjectLongitude,Technique_Specific,Technique,Acres
-1,8,Delany Creek Wetland Restoration Project,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Wetland_Treatment,1997,NA,1691.3,NA,Delany Creek Wetland Restoration Project,1996,0,1997,"$445,746.13 ",NULL,NULL,"Delaney Creek receives runoff from a watershed of approximately 16 square miles that  flows directly into Upper 
-Hillsborough Bay. Reduction rate supplied by partner.",1,1,1,198,3,27.92362483,-82.38579458,"sediment sump, wetland treatment",,
-2,10,Cone Ranch Restoration Project,Hillsborough Bay,Hillsborough County,Habitat_Enhancement,Hydrologic_Modification,1999,140,331,3210,Cone Ranch Restoration Project,1999,0,1999,NA,"EPA's section 319(h) grant, Hillsborough County, various in-kind services",NULL,The project will attempt to restore hydroperiod to 400 acres of ditched and drained wetlands.  Five ponds were created in the project area. 2003 update: Seven ponds (not five as previously described).,1,1,1,199,3,28.12181309,-82.12251217,NA,,
-3,11,29th or 30th Street Outfall/ Mckay Bay,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Baffle_Box,1998,4.5,33.3,4457,29th or 30th Street Outfall/ Mckay Bay,1997,0,1998,NA,NA,NA,"One element has been designed to date ������ a baffle box for a 19 acre site near the outfall ������ and a second, could potentially  treat the first 퉌_��匝 of its 190 acre contributing basin.  RP 3/26/08 - Complete 1998.",1,0,1,199,4,28.019236,-82.21548,NA,,70-75
-4,14,Palma Ceia Area Stormwater Pond,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2001,28.4,93.4,2432,Palma Ceia Area Stormwater Pond,2000,0,2001,"$1,100,000.00 ",NA,NA,Project complete.  The contributing area will probably be in the 70-75 acre range. Year 2000 Update: Construction to begin in FY2000.,1,0,1,198,4,28.019236,-82.21548,Stormwater TreatmentPond,,2
-5,15,North Tampa Pond Enlargements,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2002,0.8,2.5,65,North Tampa Pond Enlargements,2001,0,2002,"$990,000.00 ",general fund - utility taxes mostly,NA,These two ponds currently drain to sinkholes. The stormwater attenuation/ treatment ponds planned for the sink area will have minimal nitrogen reduction impacts on the bay. Area treated = needed; Treatment area = 2 acres.,1,0,1,198,4,28.019236,-82.21548,Stormwater TreatmentPond,,
-6,19,East Lake (Alum) Stormwater Retrofit Project,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2000,NA,5244,NA,East Lake (Alum) Stormwater Retrofit Project,1998,0,2000,"$807,000.00 ",NA,NULL,The objective of the project is the implementation of an alum injection stormwater treatment system to treat stormwater runoff entering East Lake.  Reduction efficiency supplied by SWFWMD.  May come on line in 2006.,1,1,1,199,7,27.988065,-82.373728,implementation of an alum injection stormwater treatment system ,,
-7,20,Lowry Park West Stormwater Retrofit Project,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,1998,50.3,168.2,6215,Lowry Park West Stormwater Retrofit Project,1997,0,1998,"$397,268.00 ","$295,188 Construction; $102,079 Monitoring/Permitting",NULL,Construction of a 2 acre stormwater treatment pond to provide limited treatment of runoff from a 100 acre basin.  Year 2000 Update: Project complete.  Monitoring is ongoing.,1,1,1,198,4,28.013639,-82.467792,Stormwater TreatmentPond,,2
-8,21,Lake Thonotosassa Marsh Restoration Project,Hillsborough Bay,SWFWMD,Habitat_Establishment,Freshwater_Wetland,1999,28,66.2,642,Lake Thonotosassa Marsh Restoration Project,1997,0,1999,"$1,380,000.00 ",NA,NULL,Project was designed to address three major problems in the lake; reduce the concentration of phosphorous and nitrogen; reduce the sediment load to the lake by including a sedimentation basin.,1,1,1,199,7,28.05128459,-82.26688174,NA,,
-9,25,Flood Management Program,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Managment,2002,NA,4000,NA,Flood Management Program,0,0,2002,NA,NA,NA,The objective of this program is to ensure that flood control projects consider water-quality impacts and to show how flood management projects in Hillsborough County can be designed to protect or enhance water quality. Estimated reduction=needed.,1,0,1,199,3,28.019236,-82.21548,NA,,
-10,26,Pistol Range Stormwater Retrofit Project,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2000,203.9,2103.3,60399,Pistol Range Stormwater Retrofit Project,1998,0,2000,"$649,810.00 ",NA,NULL,Diversion of flow from approximately 620 acres through a reconfigured borrow pit system to provide treatment prior to discharge back into Pemberton Creek. Area treated=620 acres; treatment area=needed,1,1,1,199,7,28.039363,-82.13978,NA,,
-11,27,Alafia River Corridor Land Acquisition,Hillsborough Bay,SWFWMD,Habitat_Protection,Acquisition,1995,NA,504,NA,Alafia River Corridor Land Acquisition,0,0,1995,NA,NULL,NULL,"Alafia River Cooridor Land Acquisition.  Year 2000 Update: None, the acquisition is complete.",1,1,1,133,7,27.826852,-82.132505,NA,,
-12,28,Eastern Associated Terminals Stormwater Improvements,Hillsborough Bay,Eastern Terminals,Point_Source,BMP_On_Site,1996,NA,2190,NA,Eastern Associated Terminals Stormwater Improvements,0,0,1996,NA,Eastern Terminals,NULL,"Enclose outside conveyor belts, construct 
-
-berm and swale. Efficiency rating (Partnership 
-
-for Progress page HB.12). Area 
-
-treated=needed",1,1,1,198,17,27.918834,-82.41985,NA,,
-13,30,Cargill Fertilizer Stormwater Ponds,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1998,3.1,9.6,1106,Cargill Fertilizer Stormwater Ponds,1991,0,1998,NA,"Cargill Fertilizer, Inc.",NULL,Construct and upgrade stormwater ponds feeding NPDES outfalls 021 and 022 to improve recirculation and nutrient uptake by appropriate species.  Reduction is from onsite stormwater runoff prior to discharge. Area treated=5.5 acres; treatment area=needed.,1,1,1,198,30,27.863575,-82.385047,NA,,
-14,31,Cargill Fertilizer Dedicated Sump By Production Lab,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1996,NA,59.4,NA,Cargill Fertilizer Dedicated Sump By Production Lab,1996,0,1996,NA,Cargill Fertilizer,NULL,Laboratory sump to return rinsate to the process. Partnership for Progress Page - HB14. Area treated=needed; reduction efficiency supplied by Cargill.,1,1,1,198,30,27.863575,-82.385047,NA,,
-15,32,Cargill Fertilizer Dedicated Sump At Product Loading Dock,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1996,NA,1584,NA,Cargill Fertilizer Dedicated Sump At Product Loading Dock,1996,0,1996,"$10,000.00 ","Cargill Fertilizer, Inc., Total Project Cost $10,000",NULL,Dock sump to return dock area (approx. 2 acres) runoff to the production process to recover nutrient (approx. 80 mg/l total N). Partnership for Progress Page-HB14. Area treated=2 acres; reduction efficiency supplied by Cargill.,1,1,1,198,30,27.863575,-82.385047,NA,,
-16,33,Cargill Fertilizer Outfall Structural And Procedural Improvements,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,1997,NA,1962,NA,Cargill Fertilizer Outfall Structural And Procedural Improvements,1996,0,1997,NA,"Cargill Fertilizer, Inc.",NULL,"Page HB14. Structural improvements to ditch, increased water reuse, flow reduction, training provided to employees regarding our NPDES permit, Best Management Practices. Area treated=needed; reduction efficiency supplied by Cargill",1,1,1,198,30,27.863575,-82.385047,NA,,
-17,34,IMC-Agrico Company Termination Of Ammonia In Flot Plants-Alafia River,Middle Tampa Bay,Mosaic,Point_Source,PS_Treatment,1995,NA,21000,NA,IMC-Agrico Company Termination Of Ammonia In Flot Plants-Alafia River,0,0,1995,NA,"IMC-Agrico, Inc.",NULL,Area treated=needed. Reduction supplied by IMC.,1,1,1,198,30,27.662673,-82.215645,NA,,
-18,35,IMC-Agrico Company Shiploading Terminals Stormwater And Spillage,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1994,NA,25755,NA,IMC-Agrico  Company Shiploading Terminals Stormwater And Spillage,0,0,1994,NA,"IMC-Agrico, Inc.",NULL,Reductions were primarily accomplished through stormwater collection and treatment and also through spillage control. Area treated=22 acres; reduction efficiency supplied by IMC.,1,1,1,198,30,28.019236,-82.21548,NA,,
-19,36,CF Industries Product Conveyor System Upgrade,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1993,NA,19600,NA,CF Industries Product Conveyor System Upgrade,1990,0,1993,NA,CF Industries,NULL,"Product Conveyor System Upgrade Project - Phase 1:  Installation of belt scrapers, product containment hoppers, and paving beneath conveyors; and implementation of administative controls (BMPs). Area treated=needed; reduction efficiency supplied by CF.",1,1,1,199,30,27.927192,-82.435207,NA,,
-20,37,CF Industries Improved Dust Suppressant Application On Fertilizer Products,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1994,NA,108,NA,CF Industries Improved Dust Suppressant Application On Fertilizer Products,1994,0,1994,NA,"CF Industries, Inc.",NULL,Partnership for Progress Page HB18. Area treated=needed; reduction efficiency supplied by CF.,1,1,1,198,30,27.927192,-82.435207,NA,,
-21,38,CF Industries Product Conveyor System Enhancement - Phase 2,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1997,NA,41.4,NA,CF Industries Product Conveyor System Enhancement - Phase 2,1997,0,1997,NA,"CF Industries, Inc.",NULL,Product Conveyor System Enhancements - Phase 2: Includes installation of conveyor enclosure system between warehouse and gantry. Partnership for Progress Page HB18. Area treated=needed; reduction efficiency supplied by CF.,1,1,1,198,30,27.927192,-82.435207,NA,,
-22,39,CF Industries Stormwater Management System Project,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1997,NA,NA,NA,CF Industries Stormwater Management System Project,1996,0,1997,NA,"CF Industries, Inc.",NULL,"Consists of collection and routing of all site stormwater runoff and construction of a lift station, pumping systems, and hyacinth treatment pond to manage up to a 25-year, 24-hour storm event. Area treated=12 acres; treatment area=needed.",1,1,1,199,30,27.927192,-82.435207,NA,,
-23,40,CSX Transportation Rockport Terminal Stormwater Management Improvements,Hillsborough Bay,CSX Transportation,Point_Source,BMP_On_Site,1997,NA,74000,NA,CSX Transportation Rockport Terminal Stormwater Management Improvements,0,0,1997,NA,Company Funds,NULL,"Efficiency citation: Partnership for Progress, Page HB.19.  Several BMPs implemented to reduce contact with product. Area treated=needed; reduction efficiency supplied by CSX.",1,1,1,199,19,27.916449,-82.417664,NA,,
-24,48,Del Oro Phase 1,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,1996,17.8,58.5,1905,Del Oro Phase 1,1995,0,1996,"$328,386.00 ","Florida Department of Community Affairs-$50,000",NA,Stormwater retrofit. Year 2000 Update: project complete.,1,0,1,199,6,28.012172,-82.609611,NA,,
-25,49,Cooper's Point Restoration,Old Tampa Bay,City of Clearwater,Habitat_Establishment,Mangrove,2001,NA,NA,NA,Cooper's Point Restoration,1996,0,2001,"$315,221.00 ",NA,NA,Habitat restoration on the shore of Old Tampa Bay.  Removal of exotic vegetation in an area scheduled for development as a passive park.,1,0,1,133,6,27.95993401,-82.71747599,NA,,
-26,50,Allen's Creek Rehabilitation At Lake View And Hercules (Red Maple Swamp),Old Tampa Bay,Pinellas County,Habitat_Enhancement,Freshwater_Wetland,1998,NA,1466.8,NA,Allen's Creek Rehabilitation At Lake View And Hercules (Red Maple Swamp),1997,0,1998,NA,"City of Largo, Pinellas County, SWFWMD",NA,"Habitat floodplain restoration and stormwater treatment.
-
-Year 2000 Update: This is not actually a new project. It was contained in the Pinellas County Action Plan, but omitted from this update. It was completed as planned in 1997/98. Treat.area=needed",1,0,1,199,2,28.012172,-82.609611,NA,,
-27,55,Lower Sweetwater Creek Stormwater Retrofits,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2012,4.2,17.3,NA,Lower Sweetwater Creek Stormwater Retrofits,2005,0,2012,NA,NULL,NULL,"vegetation enhancement in ditch and CDS unit 
-
-at Bray Rd.",1,1,1,199,3,28.012172,-82.609611,NA,,
-28,56,Brushy Creek Wetland Enhancement Project,Old Tampa Bay,Hillsborough County,Habitat_Enhancement,Freshwater_Wetland,1993,0.5,2.4,67,Brushy Creek Wetland Enhancement Project,1992,0,1993,"$638,494.00 ",NULL,NULL,"Enhanced wetland system adjacent and parallel to Brushy Creek to provide improved water quality and wildlife habitat.  The project, consisting of two constructed wetlands, is located north and south of Ehrlich Road.",1,1,1,199,3,28.012172,-82.609611,NA,,
-29,57,"Alligator Creek Channel ""H"" Stormwater Treatment Pond",Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,1995,NA,798.9,NA,"Alligator Creek Channel ""H"" Stormwater Treatment Pond",1994,0,1995,NA,SWFWMD and Pinellas County,NA,"Stormwater runoff diverted from Channel ""H"" through a wet detention pond for treatment. Project included extensive wetland plantings to provide improved treatment via biological uptake. Year 2000 Update: Completed as indicated.",1,0,1,199,2,28.012172,-82.609611,NA,,
-30,58,Al Lopez Park Pond Enhancement,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,1994,NA,43.9,NA,Al Lopez Park Pond Enhancement,1993,0,1994,"$375,000.00 ","SWFWMD and City of Tampa, Total Project Cost $375,000 Inspection & Mgt.",NA,Enhanced existing southern pond of the two pond system at Horizon Park to provide improved water quality performance and wetland habitat. Demonstration project.  Year 2000 Update; Ongoing maintenance of the pond by parks dept. Treatment area=needed,1,0,1,198,4,28.012172,-82.609611,NA,,
-31,59,Lois And Henry Avenues Retention Pond (Drew Park Drainage And Improvements  Phase 1),Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,1997,14,49.2,3344,"Lois And Henry Avenues Retention Pond (Drew Park Drainage And Improvements, Phase 1)",1996,0,1997,"$350,000.00 ","City Of Tampa, Total Project Cost $350,000 est.",NA,Constructed stormwater drainage.  Year 2000 Update: Project completed. Treatment area=needed,1,0,1,198,4,28.012172,-82.609611,NA,,
-32,61,Safety Harbor Stormwater Retrofit Project,Old Tampa Bay,City of Safety Harbor,Nonpoint_Source,BMP_Management,1995,NA,1079.4,NA,Safety Harbor Stormwater Retrofit Project,1994,0,1995,NA,"SWFWMD, City of Safety Harbor",NULL,"Reconstruction of on-line borrow pit in Mullet Creek. Year 2000 Update: Delete this from Pinellas County's projects, it belongs to the City of Safety Harbor. Treatment area=needed.",1,1,1,198,100,28.012172,-82.609611,NA,,
-33,62,Roosevelt Creek Stormwater - Phase I,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,2002,35.4,109.1,1652,Roosevelt Creek Stormwater - Phase I,2001,0,2002,"$1,300,000.00 ","County ad valorum, Pinellas County sales tax",NA,Stormwater pond creation; pond 26 acres. Year 2000 Update: Partially completed. Estimate final completion by 2002. Area treated=147 acres; treatment area=26 acres.,1,0,1,199,2,28.012172,-82.609611,NA,,
-34,64,Septic To Sewer Conversions In Largo,Old Tampa Bay,City of Largo,Nonpoint_Source,Send_to_WWTP,1997,NA,3000,NA,Septic To Sewer Conversions In Largo,0,0,1997,"$1,900,000.00 ",City of Largo user fees.,NA,The City of Largo brought on line 120 properties to their sanitary sewer service that were previously on septic tank systems. Reduction efficiency supplied by Pin. Cty.    NOT PINELLAS COUNTY,1,0,1,199,26,28.012172,-82.609611,NA,,
-35,65,Alligator Creek Pond at Logan Street,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,2002,131.1,431.8,14056,Alligator Creek Pond at Logan Street,1998,0,2002,"$1,400,000.00 ","Pinellas County sales tax, SWFWMD",NA,Pond creation; pond area 8 acres. Year 2000 Updates:  Change title to indicate that it is Alligator Creek Pond at Logan Street. Pond had to be redesigned after completion of Alligator Creek Watershed Plan. Anticipated completion date is 2002.,1,0,1,199,2,28.012172,-82.609611,NA,,
-36,67,Bayside Bridge Pond Rehabilitation,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,2004,2.9,11.4,310,Bayside Bridge Pond Rehabilitation,1999,0,2004,"$200,000.00 ",Pinellas County sales tax.,NA,Redesign and rehabilitation of the 1.9 acre treatment pond at the north end of the Bayside Bridge to provide treatment. Year 2000 Update: Change anticipated completion date to 2001.,1,0,1,199,2,28.012172,-82.609611,NA,,
-37,77,Lake Maggiore Alum Injection,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Alum_Treatment,1998,NA,6212,NA,Lake Maggiore Alum Injection,1995,0,1998,"$4,000,000.00 ","Penny for Pinellas, SWFWMD",NULL,Residential stormwater runoff from 1449 acres will be treated using alum injection in golf course lakes prior to discharge to Lake Maggiore.   Treatment Efficiency citation: (ERD Report),1,1,1,199,5,27.662673,-82.215645,NA,,
-38,80,Mirror Lake Stormwater Retrofit,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Management,2000,NA,1553,NA,Mirror Lake Stormwater Retrofit,1998,0,2000,"$529,000.00 ",St. Petersburg stormwater utility,NULL,The City has completed the installation and placed into operation a stormwater pretreatment system for runoff entering Mirror Lake that discharges into Tampa Bay. (ERD Report),1,1,1,199,5,27.662673,-82.215645,NA,,
-39,81,Pinellas Park Channel 2 Alum Stormwater Retrofit Project,Middle Tampa Bay,City of Pinellas Park,Nonpoint_Source,BMP_Treatment_Train,1998,NA,272,NA,Pinellas Park Channel 2 Alum Stormwater Retrofit Project,0,0,1998,NA,"SWFWMD, Pinellas Park Mnagement District",NULL,Wet detention with filtration and alum.,1,1,1,198,102,27.662673,-82.215645,NA,,
-40,82,Haynsworth Tract Regional Stormwater Treatment Facility,Middle Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Treatment_Train,1998,NA,NA,NA,Haynsworth Tract Regional Stormwater Treatment Facility,1997,0,1998,"$1,201,188.00 ",Pinellas County,NA,"Regional stormwater treatment facility providing treatment based on current regulatory design criteria for 424 acres of pre-1982 development. Year 2000 Update: Earthwork and planting complete in 1999, monitoring ongoing. Treatment area=needed.",1,0,1,199,7,27.662673,-82.215645,NA,,
-41,84,Cockroach Bay Regional Stormwater Treatment Facility,Middle Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,1997,0.6,NA,60,Cockroach Bay Regional Stormwater Treatment Facility,0,0,1997,"$780,000.00 ",NA,NA,Construct regional stormwater pond receiving runoff from 251 acre agricultural drainage area. Treatment area=needed.,1,0,1,199,7,27.662673,-82.215645,NA,,
-42,85,Little Manatee River Land Acquisition Project,Middle Tampa Bay,SWFWMD,Habitat_Protection,Acquisition,1995,NA,NA,NA,Little Manatee River Land Acquisition Project,0,0,1995,NA,SWFWMD,NA,Year 2000 Update: None.  Complete since 1995.,0,0,1,132,7,27.662673,-82.215645,NA,,
-43,86,Sawgrass Lake Pond (Haynesworth Tract),Middle Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,1999,145.8,480.3,15636,Sawgrass Lake Pond (Haynesworth Tract),1998,0,1999,"$1,500,000.00 ","Pinellas County sales tax, SWFWMD",NA,Pond creation; pond size = 22 acres. Year 2000 Update: Project complete.,1,0,1,199,2,27.662673,-82.215645,NA,,
-44,87,Overlay District Projects - Development,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2000,NA,2057.1,NA,Overlay District Projects - Development,0,0,2000,NA,Developer,NA,Reduction efficiency supplied by Man. Cty.,1,0,1,198,1,27.59344,-82.675961,NA,,
-45,88,Overlay District Projects - Agriculture,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2000,NA,17154.5,NA,Overlay District Projects - Agriculture,0,0,2000,NA,"Property owner, Grants",NA,Reduction efficiency supplied by Man. Cty.,1,0,1,198,1,27.59344,-82.675961,NA,,
-46,89,Land Acquisition/Management Project,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2000,NA,NA,NA,Land Acquisition/Management Project,0,0,2000,NA,"County ad valorum, Grants",NA,Need current and future zoned uses and subbasins.,1,0,1,133,1,27.59344,-82.675961,NA,,
-47,115,Allens Creek Rehabilitation at Lake View and Hercules (Red Maple Swamp),Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Wetland_Treatment,1999,425.6,1401.9,45637,Allens Creek Rehabilitation at Lake View and Hercules (Red Maple Swamp),1998,0,1999,"$1,803,310.00 ",Joint City/County/SWFWMD,NA,Habitat floodplain restoration and stormwater treatment.  Year 2000 Update: Project construction completed in July of 1999. Maintenance and monitoring of wetland plantings to continue through 2002. Treatment area=needed.,1,0,1,199,6,27.95993401,-82.71747599,NA,,
-48,122,Lowry Park Zoo Stormwater Rehabilitation,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2002,NA,205.2,NA,Lowry Park Zoo Stormwater Rehabilitation,1997,0,2002,"$344,894.00 ","Hills. River Basin Board, State SWIM, City of Tampa",NULL,Construction of a 2 acre wet detention system to provide limited treatment of runoff from a 100 acre basin. Project provides educational opportunities through the integration with 300 exhibits.,1,1,1,199,7,28.013639,-82.467792,NA,,
-49,123,McKay Bay (Eastshore Commerce Park) (Melbourne Pond) Drainage Basin Rehabilitation,Hillsborough Bay,Tampa Bay Water/SWFWMD,Nonpoint_Source,BMP_Wetland_Treatment,2006,NA,880,NA,McKay Bay (Eastshore Commerce Park) (Melbourne Pond) Drainage Basin Rehabilitation,0,0,2006,"$1,010,000.00 ","Tampa Bay Water provided property; Uniform Water Rate,  SWFWMD Gov Board Coop Funding",NULL,The project treats stormwater from approximately 1000 acres of the watershed that discharges into McKay Bay and ultimately Tampa Bay.,1,1,1,199,40,27.962889,-82.347508,NA,,
-50,125,Cockroach Bay Restoration Project,Middle Tampa Bay,SWFWMD,Habitat_Establishment,Uplands,1996,211.2,570.9,3140,Cockroach Bay Restoration Project,0,0,1996,"$6,300,000.00 ","SWFWMD, Hills. County, various grants",NA,"This project involves many aspects of restoration including stormwater treatment, exotic plant control, reclaiming 80 acres of shell pits into jurisdictional wetlands, and restoring natural upland habitats. Treatment area=needed.",1,0,1,199,7,27.662673,-82.215645,NA,,
-51,126,Lake Maggiore Dredging Project,Middle Tampa Bay,City of St. Petersburg,Habitat_Enhancement,Dredging,2006,NA,3425.7,NA,Lake Maggiore Dredging Project,2000,0,2006,"$13,000,000.00 ",Penny for Pinellas - Stormwater Utility,NULL,"Dredge, dewater and dispose of approximately 1.53 million cubic yards of nutrient rich lake bottom sediments.  Year 2000 Update; Commence with dredging in Jan. 2001 and complete 3 years thereafter.",1,1,1,199,5,27.662673,-82.215645,NA,,
-52,135,Lake Tarpon Stormwater Treatment (Areas 44/47),Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2012,202.7,559.2,26676,Lake Tarpon Stormwater Treatment (Areas 44/47),2011,0,2012,"$460,000.00 ","Penny for Pinellas, grants",NULL,Pinellas County is currently investigating options for treating stormwater from two of the highest-loading subbasins in the Lake Tarpon watershed.,1,1,1,199,2,28.012172,-82.609611,NA,,
-53,137,Assist businesses in implementing site management practices to reduce stormwater runoff,All Segments,EPCHC,Nonpoint_Source,Education,2000,NA,NA,NA,Assist businesses in implementing site management practices to reduce stormwater runoff,0,0,2000,"$400,000.00 ","Total Project Cost - $400,000/yr.",NA,"Text only.Through the SQG program, EPCHC plans to continue working closely with the Hills Co Public Works Dept Stormwater Mgmt Section to help reduce or eliminate pollutants from entering the environment through stormwater runoff.",0,0,1,181,14,27.86714745,-82.35780285,NA,,
-54,142,Brooker / Anclote Corridor Land Acquisition -1,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,NA,NA,Brooker / Anclote Corridor Land Acquisition -1,0,0,2001,"$411,500.00 ",NA,NA,NA,0,0,1,132,2,28.012172,-82.609611,NA,,
-55,143,Brooker Creek Land Acquisition -1,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,NA,NA,Brooker Creek Land Acquisition -1,0,0,2001,"$5,382,000.00 ",NA,NA,NA,0,0,1,132,2,28.012172,-82.609611,NA,,
-56,144,Brooker / Anclote Corridor Land Acquisition -2,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,NA,NA,Brooker / Anclote Corridor Land Acquisition -2,0,0,2001,"$105,000.00 ",NA,NA,NA,0,0,1,132,2,28.012172,-82.609611,NA,,
-57,145,Brooker / Anclote Corridor Land Acquisition -3,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,NA,NA,Brooker / Anclote Corridor Land Acquisition -3,0,0,2001,"$450,000.00 ",NA,NA,NA,0,0,1,132,2,28.012172,-82.609611,NA,,
-58,146,Brooker Creek Land Acquisition -2,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,NA,NA,Brooker Creek Land Acquisition -2,0,0,2001,"$46,800.00 ",NA,NA,NA,0,0,1,132,2,28.012172,-82.609611,NA,,
-59,147,Wall Springs Land Acquisition -2,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,NA,NA,Wall Springs Land Acquisition -2,0,0,2001,"$21,450,000.00 ",NA,NA,NA,0,0,1,132,2,28.012172,-82.609611,NA,,
-60,187,Mitigation Recommendations,All Segments,TBRPC,Nonpoint_Source,Education,2005,NA,NA,NA,Mitigation Recommendations,0,0,2005,NA,NA,NA,Action completed.  Follow-up could include reporting by TBEP partners on how the recommendations have been implemented.,0,0,1,135,10,27.86714745,-82.35780285,NA,,
-61,189,Recommendation of no-vehicle access areas,All Segments,TBRPC,Nonpoint_Source,Education,2005,NA,NA,NA,Recommendation of no-vehicle access areas,0,0,2005,NA,NA,NA,"Recommendations of four sites for restricted or no vehicle access has been proposed by a task force and in 1997 the recommendations were adopted by the TBRPC and Pinellas County, and forwarded to FDOT.",0,0,1,200,10,27.86714745,-82.35780285,NA,,
-62,220,Apollo Beach Cargill Park - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1996,NA,NA,NA,Apollo Beach Cargill Park - Land Acquisition,0,0,1996,"$2,066,258.00 ",NULL,NULL,NULL,1,1,1,132,3,28.019236,-82.21548,NA,,
-63,253,Balm Scrub - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1997,NA,NA,NA,Balm Scrub - Land Acquisition,1999,0,1997,"$3,183,740.00 ",NULL,NULL,"current use - ag. Field and row; future - single 
-
-family - no reduction - Misty",1,1,1,132,3,28.019236,-82.21548,NA,,
-64,254,Bell Creek Preserve - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1997,NA,NA,NA,Bell Creek Preserve - Land Acquisition,1995,0,1997,"$2,788,117.00 ",Other Participant = FCT,NULL,future use - multifamily residential,1,1,1,132,3,27.860109,-82.279682,NA,,
-65,255,Blackwater Creek - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1997,NA,NA,NA,Blackwater Creek - Land Acquisition,1997,0,1997,"$4,314,525.00 ",Other Participant = FCT,NULL,current use - ag. Pasture; future use - single family residential - Misty,1,1,1,132,3,28.12855,-82.154224,NA,,
-66,256,Boy Scout - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1999,NA,NA,NA,Boy Scout - Land Acquisition,1995,0,1999,"$51,355.00 ",NULL,NULL,future use - medium density residential - Misty,1,1,1,132,3,27.880411,-82.199707,NA,,
-67,267,Port Redwing - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1995,NA,NA,NA,Port Redwing - Land Acquisition,1995,0,1995,"$750,000.00 ",NA,NA,"current use-commercial, future use-commercial; no reduction - Misty",0,0,1,132,3,27.86714745,-82.35780285,NA,,
-68,291,Retrofit the County's Resource Recovery Facility,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2000,NA,NA,NA,Retrofit the County's Resource Recovery Facility,0,0,2000,NA,NA,NA,NA,0,0,1,129,3,27.86714745,-82.35780285,NA,,
-69,293,Hillsborough County Reclaimed Water Use System,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,2005,NA,NA,NA,Hillsborough County Reclaimed Water Use System,0,0,2005,NA,NA,NA,2003 update in desc File,0,0,1,202,3,28.019236,-82.21548,NA,,
-70,296,Support standardized monitoring of wastewater discharges,Hillsborough Bay,Hillsborough County,Point_Source,Management,2005,NA,NA,NA,Support standardized monitoring of wastewater discharges,0,0,2005,NA,NA,NA,NA,0,0,1,206,3,28.019236,-82.21548,NA,,
-71,298,SCADA for monitoring pump station failure,Hillsborough Bay,Hillsborough County,Point_Source,Management,2011,NA,NA,NA,SCADA for monitoring pump station failure,2006,0,2011,NA,NULL,NULL,2003 update in desc file,1,1,1,166,3,28.019236,-82.21548,NA,,
-72,299,Hillsborough County Watershed Management Plans,All Segments,Hillsborough County,Nonpoint_Source,BMP_Managment,2002,NA,NA,NA,Hillsborough County Watershed Management Plans,0,0,2002,NA,NULL,NULL,NULL,1,1,1,132,3,27.86714745,-82.35780285,NA,,
-73,338,Atmospheric deposition studies,All Segments,Pinellas County,Nonpoint_Source,Atmospheric_Deposition,2002,NA,NA,NA,Atmospheric deposition studies,0,0,2002,NA,NA,NA,2003 update: project completed 2002,0,0,1,129,2,27.86714745,-82.35780285,NA,,
-74,350,development of standardized mitigation guidelines,All Segments,Pinellas County,Nonpoint_Source,Education,2000,NA,NA,NA,development of standardized mitigation guidelines,0,0,2000,NA,NA,NA,Pinellas County participated on the task force to develop new standardized mitigation guidelines.,0,0,1,135,2,27.86714745,-82.35780285,NA,,
-75,351,Seagrass scar reduction efforts,All Segments,Pinellas County,Habitat_Protection,Protection,1997,NA,NA,NA,Seagrass scar reduction efforts,0,0,1997,"$74,000.00 ",NA,NA,Pinellas County has completed 7 years of monitoring of success of our prop scar prevention program at Ft. DeSoto and Boca Ciega Bay.,0,0,1,137,2,27.86714745,-82.35780285,NA,,
-76,367,Urban retrofit projects,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Management,2004,NA,118.8,NA,Urban retrofit projects,1998,0,2004,"$50,000.00 ","private section development $100,000/acre = $95,000/yr.",NULL,"The Local Stormwater Ordinance has been amended to require redevelopments in excess of 3000 square feet to retrofit the site for stormwater treatment, for the respective portion on the site being developed.",1,1,1,177,5,27.79,-82.442,NA,,
-77,399,Multiple habitat restoration and protection projects,Hillsborough Bay,Tampa Port Authority,Habitat_Protection,Protection,2004,NA,NA,NA,Multiple habitat restoration and protection projects,0,0,2004,"$400,000.00 ",NA,NA,2003 update in attached file. 2005-2010 update included also.,0,0,1,133,11,28.019236,-82.21548,NA,,
-78,419,Support consent orders for clean up of fertilizer facilities,Hillsborough Bay,FDEP,Point_Source,Regulation,2000,NA,NA,NA,Support consent orders for clean up of fertilizer facilities,0,0,2000,NA,NA,NA,"FDEP IW will submit annual status reports on CSXT, PDBT and EAT, and implementation of the Consent Orders is expected to be complete within 5 years. 2003 update:Verification of final completion of required actions will be provided.",0,0,1,188,8,27.79,-82.442,NA,,
-79,461,Tampa Bay Water Regional Surface Water Treatment Plant,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2003,NA,72440,NA,Tampa Bay Water Regional Surface Water Treatment Plant,2000,0,2003,"$84,000,000.00 ",Tampa Bay Water,NULL,"Attached article from Florida Specifier from Nov. 
-
-2002 describing the Plant.",1,1,1,198,27,28.019236,-82.21548,NA,,
-80,464,Kapok Restoration Project,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Treatment_Train,2006,NA,644,NA,Kapok Restoration Project,0,0,2006,"$13,514,272.00 ","stormwater utility - 12,3000,000",NA,An in-line system and difficult to determine pollutant load reduction.  Water quality testing upstream and downstream of project following construction to determine efficiency of system. Information will be provided at a later date.,1,0,1,199,6,28.012172,-82.609611,NA,,
-81,465,Cliff Stephens Park Stormwater Retrofitting,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Wetland_Treatment,2002,NA,11600,NA,Cliff Stephens Park Stormwater Retrofitting,2001,0,2002,"$690,000.00 ",NULL,NULL,NULL,1,1,1,199,6,28.012172,-82.609611,NA,,
-82,466,Channel B Stabilization,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,2001,NA,NA,NA,Channel B Stabilization,0,0,2001,"$503,000.00 ",NA,NA,NA,1,0,1,199,6,28.012172,-82.609611,NA,,
-83,467,Moccasin Lake Park Restoration,Old Tampa Bay,City of Clearwater,Habitat_Establishment,Mangrove,2001,NA,NA,NA,Moccasin Lake Park Restoration,0,0,2001,"$460,000.00 ",NA,NA,NA,1,0,1,199,6,28.012172,-82.609611,NA,,
-84,477,High Ridge Estates,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,1992,26.5,87.2,2837,High Ridge Estates,0,0,1992,NA,NA,NA,NA,1,0,1,199,2,28.012172,-82.609611,NA,,
-85,479,McMullen Booth Road @ Curlew Road,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Treatment_Train,2003,NA,NA,NA,McMullen Booth Road @ Curlew Road,0,0,2003,NA,NA,NA,Designed to provide flood storage and water quality treatment to this section of drainage to Possum Branch.  Rerouted flow from this 155 acre mostly untreated residential area into a created 16 acre multi-level wetland area.,0,0,1,133,2,28.03999767,-82.71020925,NA,,
-86,482,Alligator Lake/Ruth Eckerd Wetland Creation,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Wetland_Treatment,2008,12.3,58.1,2837,Alligator Lake/Ruth Eckerd Wetland Creation,2004,0,2008,"$1,400,000.00 ",NULL,NULL,"Approx. 15 acre exotic removal and wetland 
-
-creation on property located behind Ruth 
-
-Eckerd Hall. 2003 Update-in design, treatment 
-
-size not determined.",1,1,1,199,6,27.976967,-82.703099,NA,,
-87,484,Mobbly Bayou Wilderness Preserve Restoration,Old Tampa Bay,Pinellas County,Habitat_Enhancement,Exotic_Removal,2009,NA,NA,NA,Mobbly Bayou Wilderness Preserve Restoration,2009,0,2009,"$2,140,839.00 ",Penny for Pinellas,NULL,"Project involves survey, design, permitting and 
-
-construction for comprehensive estuarine 
-
-habitat restoration for Mobbly Bayou.   Project 
-
-location: 28 01 29 Nlat; 82 39 29 Wlong.",1,1,1,133,2,28.012172,-82.609611,NA,,
-88,485,St. Paul's Drive Restoration,Old Tampa Bay,Pinellas County,Habitat_Establishment,Freshwater_Wetland,1997,NA,NA,NA,St. Paul's Drive Restoration,0,0,1997,NA,SWFWMD constructed,NA,2 acre habitat creation completed in 1997.,0,0,1,133,2,28.012172,-82.609611,NA,,
-89,487,Hillsborough Heights project,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2003,NA,NA,NA,Hillsborough Heights project,0,0,2003,"$145,000.00 ","U.S. Dept. of Energy, TECO",NA,"2003 update-TECO microturbine worked at one point, but is currently off-line awaiting repairs.",0,0,1,131,3,28.019236,-82.21548,NA,,
-90,488,Lower Bullfrog Creek - habitat restoration,Hillsborough Bay,SWFWMD,Habitat_Establishment,Salt_Marsh,2001,NA,NA,NA,Lower Bullfrog Creek - habitat restoration,0,0,2001,"$571,351.00 ",NA,NA,NA,0,0,1,133,7,28.019236,-82.21548,NA,,
-91,491,Wolf Branch Creek #1 - habitat creation (Phases I & II),Hillsborough Bay,SWFWMD,Habitat_Establishment,Salt_Marsh,2003,NA,NA,NA,Wolf Branch Creek #1 - habitat creation (Phases I & II),0,0,2003,"$4,019,480.00 ","NOAA, Gardinier, USF&WS",NA,NA,0,0,1,133,7,28.019236,-82.21548,NA,,
-92,492,Fort Brooke/Cotanchobee Park Shoreline - habitat restoration,Hillsborough Bay,SWFWMD,Habitat_Establishment,Salt_Marsh,2002,NA,NA,NA,Fort Brooke/Cotanchobee Park Shoreline - habitat restoration,0,0,2002,"$272,625.00 ",NA,NA,"Removal of a dock, regrading shoreline, planting native wetlands, transitional and upland vegettion.",0,0,1,133,7,28.019236,-82.21548,NA,,
-93,496,McKay Bay Watershed Projects,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2006,NA,NA,NA,McKay Bay Watershed Projects,0,0,2006,NA,NULL,NULL,Multiple projects.,1,1,1,199,3,27.936119,-82.423841,NA,,
-94,497,Manatee Protection Zones,Lower Tampa Bay,Manatee County,Habitat_Protection,Protection,2004,NA,NA,NA,Manatee Protection Zones,0,0,2004,NA,ad valorum,NA,NA,0,0,1,153,1,27.59344,-82.675961,NA,,
-95,505,Largo Regional Stormwater Treatment Facility Educational Boardwalk System,Old Tampa Bay,SWFWMD,Nonpoint_Source,Education,2002,NA,NA,NA,Largo Regional Stormwater Treatment Facility Educational Boardwalk System,0,0,2002,"$782,101.00 ",NA,NA,"Construction of 3,720 L.F. of interpretative boardwalk, educational signage, floating dock and observation tower.",0,0,1,164,7,28.012172,-82.609611,NA,,
-96,506,South Green Springs Phase Two Stormwater Retrofit Project,Old Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Management,2002,NA,163.8,NA,South Green Springs Phase Two Stormwater Retrofit Project,0,0,2002,"$766,172.00 ",NA,NA,Retrofit of approx. 38 acres of residential land within City of Safety Harbor prior to dischage into Alligator Lake.,1,0,1,199,7,28.012172,-82.609611,NA,,
-97,508,Largo Stormwater Retrofit - CDS Units,Old Tampa Bay,SWFWMD,Nonpoint_Source,BMP_CDS_Unit,2002,NA,63.1,NA,Largo Stormwater Retrofit - CDS Units,0,0,2002,"$209,301.00 ",City of Largo,NA,Installation of a continuous deflective separation (CDS) at 5th Avenue North and Bel-Aire Mobile Home Park.,1,0,1,193,7,28.012172,-82.609611,NA,,
-98,509,Lake Tomlinson Restoration,Middle Tampa Bay,SWFWMD,Habitat_Establishment,Freshwater_Wetland,2002,NA,NA,NA,Lake Tomlinson Restoration,0,0,2002,"$389,511.00 ",City of Gulfport,NA,Approx. 115-acres drain to the pond which discharges to Boca Ciega Bay.,1,0,1,133,7,27.662673,-82.215645,NA,,
-99,510,St. Petersburg Retrofit - CDS Units (storage yard under 1-275),Middle Tampa Bay,SWFWMD,Nonpoint_Source,BMP_CDS_Unit,2002,NA,4.7,NA,St. Petersburg Retrofit - CDS Units (storage yard under 1-275),0,0,2002,"$109,301.00 ",NA,NA,"Re-routing of existing drainage lines, construction of new inlets to isolate leachate and wash-down flows and the installation of a stormwater filtration unit.",1,0,1,193,7,27.662673,-82.215645,NA,,
-100,511,Bishop Creek Streambank Protection,Old Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Management,2002,1.1,3.3,63,Bishop Creek Streambank Protection,2002,0,2002,"$510,000.00 ",NA,NA,Design and construction of a 4.5 acre stormwater management system to provide water quality treatment and downstream flow attenuation.,1,0,1,199,7,28.012172,-82.609611,NA,,
-101,512,"Howard Frankland Habitat Restoration ""Gateway""",Old Tampa Bay,SWFWMD,Habitat_Establishment,Uplands,2004,NA,NA,NA,"Howard Frankland Habitat Restoration ""Gateway""",0,0,2004,"$2,931,676.00 ",NA,NA,Restoration of approx. 105 acres along portions of I-275 near the Howard Frankland Bridge.,0,0,1,133,7,27.88371021,-82.66328692,NA,,
-102,514,South Tampa Greenway/Tappan Habitat Restoration Site,Hillsborough Bay,SWFWMD,Habitat_Protection,Acquisition,2004,NA,NA,NA,South Tampa Greenway/Tappan Habitat Restoration Site,0,0,2004,"$492,861.00 ",FDOT mitigation funds,NA,"City of Tampa purchased land for inclusion within the Tampa Bay Greenway, to restore lost wetland habitat and to provide educational opportunities for public awareness.",0,0,1,133,7,27.86109007,-82.53022555,NA,,
-103,534,Palm River Restoration,Hillsborough Bay,SWFWMD,Habitat_Establishment,Mangrove,2005,NA,NA,NA,Palm River Restoration,2003,0,2005,"$4,400,000.00 ",NULL,NULL,Activities may include regrading of seciton of shoreline ad filling deep portions of river w/spoil material.,1,1,1,133,7,27.949071,-82.385384,NA,,
-104,535,Schultz Nature Park,Hillsborough Bay,SWFWMD,Habitat_Establishment,Freshwater_Wetland,2004,NA,NA,NA,Schultz Nature Park,0,0,2004,NA,NA,NA,"Schultz Nature Preserve part of SWFWMDs Port Redwing ""Kitchen"" project.",0,0,1,133,7,28.019236,-82.21548,NA,,
-105,535,Schultz Nature Park,Hillsborough Bay,SWFWMD,Habitat_Establishment,Mangrove,2004,NA,NA,NA,Schultz Nature Park,0,0,2004,NA,NA,NA,"Schultz Nature Preserve part of SWFWMDs Port Redwing ""Kitchen"" project.",0,0,1,133,7,28.019236,-82.21548,NA,,
-106,535,Schultz Nature Park,Hillsborough Bay,SWFWMD,Habitat_Establishment,Salt_Marsh,2004,NA,NA,NA,Schultz Nature Park,0,0,2004,NA,NA,NA,"Schultz Nature Preserve part of SWFWMDs Port Redwing ""Kitchen"" project.",0,0,1,133,7,28.019236,-82.21548,NA,,
-107,545,Alligator Lake Restoration,Old Tampa Bay,Pinellas County,Habitat_Establishment,Freshwater_Wetland,2011,NA,NA,NA,Alligator Lake Restoration,2007,0,2011,NA,Penny for Pinellas,NULL,"Project involves survey, design, permitting and construction for eleven acres wetland creation and habitat improvement project with associated park",1,1,1,133,2,28.012172,-82.609611,NA,,
-108,601,Broadway Outfall Stormwater Retrofit Project,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_CDS_Unit,2001,NA,139,NA,Broadway Outfall Stormwater Retrofit Project,1999,0,2001,"$1,390,262.00 ",NULL,NULL,"Retrofit an approximately 132.4 acre drainage basin.  The project consists of a CDS unit in series with an excavated sediment sump immediately downstream, followed by a linear marsh system.",1,1,1,199,7,28.02665,-82.391748,NA,,
-109,617,Install and monitor curb inlet protectors,Hillsborough Bay,TBEP,Nonpoint_Source,BMP_Management,2000,NA,NA,NA,Install and monitor curb inlet protectors,1999,0,2000,"$5,000.00 ",Hills. Co. Stormwater Mgmt. and East Lake Civic Assoc.,NA,"Install and monitor curb inlet protectors to capture grass clippings, trash, sidement and prevent them from entering storm draims that empty into East Lake.",0,0,1,163,15,28.019236,-82.21548,NA,,
-110,679,City of Largo Reclaimed Water (Reuse),Old Tampa Bay,City of Largo,Point_Source,Increase_Reuse,1997,NA,58592.7,NA,City of Largo Reclaimed Water (Reuse),0,0,1997,$0.00 ,NA,NA,City of Largo (From Report) - Spoke to Brian Dean of the City of Largo Plant.  He said that the plant capacity did increase to 18 MGD (1997).  Reclaimed water (reuse) is hoped to be at 70% by 2005 and 90 % by 2010.  No changes in nutrient loading.,0,1,1,201,26,28.012172,-82.609611,NA,,
-111,683,Dale Mabry Reclaimed,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,NA,10946.2,NA,Dale Mabry Reclaimed,0,0,1995,$0.00 ,NA,NULL,Minimize discharge of effluent by re-use of water through reclaimed water system.,1,1,1,202,3,28.068939,-82.527091,NA,,
-112,684,Van Dyke Reclaimed,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,NA,3052.7,NA,Van Dyke Reclaimed,0,0,1995,$0.00 ,NA,NULL,Minimize discharge of effluent by re-use of water through reclaimed water system.,1,1,1,202,3,28.14314,-82.546069,NA,,
-113,685,Northwest and River Oaks Reclaimed,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,NA,6472,NA,Northwest and River Oaks Reclaimed,0,0,1995,$0.00 ,NA,NULL,Minimize discharge of effluent by re-use of water through reclaimed water system.,1,1,1,202,3,28.084615,-82.605692,NA,,
-114,686,Falkenburg & Valrico Reclaimed,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,NA,12186.6,NA,Falkenburg & Valrico Reclaimed,0,0,1995,$0.00 ,NA,NULL,Minimize discharge of effluent by re-use of water through reclaimed water system.,1,1,1,202,3,27.952572,-82.335168,NA,,
-115,687,South County Reuse System,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,NA,35451,NA,South County Reuse System,0,0,1995,$0.00 ,NA,NULL,Minimize discharge of effluent by re-use of water through reclaimed water system.,1,1,1,202,3,27.723974,-82.385701,NA,,
-116,692,McKay Bay Refuse-to-Energy Retrofit Project,All Segments,City of Tampa,Nonpoint_Source,Atmospheric_Deposition,2001,NA,NA,NA,McKay Bay Refuse-to-Energy Retrofit Project,0,0,2001,"$89,000,000.00 ",NA,NA,Retrofit of existing plant under EPA's Emission Guidelines.,0,0,1,199,4,27.79,-82.442,NA,,
-117,695,Booker Lake Alum Treatment Facility,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Alum_Treatment,2009,204.1,522.9,21886,Booker Lake Alum Treatment Facility,2005,0,2009,"$1,000,000.00 ",SWFWMD grant monies - DEP section 319,NULL,An alum treatment system to inject alum into 2 large canals entering Booker Lake.,1,1,1,199,5,27.662673,-82.215645,NA,,
-118,696,McKay Bay-East Shore Commerce Park Parcel Stormwater Retrofit,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Treatment_Train,2006,842.4,2296.4,250784,McKay Bay-East Shore Commerce Park Parcel Stormwater Retrofit,2000,0,2006,"$1,472,883.00 ",NULL,NULL,A treatment train of a wet detention pond and constructed wetlands.,1,1,1,199,7,27.962889,-82.347508,NA,,
-119,711,MiraBay Property,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Wetland_Treatment,1999,NA,1340.5,NA,MiraBay Property,0,0,1999,$0.00 ,NULL,NULL,MiraBay aka Biscayne Canal was dredged in the 1960s as part of the Apollo Beach development then bought by Terrabrook in the late 90's for revitzlization.,1,1,1,132,3,27.748674,-82.429575,NA,,
-120,712,Balm Road Wetland and Stormwater Treatment Facility,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Wetland_Treatment,2004,385,910.3,8828,Balm Road Wetland and Stormwater Treatment Facility,2003,0,2004,"$1,500,000.00 ",NULL,NULL,"This 29 acre wetland creation is designed to filter agricultural runoff from approx. 1,100 acres that flows into Bullfrog Creek.",1,1,1,199,3,27.744119,-82.290208,NA,,
-121,713,Stormwater Research Facility at 132nd and Taliaferro,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Stormwater_Pond,2002,8.2,26.9,1457,Stormwater Research Facility at 132nd and Taliaferro,0,0,2002,"$250,000.00 ",NA,NULL,Created a series of 5 stormwater treatment ponds on the property. Site is located in the Curiosity Creek watershed which compromises the Hills. River watershed.,1,1,1,199,3,28.066534,-82.453662,NA,,
-122,719,Alafia Banks Restoration Settling Pond,Hillsborough Bay,Mosaic,Nonpoint_Source,BMP_Stormwater_Pond,2011,15.5,61.1,1407,Alafia Banks Restoration Settling Pond,0,0,2011,"$200,000.00 ",NULL,NULL,Alafia Bank Bird Sanctuary Restoration Project - 50-Acre Settling Pond,1,1,1,198,30,27.863575,-82.385047,NA,,
-123,742,McIntosh Park Water Quality/Wetland Enhancement,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Wetland_Treatment,2009,NA,2763,NA,McIntosh Park Water Quality/Wetland Enhancement,2002,0,2009,"$3,824,564.00 ",FDEP - 319(h) grant,NULL,wetland creation and enhanced stormwater treatment using alum.,1,1,1,199,7,28.071189,-82.129162,NA,,
-124,745,8th Biennial Conference of Stormwater Research & Watershed Management,All Segments,SWFWMD,Nonpoint_Source,Education,2004,NA,NA,NA,8th Biennial Conference of Stormwater Research & Watershed Management,0,0,2004,$0.00 ,NA,NA,Conference addressing stormwater and BMP's,0,0,1,164,7,27.86714745,-82.35780285,NA,,
-125,746,Conference on Ecosystems Restoration & Creation,All Segments,TBEP,Habitat_Protection,Education,2004,NA,NA,NA,Conference on Ecosystems Restoration & Creation,0,0,2004,$0.00 ,NA,NA,Conference sponsored by Hills. Community College,0,0,1,164,15,27.86714745,-82.35780285,NA,,
-126,761,Repowering Gannon Power Plant - Bayside Facility,Old Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,NA,3877,NA,Repowering Gannon Power Plant - Bayside Facility,0,0,2003,$0.00 ,NA,NA,"Reduction calculations for TECO repowering the Gannon Power Plant (renamed the Bayside Facility).  Completed in 2003.  Conversion of coal-fired plant to natural gas, with approximately 95% reduction in NOx emissions.",1,0,1,199,25,28.012172,-82.609611,NA,,
-127,762,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,NA,2592,NA,Repowering Gannon Power Plant - Bayside Facility,0,0,2003,$0.00 ,NA,NA,"Reduction calculations for TECO repowering the Gannon Power Plant (renamed the Bayside Facility).  Completed in 2003.  Conversion of coal-fired plant to natural gas, with approximately 95% reduction in NOx emissions.",1,0,1,199,25,28.019236,-82.21548,NA,,
-128,763,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,NA,4137,NA,Repowering Gannon Power Plant - Bayside Facility,0,0,2003,$0.00 ,NA,NA,"Reduction calculations for TECO repowering the Gannon Power Plant (renamed the Bayside Facility).  Completed in 2003.  Conversion of coal-fired plant to natural gas, with approximately 95% reduction in NOx emissions.",1,0,1,199,25,28.019236,-82.21548,NA,,
-129,764,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,NA,882,NA,Repowering Gannon Power Plant - Bayside Facility,0,0,2003,$0.00 ,NA,NA,"Reduction calculations for TECO repowering the Gannon Power Plant (renamed the Bayside Facility).  Completed in 2003.  Conversion of coal-fired plant to natural gas, with approximately 95% reduction in NOx emissions.",1,0,1,199,25,28.019236,-82.21548,NA,,
-130,765,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,NA,3588,NA,Repowering Gannon Power Plant - Bayside Facility,0,0,2003,$0.00 ,NA,NA,"Reduction calculations for TECO repowering the Gannon Power Plant (renamed the Bayside Facility).  Completed in 2003.  Conversion of coal-fired plant to natural gas, with approximately 95% reduction in NOx emissions.",1,0,1,199,25,28.019236,-82.21548,NA,,
-131,766,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,NA,1189,NA,Repowering Gannon Power Plant - Bayside Facility,0,0,2003,$0.00 ,NA,NA,"Reduction calculations for TECO repowering the Gannon Power Plant (renamed the Bayside Facility).  Completed in 2003.  Conversion of coal-fired plant to natural gas, with approximately 95% reduction in NOx emissions.",1,0,1,199,25,28.019236,-82.21548,NA,,
-132,767,Repowering Gannon Power Plant - Bayside Facility,Lower Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,NA,2915,NA,Repowering Gannon Power Plant - Bayside Facility,0,0,2003,$0.00 ,NA,NA,"Reduction calculations for TECO repowering the Gannon Power Plant (renamed the Bayside Facility).  Completed in 2003.  Conversion of coal-fired plant to natural gas, with approximately 95% reduction in NOx emissions.",1,0,1,199,25,27.59344,-82.675961,NA,,
-133,768,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,NA,70,NA,Repowering Gannon Power Plant - Bayside Facility,0,0,2003,$0.00 ,NA,NA,"Reduction calculations for TECO repowering the Gannon Power Plant (renamed the Bayside Facility).  Completed in 2003.  Conversion of coal-fired plant to natural gas, with approximately 95% reduction in NOx emissions.",1,0,1,199,25,28.019236,-82.21548,NA,,
-134,771,Big Bend Power Plant improvements,Old Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,NA,942,NA,Big Bend Power Plant improvements,0,0,2004,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.012172,-82.609611,NA,,
-135,772,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,NA,630,NA,Big Bend Power Plant improvements,0,0,2004,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.019236,-82.21548,NA,,
-136,773,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,NA,1006,NA,Big Bend Power Plant improvements,0,0,2004,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.019236,-82.21548,NA,,
-137,774,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,NA,214,NA,Big Bend Power Plant improvements,0,0,2004,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.019236,-82.21548,NA,,
-138,775,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,NA,872,NA,Big Bend Power Plant improvements,0,0,2004,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.019236,-82.21548,NA,,
-139,776,Big Bend Power Plant improvements,Middle Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,NA,289,NA,Big Bend Power Plant improvements,0,0,2004,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,27.662673,-82.215645,NA,,
-140,777,Big Bend Power Plant improvements,Lower Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,NA,709,NA,Big Bend Power Plant improvements,0,0,2004,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,27.59344,-82.675961,NA,,
-141,781,Big Bend Power Plant improvements,Old Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,NA,2507,NA,Big Bend Power Plant improvements,0,0,2005,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.012172,-82.609611,NA,,
-142,782,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,NA,1677,NA,Big Bend Power Plant improvements,0,0,2005,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.019236,-82.21548,NA,,
-143,783,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,NA,2676,NA,Big Bend Power Plant improvements,0,0,2005,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.019236,-82.21548,NA,,
-144,784,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,NA,570,NA,Big Bend Power Plant improvements,0,0,2005,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,28.019236,-82.21548,NA,,
-145,786,Big Bend Power Plant improvements,Middle Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,NA,769,NA,Big Bend Power Plant improvements,0,0,2005,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,27.662673,-82.215645,NA,,
-146,787,Big Bend Power Plant improvements,Lower Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,NA,1886,NA,Big Bend Power Plant improvements,0,0,2005,$0.00 ,NA,NA,"Big Bend Power Plant improvents include the use of a flue gas desulfurization (FGD) system or scrubber which removes sulfur dioxide produced when coal is burned in Units One, Two, Three, Four.",1,0,1,199,25,27.59344,-82.675961,NA,,
-147,791,Hookers Point facility - shut down,Old Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,NA,81,NA,Hookers Point facility - shut down,0,0,2002,$0.00 ,NA,NA,Reductions calculated due to shut down of facility - based on calculations for Big Bend and Gannon plants.,1,0,1,199,25,28.012172,-82.609611,NA,,
-148,792,Hookers Point facility - shut down,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,NA,54,NA,Hookers Point facility - shut down,0,0,2002,$0.00 ,NA,NA,Reductions calculated due to shut down of facility - based on calculations for Big Bend and Gannon plants.,1,0,1,199,25,28.019236,-82.21548,NA,,
-149,793,Hookers Point facility - shut down,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,NA,85,NA,Hookers Point facility - shut down,0,0,2002,$0.00 ,NA,NA,Reductions calculated due to shut down of facility - based on calculations for Big Bend and Gannon plants.,1,0,1,199,25,28.019236,-82.21548,NA,,
-150,794,Hookers Point facility - shut down,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,NA,18,NA,Hookers Point facility - shut down,0,0,2002,$0.00 ,NA,NA,Reductions calculated due to shut down of facility - based on calculations for Big Bend and Gannon plants.,1,0,1,199,25,28.019236,-82.21548,NA,,
-151,796,Hookers Point facility - shut down,Middle Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,NA,25,NA,Hookers Point facility - shut down,0,0,2002,$0.00 ,NA,NA,Reductions calculated due to shut down of facility - based on calculations for Big Bend and Gannon plants.,1,0,1,199,25,27.662673,-82.215645,NA,,
-152,797,Hookers Point facility - shut down,Lower Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,NA,60,NA,Hookers Point facility - shut down,0,0,2002,$0.00 ,NA,NA,Reductions calculated due to shut down of facility - based on calculations for Big Bend and Gannon plants.,1,0,1,199,25,27.59344,-82.675961,NA,,
-153,802,Booker Lake Regional Stormwater Treatment Facility,Middle Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Alum_Treatment,2011,NA,NA,NA,Booker Lake Regional Stormwater Treatment Facility,2005,0,2011,$0.00 ,ad valorum,NULL,Design and construction of a chemical treatment system using aluminum sulfate (alum) to treat stormwater inflows entering Booker Lake. See Project #695 for actual reductions.,1,1,1,199,7,27.784186,-82.662602,NA,,
-154,804,FDOT 56th Street Retrofit,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Wetland_Treatment,2003,NA,NA,NA,FDOT 56th Street Retrofit,0,0,2003,$0.00 ,NA,NULL,NULL,1,1,1,193,7,28.025438,-82.393401,NA,,
-155,805,Gibsonton on the Bay,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_CDS_Unit,2005,NA,NA,NA,Gibsonton on the Bay,0,0,2005,"$806,247.00 ",NA,NULL,"Project involves design and construction of a drainage system and installation of CDS, Stormceptor or baffle box to enhance water quality.",1,1,1,193,7,28.019236,-82.21548,NA,,
-156,808,McKay Bay - Melbourne Pond SW,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2006,133.2,531,18025,McKay Bay - Melbourne Pond SW,0,0,2006,"$977,726.00 ","also ERF grant for $180,000",NULL,Project objective is to retrofit the existing borrow pit to improve stormwater runoff discharging into McKay Bay.,1,1,1,199,7,27.975039,-82.40983,NA,,
-157,809,Pond 56,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,1998,NA,NA,NA,Pond 56,0,0,1998,$0.00 ,NA,NA,NA,1,0,1,199,7,28.019236,-82.21548,NA,,
-158,810,River Hills Drive Outfall No. 1,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2005,NA,NA,NA,River Hills Drive Outfall No. 1,2004,0,2005,$0.00 ,NULL,NULL,NULL,1,1,1,193,7,28.023494,-82.400513,NA,,
-159,811,River Hills Drive Outfall No.2,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2005,NA,NA,NA,River Hills Drive Outfall No.2,2004,0,2005,$0.00 ,NULL,NULL,NULL,1,1,1,193,7,28.023494,-82.400513,NA,,
-160,812,South Glen Arven Outfalls SW retrofit,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2004,NA,NA,NA,South Glen Arven Outfalls SW retrofit,2003,0,2004,$0.00 ,NULL,NULL,NULL,1,1,1,193,7,28.019724,-82.382928,NA,,
-161,814,Sumner Road,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2002,NA,NA,NA,Sumner Road,0,0,2002,$0.00 ,NULL,NULL,NULL,1,1,1,199,7,27.752228,-82.335362,NA,,
-162,826,South MacDill 48 Property Acquisition,Hillsborough Bay,City of Tampa,Habitat_Protection,Acquisition,2002,NA,NA,NA,South MacDill 48 Property Acquisition,0,0,2002,"$7,866,000.00 ",NA,NA,2003 update.  A 48 acre tract of land slated for multifamily residentail development.,0,0,1,133,4,28.019236,-82.21548,NA,,
-163,827,River Tower Park Site Acquisition,Hillsborough Bay,City of Tampa,Habitat_Protection,Acquisition,2002,NA,NA,NA,River Tower Park Site Acquisition,0,0,2002,"$285,000.00 ",NA,NULL,12.82 acres along Hills. River.  Site will be developed into a passive park with habitat and shoreline restoration.,1,1,1,133,4,28.021363,-82.457406,NA,,
-164,828,Cypress Point Park Restoration,Hillsborough Bay,City of Tampa,Habitat_Protection,Acquisition,2004,NA,NA,NA,Cypress Point Park Restoration,0,0,2004,"$250,000.00 ",CIT,NA,"50 acre landfill site slated for commercial development. Acquired to be used as preserve, park and public beach.",0,0,1,133,4,28.019236,-82.21548,NA,,
-165,829,Ballast Point Shoreline Restoration,Hillsborough Bay,City of Tampa,Habitat_Establishment,Salt_Marsh,2004,NA,NA,NA,Ballast Point Shoreline Restoration,0,0,2004,"$105,000.00 ",NA,NA,"Ballast Point Park contained a hardened shoreline with walls, rip-rap and little or no habitat plant material. The restoration effort focused on reducing the hardness of the water-shore interface, removing exotics, wetland planting: 3.6 acres of shoreline",0,0,1,133,4,28.019236,-82.21548,NA,,
-166,842,Mosaic Riverview Closed Stack Lined Surge Ponds,Hillsborough Bay,Mosaic,Point_Source,Management,2004,NA,3400,NA,Mosaic Riverview Closed Stack Lined Surge Ponds,0,0,2004,$0.00 ,NULL,NULL,"The lined ponds have reduced seepage from the 
-
-closed stack such that surface water discharge at 
-
-permitted outfall 024 has not occurred in 2004 and 
-
-is not anticipated to occur during normal operations",1,1,1,199,30,27.863575,-82.385047,NA,,
-167,843,Mosaic Riverview -  Modifications to Outfall Automation and Monitoring,Hillsborough Bay,Mosaic,Point_Source,Management,2003,NA,20,0,"Mosaic Riverview, Modifications to Outfall Automation and Monitoring",0,0,2003,$0.00 ,NULL,NULL,"Installation of a complex, automated system at the 
-
-facility's main stormwater outfall (005) including 
-
-redundant pH meters interlocked to shut down 
-
-discharge in the event of excursions or elevated 
-
-nutrient loads.",1,1,1,199,30,27.863575,-82.385047,NA,,
-168,844,Mosaic Riverview -  Enhanced Housekeeping and Street Sweeping,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,2004,NA,40,0,"Mosaic Riverview, Enhanced Housekeeping and Street Sweeping",0,0,2004,$0.00 ,NULL,NULL,"Implementation of a regular street sweeping 
-program at the facility and housekeeping rounds by 
-plant personnel. The goal of these programs is to 
-reduce in-plant spillage and recover as much 
-fertilizer spillage as possible prior to affecting 
-surf",1,1,1,199,30,27.863575,-82.385047,NA,,
-169,845,Mosaic Riverview -  Improved drainage in Phosphoric Acid Production Areas,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,2005,NA,20,0,"Mosaic Riverview, Improved drainage in Phosphoric Acid Production Areas",2005,0,2005,$0.00 ,NULL,NULL,"Implemented changes to stormwater routing within 
-
-the facility to minimize/eliminate runoff from 
-
-Phosphoric Acid production areas resulting in lower 
-
-nutrient loading to the stormwater system and 
-
-surface water discharge.",1,1,1,199,30,27.863575,-82.385047,NA,,
-170,847,Mosaic Mulberry -  Transfer of Mulberry Phosphates process water,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2005,NA,NA,0,"Mosaic Mulberry, Transfer of Mulberry Phosphates process water",0,0,2005,$0.00 ,NULL,NULL,"Implemented the transfer process water from the 
-
-Mulberry Facility to the Bartow Facility to 
-
-discharge into the Peace River Basin rather than 
-
-the Alafia River.",1,1,1,199,30,27.89402,-81.973124,NA,,
-171,848,Bartow Phosphate Complex -  Enhanced Process Water Evaporation -  Nutrient Load Prevention Project-2001,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2001,NA,12280,0,"Bartow Phosphate Complex, Enhanced Process Water Evaporation, Nutrient Load Prevention Project-2001",0,0,2001,"$400,000.00 ",NULL,NULL,"Development and implementation of large scale 
-
-treated and untreated process water 
-
-evaporation systems to reduce surface water 
-
-discharge loadings through closure.",1,1,1,199,30,27.866425,-81.928348,NA,,
-172,849,Bartow Phosphate Complex -  Enhanced Process Water Evaporation -  Nutrient Load Prevention Project,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2006,NA,16600,0,"Bartow Phosphate Complex, Enhanced Process Water Evaporation, Nutrient Load Prevention Project",0,0,2006,$0.00 ,NULL,NULL,"Same as project ID# 848, just different time period.  TN reduction for 2001-2005 is 6,600 lbs/yr.; 2006 is 16,600",1,1,1,199,30,27.866425,-81.928348,NA,,
-173,850,New Stormwater Retrofit 2004,Hillsborough Bay,Kinder-Morgan/Pakhoed Dry Bulk Terminals,Point_Source,BMP_On_Site,2005,NA,2720,NA,New Stormwater Retrofit 2004,0,0,2005,$0.00 ,NA,NULL,"Construction of Stormwater Retention System to contain first flush, settle solids, and attenuate nutrient discharges in contact runoff.",1,1,1,199,22,27.900782,-82.417799,NA,,
-174,851,Plant City Phosphate Complex -  Process Water Balance Improvements -  Prevention Project 1,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,1999,NA,6000,0,"Plant City Phosphate Complex, Process Water Balance Improvements, Prevention Project",0,0,1999,$0.00 ,NULL,NULL,"Three projects to reduce the volume of process water generated within the phosphogypsum stack system to avoid or eliminate future potential discharge of treated water, which contains elevated nitrogen and phosphorous.",1,1,1,199,30,28.160614,-82.153796,NA,,
-175,852,Plant City Phosphate Complex -  Process Water Balance Improvements -  Prevention Project 2,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2004,NA,6000,0,"Plant City Phosphate Complex, Process Water Balance Improvements, Prevention Project",0,0,2004,$0.00 ,NULL,NULL,"Three projects to reduce the volume of process water generated within the phosphogypsum stack system to avoid or eliminate future potential discharge of treated water, which contains elevated nitrogen and phosphorous.",1,1,1,199,30,28.160614,-82.153796,NA,,
-176,855,Mulberry RO Process Water Treatment -  Prevention Project,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2006,NA,NA,0,"Mulberry RO Process Water Treatment, Prevention Project",0,0,2006,$0.00 ,NULL,NULL,"Implementation of reverse osmosis treatment of 
-
-process wastewater from the Mulberry plant to 
-
-minimize overall nutrient loading.",1,1,1,199,30,27.89402,-81.973124,NA,,
-177,856,Mulberry/Bartow Regional Process Water Storage Pond and R/O Treatment,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2010,NA,NA,NA,Mulberry/Bartow Regional Process Water Storage Pond and R/O Treatment,0,0,2010,$0.00 ,NULL,NULL,"Construct a regional lined process water storage 
-
-impoundment and RO treatment system for the 
-
-avoidance of treated process water discharges, 
-
-but providing for high quality effluent if discharges 
-
-are required.",1,1,1,199,30,27.89402,-81.973124,NA,,
-178,870,Hillsborough County Citrus,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,295.1,NA,Hillsborough County Citrus,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-179,871,Citrus Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,87.5,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-180,872,Citrus Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,14,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-181,873,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,6.3,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-182,874,Citrus Conversion to Micro-Irrigation,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,15.9,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.012172,-82.609611,NA,,
-183,875,Citrus Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,109.7,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-184,876,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,61.7,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-185,877,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,307.4,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-186,878,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,NA,139.2,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-187,879,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,106.2,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-188,880,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,NA,48.2,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-189,881,Field and Row Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,45.9,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-190,882,Field and Row Crop Conversion to Micro-irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,NA,20.7,NA,Field and Row Crop Conversion to Micro-irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-191,883,Field and Row Crop Conversion to Micro-Irrigation,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,45.6,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.012172,-82.609611,NA,,
-192,884,Field and Row Crop Conversion to Micro-Irrigation,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2004,NA,20.7,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,2004,$0.00 ,NA,NA,NA,1,0,1,199,3,28.012172,-82.609611,NA,,
-193,885,Field and Row Crop Conversionn to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,697.7,NA,Field and Row Crop Conversionn to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-194,886,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,NA,316.1,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-195,887,Field and Row Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,229.7,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-196,888,Field and Row Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,NA,104,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-197,889,Strawberry Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,612.9,NA,Strawberry  Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-198,890,Strawberry Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,212,NA,Strawberry Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-199,891,Strawberry Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,91.4,NA,Strawberry Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-200,892,Strawberry Conversion to Micro-Irrigation,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,90.8,NA,Strawberry Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.012172,-82.609611,NA,,
-201,893,Strawberry Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,1391.1,NA,Strawberry Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,28.019236,-82.21548,NA,,
-202,894,Strawberry Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,NA,457.8,NA,Strawberry Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,3,27.662673,-82.215645,NA,,
-203,895,Citrus Conversion to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,197.4,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.59344,-82.675961,NA,,
-204,896,Citrus Conversion to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,NA,26.1,NA,Citrus Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,28,27.59344,-82.675961,NA,,
-205,897,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,6.5,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-206,898,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,NA,0.9,NA,Citrus Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-207,899,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,285.8,NA,Citrus Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-208,900,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,NA,37.8,NA,Citrus Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-209,905,Field and Row Crop Conversion to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,219.8,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.59344,-82.675961,NA,,
-210,906,Field and Row Conversion to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,NA,55.2,NA,Field and Row Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,28,27.59344,-82.675961,NA,,
-211,907,Field and Row Crops to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,52.2,NA,Field and Row Crops to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-212,908,Field and Row Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,NA,13.1,NA,Field and Row Crop Conversion to Micro-Irrigation,0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-213,909,Field and Row Crop Conversion to Micro-Irrigation – Manatee County,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,1272.3,0,"Field and Row Crop Conversion to Micro-Irrigation, Manatee County",0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-214,910,Field and Row Crop Converson to Micro-Irrigation ��� Manatee County,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,NA,319.5,0,"Field and Row Crop Converson to Micro-Irrigation, Manatee County",0,0,2000,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-215,915,Strawberry Crop to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,0.6,NA,Strawberry Crop to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.59344,-82.675961,NA,,
-216,916,Strawberry Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,0.2,NA,Strawberry Crop Conversion to Micro-Irrigation,0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-217,917,Strawberry Crop Conversion to Micro-Irrigation ��� Manatee County,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,NA,3.8,0,"Strawberry Crop Conversion to Micro-Irrigation, Manatee County",0,0,1995,$0.00 ,NA,NA,NA,1,0,1,199,28,27.662673,-82.215645,NA,,
-218,920,Onsite Stormwater Management System,Hillsborough Bay,Kinder-Morgan/Pakhoed Dry Bulk Terminals,Point_Source,BMP_On_Site,1998,NA,13882,NA,Onsite Stormwater Management System,0,0,1998,$0.00 ,NA,NULL,"Construction of stormwater retention system to contain first flush, settle solids, and attenuate nutrient discharges in contact runoff.",1,1,1,199,22,27.900782,-82.417799,NA,,
-219,921,Kinder-Morgan Tampaplex Terminal (formerly  IMC Port Sutton) Elimination of Heating Water Discharge,Hillsborough Bay,Kinder-Morgan/Pakhoed Dry Bulk Terminals,Point_Source,PS_Treatment,2005,NA,18200,0,"Kinder-Morgan Tampaplex Terminal (formerly, IMC Port Sutton) Elimination of Heating Water Discharge",0,0,2005,$0.00 ,NA,NULL,Replacement of deep groundwater withdrawl/discharge with Bay water discharge for ammonia loading system.,1,1,1,199,22,27.900782,-82.417799,NA,,
-220,922,Stormwater Connection to Hookers Point Wastewater Treatment Plant,Hillsborough Bay,CSX Transportation,Nonpoint_Source,Send_to_WWTP,2005,NA,3200,NA,Stormwater Connection to Hookers Point Wastewater Treatment Plant,0,0,2005,$0.00 ,NA,NULL,The existing stormwater management system was replaced with a direct connection to the Hookers Point Wastewater Treatment pland for all contact stormwater discharges during 2005.,1,1,1,199,19,27.916449,-82.417664,NA,,
-221,925,Lake Tarpon Water Quality Area 6 Alum Treatment,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Alum_Treatment,2012,NA,5055.6,NA,Lake Tarpon Water Quality Area 6 Alum Treatment,2006,0,2012,"$520,000.00 ",NULL,NULL,"An FDOT treatment pond will be retrofitted with an 
-alum injection system to achieve a 90% reduction in 
-TP, 40% reduction in TN, and 90% reduction in TSS.",1,1,1,199,2,28.012172,-82.609611,NA,,
-222,928,Braden River Park of Commerce,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2007,NA,508,NA,Braden River Park of Commerce,0,0,2007,$0.00 ,private,NULL,The developer of the Braden River Park of Commerce is proposing the preservation of a 200 acre upland/oligohaline parcel for mitigation for the removal of 7 acres of wetlands during development.,1,1,1,133,1,27.59344,-82.675961,NA,,
-223,935,Conservation Easement,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2009,NA,584,NA,Conservation Easement,0,0,2009,$0.00 ,NA,NA,100 acre parcel of land within the Hendry Site Mitigation area that will be conserved as an oligohaline habitat.,1,0,1,133,1,27.59344,-82.675961,NA,,
-224,936,Stormwater Pond,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Stormwater_Pond,2005,27.8,110.6,3755,Stormwater Pond,0,0,2005,$0.00 ,NA,NA,A wet detention stormwater pond has been constructed near the middle of Port property to receive drainage from the surrounding 125 acres.,1,0,1,199,1,27.59344,-82.675961,NA,,
-225,937,Moody Branch Land Acquisition,Middle Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2003,NA,2695,NA,Moody Branch Land Acquisition,0,0,2003,"$6,000,000.00 ",Ad valorum,NA,980 acres of acquired land for preservation in northwest Manatee County,1,0,1,133,1,27.662673,-82.215645,NA,,
-226,938,Gulfstream Pipeline Mitigation,Middle Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2008,NA,166,NA,Gulfstream Pipeline Mitigation,2006,0,2008,$0.00 ,NULL,NULL,Gulfstream Gas Co. purchased the land as part of mitigation for gas pipeline construction activities.  The land will be handed over to the county for management by 2008.,1,1,1,133,1,27.63085538,-82.46453374,NA,,
-227,939,Neal Preserve,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2005,NA,409,NA,Neal Preserve,0,0,2005,"$9,000,000.00 ",ad valorum,NULL,114 acres of land purchased for preservation,1,1,1,133,1,27.492947,-82.685755,NA,,
-228,944,Manatee County Island Trolley Program,Lower Tampa Bay,Manatee County,Nonpoint_Source,Atmospheric_Deposition,2002,NA,NA,NA,Manatee County Island Trolley Program,0,0,2002,"$1,000,000.00 ",NA,NA,"Survey performed in 2002 revealed that if the trolley service were not available, passengers would use cars.  Recommended calculating Nox reduction using Caltrans/Air Resource Board report submitted.",0,0,1,131,1,27.59344,-82.675961,NA,,
-229,947,Spoil Island Restoration,Lower Tampa Bay,Manatee County,Habitat_Establishment,Mangrove,2002,NA,NA,NA,Spoil Island Restoration,0,0,2002,$0.00 ,NA,NA,Regrading mangrove restoration and invasive species removal from 60 acre spoil island.  Includes creation of roughly 20 acres of tidal creek and marsh habitat.,0,0,1,133,1,27.59344,-82.675961,NA,,
-230,948,Peanut Creek Restoration,Lower Tampa Bay,Manatee County,Habitat_Enhancement,Hydrologic_Modification,2002,NA,NA,NA,Peanut Creek Restoration,0,0,2002,"$926,000.00 ",NA,NA,"Project consisted of the restoration of a 40,000 sq. ft. area (approx. 1 acre) located on the south side of the port.  Included excavation of a new tidal creek to Peanut lake enhancing the hydraulic connection of vast oligohaline area to Tampa Bay.",0,0,1,133,1,27.59344,-82.675961,NA,,
-231,949,Seagrass Mitigation,Lower Tampa Bay,Manatee County,Habitat_Enhancement,Management,2002,NA,NA,NA,Seagrass Mitigation,0,0,2002,$0.00 ,NA,NA,"Construction and management of seagrass restoration, enhancement and protection projects all within a 400 acre area resulting in 17 acres of new seagrass coverage compared to 5.33 acres of impact associated with Port expansion.",0,0,1,133,1,27.59344,-82.675961,NA,,
-232,952,Grassy Point Project,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2002,NA,115.5,NA,Grassy Point Project,0,0,2002,"$347,000.00 ",Florida Trust Communities Grant,NULL,"City of Holmes Beach purchased 34 acres of undeveloped land through a Fl Trust Communities Grant for preservation.  The land is designed for 'passive recreation' meaning there will be no alterations to the natural communities, other than exotics removal.",1,1,1,133,1,27.491669,-82.705239,NA,,
-233,953,Seagrass Protection as mitigation,Lower Tampa Bay,Manatee County,Habitat_Protection,Protection,2004,NA,NA,NA,Seagrass Protection as mitigation,0,0,2004,"$2,400.00 ",City of Holmes Beach,NA,"As mitigation for removal of the seagrass, the City of Holmes Beach installed 6 signs along 300 feet of the approach canal",0,0,1,137,1,27.59344,-82.675961,NA,,
-234,959,Perico Harbor Clean Marina,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2001,NA,NA,NA,Perico Harbor Clean Marina,0,0,2001,$0.00 ,private,NA,Perico Harbor designated the 20th clean marina (6th in district) on 8/20/2001,0,0,1,200,1,27.59344,-82.675961,NA,,
-235,967,Septic Tank Setback Ordinance,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2004,NA,NA,NA,Septic Tank Setback Ordinance,0,0,2004,$0.00 ,ad valorum,NA,"County Commissioners adopted a 400 ft. septic tank leachfield setback requirement from surface water, or install performance-based systems.",0,0,1,204,1,27.59344,-82.675961,NA,,
-236,968,Seagrass Protection Ordinance 04-72,Lower Tampa Bay,Manatee County,Habitat_Protection,Protection,2004,NA,NA,NA,Seagrass Protection Ordinance 04-72,0,0,2004,"$100,000.00 ",ad valroum,NA,Companion ordinance to the Manatee Protection Ordinance for seagrass protection (ordinance 04-72). The ordinance promotes water safety ty affecting the marking of all channels in Manatee County.,0,0,1,133,1,27.59344,-82.675961,NA,,
-237,969,Irrigation Requirements for Developments,All Segments,Manatee County,Nonpoint_Source,Regulation,1999,NA,NA,NA,Irrigation Requirements for Developments,0,0,1999,$0.00 ,ad valorum,NA,In 2001 the Manatee County Comprehensive Plan was changed to implement a policy that would require all new development to use the lowest quality water available for irrigation.,0,0,1,202,1,27.79,-82.442,NA,,
-238,975,Best Practices for Landscape Bed Cultivation,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Management,2004,NA,NA,NA,Best Practices for Landscape Bed Cultivation,0,0,2004,"$10,000.00 ",General Revenue,NA,"This was a 2yr. Pilot program in the Central Business District and Bayshore Blvd. (2003-4) that utilized organic and other environmentally-friendly products for pest control, soil conditioning and fertilization of landscaped bed areas.",0,0,1,183,4,28.019236,-82.21548,NA,,
-239,983,This Old Pond Video,All Segments,TBRPC,Nonpoint_Source,Education,2000,NA,NA,NA,This Old Pond Video,0,0,2000,$200.00 ,NA,NA,2003 update - see desc file,0,0,1,164,10,27.79,-82.442,NA,,
-240,984,Litter Bag Campaign,All Segments,TBRPC,Nonpoint_Source,Education,2001,NA,NA,NA,Litter Bag Campaign,0,0,2001,"$2,500.00 ",NA,NA,litter bags produce and distributed; including signs promoting recycling.,0,0,1,164,10,27.79,-82.442,NA,,
-241,987,Discovery Garden,Hillsborough Bay,TBRPC,Nonpoint_Source,Education,2004,NA,NA,NA,Discovery Garden,0,0,2004,"$17,000.00 ",NA,NA,Provided for a teaching pond in the Discovery Garden at the Hillsborough County Extension Service.,0,0,1,164,10,28.019236,-82.21548,NA,,
-242,989,Stormwater Diversion Project,Old Tampa Bay,TBRPC,Nonpoint_Source,Education,2005,NA,NA,NA,Stormwater Diversion Project,0,0,2005,"$5,000.00 ",FDOT,NA,"A service-learning project involved students and faculty of the Dale Mabry Campus, as well as the Mayors Beautification Program.",0,0,1,164,10,28.012172,-82.609611,NA,,
-243,990,Hillsborough River Campaign,Hillsborough Bay,TBRPC,Nonpoint_Source,Education,2004,NA,NA,NA,Hillsborough River Campaign,0,0,2004,"$5,834.00 ",FDOT,NA,"Produced 30,000 copies of poster/brochure explaining the Hillsborough River, sources of pollution, and ways to restore and protect the river. Distributed through schools in the watershed and at public events.",0,0,1,164,10,28.019236,-82.21548,NA,,
-244,992,Hillsborough River Greenways Task Force-HRGTF,Hillsborough Bay,TBRPC,Nonpoint_Source,Education,2005,NA,NA,NA,Hillsborough River Greenways Task Force-HRGTF,0,0,2005,"$2,300.00 ",NA,NA,Provided support to enable creation of website for Hillsborough River Greenways Task Force - www.hrgtf.org.,0,0,1,164,10,28.019236,-82.21548,NA,,
-245,993,City of Temple Terrace River Fest,Hillsborough Bay,TBRPC,Nonpoint_Source,Education,2005,NA,NA,NA,City of Temple Terrace River Fest,0,0,2005,"$2,162.00 ",NA,NA,"Provided funds to advertise the River Fest and cleanup event aimed at educating the community about the Hills River, its challenges and how people can help protect and restore it.",0,0,1,164,10,28.019236,-82.21548,NA,,
-246,996,IMC Agrico Company Termination of Ammonia in Flot Plants - Little Manatee River,Middle Tampa Bay,Mosaic,Point_Source,PS_Treatment,1995,NA,21000,NA,IMC Agrico Company Termination of Ammonia in Flot Plants - Little Manatee River,0,0,1995,$0.00 ,company financed,NULL,Termination of use of ammonia in flot-plants resulting in drop in nitrogen concentrations.,1,1,1,198,30,27.662673,-82.215645,NA,,
-247,997,Bartow Phosphate Complex -  Enhanced Process Water Evaporation -  Nutrient Load Prevention -Project-2005,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2005,NA,3520,0,"Bartow Phosphate Complex, Enhanced Process Water Evaporation, Nutrient Load Prevention -Project-2005",2005,0,2005,$0.00 ,NULL,NULL,NULL,1,1,1,199,30,27.866425,-81.928348,NA,,
-248,998,East Gate Drainage Improvements,Old Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2005,NA,518,NA,East Gate Drainage Improvements,0,0,2005,$0.00 ,ad valorum,NA,This project includes the enlargement of an existing wet pond to provide water quality treatment of the stormwater runoff from 77 acres of a 91-acre drainage basin.,1,0,1,199,7,28.012172,-82.609611,NA,,
-249,1000,Hillgrove and Stearns Stormwater Facilities -  Phase I-Alafia River,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Treatment_Train,2011,535.9,1916.1,44502,"Hillgrove and Stearns Stormwater Facilities, Phase I-Alafia River",2006,0,2011,"$2,729,119.00 ",SWFWMD Cooperative funding grant & Hillsc. County stormwater utility,NULL,"a cascading wet detention system with other (BMPs) including: construction of a stormwater collection system starting at a connecting point on Stearns Road, diverting partial flows from Stearns Creek to the project���䋢s treatment system.",1,1,1,199,3,27.89003,-82.239398,NA,,
-250,1002,I-4 from I-75 to McIntosh Road - Baker Creek Mitigation,Hillsborough Bay,FDOT,Nonpoint_Source,BMP_Wetland_Treatment,1999,NA,NA,NA,I-4 from I-75 to McIntosh Road - Baker Creek Mitigation,0,0,1999,$0.00 ,FHWA & FDOT,NA,The Baker Creek mitigation is compensation for wetland impacts associated with the widening of I-4.  Approximately 35.5 acres of wetlands impacts resulted from this project.,0,0,1,133,31,28.019236,-82.21548,NA,,
-251,1003,Bartow Phosphate Complex -  Enhanced Process Water Evatoration -  Nutrient Load Prevention Project,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2006,NA,3520,0,"Bartow Phosphate Complex, Enhanced Process Water Evatoration, Nutrient Load Prevention Project",0,0,2006,$0.00 ,NULL,NULL,Same as ID# 848; just different time period,1,1,1,199,30,27.866425,-81.928348,NA,,
-252,1011,Five-Year Stormwater Capital Improvement Program,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Management,2010,NA,NA,NA,Five-Year Stormwater Capital Improvement Program,2006,0,2010,$0.00 ,NULL,NULL,List of City's stormwater capital improvement projects and cost for years 2006-2010.,1,1,1,199,4,27.86714745,-82.35780285,NA,,
-253,1012,Cabbage Patch Point,Old Tampa Bay,City of Largo,Habitat_Establishment,Mangrove,2007,NA,NA,NA,Cabbage Patch Point,2005,0,2007,$0.00 ,NULL,NULL,"Project area is southern end of Bayside Bridge. Includes restoration of seagrass beds, tidal swamp, mesic flatwoods, eradication of invasive plants and planting of native plants.",1,1,1,133,26,28.012172,-82.609611,NA,,
-254,1018,Hurley Tailwater Pond,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2006,245.8,664.3,4568,Hurley Tailwater Pond,2006,0,2006,"$250,000.00 ",Stormwater Utility,NULL,"Project converted 3 agricultural ponds to accept tailwater from row crop land that was impacting highway. Ponds capture, treat and reuse the tailwater for irrigation. Overflow from treatment train leads to Bullfrog Creek.",1,1,1,199,3,27.768576,-82.267185,NA,,
-255,1019,Lake Meade Water Quality Improvement,Hillsborough Bay,Hillsborough County,Habitat_Protection,Protection,2011,135.4,417.9,7908,Lake Meade Water Quality Improvement,2006,0,2011,"$200,000.00 ","Community Investment Tax, Legislative appropriation",NULL,Project to improve water quality and flood protection in a relic sinkhole and surrounding ponds.,1,1,1,199,3,27.947417,-82.29465,NA,,
-256,1021,Fairwood Forest Channel Improvements,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,2009,NA,NA,NA,Fairwood Forest Channel Improvements,2003,0,2009,$0.00 ,NULL,NULL,"This project included the installation of 
-
-gabions within the ditch behind Fairwood Dr. 
-
-and near Fairwood Ave. The total distance of 
-
-this proejct was approx. 1750 linear feet.",1,1,1,199,6,27.972052,-82.723811,NA,,
-257,1022,Channel A at the Long Center,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,2006,NA,NA,NA,Channel A at the Long Center,0,0,2006,$0.00 ,NA,NA,This project included the installation of gabions within the ditch near the Long Center off Belcher Road. The total distance of the project was approx. 945 linear feet.,0,0,1,199,6,28.012172,-82.609611,NA,,
-258,1023,Bayview Park,Old Tampa Bay,City of Clearwater,Habitat_Protection,Acquisition,2008,NA,NA,NA,Bayview Park,2006,0,2008,$0.00 ,NULL,NULL,"Removal of a mobile home park, turning site 
-
-into an educational passive park. Park 
-
-includes restoration of native habitats 
-
-including salt marsh at the edge of the bay. 
-
-Mobile home park removed was approx. 8 
-
-acres.",1,1,1,133,6,27.960191,-82.709688,NA,,
-259,1024,Arcturas Pond Outfall,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,2001,NA,NA,NA,Arcturas Pond Outfall,0,0,2001,$0.00 ,NA,NA,Installation of gabions withing the ditch from Arcturas Pond to Gulf to Bay Blvd. The total distance of this project approx. 1150 linear feet.,0,0,1,199,6,28.012172,-82.609611,NA,,
-260,1031,Unpaved Alleys Sediment and Erosion Control,Old Tampa Bay,City of Largo,Nonpoint_Source,BMP_Management,2010,NA,NA,NA,Unpaved Alleys Sediment and Erosion Control,2009,0,2010,"$700,000.00 ","LOST, grant",NULL,This project will examine alternatives to paving including pervious pavements and other treatments to stabilize the allies as well as sediment traps capture eroded sediment.,1,1,1,199,26,27.86714745,-82.35780285,NA,,
-261,1033,58th Street North Sewer Extension Project,Old Tampa Bay,City of Largo,Nonpoint_Source,Send_to_WWTP,2006,NA,NA,NA,58th Street North Sewer Extension Project,0,0,2006,$0.00 ,NA,NA,Elimated 10 septic systems and provided for future sewer service to 2 underdeveloped parcels in the Long Branch Drainage basin.,0,0,1,199,26,28.012172,-82.609611,NA,,
-262,1036,Citywide Drainage Improvement Projects,Old Tampa Bay,City of Largo,Nonpoint_Source,BMP_Management,2001,NA,NA,NA,Citywide Drainage Improvement Projects,0,0,2001,"$250,000.00 ",LOST,NA,This project concentrated on various locations around the City to reconstruct failing stormwater collection systems.,0,0,1,199,26,28.012172,-82.609611,NA,,
-263,1051,Alcove Subdivision Creek Restoration,Old Tampa Bay,City of Largo,Habitat_Enhancement,Hydrologic_Modification,2013,NA,NA,NA,Alcove Subdivision Creek Restoration,2011,0,2013,"$900,000.00 ",LOST,NULL,"This project involves evaluation, design, and reconstruction of the creek channel that begins on the south side of Edna Street and ends at an outfall pipe that traverses under the West Bay Drive RV Park.",1,1,1,199,26,27.86714745,-82.35780285,NA,,
-264,1052,Long Branch Creek Drainage Basin Improvements,Old Tampa Bay,City of Largo,Nonpoint_Source,BMP_Management,2009,NA,NA,NA,Long Branch Creek Drainage Basin Improvements,2009,0,2009,"$75,000.00 ",LOST,NULL,"The boundary of the Long Branch Drainage Basin is approximately Belcher Road on the west, 142nd Avenue on the south, 58th Street on the east, and Haines Bayshore Road on the north. DUPLICATE of Pinellas Co # 72??",1,1,1,199,26,28.012172,-82.609611,NA,,
-265,1053,"Outfall from SR 580 to Sweetwater Creek Canal ""C"" Suntree baffle box retrofit",Old Tampa Bay,FDOT,Nonpoint_Source,BMP_Baffle_Box,2005,1.6,34,596,"Outfall from SR 580 to Sweetwater Creek Canal ""C"" Suntree baffle box retrofit",0,0,2005,$0.00 ,State of Florida,NA,On the south side of Cornwall Lane west of Town and Country Blvd there is an existing stormwater outfall from SR 580.,1,0,1,199,31,28.012172,-82.609611,NA,,
-266,1054,North Dale Mabry Highway Stormwater Retrofit & Wetland Restoration,Old Tampa Bay,FDOT,Nonpoint_Source,BMP_Treatment_Train,2012,NA,900,NA,North Dale Mabry Highway Stormwater Retrofit & Wetland Restoration,2005,0,2012,$0.00 ,SWIM and State of Florida,NULL,"The FDOT owned 11 acre site is located on block south of Waters Ave. on the west side of N. Dale Mabry and abuts Channel ""H"" of Sweetwater Creek. The objective of the project is to remove nuisance vegetation, restore wetland hydroperiods, and provide wate",1,1,1,199,31,28.012172,-82.609611,NA,,
-267,1063,City of Plant City -  Existing Reuse by Reclaimed Water Irrigation,Hillsborough Bay,City of Plant City,Point_Source,Increase_Reuse,2007,161.2,1257.1,0,"City of Plant City, Existing Reuse by Reclaimed Water Irrigation",2007,0,2007,$0.00 ,NULL,NULL,"Following upgrade of the City's Wastewater Treatment Plant to meet FDEP Part III public access reuse standards in 1997, the City has continuously added new reclaimed water customers and constructed new distribution piplines.",1,1,1,199,39,28.019236,-82.21548,NA,,
-268,1064,City of Plant City -  Reclaimed Water Irrigation at City Parks,Hillsborough Bay,City of Plant City,Point_Source,Increase_Reuse,2009,27.6,244.2,0,"City of Plant City, Reclaimed Water Irrigation at City Parks",2006,0,2009,$0.00 ,"wastewater revenue, wastewater development funds",NULL,In 2008 the city completed construction of a 3 mile long reclaimed water main which will provide reclaimed water service to existing and proposed customers on the east side of the City.,1,1,1,199,39,28.019236,-82.21548,NA,,
-269,1065,City of Plant City proposed reuse by reclaimed water irrigation at Walden Lake Golf course,Hillsborough Bay,City of Plant City,Point_Source,Increase_Reuse,2012,205.2,1600.2,NA,City of Plant City proposed reuse by reclaimed water irrigation at Walden Lake Golf course,2009,0,2012,"$3,600,000.00 ","wastewater revenue, wastewater development funds, SWFWMD grant, FDEP grant",NULL,The golf course irrigation system will be converted from surface water and groundwater supply to reclaimed.,1,1,1,199,39,27.988027,-82.155848,NA,,
-270,1066,Manatee Plant Cooling Pond Seepage Return Project,Middle Tampa Bay,Florida Power & Light,Nonpoint_Source,BMP_Management,1994,NA,12951.2,NA,Manatee Plant Cooling Pond Seepage Return Project,0,0,1994,$0.00 ,Capital operating budget,NA,"Cooling Pond seepage flowed into toe ditch and entered Little Manatee River (est 922 MGY). Eight sumps installed by 11/94 to capture seepage and return it to pond. Improvements to system, and system reliability continue to date, with addition of Back up..",1,0,1,198,29,27.662673,-82.215645,NA,,
-271,1067,Tampa Bay Regional Surface Water Treatment Plant Expansion,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2008,NA,61293,NA,Tampa Bay Regional Surface Water Treatment Plant Expansion,2008,0,2008,"$133,000,000.00 ","Capital Bonds by Tampa Bay Water, SWFWMD co-funding",NULL,"Tampa Bay Water���䋢s Surface Water Treatment 
-
-Plant withdraws and treats water from the Alafia 
-
-River and the Tampa Bypass Canal���䋢s Lower 
-
-Middle Pools (includes the Hillsborough River).",1,1,1,199,27,27.857194,-82.268657,NA,,
-272,1069,Tampa Bay Water Regional Surface Water Treatment Plant,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2003,NA,151760,NA,Tampa Bay Water Regional Surface Water Treatment Plant,0,0,2003,$0.00 ,NULL,NULL,NULL,1,1,1,199,27,27.9607937,-82.34500766,NA,,
-273,1078,Tampa Bay Regional Surface Water Treatment Plant Expansion,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2008,NA,78456,NA,Tampa Bay Regional Surface Water Treatment Plant Expansion,2008,0,2008,$0.00 ,NULL,NULL,"Tampa Bay Water���䋢s Surface Water Treatment 
-
-Plant withdraws and treats water from the Alafia 
-
-River and the Tampa Bypass Canal���䋢s Lower 
-
-Middle Pools (includes the Hillsborough River).",1,1,1,199,27,27.982428,-82.352551,NA,,
-274,1080,Facility Improvements,Hillsborough Bay,Eastern Terminals,Point_Source,BMP_On_Site,2008,NA,3000,NA,Facility Improvements,0,0,2008,$0.00 ,NULL,NULL,NULL,1,1,1,199,17,27.86714745,-82.35780285,NA,,
-275,1083,Robles Park Water Quality and Natural Systems Improvement,Hillsborough Bay,SWFWMD,Habitat_Enhancement,Freshwater_Wetland,2012,NA,NA,NA,Robles Park Water Quality and Natural Systems Improvement,0,0,2012,"$341,935.00 ",NULL,NULL,Shoreline planting and stablilization of pond.,1,1,1,199,7,27.86714745,-82.35780285,NA,,
-276,1160,Creative Drive Outfall Project,Hillsborough Bay,Polk County,Nonpoint_Source,BMP_Management,2006,NA,NA,NA,Creative Drive Outfall Project,2005,0,2006,"$218,225 ",Polk County General Fund,NULL,"3,138ft drainage ditch (occupying 2760 acres) in
-
-South Lakeland. Drains to WBID 1583 (Poley Creek).
-
-Project entailed stabilization of ditch with
-
-concrete rip-rap to improve hydraulic function.",1,1,1,198,106,27.96387,-81.968871,NA,,
-277,1182,Agricultural BMPs,Hillsborough Bay,FDEP/FDACS,Nonpoint_Source,BMP_Agricultural,2012,NA,NA,NA,Agricultural BMPs,2006,0,2012,NA,NULL,NULL,NULL,1,1,1,198,104,27.84879046,-81.90994263,NA,,
-278,1184,Agricultural BMPs,Hillsborough Bay,FDEP/FDACS,Nonpoint_Source,BMP_Agricultural,2012,NA,NA,NA,Agricultural BMPs,2008,0,2012,NA,NULL,NULL,"Agricultural BMPs are practical, cost-effective 
-
-actions that agricultural producers can take to 
-
-reduce the amount of pesticides, fertilizers, 
-
-animal waste, and other pollutants entering 
-
-our water resources, and to increase water-
-
-use efficiencies",1,1,1,198,104,27.84879046,-81.90994263,NA,,
-279,1186,New River Bacteria Source Assessment,Hillsborough Bay,Pasco County,Nonpoint_Source,BMP_Management,2011,NA,NA,NA,New River Bacteria Source Assessment,2010,0,2011,86620,NULL,NULL,"Bacteria source tracking study results in the New
-
-River subbasin of the Hillsborough River watershed.",1,1,1,198,105,28.18612539,-82.26493835,NA,,
-280,1204,Rivergarden Park Sediment Traps,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2007,NA,1.7,NA,Rivergarden Park Sediment Traps,2006,0,2007,NA,NULL,NULL,Installation of two hydrodynamic separators at RiverGarden Park (Kathleen/Rome and Aileen/Rome).  Total treated area is approximately 6.8 acres.,1,1,1,198,4,27.973438,-82.4806909,NA,,
-281,1205,Westshore Ditch Bottom Sumps,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Management,2004,18.9,140,3092,Westshore Ditch Bottom Sumps,2003,0,2004,58815,NULL,NULL,Installation of three 2.96 cu yd capacity ditch bottom sumps.  Woodmere ditch; Sherrill Street; and Dundee Blvd @ bridge.    Total combined treated area is 189 acres.,1,1,1,198,4,27.87083871,-82.53096503,NA,,
-282,1206,Sediment Trap: 30th and Corrine,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,1998,NA,4.4,NA,Sediment Trap:  30th and Corrine,1998,0,1998,NA,NULL,NULL,Installation of a sediment trap at 2826 Corrinne St.  Total 18 treated acres.,1,1,1,198,4,27.9490062,-82.42654093,NA,,
-283,1207,Sediment Trap: 46th and Riverhills,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2008,NA,2.2,NA,Sediment Trap:  46th and Riverhills,2008,0,2008,348000,NULL,NULL,"Installation of a hydrodynamic separator unit.  
-
-Total treated acres is 9.1 acres.",1,1,1,198,4,28.02199831,-82.41004183,NA,,
-284,1208,Sediment Trap: Spring Lake,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,NA,4.6,NA,Sediment Trap:  Spring Lake,2005,0,2005,175000,NULL,NULL,"Installation of three Stormceptor units.  5015, 
-
-5005, and 4901 Spring Lake Drive.  Total treated 
-
-area is 18.5 acres.",1,1,1,198,4,27.91389095,-82.52669924,NA,,
-285,1209,Sediment Trap: Epps Park,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2003,NA,2.5,NA,Sediment Trap:  Epps Park,2003,0,2003,120000,NULL,NULL,"Installation of three Stormceptor units at Epps 
-
-Park.  Total treated area is approximately 10 
-
-acres.",1,1,1,198,4,28.00727349,-82.46417885,NA,,
-286,1210,Sediment Trap: North Street Outfall,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2003,NA,3.2,NA,Sediment Trap:  North Street Outfall,2003,0,2003,207000,NULL,NULL,"Installation of 5 Stormceptor units.  Total treated 
-
-area is approximately 12.8 acres.",1,1,1,198,4,28.00542371,-82.4648599,NA,,
-287,1211,Sediment Trap: Neptune Way Canal,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2003,NA,2.7,NA,Sediment Trap:  Neptune Way Canal,2003,0,2003,76000,NULL,NULL,"Installation of three Stormceptor units along 
-
-Neptune Way canal.  Total treated area is 
-
-approximately 11 acres.",1,1,1,198,4,27.94135476,-82.52529097,NA,,
-288,1212,Sediment Trap: Lake Kipling Project #1,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,NA,10.4,NA,Sediment Trap:  Lake Kipling Project #1,2003,0,2005,355000,NULL,NULL,"Installation of multiple Stormceptor units 
-
-treating stormwater flow into Lake Kipling 
-
-and/or the Dundee Canal.  7 total units were 
-
-installed along Sunset Boulevard or Dundee 
-
-Street.  Total treated acres for all units is 42 
-
-acres.",1,1,1,198,4,27.92164991,-82.52332531,NA,,
-289,1213,Sediment Trap: Lake Roberta Downstream Defender unit,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,NA,5.1,NA,Sediment Trap:  Lake Roberta Downstream Defender unit,2005,0,2005,146000,NULL,NULL,"Installation of an offline Downstream Defender 
-
-unit on the west side of Lake Roberta.  Unit 
-
-treats flow from first flush events.  Total 
-
-treated acres is 6.94 acres.",1,1,1,198,4,28.00057518,-82.45089214,NA,,
-290,1214,Sediment Trap: Marjorie Park Marina,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,NA,NA,NA,Sediment Trap:  Marjorie Park Marina,2005,0,2005,NA,NULL,NULL,"Installation of a 660 gallon sediment trap treating 
-
-2.5 acres of stormwater flow into the Marjorie 
-
-Park Yacht Basin.",1,1,1,198,4,27.92984072,-82.45563837,NA,,
-291,1215,Sediment Trap: West Tampa,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,NA,1.5,NA,Sediment Trap:  West Tampa,2005,0,2005,278000,NULL,NULL,"Installation of a 8' inside-diameter Contech 
-
-sediment trap at 2505 Habana Avenue.  Treated 
-
-area is approximately 3.5 acres.",1,1,1,198,4,27.97661666,-82.48889106,NA,,
-292,1216,Sediment Trap: Columbus at Riverside S,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2007,NA,NA,NA,Sediment Trap:  Columbus at Riverside S,2007,0,2007,119000,NULL,NULL,"Installation of a Stormceptor unit on the 
-
-southeast side of the Hillsborough River at 
-
-Columbus Dr.  Total treated area is 2.3 acres.",1,1,1,198,4,27.96536341,-82.47430521,NA,,
-293,1217,Sediment Trap NSBB: N Park Circle,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2009,0.5,3.7,82,Sediment Trap NSBB:  N Park Circle,2009,0,2009,NA,NULL,NULL,"Installation of a SunTree NSBB at Hannah's Whirl 
-
-(south side of Hillsborough River).  Total treated 
-
-area is approximately 5 acres.",1,1,1,198,4,28.0130837,-82.4414387,NA,,
-294,1219,Urban Lake Rescue -  Lake Roberta,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Management,2010,4.2,31.1,687,"Urban Lake Rescue, Lake Roberta",2007,0,2010,1113832,SWIM Cooperative Funding,NULL,"This joint effort provide for re-contouring of 
-
-Lake Roberta to improve residence time within 
-
-the lake, planting of a littoral shelf, and 
-
-installation of a SunTree NSBB unit on the 
-
-northeast side of the lake.",1,1,1,198,4,28.00111631,-82.44902588,NA,,
-295,1220,Urban Lake Rescue -  Lake Kipling,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Management,2010,NA,NA,0,"Urban Lake Rescue, Lake Kipling",2008,0,2010,1129765,"COT CIP, SWFWMD Basin Boards -- Total cost is for 3 lakes",NULL,NULL,1,1,1,0,4,27.921627,-82.524016,NA,,
-296,1221,W Palmetto St Stormwater Improvements,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2011,0.8,4.3,61,W Palmetto St Stormwater Improvements,2010,0,2011,25000,NULL,NULL,The project provides for the construction of a dry detention system.  Excess flows will tie into an existing stormwater system which discharges to the Lower Hillsborough River.,1,1,1,198,4,27.96238125,-82.49834043,NA,,
-297,1222,47th & Frierson Pond Project,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2011,1.4,7.4,339,47th & Frierson Pond Project,2010,0,2011,125000,City of Tampa Stormwater,NULL,This project provides for the construction of a dry retention pond and collection system along Frierson Avenue between Shadowlawn Avenue and 47th Street.,1,1,1,198,4,27.99428653,-82.40599231,NA,,
-298,1223,North Tampa Closed Basins - Phase I,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2012,3,10,324,North Tampa Closed Basins - Phase I,2010,0,2012,1100000,City of Tampa Stormwater,NULL,"This project consists of a westward expansion of the existing 24"" stormwater system in 113th Ave to City-owned property and construction of a retention pond.  The pond will be pump-controlled.",1,1,1,198,4,28.04722491,-82.44657091,NA,,
-299,1225,Alafia River Cooridor - North Prong,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,2006,NA,NA,NA,Alafia River Cooridor - North Prong,0,0,2006,8264400,ELAPP,NULL,NULL,1,1,1,0,3,27.8892,-82.0919,NA,,
-300,1227,East Lake Outfall Water Quality Improvement Retrofit,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2000,NA,NA,NA,East Lake Outfall Water Quality Improvement Retrofit,0,0,2000,1260921,"Ad valorum, WMLTF, State Trust Funds (SWIM)",NULL,"The East Lake Outfall Water Quality 
-
-Improvement Project, a cooperative SWIM 
-
-water quality improvement project with 
-
-Hillsborough County, was completed in 
-
-October 2000 and became operational shortly 
-
-thereafter. The project was designed to treat 
-
-",1,1,1,198,7,27.98789,-82.373728,NA,,
-301,1228,CSXT Rockport Terminal Non-Contact Storm Water Mgmt,Hillsborough Bay,CSX Transportation,Point_Source,BMP_On_Site,2011,NA,NA,NA,CSXT Rockport Terminal Non-Contact Storm Water Mgmt,2011,0,2011,NA,NULL,NULL,"Storm water separation from Eastern 
-
-Terminals onto CSXT property.  Constructed a 
-
-series of grass swales (dry detention) prior to 
-
-discharge to Hillsborough Bay",1,1,1,198,19,27.915475,-82.420308,NA,,
-302,1235,Plant repowering,Old Tampa Bay,Progress Energy Inc.,Nonpoint_Source,Atmospheric_Deposition,2009,NA,15900,0,Plant repowering,0,0,2009,NA,NULL,NULL,"Progress Energy's Bartow facility switched 
-
-fomr coal to natural gas-fired, resulting in 
-
-significant NOx reductions, translating into 
-
-atmospheric TN deposition reductions to all 
-
-Bay segments.",1,1,1,0,110,27.8616,-82.6008,NA,,
-303,1251,Jean Park STA,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2002,8.8,30.1,1606,Jean Park STA,0,0,2002,NA,NULL,NULL,"Hillsborough County created an urban 
-
-stormwater treatment area treating runoff 
-
-from Fletcher Ave. STA includes a series of 
-
-three small detention ponds (totalling 0.64316 
-
-acres) including littoral vegetation. 
-
-Additionally, control structure on se",1,1,1,0,3,28.067864,-82.472364,NA,,
-304,1256,Perico Preserve,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2007,NA,NA,NA,Perico Preserve,0,0,2007,4132590,NULL,NULL,Land acquisition and preservation - 176 acres.,1,1,1,198,1,27.50125472,-82.67930833,NA,,
-305,1258,29th S/N Nutrient Seperating Baffle Box,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Baffle_Box,2010,13.4,105.8,4019,29th S/N Nutrient Seperating Baffle Box,0,0,2010,NA,NULL,NULL,NULL,1,1,1,0,5,27.782974,-82.671154,NA,,
-306,1268,Allen's Creek Erosion Control,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2010,NA,NA,NA,Allen's Creek Erosion Control,2010,0,2010,690000,"Penny for Pinellas, SWFWMD grant",NULL,"Design and construction of channel erosion 
-
-improvements to Allen's Creek from Magnolia Drive 
-
-to Beverly Circle. Joint project with the City of 
-
-Clearwater.",1,1,1,0,2,27.95379,-82.75844,NA,,
-307,1273,Alligator Creek Channel B Phase III,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2010,NA,NA,NA,Alligator Creek Channel B Phase III,0,0,2010,3824600,"Penny for Pinellas, SWFWMD grant",NULL,"Third phase of construction of channel 
-
-improvements along Alligator Creek Channel B, 
-
-between Evans Drive and El Trinidad Drive.",1,1,1,0,2,27.986,-82.7241,NA,,
-308,1274,Alligator Creek Channel B Phase II,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2008,NA,NA,NA,Alligator Creek Channel B Phase II,0,0,2008,500000,Penny for Pinellas,NULL,"Second phase of construction of channel 
-
-improvements required to correct erosion problems 
-
-in accordance with the preliminary engineering 
-
-report. Limits include 800 feet N of SR 590, and 
-
-from US 19 East to Evans Drive.",1,1,1,0,2,27.986,-82.7274,NA,,
-309,1279,City-Wide Reclaimed Water Service,Old Tampa Bay,City of Clearwater,Point_Source,Increase_Reuse,2011,NA,NA,NA,City-Wide Reclaimed Water Service,0,0,2011,NA,NULL,NULL,"Using reclaimed water removes nitrogen from 
-
-the plant's discharge.",1,1,1,198,6,27.964688,-82.744732,NA,,
-310,1282,Acceptance of City of Plant City Reclaimed Water at CF Industries-Plant City Facility,Hillsborough Bay,Mosaic,Point_Source,Increase_Reuse,2008,NA,15257.6,NA,Acceptance of City of Plant City Reclaimed Water at CF Industries-Plant City Facility,2008,0,2008,NA,NULL,NULL,"Acceptance of reclaimed water from the CoPC WWTP into CF 
-
-fertilizer processing operation.",1,1,1,198,30,28.163949,-82.147351,NA,,
-311,1283,Bartow Operations Effluent Treatment Wetland System,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2011,86.9,880,63071,Bartow Operations Effluent Treatment Wetland System,0,0,2011,NA,NULL,NULL,NULL,1,1,1,198,30,27.768537,-81.943245,NA,,
-312,1293,City of Tampa Interactive Watershed Atlas,Hillsborough Bay,City of Tampa,Nonpoint_Source,Education,2007,NA,NA,NA,City of Tampa Interactive Watershed Atlas,0,0,2007,NA,NULL,NULL,NULL,1,1,1,198,4,27.977424,-82.451019,NA,,
-313,1295,North Boulevard Siphon Rehabilitation Project,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Management,2009,NA,NA,NA,North Boulevard Siphon Rehabilitation Project,2008,0,2009,"$295,250 ",NULL,NULL,NULL,1,1,1,198,4,27.950208,-82.4684,NA,,
-314,1296,12th Street Forcemain Replacement,Hillsborough Bay,City of Tampa,Point_Source,Management,2009,NA,NA,NA,12th Street Forcemain Replacement,2008,0,2009,"$13,000,000 ",NULL,NULL,NULL,1,1,1,198,4,28.018916,-82.447264,NA,,
-315,1298,W.E. Dunn BNR Optimization,Old Tampa Bay,Pinellas County,Point_Source,PS_Treatment,2009,NA,NA,NA,W.E. Dunn BNR Optimization,2009,0,2009,NA,NULL,NULL,"Beginning in 2009, the Dunn Facility has been 
-
-focused on BNR (biological nutrient removal) 
-
-optimization, even though not required by 
-
-Permit. These efforts for targeted TN & TP AWT 
-
-performance limits have been charted 
-
-(attachment). Our experience",1,1,1,198,2,28.109681,-82.766705,NA,,
-316,1304,Annual Street Sweeping Maintenance BMP,Old Tampa Bay,City of Tampa,Nonpoint_Source,Street_Sweeping,2012,NA,NA,NA,Annual Street Sweeping Maintenance BMP,2000,0,2012,NA,City of Tampa Stormwater Utility Fee,NULL,"The City of Tampa operates a fleet of mechanical and vacuum street sweepers.  On average, approximately 6500 tons of material is collected annually.  Using the FSA BMP load reduction tool, the City has calculated a removal of 2.95 tons of TN and 1.9 tons",1,1,1,198,4,27.977424,-82.507324,NA,,
-317,1305,Street Sweeping - Middle Tampa Bay,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,Street_Sweeping,2007,NA,500,NA,Street Sweeping - Middle Tampa Bay,1996,0,2007,NA,NULL,NULL,Street sweeping throughout city,1,1,1,0,5,27.768925,-82.642078,NA,,
-318,1309,Street Sweeping - Old Tampa Bay,Old Tampa Bay,City of St. Petersburg,Nonpoint_Source,Street_Sweeping,2012,NA,136,NA,Street Sweeping - Old Tampa Bay,1996,0,2012,NA,NA,NULL,NULL,1,1,1,0,5,27.874894,-82.643108,NA,,
-319,1311,Pinellas County Fertilizer Ordinance,Old Tampa Bay,Pinellas County,Nonpoint_Source,Education,2010,NA,NA,NA,Pinellas County Fertilizer Ordinance,0,0,2010,NA,NULL,NULL,NULL,1,1,1,0,2,27.880356,-82.729797,NA,,
-320,1312,Manatee County Fertilizer Ordinance,Lower Tampa Bay,Manatee County,Nonpoint_Source,Education,2011,NA,NA,NA,Manatee County Fertilizer Ordinance,0,0,2011,NA,NULL,NULL,NULL,1,1,1,0,1,27.542371,-82.367249,NA,,
-321,1313,Street Sweeping - Hillsborough County Total,Old Tampa Bay,Hillsborough County,Nonpoint_Source,Street_Sweeping,2012,NA,1958,NA,Street Sweeping - Hillsborough County Total,2011,0,2012,NA,NULL,NULL,"Continuous countywide street sweeping program. All County roads swept once annually. Arterials and
-
-collectors swept five times annually. Schedule subject to change.",1,1,1,0,3,28.047743,-82.580109,NA,,
-322,1314,Street Sweeping - City of Plant City,Hillsborough Bay,City of Plant City,Nonpoint_Source,Street_Sweeping,2012,NA,434.6,NA,Street Sweeping - City of Plant City,2007,0,2012,NA,NULL,NULL,"Key:
-
-1. Street Sweepings Weight data was acquired from the City of Plant City Stormwater Division Monthly Maintenance Reports for the reporting periods indicated. These figures are also reported in each of the NPDES MS4 Annual Reports filed with the FDEP",1,1,1,176,39,28.01956,-82.115936,NA,,
-323,1317,Street Sweeping in Alafia River Basin,Hillsborough Bay,FDOT,Nonpoint_Source,Street_Sweeping,2013,NA,NA,NA,Street Sweeping in Alafia River Basin,0,0,2013,NA,"State Gas Tax
-
-The costs above are annual operating costs and not cumulative.  Loads removed are pre",NULL,"Routine Street Sweeping of I-75 (15.5 total 
-
-miles/year), US 301 (26.5 total miles/year) 
-
-and US 41 (32.56 total miles/year) curbed 
-
-sections within the Basin.  US 41 is 24 
-
-cycles/yr while the other highways are at 12 
-
-cycles/year under contracts as",1,1,1,198,31,27.857726,-82.346542,NA,,
-324,1326,SWIM Phase 3 Ecosystem Restoration,Middle Tampa Bay,MacDill Air Force Base,Habitat_Enhancement,Hydrologic_Modification,2013,192.9,965.9,123070,SWIM Phase 3 Ecosystem Restoration,0,0,2013,1900000,"SWFWMD SWIM - $1.2M
-
-DoD/MacDill - $300K
-
-NOAA - $250K
-
-NFWF - $200K",NULL,NULL,1,1,1,0,111,27.833169,-82.483371,NA,,
-325,1327,Itchepackesassa Creek Wetland Treatment Project,Hillsborough Bay,Polk County,Nonpoint_Source,BMP_Management,2013,6528,3760,69850,Itchepackesassa Creek Wetland Treatment Project,2009,0,2013,"$4,783,619.00 ","Polk County BoCC
-
-SWFWMD - SWIM",NULL,"Construction of a 70+ acre wetland facility to  treat water from 
-
-Itchpackesassa Creek to improve water quality downstream.",1,1,1,198,106,28.107196,-82.094937,NA,,
-326,1366,SHARP,Hillsborough Bay,Hillsborough County,Point_Source,PS_Treatment,2016,2355.5,17096.4,NA,SHARP,0,0,2016,NA,NULL,NULL,NULL,1,1,1,0,3,27.80833333,-82.39083333,NA,,
-327,1370,Street Sweeping,Old Tampa Bay,City of Safety Harbor,Nonpoint_Source,Street_Sweeping,2015,NA,NA,NA,Street Sweeping,2015,0,2015,45000,NULL,NULL,Annual Street Sweeping reported in NPDES report.,1,1,1,0,100,0,0,NA,,
-328,1371,Street Sweeping,Old Tampa Bay,City of Safety Harbor,Nonpoint_Source,Street_Sweeping,2016,NA,NA,NA,Street Sweeping,2016,0,2016,45000,NULL,NULL,Street Sweeping reported in NPDES report.,1,1,1,0,100,0,0,NA,,
-329,1372,Street Sweeping,Old Tampa Bay,Pinellas County,Nonpoint_Source,Street_Sweeping,2012,NA,NA,NA,Street Sweeping,0,0,2012,NA,NULL,NULL,NULL,1,1,1,0,2,0,0,NA,,
-330,1374,Street Sweeping,Middle Tampa Bay,Pinellas County,Nonpoint_Source,Street_Sweeping,2012,NA,NA,NA,Street Sweeping,0,0,2012,NA,NULL,NULL,NULL,1,1,1,0,2,0,0,NA,,
-331,1376,Stormwater Catch Basin Cleanouts,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2012,NA,NA,NA,Stormwater Catch Basin Cleanouts,0,0,2012,NA,NULL,NULL,NULL,1,1,1,0,2,0,0,NA,,
-332,1377,Stormwater Catch Basin Cleanouts,Middle Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2012,NA,NA,NA,Stormwater Catch Basin Cleanouts,0,0,2012,NA,NULL,NULL,NULL,1,1,1,0,2,0,0,NA,,
-333,1379,Street Sweeping Improved,Old Tampa Bay,Pinellas County,Nonpoint_Source,Street_Sweeping,2017,NA,NA,NA,Street Sweeping Improved,0,0,2017,NA,NULL,NULL,NULL,1,1,1,0,2,0,0,NA,,
-334,1380,Street Sweeping Improved,Middle Tampa Bay,Pinellas County,Nonpoint_Source,Street_Sweeping,2017,NA,NA,NA,Street Sweeping Improved,0,0,2017,NA,NULL,NULL,NULL,1,1,1,0,2,0,0,NA,,
+Unique_Project_ID,Project_Name,Bay_Segment,Lead_Entity,Project_Activity,Project_Technology,Completion_Date,TN_Reduction_lbs_yr,ProjectLatitude,ProjectLongitude,Acres,ActualProjectCost
+1001,Delany Creek Wetland Restoration Project,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Wetland_Treatment,1997,1691.3,27.92362483,-82.38579458,,"$445,746.13 "
+1002,Cone Ranch Restoration Project,Hillsborough Bay,Hillsborough County,Habitat_Enhancement,Hydrologic_Restoration,1999,331,28.12181309,-82.12251217,,NA
+1003,29th or 30th Street Outfall/ Mckay Bay,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Baffle_Box,1998,33.3,28.019236,-82.21548,70-75,NA
+1004,Palma Ceia Area Stormwater Pond,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2001,93.4,28.019236,-82.21548,2,"$1,100,000.00 "
+1005,North Tampa Pond Enlargements,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2002,2.5,28.019236,-82.21548,,"$990,000.00 "
+1006,East Lake (Alum) Stormwater Retrofit Project,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2000,5244,27.988065,-82.373728,,"$807,000.00 "
+1007,Lowry Park West Stormwater Retrofit Project,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,1998,168.2,28.013639,-82.467792,2,"$397,268.00 "
+1008,Lake Thonotosassa Marsh Restoration Project,Hillsborough Bay,SWFWMD,Habitat_Establishment,FW_Wetlands,1999,66.2,28.05128459,-82.26688174,,"$1,380,000.00 "
+1009,Flood Management Program,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2002,4000,28.019236,-82.21548,,NA
+1010,Pistol Range Stormwater Retrofit Project,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2000,2103.3,28.039363,-82.13978,,"$649,810.00 "
+1011,Alafia River Corridor Land Acquisition,Hillsborough Bay,SWFWMD,Habitat_Protection,Acquisition,1995,504,27.826852,-82.132505,,NA
+1012,Eastern Associated Terminals Stormwater Improvements,Hillsborough Bay,Eastern Terminals,Point_Source,BMP_On_Site,1996,2190,27.918834,-82.41985,,NA
+1013,Cargill Fertilizer Stormwater Ponds,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1998,9.6,27.863575,-82.385047,,NA
+1014,Cargill Fertilizer Dedicated Sump By Production Lab,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1996,59.4,27.863575,-82.385047,,NA
+1015,Cargill Fertilizer Dedicated Sump At Product Loading Dock,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1996,1584,27.863575,-82.385047,,"$10,000.00 "
+1016,Cargill Fertilizer Outfall Structural And Procedural Improvements,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,1997,1962,27.863575,-82.385047,,NA
+1017,IMC-Agrico Company Termination Of Ammonia In Flot Plants-Alafia River,Middle Tampa Bay,Mosaic,Point_Source,PS_Treatment,1995,21000,27.662673,-82.215645,,NA
+1018,IMC-Agrico Company Shiploading Terminals Stormwater And Spillage,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1994,25755,28.019236,-82.21548,,NA
+1019,CF Industries Product Conveyor System Upgrade,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1993,19600,27.927192,-82.435207,,NA
+1020,CF Industries Improved Dust Suppressant Application On Fertilizer Products,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1994,108,27.927192,-82.435207,,NA
+1021,CF Industries Product Conveyor System Enhancement - Phase 2,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1997,41.4,27.927192,-82.435207,,NA
+1022,CF Industries Stormwater Management System Project,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,1997,NA,27.927192,-82.435207,,NA
+1023,CSX Transportation Rockport Terminal Stormwater Management Improvements,Hillsborough Bay,CSX Transportation,Point_Source,BMP_On_Site,1997,74000,27.916449,-82.417664,,NA
+1024,Del Oro Phase 1,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,1996,58.5,28.012172,-82.609611,,"$328,386.00 "
+1025,Cooper's Point Restoration,Old Tampa Bay,City of Clearwater,Habitat_Establishment,Mangroves,2001,NA,27.95993401,-82.71747599,,"$315,221.00 "
+1026,Allen's Creek Rehabilitation At Lake View And Hercules (Red Maple Swamp),Old Tampa Bay,Pinellas County,Habitat_Enhancement,FW_Wetlands,1998,1466.8,28.012172,-82.609611,,NA
+1027,Lower Sweetwater Creek Stormwater Retrofits,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2012,17.3,28.012172,-82.609611,,NA
+1028,Brushy Creek Wetland Enhancement Project,Old Tampa Bay,Hillsborough County,Habitat_Enhancement,FW_Wetlands,1993,2.4,28.012172,-82.609611,,"$638,494.00 "
+1029,"Alligator Creek Channel ""H"" Stormwater Treatment Pond",Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,1995,798.9,28.012172,-82.609611,,NA
+1030,Al Lopez Park Pond Enhancement,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,1994,43.9,28.012172,-82.609611,,"$375,000.00 "
+1031,Lois And Henry Avenues Retention Pond (Drew Park Drainage And Improvements  Phase 1),Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,1997,49.2,28.012172,-82.609611,,"$350,000.00 "
+1032,Safety Harbor Stormwater Retrofit Project,Old Tampa Bay,City of Safety Harbor,Nonpoint_Source,BMP_Management,1995,1079.4,28.012172,-82.609611,,NA
+1033,Roosevelt Creek Stormwater - Phase I,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,2002,109.1,28.012172,-82.609611,,"$1,300,000.00 "
+1034,Septic To Sewer Conversions In Largo,Old Tampa Bay,City of Largo,Nonpoint_Source,Send_to_WWTP,1997,3000,28.012172,-82.609611,,"$1,900,000.00 "
+1035,Alligator Creek Pond at Logan Street,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,2002,431.8,28.012172,-82.609611,,"$1,400,000.00 "
+1036,Bayside Bridge Pond Rehabilitation,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,2004,11.4,28.012172,-82.609611,,"$200,000.00 "
+1037,Lake Maggiore Alum Injection,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Alum_Treatment,1998,6212,27.662673,-82.215645,,"$4,000,000.00 "
+1038,Mirror Lake Stormwater Retrofit,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Management,2000,1553,27.662673,-82.215645,,"$529,000.00 "
+1039,Pinellas Park Channel 2 Alum Stormwater Retrofit Project,Middle Tampa Bay,City of Pinellas Park,Nonpoint_Source,BMP_Treatment_Train,1998,272,27.662673,-82.215645,,NA
+1040,Haynsworth Tract Regional Stormwater Treatment Facility,Middle Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Treatment_Train,1998,NA,27.662673,-82.215645,,"$1,201,188.00 "
+1041,Cockroach Bay Regional Stormwater Treatment Facility,Middle Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,1997,NA,27.662673,-82.215645,,"$780,000.00 "
+1042,Little Manatee River Land Acquisition Project,Middle Tampa Bay,SWFWMD,Habitat_Protection,Acquisition,1995,NA,27.662673,-82.215645,,NA
+1043,Sawgrass Lake Pond (Haynesworth Tract),Middle Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Stormwater_Pond,1999,480.3,27.662673,-82.215645,,"$1,500,000.00 "
+1044,Overlay District Projects - Development,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2000,2057.1,27.59344,-82.675961,,NA
+1045,Overlay District Projects - Agriculture,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2000,17154.5,27.59344,-82.675961,,NA
+1046,Land Acquisition/Management Project,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2000,NA,27.59344,-82.675961,,NA
+1047,Allens Creek Rehabilitation at Lake View and Hercules (Red Maple Swamp),Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Wetland_Treatment,1999,1401.9,27.95993401,-82.71747599,,"$1,803,310.00 "
+1048,Lowry Park Zoo Stormwater Rehabilitation,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2002,205.2,28.013639,-82.467792,,"$344,894.00 "
+1049,McKay Bay (Eastshore Commerce Park) (Melbourne Pond) Drainage Basin Rehabilitation,Hillsborough Bay,Tampa Bay Water/SWFWMD,Nonpoint_Source,BMP_Wetland_Treatment,2006,880,27.962889,-82.347508,,"$1,010,000.00 "
+1050,Cockroach Bay Restoration Project,Middle Tampa Bay,SWFWMD,Habitat_Establishment,Uplands,1996,570.9,27.662673,-82.215645,,"$6,300,000.00 "
+1051,Lake Maggiore Dredging Project,Middle Tampa Bay,City of St. Petersburg,Habitat_Enhancement,Dredging,2006,3425.7,27.662673,-82.215645,,"$13,000,000.00 "
+1052,Lake Tarpon Stormwater Treatment (Areas 44/47),Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2012,559.2,28.012172,-82.609611,,"$460,000.00 "
+1053,Assist businesses in implementing site management practices to reduce stormwater runoff,All Segments,EPCHC,Nonpoint_Source,Education,2000,NA,27.86714745,-82.35780285,,"$400,000.00 "
+1054,Brooker / Anclote Corridor Land Acquisition -1,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,28.012172,-82.609611,,"$411,500.00 "
+1055,Brooker Creek Land Acquisition -1,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,28.012172,-82.609611,,"$5,382,000.00 "
+1056,Brooker / Anclote Corridor Land Acquisition -2,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,28.012172,-82.609611,,"$105,000.00 "
+1057,Brooker / Anclote Corridor Land Acquisition -3,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,28.012172,-82.609611,,"$450,000.00 "
+1058,Brooker Creek Land Acquisition -2,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,28.012172,-82.609611,,"$46,800.00 "
+1059,Wall Springs Land Acquisition -2,Old Tampa Bay,Pinellas County,Habitat_Protection,Acquisition,2001,NA,28.012172,-82.609611,,"$21,450,000.00 "
+1060,Mitigation Recommendations,All Segments,TBRPC,Nonpoint_Source,Education,2005,NA,27.86714745,-82.35780285,,NA
+1061,Recommendation of no-vehicle access areas,All Segments,TBRPC,Nonpoint_Source,Education,2005,NA,27.86714745,-82.35780285,,NA
+1062,Apollo Beach Cargill Park - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1996,NA,28.019236,-82.21548,,"$2,066,258.00 "
+1063,Balm Scrub - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1997,NA,28.019236,-82.21548,,"$3,183,740.00 "
+1064,Bell Creek Preserve - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1997,NA,27.860109,-82.279682,,"$2,788,117.00 "
+1065,Blackwater Creek - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1997,NA,28.12855,-82.154224,,"$4,314,525.00 "
+1066,Boy Scout - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1999,NA,27.880411,-82.199707,,"$51,355.00 "
+1067,Port Redwing - Land Acquisition,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,1995,NA,27.86714745,-82.35780285,,"$750,000.00 "
+1068,Retrofit the County's Resource Recovery Facility,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2000,NA,27.86714745,-82.35780285,,NA
+1069,Hillsborough County Reclaimed Water Use System,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,2005,NA,28.019236,-82.21548,,NA
+1070,Support standardized monitoring of wastewater discharges,Hillsborough Bay,Hillsborough County,Point_Source,Management,2005,NA,28.019236,-82.21548,,NA
+1071,SCADA for monitoring pump station failure,Hillsborough Bay,Hillsborough County,Point_Source,Management,2011,NA,28.019236,-82.21548,,NA
+1072,Hillsborough County Watershed Management Plans,All Segments,Hillsborough County,Nonpoint_Source,BMP_Management,2002,NA,27.86714745,-82.35780285,,NA
+1073,Atmospheric deposition studies,All Segments,Pinellas County,Nonpoint_Source,Atmospheric_Deposition,2002,NA,27.86714745,-82.35780285,,NA
+1074,development of standardized mitigation guidelines,All Segments,Pinellas County,Nonpoint_Source,Education,2000,NA,27.86714745,-82.35780285,,NA
+1075,Seagrass scar reduction efforts,All Segments,Pinellas County,Habitat_Protection,Protection_Management,1997,NA,27.86714745,-82.35780285,,"$74,000.00 "
+1076,Urban retrofit projects,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Management,2004,118.8,27.79,-82.442,,"$50,000.00 "
+1077,Multiple habitat restoration and protection projects,Hillsborough Bay,Tampa Port Authority,Habitat_Protection,Protection_Management,2004,NA,28.019236,-82.21548,,"$400,000.00 "
+1078,Support consent orders for clean up of fertilizer facilities,Hillsborough Bay,FDEP,Point_Source,Regulation,2000,NA,27.79,-82.442,,NA
+1079,Tampa Bay Water Regional Surface Water Treatment Plant,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2003,72440,28.019236,-82.21548,,"$84,000,000.00 "
+1080,Kapok Restoration Project,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Treatment_Train,2006,644,28.012172,-82.609611,,"$13,514,272.00 "
+1081,Cliff Stephens Park Stormwater Retrofitting,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Wetland_Treatment,2002,11600,28.012172,-82.609611,,"$690,000.00 "
+1082,Channel B Stabilization,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,2001,NA,28.012172,-82.609611,,"$503,000.00 "
+1083,Moccasin Lake Park Restoration,Old Tampa Bay,City of Clearwater,Habitat_Establishment,Mangroves,2001,NA,28.012172,-82.609611,,"$460,000.00 "
+1084,High Ridge Estates,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,1992,87.2,28.012172,-82.609611,,NA
+1085,McMullen Booth Road @ Curlew Road,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Treatment_Train,2003,NA,28.03999767,-82.71020925,,NA
+1086,Alligator Lake/Ruth Eckerd Wetland Creation,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Wetland_Treatment,2008,58.1,27.976967,-82.703099,,"$1,400,000.00 "
+1087,Mobbly Bayou Wilderness Preserve Restoration,Old Tampa Bay,Pinellas County,Habitat_Enhancement,Exotic_Control,2009,NA,28.012172,-82.609611,,"$2,140,839.00 "
+1088,St. Paul's Drive Restoration,Old Tampa Bay,Pinellas County,Habitat_Establishment,FW_Wetlands,1997,NA,28.012172,-82.609611,,NA
+1089,Hillsborough Heights project,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2003,NA,28.019236,-82.21548,,"$145,000.00 "
+1090,Lower Bullfrog Creek - habitat restoration,Hillsborough Bay,SWFWMD,Habitat_Establishment,Saltmarsh,2001,NA,28.019236,-82.21548,,"$571,351.00 "
+1091,Wolf Branch Creek #1 - habitat creation (Phases I & II),Hillsborough Bay,SWFWMD,Habitat_Establishment,Saltmarsh,2003,NA,28.019236,-82.21548,,"$4,019,480.00 "
+1092,Fort Brooke/Cotanchobee Park Shoreline - habitat restoration,Hillsborough Bay,SWFWMD,Habitat_Establishment,Saltmarsh,2002,NA,28.019236,-82.21548,,"$272,625.00 "
+1093,McKay Bay Watershed Projects,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2006,NA,27.936119,-82.423841,,NA
+1094,Manatee Protection Zones,Lower Tampa Bay,Manatee County,Habitat_Protection,Protection_Management,2004,NA,27.59344,-82.675961,,NA
+1095,Largo Regional Stormwater Treatment Facility Educational Boardwalk System,Old Tampa Bay,SWFWMD,Nonpoint_Source,Education,2002,NA,28.012172,-82.609611,,"$782,101.00 "
+1096,South Green Springs Phase Two Stormwater Retrofit Project,Old Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Management,2002,163.8,28.012172,-82.609611,,"$766,172.00 "
+1097,Largo Stormwater Retrofit - CDS Units,Old Tampa Bay,SWFWMD,Nonpoint_Source,BMP_CDS_Unit,2002,63.1,28.012172,-82.609611,,"$209,301.00 "
+1098,Lake Tomlinson Restoration,Middle Tampa Bay,SWFWMD,Habitat_Establishment,FW_Wetlands,2002,NA,27.662673,-82.215645,,"$389,511.00 "
+1099,St. Petersburg Retrofit - CDS Units (storage yard under 1-275),Middle Tampa Bay,SWFWMD,Nonpoint_Source,BMP_CDS_Unit,2002,4.7,27.662673,-82.215645,,"$109,301.00 "
+1100,Bishop Creek Streambank Protection,Old Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Management,2002,3.3,28.012172,-82.609611,,"$510,000.00 "
+1101,"Howard Frankland Habitat Restoration ""Gateway""",Old Tampa Bay,SWFWMD,Habitat_Establishment,Uplands,2004,NA,27.88371021,-82.66328692,,"$2,931,676.00 "
+1102,South Tampa Greenway/Tappan Habitat Restoration Site,Hillsborough Bay,SWFWMD,Habitat_Protection,Acquisition,2004,NA,27.86109007,-82.53022555,,"$492,861.00 "
+1103,Palm River Restoration,Hillsborough Bay,SWFWMD,Habitat_Establishment,Mangroves,2005,NA,27.949071,-82.385384,,"$4,400,000.00 "
+1104,Schultz Nature Park,Hillsborough Bay,SWFWMD,Habitat_Establishment,FW_Wetlands,2004,NA,28.019236,-82.21548,,NA
+1105,Schultz Nature Park,Hillsborough Bay,SWFWMD,Habitat_Establishment,Mangroves,2004,NA,28.019236,-82.21548,,NA
+1106,Schultz Nature Park,Hillsborough Bay,SWFWMD,Habitat_Establishment,Saltmarsh,2004,NA,28.019236,-82.21548,,NA
+1107,Alligator Lake Restoration,Old Tampa Bay,Pinellas County,Habitat_Establishment,FW_Wetlands,2011,NA,28.012172,-82.609611,,NA
+1108,Broadway Outfall Stormwater Retrofit Project,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_CDS_Unit,2001,139,28.02665,-82.391748,,"$1,390,262.00 "
+1109,Install and monitor curb inlet protectors,Hillsborough Bay,TBEP,Nonpoint_Source,BMP_Management,2000,NA,28.019236,-82.21548,,"$5,000.00 "
+1110,City of Largo Reclaimed Water (Reuse),Old Tampa Bay,City of Largo,Point_Source,Increase_Reuse,1997,58592.7,28.012172,-82.609611,,$0.00 
+1111,Dale Mabry Reclaimed,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,10946.2,28.068939,-82.527091,,$0.00 
+1112,Van Dyke Reclaimed,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,3052.7,28.14314,-82.546069,,$0.00 
+1113,Northwest and River Oaks Reclaimed,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,6472,28.084615,-82.605692,,$0.00 
+1114,Falkenburg & Valrico Reclaimed,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,12186.6,27.952572,-82.335168,,$0.00 
+1115,South County Reuse System,Hillsborough Bay,Hillsborough County,Point_Source,Increase_Reuse,1995,35451,27.723974,-82.385701,,$0.00 
+1116,McKay Bay Refuse-to-Energy Retrofit Project,All Segments,City of Tampa,Nonpoint_Source,Atmospheric_Deposition,2001,NA,27.79,-82.442,,"$89,000,000.00 "
+1117,Booker Lake Alum Treatment Facility,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Alum_Treatment,2009,522.9,27.662673,-82.215645,,"$1,000,000.00 "
+1118,McKay Bay-East Shore Commerce Park Parcel Stormwater Retrofit,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Treatment_Train,2006,2296.4,27.962889,-82.347508,,"$1,472,883.00 "
+1119,MiraBay Property,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Wetland_Treatment,1999,1340.5,27.748674,-82.429575,,$0.00 
+1120,Balm Road Wetland and Stormwater Treatment Facility,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Wetland_Treatment,2004,910.3,27.744119,-82.290208,,"$1,500,000.00 "
+1121,Stormwater Research Facility at 132nd and Taliaferro,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Stormwater_Pond,2002,26.9,28.066534,-82.453662,,"$250,000.00 "
+1122,Alafia Banks Restoration Settling Pond,Hillsborough Bay,Mosaic,Nonpoint_Source,BMP_Stormwater_Pond,2011,61.1,27.863575,-82.385047,,"$200,000.00 "
+1123,McIntosh Park Water Quality/Wetland Enhancement,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Wetland_Treatment,2009,2763,28.071189,-82.129162,,"$3,824,564.00 "
+1124,8th Biennial Conference of Stormwater Research & Watershed Management,All Segments,SWFWMD,Nonpoint_Source,Education,2004,NA,27.86714745,-82.35780285,,$0.00 
+1125,Conference on Ecosystems Restoration & Creation,All Segments,TBEP,Habitat_Protection,Education,2004,NA,27.86714745,-82.35780285,,$0.00 
+1126,Repowering Gannon Power Plant - Bayside Facility,Old Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,3877,28.012172,-82.609611,,$0.00 
+1127,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,2592,28.019236,-82.21548,,$0.00 
+1128,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,4137,28.019236,-82.21548,,$0.00 
+1129,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,882,28.019236,-82.21548,,$0.00 
+1130,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,3588,28.019236,-82.21548,,$0.00 
+1131,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,1189,28.019236,-82.21548,,$0.00 
+1132,Repowering Gannon Power Plant - Bayside Facility,Lower Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,2915,27.59344,-82.675961,,$0.00 
+1133,Repowering Gannon Power Plant - Bayside Facility,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2003,70,28.019236,-82.21548,,$0.00 
+1134,Big Bend Power Plant improvements,Old Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,942,28.012172,-82.609611,,$0.00 
+1135,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,630,28.019236,-82.21548,,$0.00 
+1136,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,1006,28.019236,-82.21548,,$0.00 
+1137,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,214,28.019236,-82.21548,,$0.00 
+1138,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,872,28.019236,-82.21548,,$0.00 
+1139,Big Bend Power Plant improvements,Middle Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,289,27.662673,-82.215645,,$0.00 
+1140,Big Bend Power Plant improvements,Lower Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2004,709,27.59344,-82.675961,,$0.00 
+1141,Big Bend Power Plant improvements,Old Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,2507,28.012172,-82.609611,,$0.00 
+1142,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,1677,28.019236,-82.21548,,$0.00 
+1143,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,2676,28.019236,-82.21548,,$0.00 
+1144,Big Bend Power Plant improvements,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,570,28.019236,-82.21548,,$0.00 
+1145,Big Bend Power Plant improvements,Middle Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,769,27.662673,-82.215645,,$0.00 
+1146,Big Bend Power Plant improvements,Lower Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2005,1886,27.59344,-82.675961,,$0.00 
+1147,Hookers Point facility - shut down,Old Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,81,28.012172,-82.609611,,$0.00 
+1148,Hookers Point facility - shut down,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,54,28.019236,-82.21548,,$0.00 
+1149,Hookers Point facility - shut down,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,85,28.019236,-82.21548,,$0.00 
+1150,Hookers Point facility - shut down,Hillsborough Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,18,28.019236,-82.21548,,$0.00 
+1151,Hookers Point facility - shut down,Middle Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,25,27.662673,-82.215645,,$0.00 
+1152,Hookers Point facility - shut down,Lower Tampa Bay,TECO,Nonpoint_Source,Atmospheric_Deposition,2002,60,27.59344,-82.675961,,$0.00 
+1153,Booker Lake Regional Stormwater Treatment Facility,Middle Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Alum_Treatment,2011,NA,27.784186,-82.662602,,$0.00 
+1154,FDOT 56th Street Retrofit,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Wetland_Treatment,2003,NA,28.025438,-82.393401,,$0.00 
+1155,Gibsonton on the Bay,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_CDS_Unit,2005,NA,28.019236,-82.21548,,"$806,247.00 "
+1156,McKay Bay - Melbourne Pond SW,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2006,531,27.975039,-82.40983,,"$977,726.00 "
+1157,Pond 56,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,1998,NA,28.019236,-82.21548,,$0.00 
+1158,River Hills Drive Outfall No. 1,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2005,NA,28.023494,-82.400513,,$0.00 
+1159,River Hills Drive Outfall No.2,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2005,NA,28.023494,-82.400513,,$0.00 
+1160,South Glen Arven Outfalls SW retrofit,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2004,NA,28.019724,-82.382928,,$0.00 
+1161,Sumner Road,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2002,NA,27.752228,-82.335362,,$0.00 
+1162,South MacDill 48 Property Acquisition,Hillsborough Bay,City of Tampa,Habitat_Protection,Acquisition,2002,NA,28.019236,-82.21548,,"$7,866,000.00 "
+1163,River Tower Park Site Acquisition,Hillsborough Bay,City of Tampa,Habitat_Protection,Acquisition,2002,NA,28.021363,-82.457406,,"$285,000.00 "
+1164,Cypress Point Park Restoration,Hillsborough Bay,City of Tampa,Habitat_Protection,Acquisition,2004,NA,28.019236,-82.21548,,"$250,000.00 "
+1165,Ballast Point Shoreline Restoration,Hillsborough Bay,City of Tampa,Habitat_Establishment,Saltmarsh,2004,NA,28.019236,-82.21548,,"$105,000.00 "
+1166,Mosaic Riverview Closed Stack Lined Surge Ponds,Hillsborough Bay,Mosaic,Point_Source,Management,2004,3400,27.863575,-82.385047,,$0.00 
+1167,Mosaic Riverview -  Modifications to Outfall Automation and Monitoring,Hillsborough Bay,Mosaic,Point_Source,Management,2003,20,27.863575,-82.385047,,$0.00 
+1168,Mosaic Riverview -  Enhanced Housekeeping and Street Sweeping,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,2004,40,27.863575,-82.385047,,$0.00 
+1169,Mosaic Riverview -  Improved drainage in Phosphoric Acid Production Areas,Hillsborough Bay,Mosaic,Point_Source,BMP_On_Site,2005,20,27.863575,-82.385047,,$0.00 
+1170,Mosaic Mulberry -  Transfer of Mulberry Phosphates process water,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2005,NA,27.89402,-81.973124,,$0.00 
+1171,Bartow Phosphate Complex -  Enhanced Process Water Evaporation -  Nutrient Load Prevention Project-2001,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2001,12280,27.866425,-81.928348,,"$400,000.00 "
+1172,Bartow Phosphate Complex -  Enhanced Process Water Evaporation -  Nutrient Load Prevention Project,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2006,16600,27.866425,-81.928348,,$0.00 
+1173,New Stormwater Retrofit 2004,Hillsborough Bay,Kinder-Morgan/Pakhoed Dry Bulk Terminals,Point_Source,BMP_On_Site,2005,2720,27.900782,-82.417799,,$0.00 
+1174,Plant City Phosphate Complex -  Process Water Balance Improvements -  Prevention Project 1,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,1999,6000,28.160614,-82.153796,,$0.00 
+1175,Plant City Phosphate Complex -  Process Water Balance Improvements -  Prevention Project 2,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2004,6000,28.160614,-82.153796,,$0.00 
+1176,Mulberry RO Process Water Treatment -  Prevention Project,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2006,NA,27.89402,-81.973124,,$0.00 
+1177,Mulberry/Bartow Regional Process Water Storage Pond and R/O Treatment,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2010,NA,27.89402,-81.973124,,$0.00 
+1178,Hillsborough County Citrus,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,295.1,27.662673,-82.215645,,$0.00 
+1179,Citrus Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,87.5,28.019236,-82.21548,,$0.00 
+1180,Citrus Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,14,28.019236,-82.21548,,$0.00 
+1181,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,6.3,27.662673,-82.215645,,$0.00 
+1182,Citrus Conversion to Micro-Irrigation,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,15.9,28.012172,-82.609611,,$0.00 
+1183,Citrus Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,109.7,28.019236,-82.21548,,$0.00 
+1184,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,61.7,27.662673,-82.215645,,$0.00 
+1185,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,307.4,28.019236,-82.21548,,$0.00 
+1186,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,139.2,28.019236,-82.21548,,$0.00 
+1187,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,106.2,28.019236,-82.21548,,$0.00 
+1188,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,48.2,28.019236,-82.21548,,$0.00 
+1189,Field and Row Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,45.9,27.662673,-82.215645,,$0.00 
+1190,Field and Row Crop Conversion to Micro-irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,20.7,27.662673,-82.215645,,$0.00 
+1191,Field and Row Crop Conversion to Micro-Irrigation,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,45.6,28.012172,-82.609611,,$0.00 
+1192,Field and Row Crop Conversion to Micro-Irrigation,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2004,20.7,28.012172,-82.609611,,$0.00 
+1193,Field and Row Crop Conversionn to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,697.7,28.019236,-82.21548,,$0.00 
+1194,Field and Row Crop Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,316.1,28.019236,-82.21548,,$0.00 
+1195,Field and Row Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,229.7,27.662673,-82.215645,,$0.00 
+1196,Field and Row Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2000,104,27.662673,-82.215645,,$0.00 
+1197,Strawberry Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,612.9,28.019236,-82.21548,,$0.00 
+1198,Strawberry Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,212,28.019236,-82.21548,,$0.00 
+1199,Strawberry Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,91.4,27.662673,-82.215645,,$0.00 
+1200,Strawberry Conversion to Micro-Irrigation,Old Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,90.8,28.012172,-82.609611,,$0.00 
+1201,Strawberry Conversion to Micro-Irrigation,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,1391.1,28.019236,-82.21548,,$0.00 
+1202,Strawberry Conversion to Micro-Irrigation,Middle Tampa Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,1995,457.8,27.662673,-82.215645,,$0.00 
+1203,Citrus Conversion to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,197.4,27.59344,-82.675961,,$0.00 
+1204,Citrus Conversion to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,26.1,27.59344,-82.675961,,$0.00 
+1205,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,6.5,27.662673,-82.215645,,$0.00 
+1206,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,0.9,27.662673,-82.215645,,$0.00 
+1207,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,285.8,27.662673,-82.215645,,$0.00 
+1208,Citrus Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,37.8,27.662673,-82.215645,,$0.00 
+1209,Field and Row Crop Conversion to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,219.8,27.59344,-82.675961,,$0.00 
+1210,Field and Row Conversion to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,55.2,27.59344,-82.675961,,$0.00 
+1211,Field and Row Crops to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,52.2,27.662673,-82.215645,,$0.00 
+1212,Field and Row Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,13.1,27.662673,-82.215645,,$0.00 
+1213,Field and Row Crop Conversion to Micro-Irrigation – Manatee County,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,1272.3,27.662673,-82.215645,,$0.00 
+1214,Field and Row Crop Converson to Micro-Irrigation ��� Manatee County,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,2000,319.5,27.662673,-82.215645,,$0.00 
+1215,Strawberry Crop to Micro-Irrigation,Lower Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,0.6,27.59344,-82.675961,,$0.00 
+1216,Strawberry Crop Conversion to Micro-Irrigation,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,0.2,27.662673,-82.215645,,$0.00 
+1217,Strawberry Crop Conversion to Micro-Irrigation ��� Manatee County,Middle Tampa Bay,Manatee County CES,Nonpoint_Source,BMP_Agricultural,1995,3.8,27.662673,-82.215645,,$0.00 
+1218,Onsite Stormwater Management System,Hillsborough Bay,Kinder-Morgan/Pakhoed Dry Bulk Terminals,Point_Source,BMP_On_Site,1998,13882,27.900782,-82.417799,,$0.00 
+1219,Kinder-Morgan Tampaplex Terminal (formerly  IMC Port Sutton) Elimination of Heating Water Discharge,Hillsborough Bay,Kinder-Morgan/Pakhoed Dry Bulk Terminals,Point_Source,PS_Treatment,2005,18200,27.900782,-82.417799,,$0.00 
+1220,Stormwater Connection to Hookers Point Wastewater Treatment Plant,Hillsborough Bay,CSX Transportation,Nonpoint_Source,Send_to_WWTP,2005,3200,27.916449,-82.417664,,$0.00 
+1221,Lake Tarpon Water Quality Area 6 Alum Treatment,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Alum_Treatment,2012,5055.6,28.012172,-82.609611,,"$520,000.00 "
+1222,Braden River Park of Commerce,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2007,508,27.59344,-82.675961,,$0.00 
+1223,Conservation Easement,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2009,584,27.59344,-82.675961,,$0.00 
+1224,Stormwater Pond,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Stormwater_Pond,2005,110.6,27.59344,-82.675961,,$0.00 
+1225,Moody Branch Land Acquisition,Middle Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2003,2695,27.662673,-82.215645,,"$6,000,000.00 "
+1226,Gulfstream Pipeline Mitigation,Middle Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2008,166,27.63085538,-82.46453374,,$0.00 
+1227,Neal Preserve,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2005,409,27.492947,-82.685755,,"$9,000,000.00 "
+1228,Manatee County Island Trolley Program,Lower Tampa Bay,Manatee County,Nonpoint_Source,Atmospheric_Deposition,2002,NA,27.59344,-82.675961,,"$1,000,000.00 "
+1229,Spoil Island Restoration,Lower Tampa Bay,Manatee County,Habitat_Establishment,Mangroves,2002,NA,27.59344,-82.675961,,$0.00 
+1230,Peanut Creek Restoration,Lower Tampa Bay,Manatee County,Habitat_Enhancement,Hydrologic_Restoration,2002,NA,27.59344,-82.675961,,"$926,000.00 "
+1231,Seagrass Mitigation,Lower Tampa Bay,Manatee County,Habitat_Enhancement,Management,2002,NA,27.59344,-82.675961,,$0.00 
+1232,Grassy Point Project,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2002,115.5,27.491669,-82.705239,,"$347,000.00 "
+1233,Seagrass Protection as mitigation,Lower Tampa Bay,Manatee County,Habitat_Protection,Protection_Management,2004,NA,27.59344,-82.675961,,"$2,400.00 "
+1234,Perico Harbor Clean Marina,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2001,NA,27.59344,-82.675961,,$0.00 
+1235,Septic Tank Setback Ordinance,Lower Tampa Bay,Manatee County,Nonpoint_Source,BMP_Management,2004,NA,27.59344,-82.675961,,$0.00 
+1236,Seagrass Protection Ordinance 04-72,Lower Tampa Bay,Manatee County,Habitat_Protection,Protection_Management,2004,NA,27.59344,-82.675961,,"$100,000.00 "
+1237,Irrigation Requirements for Developments,All Segments,Manatee County,Nonpoint_Source,Regulation,1999,NA,27.79,-82.442,,$0.00 
+1238,Best Practices for Landscape Bed Cultivation,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Management,2004,NA,28.019236,-82.21548,,"$10,000.00 "
+1239,This Old Pond Video,All Segments,TBRPC,Nonpoint_Source,Education,2000,NA,27.79,-82.442,,$200.00 
+1240,Litter Bag Campaign,All Segments,TBRPC,Nonpoint_Source,Education,2001,NA,27.79,-82.442,,"$2,500.00 "
+1241,Discovery Garden,Hillsborough Bay,TBRPC,Nonpoint_Source,Education,2004,NA,28.019236,-82.21548,,"$17,000.00 "
+1242,Stormwater Diversion Project,Old Tampa Bay,TBRPC,Nonpoint_Source,Education,2005,NA,28.012172,-82.609611,,"$5,000.00 "
+1243,Hillsborough River Campaign,Hillsborough Bay,TBRPC,Nonpoint_Source,Education,2004,NA,28.019236,-82.21548,,"$5,834.00 "
+1244,Hillsborough River Greenways Task Force-HRGTF,Hillsborough Bay,TBRPC,Nonpoint_Source,Education,2005,NA,28.019236,-82.21548,,"$2,300.00 "
+1245,City of Temple Terrace River Fest,Hillsborough Bay,TBRPC,Nonpoint_Source,Education,2005,NA,28.019236,-82.21548,,"$2,162.00 "
+1246,IMC Agrico Company Termination of Ammonia in Flot Plants - Little Manatee River,Middle Tampa Bay,Mosaic,Point_Source,PS_Treatment,1995,21000,27.662673,-82.215645,,$0.00 
+1247,Bartow Phosphate Complex -  Enhanced Process Water Evaporation -  Nutrient Load Prevention -Project-2005,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2005,3520,27.866425,-81.928348,,$0.00 
+1248,East Gate Drainage Improvements,Old Tampa Bay,SWFWMD,Nonpoint_Source,BMP_Stormwater_Pond,2005,518,28.012172,-82.609611,,$0.00 
+1249,Hillgrove and Stearns Stormwater Facilities -  Phase I-Alafia River,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Treatment_Train,2011,1916.1,27.89003,-82.239398,,"$2,729,119.00 "
+1250,I-4 from I-75 to McIntosh Road - Baker Creek Mitigation,Hillsborough Bay,FDOT,Nonpoint_Source,BMP_Wetland_Treatment,1999,NA,28.019236,-82.21548,,$0.00 
+1251,Bartow Phosphate Complex -  Enhanced Process Water Evatoration -  Nutrient Load Prevention Project,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2006,3520,27.866425,-81.928348,,$0.00 
+1252,Five-Year Stormwater Capital Improvement Program,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Management,2010,NA,27.86714745,-82.35780285,,$0.00 
+1253,Cabbage Patch Point,Old Tampa Bay,City of Largo,Habitat_Establishment,Mangroves,2007,NA,28.012172,-82.609611,,$0.00 
+1254,Hurley Tailwater Pond,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Agricultural,2006,664.3,27.768576,-82.267185,,"$250,000.00 "
+1255,Lake Meade Water Quality Improvement,Hillsborough Bay,Hillsborough County,Habitat_Protection,Protection_Management,2011,417.9,27.947417,-82.29465,,"$200,000.00 "
+1256,Fairwood Forest Channel Improvements,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,2009,NA,27.972052,-82.723811,,$0.00 
+1257,Channel A at the Long Center,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,2006,NA,28.012172,-82.609611,,$0.00 
+1258,Bayview Park,Old Tampa Bay,City of Clearwater,Habitat_Protection,Acquisition,2008,NA,27.960191,-82.709688,,$0.00 
+1259,Arcturas Pond Outfall,Old Tampa Bay,City of Clearwater,Nonpoint_Source,BMP_Management,2001,NA,28.012172,-82.609611,,$0.00 
+1260,Unpaved Alleys Sediment and Erosion Control,Old Tampa Bay,City of Largo,Nonpoint_Source,BMP_Management,2010,NA,27.86714745,-82.35780285,,"$700,000.00 "
+1261,58th Street North Sewer Extension Project,Old Tampa Bay,City of Largo,Nonpoint_Source,Send_to_WWTP,2006,NA,28.012172,-82.609611,,$0.00 
+1262,Citywide Drainage Improvement Projects,Old Tampa Bay,City of Largo,Nonpoint_Source,BMP_Management,2001,NA,28.012172,-82.609611,,"$250,000.00 "
+1263,Alcove Subdivision Creek Restoration,Old Tampa Bay,City of Largo,Habitat_Enhancement,Hydrologic_Restoration,2013,NA,27.86714745,-82.35780285,,"$900,000.00 "
+1264,Long Branch Creek Drainage Basin Improvements,Old Tampa Bay,City of Largo,Nonpoint_Source,BMP_Management,2009,NA,28.012172,-82.609611,,"$75,000.00 "
+1265,"Outfall from SR 580 to Sweetwater Creek Canal ""C"" Suntree baffle box retrofit",Old Tampa Bay,FDOT,Nonpoint_Source,BMP_Baffle_Box,2005,34,28.012172,-82.609611,,$0.00 
+1266,North Dale Mabry Highway Stormwater Retrofit & Wetland Restoration,Old Tampa Bay,FDOT,Nonpoint_Source,BMP_Treatment_Train,2012,900,28.012172,-82.609611,,$0.00 
+1267,City of Plant City -  Existing Reuse by Reclaimed Water Irrigation,Hillsborough Bay,City of Plant City,Point_Source,Increase_Reuse,2007,1257.1,28.019236,-82.21548,,$0.00 
+1268,City of Plant City -  Reclaimed Water Irrigation at City Parks,Hillsborough Bay,City of Plant City,Point_Source,Increase_Reuse,2009,244.2,28.019236,-82.21548,,$0.00 
+1269,City of Plant City proposed reuse by reclaimed water irrigation at Walden Lake Golf course,Hillsborough Bay,City of Plant City,Point_Source,Increase_Reuse,2012,1600.2,27.988027,-82.155848,,"$3,600,000.00 "
+1270,Manatee Plant Cooling Pond Seepage Return Project,Middle Tampa Bay,Florida Power & Light,Nonpoint_Source,BMP_Management,1994,12951.2,27.662673,-82.215645,,$0.00 
+1271,Tampa Bay Regional Surface Water Treatment Plant Expansion,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2008,61293,27.857194,-82.268657,,"$133,000,000.00 "
+1272,Tampa Bay Water Regional Surface Water Treatment Plant,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2003,151760,27.9607937,-82.34500766,,$0.00 
+1273,Tampa Bay Regional Surface Water Treatment Plant Expansion,Hillsborough Bay,Tampa Bay Water,Nonpoint_Source,Send_to_WWTP,2008,78456,27.982428,-82.352551,,$0.00 
+1274,Facility Improvements,Hillsborough Bay,Eastern Terminals,Point_Source,BMP_On_Site,2008,3000,27.86714745,-82.35780285,,$0.00 
+1275,Robles Park Water Quality and Natural Systems Improvement,Hillsborough Bay,SWFWMD,Habitat_Enhancement,FW_Wetlands,2012,NA,27.86714745,-82.35780285,,"$341,935.00 "
+1276,Creative Drive Outfall Project,Hillsborough Bay,Polk County,Nonpoint_Source,BMP_Management,2006,NA,27.96387,-81.968871,,"$218,225 "
+1277,Agricultural BMPs,Hillsborough Bay,FDEP/FDACS,Nonpoint_Source,BMP_Agricultural,2012,NA,27.84879046,-81.90994263,,NA
+1278,Agricultural BMPs,Hillsborough Bay,FDEP/FDACS,Nonpoint_Source,BMP_Agricultural,2012,NA,27.84879046,-81.90994263,,NA
+1279,New River Bacteria Source Assessment,Hillsborough Bay,Pasco County,Nonpoint_Source,BMP_Management,2011,NA,28.18612539,-82.26493835,,86620
+1280,Rivergarden Park Sediment Traps,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2007,1.7,27.973438,-82.4806909,,NA
+1281,Westshore Ditch Bottom Sumps,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Management,2004,140,27.87083871,-82.53096503,,58815
+1282,Sediment Trap: 30th and Corrine,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,1998,4.4,27.9490062,-82.42654093,,NA
+1283,Sediment Trap: 46th and Riverhills,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2008,2.2,28.02199831,-82.41004183,,348000
+1284,Sediment Trap: Spring Lake,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,4.6,27.91389095,-82.52669924,,175000
+1285,Sediment Trap: Epps Park,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2003,2.5,28.00727349,-82.46417885,,120000
+1286,Sediment Trap: North Street Outfall,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2003,3.2,28.00542371,-82.4648599,,207000
+1287,Sediment Trap: Neptune Way Canal,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2003,2.7,27.94135476,-82.52529097,,76000
+1288,Sediment Trap: Lake Kipling Project #1,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,10.4,27.92164991,-82.52332531,,355000
+1289,Sediment Trap: Lake Roberta Downstream Defender unit,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,5.1,28.00057518,-82.45089214,,146000
+1290,Sediment Trap: Marjorie Park Marina,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,NA,27.92984072,-82.45563837,,NA
+1291,Sediment Trap: West Tampa,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2005,1.5,27.97661666,-82.48889106,,278000
+1292,Sediment Trap: Columbus at Riverside S,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2007,NA,27.96536341,-82.47430521,,119000
+1293,Sediment Trap NSBB: N Park Circle,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_CDS_Unit,2009,3.7,28.0130837,-82.4414387,,NA
+1294,Urban Lake Rescue -  Lake Roberta,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Management,2010,31.1,28.00111631,-82.44902588,,1113832
+1295,Urban Lake Rescue -  Lake Kipling,Old Tampa Bay,City of Tampa,Nonpoint_Source,BMP_Management,2010,NA,27.921627,-82.524016,,1129765
+1296,W Palmetto St Stormwater Improvements,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2011,4.3,27.96238125,-82.49834043,,25000
+1297,47th & Frierson Pond Project,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2011,7.4,27.99428653,-82.40599231,,125000
+1298,North Tampa Closed Basins - Phase I,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Stormwater_Pond,2012,10,28.04722491,-82.44657091,,1100000
+1299,Alafia River Cooridor - North Prong,Hillsborough Bay,Hillsborough County,Habitat_Protection,Acquisition,2006,NA,27.8892,-82.0919,,8264400
+1300,East Lake Outfall Water Quality Improvement Retrofit,Hillsborough Bay,SWFWMD,Nonpoint_Source,BMP_Management,2000,NA,27.98789,-82.373728,,1260921
+1301,CSXT Rockport Terminal Non-Contact Storm Water Mgmt,Hillsborough Bay,CSX Transportation,Point_Source,BMP_On_Site,2011,NA,27.915475,-82.420308,,NA
+1302,Plant repowering,Old Tampa Bay,Progress Energy Inc.,Nonpoint_Source,Atmospheric_Deposition,2009,15900,27.8616,-82.6008,,NA
+1303,Jean Park STA,Hillsborough Bay,Hillsborough County,Nonpoint_Source,BMP_Management,2002,30.1,28.067864,-82.472364,,NA
+1304,Perico Preserve,Lower Tampa Bay,Manatee County,Habitat_Protection,Acquisition,2007,NA,27.50125472,-82.67930833,,4132590
+1305,29th S/N Nutrient Seperating Baffle Box,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,BMP_Baffle_Box,2010,105.8,27.782974,-82.671154,,NA
+1306,Allen's Creek Erosion Control,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2010,NA,27.95379,-82.75844,,690000
+1307,Alligator Creek Channel B Phase III,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2010,NA,27.986,-82.7241,,3824600
+1308,Alligator Creek Channel B Phase II,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2008,NA,27.986,-82.7274,,500000
+1309,City-Wide Reclaimed Water Service,Old Tampa Bay,City of Clearwater,Point_Source,Increase_Reuse,2011,NA,27.964688,-82.744732,,NA
+1310,Acceptance of City of Plant City Reclaimed Water at CF Industries-Plant City Facility,Hillsborough Bay,Mosaic,Point_Source,Increase_Reuse,2008,15257.6,28.163949,-82.147351,,NA
+1311,Bartow Operations Effluent Treatment Wetland System,Hillsborough Bay,Mosaic,Point_Source,PS_Treatment,2011,880,27.768537,-81.943245,,NA
+1312,City of Tampa Interactive Watershed Atlas,Hillsborough Bay,City of Tampa,Nonpoint_Source,Education,2007,NA,27.977424,-82.451019,,NA
+1313,North Boulevard Siphon Rehabilitation Project,Hillsborough Bay,City of Tampa,Nonpoint_Source,BMP_Management,2009,NA,27.950208,-82.4684,,"$295,250 "
+1314,12th Street Forcemain Replacement,Hillsborough Bay,City of Tampa,Point_Source,Management,2009,NA,28.018916,-82.447264,,"$13,000,000 "
+1315,W.E. Dunn BNR Optimization,Old Tampa Bay,Pinellas County,Point_Source,PS_Treatment,2009,NA,28.109681,-82.766705,,NA
+1316,Annual Street Sweeping Maintenance BMP,Old Tampa Bay,City of Tampa,Nonpoint_Source,Street_Sweeping,2012,NA,27.977424,-82.507324,,NA
+1317,Street Sweeping - Middle Tampa Bay,Middle Tampa Bay,City of St. Petersburg,Nonpoint_Source,Street_Sweeping,2007,500,27.768925,-82.642078,,NA
+1318,Street Sweeping - Old Tampa Bay,Old Tampa Bay,City of St. Petersburg,Nonpoint_Source,Street_Sweeping,2012,136,27.874894,-82.643108,,NA
+1319,Pinellas County Fertilizer Ordinance,Old Tampa Bay,Pinellas County,Nonpoint_Source,Education,2010,NA,27.880356,-82.729797,,NA
+1320,Manatee County Fertilizer Ordinance,Lower Tampa Bay,Manatee County,Nonpoint_Source,Education,2011,NA,27.542371,-82.367249,,NA
+1321,Street Sweeping - Hillsborough County Total,Old Tampa Bay,Hillsborough County,Nonpoint_Source,Street_Sweeping,2012,1958,28.047743,-82.580109,,NA
+1322,Street Sweeping - City of Plant City,Hillsborough Bay,City of Plant City,Nonpoint_Source,Street_Sweeping,2012,434.6,28.01956,-82.115936,,NA
+1323,Street Sweeping in Alafia River Basin,Hillsborough Bay,FDOT,Nonpoint_Source,Street_Sweeping,2013,NA,27.857726,-82.346542,,NA
+1324,SWIM Phase 3 Ecosystem Restoration,Middle Tampa Bay,MacDill Air Force Base,Habitat_Enhancement,Hydrologic_Restoration,2013,965.9,27.833169,-82.483371,,1900000
+1325,Itchepackesassa Creek Wetland Treatment Project,Hillsborough Bay,Polk County,Nonpoint_Source,BMP_Management,2013,3760,28.107196,-82.094937,,"$4,783,619.00 "
+1326,SHARP,Hillsborough Bay,Hillsborough County,Point_Source,PS_Treatment,2016,17096.4,27.80833333,-82.39083333,,NA
+1327,Street Sweeping,Old Tampa Bay,City of Safety Harbor,Nonpoint_Source,Street_Sweeping,2015,NA,0,0,,45000
+1328,Street Sweeping,Old Tampa Bay,City of Safety Harbor,Nonpoint_Source,Street_Sweeping,2016,NA,0,0,,45000
+1329,Street Sweeping,Old Tampa Bay,Pinellas County,Nonpoint_Source,Street_Sweeping,2012,NA,0,0,,NA
+1330,Street Sweeping,Middle Tampa Bay,Pinellas County,Nonpoint_Source,Street_Sweeping,2012,NA,0,0,,NA
+1331,Stormwater Catch Basin Cleanouts,Old Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2012,NA,0,0,,NA
+1332,Stormwater Catch Basin Cleanouts,Middle Tampa Bay,Pinellas County,Nonpoint_Source,BMP_Management,2012,NA,0,0,,NA
+1333,Street Sweeping Improved,Old Tampa Bay,Pinellas County,Nonpoint_Source,Street_Sweeping,2017,NA,0,0,,NA
+1334,Street Sweeping Improved,Middle Tampa Bay,Pinellas County,Nonpoint_Source,Street_Sweeping,2017,NA,0,0,,NA
