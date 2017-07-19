@@ -8,6 +8,7 @@ library(ggmap)
 library(lubridate)
 library(geosphere)
 library(stringi)
+library(tibble)
 ```
 
 ## Restoration data
@@ -35,7 +36,8 @@ habdat <- fl %>%
     date = as.numeric(date),
     tech = toupper(tech)
   ) %>% 
-  filter(lat > 27.3 & lat < 28.2) 
+  filter(lat > 27.3 & lat < 28.2) %>% 
+  filter(!is.na(date))
 
 # habitat restoration station locs
 habstat <- habdat %>% 
@@ -60,12 +62,12 @@ head(habdat)
 ## # A tibble: 6 x 5
 ##    date                   tech          type  acre    id
 ##   <dbl>                  <chr>         <chr> <dbl> <chr>
-## 1  2005       WETLAND CREATION Establishment  14.0  PqpP
-## 2  1998       WETLAND CREATION Establishment   3.0  SPzW
-## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8  NYhA
-## 4  2004         EXOTIC CONTROL   Enhancement 123.9  zSUZ
-## 5  2006             EXCAVATION Establishment  20.0  KIDT
-## 6  2006             EXCAVATION Establishment  26.0  Djl3
+## 1  2005       WETLAND CREATION Establishment  14.0  7ogp
+## 2  1998       WETLAND CREATION Establishment   3.0  XFoH
+## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8  xmzd
+## 4  2004         EXOTIC CONTROL   Enhancement 123.9  Dqii
+## 5  2006             EXCAVATION Establishment  20.0  x8A3
+## 6  2006             EXCAVATION Establishment  26.0  WzAV
 ```
 Locations of habitat restoration projects:
 
@@ -77,12 +79,12 @@ head(habstat)
 ## # A tibble: 6 x 3
 ##      id      lat       lon
 ##   <chr>    <dbl>     <dbl>
-## 1  PqpP 27.93133 -82.73820
-## 2  SPzW 27.95087 -82.54180
-## 3  NYhA 27.88977 -82.39888
-## 4  zSUZ 27.88994 -82.40340
-## 5  KIDT 27.97370 -82.71504
-## 6  Djl3 27.97370 -82.71504
+## 1  7ogp 27.93133 -82.73820
+## 2  XFoH 27.95087 -82.54180
+## 3  xmzd 27.88977 -82.39888
+## 4  Dqii 27.88994 -82.40340
+## 5  x8A3 27.97370 -82.71504
+## 6  WzAV 27.97370 -82.71504
 ```
 
 ## Load data
@@ -219,7 +221,7 @@ data(habstat)
 data(wqstat)
 
 # get this many closest to each station
-mtch <- 20
+mtch <- 10
 
 # match habitat restoration locations with wq stations by closest mtch locations
 wqmtch <- wqstat %>% 
@@ -227,14 +229,15 @@ wqmtch <- wqstat %>%
   nest %>% 
   mutate(
     clo = map(data, function(sta){
-
+   
       # get top mtch closest restoration projects to each station
       dists <- distm(rbind(sta, habstat[, -1])) %>%
         .[-1, 1] %>% 
-        data.frame(habstat, dist = .) %>% 
+        data.frame(id = habstat$id, dist = ., stringsAsFactors = F) %>% 
         arrange(dist) %>% 
         .[1:mtch, ] %>% 
-        data.frame(sta, ., rnk = 1:mtch)
+        select(-dist) %>% 
+        data.frame(., rnk = 1:mtch, stringsAsFactors = F)
       
       return(dists)
       
@@ -247,15 +250,15 @@ head(wqmtch)
 ```
 
 ```
-## # A tibble: 6 x 8
-##    stat      lon     lat    id    lat.1     lon.1     dist   rnk
-##   <int>    <dbl>   <dbl> <chr>    <dbl>     <dbl>    <dbl> <int>
-## 1    47 -82.6202 27.9726  GoIk 27.99817 -82.61724 2861.746     1
-## 2    47 -82.6202 27.9726  v0lM 27.99911 -82.61671 2971.000     2
-## 3    47 -82.6202 27.9726  g5FE 27.97310 -82.57360 4581.869     3
-## 4    47 -82.6202 27.9726  6fvh 27.99967 -82.58379 4678.879     4
-## 5    47 -82.6202 27.9726  14V3 28.01691 -82.63240 5075.789     5
-## 6    47 -82.6202 27.9726  eC1t 28.01178 -82.58063 5843.654     6
+## # A tibble: 6 x 3
+##    stat    id   rnk
+##   <int> <chr> <int>
+## 1    47  Jefm     1
+## 2    47  YODC     2
+## 3    47  jC2W     3
+## 4    47  LDda     4
+## 5    47  MlzR     5
+## 6    47  eWCh     6
 ```
 
 ### Closest 
@@ -263,6 +266,11 @@ head(wqmtch)
 ```r
 ## 
 # plots
+
+# combine lat/lon for the plot
+toplo <- wqmtch %>% 
+  left_join(wqstat, by = 'stat') %>% 
+  left_join(habstat, by = 'id')
 
 # extent
 ext <- make_bbox(habstat$lon, habstat$lat)
@@ -279,10 +287,10 @@ pbase <- ggmap(map) +
   geom_point(data = wqstat, aes(x = lon, y = lat))
 
 # closest
-toplo1 <- filter(wqmtch, rnk %in% 1)
+toplo1 <- filter(toplo, rnk %in% 1)
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
@@ -291,10 +299,10 @@ pbase +
 
 ```r
 # closest five
-toplo2 <- filter(wqmtch, rnk %in% c(1:5))
+toplo2 <- filter(toplo, rnk %in% c(1:5))
 
 pbase + 
-  geom_segment(data = toplo2, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ![](tbrest_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
@@ -303,12 +311,103 @@ pbase +
 
 ```r
 # closest twenty
-toplo3 <- filter(wqmtch, rnk %in% c(1:20))
+toplo3 <- filter(toplo, rnk %in% c(1:20))
 
 pbase + 
-  geom_segment(data = toplo3, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ![](tbrest_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
-         
+## Summarizing effects of restoration projects
+
+
+```r
+# diff to summarize wq data, in years before/after restoration projects
+yrdf <- 5
+
+# get only chl dat
+chldat <- wqdat %>% 
+  select(-sal, -do)
+
+wqchng <- wqmtch %>% 
+  left_join(habdat, by = 'id') %>% 
+  select(-acre) %>% 
+  mutate(
+    date = paste0(date, '-07-01'),
+    date = as.Date(date, format = '%Y-%m-%d')
+    ) %>% 
+  split(.$stat) %>% 
+  map(., function(x){
+    
+    # iterate through the restoration sites closest to each wq station
+    bysta <- x %>% 
+      group_by(rnk) %>% 
+      nest %>% 
+      mutate(
+        wqchg = map(data, function(dt){
+          
+          # summarize before/after wq data based on restoration date
+          
+          # filter wq data by stat, get date bounds
+          statdat <- filter(chldat, stat %in% dt$stat)
+          orrng <- range(statdat$datetime)
+          
+          # get date range +/- restoratin proj defined by yrdf
+          dtrng <- with(dt, c(date - yrdf * 365, date + yrdf * 365))
+          
+          ## get values within window in dtrng, only if date available
+          bef <- NA; aft <- NA
+          
+          # before
+          if(dtrng[1] >= orrng[1]){
+          
+            # summarizes values before
+            bef <- filter(statdat, datetime >= dtrng[1] & datetime <= dt$date) %>% 
+              .$chla %>% 
+              mean(na.rm = TRUE)
+            
+          }
+          
+          # after
+          if(dtrng[2] <= orrng[2]){
+            
+            # summarize values after
+            aft <- filter(statdat, datetime <= dtrng[2] & datetime >= dt$date) %>% 
+              .$chla %>% 
+              mean(na.rm = TRUE)
+            
+          }
+          
+          # combine/return the wq station/restoration station summary
+          out <- data.frame(bef = bef, aft = aft)
+          return(out)
+          
+        })
+      
+      )
+    
+    # return the complete restoration summary
+    bysta <- unnest(bysta)
+    return(bysta)
+
+  }) %>% 
+  do.call('rbind', .) %>% 
+  remove_rownames()
+
+head(wqchng)
+```
+
+```
+## # A tibble: 6 x 8
+##     rnk  stat    id       date                   tech          type
+##   <int> <int> <chr>     <date>                  <chr>         <chr>
+## 1     1     6  NRws 1995-07-01 SUBSTRATE MODIFICATION Establishment
+## 2     2     6  SRko 2005-07-01         OYSTER HABITAT Establishment
+## 3     3     6  yxBx 2007-07-01         OYSTER HABITAT Establishment
+## 4     4     6  r28M 1990-07-01       WETLAND PLANTING Establishment
+## 5     5     6  yV1j 2003-07-01         OYSTER HABITAT Establishment
+## 6     6     6  2n0O 2004-07-01       WETLAND PLANTING Establishment
+## # ... with 2 more variables: bef <dbl>, aft <dbl>
+```
+

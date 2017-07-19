@@ -15,6 +15,7 @@ library(ggmap)
 library(lubridate)
 library(geosphere)
 library(stringi)
+library(tibble)
 ```
 
 ## Restoration data
@@ -41,7 +42,8 @@ habdat <- fl %>%
     date = as.numeric(date),
     tech = toupper(tech)
   ) %>% 
-  filter(lat > 27.3 & lat < 28.2) 
+  filter(lat > 27.3 & lat < 28.2) %>% 
+  filter(!is.na(date))
 
 # habitat restoration station locs
 habstat <- habdat %>% 
@@ -169,7 +171,7 @@ data(habstat)
 data(wqstat)
 
 # get this many closest to each station
-mtch <- 20
+mtch <- 10
 
 # match habitat restoration locations with wq stations by closest mtch locations
 wqmtch <- wqstat %>% 
@@ -177,14 +179,15 @@ wqmtch <- wqstat %>%
   nest %>% 
   mutate(
     clo = map(data, function(sta){
-
+   
       # get top mtch closest restoration projects to each station
       dists <- distm(rbind(sta, habstat[, -1])) %>%
         .[-1, 1] %>% 
-        data.frame(habstat, dist = .) %>% 
+        data.frame(id = habstat$id, dist = ., stringsAsFactors = F) %>% 
         arrange(dist) %>% 
         .[1:mtch, ] %>% 
-        data.frame(sta, ., rnk = 1:mtch)
+        select(-dist) %>% 
+        data.frame(., rnk = 1:mtch, stringsAsFactors = F)
       
       return(dists)
       
@@ -201,6 +204,11 @@ head(wqmtch)
 ## 
 # plots
 
+# combine lat/lon for the plot
+toplo <- wqmtch %>% 
+  left_join(wqstat, by = 'stat') %>% 
+  left_join(habstat, by = 'id')
+
 # extent
 ext <- make_bbox(habstat$lon, habstat$lat)
 map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
@@ -216,28 +224,106 @@ pbase <- ggmap(map) +
   geom_point(data = wqstat, aes(x = lon, y = lat))
 
 # closest
-toplo1 <- filter(wqmtch, rnk %in% 1)
+toplo1 <- filter(toplo, rnk %in% 1)
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ### Closest five
 ```{r message = F, warning = F, fig.width = 6, fig.height = 8}
 # closest five
-toplo2 <- filter(wqmtch, rnk %in% c(1:5))
+toplo2 <- filter(toplo, rnk %in% c(1:5))
 
 pbase + 
-  geom_segment(data = toplo2, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
 ### Closest twenty
 ```{r message = F, warning = F, fig.width = 6, fig.height = 8}
 # closest twenty
-toplo3 <- filter(wqmtch, rnk %in% c(1:20))
+toplo3 <- filter(toplo, rnk %in% c(1:20))
 
 pbase + 
-  geom_segment(data = toplo3, aes(x = lon, y = lat, xend = lon.1, yend = lat.1))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
 ```
 
-         
+## Summarizing effects of restoration projects
+
+```{r}
+
+# diff to summarize wq data, in years before/after restoration projects
+yrdf <- 5
+
+# get only chl dat
+chldat <- wqdat %>% 
+  select(-sal, -do)
+
+wqchng <- wqmtch %>% 
+  left_join(habdat, by = 'id') %>% 
+  select(-acre) %>% 
+  mutate(
+    date = paste0(date, '-07-01'),
+    date = as.Date(date, format = '%Y-%m-%d')
+    ) %>% 
+  split(.$stat) %>% 
+  map(., function(x){
+    
+    # iterate through the restoration sites closest to each wq station
+    bysta <- x %>% 
+      group_by(rnk) %>% 
+      nest %>% 
+      mutate(
+        wqchg = map(data, function(dt){
+          
+          # summarize before/after wq data based on restoration date
+          
+          # filter wq data by stat, get date bounds
+          statdat <- filter(chldat, stat %in% dt$stat)
+          orrng <- range(statdat$datetime)
+          
+          # get date range +/- restoratin proj defined by yrdf
+          dtrng <- with(dt, c(date - yrdf * 365, date + yrdf * 365))
+          
+          ## get values within window in dtrng, only if date available
+          bef <- NA; aft <- NA
+          
+          # before
+          if(dtrng[1] >= orrng[1]){
+          
+            # summarizes values before
+            bef <- filter(statdat, datetime >= dtrng[1] & datetime <= dt$date) %>% 
+              .$chla %>% 
+              mean(na.rm = TRUE)
+            
+          }
+          
+          # after
+          if(dtrng[2] <= orrng[2]){
+            
+            # summarize values after
+            aft <- filter(statdat, datetime <= dtrng[2] & datetime >= dt$date) %>% 
+              .$chla %>% 
+              mean(na.rm = TRUE)
+            
+          }
+          
+          # combine/return the wq station/restoration station summary
+          out <- data.frame(bef = bef, aft = aft)
+          return(out)
+          
+        })
+      
+      )
+    
+    # return the complete restoration summary
+    bysta <- unnest(bysta)
+    return(bysta)
+
+  }) %>% 
+  do.call('rbind', .) %>% 
+  remove_rownames()
+
+head(wqchng)
+```
+
