@@ -4,6 +4,18 @@ author: "Ed Sherwood"
 date: "July 19, 2017"
 output: html_document
 ---
+```{r message = F, warning = F, results = 'hide'}
+library(tidyverse)
+library(readxl)
+library(ggmap)
+library(lubridate)
+library(geosphere)
+library(stringi)
+library(tibble)
+knitr::knit('project_merge.Rmd', tangle = TRUE)
+file.copy('project_merge.R', 'R/project_merge.R')
+file.remove('project_merge.R')
+```
 
 ```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
 wat_tr <- 'data-raw/apdb_completed_categorized.csv'
@@ -12,12 +24,13 @@ wat_tr <- 'data-raw/apdb_completed_categorized.csv'
 watdat <- wat_tr %>% 
   read_csv %>% 
   rename(
-    lat = Latitude, 
-    lon = Longitude, 
-    date = Project_Completion_Date, 
-    tech = `Restoration Category`, 
-    type = `Activity-1`, 
-    acre = `Acres-1`
+    id = Unique_Project_ID
+    lat = ProjectLatitude, 
+    lon = ProjectLongitude, 
+    date = Completion_Date, 
+    tech = Project_Technology, 
+    type = Project_Activity, 
+    acre = Acres
   ) %>% 
   mutate(
     id = stri_rand_strings(nrow(.), length = 4),
