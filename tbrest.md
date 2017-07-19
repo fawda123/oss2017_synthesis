@@ -9,6 +9,9 @@ library(lubridate)
 library(geosphere)
 library(stringi)
 library(tibble)
+knitr::knit('tbrest.Rmd', tangle = TRUE)
+file.copy('tbrest.R', 'R/tbrest.R')
+file.remove('tbrest.R')
 ```
 
 ## Restoration data
@@ -62,12 +65,12 @@ head(habdat)
 ## # A tibble: 6 x 5
 ##    date                   tech          type  acre    id
 ##   <dbl>                  <chr>         <chr> <dbl> <chr>
-## 1  2005       WETLAND CREATION Establishment  14.0  2Z7u
-## 2  1998       WETLAND CREATION Establishment   3.0  9uZ3
-## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8  N06V
-## 4  2004         EXOTIC CONTROL   Enhancement 123.9  0w3K
-## 5  2006             EXCAVATION Establishment  20.0  Di8V
-## 6  2006             EXCAVATION Establishment  26.0  RV9Z
+## 1  2005       WETLAND CREATION Establishment  14.0  bF48
+## 2  1998       WETLAND CREATION Establishment   3.0  8EX8
+## 3  2005 HYDROLOGIC RESTORATION   Enhancement  12.8  govs
+## 4  2004         EXOTIC CONTROL   Enhancement 123.9  v5jh
+## 5  2006             EXCAVATION Establishment  20.0  lHl6
+## 6  2006             EXCAVATION Establishment  26.0  5jmu
 ```
 Locations of habitat restoration projects:
 
@@ -79,12 +82,12 @@ head(habstat)
 ## # A tibble: 6 x 3
 ##      id      lat       lon
 ##   <chr>    <dbl>     <dbl>
-## 1  2Z7u 27.93133 -82.73820
-## 2  9uZ3 27.95087 -82.54180
-## 3  N06V 27.88977 -82.39888
-## 4  0w3K 27.88994 -82.40340
-## 5  Di8V 27.97370 -82.71504
-## 6  RV9Z 27.97370 -82.71504
+## 1  bF48 27.93133 -82.73820
+## 2  8EX8 27.95087 -82.54180
+## 3  govs 27.88977 -82.39888
+## 4  v5jh 27.88994 -82.40340
+## 5  lHl6 27.97370 -82.71504
+## 6  5jmu 27.97370 -82.71504
 ```
 
 ## Load data
@@ -253,12 +256,12 @@ head(wqmtch)
 ## # A tibble: 6 x 3
 ##    stat    id   rnk
 ##   <int> <chr> <int>
-## 1    47  IaNm     1
-## 2    47  5cG7     2
-## 3    47  lE8V     3
-## 4    47  VjEh     4
-## 5    47  WElL     5
-## 6    47  f68c     6
+## 1    47  f3gF     1
+## 2    47  CLVT     2
+## 3    47  SKKd     3
+## 4    47  TUZe     4
+## 5    47  NB0b     5
+## 6    47  VkUx     6
 ```
 
 ### Closest 
@@ -402,12 +405,12 @@ head(wqchng)
 ## # A tibble: 6 x 8
 ##     rnk  stat    id       date                   tech          type
 ##   <int> <int> <chr>     <date>                  <chr>         <chr>
-## 1     1     6  fFdL 1995-07-01 SUBSTRATE MODIFICATION Establishment
-## 2     2     6  C7J8 2005-07-01         OYSTER HABITAT Establishment
-## 3     3     6  1sy2 2007-07-01         OYSTER HABITAT Establishment
-## 4     4     6  tiKZ 1990-07-01       WETLAND PLANTING Establishment
-## 5     5     6  BHHY 2003-07-01         OYSTER HABITAT Establishment
-## 6     6     6  16ID 2004-07-01       WETLAND PLANTING Establishment
+## 1     1     6  lHGQ 1995-07-01 SUBSTRATE MODIFICATION Establishment
+## 2     2     6  PVgz 2005-07-01         OYSTER HABITAT Establishment
+## 3     3     6  SRbg 2007-07-01         OYSTER HABITAT Establishment
+## 4     4     6  VgMZ 1990-07-01       WETLAND PLANTING Establishment
+## 5     5     6  r2OZ 2003-07-01         OYSTER HABITAT Establishment
+## 6     6     6  v0L6 2004-07-01       WETLAND PLANTING Establishment
 ## # ... with 2 more variables: bef <dbl>, aft <dbl>
 ```
 

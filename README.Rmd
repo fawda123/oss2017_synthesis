@@ -10,10 +10,10 @@ output:
 
 ## README
 
-### Getting the repo
+### Cloning and updating the repo
 
 ```bash
-# do this to get the repo
+# do this to get the repo, first time only
 git clone https://www.github.com/fawda13/oss2017_synthesis.git
 
 # do this every time before you make changes
@@ -22,18 +22,19 @@ git pull
 # do this after you make changes
 git add -A
 git commit -m "informative message"
+git pull
 git push
 ```
 ### View info online
 
 Type URL with filename, e.g., <href src="https://fawda123.github.io/oss2017_synthesis/tbrest">https://fawda123.github.io/oss2017_synthesis/tbrest</href>
 
-### Info
+### Repository info
 
 Folders:
 
 * `data` RData files, load with `data(filename)`
-* `data-raw` - put raw data files here, e.g., .xlsx., .txt., .csv
+* `data-raw` - put raw and intermediate data files here, e.g., .xlsx., .txt., .csv
 * `R` - R scripts
 
 RData files (these should be text files?) in `data`, normalized (maybe?):

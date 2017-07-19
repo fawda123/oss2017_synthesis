@@ -1,14 +1,4 @@
----
-title: "Exploratory plots of restoration activities in TB"
-output: 
-  html_document:
-    keep_md: yes
-    code_folding: hide
-    toc: true
-    toc_float: true
----
-
-```{r message = F, warning = F, results = 'hide'}
+## ----message = F, warning = F--------------------------------------------
 library(tidyverse)
 library(readxl)
 library(ggmap)
@@ -16,14 +6,8 @@ library(lubridate)
 library(geosphere)
 library(stringi)
 library(tibble)
-knitr::knit('tbrest.Rmd', tangle = TRUE)
-file.copy('tbrest.R', 'R/tbrest.R')
-file.remove('tbrest.R')
-```
 
-## Restoration data
-
-```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
+## ----warning = F, message = F, fig.width = 8, fig.height = 6-------------
 fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 
 # clean up habitat restoration data
@@ -59,20 +43,14 @@ habdat <- habdat %>%
 
 save(habdat, file = 'data/habdat.RData', compress = 'xz')
 save(habstat, file = 'data/habstat.RData', compress = 'xz')
-```
 
-Habitat restoration projects:
-```{r}
+## ------------------------------------------------------------------------
 head(habdat)
-```
-Locations of habitat restoration projects:
-```{r}
+
+## ------------------------------------------------------------------------
 head(habstat)
-```
 
-## Load data
-
-```{r warning = F, message = F, fig.width = 8, fig.height = 6}
+## ----warning = F, message = F, fig.width = 8, fig.height = 6-------------
 loads <- read_excel('data-raw/loads.xlsx')
 
 lddat <- loads %>% 
@@ -100,11 +78,8 @@ ggplot(lddat, aes(x = yr, y = val, group = yr)) +
   facet_grid(var~seg, scales = 'free_y') + 
   scale_y_log10('kg or m3 per month')
 
-```
 
-## WQ data
-
-```{r warning = F, message = F}
+## ----warning = F, message = F--------------------------------------------
 wqdat_raw <- read_csv('data-raw/epchc_clean_data_07162017.csv')
 
 # rename, select relevant columns, integrate variables across depths
@@ -154,21 +129,14 @@ wqdat <- wqdat %>%
   
 save(wqstat, file= 'data/wqstat.RData', compress = 'xz')
 save(wqdat, file = 'data/wqdat.RData', compress = 'xz')
-```
 
-Water quality station lat/lon:
-```{r}
+## ------------------------------------------------------------------------
 head(wqstat)
-```
 
-Water quality data:
-```{r}
+## ------------------------------------------------------------------------
 head(wqdat)
-```
 
-## Distance to restoration sites {.tabset}
-
-```{r}
+## ------------------------------------------------------------------------
 # load restoration and wq data 
 data(habstat)
 data(wqstat)
@@ -200,10 +168,8 @@ wqmtch <- wqstat %>%
   unnest
 
 head(wqmtch)
-```
 
-### Closest 
-```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+## ----message = F, warning = F, fig.width = 6, fig.height = 8-------------
 ## 
 # plots
 
@@ -231,29 +197,22 @@ toplo1 <- filter(toplo, rnk %in% 1)
 
 pbase + 
   geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
-```
 
-### Closest five
-```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+## ----message = F, warning = F, fig.width = 6, fig.height = 8-------------
 # closest five
 toplo2 <- filter(toplo, rnk %in% c(1:5))
 
 pbase + 
   geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
-```
 
-### Closest twenty
-```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+## ----message = F, warning = F, fig.width = 6, fig.height = 8-------------
 # closest twenty
 toplo3 <- filter(toplo, rnk %in% c(1:20))
 
 pbase + 
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
-```
 
-## Summarizing effects of restoration projects
-
-```{r}
+## ------------------------------------------------------------------------
 
 # diff to summarize wq data, in years before/after restoration projects
 yrdf <- 5
@@ -328,5 +287,4 @@ wqchng <- wqmtch %>%
   remove_rownames()
 
 head(wqchng)
-```
 
