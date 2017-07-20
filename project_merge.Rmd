@@ -117,10 +117,10 @@ reststat <- rbind(habstat, bmpstat)
 save(restdata, file = 'data/restdat.RData', compress = 'xz')
 save(reststat, file = 'data/reststat.RData', compress = 'xz')
 
-checkdata <- all_projects %>%
+checkdata <- restdata %>%
              select(type) %>%
              unique()
-checkdata2 <- all_projects %>%
+checkdata2 <- restdata %>%
              select(tech) %>%
              unique()
 ```
