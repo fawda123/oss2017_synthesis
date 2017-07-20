@@ -10,7 +10,7 @@ library(geosphere)
 library(stringi)
 library(tibble)
 knitr::knit('tbrest.Rmd', tangle = TRUE)
-file.copy('tbrest.R', 'R/tbrest.R')
+file.copy('tbrest.R', 'R/tbrest.R', overwrite = TRUE)
 file.remove('tbrest.R')
 ```
 
@@ -18,76 +18,43 @@ file.remove('tbrest.R')
 
 
 ```r
-fl <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
-
-# clean up habitat restoration data
-habdat <- fl %>% 
-  read_csv %>% 
-  select(Latitude, Longitude, Project_Completion_Date, `Type`, `Project_Technology`, `Project_Activity`) %>% 
-  rename(
-    lat = Latitude, 
-    lon = Longitude, 
-    date = Project_Completion_Date, 
-    tech = `Project_Technology`, 
-    type = `Type`,
-    activity = `Project_Activity`
-  ) %>% 
-  mutate(
-    id = stri_rand_strings(nrow(.), length = 4),
-    lat = as.numeric(lat),
-    lon = as.numeric(lon),
-    date = as.numeric(date),
-    tech = toupper(tech)
-  ) %>% 
-  filter(lat > 27.3 & lat < 28.2) %>% 
-  filter(!is.na(date))
-
-# habitat restoration station locs
-habstat <- habdat %>% 
-  select(id, lat, lon) %>% 
-  unique
-
-# normalized habitat data
-habdat <- habdat %>% 
-  select(-lat, -lon)
-
-save(habdat, file = 'data/habdat.RData', compress = 'xz')
-save(habstat, file = 'data/habstat.RData', compress = 'xz')
+data(restdat)
+data(reststat)
 ```
 
 Habitat restoration projects:
 
 ```r
-head(habdat)
+head(restdat)
 ```
 
 ```
 ## # A tibble: 6 x 5
-##    date        type                   tech            activity    id
-##   <dbl>       <chr>                  <chr>               <chr> <chr>
-## 1  2005 Enhancement HYDROLOGIC_RESTORATION Habitat_Enhancement  gUoB
-## 2  2004 Enhancement         EXOTIC_CONTROL Habitat_Enhancement  8GJw
-## 3  2005 Enhancement         EXOTIC_CONTROL Habitat_Enhancement  UTIw
-## 4  2006 Enhancement HYDROLOGIC_RESTORATION Habitat_Enhancement  C8CH
-## 5  2000 Enhancement         EXOTIC_CONTROL Habitat_Enhancement  o7eT
-## 6  1989 Enhancement HYDROLOGIC_RESTORATION Habitat_Enhancement  RuVF
+##    date                   tech                type  acre    id
+##   <dbl>                  <chr>               <chr> <chr> <chr>
+## 1  2005 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  12.8  Od6c
+## 2  2004         EXOTIC_CONTROL HABITAT_ENHANCEMENT 123.9  jDZw
+## 3  2005         EXOTIC_CONTROL HABITAT_ENHANCEMENT 123.9  ajg8
+## 4  2006 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT    45  off6
+## 5  2000         EXOTIC_CONTROL HABITAT_ENHANCEMENT  0.25  kipZ
+## 6  1989 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT    50  4TdU
 ```
 Locations of habitat restoration projects:
 
 ```r
-head(habstat)
+head(reststat)
 ```
 
 ```
 ## # A tibble: 6 x 3
 ##      id      lat       lon
 ##   <chr>    <dbl>     <dbl>
-## 1  gUoB 27.88977 -82.39888
-## 2  8GJw 27.88994 -82.40340
-## 3  UTIw 27.88181 -82.39783
-## 4  C8CH 27.97370 -82.71504
-## 5  o7eT 27.81921 -82.28548
-## 6  RuVF 27.99817 -82.61724
+## 1  Od6c 27.88977 -82.39888
+## 2  jDZw 27.88994 -82.40340
+## 3  ajg8 27.88181 -82.39783
+## 4  off6 27.97370 -82.71504
+## 5  kipZ 27.81921 -82.28548
+## 6  4TdU 27.99817 -82.61724
 ```
 
 ## WQ data
@@ -185,12 +152,18 @@ head(wqdat)
 
 
 ```r
-# load restoration and wq data 
-data(habstat)
-data(wqstat)
-
 # get this many closest to each station
-mtch <- 20
+mtch <- 10
+
+# join restoration site data and locs, make top level grouping column
+restall <- left_join(restdat, reststat, by = 'id') %>% 
+  mutate(
+    top = ifelse(grepl('HABITAT', type), 'hab', 'wtr')
+  )
+
+# restoration project grouping column
+resgrp <- 'top'
+names(restall)[names(restall) %in% resgrp] <- 'resgrp'
 
 # match habitat restoration locations with wq stations by closest mtch locations
 wqmtch <- wqstat %>% 
@@ -198,15 +171,23 @@ wqmtch <- wqstat %>%
   nest %>% 
   mutate(
     clo = map(data, function(sta){
-   
+
       # get top mtch closest restoration projects to each station
-      dists <- distm(rbind(sta, habstat[, -1])) %>%
-        .[-1, 1] %>% 
-        data.frame(id = habstat$id, dist = ., stringsAsFactors = F) %>% 
+      # grouped by resgrp column
+      dists <- distm(rbind(sta, restall[, c('lat', 'lon')])) %>%
+        .[-1, 1] %>%
+        data.frame(
+          restall[, c('id', 'resgrp')],
+          dist = ., stringsAsFactors = F
+          ) %>%
+        group_by(resgrp) %>%
         arrange(dist) %>% 
-        .[1:mtch, ] %>% 
-        select(-dist) %>% 
-        data.frame(., rnk = 1:mtch, stringsAsFactors = F)
+        nest %>%
+        mutate(
+          data = map(data, function(x) x[1:mtch, ]),
+          rnk = map(data, function(x) seq(1:nrow(x)))
+          ) %>% 
+        unnest
       
       return(dists)
       
@@ -219,15 +200,15 @@ head(wqmtch)
 ```
 
 ```
-## # A tibble: 6 x 3
-##    stat    id   rnk
-##   <int> <chr> <int>
-## 1    47  RuVF     1
-## 2    47  ZM4l     2
-## 3    47  ejOG     3
-## 4    47  NAod     4
-## 5    47  NDWF     5
-## 6    47  pYg5     6
+## # A tibble: 6 x 5
+##    stat resgrp   rnk    id     dist
+##   <int>  <chr> <int> <chr>    <dbl>
+## 1    47    hab     1  4TdU 2861.746
+## 2    47    hab     2  CpK7 2971.000
+## 3    47    hab     3  XJkh 4526.348
+## 4    47    hab     4  hIYO 4526.348
+## 5    47    hab     5  E4PQ 4526.348
+## 6    47    hab     6  8GWP 4526.348
 ```
 
 ### Closest 
@@ -239,10 +220,18 @@ head(wqmtch)
 # combine lat/lon for the plot
 toplo <- wqmtch %>% 
   left_join(wqstat, by = 'stat') %>% 
-  left_join(habstat, by = 'id')
+  left_join(reststat, by = 'id') %>% 
+  rename(
+    `Restoration\ngroup` = resgrp,
+    `Distance (dd)` = dist
+  )
+restall <- restall %>% 
+  rename(
+    `Restoration\ngroup` = resgrp
+  )
 
 # extent
-ext <- make_bbox(habstat$lon, habstat$lat)
+ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.1)
 map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
 
 # base map
@@ -252,14 +241,14 @@ pbase <- ggmap(map) +
     axis.title.x = element_blank(),
     axis.title.y = element_blank()
   ) +
-  geom_point(data = habstat, aes(x = lon, y = lat), fill  = 'green', size = 3, pch = 21) +
+  geom_point(data = restall, aes(x = lon, y = lat, fill = `Restoration\ngroup`), size = 3, pch = 21) +
   geom_point(data = wqstat, aes(x = lon, y = lat))
 
 # closest
 toplo1 <- filter(toplo, rnk %in% 1)
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
 ```
 
 ![](tbrest_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
@@ -271,19 +260,19 @@ pbase +
 toplo2 <- filter(toplo, rnk %in% c(1:5))
 
 pbase + 
-  geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
 ```
 
 ![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
-### Closest twenty
+### Closest ten
 
 ```r
 # closest twenty
-toplo3 <- filter(toplo, rnk %in% c(1:20))
+toplo3 <- filter(toplo, rnk %in% c(1:10))
 
 pbase + 
-  geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
 ```
 
 ![](tbrest_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
@@ -364,18 +353,5 @@ wqchng <- wqmtch %>%
   remove_rownames()
 
 head(wqchng)
-```
-
-```
-## # A tibble: 6 x 9
-##     rnk  stat    id       date          type           tech
-##   <int> <int> <chr>     <date>         <chr>          <chr>
-## 1     1     6  Z7An 1995-07-01 Establishment      SALTMARSH
-## 2     2     6  hT0v 2005-07-01 Establishment OYSTER_HABITAT
-## 3     3     6  RgUU 2007-07-01 Establishment OYSTER_HABITAT
-## 4     4     6  qqpl 1990-07-01 Establishment      MANGROVES
-## 5     5     6  ivY2 2003-07-01 Establishment OYSTER_HABITAT
-## 6     6     6  ufvl 2004-07-01 Establishment      SALTMARSH
-## # ... with 3 more variables: activity <chr>, bef <dbl>, aft <dbl>
 ```
 

@@ -26,8 +26,6 @@ file.remove('tbrest.R')
 ```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
 data(restdat)
 data(reststat)
-restdat <- get('all_projects')
-reststat <- get('all_proj_stat')
 ```
 
 Habitat restoration projects:
@@ -107,7 +105,17 @@ head(wqdat)
 
 ```{r}
 # get this many closest to each station
-mtch <- 20
+mtch <- 10
+
+# join restoration site data and locs, make top level grouping column
+restall <- left_join(restdat, reststat, by = 'id') %>% 
+  mutate(
+    top = ifelse(grepl('HABITAT', type), 'hab', 'wtr')
+  )
+
+# restoration project grouping column
+resgrp <- 'top'
+names(restall)[names(restall) %in% resgrp] <- 'resgrp'
 
 # match habitat restoration locations with wq stations by closest mtch locations
 wqmtch <- wqstat %>% 
@@ -115,15 +123,23 @@ wqmtch <- wqstat %>%
   nest %>% 
   mutate(
     clo = map(data, function(sta){
-   
+
       # get top mtch closest restoration projects to each station
-      dists <- distm(rbind(sta, reststat[, -1])) %>%
-        .[-1, 1] %>% 
-        data.frame(id = reststat$id, dist = ., stringsAsFactors = F) %>% 
+      # grouped by resgrp column
+      dists <- distm(rbind(sta, restall[, c('lat', 'lon')])) %>%
+        .[-1, 1] %>%
+        data.frame(
+          restall[, c('id', 'resgrp')],
+          dist = ., stringsAsFactors = F
+          ) %>%
+        group_by(resgrp) %>%
         arrange(dist) %>% 
-        .[1:mtch, ] %>% 
-        select(-dist) %>% 
-        data.frame(., rnk = 1:mtch, stringsAsFactors = F)
+        nest %>%
+        mutate(
+          data = map(data, function(x) x[1:mtch, ]),
+          rnk = map(data, function(x) seq(1:nrow(x)))
+          ) %>% 
+        unnest
       
       return(dists)
       
@@ -136,17 +152,25 @@ head(wqmtch)
 ```
 
 ### Closest 
-```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+```{r message = F, warning = F, fig.width = 7, fig.height = 8}
 ## 
 # plots
 
 # combine lat/lon for the plot
 toplo <- wqmtch %>% 
   left_join(wqstat, by = 'stat') %>% 
-  left_join(reststat, by = 'id')
+  left_join(reststat, by = 'id') %>% 
+  rename(
+    `Restoration\ngroup` = resgrp,
+    `Distance (dd)` = dist
+  )
+restall <- restall %>% 
+  rename(
+    `Restoration\ngroup` = resgrp
+  )
 
 # extent
-ext <- make_bbox(reststat$lon, reststat$lat)
+ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.1)
 map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
 
 # base map
@@ -156,37 +180,37 @@ pbase <- ggmap(map) +
     axis.title.x = element_blank(),
     axis.title.y = element_blank()
   ) +
-  geom_point(data = habstat, aes(x = lon, y = lat), fill  = 'green', size = 3, pch = 21) +
+  geom_point(data = restall, aes(x = lon, y = lat, fill = `Restoration\ngroup`), size = 3, pch = 21) +
   geom_point(data = wqstat, aes(x = lon, y = lat))
 
 # closest
 toplo1 <- filter(toplo, rnk %in% 1)
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
 ```
 
 ### Closest five
-```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+```{r message = F, warning = F, fig.width = 7, fig.height = 8}
 # closest five
 toplo2 <- filter(toplo, rnk %in% c(1:5))
 
 pbase + 
-  geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
 ```
 
-### Closest twenty
-```{r message = F, warning = F, fig.width = 6, fig.height = 8}
+### Closest ten
+```{r message = F, warning = F, fig.width = 7, fig.height = 8}
 # closest twenty
-toplo3 <- filter(toplo, rnk %in% c(1:20))
+toplo3 <- filter(toplo, rnk %in% c(1:10))
 
 pbase + 
-  geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y))
+  geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
 ```
 
 ## Summarizing effects of restoration projects
 
-```{r}
+```{r eval = F}
 
 # diff to summarize wq data, in years before/after restoration projects
 yrdf <- 5
