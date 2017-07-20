@@ -132,7 +132,11 @@ library(geosphere)
 library(stringi)
 library(tibble)
 knitr::knit('project_merge.Rmd', tangle = TRUE)
+<<<<<<< HEAD
 file.copy('project_merge.R', 'R/project_merge.R', overwrite = T)
+=======
+file.copy('project_merge.R', 'R/project_merge.R')
+>>>>>>> dd4f2e0e91de4b21402d71cfb5e873779d9a934b
 file.remove('project_merge.R')</code></pre>
 <pre class="r"><code>fl &lt;- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
 
@@ -175,12 +179,21 @@ save(habstat, file = 'data/habstat.RData', compress = 'xz')</code></pre>
 <pre><code>## # A tibble: 6 x 5
 ##    date                   tech                type   acre    id
 ##   &lt;dbl&gt;                  &lt;chr&gt;               &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;
+<<<<<<< HEAD
 ## 1  2005 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  12.80  9lRh
 ## 2  2004         EXOTIC_CONTROL HABITAT_ENHANCEMENT 123.90  iQGY
 ## 3  2005         EXOTIC_CONTROL HABITAT_ENHANCEMENT 123.90  ztRd
 ## 4  2006 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  45.00  xLHM
 ## 5  2000         EXOTIC_CONTROL HABITAT_ENHANCEMENT   0.25  qMHs
 ## 6  1989 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  50.00  l1xr</code></pre>
+=======
+## 1  2005 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  12.80  3Nwq
+## 2  2004         EXOTIC_CONTROL HABITAT_ENHANCEMENT 123.90  Dbrd
+## 3  2005         EXOTIC_CONTROL HABITAT_ENHANCEMENT 123.90  uKmi
+## 4  2006 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  45.00  ONji
+## 5  2000         EXOTIC_CONTROL HABITAT_ENHANCEMENT   0.25  vqm8
+## 6  1989 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  50.00  1caw</code></pre>
+>>>>>>> dd4f2e0e91de4b21402d71cfb5e873779d9a934b
 <pre class="r"><code>bmp_tr &lt;- 'data-raw/apdb_completed_categorized.csv'
 
 # clean up BMP-Treatment data
@@ -224,17 +237,27 @@ save(bmpstat, file = 'data/bmpstat.RData', compress = 'xz')</code></pre>
 <pre><code>## # A tibble: 6 x 5
 ##      id  date                   tech                type  acre
 ##   &lt;chr&gt; &lt;dbl&gt;                  &lt;chr&gt;               &lt;chr&gt; &lt;chr&gt;
+<<<<<<< HEAD
 ## 1  mi0V  1997  BMP_WETLAND_TREATMENT     NONPOINT_SOURCE  &lt;NA&gt;
 ## 2  jnGX  1999 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  &lt;NA&gt;
 ## 3  WMcx  1998         BMP_BAFFLE_BOX     NONPOINT_SOURCE 70-75
 ## 4  BHVD  2001    BMP_STORMWATER_POND     NONPOINT_SOURCE     2
 ## 5  xApT  2002    BMP_STORMWATER_POND     NONPOINT_SOURCE  &lt;NA&gt;
 ## 6  RRPm  2000    BMP_STORMWATER_POND     NONPOINT_SOURCE  &lt;NA&gt;</code></pre>
+=======
+## 1  kqPe  1997  BMP_WETLAND_TREATMENT     NONPOINT_SOURCE  &lt;NA&gt;
+## 2  prk4  1999 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  &lt;NA&gt;
+## 3  vZ46  1998         BMP_BAFFLE_BOX     NONPOINT_SOURCE 70-75
+## 4  elXB  2001    BMP_STORMWATER_POND     NONPOINT_SOURCE     2
+## 5  zq3x  2002    BMP_STORMWATER_POND     NONPOINT_SOURCE  &lt;NA&gt;
+## 6  O3z7  2000    BMP_STORMWATER_POND     NONPOINT_SOURCE  &lt;NA&gt;</code></pre>
+>>>>>>> dd4f2e0e91de4b21402d71cfb5e873779d9a934b
 <p>Locations of BMP Treatment projects:</p>
 <pre class="r"><code>head(bmpstat)</code></pre>
 <pre><code>## # A tibble: 6 x 3
 ##      id      lat       lon
 ##   &lt;chr&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+<<<<<<< HEAD
 ## 1  mi0V 27.92362 -82.38579
 ## 2  jnGX 28.12181 -82.12251
 ## 3  WMcx 28.01924 -82.21548
@@ -251,6 +274,24 @@ checkdata &lt;- restdat %&gt;%
              select(type) %&gt;%
              unique()
 checkdata2 &lt;- restdat %&gt;%
+=======
+## 1  kqPe 27.92362 -82.38579
+## 2  prk4 28.12181 -82.12251
+## 3  vZ46 28.01924 -82.21548
+## 4  elXB 28.01924 -82.21548
+## 5  zq3x 28.01924 -82.21548
+## 6  O3z7 27.98806 -82.37373</code></pre>
+<p>Combine cleaned up datasets</p>
+<pre class="r"><code>restdata &lt;- rbind(habdat, bmpdat)
+reststat &lt;- rbind(habstat, bmpstat)
+save(restdata, file = 'data/restdat.RData', compress = 'xz')
+save(reststat, file = 'data/reststat.RData', compress = 'xz')
+
+checkdata &lt;- restdata %&gt;%
+             select(type) %&gt;%
+             unique()
+checkdata2 &lt;- restdata %&gt;%
+>>>>>>> dd4f2e0e91de4b21402d71cfb5e873779d9a934b
              select(tech) %&gt;%
              unique()</code></pre>
 
