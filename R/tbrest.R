@@ -146,11 +146,11 @@ save(salchg, file = 'data/salchg.RData', compress = 'xz')
 head(salchg)
 
 ## ------------------------------------------------------------------------
-wqcdt <- get_cdt(salchg)
+wqcdt <- get_cdt(salchg, qts = c(0.25, 0.5, 0.75), 'resgrp', 'trt')
 head(wqcdt)
 
 ## ----fig.height = 5, fig.width = 7, message = F, warning = F-------------
-salbrk <- get_brk(wqcdt)
+salbrk <- get_brk(wqcdt, 'resgrp', 'trt')
 
 salbrk
 
@@ -164,4 +164,61 @@ ggplot(toplo, aes(x = cval, y = cumest, group = trt)) +
   geom_segment(data = salbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
   facet_grid(~ resgrp) +
   theme_bw()
+
+## ----eval = F------------------------------------------------------------
+## 
+## # source R files
+## source('R/get_chg.R')
+## source('R/get_clo.R')
+## source('R/get_cdt.R')
+## source('R/get_brk.R')
+## 
+## # data
+## data(restdat)
+## data(reststat)
+## data(wqdat)
+## data(wqstat)
+## 
+## # get station matches
+## wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = 10)
+## 
+## # get salinity changes
+## salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5)
+## salcdt <- get_cdt(salchg, 'resgrp', 'trt')
+## salbrk <- get_brk(salcdt, c(0.33, 0.66), 'resgrp', 'trt')
+## 
+## # get chlorophyll changes
+## chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = 5)
+## 
+## # merge with salinity, bet salinity levels
+## salbrk <- salbrk %>%
+##   group_by(resgrp, trt) %>%
+##   nest(.key = 'levs')
+## allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>%
+##   rename(
+##     salev = cval.y,
+##     cval = cval.x
+##   ) %>%
+##   group_by(resgrp, trt) %>%
+##   nest %>%
+##   left_join(salbrk, by = c('resgrp', 'trt')) %>%
+##   mutate(
+##     sallev = pmap(list(data, levs), function(data, levs){
+## 
+##       out <- data %>%
+##         mutate(
+##           salev = cut(salev, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
+##           salev = as.character(salev)
+##         )
+## 
+##       return(out)
+## 
+##     })
+##   ) %>%
+##   select(-data, -levs) %>%
+##   unnest
+## 
+## chlcdt <- get_cdt(allchg, 'resgrp', 'trt', 'salev')
+## chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'resgrp', 'trt', 'salev')
+## 
 

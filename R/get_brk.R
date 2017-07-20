@@ -3,13 +3,13 @@
 #' @param wqcdt
 #' @param qts quantile levels to split variable
 #'
-get_brk <- function(wqcdt, qts = c(0.25, 0.5, 0.75)){
+get_brk <- function(wqcdt, qts = c(0.25, 0.5, 0.75), ...){
   
   # get quantile levels, interpolate to cdf values, relabel
   brk <- wqcdt %>% 
-    select(resgrp, trt, prd) %>% 
+    select(-data, -crv) %>% 
     unnest %>% 
-    group_by(resgrp, trt) %>% 
+    group_by(...) %>% 
     nest %>% 
     mutate(
       qts = map(data, function(x){

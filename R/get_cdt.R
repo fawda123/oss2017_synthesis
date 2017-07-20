@@ -1,12 +1,13 @@
 #' Get conditional distribution estimates for change values
 #'
 #' @param wqchng 
+#' @param grps Grouping variables
 #'
-get_cdt <- function(wqchg){
+get_cdt <- function(wqchg, ...){
 
   # fit conditional distributions
   wqcdt <- wqchg %>% 
-    group_by(resgrp, trt) %>% 
+    group_by_(...) %>% 
     nest %>% 
     mutate(
       crv = map(data, function(x){
