@@ -171,7 +171,7 @@ restall <- restall %>%
 
 # extent
 ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.1)
-map <- get_stamenmap(ext, zoom = 11, maptype = "toner-lite")
+map <- get_stamenmap(ext, zoom = 12, maptype = "toner-lite")
 
 # base map
 pbase <- ggmap(map) +
@@ -180,14 +180,14 @@ pbase <- ggmap(map) +
     axis.title.x = element_blank(),
     axis.title.y = element_blank()
   ) +
-  geom_point(data = restall, aes(x = lon, y = lat, fill = `Restoration\ngroup`), size = 3, pch = 21) +
-  geom_point(data = wqstat, aes(x = lon, y = lat))
+  geom_point(data = restall, aes(x = lon, y = lat, fill = `Restoration\ngroup`), size = 4, pch = 21) +
+  geom_point(data = wqstat, aes(x = lon, y = lat), size = 2)
 
 # closest
 toplo1 <- filter(toplo, rnk %in% 1)
 
 pbase + 
-  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
+  geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 ```
 
 ### Closest five
@@ -196,7 +196,7 @@ pbase +
 toplo2 <- filter(toplo, rnk %in% c(1:5))
 
 pbase + 
-  geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
+  geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 ```
 
 ### Closest ten
@@ -205,84 +205,204 @@ pbase +
 toplo3 <- filter(toplo, rnk %in% c(1:10))
 
 pbase + 
-  geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = `Distance (dd)`, linetype = `Restoration\ngroup`))
+  geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 ```
 
 ## Summarizing effects of restoration projects
 
-```{r eval = F}
-
+Get weighted average of project type, treatment (before, after) of salinity for all wq station, restoration site combinations.
+```{r}
 # diff to summarize wq data, in years before/after restoration projects
 yrdf <- 5
 
-# get only chl dat
-chldat <- wqdat %>% 
-  select(-sal, -do)
+# get only sal dat
+saldat <- wqdat %>%
+  select(-chla, -do)
 
-wqchng <- wqmtch %>% 
-  left_join(habdat, by = 'id') %>% 
+# get weighted means of salinity for restoration treatments, types
+wqchng <- wqmtch %>%
+  left_join(restdat, by = 'id') %>%
+  select(-tech, -type, -acre) %>% 
   mutate(
     date = paste0(date, '-07-01'),
-    date = as.Date(date, format = '%Y-%m-%d')
-    ) %>% 
-  split(.$stat) %>% 
+    date = as.Date(date, format = '%Y-%m-%d'), 
+    wts = dist / min(dist),
+    wts = 1 / wts
+    ) %>%
+  split(.$stat) %>%
   map(., function(x){
-    
+
     # iterate through the restoration sites closest to each wq station
-    bysta <- x %>% 
-      group_by(rnk) %>% 
-      nest %>% 
+    bysta <- x %>%
+      group_by(rnk, resgrp) %>%
+      nest %>%
       mutate(
         wqchg = map(data, function(dt){
-          
+
           # summarize before/after wq data based on restoration date
-          
+
           # filter wq data by stat, get date bounds
-          statdat <- filter(chldat, stat %in% dt$stat)
+          statdat <- filter(saldat, stat %in% dt$stat)
           orrng <- range(statdat$datetime)
-          
+
           # get date range +/- restoratin proj defined by yrdf
           dtrng <- with(dt, c(date - yrdf * 365, date + yrdf * 365))
-          
-          ## get values within window in dtrng, only if date available
+
+          ## get values within window in dtrng, only if dates available
+          ## values are summarized as mean before/after
           bef <- NA; aft <- NA
-          
+
           # before
           if(dtrng[1] >= orrng[1]){
-          
+
             # summarizes values before
-            bef <- filter(statdat, datetime >= dtrng[1] & datetime <= dt$date) %>% 
-              .$chla %>% 
+            bef <- filter(statdat, datetime >= dtrng[1] & datetime <= dt$date) %>%
+              .$sal %>% 
               mean(na.rm = TRUE)
-            
+
           }
-          
+
           # after
           if(dtrng[2] <= orrng[2]){
-            
+
             # summarize values after
-            aft <- filter(statdat, datetime <= dtrng[2] & datetime >= dt$date) %>% 
-              .$chla %>% 
+            aft <- filter(statdat, datetime <= dtrng[2] & datetime >= dt$date) %>%
+              .$sal %>% 
               mean(na.rm = TRUE)
-            
+
           }
-          
+
           # combine/return the wq station/restoration station summary
           out <- data.frame(bef = bef, aft = aft)
           return(out)
-          
+
         })
-      
+
       )
-    
+
     # return the complete restoration summary
     bysta <- unnest(bysta)
     return(bysta)
 
-  }) %>% 
-  do.call('rbind', .) %>% 
-  remove_rownames()
+  }) %>%
+  do.call('rbind', .) %>%
+  remove_rownames() %>% 
+  gather('trt', 'val', bef:aft) %>% 
+  group_by(stat, resgrp, trt) %>% 
+  summarise(
+    cval = weighted.mean(val, w = wts, na.rm = TRUE)
+  )
 
 head(wqchng)
 ```
+
+Get conditional probability distributions for the restoration type, treatment effects, salinity as first child node in network. 
+```{r}
+# fit conditional distributions
+wqcdist <- wqchng %>% 
+  group_by(resgrp, trt) %>% 
+  nest %>% 
+  mutate(
+    crv = map(data, function(x){
+
+      est <- x$cval %>% 
+        na.omit %>% 
+        MASS::fitdistr('normal') %>% 
+        .$estimate
+      
+      return(est)
+      
+      }
+    ), 
+    prd = pmap(list(data, crv), function(data, crv){
+      
+      cval <- range(data$cval, na.rm = TRUE)  
+      cval <- seq(cval[1], cval[2], length = 100)
+      est <- dnorm(cval, crv[1], crv[2]) %>% 
+        data.frame(cval = cval, est = .) %>% 
+        mutate(
+         cumest = cumsum(est),
+         cumest = cumest / max(cumest)
+        )
+      
+      return(est)
+      
+      }
+    )
+  )
+
+head(wqcdist)
+```
+
+Empirical and estimated distributions.  
+```{r fig.height = 5, fig.width = 7, message = F, warning = F}
+# setup plots as empirical densities and estimated densities
+toplo1 <- wqcdist %>% 
+  select(resgrp, trt, data) %>% 
+  unnest
+toplo2 <- wqcdist %>% 
+  select(resgrp, trt, prd) %>% 
+  unnest
+head(toplo1)
+head(toplo2)
+
+ggplot(toplo1, aes(cval)) + 
+  geom_histogram(aes(y=..density..)) + 
+  geom_line(data = toplo2, aes(x = cval, y = est), col = 'red') +
+  facet_grid(resgrp ~ trt) +
+  theme_bw() + 
+  ggtitle('Salinity conditional distributions, empirical and estimated')
+
+ggplot(toplo2, aes(x = cval, y = cumest, group = trt)) + 
+  geom_line(aes(colour = trt)) + 
+  facet_grid(~ resgrp) +
+  theme_bw() + 
+  ggtitle('Salinity conditional distributions, cumulative estimated')
+```
+
+Quantile breaks of the estimated conditional probability distribution values, in thirds.
+```{r}
+salbrk <- toplo2 %>% 
+  group_by(resgrp, trt) %>% 
+  nest %>% 
+  mutate(
+    qts = map(data, function(x){
+  
+      out<- quantile(x$cval, c(0.25, 0.5, 0.75))
+      return(out)
+      
+    }),
+    brk = pmap(list(data, qts), function(data, qts){
+      
+      out <- approx(x = data$cval, y = data$cumest, xout = qts)
+      out <- out$y
+      return(out)
+      
+    }),
+    clev = map(brk, function(x){
+      
+      out <- rank(x) %>% 
+        factor(levels = c(1, 2, 3), labels = c('lo', 'md', 'hi')) %>% 
+        as.character
+        
+      return(out)
+      
+    })
+  ) %>% 
+  select(-data) %>% 
+  unnest
+
+salbrk
+```
+A plot showing the breaks:
+```{r fig.height = 5, fig.width = 7, message = F, warning = F}
+ggplot(toplo2, aes(x = cval, y = cumest, group = trt)) + 
+  geom_line(aes(colour = trt)) + 
+  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = clev, colour = trt)) +
+  geom_segment(data = salbrk, aes(x = min(toplo2$cval), y = brk, xend = qts, yend = brk, linetype = clev, colour = trt)) +
+  facet_grid(~ resgrp) +
+  theme_bw()
+```
+
+
 
