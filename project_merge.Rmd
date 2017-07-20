@@ -13,7 +13,7 @@ library(geosphere)
 library(stringi)
 library(tibble)
 knitr::knit('project_merge.Rmd', tangle = TRUE)
-file.copy('project_merge.R', 'R/project_merge.R')
+file.copy('project_merge.R', 'R/project_merge.R', overwrite = T)
 file.remove('project_merge.R')
 ```
 ```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
@@ -112,15 +112,15 @@ head(bmpstat)
 
 Combine cleaned up datasets
 ```{r}
-restdata <- rbind(habdat, bmpdat)
+restdat <- rbind(habdat, bmpdat)
 reststat <- rbind(habstat, bmpstat)
-save(restdata, file = 'data/restdat.RData', compress = 'xz')
+save(restdat, file = 'data/restdat.RData', compress = 'xz')
 save(reststat, file = 'data/reststat.RData', compress = 'xz')
 
-checkdata <- restdata %>%
+checkdata <- restdat %>%
              select(type) %>%
              unique()
-checkdata2 <- restdata %>%
+checkdata2 <- restdat %>%
              select(tech) %>%
              unique()
 ```
