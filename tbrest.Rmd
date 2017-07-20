@@ -220,7 +220,7 @@ saldat <- wqdat %>%
   select(-chla, -do)
 
 # get weighted means of salinity for restoration treatments, types
-wqchng <- wqmtch %>%
+salchng <- wqmtch %>%
   left_join(restdat, by = 'id') %>%
   select(-tech, -type, -acre) %>% 
   mutate(
@@ -292,14 +292,15 @@ wqchng <- wqmtch %>%
   summarise(
     cval = weighted.mean(val, w = wts, na.rm = TRUE)
   )
+save(salchng, file = 'data/salchng.RData', compress = 'xz')
 
-head(wqchng)
+head(salchng)
 ```
 
 Get conditional probability distributions for the restoration type, treatment effects, salinity as first child node in network. 
 ```{r}
 # fit conditional distributions
-wqcdist <- wqchng %>% 
+wqcdist <- salchng %>% 
   group_by(resgrp, trt) %>% 
   nest %>% 
   mutate(
