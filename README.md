@@ -30,7 +30,12 @@ Folders:
 
 RData files (these should be text files?) in `data`, normalized (maybe?):
 
+* `bmpdat.RData` restoration projects for water treatment
+* `bmpstat.RData` locations of restoration projects for water treatment
 * `habdat.RData` restoration projects for habitat
 * `habstat.RData` locations of restoration projects for habitat
+* `restdat.RData` restoration projects combined
+* `reststat.RData` location of restoration projects combined
+* `salchng.RData` Salinity values given treatments, project types
 * `wqdat.RData` TB water quality data by site, date, var, val
 * `wqstat.RData` TB water quality stations as lat/lon
