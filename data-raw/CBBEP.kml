@@ -1,0 +1,2665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>SABP_PhaseI&amp;II_Placemarkers_Final.kmz</name>
+	<visibility>0</visibility>
+	<StyleMap id="msn_placemark_circle90">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle30</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight10</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin20001010">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle30">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle40</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight00</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_placemark_circle_highlight70">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_placemark_circle_highlight40">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_placemark_circle00">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="sn_ylw-pushpin20000110">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin20001020</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sn_ylw-pushpin200024</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin20001030">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin20001000">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_placemark_circle_highlight50">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_placemark_circle_highlight60">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_placemark_circle90">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle70">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle20</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight90</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_placemark_circle60">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle70</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight30</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_placemark_circle_highlight80">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2000200">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="sn_ylw-pushpin20000120">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin2000104</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sn_ylw-pushpin2000230</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_placemark_circle_highlight30">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_placemark_circle50">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle80">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle90</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight50</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_placemark_circle20">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_placemark_circle70">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle20">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle60</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight20</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_placemark_circle_highlight90">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_placemark_circle30">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_placemark_circle_highlight10">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2000220">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="sn_ylw-pushpin20000100">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin20001000</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sn_ylw-pushpin2000200</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin20001020">
+		<IconStyle>
+			<scale>0.8</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="sn_ylw-pushpin2000014">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin20001010</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sn_ylw-pushpin2000210</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_placemark_circle60">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle10">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle10</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight70</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_placemark_circle80">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle40">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle00</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight80</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_placemark_circle11">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_placemark_circle10">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2000104">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2000210">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="sn_ylw-pushpin20000130">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin20001030</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sn_ylw-pushpin2000220</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_placemark_circle_highlight00">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_placemark_circle11">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle11</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight60</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_placemark_circle50">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle50</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight11</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_placemark_circle00">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_placemark_circle80</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_placemark_circle_highlight40</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_placemark_circle_highlight11">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin200024">
+		<IconStyle>
+			<scale>0.8</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin2000230">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_placemark_circle40">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_placemark_circle_highlight20">
+		<IconStyle>
+			<scale>0.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle_highlight.png</href>
+			</Icon>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0.5</scale>
+		</LabelStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>00ffffff</color>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Document id="SABP_wet_poly_grouped">
+		<name>SABP_wet_poly_grouped</name>
+		<visibility>0</visibility>
+		<Snippet maxLines="0"></Snippet>
+		<GroundOverlay>
+			<name>SABP_wet_poly_grouped: Composite</name>
+			<visibility>0</visibility>
+			<Icon>
+				<href>files/Composite_13_4_1_10_0.png</href>
+			</Icon>
+			<LatLonBox>
+				<north>28.873597</north>
+				<south>27.941475</south>
+				<east>-96.177123</east>
+				<west>-97.168598</west>
+			</LatLonBox>
+		</GroundOverlay>
+	</Document>
+	<Folder>
+		<name>SABP_PhaseI&amp;II_Placemarkers_only</name>
+		<visibility>0</visibility>
+		<description>All recommended sites organized by landform.  The San Antonio Bay Habitat Inventory Report concluded a total of 51 sites were recommended by stakeholder efforts, with 16 sites being top priority.  The sites within this file may total more than 51 as some sites overlap and, therefore, were condensed in the final report.</description>
+		<Folder id="FeatureLayer0">
+			<name>SABP Project Boundary</name>
+			<visibility>0</visibility>
+			<Snippet maxLines="0"></Snippet>
+			<Placemark>
+				<name>Boundary</name>
+				<visibility>0</visibility>
+				<Snippet maxLines="0"></Snippet>
+				<description>Extended past Sundown Island, San Antonio River to Hwy 77, and up Guadalupe River to Hwy 59  (Brent Ortego recommendations)</description>
+				<styleUrl>#sn_ylw-pushpin20000110</styleUrl>
+				<MultiGeometry>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									-96.34963045513223,28.41425399595941,0 -96.3454650030305,28.41694410409846,0 -96.34156704910734,28.41963221561698,0 -96.33224939031783,28.42423373768652,0 -96.32005501000981,28.42555955250395,0 -96.29624559046992,28.44638750124192,0 -96.30869537198466,28.45303768339075,0 -96.34441530202827,28.45563254985625,0 -96.40952083525433,28.45706883857307,0 -96.41740310914821,28.453392066919,0 -96.4236141125301,28.45062496416692,0 -96.44868801939275,28.43923754983834,0 -96.45399530578828,28.4368808450218,0 -96.45829317274874,28.43388144594742,0 -96.46066634748129,28.433818507328,0 -96.46365751929582,28.43203389891099,0 -96.46480557439041,28.4306805810623,0 -96.49490111242172,28.42837670570143,0 -96.61257989840455,28.41929464740482,0 -96.64053621749247,28.41721037419369,0 -96.68934297263888,28.41377921678274,0 -96.69606129803466,28.41202770994629,0 -96.70378712941985,28.41421741224943,0 -96.71663647092105,28.41551449150838,0 -96.71924884230911,28.41944182119862,0 -96.71930756930574,28.42452067380255,0 -96.77124762788547,28.49717092483481,0 -96.78826114160684,28.52256229721385,0 -96.79855973725022,28.53707955350312,0 -96.81713429434608,28.56225420034127,0 -96.82859608369952,28.57862653153779,0 -96.88819863002918,28.63842869906659,0 -96.88972167208222,28.64382508814534,0 -96.95151709204048,28.72394284592077,0 -96.95727586891844,28.73464622563125,0 -96.97699567864267,28.76673245421803,0 -96.98754804568054,28.75848744108926,0 -97.00422158498003,28.7544885998581,0 -97.03018282989713,28.73759123322146,0 -97.04587335225936,28.70609978219286,0 -97.0462241127255,28.63432864125173,0 -97.04520779769788,28.52012155204544,0 -97.02074394292175,28.50452363133334,0 -96.92632594937754,28.46349144443332,0 -96.88731722010134,28.45468811353253,0 -96.89367931895335,28.43147843861008,0 -96.89040560535571,28.42506579473008,0 -96.88349026655868,28.4208055918464,0 -96.87330925170727,28.41155936254613,0 -96.85290475269935,28.39356322136522,0 -96.84882195474343,28.38983447090666,0 -96.84640671220772,28.38740389739676,0 -96.84290748572487,28.39033912792641,0 -96.84030790872806,28.38823549621301,0 -96.83845415927922,28.38661300879092,0 -96.83633,28.385108,0 -96.833024,28.382289,0 -96.82971600000001,28.379262,0 -96.82805000000001,28.376499,0 -96.823357,28.375356,0 -96.818258,28.372717,0 -96.81316699999999,28.370743,0 -96.80893,28.368347,0 -96.803755,28.365819,0 -96.799908,28.36335,0 -96.797169,28.362468,0 -96.793137,28.356878,0 -96.794275,28.3534,0 -96.795332,28.349714,0 -96.795852,28.346851,0 -96.79566199999999,28.343314,0 -96.79469400000001,28.339921,0 -96.79380999999999,28.337151,0 -96.793317,28.334449,0 -96.792815,28.330844,0 -96.792311,28.327031,0 -96.791577,28.323636,0 -96.791939,28.320649,0 -96.79449100000001,28.317004,0 -96.79751400000001,28.314807,0 -96.80013,28.312916,0 -96.800921,28.311566,0 -96.80360399999999,28.308834,0 -96.80576085352905,28.30451908531731,0 -96.80789212977065,28.29800880556469,0 -96.81036888744846,28.29059446285985,0 -96.81077618429021,28.28823783964551,0 -96.81064342085996,28.28147189110197,0 -96.80835095282912,28.2738744494892,0 -96.80452343084204,28.26836631040924,0 -96.80130343105151,28.26519178820948,0 -96.79765614004418,28.26191678919798,0 -96.7941916768583,28.25925535274777,0 -96.7983221999466,28.25708540812861,0 -96.80229368961331,28.25426951413443,0 -96.80945185016154,28.24974124617486,0 -96.81702311914962,28.24969461462533,0 -96.82116049147399,28.24821611572952,0 -96.82624162469509,28.24264236497325,0 -96.82794189970927,28.23973050942871,0 -96.83220347088086,28.23215622700352,0 -96.83304670880409,28.23274937069682,0 -96.84331129803833,28.24687818536351,0 -96.85655846558018,28.2320511456443,0 -96.86348303302123,28.22424265484952,0 -96.86998189679585,28.2164592469394,0 -96.88566084057057,28.19871698392871,0 -96.89389476518917,28.18922611846984,0 -96.89852048890609,28.19085350034954,0 -96.90324483591925,28.18204915317011,0 -96.90405812338737,28.18067486138388,0 -96.90745594463144,28.17407918209887,0 -96.90883866703048,28.17047051546987,0 -96.90858118959473,28.16931135383413,0 -96.90968428259055,28.16851004659862,0 -96.91276209447197,28.16633980014392,0 -96.91522828387787,28.16486770372838,0 -96.92054618959165,28.16153287020149,0 -96.92703450976532,28.15614388588992,0 -96.93003420723302,28.15192237745534,0 -96.93109103315054,28.14939223024809,0 -96.93814963431353,28.14555417014443,0 -96.94295409761371,28.14291359843847,0 -96.9452606830114,28.13706415226802,0 -96.94942712372168,28.12898259494206,0 -96.94547900000001,28.122954,0 -96.93564200000002,28.114657,0 -96.917175,28.093585,0 -96.91670600000001,28.092681,0 -96.91411600000002,28.089861,0 -96.912485,28.087678,0 -96.90756599999999,28.084879,0 -96.90312,28.083311,0 -96.89815999999999,28.082855,0 -96.893687,28.08175,0 -96.89016299999999,28.080549,0 -96.88864699999999,28.079888,0 -96.88696899999999,28.079434,0 -96.88233099999999,28.075136,0 -96.878654,28.07171,0 -96.875253,28.06957,0 -96.87275399999999,28.069034,0 -96.87044,28.067266,0 -96.867853,28.064592,0 -96.864839,28.061757,0 -96.859437,28.056234,0 -96.85381200000001,28.061154,0 -96.85059200000001,28.063905,0 -96.846332,28.06763,0 -96.84288599999999,28.070822,0 -96.84077572055114,28.07528405154688,0 -96.83650531609852,28.0782494491352,0 -96.83552818106202,28.07974923680851,0 -96.83084665222179,28.08302116267998,0 -96.82507229388962,28.08698365914193,0 -96.81923369465258,28.09168137225215,0 -96.8142596038937,28.09531401306008,0 -96.81147159734579,28.09721878415611,0 -96.80685132530455,28.10134751863189,0 -96.80132438969248,28.10555102111021,0 -96.79728482444708,28.10883241036754,0 -96.79334008666079,28.11299414348143,0 -96.78748599588343,28.11665046287966,0 -96.78328132574663,28.11966801818783,0 -96.76733302480095,28.13133734377317,0 -96.76399221018539,28.13396021686515,0 -96.76056078542688,28.1363559325914,0 -96.75498737117485,28.14045039972929,0 -96.74983188452445,28.14362609195394,0 -96.73994850015444,28.15057658758535,0 -96.7330023703844,28.15567260980775,0 -96.71783580061168,28.16685166678608,0 -96.69959040340683,28.17929854740286,0 -96.68890575776942,28.18655213652158,0 -96.67872686325904,28.19335599167533,0 -96.66989244108392,28.1993806043715,0 -96.65794529063086,28.2068925063166,0 -96.64852063475058,28.21274770599131,0 -96.63355956000771,28.22244152992892,0 -96.62188824961945,28.22961112791469,0 -96.60842654385888,28.23732464911753,0 -96.58460066643632,28.25122070002189,0 -96.5780099334677,28.25499355036721,0 -96.5575826223207,28.26570508955406,0 -96.54009147485823,28.2746089131884,0 -96.52088787870763,28.283660014298,0 -96.50740911680637,28.28992703716776,0 -96.49128606877565,28.29662361898067,0 -96.47173687084407,28.30430569915008,0 -96.45420089354361,28.311973972269,0 -96.4399137695832,28.32058872965457,0 -96.42877622460787,28.32833754994852,0 -96.41395007262125,28.34172779101871,0 -96.41008901626479,28.34545391875259,0 -96.40808861743346,28.34820778990981,0 -96.40639350565542,28.35027459544808,0 -96.40532266590444,28.35247393587281,0 -96.40206499999999,28.355311,0 -96.40139600000001,28.356817,0 -96.398197,28.359837,0 -96.39471302179871,28.36437929931712,0 -96.38810847894469,28.3752478523316,0 -96.38120483136508,28.38776215877133,0 -96.37625628367181,28.39204204178767,0 -96.37184781195082,28.39679609907955,0 -96.37090799999999,28.398084,0 -96.34963045513223,28.41425399595941,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</MultiGeometry>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>River/Delta</name>
+			<visibility>0</visibility>
+			<description>All recommended sites within Guadalupe-San Antonio rivers and Guadalupe delta.</description>
+			<Placemark>
+				<name>15</name>
+				<visibility>0</visibility>
+				<description>Site Number: 15
+Site Name: Guadalupe Delta Shoreline
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Restore eroding shoreline and develop management plan for lack of siltation from flooding and natural resources
+Potential Partners: ACOE, CBBEP, NRCS, SABP, TPWD, USFWS
+Species: Sensitive marsh communities, waterfowl, and Whooping cranes (Grus americana)
+Key Terms: Management, Restoration, Endangered Species, Protected Species, Commercial Species, Wetlands, Tidal Marsh
+Description Submitted: erosion control
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.79010861997647</longitude>
+					<latitude>28.4370927316426</latitude>
+					<altitude>0</altitude>
+					<heading>-0.05605978541341621</heading>
+					<tilt>0</tilt>
+					<range>6633.491271983271</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<coordinates>-96.77211780421314,28.40904503765972,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>13</name>
+				<visibility>0</visibility>
+				<description>Site Number: 13
+Site Name: Traylor&apos;s Cut
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Restore flow to Guadalupe Delta, reduce siltation where the river is diverted toward Mission Lake, away from the old river channel, and control invasive species
+Potential Partners: TPWD, NRCS, USFWS, GBRA
+Species: Wetland Communities
+Key Terms: Restoration, Invasive Species, Riverine Hydrology, River
+Description Submitted: Traylor&apos;s Cut: Traylor&apos;s Cut is causing a shoaling of the river where the volume is diverted toward Mission Lake.  The new river path is pirating the flow causing the old river channel to shoal and eventually will be cut off.  GBRA has had this area dredged out at the land owners request but the shoaling continues.
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.82550283049112</longitude>
+					<latitude>28.4465770838743</latitude>
+					<altitude>0</altitude>
+					<heading>-0.0006410972821628585</heading>
+					<tilt>0</tilt>
+					<range>321.2859597553481</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<coordinates>-96.8252748046844,28.44660657041028,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>8</name>
+				<visibility>0</visibility>
+				<description>Site Number: 8
+Site Name: Green Lake 	
+Nominated in: Phase I and II
+ Land Ownership: Calhoun County (purchase pending at time of report)
+Conservation Strategy: Develop management plan to ensure waterbird nesting, recreational use, conservation of sensitive areas, and water level management.  Also, spread awareness of natural resources and acquire land
+Potential Partners: Calhoun County, CIAP, CBBEP, GBRA, ICF, Local industry, SABP, TPWD, USFWS
+Species: Whooping cranes (Grus americana), shorebirds, and nesting colonial waterbirds; and, with management may produce abundant waterfowl food and have an enhanced freshwater fishery
+Key Terms: Education, Recreation, Land Acquisition, Fish, Bird, Management, Enhancement, Rookery, Protected Species, Commercial Species, Endangered Species,  Lake
+Description Submitted: Green Lake: Small colony of mixed species.  Previously private as stated in Phase I, but now owned by Calhoun county.
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.8401911230187</longitude>
+					<latitude>28.523905776149</latitude>
+					<altitude>0</altitude>
+					<heading>-1.351735739621994e-014</heading>
+					<tilt>0</tilt>
+					<range>7616.625434205263</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<coordinates>-96.83957233615281,28.53369105627071,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>7</name>
+				<visibility>0</visibility>
+				<description>Site Number: 7
+Site Name: Guadalupe Fields 	
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Restore hydrology of wetlands and swamp to remain wet during droughts and enhance the swamps by planting bald cypress trees 
+Potential Partners: Landowner, NRCS, TAMUK, TPWD, USFWS
+Species: Approximately 10,000 nesting colonial waterbirds, waterfowl, and freshwater dependent organisms/ wetland communities
+Key Terms: Bird, Restoration, Enhancement, Rookery, Protected Species, Commercial Species, Bald cypress, Hydrology, Lake, Pond, Forest/Scrub-Shrub Wetland
+Description Submitted: Contains wetland cells, levees, and swamp area between the San Antonio and Guadalupe Rivers
+Field Notes: Visited during Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.91934447701472</longitude>
+					<latitude>28.54022227248372</latitude>
+					<altitude>0</altitude>
+					<heading>-2.186631343506167e-014</heading>
+					<tilt>0</tilt>
+					<range>5091.483013638589</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<coordinates>-96.90983051127549,28.5358611445519,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>19</name>
+				<visibility>0</visibility>
+				<description>Site Number: 19
+Site Name:  River Pasture 2
+Nominated in: Phase II
+Land Ownership: Private
+Conservation Strategy: Acquire land for the Texas Parks and Wildlife’s Wildlife Management Area (WMA)- Hynes Bay unit
+Potential Partners: CCA, DU, NRCS, TPWD, USFWS
+Species: Waterfowl, shorebirds, and wetland communities
+Key Terms: Bird, Land Acquisition, Protected Species, Commercial Species, Wetland, Tidal Marsh 
+Description Submitted: Acquire for Hynes Bay Unit
+Field Notes: Not visited, but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-96.84916860126319</longitude>
+					<latitude>28.4452146954601</latitude>
+					<altitude>0</altitude>
+					<heading>-0.08461922553702787</heading>
+					<tilt>0</tilt>
+					<range>10418.74005980095</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle70</styleUrl>
+				<Point>
+					<coordinates>-96.85550092600468,28.42419438591024,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>20</name>
+				<visibility>0</visibility>
+				<description>Site Number: 20
+Site Name: Rivier Pasture	
+Nominated in: Phase II
+Land Ownership: Private
+Conservation Strategy: Aquire land for the Texas Parks and Wildlife’s Wildlife Management Area (WMA)-Hynes Bay Unit 
+Potential Partners: CCA, DU, NRCS, TPWD, USFWS
+Species: Waterfowl, shorebirds, and wetland communities
+Key Terms: Bird, Land Acquisition, Protected Species, Commercial Species, Wetland, Tidal Marsh
+Description Submitted: Acquisition for addition to Hynes Bay Unit
+Field Notes: Not visited, but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-96.84492962002921</longitude>
+					<latitude>28.45303994019161</latitude>
+					<altitude>0</altitude>
+					<heading>0.04890474701438886</heading>
+					<tilt>0</tilt>
+					<range>4242.089511534312</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle30</styleUrl>
+				<Point>
+					<coordinates>-96.85465372629568,28.45988683813192,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>21</name>
+				<visibility>0</visibility>
+				<description>Site Number: 21
+Site Name:  MaFaddin New Ranch Flat
+Nominated in: Phase II
+Land Ownership: Private
+Conservation Strategy: Control invasive species and excavate shallow depressions for wetland development
+Potential Partners: DU, NRCS, TPWD
+Species: Waterfowl, shorebirds, and wetland communities
+Key Terms: Bird, Enhancement, Protected Species, Commercial Species, Invasive Species, Marsh, Forested/Scrub-Shrub Floodplain
+Description Submitted: Control invasive, Wetland Development excavation of shallow depressions
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.96093641576337</longitude>
+					<latitude>28.5051850397066</latitude>
+					<altitude>0</altitude>
+					<heading>-3.864381889364876e-010</heading>
+					<tilt>0</tilt>
+					<range>4442.640940674235</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<coordinates>-96.96198136870694,28.50998026666381,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>22</name>
+				<visibility>0</visibility>
+				<description>Site Number: 22
+Site Name:  McFaddin New Ranch		
+Nominated in: Phase II
+Land Ownership: Private
+Conservation Strategy: Restore the riparian corridor and control invasive species and erosion
+Potential Partners: DU, NRCS, TPWD, USFWS
+Species: Waterfowl, colonial waterbirds, and wetland communities
+Key Terms: Bird, Restoration, Riparian, Protected Species, Commecial Species, Invasive Species, Forested/Scrub-Shrub, Marsh
+Description Submitted: Restore Riparian Cooridor, Control Invasive Species, erosion control
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.96093641495368</longitude>
+					<latitude>28.50518504007293</latitude>
+					<altitude>0</altitude>
+					<heading>-0.2989864749293287</heading>
+					<tilt>0</tilt>
+					<range>4442.633546456341</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<coordinates>-96.96537763223527,28.50616452863724,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>16</name>
+				<visibility>0</visibility>
+				<description>Site Number: 16
+Site Name: Swan Point Ranch
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Develop a conservation easement or acquire land
+Potential Partners: NRCS, TNC, TPWD, USFWS
+Species: Whooping crane, waterfowl, egrets, herons, avocets, ibis, etc.
+Key Terms: Bird, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Wetlands, Tidal Marsh, Seagrass, Open Water
+Description Submitted: Area within Guadalupe Delta polygon and Conservation Easement acquisition
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.8082827603878</longitude>
+					<latitude>28.43993291500066</latitude>
+					<altitude>0</altitude>
+					<heading>-0.06967596232655468</heading>
+					<tilt>0</tilt>
+					<range>13388.35628539489</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.77656582144832,28.41384360176279,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>10</name>
+				<visibility>0</visibility>
+				<description>Site Number: 10
+Site Name: Marsh ranch
+Nominated in: Phase 
+Land Ownership: Private
+Conservation Strategy: Develop conservation easement or land acquisition
+Potential Partners: NRCS, TNC, TPWD, USFWS
+Species: Whooping cranes, waterfowl, egrets, herons, avocets, ibis, etc.
+Key Terms: Bird, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Wetlands, Tidal Marsh, Tidal Marsh/Flats Mix, Open Water
+Description Submitted: Area within Guadalupe Delta polygon and Conservation Easement acquisition
+Field Notes: Not visited, but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-96.838587697907</longitude>
+					<latitude>28.44917387368724</latitude>
+					<altitude>0</altitude>
+					<heading>-0.08410210792341208</heading>
+					<tilt>0</tilt>
+					<range>7331.274458550455</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle50</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.85326890484767,28.44588091375268,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>14</name>
+				<visibility>0</visibility>
+				<description>Site Number: 14
+Site Name: Kamey Island Rookeries
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Develop management plan and recognition of colonial waterbird colonies
+Potential Partners: CBBEP, NRCS, SABP, TPWD, USFWS
+Species: Colonial waterbirds, waterfowl, and songbirds in riparian woodlands
+Key Terms: Education, Bird, Management, Rookery, Riparian, Protected Species, Commerical Species,  Marsh, Forested/Scrub-Shrub Floodplain, Ponds
+Description Submitted: Kamey Island Rookeries: Colonies occurs at various places depending on the habitat conditions of each year.
+Field Notes:   Not visited, but example photo submitted by stakeholder (Brent Ortego, TPWD).</description>
+				<LookAt>
+					<longitude>-96.79010861997652</longitude>
+					<latitude>28.43709273164261</latitude>
+					<altitude>0</altitude>
+					<heading>-0.05605978541340428</heading>
+					<tilt>0</tilt>
+					<range>6633.491271981279</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle60</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.80985774276867,28.44779682763412,1.577021004641031</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>6</name>
+				<visibility>0</visibility>
+				<description>Site Number: 6
+Site Name: Rookery Off Barge Canal 	
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Determine ownership, develop a rookery management plan, and enhance the rookery from Victoria Barge Canal modifications.  Site is an island in a former bayou
+Potential Partners: CBBEP, Navigation District, NRCS, SABP, TPWD, USFWS, Westside Calhoun County
+Species: Approximately 2,000 mixed pairs of nesting birds including colonial waterbirds
+Key Terms: Education, Bird, Management, Enhancement, Rookery, Protected Species, Migration, Pond
+Description Submitted: Rookery of upwards of 2,000 birds of mixed species during wet years.  Dry years mammal predators have access to colony.  
+Field Notes:  Not visited, but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-96.88514106564273</longitude>
+					<latitude>28.57267014119486</latitude>
+					<altitude>0</altitude>
+					<heading>-0.09254442231888573</heading>
+					<tilt>0</tilt>
+					<range>3892.939271847419</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle40</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.88730662188432,28.57543555903947,1.623645641240657</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>12</name>
+				<visibility>0</visibility>
+				<description>Site Number: 12
+Site Name: Guadalupe Delta Swamp Colony
+Nominated in: Phase I
+Land Ownership: TPWD and Private
+Conservation Strategy: Develop management plan
+Potential Partners: CBBEP, SABP, TPWD, USFWS
+Species: Approximately 2,000 pairs nesting colonial waterbirds
+Key Terms: Bird, Management, Rookery, Protected Species, Migration, Marsh/Scrub-Shrub Mix, Marsh, Pond
+Description Submitted:  Large colony of mixed species that is active during most years.
+Field Notes:  Not visited, but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-96.81908884884959</longitude>
+					<latitude>28.46522049832299</latitude>
+					<altitude>0</altitude>
+					<heading>-0.06110428143303204</heading>
+					<tilt>0</tilt>
+					<range>4032.177485467994</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle00</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.83003642612478,28.46607186516366,-0.07003674985239168</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>11</name>
+				<visibility>0</visibility>
+				<description>Site Number: 11
+Site Name: NE Mission Lake
+Nominated in: Phase I
+Land Ownership: Calhoun County Westside Navigation District
+Conservation Strategy: Develop management plan for nesting birds and predators
+Potential Partners: CBBEP, SABP, TPWD, USFWS
+Species: Nesting colonial waterbirds and predators
+Key Terms: Bird, Management, Rookery, Predators, Protected Species, Forested/Scrub-Shrub Floodplain
+Description Submitted: Small colony on island that is active periodically.
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.79884228348806</longitude>
+					<latitude>28.47598751850183</latitude>
+					<altitude>0</altitude>
+					<heading>-0.05145182092908199</heading>
+					<tilt>0</tilt>
+					<range>4032.155099543613</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.79314379854652,28.48106544218845,-0.04717258931944221</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>9</name>
+				<visibility>0</visibility>
+				<description>Site Number: 9
+Site Name: Carbide Colony
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Develop management plan to ensure waterbird nesting
+Potential Partners: CBBEP, Local industry, SABP, TPWD, USFWS
+Species: Several thousand pairs of colonial nesting waterbirds
+Key Terms: Bird, Management, Rookery, Protected Species, Migration, Pond
+Description Submitted: Mixed colony of several thousand birds.  Generalized location.
+Field Notes:  Not visited,but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-96.78750749452176</longitude>
+					<latitude>28.50009305654971</latitude>
+					<altitude>0</altitude>
+					<heading>-0.04643423734021945</heading>
+					<tilt>0</tilt>
+					<range>1468.684207282512</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle90</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.78750749452176,28.50009305654971,1.041856864317249</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>5</name>
+				<visibility>0</visibility>
+				<description>Site Number: 5
+Site Name: Bald Cypress Swamp 	
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Maintain southern most bald cypress swamp rookery in Texas from siltation and modification; educate landowner on biological importance
+Potential Partners: Landowner, TPWD, USFWS
+Species: Yellow-crowned night heron, Anhinga, Great blue heron, Bald cypress 
+Key Terms: Education, Bird, Management, Rookery, Protected Species, Cypress, Riparian,  Pond, Forest/Scrub-Shrub Wetland
+Description Submitted: Southernmost bald cypress swamp in Texas.  Small numbers of Yellow-crowned Night-Heron, Anhinga and Great Blue Heron nest annually.
+Field Notes: Not visited, but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-96.94600355805014</longitude>
+					<latitude>28.5981187962372</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1232212880102414</heading>
+					<tilt>0</tilt>
+					<range>1791.018909154398</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle80</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.95024310030166,28.59817305859453,4.013561883120504</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>4</name>
+				<visibility>0</visibility>
+				<description>Site Number: 4
+Site Name: Linn Lake South
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Conservation easement or land acquisition
+Potential Partners: 
+Species: Nesting herons
+Key Terms: Bird, Rookery, Protected Species,  Forest/Scrub-Shrub Wetland
+Description Submitted: Small numbers of herons nest annually.
+Field Notes: Not visited, but example photo submitted by stakeholder (Brent Ortego, TPWD).</description>
+				<LookAt>
+					<longitude>-96.95511946441849</longitude>
+					<latitude>28.60921376699804</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1275851424601494</heading>
+					<tilt>0</tilt>
+					<range>1791.270175365935</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle20</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.95030458047091,28.60616912197582,3.762552112773407</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>3</name>
+				<visibility>0</visibility>
+				<description>Site Number: 3
+Site Name: Linn Lake
+Nominated in: Phase I
+Landowner: Private
+Conservation Strategy: Maintain overflow basin from siltation and local industry modification 
+Potential Partners: Landowner, Local industry, USFWS, TPWD
+Species: Colonial waterbirds, nesting waterfowl, and Bald Eagle nest nearby
+Key Terms: Bird, Management, Rookery, Protected Species, Migration, Lake
+Description submitted: Largest overflow basin on the Guadalupe River.  Site periodically occupied by colonial waterbirds.
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.96958756249225</longitude>
+					<latitude>28.61369359871896</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1345127663233964</heading>
+					<tilt>0</tilt>
+					<range>1791.508020701409</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.97308309943462,28.61520994863598,3.52600009379593</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>2</name>
+				<visibility>0</visibility>
+				<description>Site Number: 2
+Site Name: Marthijohnni Swamp
+Nominated in: Phase I
+Landowner: Private
+Conservation Strategy: Develop restoration and management plans to keep rookery wet during nesting season
+Potential Partners: Landowner, USFWS, TPWD
+Species: Approximately 8,000 nesting pairs of Herons, Egrets, Ibis, and other nesting waterbirds
+Key Terms: Birds, Management, Restoration, Rookery, Protected Species, Migration, Marsh, Pond
+Description submitted: Usually about 2,000 pairs of mix species nest annually at this site or neighboring wetlands.  Commercial sand mining operation and much disturbance.
+Field Notes: Not visited, but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-97.03602208834873</longitude>
+					<latitude>28.69553587369043</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1530857037289075</heading>
+					<tilt>0</tilt>
+					<range>817.5585516351765</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle11</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-97.0386276521922,28.69581431173223,19.50300031194894</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>1</name>
+				<visibility>0</visibility>
+				<description>Site Number: 1
+Site Name: Sand Pit
+Nominated in: Phase I
+Landowner: Private
+Conservation Strategy: Restore habitat from disturbance
+Potential Partners:
+Species: Colonial waterbirds including nesting Least Terns 
+Key Terms: Bird, Restoration, Rookery, Migration, Marsh
+Description submitted: Has had Least Tern nesting on site previously.  Commercial sand mining operation and much disturbance.
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.98922513508148</longitude>
+					<latitude>28.704790947729</latitude>
+					<altitude>0</altitude>
+					<heading>-0.1306120802429292</heading>
+					<tilt>0</tilt>
+					<range>5458.533923776575</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.97861221199113,28.71873912358387,7.817248438846842</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>23</name>
+				<visibility>0</visibility>
+				<description>Site Number: 23
+Site Name: San Antonio River Log Jams
+Nominated in: Phase I
+Land Ownership: Public and Private
+Conservation Strategy: Develop management plan to provide riparian and upland habitat for wildlife while also protecting human lives along the river
+Potential Partners: GBRA, GBRT, Landowners, SABF, SARA
+Species:
+Key Terms: Management, Monitoring, Hydrology, Riverine
+Description Submitted: Riparian/upland management
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.97607395623614</longitude>
+					<latitude>28.50392765144394</latitude>
+					<altitude>0</altitude>
+					<heading>-0.6405948638410552</heading>
+					<tilt>25.77144841204003</tilt>
+					<range>348.6346863492111</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.97596560635145,28.50355142014731,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>17</name>
+				<visibility>0</visibility>
+				<description>Site Number: 17
+Site Name: Guadalupe Delta
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Develop a conservation easement or acquire land and restore marsh communities
+Potential Partners: NRCS, TNC, TPWD, USFWS
+Species: Whooping crane, waterfowl, egrets, herons, avocets, ibis, etc.; and wetland communities
+Key Terms: Bird, Restoration, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Tidal Marsh/Flats Mix, Seagrasses, Sandbars/flats, Open Water
+Description Submitted: Guadalupe Delta (including Marsh Ranch and Swan Point Ranch); Conservation Easement acquisition
+Field Notes: Visited in Phase I and Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.81821408711326</longitude>
+					<latitude>28.44647987081058</latitude>
+					<altitude>0</altitude>
+					<heading>9.150352450543389e-010</heading>
+					<tilt>0</tilt>
+					<range>16477.40527842379</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000120</styleUrl>
+				<Point>
+					<coordinates>-96.82206552744178,28.44518499102751,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>18</name>
+				<visibility>0</visibility>
+				<description>Site Number: 18
+Site Name: San Antonio Golden-Orb Habitat
+Nominated in: Phase II
+Land Ownership: SARA
+Conservation Strategy: Monitoring habitat and density of potentially threatened species
+Potential Partners: SARA
+Species: Golden-Orb Mussel
+Key Terms: Monitoring, Riverine, Threatened Species, Freshwater Hydrology, Riverine
+Description Submitted: Monitoring for Golden Orb Habitat and Density; Potentially threatened species; SARA has begun surveys
+Field Notes: Not visited, but example photo was submitted by a stakeholder</description>
+				<LookAt>
+					<longitude>-96.96336982411907</longitude>
+					<latitude>28.50380743020975</latitude>
+					<altitude>0</altitude>
+					<heading>0.001965205678639532</heading>
+					<tilt>0</tilt>
+					<range>1122.752967827811</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#msn_placemark_circle10</styleUrl>
+				<Point>
+					<coordinates>-96.96567246834911,28.50461553895799,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Peninsula</name>
+			<visibility>0</visibility>
+			<description>All recommended sites on Blackjack and Seadrift-Port O&apos;Connor Ridge peninsulas</description>
+			<Placemark>
+				<name>32</name>
+				<visibility>0</visibility>
+				<description>Site Number: 32
+Site Name: 
+Site Name: Boggy Bayou Drainage
+Nominated in: Phase II
+Land Ownership: Private and Calhoun County
+Conservation Strategy: Develop conservation easement or acquire land and enhance water quality
+Potential Partners: Calhoun County, TGLO, TPWD, USFWS
+Species: Shorebirds and wetland and estuarine communities
+Key Terms: Bird, Enhancement, Conservation Easement, Land Acquisition, Protected Species, Water Quality, Migration, Tidal Marsh, Sanbars/Flats, Open Water, Marsh/Scrub-Shrub Mix, and Marsh
+Description Submitted: Boggy Bayou, just north of Port O&apos; Connor, drains the Seadrift-POC Ridge.  Calhoun County owns land between the south shore of the main bayou and there-by protects the bayou from development on the south shore and provides access for kayakers and wade fishermen to Boggy Bayou.  A conservation easement of the North Shore should be obtained to fully protect this estuary from development.  The POC sewage plant discharges waste water into the Bayou.  Only the west reaches of the drainage are currently within the SABP area, but the bayou drains the Seadrift-POC Ridge.
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.45823931239238</longitude>
+					<latitude>28.43929398251419</latitude>
+					<altitude>0</altitude>
+					<heading>9.93923337957349e-015</heading>
+					<tilt>0</tilt>
+					<range>9405.230999557489</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.43448671221216,28.44848727906316,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>31</name>
+				<visibility>0</visibility>
+				<description>Site Number 31:
+Site Name: Welder Ditch
+Nominated in: Phase II
+Land Ownership: Private
+Conservation Strategy: Restore natural freshwater inflows to the estuary
+Potential Partners: ICF, USFWS
+Species: Endangered Whooping cranes and shorebirds
+Key Terms: Bird, Restoration, Endangered Species, Protected Species, Migration, Marsh 
+Description Submitted: Restore hydrology to improve wetland and drainage conditions
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.60242200075963</longitude>
+					<latitude>28.37815200380818</latitude>
+					<altitude>0</altitude>
+					<heading>-3.610418573743367e-010</heading>
+					<tilt>0</tilt>
+					<range>8304.151106476864</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.6020984326104,28.37697258141701,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>30</name>
+				<visibility>0</visibility>
+				<description>Site Number: 30
+Site Name: North Seadrift-Port O&apos;Connor Ridge Shoreline Wetlands
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Develop conservation easement or acquire land to prevent development; maintain the shoreline from GIWW wave erosion; manage brush; and, prescribed burning
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping cranes, waterfowl, and shorebirds
+Key Terms: Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, , Migration, Tidal Marsh, Sandbars/Flats, Seagrasses, and Open Water, Uplands
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protectcurrent/potential  whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.52438581210591</longitude>
+					<latitude>28.38288156958155</latitude>
+					<altitude>0</altitude>
+					<heading>0.05950459830997619</heading>
+					<tilt>0</tilt>
+					<range>13751.04985138608</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.51804510527894,28.39546055715849,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>29</name>
+				<visibility>0</visibility>
+				<description>Site Number: 29
+Site Name: Arapaho Holdings
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Develop conservation easement or acquire land to prevent development; maintain the shoreline from GIWW wave erosion; manage brush; and, prescribed burning; Upland wetlands were determined jurisdictional by the EPA (some conservation mechanisms are already in place)
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping cranes, waterfowl, and shorebirds
+Key Terms: Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Sandbars/flats, Tidal Marsh/Flats Mix, Marsh, Marsh/Scrub-Shrub Mix, Uplands
+Description Submitted:
+Field Notes: Visited in Phase I and II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.53560219808988</longitude>
+					<latitude>28.39777243617459</latitude>
+					<altitude>0</altitude>
+					<heading>3.180554681463517e-015</heading>
+					<tilt>0</tilt>
+					<range>15646.73332690257</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.53265448108925,28.41047662780991,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>28</name>
+				<visibility>0</visibility>
+				<description>Site Number: 28
+Site Name: Welder Flats
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Develop conservation easement or acquire land; restore hydrology; maintain the shoreline from GIWW wave erosion; manage mangrove development; brush control; and prescribed burning (some conservation mechanisms are already in place)
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane, waterfowl, and shorebirds
+Key Terms: Bird, Management, Restoration, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Sandbars/Flats, Tidal Marsh/Flats Mix, Tidal Marsh/Mangrove Mix, Open Water, Seagrasses, Marsh, Uplands
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protectcurrent/potential  whooping crane territory maintenance; outreach on sharing areas with wintering cranes; restore hydrologic sheetflows from roads, drainage ditches;shoreline protection from GIWW wave erosion;  manage mangrove establishment
+Field Notes: Visited in Phase I and II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.64950217177851</longitude>
+					<latitude>28.34149887464229</latitude>
+					<altitude>0</altitude>
+					<heading>-9.144094709207609e-015</heading>
+					<tilt>0</tilt>
+					<range>10680.90597825147</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.64869785105672,28.33795920508826,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>27</name>
+				<visibility>0</visibility>
+				<description>Site Number: 27
+Site Name:  ANWR Dunham Bay Wetlands
+Nominated in: Phase I
+Land Ownership: U.S. Fish and Wildlife Service Aransas National Wildlife Refuge (ANWR)
+Conservation Strategy: Maintain the shoreline from GIWW wave erosion; and manage mangrove development
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane, waterfowl and shorebirds
+Key Terms: Bird, Management, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Sandbars/Flats, Open Water, Seagrasses, Marsh
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protect current whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.92066958873329</longitude>
+					<latitude>28.14185252420621</latitude>
+					<altitude>0</altitude>
+					<heading>-4.034111394802506e-009</heading>
+					<tilt>0</tilt>
+					<range>5485.734332598396</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.92170040640372,28.13776205765559,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>26</name>
+				<visibility>0</visibility>
+				<description>Site Number: 26
+Site Name:  ANWR Sundown Bay Wetlands
+Nominated in: Phase I
+Land Ownership: U.S. Fish and Wildlife Service Aransas National Wildlife Refuge (ANWR)
+Conservation Strategy: Maintain the shoreline from GIWW wave erosion; and manage mangrove development
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane, waterfowl and shorebirds
+Key Terms: Bird, Management, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Sandbars/Flats, Open Water, Seagrasses, Marsh
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protect current whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.86007525375645</longitude>
+					<latitude>28.18889140137529</latitude>
+					<altitude>0</altitude>
+					<heading>-9.939233379573489e-015</heading>
+					<tilt>0</tilt>
+					<range>9233.591504554692</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.85642992330587,28.18720833898415,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>25</name>
+				<visibility>0</visibility>
+				<description>Site Number: 25
+Site Name:  ANWR Mustang Lake Wetlands
+Nominated in: Phase I
+Land Ownership: U.S. Fish and Wildlife Service Aransas National Wildlife Refuge (ANWR)
+Conservation Strategy: Maintain the shoreline from GIWW wave erosion; and manage mangrove development
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane, waterfowl and shorebirds
+Key Terms: Bird, Management, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Sandbars/Flats, Open Water, Seagrasses, Marsh
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protect current whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.80248071330637</longitude>
+					<latitude>28.23262026330713</latitude>
+					<altitude>0</altitude>
+					<heading>-8.746525374024672e-015</heading>
+					<tilt>0</tilt>
+					<range>5527.812138596865</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.80433106747765,28.2263375490907,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>24</name>
+				<visibility>0</visibility>
+				<description>Site Number: 24
+Site Name: ANWR Shoreline Erosion
+Nominated in: Phase I
+Land Ownership: U.S. Fish and Wildlife Service Aransas National Wildlife Refuge (ANWR)
+Conservation Strategy: Restore eroded shoreline and develop plan to maintain shoreline
+Potential Partners: USFWS
+Species: Oak trees
+Key Terms: Management, Restoration, Monitoring, Hydrology, Sandbars/Flats, Uplands
+Description Submitted: Oaks falling into the bay.  Sand blufs collapsing into the bay.
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.80054358872027</longitude>
+					<latitude>28.27614885246034</latitude>
+					<altitude>0</altitude>
+					<heading>-1.789062008323228e-014</heading>
+					<tilt>0</tilt>
+					<range>2180.222647456628</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000130</styleUrl>
+				<Point>
+					<coordinates>-96.7979970856936,28.27294944136763,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Open Bay</name>
+			<visibility>0</visibility>
+			<description>All recommended sites in Open Bay; natural or created  islands, rookery islands, and oyster reefs</description>
+			<Placemark>
+				<name>54</name>
+				<visibility>0</visibility>
+				<description>Site Number: 54
+Site Name: Hynes Bay Tire Removal
+Nominated in: Phase II
+Land Ownership: Private and TGLO submerged land
+Conservation Strategy: Restoration by removing tires that have been moved off the shoreline into the nearshore area
+Potential Partners: CCA
+Species: Fishery habitat
+Key Terms: Fish, Management, Monitoring, Open Water
+Description Submitted: Remove tires that were once used to prevent shoreline erosion, but are now located in the bay</description>
+				<LookAt>
+					<longitude>-96.83263565698486</longitude>
+					<latitude>28.41938495638712</latitude>
+					<altitude>0</altitude>
+					<heading>0.001173988540931638</heading>
+					<tilt>0</tilt>
+					<range>4752.537738385599</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.83751105267564,28.43113943817913,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>53</name>
+				<visibility>0</visibility>
+				<description>Site Number: 53
+Site Name: Mission Lake-Guadalupe Bay Rangia Clams
+Nominated in: Phase II
+Land Ownership: TGLO submerged land
+Conservation Strategy: Monitor and develop a more comprehensive database for rangia clam (Rangia spp.) habitat and density; data in region used from Senate Bill 3 GSA BBEST
+Potential Partners: TPWD, SARA
+Species: Shellfish and fishery habitat
+Key Terms: Shellfish, Fish, Monitoring, Clams, Bay Bottom, Open Water
+Description Submitted: Monitoring Habitat and Density; Information from the GSA BBEST SB3; monitor and  develop a more comprehensive database for the future; Include Habitat and Rangia Clam Density
+Field Notes: Site not visited</description>
+				<LookAt>
+					<longitude>-96.61977595023375</longitude>
+					<latitude>28.31176200458642</latitude>
+					<altitude>0</altitude>
+					<heading>0.07992366813680271</heading>
+					<tilt>0</tilt>
+					<range>39645.54104274254</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.80401532746468,28.47065874245551,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>52</name>
+				<visibility>0</visibility>
+				<description>Site Number: 52
+Site Name: Upper San Antonio Bay Oysters
+Nominated in: Phase II
+Land Ownership: TGLO submerged land
+Conservation Strategy: Monitor and develop a more comprehensive database for oyster habitat and density; data in region used from Senate Bill 3 GSA BBEST
+Potential Partners: TPWD, SARA
+Species: Shellfish and fishery habitat
+Key Terms: Shellfish, Fish, Monitoring, Oyster Reef, Commercial Species, Open Water
+Description Submitted: Monitoring; data from GSA BBEST SB3; monitor and develop a more comprehensive database for oyster habitat and oyster density
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.61977595023375</longitude>
+					<latitude>28.31176200458642</latitude>
+					<altitude>0</altitude>
+					<heading>0.07992366813680271</heading>
+					<tilt>0</tilt>
+					<range>39645.54104274254</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.77451351639505,28.38259663943973,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>51</name>
+				<visibility>0</visibility>
+				<description>Site Number: 51
+Site Name: Chicken Foot Oyster Reef
+Nominated in: Phase I
+Land Ownership: TGLO submerged land
+Conservation Strategy: Restore degraded oyster reef and fishery habitat
+Potential Partners: CCA, TGLO, TPWD
+Species: Shellfish and fishery habitat
+Key Terms: Shellfish, Fish, Restoration, Commercial Species, Oyster Reef, Open Water
+Description Submitted: Degraded Oyster Reef
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.78775884036195</longitude>
+					<latitude>28.22231783172542</latitude>
+					<altitude>0</altitude>
+					<heading>0.0001846357411541778</heading>
+					<tilt>0</tilt>
+					<range>3491.018179204685</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.78815299864905,28.21512870500402,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>50</name>
+				<visibility>0</visibility>
+				<description>Site Number: 50
+Site Name: Chester Island
+Nominated in: Phase I
+Land Ownership: TGLO owned and leased by the Audubon Society
+Conservation Strategy: Restoration from erosion and maintenance of largest rookery in bay system
+Potential Partners: ACOE, CBBEP, CCA, National Audubon Society, SABP, TPWD, USFWS
+Species: Colonial waterbirds
+Key Terms: Bird, Management, Restoration, Rookery, Protected Species, Migration, Sandbar/Flats, Ponds, Marsh
+Description Submitted: Largest colonial waterbird site in bay system.  Key to production of colonial waterbirds in area.
+Field Notes: Not visited, but site photos submitted from stakeholder (Brent Ortego, TPWD).</description>
+				<LookAt>
+					<longitude>-96.34526241936638</longitude>
+					<latitude>28.45267871522273</latitude>
+					<altitude>0</altitude>
+					<heading>0.2110527565404085</heading>
+					<tilt>0</tilt>
+					<range>2112.848000029552</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<altitudeMode>absolute</altitudeMode>
+					<coordinates>-96.34619548912578,28.45173517025001,0.3254982714223857</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>49</name>
+				<visibility>0</visibility>
+				<description>Site Number: 49
+Site Name: Turnstake Island Complex
+Nominated in: Phase II
+Land Ownership: TGLO
+Conservation Strategy: Restoration of habitat for potential rookery islands, removing invasive species, and thinning vegetation
+Potential Partners: CBBEP, SABP, TGLO, USFWS
+Species: Nesting colonial waterbirds
+Key Terms: Bird, Restoration, Rookery, Protected Species, Migration, Tidal Marsh, Sandbar/Flats
+Description Submitted: Manage vegetation to restore rookery island habitat
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.68013312779324</longitude>
+					<latitude>28.31512734505101</latitude>
+					<altitude>0</altitude>
+					<heading>0.01252863858424241</heading>
+					<tilt>0</tilt>
+					<range>1936.253462083472</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.67976818382284,28.31682686926484,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>48</name>
+				<visibility>0</visibility>
+				<description>Site Number: 48
+Site Name: Victoria Canal Island
+Nominated in: Phase II
+Land Ownership: TGLO
+Conservation Strategy: Develop conservation easement or acquire land and restoration of habitat if determined suitable for the Aplomado falcon; Aplomado falcon was seen on the island in the winter of 2010
+Potential Partners: CBBEP, SABP, TGLO, USFWS
+Species: Endangered Aplomado falcon (Falco femoralis)
+Key Terms: Bird, Restoration, Conservation Easement, Land Acquisition, Endangered Species, Bay Island, Tidal Marsh, Sandbars/Flats
+Description Submitted: Manage vegetation; island is adjacent to Aplomado Falcon nesting boxes; Aplomado Falcon was seen on island
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.70654695906947</longitude>
+					<latitude>28.34707644667948</latitude>
+					<altitude>0</altitude>
+					<heading>1.232464939067113e-014</heading>
+					<tilt>0</tilt>
+					<range>341.4148738074968</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.70657402616561,28.34720878770263,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>47</name>
+				<visibility>0</visibility>
+				<description>Site Number: 47
+Site Name: South Pass Islands 	
+Nominated in: Phase I
+Land Ownership: TGLO
+Conservation Strategy: Restoration from erosion
+Potential Partners:ACOE, CBBEP, Gulf Ecosystem Restoration Task, SABP, TGLO
+Species: Nesting colonial waterbirds and Black Skimmers and Royal Terns
+Key Terms: Bird, Restoration, Rookery, Protected Species, Sensitive Species, Migration, Tidal Marsh, Sandbar/Flats
+Description Submitted: Colonial waterbirds Black Skimmers and Royal Terns; needs reconstruction it is eroding; has active oil and gas operations need protection and need to be inlarged.  It is eroding.  Has much disturbance from boaters
+Field Notes: Visited in Phase I and II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.62405970194878</longitude>
+					<latitude>28.29997596279212</latitude>
+					<altitude>0</altitude>
+					<heading>1.523184750324911e-006</heading>
+					<tilt>0</tilt>
+					<range>1546.81086693492</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.62189424527305,28.29707394235627,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>46</name>
+				<visibility>0</visibility>
+				<description>Site Number: 46
+Site Name: Big Bird Island
+Nominated in: Phase I
+Land Ownership: TGLO submerged land
+Conservation Strategy: Develop new rookery island since no other rookery island exists in the area
+Potential Partners: ACOE, CBBEP, Gulf Ecosystem Restoration Task, SABP, TGLO
+Species: Potential colonial waterbirds
+Key Terms: Bird, Creation, Rookery, Protected Species, Migration, Open Water
+Description Submitted: Create a new Island here
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.73497940704016</longitude>
+					<latitude>28.27491993638091</latitude>
+					<altitude>0</altitude>
+					<heading>-5.565970692561154e-015</heading>
+					<tilt>0</tilt>
+					<range>475.7906299000872</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.735158422193,28.27512557400891,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>45</name>
+				<visibility>0</visibility>
+				<description>Site Number: 45
+Site Name: Second Chain Islands
+Nominated in: Phase I
+Land Ownership: TGLO owned and leased by the Audubon Society
+Conservation Strategy: Restoration from erosion
+Potential Partners: ACOE, CBBEP, Gulf Ecosystem Restoration Task, SABP, TGLO
+Species: Colonial Waterbirds, Egrets, Herons, Skimmers, and Terns
+Key Terms: Bird, Restoration, Rookery, Protected Species, Migration, Tidal Marsh, Sandbar/Flats
+Description Submitted: Colonial Waterbird Conservation; Egrets, Herons, Skimmers, and Terns; Needs reconstruction.
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.81085349384794</longitude>
+					<latitude>28.19012777795192</latitude>
+					<altitude>0</altitude>
+					<heading>0.001802855394513764</heading>
+					<tilt>0</tilt>
+					<range>4449.431419653173</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.81441649623869,28.19304975096314,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>43</name>
+				<visibility>0</visibility>
+				<description>Site Number: 43
+Site Name: Seadrift Island 609-280C
+Nominated in: Phase I
+Land Ownership: TGLO owned and leased by the Audubon Society
+Conservation Strategy: Restoration from erosion
+Potential Partners: ACOE, CBBEP, Gulf Ecosystem Restoration Task, SABP, TGLO
+Species: Nesting colonial waterbirds
+Key Terms: Bird, Restoration, Rookery, Protected Species, Migration
+Description Submitted: This island is severly erroded and needs to be rebuilt.
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.72575057730938</longitude>
+					<latitude>28.38839233318845</latitude>
+					<altitude>0</altitude>
+					<heading>-0.110492625487107</heading>
+					<tilt>0</tilt>
+					<range>334.5847748529541</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.72592156370496,28.38865695914819,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>44</name>
+				<visibility>0</visibility>
+				<description>Site Number: 44
+Site Name: Seadrift Island 609-280B and Chain	
+Nominated in: Phase I and II
+Land Ownership: TGLO owned and leased by the Audubon Society
+Conservation Strategy: Restoration from erosion and develop a 4-6 acre island using dredge material from adjacent navigation channels
+Potential Partners: Audubon Society, Bird Conservancy, Calhoun County, Port of Victoria, TGLO, TPWD, West Side Calhoun County Navigation District
+Species: Nesting Colonial Waterbirds
+Key Terms: Bird, Restoration, Rookery, Protected Species, Migration
+Description Submitted: Highly eroded and needs to be rebuilt; develop 4-6 acre island using dredge material from adjacent navigation channels.
+Field Notes: Visited in Phase I and II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.72722978394799</longitude>
+					<latitude>28.39393105226025</latitude>
+					<altitude>0</altitude>
+					<heading>0.0004377561631505783</heading>
+					<tilt>0</tilt>
+					<range>1445.629744398233</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.72775477109263,28.39455823495009,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>42</name>
+				<visibility>0</visibility>
+				<description>Site Number: 42
+Site Name: Bayucos Island Wetlands
+Nominated in: Phase I
+Land Ownership: Portions within Aransas National Wildlife Refuge  and other entities
+Conservation Strategy: Develop conservation easement or acquire land; develop management plan from siltation and mangrove development; and, develop education to share land with wintering Whooping cranes 
+Potential Partners: ACOE, CCA, ICF, TPWD, USFWS
+Species: Endangered Whooping crane (Grus americana) and Piping plover (Charadrius melodus), waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Flat, Tidal Marsh, Seagrasses, Sandbars/Flats, Open Water 
+Description Submitted: Permanent protection (acquisition, conservation easement) for existing/potential whooping crane territory maintenance; outreach on sharing areas with wintering cranes; manage mangrove establishment
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.43525107582545</longitude>
+					<latitude>28.39955239009393</latitude>
+					<altitude>0</altitude>
+					<heading>-1.113194138512231e-014</heading>
+					<tilt>0</tilt>
+					<range>8263.863992202589</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.41277397362867,28.41084764667216,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>41</name>
+				<visibility>0</visibility>
+				<description>Site Number: 41
+Site Name: Blackberry Island Wetlands
+Nominated in: Phase I
+Land Ownership: TGLO
+Conservation Strategy: Develop conservation easement or acquire land; develop management plan from siltation and mangrove development; and, develop education to share land with wintering Whooping cranes 
+Potential Partners: ACOE, CCA, ICF, TPWD, USFWS
+Species: Endangered Whooping crane (Grus americana) and Piping plover (Charadrius melodus), waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Flat, Tidal Marsh, Seagrasses, Sandbar/Flats, Open Water 
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protectcurrent/potential  whooping crane territory maintenance; outreach on sharing areas with wintering cranes; manage mangrove establishment
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.4654853233144</longitude>
+					<latitude>28.41070401886088</latitude>
+					<altitude>0</altitude>
+					<heading>-4.373262687012335e-015</heading>
+					<tilt>0</tilt>
+					<range>3217.762590096908</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.46320547162267,28.41238580897775,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>40</name>
+				<visibility>0</visibility>
+				<description>Site Number: 40
+Site Name: Dewberry Island Wetlands
+Nominated in: Phase I
+Land Ownership: TGLO
+Conservation Strategy: Develop conservation easement or acquire land; develop management plan to allow ridge to become vegetated and not become elevated; management plant from siltation and mangrove development; and, develop education to share land with wintering Whooping cranes
+Potential Partners: ACOE, CCA, ICF, TPWD, USFWS
+Species: Endangered Whooping crane (Grus americana) and Piping plover (Charadrius melodus), waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Flat, Tidal Marsh, Seagrasses, Sandbars/Flats, Open Water
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protectcurrent/potential  whooping crane territory maintenance; outreach on sharing areas with wintering cranes; manage mangrove establishment; submerged portion of island is a major site of winter Piping Plover use.  Also within territory of Whooping Cranes. Submerged flats within The Lagoon is highly used by shorebirds and waterfowl
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.52816211109159</longitude>
+					<latitude>28.38251701539435</latitude>
+					<altitude>0</altitude>
+					<heading>-1.948089742396404e-014</heading>
+					<tilt>0</tilt>
+					<range>9967.941166746747</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.52588453315551,28.38251699646248,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>39</name>
+				<visibility>0</visibility>
+				<description>Site Number: 39
+Site Name: Shoalwater Bay Wetlands
+Nominated in: Phase I
+Land Ownership: TGLO
+Conservation Strategy: Develop conservation easement or acquire land; develop management plan from siltation and mangrove development; and, develop education to share land with wintering Whooping cranes 
+Potential Partners: ACOE, CCA, ICF, TPWD, USFWS
+Species: Endangered Whooping crane (Grus americana) and Piping plover (Charadrius melodus), waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Seagrasses, Sandbars/Flats,  Ponds/Basins, Marsh
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protectcurrent/potential  whooping crane territory maintenance; outreach on sharing areas with wintering cranes; manage mangrove establishment; submerged flats are a major wintering area for Piping Plover, shorebirds and waterfowl
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.6274350137565</longitude>
+					<latitude>28.33658808796821</latitude>
+					<altitude>0</altitude>
+					<heading>-0.04710110532795388</heading>
+					<tilt>0</tilt>
+					<range>9967.941166744988</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.61240941407839,28.33679852011172,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>38</name>
+				<visibility>0</visibility>
+				<description>Site Number: 38
+Site Name:  Rattlesnake Island Wetlands
+Nominated in: Phase I
+Land Ownership: Portions within the U.S. Fish and Wildlife Service Aransas National Wildlife Refuge and other entities (stated and federal)
+Conservation Strategy: Develop conservation easement or acquire land for portion not within ANWR; develop management plan to share land with wintering Whooping cranes; and manage shoreline erosion and mangrove development
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane (Grus americana) and Piping plover (Charadrius melodus), waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Seagrasses, Sandbars/Flats
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protect current whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.83171975793076</longitude>
+					<latitude>28.19271678904834</latitude>
+					<altitude>0</altitude>
+					<heading>0.007891729727445205</heading>
+					<tilt>0</tilt>
+					<range>2255.5431766723</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.83685108665728,28.19054957393325,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>37</name>
+				<visibility>0</visibility>
+				<description>Site Number: 37
+Site Name:  Roddy Island Wetlands
+Nominated in: Phase I
+Land Ownership: Outside U.S. Fish and Wildlife Service Aransas National Wildlife Refuge boundaries, other entities (state and federal) should be consulted
+Conservation Strategy: Develop conservation easement or acquire land; develop management plan to share land with wintering Whooping cranes; and manage shoreline erosion and mangrove development
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane, waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Seagrasses, Sandbars/Flats
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protect current whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.84842814306049</longitude>
+					<latitude>28.18053324073002</latitude>
+					<altitude>0</altitude>
+					<heading>-1.232464939067113e-014</heading>
+					<tilt>0</tilt>
+					<range>2255.54317667278</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.84808893692743,28.18131810424425,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>36</name>
+				<visibility>0</visibility>
+				<description>Site Number: 36
+Site Name:  ANWR North Bludworth Island Wetlands
+Nominated in: Phase I
+Land Ownership: U.S. Fish and Wildlife Service Aransas National Wildlife Refuge
+Conservation Strategy: Develop management plan to share land with wintering Whooping cranes; and manage shoreline erosion and mangrove development
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane (Grus americana), waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Seagrasses, Sandbars/Flats, Open Water
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protect current whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Visited in Phase I; obtained site photos (Additional field photos were submitted by stakeholder (Paul Silva, TPWD).</description>
+				<LookAt>
+					<longitude>-96.8733846993667</longitude>
+					<latitude>28.16497340172465</latitude>
+					<altitude>0</altitude>
+					<heading>-7.951386703658792e-015</heading>
+					<tilt>0</tilt>
+					<range>2895.230379138149</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.87338469936671,28.16588491010122,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>35</name>
+				<visibility>0</visibility>
+				<description>Site Number: 35
+Site Name:  ANWR South Bludworth Island Wetlands
+Nominated in: Phase I
+Land Ownership: U.S. Fish and Wildlife Service Aransas National Wildlife Refuge
+Conservation Strategy: Develop management plan to share land with wintering Whooping cranes; and manage shoreline erosion and mangrove development
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane (Grus americana), waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Seagrasses, Sandbars/Flats
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protect current whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Visited in Phase I; obtained site photos (Additional field photos were submitted by stakeholder (Paul Silva, TPWD).</description>
+				<LookAt>
+					<longitude>-96.90737527599318</longitude>
+					<latitude>28.13305639125712</latitude>
+					<altitude>0</altitude>
+					<heading>-1.550520407213464e-014</heading>
+					<tilt>0</tilt>
+					<range>1148.545706374333</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.90705155984128,28.13258060426662,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>34</name>
+				<visibility>0</visibility>
+				<description>Site Number: 34
+Site Name: Grass Island
+Nominated in: Phase I
+Land Ownership: TGLO
+Conservation Strategy: Develop a new island to enhance the present island
+Potential Partners: ACOE, CBBEP, SABP, TGLO
+Species: Colonial waterbirds
+Key Terms: Bird, Enhancement, Rookery, Protected Species, Migration, Tidal Marsh, Open Water
+Description Submitted: Add to Grass Island w/ spoil
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.91615312413978</longitude>
+					<latitude>28.13197124533193</latitude>
+					<altitude>0</altitude>
+					<heading>-1.391492673140288e-014</heading>
+					<tilt>0</tilt>
+					<range>412.747715545352</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.91640905517637,28.13242263586417,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>33</name>
+				<visibility>0</visibility>
+				<description>Site Number: 33
+Site Name: Dunham Island Wetlands
+Nominated in: Phase I
+Land Ownership: ACOE, TGLO
+Conservation Strategy: Develop conservation easement or acquire land; develop management plan to share land with wintering Whooping cranes; and manage shoreline erosion and mangrove development 
+Potential Partners: ACOE, CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, TXDOT, USFWS
+Species: Endangered Whooping crane, waterfowl, and shorebirds
+Key Terms: Education, Bird, Management, Conservation Easement, Land Acquisition, Endangered Species, Protected Species, Commercial Species, Migration, Tidal Marsh, Sandbars/Flats, Seagrasses
+Description Submitted: Permanent protection (acquisition, conservation easement, wildlife preserve) to protect current whooping crane territory maintenance; outreach on sharing areas with wintering cranes; shoreline protection from GIWW wave erosion; manage mangrove establishment
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.91859502664266</longitude>
+					<latitude>28.12141938807265</latitude>
+					<altitude>0</altitude>
+					<heading>-4.770832022195274e-015</heading>
+					<tilt>0</tilt>
+					<range>1494.791380933541</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin2000014</styleUrl>
+				<Point>
+					<coordinates>-96.91356762619952,28.12605117970785,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder>
+			<name>Barrier Islands</name>
+			<visibility>0</visibility>
+			<description>All recommended sites on San Jose or Matagorda Islands</description>
+			<Placemark>
+				<name>62</name>
+				<visibility>0</visibility>
+				<description>Site Number: 62
+Site Name: Pringle lake Entrance
+Nominated in: Phase I
+Land Ownership: TGLO submerged land
+Conservation Strategy: Maintain hydrologic connectivity with San Antonio Bay system
+Potential Partners: CCA, TGLO, TPWD
+Species: Fishery habitat
+Key Terms: Fish, Management, Monitoring, Bay Pass, Hydrology, Tidal Marsh, Sandbar/Flats, Open Water
+Description Submitted: Restore hydrologic connectivity
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.51869383317072</longitude>
+					<latitude>28.32223656079297</latitude>
+					<altitude>0</altitude>
+					<heading>0.00680822187798827</heading>
+					<tilt>0</tilt>
+					<range>1308.905832633223</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<coordinates>-96.51466900674588,28.32465408665032,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>61</name>
+				<visibility>0</visibility>
+				<description>Site Number: 61
+Site Name: Contee Lake-Vandeveer Island Back Barrier Wetlands
+Nominated in: Phase I
+Land Ownership: USFWS
+Conservation Strategy: : Develop management plan for mangrove establishment and education to share land with wintering Whooping cranes
+Potential Partners: CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, USFWS
+Species: Endangered Whooping cranes (Grus americana) and shorebirds
+Key Terms: Education, Bird, Management, Endangered Species, Protected Species, Migration,  Tidal Marsh, Sandbar/Flats, Seagrasses, Open Water, Marsh
+Description Submitted: Outreach on sharing areas with wintering cranes; manage mangrove establishment
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.56453334584373</longitude>
+					<latitude>28.28026459951591</latitude>
+					<altitude>0</altitude>
+					<heading>-5.168401357378215e-015</heading>
+					<tilt>0</tilt>
+					<range>21504.59149213551</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<coordinates>-96.5687552633064,28.28739020867046,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>58</name>
+				<visibility>0</visibility>
+				<description>Site Number: 58
+Site Name: Panther Point Back Barrier Wetlands
+Nominated in: Phase I
+Land Ownership: USFWS
+Conservation Strategy: Develop management plan for mangrove establishment and education to share land with wintering Whooping cranes
+Potential Partners: CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, USFWS
+Species: Endangered Whooping cranes (Grus americana) and shorebirds
+Key Terms: Education, Bird, Management, Endangered Species, Protected Species, Migration, Tidal Marsh, Sandbar/Flats, Seagrasses, Open Water, Marsh
+Description Submitted: Outreach on sharing areas with wintering cranes; manage mangrove establishment
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.67872844257784</longitude>
+					<latitude>28.2148930995325</latitude>
+					<altitude>0</altitude>
+					<heading>-5.168401357378214e-015</heading>
+					<tilt>0</tilt>
+					<range>5213.650976035538</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<coordinates>-96.68034802625272,28.21654554884837,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>57</name>
+				<visibility>0</visibility>
+				<description>Site Number: 57
+Site Name: South Matagorda Island Tidal Fan Wetlands
+Nominated in: Phase I
+Land Ownership: USFWS
+Conservation Strategy: Restore hydrologic connectivity via culverts in roads and levees, and breaches in levees; and, develop management plan for mangrove establishment and education to share land with wintering Whooping cranes
+Potential Partners: CBBEP, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, USFWS
+Species: Endangered Whooping cranes (Grus americana) and shorebirds
+Key Terms: Education, Bird, Management, Restoration, Endangered Species, Protected Species, Barrier Island, Tidal Marsh, Sanbar/Flats, Seagrasses, Marsh, Open Water
+Description Submitted: outreach on sharing areas with wintering cranes; restore hydrologic connectivity via culverts in roads and levees, breaches in levees; manage mangrove establishment
+Field Notes: Visited in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.76220808745404</longitude>
+					<latitude>28.15489553004371</latitude>
+					<altitude>0</altitude>
+					<heading>7.553817368475852e-015</heading>
+					<tilt>0</tilt>
+					<range>14314.79689099026</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<coordinates>-96.78232737749218,28.16891815525987,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>56</name>
+				<visibility>0</visibility>
+				<description>Site Number: 56
+Site Name: St. Joe Marsh/Tidal Marsh
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Develop conservation easement and acquire land
+Potential Partners: ACOE, CBBEP, NRCS, SABP, TGLO, TNC, TPWD, USFWS
+Species: Endangered Whooping crane (Grus americana) and shorebirds
+Key Terms: Bird, Conservation Easement, Land Acquisition, Endangered Species, Protected Species,  Migration, Barrier Island, Tidal Marsh, Sandbar/Flats, Mangrove, Seagrasses, Open Water
+Description Submitted: Conservation easement acquisition
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.86626593381172</longitude>
+					<latitude>28.09759005211508</latitude>
+					<altitude>0</altitude>
+					<heading>-0.002813472625298</heading>
+					<tilt>0</tilt>
+					<range>13755.72157611183</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<coordinates>-96.86581636586132,28.09243750943043,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>66</name>
+				<visibility>0</visibility>
+				<description>Site Number: 66
+Site Name: Pelican Island at Pass Cavallo
+Nominated in: Phase II
+Land Ownership: TGLO submerged land
+Conservation Strategy: Maintain hydrologic connectivity with San Antonio Bay system and Gulf of Mexico
+Potential Partners: TPWD, TGLO, USFWS
+Species: Fishery Habitat
+Key Terms: Fish, Management, Monitoring, Bay/Gulf Pass, Hydrology, Sandbar/Flats, Beach
+Descripition Submitted: Addressing the sanding up of the entrance to Sunday Beach at the north end of what was Pelican Island but now attached to Matagorda Island. The hydrology study to address the sanding issue should also address sanding of the south end of Pelican Island. Pass Cavallo once flowed directly at the entrance to Fish Pond and the several entrances to Mules Slough, providing stronger tidal flows through those estuaries.  Addressing this issue would also effect the sanding at the north end of Pelican Island as well as the various projects identified as Jayhook Projects; improved tidal flow through important esturairies at Fish Pond and Mules Slough
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.38675883276153</longitude>
+					<latitude>28.36879338163261</latitude>
+					<altitude>0</altitude>
+					<heading>1.197201472368334</heading>
+					<tilt>0</tilt>
+					<range>7579.421087472914</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<coordinates>-96.39934796676926,28.36016561290395,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>55</name>
+				<visibility>0</visibility>
+				<description>Site Number: 55
+Site Name: Cedar Bayou Pass
+Nominated in: Phase I
+Land Ownership: Private
+Conservation Strategy: Restore hydrologic connection between San Antonio Bay and the Gulf of Mexico
+Potential Partners: ACOE, Aransas County, Aransas County Navigation District, Calhoun County, CBBEP,  Coastal Conservation Association, SABP, TGLO, TPWD, USFWS
+Species: Fishery habitat
+Key Terms: Fish, Restoration, Hydrology, Gulf Pass, Tidal Marsh, Sandbar/Flats, Seagrasses, Beach, Open Water
+Description Submitted: Restore hydrology
+Field Notes: Visited site in Phase I; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.85986759490987</longitude>
+					<latitude>28.08574444987209</latitude>
+					<altitude>0</altitude>
+					<heading>-0.74495682431804</heading>
+					<tilt>0</tilt>
+					<range>8259.39697765088</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.84872728417358,28.06783364931999,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>60</name>
+				<visibility>0</visibility>
+				<description>Site Number: 60
+Site Name: South Pass Lake Entrance
+Nominated in: Phase I
+Land Ownership: TGLO submerged land
+Conservation Strategy: Maintain hydrologic connectivity with San Antonio Bay system
+Potential Partners: CCA, TGLO, TPWD
+Species: Fishery habitat
+Key Terms: Fish, Management, Monitoring, Bay Pass, Hydrology, Open Water
+Description Submitted: Natural pass filling in; Restore hydrologic connectivity
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.60351781156534</longitude>
+					<latitude>28.29188708097437</latitude>
+					<altitude>0</altitude>
+					<heading>0.04539884978968251</heading>
+					<tilt>0</tilt>
+					<range>873.8365859952237</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.60406430273785,28.29216464726061,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>65</name>
+				<visibility>0</visibility>
+				<description>Site Number: 65
+Site Name: Army Hole Entrance
+Nominated in: Phase I
+Land Ownership: TGLO submerged land
+Conservation Strategy: Maintain hydrologic connectivity with San Antonio Bay system
+Potential Partners: CCA, TGLO, TPWD
+Species: Fishery habitat
+Key Terms: Fish, Management, Monitoring, Bay  Pass, Hydrology, Open Water
+Description Submitted: Restore hydrologic connectivity
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.46396027562277</longitude>
+					<latitude>28.33217836017867</latitude>
+					<altitude>0</altitude>
+					<heading>0.1114494447778295</heading>
+					<tilt>0</tilt>
+					<range>976.5472773044501</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.46461975510538,28.33283320848745,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>59</name>
+				<visibility>0</visibility>
+				<description>Site Number: 59
+Site Name: Long Lake Entrance
+Nominated in: Phase I
+Land Ownership: TGLO submerged land
+Conservation Strategy: Maintain hydrologic connectivity with San Antonio Bay system
+Potential Partners: CCA, TGLO, TPWD
+Species: Fishery habitat
+Key Terms: Fish, Management, Monitoring, Bay Pass, Hydrology, Open Water
+Description Submitted: Restore/conserve hydrologic connectivity
+Field Notes: Not visited</description>
+				<LookAt>
+					<longitude>-96.61703782241921</longitude>
+					<latitude>28.27089722800571</latitude>
+					<altitude>0</altitude>
+					<heading>0.03898912953195836</heading>
+					<tilt>0</tilt>
+					<range>2587.08866323909</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.62268078860555,28.26973383020733,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>64</name>
+				<visibility>0</visibility>
+				<description>Site Number: 64
+Site Name: Sunday Beach Entrance
+Nominated in: Phase I
+Land Ownership: TGLO submerged land
+Conservation Strategy: Maintain hydrologic connectivity with San Antonio Bay system
+Potential Partners: CCA, TGLO, TPWD
+Species: Fishery habitat
+Key Terms: Fish, Management, Monitoring, Gulf  Pass, Hydrology, Open Water
+Description Submitted: Conserve/restore hydrologic connectivity
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.40095813544389</longitude>
+					<latitude>28.38683644128952</latitude>
+					<altitude>0</altitude>
+					<heading>0.0138247771093647</heading>
+					<tilt>0</tilt>
+					<range>1768.860918726746</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+					<coordinates>-96.40146337845729,28.38962689772038,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>63</name>
+				<visibility>0</visibility>
+				<description>Site Number: 63
+Site Name: Back Bay Wetlands
+Nominated in: Phase I
+Land Ownership: USFWS
+Conservation Strategy: Develop management plan for mangrove establishment and education to share land with wintering Whooping cranes; and, maintain hydrologic passes throughout the area
+Potential Partners: : CBBEP, CCA, EPA, ICF, GBRA, NOAA, NRCS, SABP, SARA, TGLO, TPWD, USFWS
+Species: Endangered Whooping cranes (Grus americana) and shorebirds
+Key Terms: Education, Bird, Fish, Management, Endangered Species, Protected Species, Migration, Wetlands, Barrier Island, Tidal Marsh, Sandbar/Flats, Seagrasses, Open Water
+Description Submitted: Outreach on sharing areas with wintering cranes; manage mangrove establishment; Conserve/Protect hydrologic connectivity; Multiple Sloughs
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.43005126438936</longitude>
+					<latitude>28.36563226214037</latitude>
+					<altitude>0</altitude>
+					<heading>-5.565970692561154e-015</heading>
+					<tilt>0</tilt>
+					<range>7297.03580856605</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<coordinates>-96.4190591805805,28.3712036171689,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark>
+				<name>67</name>
+				<visibility>0</visibility>
+				<description>Site Number: 67
+Site Name: Oil Well Cuts South-Saluria Bayou
+Nominated in: Phase II
+Land Ownership: USFWS and TGLO submerged land
+Conservation Strategy: Maintain hydrologic connectivity with San Antonio Bay system, monitor dredging effects, and remove abandoned oil facilities
+Potential Partners: TGLO, TPWD, USFWS
+Species: Fishery habitat
+Key Terms: Fish, Management, Monitoring, Bay Pass, Hydrology, Tidal Marsh, Sandbar/Flats, Open Water
+Description Submitted: The dredged oil well cuts off of Suluria Bayou into the north side of Mules Slough may have significantly effected the tidal flow through the Mules Slough estuary into Big Pocket. Various project are identified as Jayhook Projects for this area. The hydrology study suggested in this effort should also address the effects of the dredging and to identify if any mitigations are required.  Also, abandoned oil facilities in the east cut need to be removed.
+Field Notes: Visited in Phase II; obtained site photos</description>
+				<LookAt>
+					<longitude>-96.38675883276152</longitude>
+					<latitude>28.36879338163262</latitude>
+					<altitude>0</altitude>
+					<heading>1.197201472368317</heading>
+					<tilt>0</tilt>
+					<range>7579.421087471522</range>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</LookAt>
+				<styleUrl>#sn_ylw-pushpin20000100</styleUrl>
+				<Point>
+					<coordinates>-96.41839919441642,28.3906724709549,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>
