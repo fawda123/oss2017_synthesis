@@ -41,6 +41,7 @@ RData files (these should be text files?) in `data`, normalized:
 
 * `bmpdat.RData` restoration projects for water treatment
 * `bmpstat.RData` locations of restoration projects for water treatment
+* `chlbar.RData` final data of chlorophyll splits for BN
 * `habdat.RData` restoration projects for habitat
 * `habstat.RData` locations of restoration projects for habitat
 * `restdat.RData` restoration projects combined

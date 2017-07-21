@@ -24,13 +24,18 @@ source('R/get_brk.R')
 
 
 ```r
+# Load data
 data(restdat)
 data(reststat)
 data(wqdat)
 data(wqstat)
+
+# Set parameters, yr half-window for matching, mtch is number of closest matches
+yrdf <- 5
+mtch <- 10
 ```
 
-Habitat restoration projects:
+Restoration projects:
 
 ```r
 head(restdat)
@@ -47,7 +52,7 @@ head(restdat)
 ## 5  2000         EXOTIC_CONTROL HABITAT_ENHANCEMENT   hab  0.25  OSr2
 ## 6  1989 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT   hab    50  dLmu
 ```
-Locations of habitat restoration projects:
+Locations of restoration projects:
 
 ```r
 head(reststat)
@@ -103,7 +108,7 @@ head(wqstat)
 
 
 ```r
-wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = 10)
+wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = mtch)
 head(wqmtch)
 ```
 
@@ -162,11 +167,14 @@ pbase +
 
 ![](tbrest_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
-### Closest five
+### Closest five percent
 
 ```r
-# closest five
-toplo2 <- filter(toplo, rnk %in% c(1:5))
+# closest five percent
+fvper <- max(toplo$rnk) %>% 
+  `*`(0.05) %>% 
+  ceiling
+toplo2 <- filter(toplo, rnk %in% c(1:fvper))
 
 pbase + 
   geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
@@ -174,11 +182,11 @@ pbase +
 
 ![](tbrest_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
-### Closest ten
+### Closest all combinations
 
 ```r
-# closest twenty
-toplo3 <- filter(toplo, rnk %in% c(1:10))
+# closest all combo
+toplo3 <- toplo
 
 pbase + 
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
@@ -191,7 +199,7 @@ pbase +
 Get weighted average of project type, treatment (before, after) of salinity for all wq station, restoration site combinations.
 
 ```r
-salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5)
+salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf)
 head(salchg)
 ```
 
@@ -265,7 +273,7 @@ Get conditional probability distributions for the restoration type, treatment ef
 
 ```r
 # get chlorophyll changes
-chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = 5)
+chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf)
   
 # merge with salinity, bet salinity levels
 salbrk <- salbrk %>% 
@@ -331,11 +339,97 @@ chlbrk %>%
 ## 24    wtr   bef    hi  3.898500 0.6980949     2
 ```
 
+Final combinations long format:
+
+```r
+chlbar <- chlbrk %>% 
+  group_by(resgrp, trt, salev) %>% 
+  nest %>% 
+  mutate(
+    data = map(data, function(x){
+      
+      brk <- x$brk
+      out <- data.frame(
+        lo = brk[1], md = brk[2] - brk[1], hi = 1 - brk[2]
+      )
+      
+      return(out)
+      
+    })
+  ) %>% 
+  unnest %>% 
+  gather('chllev', 'chlval', lo:hi) %>% 
+  mutate(
+    salev = factor(salev, levels = c('lo', 'md', 'hi')),
+    chllev = factor(chllev, levels = c('lo', 'md', 'hi'))
+  )
+save(chlbar, file = 'data/chlbar.RData', compress = 'xz')
+
+chlbar %>% 
+  print(n = nrow(.))
+```
+
+```
+## # A tibble: 36 x 5
+##    resgrp   trt  salev chllev     chlval
+##     <chr> <chr> <fctr> <fctr>      <dbl>
+##  1    hab   aft     lo     lo 0.62871991
+##  2    hab   aft     md     lo 0.25865637
+##  3    hab   aft     hi     lo 0.22203392
+##  4    hab   bef     lo     lo 0.36973161
+##  5    hab   bef     md     lo 0.35898011
+##  6    hab   bef     hi     lo 0.28332824
+##  7    wtr   aft     lo     lo 0.37990286
+##  8    wtr   aft     md     lo 0.43792805
+##  9    wtr   aft     hi     lo 0.45145895
+## 10    wtr   bef     lo     lo 0.48952434
+## 11    wtr   bef     md     lo 0.34724942
+## 12    wtr   bef     hi     lo 0.27816080
+## 13    hab   aft     lo     md 0.34134515
+## 14    hab   aft     md     md 0.45352747
+## 15    hab   aft     hi     md 0.46605945
+## 16    hab   bef     lo     md 0.43346076
+## 17    hab   bef     md     md 0.45577475
+## 18    hab   bef     hi     md 0.42039512
+## 19    wtr   aft     lo     md 0.43363885
+## 20    wtr   aft     md     md 0.44072990
+## 21    wtr   aft     hi     md 0.41275366
+## 22    wtr   bef     lo     md 0.41154362
+## 23    wtr   bef     md     md 0.45480819
+## 24    wtr   bef     hi     md 0.41993407
+## 25    hab   aft     lo     hi 0.02993494
+## 26    hab   aft     md     hi 0.28781616
+## 27    hab   aft     hi     hi 0.31190662
+## 28    hab   bef     lo     hi 0.19680763
+## 29    hab   bef     md     hi 0.18524514
+## 30    hab   bef     hi     hi 0.29627664
+## 31    wtr   aft     lo     hi 0.18645829
+## 32    wtr   aft     md     hi 0.12134205
+## 33    wtr   aft     hi     hi 0.13578739
+## 34    wtr   bef     lo     hi 0.09893204
+## 35    wtr   bef     md     hi 0.19794239
+## 36    wtr   bef     hi     hi 0.30190514
+```
+
+A bar plot of splits:
+
+```r
+ggplot(chlbar, aes(x = chllev, y = chlval, group = trt, fill = trt)) +
+  geom_bar(stat = 'identity', position = 'dodge') +
+  facet_grid(salev ~ resgrp) +
+  theme_bw()
+```
+
+![](tbrest_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+
 A plot showing the breaks:
 
 ```r
 toplo <- select(chlcdt, -data, -crv) %>% 
-  unnest
+  unnest %>%
+  mutate(
+    salev = factor(salev, levels = c('lo', 'md', 'hi'))
+  )
 ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
   geom_line(aes(colour = trt)) + 
   geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
@@ -344,6 +438,6 @@ ggplot(toplo, aes(x = cval, y = cumest, group = trt)) +
   theme_bw()
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
 

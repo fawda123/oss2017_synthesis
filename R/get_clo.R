@@ -4,9 +4,6 @@
 #' @param mtch numeric for number of restoration sites to match with each wq station
 #' 
 get_clo <- function(restdat, reststat, wqstat, resgrp = 'top', mtch = 10){
-    
-  # get this many closest to each station
-  mtch <- 10
   
   # join restoration site data and locs, make top level grouping column
   restall <- left_join(restdat, reststat, by = 'id')
@@ -14,6 +11,12 @@ get_clo <- function(restdat, reststat, wqstat, resgrp = 'top', mtch = 10){
   # restoration project grouping column
   names(restall)[names(restall) %in% resgrp] <- 'resgrp'
   
+  # stop if mtch greater than minimum size of resgrp
+  minval <- table(restall$resgrp) %>% 
+    min
+  if(mtch > minval)
+    stop(paste('maximum value for mtch is', minval))
+
   # match habitat restoration locations with wq stations by closest mtch locations
   wqmtch <- wqstat %>% 
     group_by(stat) %>% 
