@@ -436,7 +436,7 @@ r-> {d e}
 graph <- grViz ("
 digraph a_nice_graph {
 
-graph [overlap = true, fontsize = 14]
+graph [layout = circo]
 
 node [shape = circle,
       style = filled,
@@ -521,8 +521,8 @@ z -> f
 ```
 
 ```{r}
-graph <- grViz ("
-digraph a_nice_graph {
+graph1 <- grViz("
+digraph circo {
 
 graph [overlap = true, fontsize = 14]
 
