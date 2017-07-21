@@ -12,14 +12,22 @@ library(tibble)
 knitr::knit('tbrest.Rmd', tangle = TRUE)
 file.copy('tbrest.R', 'R/tbrest.R', overwrite = TRUE)
 file.remove('tbrest.R')
+
+# source R files
+source('R/get_chg.R')
+source('R/get_clo.R')
+source('R/get_cdt.R')
+source('R/get_brk.R')
 ```
 
-## Restoration data
+## Restoration and water quality data
 
 
 ```r
 data(restdat)
 data(reststat)
+data(wqdat)
+data(wqstat)
 ```
 
 Habitat restoration projects:
@@ -29,15 +37,15 @@ head(restdat)
 ```
 
 ```
-## # A tibble: 6 x 5
-##    date                   tech                type  acre    id
-##   <dbl>                  <chr>               <chr> <chr> <chr>
-## 1  2005 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT  12.8  Od6c
-## 2  2004         EXOTIC_CONTROL HABITAT_ENHANCEMENT 123.9  jDZw
-## 3  2005         EXOTIC_CONTROL HABITAT_ENHANCEMENT 123.9  ajg8
-## 4  2006 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT    45  off6
-## 5  2000         EXOTIC_CONTROL HABITAT_ENHANCEMENT  0.25  kipZ
-## 6  1989 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT    50  4TdU
+## # A tibble: 6 x 6
+##    date                   tech                type   top  acre    id
+##   <dbl>                  <chr>               <chr> <chr> <chr> <chr>
+## 1  2005 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT   hab  12.8  3F3S
+## 2  2004         EXOTIC_CONTROL HABITAT_ENHANCEMENT   hab 123.9  6COa
+## 3  2005         EXOTIC_CONTROL HABITAT_ENHANCEMENT   hab 123.9  F6iK
+## 4  2006 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT   hab    45  YqTO
+## 5  2000         EXOTIC_CONTROL HABITAT_ENHANCEMENT   hab  0.25  OSr2
+## 6  1989 HYDROLOGIC_RESTORATION HABITAT_ENHANCEMENT   hab    50  dLmu
 ```
 Locations of habitat restoration projects:
 
@@ -49,87 +57,13 @@ head(reststat)
 ## # A tibble: 6 x 3
 ##      id      lat       lon
 ##   <chr>    <dbl>     <dbl>
-## 1  Od6c 27.88977 -82.39888
-## 2  jDZw 27.88994 -82.40340
-## 3  ajg8 27.88181 -82.39783
-## 4  off6 27.97370 -82.71504
-## 5  kipZ 27.81921 -82.28548
-## 6  4TdU 27.99817 -82.61724
+## 1  3F3S 27.88977 -82.39888
+## 2  6COa 27.88994 -82.40340
+## 3  F6iK 27.88181 -82.39783
+## 4  YqTO 27.97370 -82.71504
+## 5  OSr2 27.81921 -82.28548
+## 6  dLmu 27.99817 -82.61724
 ```
-
-## WQ data
-
-
-```r
-wqdat_raw <- read_csv('data-raw/epchc_clean_data_07162017.csv')
-
-# rename, select relevant columns, integrate variables across depths
-# annual averages by site, variable
-wqdat <- wqdat_raw %>% 
-  rename(
-    yr = YEAR,
-    mo = month,
-    dttm = SampleTime,
-    stat = epchc_station, 
-    lat = Latitude, 
-    lon = Longitude,
-    sallo = Sal_Bottom_ppth, 
-    salmd = Sal_Mid_ppth,
-    salhi = Sal_Top_ppth, 
-    dolo = DO_Bottom_mg_L,
-    domd = DO_Mid_mg_L, 
-    dohi = DO_Top_mg_L,
-    chla = chl_a
-  ) %>% 
-  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
-  gather('var', 'val', sallo:chla) %>% 
-  mutate(val = as.numeric(val)) %>% 
-  spread('var', 'val') %>% 
-  rowwise() %>%
-  mutate(
-    sal = mean(c(sallo, salmd, salhi), na.rm = TRUE),
-    do = mean(c(dolo, domd, dohi), na.rm = TRUE)
-  ) %>%
-  select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
-  mutate(
-    dy = 1
-  ) %>% 
-  unite('datetime', yr, mo, dy, sep = '-') %>% 
-  mutate(
-    datetime = as.Date(datetime, format = '%Y-%m-%d')
-  )
-
-# get station locations
-wqstat <- wqdat %>% 
-  select(stat, lon, lat) %>% 
-  unique
-
-# remove denormalized rows
-wqdat <- wqdat %>% 
-  select(-lon, -lat)
-  
-save(wqstat, file= 'data/wqstat.RData', compress = 'xz')
-save(wqdat, file = 'data/wqdat.RData', compress = 'xz')
-```
-
-Water quality station lat/lon:
-
-```r
-head(wqstat)
-```
-
-```
-## # A tibble: 6 x 3
-##    stat      lon     lat
-##   <int>    <dbl>   <dbl>
-## 1    47 -82.6202 27.9726
-## 2    60 -82.6316 27.9899
-## 3    46 -82.6593 27.9904
-## 4    64 -82.6833 27.9794
-## 5    66 -82.6397 27.9278
-## 6    40 -82.5873 27.9291
-```
-
 Water quality data:
 
 ```r
@@ -147,55 +81,29 @@ head(wqdat)
 ## 5    66 1974-01-01    NA  21.3   8.1
 ## 6    40 1974-01-01    NA  22.0   8.4
 ```
+Locations of water quality sites:
+
+```r
+head(wqstat)
+```
+
+```
+## # A tibble: 6 x 3
+##    stat      lon     lat
+##   <int>    <dbl>   <dbl>
+## 1    47 -82.6202 27.9726
+## 2    60 -82.6316 27.9899
+## 3    46 -82.6593 27.9904
+## 4    64 -82.6833 27.9794
+## 5    66 -82.6397 27.9278
+## 6    40 -82.5873 27.9291
+```
 
 ## Distance to restoration sites {.tabset}
 
 
 ```r
-# get this many closest to each station
-mtch <- 10
-
-# join restoration site data and locs, make top level grouping column
-restall <- left_join(restdat, reststat, by = 'id') %>% 
-  mutate(
-    top = ifelse(grepl('HABITAT', type), 'hab', 'wtr')
-  )
-
-# restoration project grouping column
-resgrp <- 'top'
-names(restall)[names(restall) %in% resgrp] <- 'resgrp'
-
-# match habitat restoration locations with wq stations by closest mtch locations
-wqmtch <- wqstat %>% 
-  group_by(stat) %>% 
-  nest %>% 
-  mutate(
-    clo = map(data, function(sta){
-
-      # get top mtch closest restoration projects to each station
-      # grouped by resgrp column
-      dists <- distm(rbind(sta, restall[, c('lat', 'lon')])) %>%
-        .[-1, 1] %>%
-        data.frame(
-          restall[, c('id', 'resgrp')],
-          dist = ., stringsAsFactors = F
-          ) %>%
-        group_by(resgrp) %>%
-        arrange(dist) %>% 
-        nest %>%
-        mutate(
-          data = map(data, function(x) x[1:mtch, ]),
-          rnk = map(data, function(x) seq(1:nrow(x)))
-          ) %>% 
-        unnest
-      
-      return(dists)
-      
-    })
-  ) %>% 
-  select(-data) %>% 
-  unnest
-
+wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = 10)
 head(wqmtch)
 ```
 
@@ -203,12 +111,12 @@ head(wqmtch)
 ## # A tibble: 6 x 5
 ##    stat resgrp   rnk    id     dist
 ##   <int>  <chr> <int> <chr>    <dbl>
-## 1    47    hab     1  4TdU 2861.746
-## 2    47    hab     2  CpK7 2971.000
-## 3    47    hab     3  XJkh 4526.348
-## 4    47    hab     4  hIYO 4526.348
-## 5    47    hab     5  E4PQ 4526.348
-## 6    47    hab     6  8GWP 4526.348
+## 1    47    hab     1  dLmu 2861.746
+## 2    47    hab     2  DyAP 2971.000
+## 3    47    hab     3  P2gv 4526.348
+## 4    47    hab     4  Wxg6 4526.348
+## 5    47    hab     5  ruky 4526.348
+## 6    47    hab     6  cTzf 4526.348
 ```
 
 ### Closest 
@@ -225,10 +133,11 @@ toplo <- wqmtch %>%
     `Restoration\ngroup` = resgrp,
     `Distance (dd)` = dist
   )
-restall <- restall %>% 
-  rename(
-    `Restoration\ngroup` = resgrp
-  )
+    
+# restoration project grouping column
+resgrp <- 'top'
+restall <- left_join(restdat, reststat, by = 'id')
+names(restall)[names(restall) %in% resgrp] <- 'Restoration\ngroup'
 
 # extent
 ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.1)
@@ -251,7 +160,7 @@ pbase +
   geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 ### Closest five
 
@@ -263,7 +172,7 @@ pbase +
   geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 ### Closest ten
 
@@ -275,95 +184,15 @@ pbase +
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ## Summarizing effects of restoration projects
 
 Get weighted average of project type, treatment (before, after) of salinity for all wq station, restoration site combinations.
 
 ```r
-# diff to summarize wq data, in years before/after restoration projects
-yrdf <- 5
-
-# get only sal dat
-saldat <- wqdat %>%
-  select(-chla, -do)
-
-# get weighted means of salinity for restoration treatments, types
-wqchng <- wqmtch %>%
-  left_join(restdat, by = 'id') %>%
-  select(-tech, -type, -acre) %>% 
-  mutate(
-    date = paste0(date, '-07-01'),
-    date = as.Date(date, format = '%Y-%m-%d'), 
-    wts = dist / min(dist),
-    wts = 1 / wts
-    ) %>%
-  split(.$stat) %>%
-  map(., function(x){
-
-    # iterate through the restoration sites closest to each wq station
-    bysta <- x %>%
-      group_by(rnk, resgrp) %>%
-      nest %>%
-      mutate(
-        wqchg = map(data, function(dt){
-
-          # summarize before/after wq data based on restoration date
-
-          # filter wq data by stat, get date bounds
-          statdat <- filter(saldat, stat %in% dt$stat)
-          orrng <- range(statdat$datetime)
-
-          # get date range +/- restoratin proj defined by yrdf
-          dtrng <- with(dt, c(date - yrdf * 365, date + yrdf * 365))
-
-          ## get values within window in dtrng, only if dates available
-          ## values are summarized as mean before/after
-          bef <- NA; aft <- NA
-
-          # before
-          if(dtrng[1] >= orrng[1]){
-
-            # summarizes values before
-            bef <- filter(statdat, datetime >= dtrng[1] & datetime <= dt$date) %>%
-              .$sal %>% 
-              mean(na.rm = TRUE)
-
-          }
-
-          # after
-          if(dtrng[2] <= orrng[2]){
-
-            # summarize values after
-            aft <- filter(statdat, datetime <= dtrng[2] & datetime >= dt$date) %>%
-              .$sal %>% 
-              mean(na.rm = TRUE)
-
-          }
-
-          # combine/return the wq station/restoration station summary
-          out <- data.frame(bef = bef, aft = aft)
-          return(out)
-
-        })
-
-      )
-
-    # return the complete restoration summary
-    bysta <- unnest(bysta)
-    return(bysta)
-
-  }) %>%
-  do.call('rbind', .) %>%
-  remove_rownames() %>% 
-  gather('trt', 'val', bef:aft) %>% 
-  group_by(stat, resgrp, trt) %>% 
-  summarise(
-    cval = weighted.mean(val, w = wts, na.rm = TRUE)
-  )
-
-head(wqchng)
+salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5)
+head(salchg)
 ```
 
 ```
@@ -379,43 +208,11 @@ head(wqchng)
 ## 6     7    hab   bef 25.25877
 ```
 
-Get conditional probability distributions for the restoration type, treatment effects, salinity as first child node in network. 
+Get conditional probability distributions for the restoration type, treatment effects, **salinity** as first child node in network. 
 
 ```r
-# fit conditional distributions
-wqcdist <- wqchng %>% 
-  group_by(resgrp, trt) %>% 
-  nest %>% 
-  mutate(
-    crv = map(data, function(x){
-
-      est <- x$cval %>% 
-        na.omit %>% 
-        MASS::fitdistr('normal') %>% 
-        .$estimate
-      
-      return(est)
-      
-      }
-    ), 
-    prd = pmap(list(data, crv), function(data, crv){
-      
-      cval <- range(data$cval, na.rm = TRUE)  
-      cval <- seq(cval[1], cval[2], length = 100)
-      est <- dnorm(cval, crv[1], crv[2]) %>% 
-        data.frame(cval = cval, est = .) %>% 
-        mutate(
-         cumest = cumsum(est),
-         cumest = cumest / max(cumest)
-        )
-      
-      return(est)
-      
-      }
-    )
-  )
-
-head(wqcdist)
+wqcdt <- get_cdt(salchg, 'resgrp', 'trt')
+head(wqcdt)
 ```
 
 ```
@@ -428,133 +225,125 @@ head(wqcdist)
 ## 4    wtr   bef <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
 ```
 
-Empirical and estimated distributions.  
+Discretization of salinity conditional probability distributions: 
 
 ```r
-# setup plots as empirical densities and estimated densities
-toplo1 <- wqcdist %>% 
-  select(resgrp, trt, data) %>% 
-  unnest
-toplo2 <- wqcdist %>% 
-  select(resgrp, trt, prd) %>% 
-  unnest
-head(toplo1)
-```
-
-```
-## # A tibble: 6 x 4
-##   resgrp   trt  stat     cval
-##    <chr> <chr> <int>    <dbl>
-## 1    hab   aft     6 24.67069
-## 2    hab   aft     7 25.92751
-## 3    hab   aft     8 24.06296
-## 4    hab   aft     9 26.78588
-## 5    hab   aft    11 27.03418
-## 6    hab   aft    13 27.41596
-```
-
-```r
-head(toplo2)
-```
-
-```
-## # A tibble: 6 x 5
-##   resgrp   trt     cval        est      cumest
-##    <chr> <chr>    <dbl>      <dbl>       <dbl>
-## 1    hab   aft 23.23396 0.05901539 0.007213288
-## 2    hab   aft 23.34354 0.06187009 0.014775499
-## 3    hab   aft 23.45312 0.06477323 0.022692553
-## 4    hab   aft 23.56271 0.06771886 0.030969643
-## 5    hab   aft 23.67229 0.07070058 0.039611180
-## 6    hab   aft 23.78187 0.07371156 0.048620742
-```
-
-```r
-ggplot(toplo1, aes(cval)) + 
-  geom_histogram(aes(y=..density..)) + 
-  geom_line(data = toplo2, aes(x = cval, y = est), col = 'red') +
-  facet_grid(resgrp ~ trt) +
-  theme_bw() + 
-  ggtitle('Salinity conditional distributions, empirical and estimated')
-```
-
-![](tbrest_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
-
-```r
-ggplot(toplo2, aes(x = cval, y = cumest, group = trt)) + 
-  geom_line(aes(colour = trt)) + 
-  facet_grid(~ resgrp) +
-  theme_bw() + 
-  ggtitle('Salinity conditional distributions, cumulative estimated')
-```
-
-![](tbrest_files/figure-html/unnamed-chunk-14-2.png)<!-- -->
-
-Quantile breaks of the estimated conditional probability distribution values, in thirds.
-
-```r
-salbrk <- toplo2 %>% 
-  group_by(resgrp, trt) %>% 
-  nest %>% 
-  mutate(
-    qts = map(data, function(x){
-  
-      out<- quantile(x$cval, c(0.25, 0.5, 0.75))
-      return(out)
-      
-    }),
-    brk = pmap(list(data, qts), function(data, qts){
-      
-      out <- approx(x = data$cval, y = data$cumest, xout = qts)
-      out <- out$y
-      return(out)
-      
-    }),
-    clev = map(brk, function(x){
-      
-      out <- rank(x) %>% 
-        factor(levels = c(1, 2, 3), labels = c('lo', 'md', 'hi')) %>% 
-        as.character
-        
-      return(out)
-      
-    })
-  ) %>% 
-  select(-data) %>% 
-  unnest
-
+salbrk <- get_brk(wqcdt, qts = c(0.33, 0.66), 'resgrp', 'trt')
 salbrk
 ```
 
 ```
-## # A tibble: 12 x 5
-##    resgrp   trt      qts       brk  clev
-##     <chr> <chr>    <dbl>     <dbl> <chr>
-##  1    hab   aft 25.94608 0.2986726    lo
-##  2    hab   aft 28.65820 0.6919804    md
-##  3    hab   aft 31.37031 0.9330526    hi
-##  4    hab   bef 24.64153 0.2252350    lo
-##  5    hab   bef 27.66066 0.6466346    md
-##  6    hab   bef 30.67979 0.9317494    hi
-##  7    wtr   aft 25.27537 0.2543405    lo
-##  8    wtr   aft 28.08864 0.6547678    md
-##  9    wtr   aft 30.90190 0.9242771    hi
-## 10    wtr   bef 25.83250 0.2989815    lo
-## 11    wtr   bef 28.37717 0.7051529    md
-## 12    wtr   bef 30.92185 0.9421645    hi
+## # A tibble: 8 x 5
+##   resgrp   trt      qts       brk  clev
+##    <chr> <chr>    <dbl>     <dbl> <dbl>
+## 1    hab   aft 26.81396 0.4266360     1
+## 2    hab   aft 30.39395 0.8715857     2
+## 3    hab   bef 25.60765 0.3508532     1
+## 4    hab   bef 29.59290 0.8606345     2
+## 5    wtr   aft 26.17562 0.3782141     1
+## 6    wtr   aft 29.88913 0.8543255     2
+## 7    wtr   bef 26.64680 0.4313636     1
+## 8    wtr   bef 30.00577 0.8841462     2
 ```
+
 A plot showing the breaks:
 
 ```r
-ggplot(toplo2, aes(x = cval, y = cumest, group = trt)) + 
+toplo <- select(wqcdt, -data, -crv) %>% 
+  unnest
+ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
   geom_line(aes(colour = trt)) + 
-  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = clev, colour = trt)) +
-  geom_segment(data = salbrk, aes(x = min(toplo2$cval), y = brk, xend = qts, yend = brk, linetype = clev, colour = trt)) +
+  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
+  geom_segment(data = salbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
   facet_grid(~ resgrp) +
   theme_bw()
 ```
 
-![](tbrest_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](tbrest_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
+Get conditional probability distributions for the restoration type, treatment effects, salinity levels, **chlorophyll** as second child node in network. 
+
+```r
+# get chlorophyll changes
+chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = 5)
+  
+# merge with salinity, bet salinity levels
+salbrk <- salbrk %>% 
+  group_by(resgrp, trt) %>% 
+  nest(.key = 'levs')
+allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>% 
+  rename(
+    salev = cval.y, 
+    cval = cval.x
+  ) %>% 
+  group_by(resgrp, trt) %>% 
+  nest %>% 
+  left_join(salbrk, by = c('resgrp', 'trt')) %>% 
+  mutate(
+    sallev = pmap(list(data, levs), function(data, levs){
+
+      out <- data %>% 
+        mutate(
+          salev = cut(salev, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
+          salev = as.character(salev)
+        )
+      
+      return(out)
+      
+    })
+  ) %>% 
+  select(-data, -levs) %>% 
+  unnest
+  
+chlcdt <- get_cdt(allchg, 'resgrp', 'trt', 'salev')
+chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'resgrp', 'trt', 'salev')
+chlbrk %>% 
+  print(n = nrow(.))
+```
+
+```
+## # A tibble: 24 x 6
+##    resgrp   trt salev       qts       brk  clev
+##     <chr> <chr> <chr>     <dbl>     <dbl> <dbl>
+##  1    hab   aft    lo 11.978108 0.6287199     1
+##  2    hab   aft    lo 18.156823 0.9700651     2
+##  3    hab   aft    md  5.436842 0.2586564     1
+##  4    hab   aft    md  6.995905 0.7121838     2
+##  5    hab   aft    hi  3.862818 0.2220339     1
+##  6    hab   aft    hi  4.532562 0.6880934     2
+##  7    hab   bef    lo 11.501613 0.3697316     1
+##  8    hab   bef    lo 15.662426 0.8031924     2
+##  9    hab   bef    md  7.215963 0.3589801     1
+## 10    hab   bef    md  9.861630 0.8147549     2
+## 11    hab   bef    hi  3.731300 0.2833282     1
+## 12    hab   bef    hi  5.215827 0.7037234     2
+## 13    wtr   aft    lo  9.569390 0.3799029     1
+## 14    wtr   aft    lo 12.348305 0.8135417     2
+## 15    wtr   aft    md  6.648959 0.4379281     1
+## 16    wtr   aft    md  8.616993 0.8786580     2
+## 17    wtr   aft    hi  3.809958 0.4514589     1
+## 18    wtr   aft    hi  4.611583 0.8642126     2
+## 19    wtr   bef    lo  9.345197 0.4895243     1
+## 20    wtr   bef    lo 13.075621 0.9010680     2
+## 21    wtr   bef    md  5.349960 0.3472494     1
+## 22    wtr   bef    md  6.788045 0.8020576     2
+## 23    wtr   bef    hi  3.136750 0.2781608     1
+## 24    wtr   bef    hi  3.898500 0.6980949     2
+```
+
+A plot showing the breaks:
+
+```r
+toplo <- select(chlcdt, -data, -crv) %>% 
+  unnest
+ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
+  geom_line(aes(colour = trt)) + 
+  geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
+  geom_segment(data = chlbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
+  facet_grid(salev ~ resgrp, scales = 'free_x') +
+  theme_bw()
+```
+
+![](tbrest_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 
