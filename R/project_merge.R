@@ -98,7 +98,11 @@ head(bmpdat)
 head(bmpstat)
 
 ## ------------------------------------------------------------------------
-restdat <- rbind(habdat, bmpdat)
+restdat <- rbind(habdat, bmpdat) %>% 
+  mutate(
+    top = ifelse(grepl('HABITAT', type), 'hab', 'wtr')
+  ) %>% 
+  select(date, tech, type, top, acre, id)
 reststat <- rbind(habstat, bmpstat)
 save(restdat, file = 'data/restdat.RData', compress = 'xz')
 save(reststat, file = 'data/reststat.RData', compress = 'xz')

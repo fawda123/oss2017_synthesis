@@ -10,9 +10,22 @@ knitr::knit('tbrest.Rmd', tangle = TRUE)
 file.copy('tbrest.R', 'R/tbrest.R', overwrite = TRUE)
 file.remove('tbrest.R')
 
-## ----warning = F, message = F, fig.width = 8, fig.height = 6-------------
+# source R files
+source('R/get_chg.R')
+source('R/get_clo.R')
+source('R/get_cdt.R')
+source('R/get_brk.R')
+
+## ----warning = F, message = F--------------------------------------------
+# Load data
 data(restdat)
 data(reststat)
+data(wqdat)
+data(wqstat)
+
+# Set parameters, yr half-window for matching, mtch is number of closest matches
+yrdf <- 5
+mtch <- 10
 
 ## ------------------------------------------------------------------------
 head(restdat)
@@ -20,111 +33,17 @@ head(restdat)
 ## ------------------------------------------------------------------------
 head(reststat)
 
-## ----warning = F, message = F--------------------------------------------
-wqdat_raw <- read_csv('data-raw/epchc_clean_data_07162017.csv')
-
-# rename, select relevant columns, integrate variables across depths
-# annual averages by site, variable
-wqdat <- wqdat_raw %>% 
-  rename(
-    yr = YEAR,
-    mo = month,
-    dttm = SampleTime,
-    stat = epchc_station, 
-    lat = Latitude, 
-    lon = Longitude,
-    sallo = Sal_Bottom_ppth, 
-    salmd = Sal_Mid_ppth,
-    salhi = Sal_Top_ppth, 
-    dolo = DO_Bottom_mg_L,
-    domd = DO_Mid_mg_L, 
-    dohi = DO_Top_mg_L,
-    chla = chl_a
-  ) %>% 
-  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
-  gather('var', 'val', sallo:chla) %>% 
-  mutate(val = as.numeric(val)) %>% 
-  spread('var', 'val') %>% 
-  rowwise() %>%
-  mutate(
-    sal = mean(c(sallo, salmd, salhi), na.rm = TRUE),
-    do = mean(c(dolo, domd, dohi), na.rm = TRUE)
-  ) %>%
-  select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
-  mutate(
-    dy = 1
-  ) %>% 
-  unite('datetime', yr, mo, dy, sep = '-') %>% 
-  mutate(
-    datetime = as.Date(datetime, format = '%Y-%m-%d')
-  )
-
-# get station locations
-wqstat <- wqdat %>% 
-  select(stat, lon, lat) %>% 
-  unique
-
-# remove denormalized rows
-wqdat <- wqdat %>% 
-  select(-lon, -lat)
-  
-save(wqstat, file= 'data/wqstat.RData', compress = 'xz')
-save(wqdat, file = 'data/wqdat.RData', compress = 'xz')
+## ------------------------------------------------------------------------
+head(wqdat)
 
 ## ------------------------------------------------------------------------
 head(wqstat)
 
 ## ------------------------------------------------------------------------
-head(wqdat)
-
-## ------------------------------------------------------------------------
-# get this many closest to each station
-mtch <- 10
-
-# join restoration site data and locs, make top level grouping column
-restall <- left_join(restdat, reststat, by = 'id') %>% 
-  mutate(
-    top = ifelse(grepl('HABITAT', type), 'hab', 'wtr')
-  )
-
-# restoration project grouping column
-resgrp <- 'top'
-names(restall)[names(restall) %in% resgrp] <- 'resgrp'
-
-# match habitat restoration locations with wq stations by closest mtch locations
-wqmtch <- wqstat %>% 
-  group_by(stat) %>% 
-  nest %>% 
-  mutate(
-    clo = map(data, function(sta){
-
-      # get top mtch closest restoration projects to each station
-      # grouped by resgrp column
-      dists <- distm(rbind(sta, restall[, c('lat', 'lon')])) %>%
-        .[-1, 1] %>%
-        data.frame(
-          restall[, c('id', 'resgrp')],
-          dist = ., stringsAsFactors = F
-          ) %>%
-        group_by(resgrp) %>%
-        arrange(dist) %>% 
-        nest %>%
-        mutate(
-          data = map(data, function(x) x[1:mtch, ]),
-          rnk = map(data, function(x) seq(1:nrow(x)))
-          ) %>% 
-        unnest
-      
-      return(dists)
-      
-    })
-  ) %>% 
-  select(-data) %>% 
-  unnest
-
+wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = mtch)
 head(wqmtch)
 
-## ----message = F, warning = F, fig.width = 7, fig.height = 8-------------
+## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
 ## 
 # plots
 
@@ -136,10 +55,11 @@ toplo <- wqmtch %>%
     `Restoration\ngroup` = resgrp,
     `Distance (dd)` = dist
   )
-restall <- restall %>% 
-  rename(
-    `Restoration\ngroup` = resgrp
-  )
+    
+# restoration project grouping column
+resgrp <- 'top'
+restall <- left_join(restdat, reststat, by = 'id')
+names(restall)[names(restall) %in% resgrp] <- 'Restoration\ngroup'
 
 # extent
 ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.1)
@@ -161,202 +81,125 @@ toplo1 <- filter(toplo, rnk %in% 1)
 pbase + 
   geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
-## ----message = F, warning = F, fig.width = 7, fig.height = 8-------------
-# closest five
-toplo2 <- filter(toplo, rnk %in% c(1:5))
+## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
+# closest five percent
+fvper <- max(toplo$rnk) %>% 
+  `*`(0.05) %>% 
+  ceiling
+toplo2 <- filter(toplo, rnk %in% c(1:fvper))
 
 pbase + 
   geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
-## ----message = F, warning = F, fig.width = 7, fig.height = 8-------------
-# closest twenty
-toplo3 <- filter(toplo, rnk %in% c(1:10))
+## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
+# closest all combo
+toplo3 <- toplo
 
 pbase + 
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
 ## ------------------------------------------------------------------------
-# diff to summarize wq data, in years before/after restoration projects
-yrdf <- 5
-
-# get only sal dat
-saldat <- wqdat %>%
-  select(-chla, -do)
-
-# get weighted means of salinity for restoration treatments, types
-wqchng <- wqmtch %>%
-  left_join(restdat, by = 'id') %>%
-  select(-tech, -type, -acre) %>% 
-  mutate(
-    date = paste0(date, '-07-01'),
-    date = as.Date(date, format = '%Y-%m-%d'), 
-    wts = dist / min(dist),
-    wts = 1 / wts
-    ) %>%
-  split(.$stat) %>%
-  map(., function(x){
-
-    # iterate through the restoration sites closest to each wq station
-    bysta <- x %>%
-      group_by(rnk, resgrp) %>%
-      nest %>%
-      mutate(
-        wqchg = map(data, function(dt){
-
-          # summarize before/after wq data based on restoration date
-
-          # filter wq data by stat, get date bounds
-          statdat <- filter(saldat, stat %in% dt$stat)
-          orrng <- range(statdat$datetime)
-
-          # get date range +/- restoratin proj defined by yrdf
-          dtrng <- with(dt, c(date - yrdf * 365, date + yrdf * 365))
-
-          ## get values within window in dtrng, only if dates available
-          ## values are summarized as mean before/after
-          bef <- NA; aft <- NA
-
-          # before
-          if(dtrng[1] >= orrng[1]){
-
-            # summarizes values before
-            bef <- filter(statdat, datetime >= dtrng[1] & datetime <= dt$date) %>%
-              .$sal %>% 
-              mean(na.rm = TRUE)
-
-          }
-
-          # after
-          if(dtrng[2] <= orrng[2]){
-
-            # summarize values after
-            aft <- filter(statdat, datetime <= dtrng[2] & datetime >= dt$date) %>%
-              .$sal %>% 
-              mean(na.rm = TRUE)
-
-          }
-
-          # combine/return the wq station/restoration station summary
-          out <- data.frame(bef = bef, aft = aft)
-          return(out)
-
-        })
-
-      )
-
-    # return the complete restoration summary
-    bysta <- unnest(bysta)
-    return(bysta)
-
-  }) %>%
-  do.call('rbind', .) %>%
-  remove_rownames() %>% 
-  gather('trt', 'val', bef:aft) %>% 
-  group_by(stat, resgrp, trt) %>% 
-  summarise(
-    cval = weighted.mean(val, w = wts, na.rm = TRUE)
-  )
-
-head(wqchng)
+salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf)
+head(salchg)
 
 ## ------------------------------------------------------------------------
-# fit conditional distributions
-wqcdist <- wqchng %>% 
-  group_by(resgrp, trt) %>% 
-  nest %>% 
-  mutate(
-    crv = map(data, function(x){
-
-      est <- x$cval %>% 
-        na.omit %>% 
-        MASS::fitdistr('normal') %>% 
-        .$estimate
-      
-      return(est)
-      
-      }
-    ), 
-    prd = pmap(list(data, crv), function(data, crv){
-      
-      cval <- range(data$cval, na.rm = TRUE)  
-      cval <- seq(cval[1], cval[2], length = 100)
-      est <- dnorm(cval, crv[1], crv[2]) %>% 
-        data.frame(cval = cval, est = .) %>% 
-        mutate(
-         cumest = cumsum(est),
-         cumest = cumest / max(cumest)
-        )
-      
-      return(est)
-      
-      }
-    )
-  )
-
-head(wqcdist)
+wqcdt <- get_cdt(salchg, 'resgrp', 'trt')
+head(wqcdt)
 
 ## ----fig.height = 5, fig.width = 7, message = F, warning = F-------------
-# setup plots as empirical densities and estimated densities
-toplo1 <- wqcdist %>% 
-  select(resgrp, trt, data) %>% 
-  unnest
-toplo2 <- wqcdist %>% 
-  select(resgrp, trt, prd) %>% 
-  unnest
-head(toplo1)
-head(toplo2)
+salbrk <- get_brk(wqcdt, qts = c(0.33, 0.66), 'resgrp', 'trt')
+salbrk
 
-ggplot(toplo1, aes(cval)) + 
-  geom_histogram(aes(y=..density..)) + 
-  geom_line(data = toplo2, aes(x = cval, y = est), col = 'red') +
-  facet_grid(resgrp ~ trt) +
-  theme_bw() + 
-  ggtitle('Salinity conditional distributions, empirical and estimated')
-
-ggplot(toplo2, aes(x = cval, y = cumest, group = trt)) + 
+## ----fig.height = 5, fig.width = 7, message = F, warning = F-------------
+toplo <- select(wqcdt, -data, -crv) %>% 
+  unnest
+ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
   geom_line(aes(colour = trt)) + 
+  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
+  geom_segment(data = salbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
   facet_grid(~ resgrp) +
-  theme_bw() + 
-  ggtitle('Salinity conditional distributions, cumulative estimated')
+  theme_bw()
 
-## ------------------------------------------------------------------------
-salbrk <- toplo2 %>% 
+## ----eval = T, fig.height = 4, fig.width = 8, message = F, warning = F----
+# get chlorophyll changes
+chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf)
+  
+# merge with salinity, bet salinity levels
+salbrk <- salbrk %>% 
+  group_by(resgrp, trt) %>% 
+  nest(.key = 'levs')
+allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>% 
+  rename(
+    salev = cval.y, 
+    cval = cval.x
+  ) %>% 
   group_by(resgrp, trt) %>% 
   nest %>% 
+  left_join(salbrk, by = c('resgrp', 'trt')) %>% 
   mutate(
-    qts = map(data, function(x){
-  
-      out<- quantile(x$cval, c(0.25, 0.5, 0.75))
-      return(out)
+    sallev = pmap(list(data, levs), function(data, levs){
+
+      out <- data %>% 
+        mutate(
+          salev = cut(salev, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
+          salev = as.character(salev)
+        )
       
-    }),
-    brk = pmap(list(data, qts), function(data, qts){
-      
-      out <- approx(x = data$cval, y = data$cumest, xout = qts)
-      out <- out$y
-      return(out)
-      
-    }),
-    clev = map(brk, function(x){
-      
-      out <- rank(x) %>% 
-        factor(levels = c(1, 2, 3), labels = c('lo', 'md', 'hi')) %>% 
-        as.character
-        
       return(out)
       
     })
   ) %>% 
-  select(-data) %>% 
+  select(-data, -levs) %>% 
   unnest
+  
+chlcdt <- get_cdt(allchg, 'resgrp', 'trt', 'salev')
+chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'resgrp', 'trt', 'salev')
+chlbrk %>% 
+  print(n = nrow(.))
 
-salbrk
+## ------------------------------------------------------------------------
+chlbar <- chlbrk %>% 
+  group_by(resgrp, trt, salev) %>% 
+  nest %>% 
+  mutate(
+    data = map(data, function(x){
+      
+      brk <- x$brk
+      out <- data.frame(
+        lo = brk[1], md = brk[2] - brk[1], hi = 1 - brk[2]
+      )
+      
+      return(out)
+      
+    })
+  ) %>% 
+  unnest %>% 
+  gather('chllev', 'chlval', lo:hi) %>% 
+  mutate(
+    salev = factor(salev, levels = c('lo', 'md', 'hi')),
+    chllev = factor(chllev, levels = c('lo', 'md', 'hi'))
+  )
+save(chlbar, file = 'data/chlbar.RData', compress = 'xz')
 
-## ----fig.height = 5, fig.width = 7, message = F, warning = F-------------
-ggplot(toplo2, aes(x = cval, y = cumest, group = trt)) + 
+chlbar %>% 
+  print(n = nrow(.))
+
+## ----fig.width = 8, fig.height = 7---------------------------------------
+ggplot(chlbar, aes(x = chllev, y = chlval, group = trt, fill = trt)) +
+  geom_bar(stat = 'identity', position = 'dodge') +
+  facet_grid(salev ~ resgrp) +
+  theme_bw()
+
+## ----fig.height = 7, fig.width = 8, message = F, warning = F-------------
+toplo <- select(chlcdt, -data, -crv) %>% 
+  unnest %>%
+  mutate(
+    salev = factor(salev, levels = c('lo', 'md', 'hi'))
+  )
+ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
   geom_line(aes(colour = trt)) + 
-  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = clev, colour = trt)) +
-  geom_segment(data = salbrk, aes(x = min(toplo2$cval), y = brk, xend = qts, yend = brk, linetype = clev, colour = trt)) +
-  facet_grid(~ resgrp) +
+  geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
+  geom_segment(data = chlbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
+  facet_grid(salev ~ resgrp, scales = 'free_x') +
   theme_bw()
 
