@@ -1,8 +1,9 @@
 Bayesian Network_Presentation_Notes
 ========================================================
 author: Kirsten Dorans
-date: 
+date: July 20, 2017
 autosize: true
+css: oss.css
 
 Bayesian Decision Network Definition
 ========================================================
