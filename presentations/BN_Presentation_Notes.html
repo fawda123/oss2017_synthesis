@@ -1169,7 +1169,7 @@ hljs.initHighlightingOnLoad();
 <ul>
 <li>It is easy to exploit expert knowledge in BN models. </li>
 <li>BN models have been found to be very robust in the sense of i) noisy data, ii) missing data and iii) sparse data. </li>
-<li>Unlike many machine learning models (including Artificial Neural Network), which usually appear as a ìblack box,î all the parameters in BNs have an understandable semantic interpretation. </li>
+<li>Unlike many machine learning models (including Artificial Neural Network), which usually appear as a ‚Äúblack box,‚Äù all the parameters in BNs have an understandable semantic interpretation. </li>
 </ul>
 
 </div>
@@ -1198,7 +1198,188 @@ hljs.initHighlightingOnLoad();
 <section data-transition="linear" data-transition-speed="default">
 <h3>Example: Lizards</h3>
 <div class="slideContent" >
-<pre><code>Error in library(bnlearn) : there is no package called &#39;bnlearn&#39;
+<pre><code class="r">library(bnlearn)
+# load data
+data(lizards)
+
+# create the network structure.
+dag = model2network(&quot;[Species][Diameter|Species][Height|Species]&quot;)
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Lizard Network</h3>
+<div class="mediaOnly slideContent" >
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-2"/></p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Option 1. Using &#x27;Long Data&#x27; Format</h3>
+<div class="slideContent" >
+<pre><code>  Species Diameter Height
+1  Sagrei   narrow    low
+2  Sagrei   narrow    low
+3  Sagrei   narrow    low
+4  Sagrei   narrow    low
+5  Sagrei   narrow    low
+6  Sagrei   narrow    low
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Option 1. Use bn.fit to Estimate Conditional Probabilities </h3>
+<div class="slideContent" >
+<pre><code class="r"># EM Algorithm
+fittedbn1 &lt;- bn.fit(dag, data=lizards)
+print(fittedbn1$Height)
+</code></pre>
+
+<pre><code>
+  Parameters of node Height (multinomial distribution)
+
+Conditional probability table:
+
+      Species
+Height    Sagrei Distichus
+  high 0.7378049 0.5836735
+  low  0.2621951 0.4163265
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Inference on Option 1</h3>
+<div class="slideContent" >
+<pre><code class="r"># Need to set.seed to get same answer each time
+set.seed(1) 
+
+# What is probability of low height given species=Sagrei?
+cpquery(fittedbn1, event = (Height==&quot;low&quot;), evidence= (Species==&quot;Sagrei&quot;))
+</code></pre>
+
+<pre><code>[1] 0.2675192
+</code></pre>
+
+<pre><code class="r"># This example is very simple and can directly look up probability from table
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Option 2. &#x27;Manually&#x27; Calculate and Assign Conditional Probabilities</h3>
+<div class="slideContent" >
+<pre><code class="r"># Another dummy example (not lizards) included here
+
+cptA = matrix(c(0.4, 0.6), ncol = 2, dimnames = list(NULL, c(&quot;LOW&quot;, &quot;HIGH&quot;)))
+cptB = matrix(c(0.8, 0.2), ncol = 2, dimnames = list(NULL, c(&quot;GOOD&quot;, &quot;BAD&quot;)))
+cptB
+</code></pre>
+
+<pre><code>     GOOD BAD
+[1,]  0.8 0.2
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Option 2. &#x27;Manually&#x27; Calculate and Assign Conditional Probabilities</h3>
+<div class="slideContent" >
+<pre><code class="r">cptC = c(0.5, 0.5, 0.4, 0.6, 0.3, 0.7, 0.2, 0.8)
+dim(cptC) = c(2,2,2) 
+dimnames(cptC) = list(&quot;C&quot; = c(&quot;TRUE&quot;, &quot;FALSE&quot;), &quot;A&quot; =  c(&quot;LOW&quot;, &quot;HIGH&quot;), &quot;B&quot; = c(&quot;GOOD&quot;, &quot;BAD&quot;))
+cptC
+</code></pre>
+
+<pre><code>, , B = GOOD
+
+       A
+C       LOW HIGH
+  TRUE  0.5  0.4
+  FALSE 0.5  0.6
+
+, , B = BAD
+
+       A
+C       LOW HIGH
+  TRUE  0.3  0.2
+  FALSE 0.7  0.8
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Option 2. &#x27;Manually&#x27; Calculate and Assign Conditional Probabilities</h3>
+<div class="slideContent" >
+<pre><code class="r">net = model2network(&quot;[A][B][C|A:B]&quot;)
+dfit = custom.fit(net, dist = list(A = cptA, B = cptB, C = cptC))
+dfit
+</code></pre>
+
+<pre><code>
+  Bayesian network parameters
+
+  Parameters of node A (multinomial distribution)
+
+Conditional probability table:
+
+ LOW HIGH 
+ 0.4  0.6 
+
+  Parameters of node B (multinomial distribution)
+
+Conditional probability table:
+
+GOOD  BAD 
+ 0.8  0.2 
+
+  Parameters of node C (multinomial distribution)
+
+Conditional probability table:
+
+, , B = GOOD
+
+       A
+C       LOW HIGH
+  TRUE  0.5  0.4
+  FALSE 0.5  0.6
+
+, , B = BAD
+
+       A
+C       LOW HIGH
+  TRUE  0.3  0.2
+  FALSE 0.7  0.8
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Option 2. &#x27;Manually&#x27; Calculate and Assign Conditional Probabilities</h3>
+<div class="mediaOnly slideContent" >
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAMAAACR9g9NAAAAUVBMVEUAAAAAAGYAOpAAZrY6AAA6ADo6AGY6OpA6kNtmADpmOpBmZmZmtv+QOgCQOjqQOmaQ27aQ2/+2ZgC2///bkDrb////tmb/25D//7b//9v////5sAzfAAAACXBIWXMAAAsSAAALEgHS3X78AAALQElEQVR4nO3c6XbbZhKEYSaZyTITZ/MW6f4vNKYs2wwJFkASwFfd9T4/ciZjnqCqy5Q3WYdnRDqMDoAxGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIZ/dTgaHWJHSV2v+bZ50PohNYWLpTOmjyipTB0g4SgJHYUr7+6AN33/hsr19u3v0r6gIN/X3d/0zetJunvzyzSvp8xV732a3u2U+eatb9O6nMTwmZYU73yczt2UZb0bX6dxNYnhRwcYY2ntvufp20xi+L7NJIbv20xi+L7NpIvaHw6Hw/fv51/XRt9mykXrd9+9fX7+K2n5tsWk89Z///Lnp38+vfl19pVttC0mnbf+MPFen35lG22LSRfD/7D0lW20LSadt/74E+/4DGe1r/4Y3/c8fZtJ57Wv/ay+73n6NpP4dXzfZhK/c9e3mcTwfZtp/Hn86ACDMPzoAKPwOXep+CzbUAyfir9Jk4q/OxeKvy0bi78fn4qviBFq+otcJXzpq/4NlePAk1/1qv/y7Qsqr+/sia9z1/89372f8mncw8m/nI59aP+eb15POMhx9bc20Lqccnh5W4tvPvQ+Tuduyszur9/Y+DqNqymfV5W/c9d8+b7NlNdN9fC9l29bTPn8K7bZP6Q5fH1tQ117zZr9uRs/uWtp/sN46w/0ratJC97Pvd/yjaspS97Ovd/yfZspy1u3vU/bYhLD9y2m3FK664G69lJu69z0Qk1rSQz/3LaWcmvlnifq2Uq5uXHPE/VspdzeuOWNWpZS7inc8UgdOyl39e14pI6dlPv6NrxSw0rKvXX7nalfI4nhv+jXSLm/bbs7tSukPFK226G69ZEY/ptufZTHuja7VLM6yqNVe52qVxuJ4U/1aqM83rTVrVqVUVYo2upWrcooaxTtdKxOXZR1eja6VqMqyko1G12rURVlrZp9ztWnibJeyzb3alNEWbFkm3u1KaKsWbLLwbr0UNbt2ORiTWpIDD+hSQ1l7Yo9TtajhbJ+wxY3a1FCYvhJLUooWxTscLQOHZRN+nU4WocOyjb9GlytQQVlq3r1z1a/gbJZu/pnq99A2a5d+buVL6BsWa764arnVzbtVv1w1fMr23Yrfrni8ZWtq9U+Xe30EsMrtdMr2zcrfbvS4ZUdipW+Xenwyh7FKh+vcnZln16Fr1c4urJTrcLXKxxd2atW3fPVTa7s16rs/coGV3YsVfZ+ZYMre5aqesCquZV9OxW9YNHYys6Vil6waGxl70o1T1gztbJ/o5I3LBlaGVCo5A1LhlZGFKp4xIqZlSF9Kh6xYmZlTJ+CVywYWRlVp94Z6yVWhrWpd8Z6iZVxbcrdsVxgZWSZaoesllcZ2qXaIavlVcZ2KXbJYnGV0VVGP/82tdIqw5sMD3CTWmmV8U3GJ7hBqbCKQxGHDEtVyqpY9LAIsVClrIpHD48UixSKqpjUMImxRKGogk0LmyCz6iRVfFr4JJlRJqhiVMIoilYmqOJUwimLUiWn4tXBK81VRWIqZhXM4lxTJKbiVsEtz7QaKRW/Bn6JJpQIqRgWMIx0qURIxbGAY6ZzFTIqlvktQ52pkFEwjW8a61SBiIprfNdc3/gnVGzT2wb7yj+hYBzeONpn9gEV5/DO2Y7c8ynW2a3DPfvnE8yjE28r7tG983mnU+yTewf0Tqf4J7dOaB1OqRDcOaNzNqVEbueQztmUGrmNUxpHU4rENo5pHE0ok9o3qG8ypU5q26S2wZRCoW2j2gYTSmV2DeuaS6mV2TStaSylWGTTuKaxhHKJPQN7plJIvArLUEq5wKaRLUMJ1fK+cAztmEmplvczw9SGkZRicb8wjG0YSSkW9yu/3H6JlFppT/gF90sklAr7b3bR7QIppcKeccvulkeplPWCW3i3PEKhqFPM4pvFUQpFneSV3yuNUifpFV4FvNIIZYJeZ1XBKoxSJqjg1MEpi1Ilp+RUwimLUCTmHKMaRlGUIjFn+fTwSaLUSLmATxGfJEKJkMvYVLEJopQIuYxNFZsgQoWMi7mUccmhVMi4nEkbkxhKgYi3MKljEkPwT3gjj0IeKRT/hLeyaGQRQrEPeDuLShYhBPd8d3Eo5ZBBcc93H4NWBhEU83j3MqhlEEHwTveA8cXGJ1C80z1gfLHxCQTrcI8ZXm14AME528NGlxv9fMU528NGlxv9fME42hoG1zO+rnG0VYzt53td32QrYfhJtsHWM7Si7X1tg61oZEfX+7rmWhXDXzCNtbaBNU0vbBprdeN6el7YM9UGGP5fLENtY1hVyxtbhtoGw59wzLSZUWUNj2wYaUuD6hpe2TDSlhj+lV+ijY0pbHdmu0DbG1LZ7s52gbbH8M9+eXYxorTbod3y7GNAa7NDm8XZS/zwXml2tH/xwZ//c3T678OSjHbS/Pwomz9wX9/qnfyvUWHGuzjF1uuP+n2j8+ce/4/g3V/KTx5lw+cNMPXUQ/rw00fZ7nn7u/IdeYcf2IztfRSrX0gEL7/7UXa/tfwunPqmH3CU/Yd/4FvbGnCUvS8997zI5UccZedDzz8ucPkhR2H48QKGX/K0uOXHHGXXMy97WNjyg47C8KMFDL/0WVHLjzoKww/G8Le/rgWGv/11LWQO//cvfy56XWPnZT/+5/gpGL/Ovm7t525o4lEf/v/zwld2dVH1449vP/3jv5dviJWPMnT4p9/++N/7Ra9sa3r4p996D//xp/d/XX5QY/jjYeZfufKDt3P5qHc/P3/4YdEr27oc/uXH+O9bD//05lPF794ueGVfVz7Uv9n8Z3cjf1b/8gFt4mN90O4TRzkOP3GVwj+rv3jWu2O7iY/1DD/xy9xGwz/9fvy+vUNHawG/jud37qZk/s7dY69rIWF4/jx+SsCfxzP8lITh+Zy7KQGfc8dn2U4K+Cxbhp+SMPyQvzRib8RRdj+0fmDk7kOOsv/w6on8bdlbv/H+R27xH733kaGzH+1+lBG35itiTAj4ihhXnho9+9G+Rxl07l2/wFMVAV/16vjg/b6kWx39v87dl6ez+aXmX9kSYzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4di+FAMH4rhQzF8KIYPxfChGD4Uw4f6B2d+d2ocUs0IAAAAAElFTkSuQmCC" alt="plot of chunk unnamed-chunk-9"/></p>
+
+</div>
+
+</section>
+<section data-transition="linear" data-transition-speed="default">
+<h3>Inference on Option 2</h3>
+<div class="slideContent" >
+<pre><code class="r">set.seed(1) 
+cpquery(dfit, event = (C==&quot;TRUE&quot;), evidence= (A==&quot;LOW&quot;))
+</code></pre>
+
+<pre><code>[1] 0.4548611
 </code></pre>
 
 </div>
