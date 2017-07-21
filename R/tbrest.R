@@ -17,10 +17,15 @@ source('R/get_cdt.R')
 source('R/get_brk.R')
 
 ## ----warning = F, message = F--------------------------------------------
+# Load data
 data(restdat)
 data(reststat)
 data(wqdat)
 data(wqstat)
+
+# Set parameters, yr half-window for matching, mtch is number of closest matches
+yrdf <- 5
+mtch <- 10
 
 ## ------------------------------------------------------------------------
 head(restdat)
@@ -35,10 +40,10 @@ head(wqdat)
 head(wqstat)
 
 ## ------------------------------------------------------------------------
-wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = 10)
+wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = mtch)
 head(wqmtch)
 
-## ----message = F, warning = F, fig.width = 7, fig.height = 8-------------
+## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
 ## 
 # plots
 
@@ -76,22 +81,25 @@ toplo1 <- filter(toplo, rnk %in% 1)
 pbase + 
   geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
-## ----message = F, warning = F, fig.width = 7, fig.height = 8-------------
-# closest five
-toplo2 <- filter(toplo, rnk %in% c(1:5))
+## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
+# closest five percent
+fvper <- max(toplo$rnk) %>% 
+  `*`(0.05) %>% 
+  ceiling
+toplo2 <- filter(toplo, rnk %in% c(1:fvper))
 
 pbase + 
   geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
-## ----message = F, warning = F, fig.width = 7, fig.height = 8-------------
-# closest twenty
-toplo3 <- filter(toplo, rnk %in% c(1:10))
+## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
+# closest all combo
+toplo3 <- toplo
 
 pbase + 
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
 ## ------------------------------------------------------------------------
-salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5)
+salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf)
 head(salchg)
 
 ## ------------------------------------------------------------------------
@@ -114,7 +122,7 @@ ggplot(toplo, aes(x = cval, y = cumest, group = trt)) +
 
 ## ----eval = T, fig.height = 4, fig.width = 8, message = F, warning = F----
 # get chlorophyll changes
-chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = 5)
+chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf)
   
 # merge with salinity, bet salinity levels
 salbrk <- salbrk %>% 
@@ -149,9 +157,45 @@ chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'resgrp', 'trt', 'salev')
 chlbrk %>% 
   print(n = nrow(.))
 
+## ------------------------------------------------------------------------
+chlbar <- chlbrk %>% 
+  group_by(resgrp, trt, salev) %>% 
+  nest %>% 
+  mutate(
+    data = map(data, function(x){
+      
+      brk <- x$brk
+      out <- data.frame(
+        lo = brk[1], md = brk[2] - brk[1], hi = 1 - brk[2]
+      )
+      
+      return(out)
+      
+    })
+  ) %>% 
+  unnest %>% 
+  gather('chllev', 'chlval', lo:hi) %>% 
+  mutate(
+    salev = factor(salev, levels = c('lo', 'md', 'hi')),
+    chllev = factor(chllev, levels = c('lo', 'md', 'hi'))
+  )
+save(chlbar, file = 'data/chlbar.RData', compress = 'xz')
+
+chlbar %>% 
+  print(n = nrow(.))
+
+## ----fig.width = 8, fig.height = 7---------------------------------------
+ggplot(chlbar, aes(x = chllev, y = chlval, group = trt, fill = trt)) +
+  geom_bar(stat = 'identity', position = 'dodge') +
+  facet_grid(salev ~ resgrp) +
+  theme_bw()
+
 ## ----fig.height = 7, fig.width = 8, message = F, warning = F-------------
 toplo <- select(chlcdt, -data, -crv) %>% 
-  unnest
+  unnest %>%
+  mutate(
+    salev = factor(salev, levels = c('lo', 'md', 'hi'))
+  )
 ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
   geom_line(aes(colour = trt)) + 
   geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +

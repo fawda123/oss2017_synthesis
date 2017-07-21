@@ -59,11 +59,12 @@ get_chg <- function(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5){
               aft <- filter(statdat, datetime <= dtrng[2] & datetime >= dt$date) %>%
                 .$wqvar %>% 
                 mean(na.rm = TRUE)
-              
+             
             }
             
             # combine/return the wq station/restoration station summary
             out <- data.frame(bef = bef, aft = aft)
+            
             return(out)
             
           })
@@ -72,13 +73,14 @@ get_chg <- function(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5){
       
       # return the complete restoration summary
       bysta <- unnest(bysta)
+      
       return(bysta)
       
     }) %>%
     do.call('rbind', .) %>%
-    remove_rownames() %>% 
-    gather('trt', 'val', bef:aft) %>% 
-    group_by(stat, resgrp, trt) %>% 
+    remove_rownames() %>%
+    gather('trt', 'val', bef:aft) %>%
+    group_by(stat, resgrp, trt) %>%
     summarise(
       cval = weighted.mean(val, w = wts, na.rm = TRUE)
     )

@@ -1,0 +1,30 @@
+---
+title: "Bayesian Network Diagram through visNetwork"
+author: "Ed Sherwood <esherwood@tbep.org>"
+date: "July 21, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(visNetwork)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Develop a Simple Diagram to Illustrate the Bayesian Network
+```{r}
+nodes <- data.frame(id=1:4, 
+                    label = c("Habitat Restoration", "Infrastructure Improvement", "Salinity", "Chlorophyll-a"), 
+                    group = c("Activity", "Activity", "WQ Response", "WQ Response"),
+                    level = c(1,1,3,3),
+                    shape = c("square", "square", "circle", "circle"),
+                    title = paste0("<p><b>", c("Habitat Restoration Project", "Infrastructure Improvement Project", "Effect on Salinity", "Effect on Chlorophyll-a"),"</b></p>"),
+                    color = c("red", "red", "lightblue", "lightgreen"),
+                    shadow = c("true", "true", "true", "true"))
+edges <- data.frame(from=c(1,1,2,2,3), to = c(3,4,3,4,4))
+visNetwork(nodes, edges, width = "100%") %>%
+  visEdges(arrows = "to") %>%
+  visGroups(groupname = "Activity", color = "red", shape = "square") %>%
+  visGroups(groupname = "WQ Response", color = "lightblue", shape = "circle") %>%
+  visLegend(position = "right", main = "Bayesian Parameter") %>%
+  visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE) 
+```
