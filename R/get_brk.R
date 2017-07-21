@@ -9,7 +9,7 @@ get_brk <- function(wqcdt, qts = c(0.25, 0.5, 0.75), ...){
   brk <- wqcdt %>% 
     select(-data, -crv) %>% 
     unnest %>% 
-    group_by(...) %>% 
+    group_by_(...) %>% 
     nest %>% 
     mutate(
       qts = map(data, function(x){

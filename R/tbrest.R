@@ -16,9 +16,11 @@ source('R/get_clo.R')
 source('R/get_cdt.R')
 source('R/get_brk.R')
 
-## ----warning = F, message = F, fig.width = 8, fig.height = 6-------------
+## ----warning = F, message = F--------------------------------------------
 data(restdat)
 data(reststat)
+data(wqdat)
+data(wqstat)
 
 ## ------------------------------------------------------------------------
 head(restdat)
@@ -26,62 +28,11 @@ head(restdat)
 ## ------------------------------------------------------------------------
 head(reststat)
 
-## ----warning = F, message = F--------------------------------------------
-wqdat_raw <- read_csv('data-raw/epchc_clean_data_07162017.csv')
-
-# rename, select relevant columns, integrate variables across depths
-# annual averages by site, variable
-wqdat <- wqdat_raw %>% 
-  rename(
-    yr = YEAR,
-    mo = month,
-    dttm = SampleTime,
-    stat = epchc_station, 
-    lat = Latitude, 
-    lon = Longitude,
-    sallo = Sal_Bottom_ppth, 
-    salmd = Sal_Mid_ppth,
-    salhi = Sal_Top_ppth, 
-    dolo = DO_Bottom_mg_L,
-    domd = DO_Mid_mg_L, 
-    dohi = DO_Top_mg_L,
-    chla = chl_a
-  ) %>% 
-  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
-  gather('var', 'val', sallo:chla) %>% 
-  mutate(val = as.numeric(val)) %>% 
-  spread('var', 'val') %>% 
-  rowwise() %>%
-  mutate(
-    sal = mean(c(sallo, salmd, salhi), na.rm = TRUE),
-    do = mean(c(dolo, domd, dohi), na.rm = TRUE)
-  ) %>%
-  select(-sallo, -salmd, -salhi, -dolo, -domd, -dohi, -dttm) %>% 
-  mutate(
-    dy = 1
-  ) %>% 
-  unite('datetime', yr, mo, dy, sep = '-') %>% 
-  mutate(
-    datetime = as.Date(datetime, format = '%Y-%m-%d')
-  )
-
-# get station locations
-wqstat <- wqdat %>% 
-  select(stat, lon, lat) %>% 
-  unique
-
-# remove denormalized rows
-wqdat <- wqdat %>% 
-  select(-lon, -lat)
-  
-save(wqstat, file= 'data/wqstat.RData', compress = 'xz')
-save(wqdat, file = 'data/wqdat.RData', compress = 'xz')
+## ------------------------------------------------------------------------
+head(wqdat)
 
 ## ------------------------------------------------------------------------
 head(wqstat)
-
-## ------------------------------------------------------------------------
-head(wqdat)
 
 ## ------------------------------------------------------------------------
 wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = 10)
@@ -141,21 +92,17 @@ pbase +
 
 ## ------------------------------------------------------------------------
 salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5)
-save(salchg, file = 'data/salchg.RData', compress = 'xz')
-
 head(salchg)
 
 ## ------------------------------------------------------------------------
-wqcdt <- get_cdt(salchg, qts = c(0.25, 0.5, 0.75), 'resgrp', 'trt')
+wqcdt <- get_cdt(salchg, 'resgrp', 'trt')
 head(wqcdt)
 
 ## ----fig.height = 5, fig.width = 7, message = F, warning = F-------------
-salbrk <- get_brk(wqcdt, 'resgrp', 'trt')
-
+salbrk <- get_brk(wqcdt, qts = c(0.33, 0.66), 'resgrp', 'trt')
 salbrk
 
 ## ----fig.height = 5, fig.width = 7, message = F, warning = F-------------
-
 toplo <- select(wqcdt, -data, -crv) %>% 
   unnest
 ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
@@ -165,60 +112,50 @@ ggplot(toplo, aes(x = cval, y = cumest, group = trt)) +
   facet_grid(~ resgrp) +
   theme_bw()
 
-## ----eval = F------------------------------------------------------------
-## 
-## # source R files
-## source('R/get_chg.R')
-## source('R/get_clo.R')
-## source('R/get_cdt.R')
-## source('R/get_brk.R')
-## 
-## # data
-## data(restdat)
-## data(reststat)
-## data(wqdat)
-## data(wqstat)
-## 
-## # get station matches
-## wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = 10)
-## 
-## # get salinity changes
-## salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5)
-## salcdt <- get_cdt(salchg, 'resgrp', 'trt')
-## salbrk <- get_brk(salcdt, c(0.33, 0.66), 'resgrp', 'trt')
-## 
-## # get chlorophyll changes
-## chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = 5)
-## 
-## # merge with salinity, bet salinity levels
-## salbrk <- salbrk %>%
-##   group_by(resgrp, trt) %>%
-##   nest(.key = 'levs')
-## allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>%
-##   rename(
-##     salev = cval.y,
-##     cval = cval.x
-##   ) %>%
-##   group_by(resgrp, trt) %>%
-##   nest %>%
-##   left_join(salbrk, by = c('resgrp', 'trt')) %>%
-##   mutate(
-##     sallev = pmap(list(data, levs), function(data, levs){
-## 
-##       out <- data %>%
-##         mutate(
-##           salev = cut(salev, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
-##           salev = as.character(salev)
-##         )
-## 
-##       return(out)
-## 
-##     })
-##   ) %>%
-##   select(-data, -levs) %>%
-##   unnest
-## 
-## chlcdt <- get_cdt(allchg, 'resgrp', 'trt', 'salev')
-## chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'resgrp', 'trt', 'salev')
-## 
+## ----eval = T, fig.height = 4, fig.width = 8, message = F, warning = F----
+# get chlorophyll changes
+chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = 5)
+  
+# merge with salinity, bet salinity levels
+salbrk <- salbrk %>% 
+  group_by(resgrp, trt) %>% 
+  nest(.key = 'levs')
+allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>% 
+  rename(
+    salev = cval.y, 
+    cval = cval.x
+  ) %>% 
+  group_by(resgrp, trt) %>% 
+  nest %>% 
+  left_join(salbrk, by = c('resgrp', 'trt')) %>% 
+  mutate(
+    sallev = pmap(list(data, levs), function(data, levs){
+
+      out <- data %>% 
+        mutate(
+          salev = cut(salev, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
+          salev = as.character(salev)
+        )
+      
+      return(out)
+      
+    })
+  ) %>% 
+  select(-data, -levs) %>% 
+  unnest
+  
+chlcdt <- get_cdt(allchg, 'resgrp', 'trt', 'salev')
+chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'resgrp', 'trt', 'salev')
+chlbrk %>% 
+  print(n = nrow(.))
+
+## ----fig.height = 7, fig.width = 8, message = F, warning = F-------------
+toplo <- select(chlcdt, -data, -crv) %>% 
+  unnest
+ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
+  geom_line(aes(colour = trt)) + 
+  geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
+  geom_segment(data = chlbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
+  facet_grid(salev ~ resgrp, scales = 'free_x') +
+  theme_bw()
 
