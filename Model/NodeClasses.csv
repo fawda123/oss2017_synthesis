@@ -1,0 +1,5 @@
+Node,Type,Classes
+Habitat Restoration,Restoration Activity,"""PRE"", ""POST"""
+Water Treatment,Restoration Activity,"""PRE"", ""POST"""
+Salinity,PDF,"""LOW"", ""MOD"", ""HIGH"""
+Chlorophyll,PDF,"""LOW"", ""MOD"", ""HIGH"""
