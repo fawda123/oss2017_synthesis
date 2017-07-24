@@ -1,4 +1,4 @@
-Developing a BN using pre and post impolementation of restoration activities in Tamba Bay
+BN of pre and post restoration activities in Tampa Bay
 ========================================================
 author: Varela, Patricia
 date: July 23, 2017
