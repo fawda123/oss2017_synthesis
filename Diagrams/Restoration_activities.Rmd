@@ -1,0 +1,146 @@
+---
+title: "Merging Restoration Data"
+author: "Katie Ireland"
+date: "July 24, 2017"
+output: html_document
+---
+
+#Make a workflow diagram for developing the restoration activities data
+
+The goal of this script is to develop a workflow diagram showing how the water treatment projects were merged with habitation restoration projects to arrive at our final "restoration activities".
+
+##Install and use the DiagrammeR package to make the diagram
+```{r set-library}
+#install.packages("DiagrammeR")
+library(DiagrammeR)
+```
+
+##Make a function to help with defining edge statements
+To make a graph with DiagrammeR, you need to define how each node related to all the other nodes.  In this case, we have two types of "nodes", the variables or datasets we are working with (i.e., habitat restoration activities, or the final restoration activities) and the processes (i.e., specific R scripts) used to create them. Making sure the syntax of the edge statements is correct was tedious, so I make this function:
+
+```{r create-function}
+#1. make a function to help with writing edge statements
+define_edge<-function (node_1,node_2){
+  edge<-paste0("'",node_1,"' ->"," '",node_2,"';")
+  return(edge)
+}
+```
+
+##Set up some lists of variables and processes used
+I chose to store the names of the initial and derived datasets in a vector called "varnames" and the names fo the processes used in a vectors called "processes", so I could access these later in making the diagram.
+
+```{r set-vars}
+#set up a list of the names of variables
+varnames<-c("Descriptions of\n All PS Treatment\n Projects", 
+            "Completed\nPS \nProjects", 
+            "Completed PS\n Project &\nDescriptions",
+            "Categorized\n PS Treatment\n Projects",
+            "Habitat \nRestoration\n Treatment\n Projects",
+            "Categorized\n Habitat\n Restoration\n Projects",
+            "Restoration \nActivities")
+
+#write a list of process steps
+processes<-c("Rscript:\n Select \nCompleted Projects", 
+             "Manual\n Categorization of\n PS Projects",
+             "Manual\n Categorization of\n Habitat Projects",
+             "Rscript:\n Merge Restoration\n Projects")
+
+```
+
+##Make the list of names for the variable names and processes for the diagram
+The DiagrammeR package needs the names of the multi-line nodes in a specific format (enclosed in single quotes & separated by semi-colons ;).  For example: ''Descriptions of\n All PS Treatment\n Projects'.  So, run a couple of loops to get the variable names and processes correctly formatted:
+
+```{r}
+#create the list of names for the datasets (initial and derived"")
+nodes<-c()
+for (v in varnames) {
+  node<-paste0("'",v,"';")  #enclose the name from varnames in single quotes, end with a ;
+  nodes<-rbind(nodes, node)
+}
+
+proc_names<-c()
+for (p in processes){
+  proc<-paste0("'",p,"';") #enclose the name from processes in single quotes, end with a ;
+  proc_names<-(rbind(proc_names,proc))
+  
+}
+```
+
+##Define the edges
+The grViz statement we are going to use to define the relationships requires a series of "edge statements" that define how the nodes connect to each other..for example, which variable is input to which process and how the output flows from there. This is where I'll use the function defined above to make writing the edge statements easier, since they need to start with the node name in single quotes, then include the -> character, and then end with the receiving node in single quotes and ending in a semi-colon (;)
+
+```{r}
+#define the edges
+edge1<-define_edge(varnames[1],processes[1])
+edge2<-define_edge(varnames[2],processes[1])
+edge3<-define_edge(processes[1],varnames[3])
+edge4<-define_edge(varnames[3],processes[2])
+edge5<-define_edge(processes[2],varnames[4])
+edge6<-define_edge(varnames[4],processes[4])
+edge7<-define_edge(varnames[5],processes[3])
+edge8<-define_edge(processes[3],varnames[6])
+edge9<-define_edge(varnames[6], processes[4])
+edge10<-define_edge(processes[4],varnames[7])
+
+#now, bind them all together in one vector to use later:
+edges<-rbind(edge1,edge2,edge3,edge4,edge5,edge6,edge7,edge8,edge9,edge10)
+```
+
+##Write the complicated statement that tells DiagrammeR how to make a graph
+DiagrammeR has grViz statement that creates a "Graphviz" object, but the specifications are written in something called the DOT language.  All of the specifications for how the graph should look are contained in this complicated statement. Also, I wanted to pass the values from my "nodes" and "edges" vectors into the statement.  Doing so, would allow me to make changes to the varnames or processes more easily and those changes would then propagate through the code. 
+
+The grViz statment is a long string, so to be able to pass the nodes and edges vectors, I wrapped the long statement into a paste0 command and created an object called config_statement, which I will later pass to the grViz statement from DiagrammeR:
+
+```{r}
+config_statement<-paste0("
+digraph {
+                          
+                          # graph attributes - rankdir = LR makes it left to right rather than vertical
+                          graph [overlap = true, rankdir=LR]
+                          
+                          # node attributes
+                          node [shape = box,style=filled, 
+                          fontname = Helvetica,
+                          color = cadetblue3]
+                          
+                          # edge attributes
+                          edge [color = gray]
+                          
+                          ", 
+                          
+                          paste(nodes,collapse=''),
+                          
+                          
+                          "# node attributes
+                          node [shape = diamond, style=filled,
+                          color = sandybrown,
+                          fixedsize = true,
+                          width = 2.3,
+                          height=1.8]
+                          
+                          # edge statements
+                          ",
+                         paste(edges,collapse=''),
+                          "
+                         
+                          
+                          
+                          
+                          }")
+
+```
+
+#Now, finally, create the graph:
+
+This part is simple, just pass the config_statement created above to the grViz statement from DiagrammeR and create the graph:
+
+```{r}
+#plot the diagram using grViz (from the DiagrammeR package)
+grViz(config_statement #end paste0
+)#end graphviz
+
+```
+
+###Export the figure
+I couldn't figure out how to programmatically export the figure, since it doesn't seem to work the way a normal plot created in base R or ggplot2 would.  So, I just used the "Export" menu from the Viewer pane to export as a jpg.
+
