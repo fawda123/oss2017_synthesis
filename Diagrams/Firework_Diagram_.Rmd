@@ -431,20 +431,19 @@ r-> {d e}
 ")
 ```
 
-#This is the one that was used to create the diagram
+#trying something else - this doesn't work
 ```{r}
 grViz ("
 digraph boxes_and_circles {
 
-graph [overlap = true, fontsize = 24]
+graph [overlap = true, fontsize = 10]
 
 node [shape = circle,
       style = filled,
       color = grey,
       fontname = Helvetica,
-      fontsize = 24,
       fillcolor = red]
-a [label = '@@1', fontsize = 24,]
+a [label = '@@1']
 
 node [shape = box,
       fontname = Helvetica,
