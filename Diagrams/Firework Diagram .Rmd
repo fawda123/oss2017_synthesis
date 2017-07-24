@@ -431,19 +431,20 @@ r-> {d e}
 ")
 ```
 
-#trying something else - this doesn't work
+#This is the one that was used to create the diagram
 ```{r}
-graph <- grViz ("
-digraph a_nice_graph {
+grViz ("
+digraph boxes_and_circles {
 
-graph [layout = circo]
+graph [overlap = true, fontsize = 24]
 
 node [shape = circle,
       style = filled,
       color = grey,
       fontname = Helvetica,
+      fontsize = 24,
       fillcolor = red]
-a [label = '@@1']
+a [label = '@@1', fontsize = 24,]
 
 node [shape = box,
       fontname = Helvetica,
@@ -467,7 +468,11 @@ node [shape = circle,
 s[label = '@@19']; t[label = '@@20']; u[label = '@@21']; v[label = '@@22']; w[label = '@@23']; x[label = '@@24']; y[label = '@@25']; z[label = '@@26']; 
 
 edge [color = grey]
-a <- {b c d e f}
+b -> a
+c -> a
+d -> a
+e -> a
+f -> a
 g -> b
 h -> b
 i -> {b c}
@@ -518,6 +523,7 @@ z -> f
 [26]: 'Increase Reuse'  
 
 ")
+
 ```
 
 ```{r}
@@ -610,4 +616,24 @@ z -> f
 [26]: 'Increase Reuse'  
 
 ")
+
+plot(graph1)
 ```
+
+#Using Ed's Code:
+```{r}
+nodes <- data.frame(id=1:26, 
+                    label = c("Hydrologic Restoration", "Exotic Control", "Saltmarsh", "Mangroves", "Oyster Habitat", "Freshwater Wetlands","Dredging", "Land Management", "Uplands", "Protection", "Acquisition", "Education", "BMP Activities", "Send to WWTP", "Atmospheric Desposition", "Regulation", "Street Sweeping", "BMP on Site", "PS Treatment", "Increase Reuse", "Habitat Establishment", "Habitat Enhancement", "Habitat Protection", "NonPoint Source", "Point Source", "Salinity", "Chlorophyll A"), 
+                    group = c("Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Activity", "Restoration Activity", "Restoration Activity", "Restoration Activity", "Restoration Activity","Water Quality Response," "Water Quality Response"),
+                    level = c(1,1,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3),
+                    shape = c("square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "circle", "circle", "circle", "circle", "circle","square", "square"),
+                    title = paste0("<p><b>", c("Hydrologic Restoration", "Exotic Control", "Saltmarsh", "Mangroves", "Oyster Habitat", "Freshwater Wetlands","Dredging", "Land Management", "Uplands", "Protection", "Acquisition", "Education", "BMP Activities", "Send to WWTP", "Atmospheric Desposition", "Regulation", "Street Sweeping", "BMP on Site", "PS Treatment", "Increase Reuse", "Habitat Establishment", "Habitat Enhancement", "Habitat Protection", "NonPoint Source", "Point Source", "Chlorophyll A","Salinity"),"</b></p>"),
+                    color = c("lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen","lightblue", "lightblue", "lightblue", "lightblue", "lightblue", "red", "red"),
+                    shadow = c("true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true",))
+edges <- data.frame(from=c(3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1,1,2,2,3), to = c(3,4,3,4,4))
+visNetwork(nodes, edges, width = "100%") %>%
+  visEdges(arrows = "to") %>%
+  visGroups(groupname = "Activity", color = "red", shape = "square") %>%
+  visGroups(groupname = "WQ Response", color = "lightblue", shape = "circle") %>%
+  visLegend(position = "right", main = "Bayesian Parameter") %>%
+  visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE) 
