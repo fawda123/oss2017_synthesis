@@ -103,21 +103,21 @@ salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf)
 head(salchg)
 
 ## ------------------------------------------------------------------------
-wqcdt <- get_cdt(salchg, 'resgrp', 'trt')
+wqcdt <- get_cdt(salchg, 'hab', 'wtr')
 head(wqcdt)
 
 ## ----fig.height = 5, fig.width = 7, message = F, warning = F-------------
-salbrk <- get_brk(wqcdt, qts = c(0.33, 0.66), 'resgrp', 'trt')
+salbrk <- get_brk(wqcdt, qts = c(0.33, 0.66), 'hab', 'wtr')
 salbrk
 
 ## ----fig.height = 5, fig.width = 7, message = F, warning = F-------------
 toplo <- select(wqcdt, -data, -crv) %>% 
   unnest
-ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
-  geom_line(aes(colour = trt)) + 
-  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
-  geom_segment(data = salbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
-  facet_grid(~ resgrp) +
+ggplot(toplo, aes(x = cval, y = cumest)) + 
+  geom_line() + 
+  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk)) +
+  geom_segment(data = salbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk)) +
+  facet_grid(hab ~ wtr) +
   theme_bw()
 
 ## ----eval = T, fig.height = 4, fig.width = 8, message = F, warning = F----
@@ -126,16 +126,16 @@ chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf)
   
 # merge with salinity, bet salinity levels
 salbrk <- salbrk %>% 
-  group_by(resgrp, trt) %>% 
+  group_by(hab, wtr) %>% 
   nest(.key = 'levs')
-allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>% 
+allchg <- full_join(chlchg, salchg, by = c('hab', 'wtr', 'stat')) %>% 
   rename(
     salev = cval.y, 
     cval = cval.x
   ) %>% 
-  group_by(resgrp, trt) %>% 
+  group_by(hab, wtr) %>% 
   nest %>% 
-  left_join(salbrk, by = c('resgrp', 'trt')) %>% 
+  left_join(salbrk, by = c('hab', 'wtr')) %>% 
   mutate(
     sallev = pmap(list(data, levs), function(data, levs){
 
@@ -151,15 +151,16 @@ allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>%
   ) %>% 
   select(-data, -levs) %>% 
   unnest
-  
-chlcdt <- get_cdt(allchg, 'resgrp', 'trt', 'salev')
-chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'resgrp', 'trt', 'salev')
+save(allchg, file = 'data/allchg.RData', compress = 'xz')
+
+chlcdt <- get_cdt(allchg, 'hab', 'wtr', 'salev')
+chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'hab', 'wtr', 'salev')
 chlbrk %>% 
   print(n = nrow(.))
 
 ## ------------------------------------------------------------------------
 chlbar <- chlbrk %>% 
-  group_by(resgrp, trt, salev) %>% 
+  group_by(hab, wtr, salev) %>% 
   nest %>% 
   mutate(
     data = map(data, function(x){
@@ -185,9 +186,9 @@ chlbar %>%
   print(n = nrow(.))
 
 ## ----fig.width = 8, fig.height = 7---------------------------------------
-ggplot(chlbar, aes(x = chllev, y = chlval, group = trt, fill = trt)) +
+ggplot(chlbar, aes(x = chllev, y = chlval, group = salev, fill = salev)) +
   geom_bar(stat = 'identity', position = 'dodge') +
-  facet_grid(salev ~ resgrp) +
+  facet_grid(hab ~ wtr) +
   theme_bw()
 
 ## ----fig.height = 7, fig.width = 8, message = F, warning = F-------------
@@ -196,10 +197,10 @@ toplo <- select(chlcdt, -data, -crv) %>%
   mutate(
     salev = factor(salev, levels = c('lo', 'md', 'hi'))
   )
-ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
-  geom_line(aes(colour = trt)) + 
-  geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
-  geom_segment(data = chlbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
-  facet_grid(salev ~ resgrp, scales = 'free_x') +
+ggplot(toplo, aes(x = cval, y = cumest, group = salev, colour = salev)) + 
+  geom_line() + 
+  geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk)) +
+  geom_segment(data = chlbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk)) +
+  facet_grid(hab ~ wtr, scales = 'free_x') +
   theme_bw()
 

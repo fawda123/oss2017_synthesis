@@ -5,7 +5,7 @@
 
 ```bash
 # do this to get the repo, first time only
-git clone https://www.github.com/fawda13/oss2017_synthesis.git
+git clone https://www.github.com/fawda123/oss2017_synthesis.git
 
 # do this every time before you make changes
 git pull
@@ -32,6 +32,7 @@ RData files (these should be text files?) in `data`, normalized:
 
 * `bmpdat.RData` restoration projects for water treatment
 * `bmpstat.RData` locations of restoration projects for water treatment
+* `chlbar.RData` final data of chlorophyll splits for BN
 * `habdat.RData` restoration projects for habitat
 * `habstat.RData` locations of restoration projects for habitat
 * `restdat.RData` restoration projects combined

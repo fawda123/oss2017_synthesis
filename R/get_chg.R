@@ -21,7 +21,7 @@ get_chg <- function(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5){
     ) %>%
     split(.$stat) %>%
     map(., function(x){
-      
+
       # iterate through the restoration sites closest to each wq station
       bysta <- x %>%
         group_by(rnk, resgrp) %>%
@@ -78,13 +78,64 @@ get_chg <- function(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5){
       
     }) %>%
     do.call('rbind', .) %>%
-    remove_rownames() %>%
+    remove_rownames() %>% 
+    select(stat, rnk, resgrp, wts, bef, aft) %>%
     gather('trt', 'val', bef:aft) %>%
     group_by(stat, resgrp, trt) %>%
     summarise(
       cval = weighted.mean(val, w = wts, na.rm = TRUE)
-    )
+    ) %>%
+    unite('cmb', resgrp, trt)
+  
+    # # get combinations
+    # unique(chg$cmb) %>% 
+    #   combn(2)
 
-  return(chg)
+    # combine temporal categories by restoration typ
+    chgcmb <- chg %>% 
+      group_by(stat) %>% 
+      nest %>% 
+      mutate(
+        cmb = map(data, function(x){
+          
+          nms <- x$cmb
+          x <- as.list(x$cval)
+          names(x) <- nms
+          
+          x <- combn(x, 2, simplify = FALSE) %>% 
+            lapply(function(x){
+              
+              nms <- names(x)
+              cval <- x %>% 
+                unlist %>% 
+                mean
+              
+              out <- data.frame(nms[1], nms[2], cval)
+              
+              return(out)
+              
+            }) %>% 
+            do.call('rbind', .)
+        
+          return(x)
+           
+        })
+      ) %>% 
+      select(-data) %>% 
+      unnest
+    
+    # remove combined categories with the same restoration type
+    torm <- with(chgcmb,  
+      which(
+        gsub('_.*$', '', nms.1.) == gsub('_.*$', '', nms.2.)
+      )
+    )
+    chgcmb <- chgcmb[-torm, ] %>% 
+      rename(
+        hab = nms.1.,
+        wtr = nms.2.
+      )
+
+  return(chgcmb)
 
 }

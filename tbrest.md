@@ -205,53 +205,52 @@ head(salchg)
 
 ```
 ## # A tibble: 6 x 4
-## # Groups:   stat, resgrp [3]
-##    stat resgrp   trt     cval
-##   <int>  <chr> <chr>    <dbl>
-## 1     6    hab   aft 24.67069
-## 2     6    hab   bef 24.90016
-## 3     6    wtr   aft 25.27052
-## 4     6    wtr   bef 24.92134
-## 5     7    hab   aft 25.92751
-## 6     7    hab   bef 25.25877
+##    stat     hab     wtr     cval
+##   <int>  <fctr>  <fctr>    <dbl>
+## 1     6 hab_aft wtr_aft 24.97061
+## 2     6 hab_aft wtr_bef 24.79602
+## 3     6 hab_bef wtr_aft 25.08534
+## 4     6 hab_bef wtr_bef 24.91075
+## 5     7 hab_aft wtr_aft 25.96783
+## 6     7 hab_aft wtr_bef 25.43867
 ```
 
 Get conditional probability distributions for the restoration type, treatment effects, **salinity** as first child node in network. 
 
 ```r
-wqcdt <- get_cdt(salchg, 'resgrp', 'trt')
+wqcdt <- get_cdt(salchg, 'hab', 'wtr')
 head(wqcdt)
 ```
 
 ```
 ## # A tibble: 4 x 5
-##   resgrp   trt              data       crv                    prd
-##    <chr> <chr>            <list>    <list>                 <list>
-## 1    hab   aft <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
-## 2    hab   bef <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
-## 3    wtr   aft <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
-## 4    wtr   bef <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
+##       hab     wtr              data       crv                    prd
+##    <fctr>  <fctr>            <list>    <list>                 <list>
+## 1 hab_aft wtr_aft <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
+## 2 hab_aft wtr_bef <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
+## 3 hab_bef wtr_aft <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
+## 4 hab_bef wtr_bef <tibble [45 x 2]> <dbl [2]> <data.frame [100 x 3]>
 ```
 
 Discretization of salinity conditional probability distributions: 
 
 ```r
-salbrk <- get_brk(wqcdt, qts = c(0.33, 0.66), 'resgrp', 'trt')
+salbrk <- get_brk(wqcdt, qts = c(0.33, 0.66), 'hab', 'wtr')
 salbrk
 ```
 
 ```
 ## # A tibble: 8 x 5
-##   resgrp   trt      qts       brk  clev
-##    <chr> <chr>    <dbl>     <dbl> <dbl>
-## 1    hab   aft 26.81396 0.4266360     1
-## 2    hab   aft 30.39395 0.8715857     2
-## 3    hab   bef 25.60765 0.3508532     1
-## 4    hab   bef 29.59290 0.8606345     2
-## 5    wtr   aft 26.17562 0.3782141     1
-## 6    wtr   aft 29.88913 0.8543255     2
-## 7    wtr   bef 26.64680 0.4313636     1
-## 8    wtr   bef 30.00577 0.8841462     2
+##       hab     wtr      qts       brk  clev
+##    <fctr>  <fctr>    <dbl>     <dbl> <dbl>
+## 1 hab_aft wtr_aft 26.63419 0.4169601     1
+## 2 hab_aft wtr_aft 30.21228 0.8689749     2
+## 3 hab_aft wtr_bef 26.97154 0.4543617     1
+## 4 hab_aft wtr_bef 30.32224 0.8864751     2
+## 5 hab_bef wtr_aft 25.89163 0.3649775     1
+## 6 hab_bef wtr_aft 29.74102 0.8589130     2
+## 7 hab_bef wtr_bef 26.12722 0.3903150     1
+## 8 hab_bef wtr_bef 29.79934 0.8738420     2
 ```
 
 A plot showing the breaks:
@@ -259,11 +258,11 @@ A plot showing the breaks:
 ```r
 toplo <- select(wqcdt, -data, -crv) %>% 
   unnest
-ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
-  geom_line(aes(colour = trt)) + 
-  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
-  geom_segment(data = salbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
-  facet_grid(~ resgrp) +
+ggplot(toplo, aes(x = cval, y = cumest)) + 
+  geom_line() + 
+  geom_segment(data = salbrk, aes(x = qts, y = 0, xend = qts, yend = brk)) +
+  geom_segment(data = salbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk)) +
+  facet_grid(hab ~ wtr) +
   theme_bw()
 ```
 
@@ -277,16 +276,16 @@ chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf)
   
 # merge with salinity, bet salinity levels
 salbrk <- salbrk %>% 
-  group_by(resgrp, trt) %>% 
+  group_by(hab, wtr) %>% 
   nest(.key = 'levs')
-allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>% 
+allchg <- full_join(chlchg, salchg, by = c('hab', 'wtr', 'stat')) %>% 
   rename(
     salev = cval.y, 
     cval = cval.x
   ) %>% 
-  group_by(resgrp, trt) %>% 
+  group_by(hab, wtr) %>% 
   nest %>% 
-  left_join(salbrk, by = c('resgrp', 'trt')) %>% 
+  left_join(salbrk, by = c('hab', 'wtr')) %>% 
   mutate(
     sallev = pmap(list(data, levs), function(data, levs){
 
@@ -302,48 +301,49 @@ allchg <- full_join(chlchg, salchg, by = c('resgrp', 'trt', 'stat')) %>%
   ) %>% 
   select(-data, -levs) %>% 
   unnest
-  
-chlcdt <- get_cdt(allchg, 'resgrp', 'trt', 'salev')
-chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'resgrp', 'trt', 'salev')
+save(allchg, file = 'data/allchg.RData', compress = 'xz')
+
+chlcdt <- get_cdt(allchg, 'hab', 'wtr', 'salev')
+chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'hab', 'wtr', 'salev')
 chlbrk %>% 
   print(n = nrow(.))
 ```
 
 ```
 ## # A tibble: 24 x 6
-##    resgrp   trt salev       qts       brk  clev
-##     <chr> <chr> <chr>     <dbl>     <dbl> <dbl>
-##  1    hab   aft    lo 11.978108 0.6287199     1
-##  2    hab   aft    lo 18.156823 0.9700651     2
-##  3    hab   aft    md  5.436842 0.2586564     1
-##  4    hab   aft    md  6.995905 0.7121838     2
-##  5    hab   aft    hi  3.862818 0.2220339     1
-##  6    hab   aft    hi  4.532562 0.6880934     2
-##  7    hab   bef    lo 11.501613 0.3697316     1
-##  8    hab   bef    lo 15.662426 0.8031924     2
-##  9    hab   bef    md  7.215963 0.3589801     1
-## 10    hab   bef    md  9.861630 0.8147549     2
-## 11    hab   bef    hi  3.731300 0.2833282     1
-## 12    hab   bef    hi  5.215827 0.7037234     2
-## 13    wtr   aft    lo  9.569390 0.3799029     1
-## 14    wtr   aft    lo 12.348305 0.8135417     2
-## 15    wtr   aft    md  6.648959 0.4379281     1
-## 16    wtr   aft    md  8.616993 0.8786580     2
-## 17    wtr   aft    hi  3.809958 0.4514589     1
-## 18    wtr   aft    hi  4.611583 0.8642126     2
-## 19    wtr   bef    lo  9.345197 0.4895243     1
-## 20    wtr   bef    lo 13.075621 0.9010680     2
-## 21    wtr   bef    md  5.349960 0.3472494     1
-## 22    wtr   bef    md  6.788045 0.8020576     2
-## 23    wtr   bef    hi  3.136750 0.2781608     1
-## 24    wtr   bef    hi  3.898500 0.6980949     2
+##        hab     wtr salev       qts       brk  clev
+##     <fctr>  <fctr> <chr>     <dbl>     <dbl> <dbl>
+##  1 hab_aft wtr_aft    lo 10.781653 0.5708955     1
+##  2 hab_aft wtr_aft    lo 15.256575 0.9569160     2
+##  3 hab_aft wtr_aft    md  5.890574 0.3221651     1
+##  4 hab_aft wtr_aft    md  7.436869 0.8264526     2
+##  5 hab_aft wtr_aft    hi  3.652376 0.2036516     1
+##  6 hab_aft wtr_aft    hi  4.204048 0.6773383     2
+##  7 hab_aft wtr_bef    lo  9.683807 0.5140944     1
+##  8 hab_aft wtr_bef    lo 13.506126 0.9259794     2
+##  9 hab_aft wtr_bef    md  4.826403 0.2636494     1
+## 10 hab_aft wtr_bef    md  5.757980 0.6830875     2
+## 11 hab_aft wtr_bef    hi  3.608659 0.2725892     1
+## 12 hab_aft wtr_bef    hi  4.270781 0.7370509     2
+## 13 hab_bef wtr_aft    lo 10.880113 0.4210896     1
+## 14 hab_bef wtr_aft    lo 14.057895 0.8697229     2
+## 15 hab_bef wtr_aft    md  6.873076 0.3816564     1
+## 16 hab_bef wtr_aft    md  9.055613 0.8655731     2
+## 17 hab_bef wtr_aft    hi  3.672462 0.2926042     1
+## 18 hab_bef wtr_aft    hi  4.717372 0.7371243     2
+## 19 hab_bef wtr_bef    lo  9.760665 0.3783987     1
+## 20 hab_bef wtr_bef    lo 13.466942 0.8476858     2
+## 21 hab_bef wtr_bef    md  5.613609 0.2562567     1
+## 22 hab_bef wtr_bef    md  6.986132 0.7812274     2
+## 23 hab_bef wtr_bef    hi  3.365774 0.1936992     1
+## 24 hab_bef wtr_bef    hi  4.258161 0.6063329     2
 ```
 
 Final combinations long format:
 
 ```r
 chlbar <- chlbrk %>% 
-  group_by(resgrp, trt, salev) %>% 
+  group_by(hab, wtr, salev) %>% 
   nest %>% 
   mutate(
     data = map(data, function(x){
@@ -371,52 +371,52 @@ chlbar %>%
 
 ```
 ## # A tibble: 36 x 5
-##    resgrp   trt  salev chllev     chlval
-##     <chr> <chr> <fctr> <fctr>      <dbl>
-##  1    hab   aft     lo     lo 0.62871991
-##  2    hab   aft     md     lo 0.25865637
-##  3    hab   aft     hi     lo 0.22203392
-##  4    hab   bef     lo     lo 0.36973161
-##  5    hab   bef     md     lo 0.35898011
-##  6    hab   bef     hi     lo 0.28332824
-##  7    wtr   aft     lo     lo 0.37990286
-##  8    wtr   aft     md     lo 0.43792805
-##  9    wtr   aft     hi     lo 0.45145895
-## 10    wtr   bef     lo     lo 0.48952434
-## 11    wtr   bef     md     lo 0.34724942
-## 12    wtr   bef     hi     lo 0.27816080
-## 13    hab   aft     lo     md 0.34134515
-## 14    hab   aft     md     md 0.45352747
-## 15    hab   aft     hi     md 0.46605945
-## 16    hab   bef     lo     md 0.43346076
-## 17    hab   bef     md     md 0.45577475
-## 18    hab   bef     hi     md 0.42039512
-## 19    wtr   aft     lo     md 0.43363885
-## 20    wtr   aft     md     md 0.44072990
-## 21    wtr   aft     hi     md 0.41275366
-## 22    wtr   bef     lo     md 0.41154362
-## 23    wtr   bef     md     md 0.45480819
-## 24    wtr   bef     hi     md 0.41993407
-## 25    hab   aft     lo     hi 0.02993494
-## 26    hab   aft     md     hi 0.28781616
-## 27    hab   aft     hi     hi 0.31190662
-## 28    hab   bef     lo     hi 0.19680763
-## 29    hab   bef     md     hi 0.18524514
-## 30    hab   bef     hi     hi 0.29627664
-## 31    wtr   aft     lo     hi 0.18645829
-## 32    wtr   aft     md     hi 0.12134205
-## 33    wtr   aft     hi     hi 0.13578739
-## 34    wtr   bef     lo     hi 0.09893204
-## 35    wtr   bef     md     hi 0.19794239
-## 36    wtr   bef     hi     hi 0.30190514
+##        hab     wtr  salev chllev     chlval
+##     <fctr>  <fctr> <fctr> <fctr>      <dbl>
+##  1 hab_aft wtr_aft     lo     lo 0.57089552
+##  2 hab_aft wtr_aft     md     lo 0.32216515
+##  3 hab_aft wtr_aft     hi     lo 0.20365158
+##  4 hab_aft wtr_bef     lo     lo 0.51409437
+##  5 hab_aft wtr_bef     md     lo 0.26364945
+##  6 hab_aft wtr_bef     hi     lo 0.27258924
+##  7 hab_bef wtr_aft     lo     lo 0.42108961
+##  8 hab_bef wtr_aft     md     lo 0.38165644
+##  9 hab_bef wtr_aft     hi     lo 0.29260416
+## 10 hab_bef wtr_bef     lo     lo 0.37839875
+## 11 hab_bef wtr_bef     md     lo 0.25625674
+## 12 hab_bef wtr_bef     hi     lo 0.19369916
+## 13 hab_aft wtr_aft     lo     md 0.38602049
+## 14 hab_aft wtr_aft     md     md 0.50428742
+## 15 hab_aft wtr_aft     hi     md 0.47368675
+## 16 hab_aft wtr_bef     lo     md 0.41188504
+## 17 hab_aft wtr_bef     md     md 0.41943802
+## 18 hab_aft wtr_bef     hi     md 0.46446165
+## 19 hab_bef wtr_aft     lo     md 0.44863327
+## 20 hab_bef wtr_aft     md     md 0.48391665
+## 21 hab_bef wtr_aft     hi     md 0.44452013
+## 22 hab_bef wtr_bef     lo     md 0.46928701
+## 23 hab_bef wtr_bef     md     md 0.52497063
+## 24 hab_bef wtr_bef     hi     md 0.41263378
+## 25 hab_aft wtr_aft     lo     hi 0.04308399
+## 26 hab_aft wtr_aft     md     hi 0.17354743
+## 27 hab_aft wtr_aft     hi     hi 0.32266167
+## 28 hab_aft wtr_bef     lo     hi 0.07402058
+## 29 hab_aft wtr_bef     md     hi 0.31691253
+## 30 hab_aft wtr_bef     hi     hi 0.26294911
+## 31 hab_bef wtr_aft     lo     hi 0.13027712
+## 32 hab_bef wtr_aft     md     hi 0.13442692
+## 33 hab_bef wtr_aft     hi     hi 0.26287572
+## 34 hab_bef wtr_bef     lo     hi 0.15231424
+## 35 hab_bef wtr_bef     md     hi 0.21877263
+## 36 hab_bef wtr_bef     hi     hi 0.39366706
 ```
 
 A bar plot of splits:
 
 ```r
-ggplot(chlbar, aes(x = chllev, y = chlval, group = trt, fill = trt)) +
+ggplot(chlbar, aes(x = chllev, y = chlval, group = salev, fill = salev)) +
   geom_bar(stat = 'identity', position = 'dodge') +
-  facet_grid(salev ~ resgrp) +
+  facet_grid(hab ~ wtr) +
   theme_bw()
 ```
 
@@ -430,11 +430,11 @@ toplo <- select(chlcdt, -data, -crv) %>%
   mutate(
     salev = factor(salev, levels = c('lo', 'md', 'hi'))
   )
-ggplot(toplo, aes(x = cval, y = cumest, group = trt)) + 
-  geom_line(aes(colour = trt)) + 
-  geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
-  geom_segment(data = chlbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk, linetype = factor(clev), colour = trt)) +
-  facet_grid(salev ~ resgrp, scales = 'free_x') +
+ggplot(toplo, aes(x = cval, y = cumest, group = salev, colour = salev)) + 
+  geom_line() + 
+  geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk)) +
+  geom_segment(data = chlbrk, aes(x = min(toplo$cval), y = brk, xend = qts, yend = brk)) +
+  facet_grid(hab ~ wtr, scales = 'free_x') +
   theme_bw()
 ```
 
