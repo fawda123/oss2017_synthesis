@@ -1,0 +1,638 @@
+---
+title: "Firework Diagram"
+author: "jessica.henkel@restorethegulf.gov"
+date: "July 20, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+#Load in Data and Create list of Technologies and Restoration Types
+```{r}
+library (devtools)
+library (DiagrammeR)
+load("~/oss2017_synthesis/data/restdat.RData")
+techs<- with(restdat, unique(tech))
+types<- with (restdat, unique(type))
+techtypes<- with(restdat, unique(tech,type))
+```
+
+## Begin Plotting Diagram - basic circles and squares
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+
+grViz("
+digraph boxes_and_circles {
+
+  # a 'graph' statement
+  graph [overlap = true, fontsize = 10]
+
+  # several 'node' statements
+  node [shape = box,
+        fontname = Helvetica]
+  A; B; C; D; E; F
+
+  node [shape = circle,
+        fixedsize = true,
+        width = 0.9] // sets as circles
+  1; 2; 3; 4; 5; 6; 7; 8
+
+  # several 'edge' statements
+  A->1 B->2 B->3 B->4 C->A
+  1->D E->A 2->4 1->5 1->F
+  E->6 4->6 5->7 6->7 3->8
+}
+")
+```
+
+#neato diagrm
+```{r}
+grViz("
+digraph neato {
+
+graph [layout = neato]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      label = '']
+
+node [fillcolor = red]
+'Chlorophyll A'
+
+node [fillcolor = green]
+'Habitat Establishment' 'Habitat Enhancement' 'Habitat Protection' 'NonPoint Source' 'Point Source'
+
+node [fillcolor = orange]
+
+edge [color = grey]
+'Habitat Enhancement' -> 'Chlorophyll A'
+'Habitat Establishment' -> 'Chlorophyll A'
+'Habitat Protection' -> 'Chlorophyll A'
+'NonPoint Source' -> 'Chlorophyll A'
+'Point Source' -> 'Chlorophyll A'
+
+'Hydrologic Restoration' -> 'Habitat Establishment'
+'Exotic Control' -> 'Habitat Establishment'
+'Mangroves' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Saltmarsh' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Oyster Habitat' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Freshwater Wetlands' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Dredging' -> 'Habitat Enhancement'
+'Management' -> {'Habitat Enhancement' 'Point Source'}
+'Uplands' -> 'Habitat Enhancement'
+'Protection' -> 'Habitat Protection'
+'Acquisition' -> 'Habitat Protection'
+'Education' -> {'Habitat Protection' 'NonPoint Source'}
+'BMP Wetland Treatment' -> 'NonPoint Source'
+'BMP Baffle Box' -> 'NonPoint Source'
+'BMP Stormwater Pont' ->'NonPoint Source'
+'BMP Management' -> 'NonPoint Source'
+'Send to WWTP' -> 'NonPoint Source'
+'BMP Alum' -> 'NonPoint Source'
+'BMP Treatment Training' -> 'NonPoint Source'
+'BMP Wetland Treatment' -> 'NonPoint Source'
+'Atmospheric Desposition' -> 'NonPoint Source'
+'BMP CDS Unit' -> 'NonPoint Source'
+'BMP Agriculture' -> 'NonPoint Source'
+'Regulation' -> {'NonPoint Source', 'Point Source'}
+'Street Sweeping' -> 'NonPoint Source'
+'BMP on Site' -> 'Point Source'
+'PS Treatment' -> 'Point Source'
+'Increase Reuse' -> 'Point Source'
+
+}")
+```
+#same graph as circo
+```{r}
+grViz("
+digraph circo {
+
+graph [layout = circo]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      label = '']
+
+node [fillcolor = red]
+'Chlorophyll A'
+
+node [fillcolor = green]
+'Habitat Establishment' 'Habitat Enhancement' 'Habitat Protection' 'NonPoint Source' 'Point Source'
+
+node [fillcolor = orange]
+
+edge [color = grey]
+'Habitat Enhancement' -> 'Chlorophyll A'
+'Habitat Establishment' -> 'Chlorophyll A'
+'Habitat Protection' -> 'Chlorophyll A'
+'NonPoint Source' -> 'Chlorophyll A'
+'Point Source' -> 'Chlorophyll A'
+
+'Hydrologic Restoration' -> 'Habitat Establishment'
+'Exotic Control' -> 'Habitat Establishment'
+'Mangroves' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Saltmarsh' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Oyster Habitat' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Freshwater Wetlands' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Dredging' -> 'Habitat Enhancement'
+'Management' -> {'Habitat Enhancement' 'Point Source'}
+'Uplands' -> 'Habitat Enhancement'
+'Protection' -> 'Habitat Protection'
+'Acquisition' -> 'Habitat Protection'
+'Education' -> {'Habitat Protection' 'NonPoint Source'}
+'BMP Wetland Treatment' -> 'NonPoint Source'
+'BMP Baffle Box' -> 'NonPoint Source'
+'BMP Stormwater Pont' ->'NonPoint Source'
+'BMP Management' -> 'NonPoint Source'
+'Send to WWTP' -> 'NonPoint Source'
+'BMP Alum' -> 'NonPoint Source'
+'BMP Treatment Training' -> 'NonPoint Source'
+'BMP Wetland Treatment' -> 'NonPoint Source'
+'Atmospheric Desposition' -> 'NonPoint Source'
+'BMP CDS Unit' -> 'NonPoint Source'
+'BMP Agriculture' -> 'NonPoint Source'
+'Regulation' -> {'NonPoint Source', 'Point Source'}
+'Street Sweeping' -> 'NonPoint Source'
+'BMP on Site' -> 'Point Source'
+'PS Treatment' -> 'Point Source'
+'Increase Reuse' -> 'Point Source'
+
+}")
+```
+
+#boxes_and_circles
+```{r}
+grViz("
+digraph boxes_and_circles {
+
+graph [overlap = true, fontsize = 10]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      label = '']
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      fontname = Helvetica,
+      fillcolor = red]
+'Chlorophyll A'
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = green] 
+'Habitat Establishment'; 'Habitat Enhancement'; 'Habitat Protection'; 
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = orange
+       width = 0.9] 
+'NonPoint Source'; 'Point Source'; 
+
+node [shape = circle,
+      fillcolor = olivedrab,
+      fontname = Helvetica]
+'Hydrologic Restoration'; 'Exotic Control';'Saltmarsh'; 'Mangroves'; 'Oyster Habitat'; 'Freshwater Wetlands'; 'Dredging'; 'Management'; 'Uplands'; 'Protection'; 'Acquisition';
+
+node [shape = circle,
+      fillcolor = sandybrown,
+      fontname = Helvetica]
+'Education'; 'BMP Wetland Treatment'; 'BMP Baffle Box'; 'BMP Stormwater Pond'; 'BMP Management'; 'Send to WWTP'; 'BMP Alum'; 'BMP Treatment Training'; 'BMP Wetland Treatment'; 'Atmospheric Desposition'; 'BMP CDS Unit'; 'BMP Agriculture'; 'Regulation'; 'Street Sweeping'; 'BMP on Site'; 'PS Treatment'; 'Increase Reuse'  
+
+edge [color = grey]
+'Habitat Enhancement' -> 'Chlorophyll A'
+'Habitat Establishment' -> 'Chlorophyll A'
+'Habitat Protection' -> 'Chlorophyll A'
+'NonPoint Source' -> 'Chlorophyll A'
+'Point Source' -> 'Chlorophyll A'
+'Hydrologic Restoration' -> 'Habitat Establishment'
+'Exotic Control' -> 'Habitat Establishment'
+'Mangroves' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Saltmarsh' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Oyster Habitat' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Freshwater Wetlands' -> {'Habitat Establishment' 'Habitat Enhancement'}
+'Dredging' -> 'Habitat Enhancement'
+'Management' -> {'Habitat Enhancement' 'Point Source'}
+'Uplands' -> 'Habitat Enhancement'
+'Protection' -> 'Habitat Protection'
+'Acquisition' -> 'Habitat Protection'
+'Education' -> {'Habitat Protection' 'NonPoint Source'}
+'BMP Wetland Treatment' -> 'NonPoint Source'
+'BMP Baffle Box' -> 'NonPoint Source'
+'BMP Stormwater Pond' ->'NonPoint Source'
+'BMP Management' -> 'NonPoint Source'
+'Send to WWTP' -> 'NonPoint Source'
+'BMP Alum' -> 'NonPoint Source'
+'BMP Treatment Training' -> 'NonPoint Source'
+'BMP Wetland Treatment' -> 'NonPoint Source'
+'Atmospheric Desposition' -> 'NonPoint Source'
+'BMP CDS Unit' -> 'NonPoint Source'
+'BMP Agriculture' -> 'NonPoint Source'
+'Regulation' -> {'NonPoint Source', 'Point Source'}
+'Street Sweeping' -> 'NonPoint Source'
+'BMP on Site' -> 'Point Source'
+'PS Treatment' -> 'Point Source'
+'Increase Reuse' -> 'Point Source'
+
+}")
+```
+
+#trying something else
+```{r}
+grViz ("
+digraph a_nice_graph {
+
+graph [overlap = true, fontsize = 10]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      fontname = Helvetica,
+      fillcolor = red]
+a [label = '@@1']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = green] 
+b [label = '@@2']; c [label = '@@3']; d[label = '@@4']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = orange,
+       width = 0.9] 
+e[label = '@@5']; f[label = '@@6']
+
+node [shape = circle,
+      fillcolor = olivedrab,
+      fontname = Helvetica]
+g[label = '@@7']; h[label = '@@8']; i[label = '@@9']; j[label = '@@10']; k[label = '@@11']; l[label = '@@12']; m[label = '@@13']; n[label = '@@14']; o[label = '@@15']; p[label = '@@16']; q[label = '@@17']; r[label = '@@18']
+
+node [shape = circle,
+      fillcolor = sandybrown,
+      fontname = Helvetica]
+s[label = '@@19']; t[label = '@@20']; u[label = '@@21']; v[label = '@@22']; w[label = '@@23']; x[label = '@@24']; y[label = '@@25']; z[label = '@@26']; a1[label = '@@27']; a2[label = '@@28']; a3[label = '@@29']; a4[label = '@@30']; a5[label = '@@31']; a6[label = '@@32]; a7[label = '@@33']; 
+
+edge [color = grey]
+b -> a
+c -> a
+d -> a
+e -> a
+f -> a
+g -> b
+h -> b
+i -> {b c}
+j -> {b c}
+k -> {b c}
+l -> {b c}
+m -> c
+n -> {c f}
+o -> c
+p -> d
+q -> d
+r-> {d e}
+s -> e
+t -> e
+u -> e
+v -> e 
+w -> e
+x -> e
+y -> e
+z -> e
+a1 -> e
+a2 -> e
+a3 -> {e f}
+a4 -> e
+a5 -> f
+a6 -> f
+a7 -> f
+}
+
+[1]:'Chlorophyll A'
+[2]:'Habitat Establishment'
+[3]: 'Habitat Enhancement' 
+[4]: 'Habitat Protection' 
+[5]: 'NonPoint Source'
+[6]: 'Point Source'
+[7]: 'Hydrologic Restoration' 
+[8]: 'Exotic Control'
+[9]: 'Saltmarsh'
+[10]: 'Mangroves'
+[11]: 'Oyster Habitat'
+[12]: 'Freshwater Wetlands' 
+[13]: 'Dredging' 
+[14]: 'Land Management'
+[15]: 'Uplands' 
+[16]: 'Protection'
+[17]: 'Acquisition'
+[18]: 'Education'
+[19]: 'BMP Activities'
+[23]: 'Send to WWTP'
+[26]: 'Atmospheric Desposition'
+[29]: 'Regulation'
+[30]: 'Street Sweeping'
+[31]: 'BMP on Site'
+[32]: 'PS Treatment'
+[33]: 'Increase Reuse'  
+
+[20]: 'BMP Baffle Box'
+[21]: 'BMP Stormwater Pond'
+[22]: 'BMP Management'
+[24]: 'BMP Alum'
+[25]: 'BMP Treatment Training'
+[27]: 'BMP CDS Unit'
+[28]: 'BMP Agriculture'
+
+")
+```
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+grViz ("
+digraph a_nice_graph {
+
+graph [overlap = true, fontsize = 10]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      fontname = Helvetica,
+      fillcolor = red]
+a [label = '@@1']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = green] 
+b [label = '@@2']; c [label = '@@3']; d[label = '@@4']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = orange,
+       width = 0.9] 
+e[label = '@@5']; f[label = '@@6']
+
+node [shape = circle,
+      fillcolor = olivedrab,
+      fontname = Helvetica]
+g[label = '@@7']; h[label = '@@8']; i[label = '@@9']; j[label = '@@10']; k[label = '@@11']; l[label = '@@12']; m[label = '@@13']; n[label = '@@14']; o[label = '@@15']; p[label = '@@16']; q[label = '@@17']; r[label = '@@18']
+
+edge [color = grey]
+b -> a
+c -> a
+d -> a
+e -> a
+f -> a
+g -> b
+h -> b
+i -> {b c}
+j -> {b c}
+k -> {b c}
+l -> {b c}
+m -> c
+n -> {c f}
+o -> c
+p -> d
+q -> d
+r-> {d e}
+}
+
+[1]:'Chlorophyll A'
+[2]:'Habitat Establishment'
+[3]: 'Habitat Enhancement' 
+[4]: 'Habitat Protection' 
+[5]: 'NonPoint Source'
+[6]: 'Point Source'
+[7]: 'Hydrologic Restoration' 
+[8]: 'Exotic Control'
+[9]: 'Saltmarsh'
+[10]: 'Mangroves'
+[11]: 'Oyster Habitat'
+[12]: 'Freshwater Wetlands' 
+[13]: 'Dredging' 
+[14]: 'Management'
+[15]: 'Uplands' 
+[16]: 'Protection'
+[17]: 'Acquisition'
+[18]: 'Education'
+[19]: 'BMP Wetland Treatment'
+
+")
+```
+
+#trying something else - this doesn't work
+```{r}
+grViz ("
+digraph boxes_and_circles {
+
+graph [overlap = true, fontsize = 10]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      fontname = Helvetica,
+      fillcolor = red]
+a [label = '@@1']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = green] 
+b [label = '@@2']; c [label = '@@3']; d[label = '@@4']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = orange,
+       width = 0.9] 
+e[label = '@@5']; f[label = '@@6']
+
+node [shape = circle,
+      fillcolor = olivedrab,
+      fontname = Helvetica]
+g[label = '@@7']; h[label = '@@8']; i[label = '@@9']; j[label = '@@10']; k[label = '@@11']; l[label = '@@12']; m[label = '@@13']; n[label = '@@14']; o[label = '@@15']; p[label = '@@16']; q[label = '@@17']; r[label = '@@18']
+
+node [shape = circle,
+      fillcolor = sandybrown,
+      fontname = Helvetica]
+s[label = '@@19']; t[label = '@@20']; u[label = '@@21']; v[label = '@@22']; w[label = '@@23']; x[label = '@@24']; y[label = '@@25']; z[label = '@@26']; 
+
+edge [color = grey]
+b -> a
+c -> a
+d -> a
+e -> a
+f -> a
+g -> b
+h -> b
+i -> {b c}
+j -> {b c}
+k -> {b c}
+l -> {b c}
+m -> c
+n -> {c f}
+o -> c
+p -> d
+q -> d
+r-> {d e}
+s -> e
+t -> e
+u -> e
+v -> {e f}
+w -> e
+x -> f
+y -> f
+z -> f
+}
+
+[1]:'Chlorophyll A'
+[2]:'Habitat Establishment'
+[3]: 'Habitat Enhancement' 
+[4]: 'Habitat Protection' 
+[5]: 'NonPoint Source'
+[6]: 'Point Source'
+[7]: 'Hydrologic Restoration' 
+[8]: 'Exotic Control'
+[9]: 'Saltmarsh'
+[10]: 'Mangroves'
+[11]: 'Oyster Habitat'
+[12]: 'Freshwater Wetlands' 
+[13]: 'Dredging' 
+[14]: 'Land Management'
+[15]: 'Uplands' 
+[16]: 'Protection'
+[17]: 'Acquisition'
+[18]: 'Education'
+[19]: 'BMP Activities'
+[20]: 'Send to WWTP'
+[21]: 'Atmospheric Desposition'
+[22]: 'Regulation'
+[23]: 'Street Sweeping'
+[24]: 'BMP on Site'
+[25]: 'PS Treatment'
+[26]: 'Increase Reuse'  
+
+")
+
+```
+
+```{r}
+graph1 <- grViz("
+digraph circo {
+
+graph [overlap = true, fontsize = 14]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      fontname = Helvetica,
+      fillcolor = red]
+a [label = '@@1']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = green] 
+b [label = '@@2']; c [label = '@@3']; d[label = '@@4']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = orange,
+       width = 0.9] 
+e[label = '@@5']; f[label = '@@6']
+
+node [shape = circle,
+      fillcolor = olivedrab,
+      fontname = Helvetica]
+g[label = '@@7']; h[label = '@@8']; i[label = '@@9']; j[label = '@@10']; k[label = '@@11']; l[label = '@@12']; m[label = '@@13']; n[label = '@@14']; o[label = '@@15']; p[label = '@@16']; q[label = '@@17']; r[label = '@@18']
+
+node [shape = circle,
+      fillcolor = sandybrown,
+      fontname = Helvetica]
+s[label = '@@19']; t[label = '@@20']; u[label = '@@21']; v[label = '@@22']; w[label = '@@23']; x[label = '@@24']; y[label = '@@25']; z[label = '@@26']; 
+
+edge [color = grey]
+b -> a
+c -> a
+d -> a
+e -> a
+f -> a
+g -> b
+h -> b
+i -> {b c}
+j -> {b c}
+k -> {b c}
+l -> {b c}
+m -> c
+n -> {c f}
+o -> c
+p -> d
+q -> d
+r-> {d e}
+s -> e
+t -> e
+u -> e
+v -> {e f}
+w -> e
+x -> f
+y -> f
+z -> f
+}
+
+[1]:'Chlorophyll A'
+[2]:'Habitat Establishment'
+[3]: 'Habitat Enhancement' 
+[4]: 'Habitat Protection' 
+[5]: 'NonPoint Source'
+[6]: 'Point Source'
+[7]: 'Hydrologic Restoration' 
+[8]: 'Exotic Control'
+[9]: 'Saltmarsh'
+[10]: 'Mangroves'
+[11]: 'Oyster Habitat'
+[12]: 'Freshwater Wetlands' 
+[13]: 'Dredging' 
+[14]: 'Land Management'
+[15]: 'Uplands' 
+[16]: 'Protection'
+[17]: 'Acquisition'
+[18]: 'Education'
+[19]: 'BMP Activities'
+[20]: 'Send to WWTP'
+[21]: 'Atmospheric Desposition'
+[22]: 'Regulation'
+[23]: 'Street Sweeping'
+[24]: 'BMP on Site'
+[25]: 'PS Treatment'
+[26]: 'Increase Reuse'  
+
+")
+
+plot(graph1)
+```
+
+#Using Ed's Code:
+```{r}
+nodes <- data.frame(id=1:26, 
+                    label = c("Hydrologic Restoration", "Exotic Control", "Saltmarsh", "Mangroves", "Oyster Habitat", "Freshwater Wetlands","Dredging", "Land Management", "Uplands", "Protection", "Acquisition", "Education", "BMP Activities", "Send to WWTP", "Atmospheric Desposition", "Regulation", "Street Sweeping", "BMP on Site", "PS Treatment", "Increase Reuse", "Habitat Establishment", "Habitat Enhancement", "Habitat Protection", "NonPoint Source", "Point Source", "Salinity", "Chlorophyll A"), 
+                    group = c("Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Activity", "Restoration Activity", "Restoration Activity", "Restoration Activity", "Restoration Activity","Water Quality Response," "Water Quality Response"),
+                    level = c(1,1,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3),
+                    shape = c("square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "circle", "circle", "circle", "circle", "circle","square", "square"),
+                    title = paste0("<p><b>", c("Hydrologic Restoration", "Exotic Control", "Saltmarsh", "Mangroves", "Oyster Habitat", "Freshwater Wetlands","Dredging", "Land Management", "Uplands", "Protection", "Acquisition", "Education", "BMP Activities", "Send to WWTP", "Atmospheric Desposition", "Regulation", "Street Sweeping", "BMP on Site", "PS Treatment", "Increase Reuse", "Habitat Establishment", "Habitat Enhancement", "Habitat Protection", "NonPoint Source", "Point Source", "Chlorophyll A","Salinity"),"</b></p>"),
+                    color = c("lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen","lightblue", "lightblue", "lightblue", "lightblue", "lightblue", "red", "red"),
+                    shadow = c("true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true",))
+edges <- data.frame(from=c(3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1,1,2,2,3), to = c(3,4,3,4,4))
+visNetwork(nodes, edges, width = "100%") %>%
+  visEdges(arrows = "to") %>%
+  visGroups(groupname = "Activity", color = "red", shape = "square") %>%
+  visGroups(groupname = "WQ Response", color = "lightblue", shape = "circle") %>%
+  visLegend(position = "right", main = "Bayesian Parameter") %>%
+  visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE) 
