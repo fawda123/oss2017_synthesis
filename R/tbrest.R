@@ -6,6 +6,7 @@ library(lubridate)
 library(geosphere)
 library(stringi)
 library(tibble)
+library(leaflet)
 knitr::knit('tbrest.Rmd', tangle = TRUE)
 file.copy('tbrest.R', 'R/tbrest.R', overwrite = TRUE)
 file.remove('tbrest.R')
@@ -84,7 +85,7 @@ pbase +
 ## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
 # closest five percent
 fvper <- max(toplo$rnk) %>% 
-  `*`(0.05) %>% 
+  `*`(0.2) %>% 
   ceiling
 toplo2 <- filter(toplo, rnk %in% c(1:fvper))
 
@@ -97,6 +98,48 @@ toplo3 <- toplo
 
 pbase + 
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
+
+## ------------------------------------------------------------------------
+# dates for hab projects
+restn <- restall %>% 
+  select(id, date)
+restall <- restall %>% 
+  mutate(
+    top = `Restoration\ngroup`
+  )
+
+#rest
+lplo <- toplo1 %>% 
+  select(stat, `Restoration\ngroup`, id, lon.x, lat.x, lat.y, lon.y) %>% 
+  mutate(top = `Restoration\ngroup`) %>% 
+  left_join(restn, by = 'id')
+restln <- lplo %>% 
+  gather('latgrp', 'lat', lat.x:lat.y) %>% 
+  gather('longrp', 'lon', lon.x:lon.y)
+
+pal <- colorFactor(c("navy", "red"), domain = c("hab", "wtr"))
+
+leaflet(lplo) %>% 
+  addTiles() %>%
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addCircleMarkers(~lon.x, ~lat.x,
+    radius = 4,
+    color = 'green',
+    stroke = FALSE, opacity = 0.8,
+    popup = ~as.character(paste('WQ', stat)), 
+    group = 'Water quality'
+  ) %>% 
+  addCircleMarkers(data = restall, ~lon, ~lat,
+    radius = 6,
+    color = ~pal(top),
+    stroke = FALSE, opacity = 0.8, 
+    popup = ~as.character(paste(top, date)), 
+    group = 'Restoration sites'
+  ) %>% 
+  addLayersControl(
+    overlayGroups = c('Water quality', 'Restoration sites'),
+    options = layersControlOptions(collapsed = FALSE)
+  )
 
 ## ------------------------------------------------------------------------
 salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf)
