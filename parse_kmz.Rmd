@@ -1,0 +1,22 @@
+---
+title: "Parse CBBEP Habitat Restoration KMZ File"
+author: "Ed Sherwood <esherwood@tbep.org>"
+date: "July 20, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#install.packages('XML')
+require(rgdal)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Import CBBEP KMZ File
+```{r}
+map <- "./data-raw/CBBEP.kml"
+riv <- readOGR(map, layer="River/Delta")
+pen <- readOGR(map, layer="Peninsula")
+open <- readOGR(map, layer="Open Bay")
+bar <- readOGR(map, layer="Barrier Islands")
+```
+

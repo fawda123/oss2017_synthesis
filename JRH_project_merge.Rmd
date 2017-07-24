@@ -1,0 +1,105 @@
+---
+title: "Merge Habitat Restoration Projects with BMP-Treatment Type Projects"
+author: "Jessica Henkel"
+date: "July 19, 2017"
+output: html_document
+---
+
+Load libraries:
+
+```{r message = F, warning = F}
+library(tidyverse)
+library(readxl)
+library(ggmap)
+library(lubridate)
+library(geosphere)
+library(stringi)
+
+```{r warning = F, message = F, fig.width = 8, fig.height = 6}  
+wat_tr <- 'data-raw/apdb_completed_categorized.csv'
+
+# clean up stormwater data
+watdat <- wat_tr %>% 
+  read_csv %>% 
+  select(Unique_Project_ID, ProjectLatitude, ProjectLongitude, Completion_Date, Project_Technology, Project_Activity) %>%
+  rename(
+    id = Unique_Project_ID,
+    lat = ProjectLatitude, 
+    lon = ProjectLongitude, 
+    date = Completion_Date, 
+    tech = Project_Technology, 
+    type = Project_Activity
+  ) %>% 
+  mutate(
+    id = stri_rand_strings(nrow(.), length = 4),
+    lat = as.numeric(lat),
+    lon = as.numeric(lon),
+    date = as.numeric(date),
+    tech = toupper(tech)
+  ) %>% 
+  filter(lat > 27.3 & lat < 28.2) %>% 
+  filter(!is.na(date))
+
+# water restoration station locs
+watstat <- watdat %>% 
+  mutate(id = stri_rand_strings(nrow(watdat), length = 4)) %>% 
+  select(id, lat, lon) %>% 
+  unique
+
+
+# normalized water data
+watdat <- watdat %>% 
+  select(-lat, -lon)
+
+save(watdat, file = 'data/watdat_JRH.RData', compress = 'xz')
+save(watstat, file = 'data/watstat_JRH.RData', compress = 'xz')
+```
+
+Habitat restoration projects:
+```{r}
+## clean up habit restoration data
+hab_tr <- 'data-raw/TBEP_Restoration Database_11_21_07_JRH.csv'
+habdat1 <- hab_tr %>% 
+   read_csv %>% 
+  select(ProjectID, Latitude, Longitude, Project_Completion_Date, Project_Technology, Project_Activity) %>%
+habdat<- rename(habdat1,
+    id = ProjectID,
+    lat = Latitude, 
+    lon = Longitude, 
+    date = Project_Completion_Date, 
+    tech = Project_Technology, 
+    type = Project_Activity) 
+habdat2<- mutate(habdat,
+    id = stri_rand_strings(nrow(habdat), length = 4),
+    lat = as.numeric(lat),
+    lon = as.numeric(lon),
+    date = as.numeric(date),
+    tech = toupper(tech)
+  ) %>% 
+  filter(lat > 27.3 & lat < 28.2) %>% 
+  filter(!is.na(date))
+  select(id, lat, lon) %>% 
+  unique
+
+# habitat restoration station locs
+habstat <- habdat %>% 
+  mutate(id = stri_rand_strings(nrow(habdat), length = 4)) %>% 
+  select(id, lat, lon) %>% 
+  unique
+
+# normalized habitat data
+habdat2 <- habdat2 %>% 
+  select(-lat, -lon)
+
+save(habdat2, file = 'data/habdat.RData', compress = 'xz')
+save(habstat, file = 'data/habstat.RData', compress = 'xz')
+
+all_projects<-(rbind(habdat2,watdat))
+
+```{r}
+head(habdat)
+```
+Locations of habitat restoration projects:
+```{r}
+head(habstat)
+```
