@@ -194,7 +194,6 @@ allchg <- full_join(chlchg, salchg, by = c('hab', 'wtr', 'stat')) %>%
   ) %>% 
   select(-data, -levs) %>% 
   unnest
-save(allchg, file = 'data/allchg.RData', compress = 'xz')
 
 chlcdt <- get_cdt(allchg, 'hab', 'wtr', 'salev')
 chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'hab', 'wtr', 'salev')
@@ -228,6 +227,38 @@ save(chlbar, file = 'data/chlbar.RData', compress = 'xz')
 chlbar %>% 
   print(n = nrow(.))
 
+## ------------------------------------------------------------------------
+# discretize all chl data by breaks 
+chlbrk <- chlbrk %>% 
+  group_by(hab, wtr, salev) %>% 
+  nest(.key = 'levs')
+allchg <- allchg %>% 
+  group_by(hab, wtr, salev) %>% 
+  nest %>% 
+  full_join(chlbrk, by = c('hab', 'wtr', 'salev')) %>% 
+  mutate(
+    lev = pmap(list(data, levs), function(data, levs){
+      
+      out <- data %>% 
+        mutate(
+          lev = cut(cval, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
+          lev = as.character(lev)
+        )
+      
+      return(out)
+      
+    })
+  ) %>% 
+  select(-data, -levs) %>% 
+  unnest %>% 
+  rename(
+    chlev = lev, 
+    chval = cval
+    )
+
+save(allchg, file = 'data/allchg.RData', compress = 'xz')
+
+
 ## ----fig.width = 8, fig.height = 7---------------------------------------
 ggplot(chlbar, aes(x = chllev, y = chlval, group = salev, fill = salev)) +
   geom_bar(stat = 'identity', position = 'dodge') +
@@ -240,6 +271,7 @@ toplo <- select(chlcdt, -data, -crv) %>%
   mutate(
     salev = factor(salev, levels = c('lo', 'md', 'hi'))
   )
+chlbrk <- unnest(chlbrk)
 ggplot(toplo, aes(x = cval, y = cumest, group = salev, colour = salev)) + 
   geom_line() + 
   geom_segment(data = chlbrk, aes(x = qts, y = 0, xend = qts, yend = brk)) +
