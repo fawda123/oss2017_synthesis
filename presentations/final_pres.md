@@ -2,7 +2,7 @@
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
-author: Ed Sherwood, Kathryn Ireland, Jessica Renee Henkel, Marcus Beck, Kirsten Dorans, Patricia Varela
+author: Marcus Beck, Ed Sherwood, Kirsten Dorans, Patricia Varela, Jessica Renee Henkel, Kathryn Ireland
 date: July 28, 2017
 autosize: true
 css: oss.css
@@ -14,8 +14,9 @@ Deepwater Horizon Settlement Agreement
 Over $10B in Potential Restoration Activities
 ========================================================
 <img src="final_pres-figure/RESTORE_Funding_chart.jpg" alt="Drawing" style="width: 800px;"/>
-========================================================
 
+Cumulative Effects of Restoration Activities?
+========================================================
 <img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
 
 
