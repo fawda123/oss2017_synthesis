@@ -35,19 +35,21 @@ I chose to store the names of the initial and derived datasets in a vector calle
 
 ```{r set-vars}
 #set up a list of the names of variables
-varnames<-c("Descriptions of\n All PS Treatment\n Projects", 
-            "Completed\nPS \nProjects", 
-            "Completed PS\n Project &\nDescriptions",
-            "Categorized\n PS Treatment\n Projects",
-            "Habitat \nRestoration\n Treatment\n Projects",
-            "Categorized\n Habitat\n Restoration\n Projects",
-            "Restoration \nActivities")
-print("Here are the varnames:")
-varnames
+wtnames<-c("Descriptions of\n All WT Treatment\n Projects", 
+            "Completed\nWT \nProjects", 
+            "Completed WT\n Project &\nDescriptions",
+            "Categorized\n WT Treatment\n Projects")
+print("Here are the wtnames:")
+wtnames
+
+restname<- "Restoration \nActivities"
+  
+habnames<-c("Habitat \nRestoration\n Treatment\n Projects",
+            "Categorized\n Habitat\n Restoration\n Projects")
 
 #write a list of process steps
-processes<-c("Rscript:\n Select \nCompleted Projects", 
-             "Manual\n Categorization of\n PS Projects",
+processes<-c("Rscript:\n Select \nCompleted\n Projects", 
+             "Manual\n Categorization of\n WT Projects",
              "Manual\n Categorization of\n Habitat Projects",
              "Rscript:\n Merge Restoration\n Projects")
 
@@ -62,13 +64,24 @@ The DiagrammeR package needs the names of the multi-line nodes in a specific for
 ```{r}
 #create the list of names for the datasets (initial and derived"")
 nodes<-c()
-for (v in varnames) {
-  node<-paste0("'",v,"';")  #enclose the name from varnames in single quotes, end with a ;
+for (w in wtnames) {
+  node<-paste0("'",w,"';")  #enclose the name from varnames in single quotes, end with a ;
   nodes<-rbind(nodes, node)
 }
 
-print("Here are the variable node names")
+print("Here are the WT variable node names")
 nodes
+
+habnodes<-c()
+for (h in habnames){
+  hab<-paste0("'",h,"';")
+  habnodes<-rbind(habnodes,hab)
+}
+
+print("Here are the habitat variable node names")
+habnodes
+
+restnode<-paste0("'",restname,"';")
 
 proc_names<-c()
 for (p in processes){
@@ -96,7 +109,7 @@ edge6<-define_edge(varnames[4],processes[4])
 edge7<-define_edge(varnames[5],processes[3])
 edge8<-define_edge(processes[3],varnames[6])
 edge9<-define_edge(varnames[6], processes[4])
-edge10<-define_edge(processes[4],varnames[7])
+edge10<-define_edge(processes[4],restname)
 
 #now, bind them all together in one vector to use later:
 edges<-rbind(edge1,edge2,edge3,edge4,edge5,edge6,edge7,edge8,edge9,edge10)
@@ -128,9 +141,28 @@ digraph {
                           ", 
                           
                           paste(nodes,collapse=''),
+                          "
+    
+                          # node attributes
+                          node [shape = box,style=filled, 
+                          fontname = Helvetica,
+                          color = green]
+                          ",
                           
+                          paste(habnodes,collapse=''),
+                          "
                           
-                          "# node attributes
+                          # node attributes
+                          node [shape = box,style=filled, 
+                          fontname = Helvetica,
+                          color = rosybrown,
+                          fixedsize = true,
+                          height=1, width = 2]
+                          ",
+                          restnode,
+                          "
+                          
+                          # node attributes
                           node [shape = diamond, style=filled,
                           color = sandybrown,
                           fixedsize = true,
@@ -168,9 +200,16 @@ DiagrammeRsvg: contains the "export_svg" command to convert to an svg file
 rsvg: contains the rsvg_png (and other commands for other formats) to convert the svg object to a png.
 
 ```{r}
-
+#export the diagram to the "Diagrams" folder
+setwd("./Diagrams")
 svg<-export_svg(flowchart) #export to svg file
 rsvg_png(charToRaw(svg),"restoration_activities.png")
 
+#if it looks good, also export to the presentations folder:
+setwd("../presentations/final_pres-figure")
+rsvg_png(charToRaw(svg),"restoration_activities.png")
+
+
 ```
+
 
