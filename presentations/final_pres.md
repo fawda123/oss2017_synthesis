@@ -2,7 +2,7 @@
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
-author: Marcus Beck, Ed Sherwood, Kirsten Dorans, Patricia Varela, Jessica Renee Henkel, Kathryn Ireland
+author: Kathryn Ireland, Kirsten Dorans, Jessica Renee Henkel, Ed Sherwood, Patricia Varela, Marcus Beck
 date: July 28, 2017
 autosize: true
 css: oss.css
