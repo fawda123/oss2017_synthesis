@@ -32,7 +32,7 @@ habdat <- fl %>%
     acre = `Acres-1`
   ) %>% 
   mutate(
-    id = stri_rand_strings(nrow(.), length = 4),
+    id = stringi::stri_rand_strings(nrow(.), length = 4),
     lat = as.numeric(lat),
     lon = as.numeric(lon),
     date = as.numeric(date),
@@ -123,4 +123,9 @@ checkdata <- restdat %>%
 checkdata2 <- restdat %>%
              select(tech) %>%
              unique()
+checkdata3 <- restdat %>% 
+              select(type, tech) %>% 
+              unique()
+write.csv(checkdata3, file = 'data/proj_classes.csv')
+
 ```

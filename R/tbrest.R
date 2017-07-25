@@ -244,7 +244,7 @@ allchg <- allchg %>%
           lev = cut(cval, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
           lev = as.character(lev)
         )
-      
+      browser()
       return(out)
       
     })
