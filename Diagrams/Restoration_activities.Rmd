@@ -12,7 +12,11 @@ The goal of this script is to develop a workflow diagram showing how the water t
 ##Install and use the DiagrammeR package to make the diagram
 ```{r set-library}
 #install.packages("DiagrammeR")
-library(DiagrammeR)
+#install.packages("DiagrammeRsvg")
+#install.packages("rsvg")
+library(DiagrammeR) #to make the graph
+library(DiagrammeRsvg) #to export the graph to an svg object
+library(rsvg) #to export the svg object to a png
 ```
 
 ##Make a function to help with defining edge statements
@@ -38,12 +42,17 @@ varnames<-c("Descriptions of\n All PS Treatment\n Projects",
             "Habitat \nRestoration\n Treatment\n Projects",
             "Categorized\n Habitat\n Restoration\n Projects",
             "Restoration \nActivities")
+print("Here are the varnames:")
+varnames
 
 #write a list of process steps
 processes<-c("Rscript:\n Select \nCompleted Projects", 
              "Manual\n Categorization of\n PS Projects",
              "Manual\n Categorization of\n Habitat Projects",
              "Rscript:\n Merge Restoration\n Projects")
+
+print("Here are the processes:")
+processes
 
 ```
 
@@ -58,12 +67,19 @@ for (v in varnames) {
   nodes<-rbind(nodes, node)
 }
 
+print("Here are the variable node names")
+nodes
+
 proc_names<-c()
 for (p in processes){
   proc<-paste0("'",p,"';") #enclose the name from processes in single quotes, end with a ;
   proc_names<-(rbind(proc_names,proc))
   
 }
+
+print("Here are the process node names")
+proc_names
+
 ```
 
 ##Define the edges
@@ -84,6 +100,9 @@ edge10<-define_edge(processes[4],varnames[7])
 
 #now, bind them all together in one vector to use later:
 edges<-rbind(edge1,edge2,edge3,edge4,edge5,edge6,edge7,edge8,edge9,edge10)
+
+print("here are the edge specifications:")
+edges
 ```
 
 ##Write the complicated statement that tells DiagrammeR how to make a graph
@@ -136,11 +155,22 @@ This part is simple, just pass the config_statement created above to the grViz s
 
 ```{r}
 #plot the diagram using grViz (from the DiagrammeR package)
-grViz(config_statement #end paste0
+flowchart<-grViz(config_statement #end paste0
 )#end graphviz
+
+flowchart
 
 ```
 
 ###Export the figure
-I couldn't figure out how to programmatically export the figure, since it doesn't seem to work the way a normal plot created in base R or ggplot2 would.  So, I just used the "Export" menu from the Viewer pane to export as a jpg.
+Matt magically fixed the problem and figured out how to programmatically export to an svg object and then export that to a png.  We need two additional packages for this:
+DiagrammeRsvg: contains the "export_svg" command to convert to an svg file
+rsvg: contains the rsvg_png (and other commands for other formats) to convert the svg object to a png.
+
+```{r}
+
+svg<-export_svg(flowchart) #export to svg file
+rsvg_png(charToRaw(svg),"restoration_activities.png")
+
+```
 
