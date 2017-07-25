@@ -1,0 +1,247 @@
+---
+title: "BN_Restoration"
+author: "Patricia Varela"
+date: "July 24, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Description
+
+This is an overall description of the BN model used for the workshop synthesis.
+
+Includes: 
+* Nodes description
+* BN Model's attributes
+* Training BN
+* Definition of CPTs
+* Applied R code using manual and fitted relationships of collected data.
+
+The Propossed Model - The Fireworks Model
+
+```{r}
+#Figure Fireworks
+```
+
+
+The Proposed Model - The Test Model
+
+* Conditional probability tables represent the cause and effect relationship of the model's variables 
+* Qualitative classification of their attributes. 
+
+```{r}
+library(readr)
+NodeTypes = read.csv("~/NCEAS/Model/NodeClasses.csv")
+NodeTypesTB = data.frame(NodeTypes)
+print(NodeTypesTB)
+
+```
+
+Training CPTs
+========================================================
+Data Fomat: classified observations
+
+```{r}
+#Load Salinity data
+Salin = read.csv("~/NCEAS/Model/SalData.csv") 
+Salinity = data.frame(Salin)
+#Load Chlorophyll data
+Cholorop = read.csv("~/NCEAS/Model/ChlData.csv") 
+Chlorophyll = data.frame(Cholorop)
+print(head(Salinity))
+print(head(Chlorophyll))
+
+
+```
+
+Training CPTs
+========================================================
+The training of the conditional probability tables is made by counting the number of observations that match each combination of the discrete variables influencing the child nodes "Salinity" and "Chlorophyll". 
+
+#Salinity:
+From the water quality data is necessary to extract the values depicted in the following "Key" table. 
+
+
+
+```{r}
+#Load Salinity key
+KeySalin = read.csv("~/NCEAS/Model/KeySal.csv") 
+KeySalinity = data.frame(KeySalin)
+print(KeySalinity)
+```
+
+#Chlorophyll:
+Likewise, from the water quality data is necessary to extract the values depicted in the following "Key" table.
+
+```{r}
+#Load Clorophyll key
+KeyChlor = read.csv("~/NCEAS/Model/KeyChl.csv") 
+KeyChlorophyll = data.frame(KeyChlor)
+print(KeyChlorophyll)
+```
+
+
+Training CPTs
+========================================================
+
+From the classified water quality data, it is possible to count the number of observations in each column of the key tables. 
+
+(See file "GetCPTs.xlsx", pending to code)
+```{r}
+#Code training data to obtain CPTs
+
+
+```
+
+Get frequency of observations for all possible combinations.
+
+BN Modeling with manual definition of CPTs
+========================================================
+```{r}
+library(bnlearn)
+#Method 1: Manual definition of CPTs:
+#Create marginal probability tables manually
+cptHR <- matrix(c(1, 0), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptWT <- matrix(c(1, 0), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptSal <- (c(0.533, 0.289, 0.178, 0.667, 0.155, 0.178, 0.4, 0.422, 0.178, 0.533, 0.289, 0.178))
+dim(cptSal) <- c(3, 2, 2)
+dimnames(cptSal) <- list("Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
+cptChl <- (c(0.542, 0.25, 0.208, 0.308, 0.538, 0.154, 0.286, 0, 0.714, 0.633, 0.267, 0.1, 0.429, 0.142, 0.429, 0.286, 0.428, 0.286, 0.444, 0.389, 0.167, 0.526, 0.316, 0.158, 0.375, 0.375, 0.25, 0.708, 0.25, 0.042, 0.231, 0.692, 0.077, 0.25, 0.375, 0.375))
+dim(cptChl) <- c(3, 3, 2, 2)
+dimnames(cptChl) <- list("Chl" = c("LOW", "MOD", "HIGH"), "Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
+##Create Network
+net = model2network("[HR][WT][Sal|HR:WT][Chl|HR:WT:Sal]")
+plot(net)
+##Assign CPTs to Network
+dfit = custom.fit(net, dist = list(HR = cptHR, WT = cptWT, Sal = cptSal, Chl = cptChl))
+dfit
+#Get inferences
+set.seed(1) 
+cpquery(dfit, event = (Chl=="LOW"), evidence= (HR=="PRE"))
+
+```
+
+
+BN Modeling with automated definition of CPTs
+========================================================
+
+* Use package to define CPTs:
+
+```{r}
+library(bnlearn)
+library(readr)
+##Load training data for Chlorophyll node
+Cholorop = read.csv("~/NCEAS/Model/ChlData.csv") 
+Chlorophyll = data.frame(Cholorop)
+TrainDataCh <- Chlorophyll
+#Preparing the format of training data
+HR<-as.factor(TrainDataCh$HR)
+WT<-as.factor(TrainDataCh$WT)
+Sal<-as.factor(TrainDataCh$Sal)
+Chl<-as.factor(TrainDataCh$Chl)
+bn_restor <-data.frame(HR, WT, Sal, Chl)
+#Create Network
+net = model2network("[HR][WT][Sal|HR:WT][Chl|HR:WT:Sal]")
+plot(net)
+#Creating CPTs from data
+fittedBN <- bn.fit(net, data=bn_restor)
+print(fittedBN$Chl)
+#Get inferences
+cpquery(fittedBN, event = (Chl=="LOW"), evidence= (HR=="PRE"))
+#OR Get inferences fixing two parent nodes
+cpquery(fittedBN, event = (Chl=="LOW"), evidence= (HR=="PRE" & WT=="PRE"))
+
+```
+
+
+
+
+Playing with the initial conditions of restoration activities, the results returned by GeNIe's software are:
+
+```{r}
+cpquery(dfit, event = (Chl=="LOW"), evidence= (HR=="PRE" & WT=="PRE"))
+cpquery(dfit, event = (Chl=="MOD"), evidence= (HR=="PRE" & WT=="PRE"))
+cpquery(dfit, event = (Chl=="HIGH"), evidence= (HR=="PRE" & WT=="PRE"))
+```
+
+
+![Before_HR, Before_WT](Res1-PreHRPreWT.jpg)
+
+```{r}
+#Create marginal probability tables manually
+cptHR <- matrix(c(0, 1), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptWT <- matrix(c(0, 1), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptSal <- (c(0.533, 0.289, 0.178, 0.667, 0.155, 0.178, 0.4, 0.422, 0.178, 0.533, 0.289, 0.178))
+dim(cptSal) <- c(3, 2, 2)
+dimnames(cptSal) <- list("Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
+cptChl <- (c(0.542, 0.25, 0.208, 0.308, 0.538, 0.154, 0.286, 0, 0.714, 0.633, 0.267, 0.1, 0.429, 0.142, 0.429, 0.286, 0.428, 0.286, 0.444, 0.389, 0.167, 0.526, 0.316, 0.158, 0.375, 0.375, 0.25, 0.708, 0.25, 0.042, 0.231, 0.692, 0.077, 0.25, 0.375, 0.375))
+dim(cptChl) <- c(3, 3, 2, 2)
+dimnames(cptChl) <- list("Chl" = c("LOW", "MOD", "HIGH"), "Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
+##Create Network
+net = model2network("[HR][WT][Sal|HR:WT][Chl|HR:WT:Sal]")
+plot(net)
+##Assign CPTs to Network
+dfit = custom.fit(net, dist = list(HR = cptHR, WT = cptWT, Sal = cptSal, Chl = cptChl))
+dfit
+
+cpquery(dfit, event = (Chl=="LOW"), evidence= (HR=="POST" & WT=="POST"))
+cpquery(dfit, event = (Chl=="MOD"), evidence= (HR=="POST" & WT=="POST"))
+cpquery(dfit, event = (Chl=="HIGH"), evidence= (HR=="POST" & WT=="POST"))
+```
+![After_HR, After_WT](Res2-PostHRPostWT.jpg)
+
+```{r}
+#Create marginal probability tables manually
+cptHR <- matrix(c(1, 0), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptWT <- matrix(c(0, 1), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptSal <- (c(0.533, 0.289, 0.178, 0.667, 0.155, 0.178, 0.4, 0.422, 0.178, 0.533, 0.289, 0.178))
+dim(cptSal) <- c(3, 2, 2)
+dimnames(cptSal) <- list("Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
+cptChl <- (c(0.542, 0.25, 0.208, 0.308, 0.538, 0.154, 0.286, 0, 0.714, 0.633, 0.267, 0.1, 0.429, 0.142, 0.429, 0.286, 0.428, 0.286, 0.444, 0.389, 0.167, 0.526, 0.316, 0.158, 0.375, 0.375, 0.25, 0.708, 0.25, 0.042, 0.231, 0.692, 0.077, 0.25, 0.375, 0.375))
+dim(cptChl) <- c(3, 3, 2, 2)
+dimnames(cptChl) <- list("Chl" = c("LOW", "MOD", "HIGH"), "Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
+##Create Network
+net = model2network("[HR][WT][Sal|HR:WT][Chl|HR:WT:Sal]")
+plot(net)
+##Assign CPTs to Network
+dfit = custom.fit(net, dist = list(HR = cptHR, WT = cptWT, Sal = cptSal, Chl = cptChl))
+dfit
+cpquery(dfit, event = (Chl=="LOW"), evidence= (HR=="PRE" & WT=="POST"))
+cpquery(dfit, event = (Chl=="MOD"), evidence= (HR=="PRE" & WT=="POST"))
+cpquery(dfit, event = (Chl=="HIGH"), evidence= (HR=="PRE" & WT=="POST"))
+```
+![Before_HR, After_WT](Res3-PreHRPostWT.jpg)
+
+```{r}
+#Create marginal probability tables manually
+cptHR <- matrix(c(0, 1), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptWT <- matrix(c(1, 0), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptSal <- (c(0.533, 0.289, 0.178, 0.667, 0.155, 0.178, 0.4, 0.422, 0.178, 0.533, 0.289, 0.178))
+dim(cptSal) <- c(3, 2, 2)
+dimnames(cptSal) <- list("Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
+cptChl <- (c(0.542, 0.25, 0.208, 0.308, 0.538, 0.154, 0.286, 0, 0.714, 0.633, 0.267, 0.1, 0.429, 0.142, 0.429, 0.286, 0.428, 0.286, 0.444, 0.389, 0.167, 0.526, 0.316, 0.158, 0.375, 0.375, 0.25, 0.708, 0.25, 0.042, 0.231, 0.692, 0.077, 0.25, 0.375, 0.375))
+dim(cptChl) <- c(3, 3, 2, 2)
+dimnames(cptChl) <- list("Chl" = c("LOW", "MOD", "HIGH"), "Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
+##Create Network
+net = model2network("[HR][WT][Sal|HR:WT][Chl|HR:WT:Sal]")
+plot(net)
+##Assign CPTs to Network
+dfit = custom.fit(net, dist = list(HR = cptHR, WT = cptWT, Sal = cptSal, Chl = cptChl))
+dfit
+
+cpquery(dfit, event = (Chl=="LOW"), evidence= (HR=="POST" & WT=="PRE"))
+cpquery(dfit, event = (Chl=="MOD"), evidence= (HR=="POST" & WT=="PRE"))
+cpquery(dfit, event = (Chl=="HIGH"), evidence= (HR=="POST" & WT=="PRE"))
+```
+![After_HR, Before_WT](Res4-PostHRPreWT.jpg)
+
+```{r}
+#cpquery(dfit, event = (Chl=="LOW"), evidence= (HR=="PRE" & WT=="PRE"))
+#cpquery(dfit, event = (Chl=="MOD"), evidence= (HR=="PRE" & WT=="PRE"))
+#cpquery(dfit, event = (Chl=="HIGH"), evidence= (HR=="PRE" & WT=="PRE"))
+```
+![HalfWay_HR, HalfWay_WT](Res5-50HR50WT.jpg)
+
