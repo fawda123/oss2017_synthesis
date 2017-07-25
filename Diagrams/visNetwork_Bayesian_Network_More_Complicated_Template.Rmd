@@ -29,7 +29,7 @@ nodes <- data.frame(id=1:39,
                     group = c(rep("Technology", 31), rep("Activity", 5), 
                               rep("WQ Response",3)),
                     level = c(rep(1, 31), rep(2, 5), rep(3, 2), rep(4, 1)),
-                    shape = c(rep("star", 31), rep("square", 5), rep("circle", 3)),
+                    shape = c(rep("square", 31), rep("ellipse", 5), rep("circle", 3)),
                     color = c(rep("red", 31), rep("lightblue", 5), rep("lightgreen",3 ))
                     )                  
 edges <- data.frame(from= c(1, 2, 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 12,
@@ -43,8 +43,9 @@ edges <- data.frame(from= c(1, 2, 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11
 )
 visNetwork(nodes, edges, main = "Group 1: Bayesian Network Skeleton", width = "100%") %>%
   visEdges(arrows = "to") %>%
-  visGroups(groupname = "Technology", color = "red", shape = "star") %>%
-  visGroups(groupname = "Activity", color = "lightblue", shape = "square") %>% 
+  visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%
+  visGroups(groupname = "Technology", color = "red", shape = "square") %>%
+  visGroups(groupname = "Activity", color = "lightblue", shape = "ellipse") %>% 
   visGroups(groupname = "WQ Response", color = "lightgreen", shape = "circle") %>%
   visLegend(main = "Bayesian Parameter") %>%
   visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE) 
