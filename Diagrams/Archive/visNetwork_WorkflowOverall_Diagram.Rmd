@@ -1,0 +1,88 @@
+---
+title: "Workflow Model through visNetwork"
+author: "Kirsten Dorans <kdorans@mail.harvard.edu>"
+date: "July 24, 2017"
+output: html_document
+---
+
+# Based on Code from Ed Sherwood (visNetwork_Bayesian_Network_Template.Rmd)
+# Also tried to create this using Katie's code Restoration_activities.Rmd (with Diagrammer package)
+# 7.25.17 - put in 'archive folder', as used Diagrammer to create this figure (Diagrammer_WorkflowOverallDiagram.Rmd)
+
+```{r setup, include=FALSE}
+library(visNetwork)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Part 1. Develop a Simple Diagram to Illustrate the Simplified Worflow Diagram
+  # First only WQ, Restoration --> Spatial Join
+  # Not sure how to put WQ etc to left of Spatial join, see if adding more things helps
+```{r}
+nodes <- data.frame(id=1:3, 
+                    label = c("Water Quality Data", "Restoration Data", "Spatial Join"), 
+                    group = c("Dataset", "Dataset", "Process"),
+                    level = c(1,3,2),
+                    shape = c("square", "square", "circle"),
+                    title = paste0("<p><b>", c("Water Quality Data", "Restoration Data", "Spatial Join"),"</b></p>"),
+                    color = c("red", "red", "lightblue"),
+                    shadow = c("true", "true", "true"))
+
+# this is weird: # plot(nodes)
+
+edges <- data.frame(from=c(1,2), to = c(3,3))
+visNetwork(nodes, edges, width = "100%") %>% 
+  visEdges(arrows = "to") %>%
+  visGroups(groupname = "Dataset", color = "red", shape = "square") %>%
+  visGroups(groupname = "Spatial Join", color = "lightblue", shape = "circle") %>%
+  visLegend(position = "right", main = "Legend") %>%
+  visHierarchicalLayout()
+
+```
+
+
+## Part 2. Add Pre/Post Calc
+```{r}
+nodes <- data.frame(id=1:4, 
+                    label = c("Water Quality Data", "Restoration Data", "Spatial Join", "Pre/Post Calculation"), 
+                    group = c("Dataset", "Dataset", "Process", "Process"),
+                    level = c(1,3,2,2),
+                    shape = c("square", "square", "circle", "circle"),
+                    title = paste0("<p><b>", c("Water Quality Data", "Restoration Data", "Spatial Join", "Pre/Post Calculation"),"</b></p>"),
+                    color = c("red", "red", "lightblue", "lightblue"),
+                    shadow = c("true", "true", "true", "true"))
+
+# this is weird: # plot(nodes)
+
+edges <- data.frame(from=c(1,2,3), to = c(3,3,4))
+visNetwork(nodes, edges, width = "100%") %>% 
+  visEdges(arrows = "to") %>%
+  visGroups(groupname = "Dataset", color = "red", shape = "square") %>%
+  visGroups(groupname = "Spatial Join", color = "lightblue", shape = "circle") %>%
+  visLegend(position = "right", main = "Legend") %>%
+  visHierarchicalLayout()
+
+```
+
+
+## Part 3. Add BN Model, Interpretations
+  # Works, but only saved low-res figure. To try to figure this out.
+```{r}
+nodes <- data.frame(id=1:6, 
+                    label = c("Water Quality Data", "Restoration Data", "Spatial Join", "Pre/Post", "BN Model", "Interpret"), 
+                    group = c("Dataset", "Dataset", "Process", "Process", "Process", "Process"),
+                    level = c(1,3,2,2,2,2),
+                    shape = c("square", "square", "circle", "circle", "circle", "circle"),
+                    title = paste0("<p><b>", c("Water Quality Data", "Restoration Data", "Spatial Join", "Pre/Post Calculation", "BN Model", "Interpret"),"</b></p>"),
+                    color = c("red", "red", "lightblue", "lightblue", "lightblue", "lightblue"),
+                    shadow = c("true", "true", "true", "true", "true", "true"))
+
+edges <- data.frame(from=c(1,2,3,4,5), to = c(3,3,4,5,6))
+visNetwork(nodes, edges, width = "100%") %>% 
+  visEdges(arrows = "to") %>%
+  visGroups(groupname = "Dataset", color = "red", shape = "square") %>%
+  visGroups(groupname = "Spatial Join", color = "lightblue", shape = "circle") %>%
+  visLegend(position = "right", main = "Legend") %>%
+  visHierarchicalLayout()
+
+```
+
