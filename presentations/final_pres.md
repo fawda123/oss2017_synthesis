@@ -2,7 +2,7 @@
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
-author: Kirsten Dorans, Marcus Beck, Jessica Renee Henkel, Patricia Varela, Ed Sherwood, Kathryn Ireland
+author: Kirsten Dorans, Patricia Varela, Marcus Beck, Jessica Renee Henkel, Kathryn Ireland, Ed Sherwood
 date: July 28, 2017
 autosize: true
 css: oss.css
@@ -33,11 +33,9 @@ Benefits
 
 Tampa Bay was gross
 ========================================================
-<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 800px;"/>
+<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 400px;"/>
 
-Tampa Bay was gross
-========================================================
-<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 800px;"/>
+<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 400px;"/>
 
 Tampa Bay is not as gross
 ========================================================
@@ -56,6 +54,23 @@ But how much less gross??
 ![](prop_pres-figure/network.png)
 Ed 
 * Tampa Bay Background
+
+Tampa Bay Data Sources
+========================================================
+incremental: false
+
+<div align="center">
+<img src="prop_pres-figure/Fig3_EPCHC_Sample_Sites.png">
+</div>
+
+***
+* Rich WQ Monitoring Datatset (1974-Present)
+* Info on a Variety of Different Restoration Activities
+      * Habitat Establishment
+      * Habitat Enhancement
+      * Habitat Protection
+      * Stormwater Controls
+      * Point Source Controls
 
 Workflow
 ========================================================
