@@ -1,0 +1,228 @@
+---
+title: "Firework Diagram"
+author: "jessica.henkel@restorethegulf.gov"
+date: "July 20, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Load in Libraries
+```{r}
+library (devtools)
+library (DiagrammeR)
+```
+
+
+#This is the one that was used to create the diagram
+```{r}
+firework <- grViz(" digraph {
+
+graph [overlap = FALSE, 
+      fontsize = 24]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      fontname = Helvetica,
+      fillcolor = red]
+a [label = '@@1', fontsize = 24]; o[label = '@@15', fontsize = 24]
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = green,
+      width = 3,
+       height = 3,] 
+b [label = '@@2', fontsize = 24]; c [label = '@@3', fontsize = 24]; d[label = '@@4',fontsize = 24]
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = orange,
+       width = 3,
+       height = 3] 
+e[label = '@@5',fontsize = 24]; f[label = '@@6',fontsize = 24]
+
+node [shape = circle,
+      fillcolor = olivedrab,
+      fontname = Helvetica]
+g[label = '@@7', fontsize = 20]; h[label = '@@8',fontsize = 20]; i[label = '@@9',fontsize = 20]; j[label = '@@10',fontsize = 20]; k[label = '@@11',fontsize = 20]; l[label = '@@12',fontsize = 20]; m[label = '@@13',fontsize = 20]; n[label = '@@14',fontsize = 20]; p[label = '@@16',fontsize = 20]; q[label = '@@17',fontsize = 20]; r[label = '@@18',fontsize = 20]
+
+node [shape = circle,
+      fillcolor = sandybrown,
+      fontname = Helvetica]
+s[label = '@@19']; t[label = '@@20']; u[label = '@@21']; v[label = '@@22']; w[label = '@@23']; x[label = '@@24']; y[label = '@@25']; z[label = '@@26']; 
+
+edge [color = grey]
+b -> {a o}
+c -> {a o}
+d -> {a o}
+e -> {a o}
+f -> {a o}
+o -> a
+g -> b
+h -> b
+i -> {b c}
+j -> {b c}
+k -> {b c}
+l -> {b c}
+m -> c
+n -> {c f}
+p -> d
+q -> d
+r-> {d e}
+s -> e
+t -> e
+u -> e
+v -> {e f}
+w -> e
+x -> f
+y -> f
+z -> f
+}
+
+[1]:'Chlorophyll A'
+[2]:'Habitat Establishment'
+[3]: 'Habitat Enhancement' 
+[4]: 'Habitat Protection' 
+[5]: 'NonPoint Source'
+[6]: 'Point Source'
+[7]: 'Hydrologic Restoration' 
+[8]: 'Exotic Control'
+[9]: 'Saltmarsh'
+[10]: 'Mangroves'
+[11]: 'Oyster Habitat'
+[12]: 'Freshwater Wetlands' 
+[13]: 'Dredging' 
+[14]: 'Land Management'
+[15]: 'Salinity'
+[16]: 'Protection'
+[17]: 'Acquisition'
+[18]: 'Education'
+[19]: 'BMP Activities'
+[20]: 'Send to WWTP'
+[21]: 'Atmospheric Desposition'
+[22]: 'Regulation'
+[23]: 'Street Sweeping'
+[24]: 'BMP on Site'
+[25]: 'PS Treatment'
+[26]: 'Increase Reuse'  
+
+")
+
+svg <- export_svg(firework)
+rsvg_png(charToRaw(svg), "Diagrams/firework.png")
+```
+
+```{r}
+graph1 <- grViz("
+digraph circo {
+
+graph [overlap = true, fontsize = 14]
+
+node [shape = circle,
+      style = filled,
+      color = grey,
+      fontname = Helvetica,
+      fillcolor = red]
+a [label = '@@1']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = green] 
+b [label = '@@2']; c [label = '@@3']; d[label = '@@4']
+
+node [shape = box,
+      fontname = Helvetica,
+      fillcolor = orange,
+       width = 0.9] 
+e[label = '@@5']; f[label = '@@6']
+
+node [shape = circle,
+      fillcolor = olivedrab,
+      fontname = Helvetica]
+g[label = '@@7']; h[label = '@@8']; i[label = '@@9']; j[label = '@@10']; k[label = '@@11']; l[label = '@@12']; m[label = '@@13']; n[label = '@@14']; o[label = '@@15']; p[label = '@@16']; q[label = '@@17']; r[label = '@@18']
+
+node [shape = circle,
+      fillcolor = sandybrown,
+      fontname = Helvetica]
+s[label = '@@19']; t[label = '@@20']; u[label = '@@21']; v[label = '@@22']; w[label = '@@23']; x[label = '@@24']; y[label = '@@25']; z[label = '@@26']; 
+
+edge [color = grey]
+b -> a
+c -> a
+d -> a
+e -> a
+f -> a
+g -> b
+h -> b
+i -> {b c}
+j -> {b c}
+k -> {b c}
+l -> {b c}
+m -> c
+n -> {c f}
+o -> c
+p -> d
+q -> d
+r-> {d e}
+s -> e
+t -> e
+u -> e
+v -> {e f}
+w -> e
+x -> f
+y -> f
+z -> f
+}
+
+[1]:'Chlorophyll A'
+[2]:'Habitat Establishment'
+[3]: 'Habitat Enhancement' 
+[4]: 'Habitat Protection' 
+[5]: 'NonPoint Source'
+[6]: 'Point Source'
+[7]: 'Hydrologic Restoration' 
+[8]: 'Exotic Control'
+[9]: 'Saltmarsh'
+[10]: 'Mangroves'
+[11]: 'Oyster Habitat'
+[12]: 'Freshwater Wetlands' 
+[13]: 'Dredging' 
+[14]: 'Land Management'
+[15]: 'Uplands' 
+[16]: 'Protection'
+[17]: 'Acquisition'
+[18]: 'Education'
+[19]: 'BMP Activities'
+[20]: 'Send to WWTP'
+[21]: 'Atmospheric Desposition'
+[22]: 'Regulation'
+[23]: 'Street Sweeping'
+[24]: 'BMP on Site'
+[25]: 'PS Treatment'
+[26]: 'Increase Reuse'  
+
+")
+
+plot(graph1)
+```
+
+#Using Ed's Code:
+```{r}
+nodes <- data.frame(id=1:26, 
+                    label = c("Hydrologic Restoration", "Exotic Control", "Saltmarsh", "Mangroves", "Oyster Habitat", "Freshwater Wetlands","Dredging", "Land Management", "Uplands", "Protection", "Acquisition", "Education", "BMP Activities", "Send to WWTP", "Atmospheric Desposition", "Regulation", "Street Sweeping", "BMP on Site", "PS Treatment", "Increase Reuse", "Habitat Establishment", "Habitat Enhancement", "Habitat Protection", "NonPoint Source", "Point Source", "Salinity", "Chlorophyll A"), 
+                    group = c("Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Technique", "Restoration Activity", "Restoration Activity", "Restoration Activity", "Restoration Activity", "Restoration Activity","Water Quality Response," "Water Quality Response"),
+                    level = c(1,1,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3),
+                    shape = c("square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "square", "circle", "circle", "circle", "circle", "circle","square", "square"),
+                    title = paste0("<p><b>", c("Hydrologic Restoration", "Exotic Control", "Saltmarsh", "Mangroves", "Oyster Habitat", "Freshwater Wetlands","Dredging", "Land Management", "Uplands", "Protection", "Acquisition", "Education", "BMP Activities", "Send to WWTP", "Atmospheric Desposition", "Regulation", "Street Sweeping", "BMP on Site", "PS Treatment", "Increase Reuse", "Habitat Establishment", "Habitat Enhancement", "Habitat Protection", "NonPoint Source", "Point Source", "Chlorophyll A","Salinity"),"</b></p>"),
+                    color = c("lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen", "lightgreen","lightblue", "lightblue", "lightblue", "lightblue", "lightblue", "red", "red"),
+                    shadow = c("true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true", "true",))
+edges <- data.frame(from=c(3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1,1,2,2,3), to = c(3,4,3,4,4))
+visNetwork(nodes, edges, width = "100%") %>%
+  visEdges(arrows = "to") %>%
+  visGroups(groupname = "Activity", color = "red", shape = "square") %>%
+  visGroups(groupname = "WQ Response", color = "lightblue", shape = "circle") %>%
+  visLegend(position = "right", main = "Bayesian Parameter") %>%
+  visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE) 

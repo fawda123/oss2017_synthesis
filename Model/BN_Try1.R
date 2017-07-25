@@ -3,12 +3,12 @@ library(readr)
 rm(list=ls())
 #Method 1: Manual definition of CPTs:
 #Create marginal probability tables manually
-cptHR <- matrix(c(0.4, 0.6), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
-cptWT <- matrix(c(0.5, 0.5), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
-cptSal <- (c(0.7, 0.2, 0.1, 0.3, 0.5, 0.2, 0.5, 0.4, 0.1, 0.2, 0.7, 0.1))
+cptHR <- matrix(c(1, 0), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptWT <- matrix(c(1, 0), ncol = 2, dimnames = list(NULL, c("PRE", "POST")))
+cptSal <- (c(0.533, 0.289, 0.178, 0.667, 0.155, 0.178, 0.4, 0.422, 0.178, 0.533, 0.289, 0.178))
 dim(cptSal) <- c(3, 2, 2)
 dimnames(cptSal) <- list("Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
-cptChl <- (c(0.1, 0.1, 0.8, 0.1, 0.2, 0.7, 0.3, 0.3, 0.4, 0.4, 0.3, 0.3, 0.2, 0.6, 0.2, 0.1, 0.2, 0.7, 0.3, 0.3, 0.4, 0.25, 0.45, 0.3, 0.2, 0.4, 0.4, 0.5, 0.3, 0.2, 0.3, 0.4, 0.3, 0.8, 0.15, 0.05))
+cptChl <- (c(0.542, 0.25, 0.208, 0.308, 0.538, 0.154, 0.286, 0, 0.714, 0.633, 0.267, 0.1, 0.429, 0.142, 0.429, 0.286, 0.428, 0.286, 0.444, 0.389, 0.167, 0.526, 0.316, 0.158, 0.375, 0.375, 0.25, 0.708, 0.25, 0.042, 0.231, 0.692, 0.077, 0.25, 0.375, 0.375))
 dim(cptChl) <- c(3, 3, 2, 2)
 dimnames(cptChl) <- list("Chl" = c("LOW", "MOD", "HIGH"), "Sal" = c("LOW", "MOD", "HIGH"), "HR" =  c("PRE", "POST"), "WT" = c("PRE", "POST"))
 ##Create Network
