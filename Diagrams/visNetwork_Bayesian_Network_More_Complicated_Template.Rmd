@@ -10,7 +10,7 @@ library(visNetwork)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Develop a Simple Diagram to Illustrate the Bayesian Network
+## Develop a More Complex Diagram to Illustrate the Bayesian Network
 ```{r}
 nodes <- data.frame(id=1:39, 
                     label = c("Dredging", "Exotic Control", "FW Wetlands", 
