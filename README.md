@@ -18,7 +18,9 @@ git push
 ```
 ### View info online
 
-Type URL with filename, e.g., <href src="https://fawda123.github.io/oss2017_synthesis/tbrest">https://fawda123.github.io/oss2017_synthesis/tbrest</href>
+Data aggregation: <https://fawda123.github.io/oss2017_synthesis/tbrest>
+
+Final presentation: <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres>
 
 ### Repository info
 
@@ -26,6 +28,9 @@ Folders:
 
 * `data` RData files, load with `data(filename)`
 * `data-raw` - put raw and intermediate data files here, e.g., .xlsx., .txt., .csv
+* `Diagrams` - workflow diagrams
+* `Model` - BN model files
+* `presentations` presentation files
 * `R` - R scripts
 
 RData files (these should be text files?) in `data`, normalized:
