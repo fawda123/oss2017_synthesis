@@ -63,6 +63,8 @@ head(wqstat)
 
 ```{r}
 wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = mtch)
+save(wqmtch, file = 'data/wqmtch.RData', compress = 'xz')
+
 head(wqmtch)
 ```
 

@@ -42,6 +42,8 @@ head(wqstat)
 
 ## ------------------------------------------------------------------------
 wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = mtch)
+save(wqmtch, file = 'data/wqmtch.RData', compress = 'xz')
+
 head(wqmtch)
 
 ## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
@@ -181,9 +183,10 @@ allchg <- full_join(chlchg, salchg, by = c('hab', 'wtr', 'stat')) %>%
   left_join(salbrk, by = c('hab', 'wtr')) %>% 
   mutate(
     sallev = pmap(list(data, levs), function(data, levs){
-
+      # browser()
       out <- data %>% 
         mutate(
+          saval = salev,
           salev = cut(salev, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
           salev = as.character(salev)
         )
@@ -194,6 +197,8 @@ allchg <- full_join(chlchg, salchg, by = c('hab', 'wtr', 'stat')) %>%
   ) %>% 
   select(-data, -levs) %>% 
   unnest
+salchg <- select(allchg, stat, hab, wtr, salev, saval)
+save(salchg, file = 'data/salchg.RData', compress = 'xz')
 
 chlcdt <- get_cdt(allchg, 'hab', 'wtr', 'salev')
 chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'hab', 'wtr', 'salev')
