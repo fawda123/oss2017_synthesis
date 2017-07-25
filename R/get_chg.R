@@ -87,9 +87,7 @@ get_chg <- function(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5){
     ) %>%
     unite('cmb', resgrp, trt)
   
-    # # get combinations
-    # unique(chg$cmb) %>% 
-    #   combn(2)
+    # get combinations
 
     # combine temporal categories by restoration typ
     chgcmb <- chg %>% 
