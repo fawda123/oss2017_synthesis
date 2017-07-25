@@ -1,7 +1,28 @@
-```{r, echo = FALSE}
+```{r setup, echo = FALSE}
+# chunk options
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+# load libraries
+library(tidyverse)
+library(readxl)
+library(ggmap)
+library(lubridate)
+library(geosphere)
+library(stringi)
+library(tibble)
+library(leaflet)
+
+# load data
+data(restdat)
+data(reststat)
+data(wqdat)
+data(wqstat)
+data(wqmtch)
+
 # randomize author order
 aut <- sample(c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Ireland', 'Ed Sherwood', 'Patricia Varela'))
 ```
+<insertHTML:[columns.html]
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
@@ -9,7 +30,7 @@ author: `r aut`
 date: July 28, 2017
 autosize: true
 css: oss.css
-
+  
 Deepwater Horizon Settlement Agreement
 ========================================================
 <img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2000px;"/>
@@ -25,6 +46,7 @@ Cumulative Effects of Restoration Activities?
 
 * Vision to make it portable
 * Why Bayesian networks
+
 Benefits
 =============
 
@@ -33,14 +55,11 @@ Benefits
 * More focused restoration towards specific regional issues
 * Improved ability to predict outcomes of proposed restoration projects
 
-
 Tampa Bay was gross
 ========================================================
-<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 800px;"/>
+<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 400px;"/>
 
-Tampa Bay was gross
-========================================================
-<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 800px;"/>
+<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 400px;"/>
 
 Tampa Bay is not as gross
 ========================================================
@@ -60,15 +79,85 @@ But how much less gross??
 Ed 
 * Tampa Bay Background
 
+Tampa Bay Data Sources
+========================================================
+incremental: false
+
+<div align="center">
+<img src="prop_pres-figure/Fig3_EPCHC_Sample_Sites.png">
+</div>
+
+***
+* Rich WQ Monitoring Datatset (1974-Present)
+* Info on a Variety of Different Restoration Activities
+      * Habitat Establishment
+      * Habitat Enhancement
+      * Habitat Protection
+      * Stormwater Controls
+      * Point Source Controls
+
 Workflow
 ========================================================
 Kirsten/Katie
 * Model diagram
 * Merging restoration diagram
 
-Marcus
-* Merging wq/restoration data
-* Merging with BN
+Data plyring
+========================================================
+incremental: true
+
+* Can we identify a change in water quality from restoration?
+* What data do we have?
+* Can we *plyr* the data to identify a signal?
+* Can we *plyr* the data as input to a BN?
+
+Data plyring
+========================================================
+incremental: true
+
+Water quality data: 40 years, monthly, 45 stations
+```{r, echo = F}
+
+# combine lat/lon for the plot
+toplo <- wqmtch %>% 
+  left_join(wqstat, by = 'stat') %>% 
+  left_join(reststat, by = 'id') %>% 
+  rename(
+    `Restoration\ngroup` = resgrp,
+    `Distance (dd)` = dist
+  )
+    
+# restoration project grouping column
+resgrp <- 'top'
+restall <- left_join(restdat, reststat, by = 'id')
+names(restall)[names(restall) %in% resgrp] <- 'Restoration\ngroup'
+
+# extent
+ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.2)
+map <- get_stamenmap(ext, zoom = 12, maptype = "toner-lite")
+
+# base map
+pbase <- ggmap(map) +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  )
+
+pstat <- pbase + 
+  geom_point(data = wqstat, aes(x = lon, y = lat), size = 2)
+pstat
+```
+
+Data plyring
+========================================================
+
+Water quality data: 40 years, monthly, 45 stations
+```{r, echo = F}
+prest <- pbase + 
+  geom_point(data = reststat, aes(x = lon, y = lat), size = 2)
+prest
+```
 
 Bayesian Network
 ========================================================
