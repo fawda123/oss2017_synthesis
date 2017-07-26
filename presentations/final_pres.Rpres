@@ -96,6 +96,20 @@ incremental: false
       * Stormwater Controls
       * Point Source Controls
 
+Tampa Bay Restoration Sites
+===============
+```{r, echo = F}
+ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.1)
+map <- get_stamenmap(ext, zoom = 12, maptype = "toner-lite")
+pbase <- ggmap(map) +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  ) +
+  geom_point(data = reststat, aes(x = lon, y = lat, fill = `type\ngroup`), size = 4, pch = 21) +
+  geom_point(data = wqstat, aes(x = lon, y = lat), size = 2)
+```
 
 Workflow
 ========================================================

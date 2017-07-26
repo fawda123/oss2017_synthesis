@@ -3,11 +3,7 @@
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
-<<<<<<< HEAD
-author: Ed Sherwood, Jessica Renee Henkel, Kathryn Ireland, Marcus Beck, Kirsten Dorans, Patricia Varela
-=======
-author: Kirsten Dorans, Patricia Varela, Kathryn Ireland, Marcus Beck, Ed Sherwood, Jessica Renee Henkel
->>>>>>> 5c8d10b995981953effcc3cd6f2f4a3c95c79de5
+author: Jessica Renee Henkel, Ed Sherwood, Kathryn Ireland, Kirsten Dorans, Marcus Beck, Patricia Varela
 date: July 28, 2017
 autosize: true
 css: oss.css
@@ -77,6 +73,9 @@ incremental: false
       * Stormwater Controls
       * Point Source Controls
 
+Tampa Bay Restoration Sites
+===============
+
 
 Workflow
 ========================================================
@@ -108,5 +107,5 @@ Water quality data: 40 years, monthly, 45 stations
 
 
 ```
-Error in eval(expr, envir, enclos) : object 'pbase' not found
+Error in FUN(X[[i]], ...) : object 'type\ngroup' not found
 ```
