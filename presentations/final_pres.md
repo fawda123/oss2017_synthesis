@@ -18,7 +18,7 @@ cat('By', aut)
 ```
 
 ```
-By Marcus Beck, Ed Sherwood, Kathryn Ireland, Jessica Renee Henkel, Patricia Varela, Kirsten Dorans
+By Marcus Beck, Patricia Varela, Ed Sherwood, Kirsten Dorans, Jessica Renee Henkel, Kathryn Ireland
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -119,6 +119,7 @@ incremental: true
 Data plyring
 ========================================================
 incremental: false
+transition: none
 
 
 WQ and restoration sites
@@ -161,7 +162,7 @@ WQ and restoration sites
 
 * Can we plyr the data to identify a signal?
 * How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of **site type**?
+* Consider an effect of restoration **site type**?
 * Consider **distance** of sites from water quality stations?
 
 Data plyring
@@ -178,7 +179,7 @@ WQ and restoration sites
 
 * Can we plyr the data to identify a signal?
 * How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of **site type**?
+* Consider an effect of restoration **site type**?
 * Consider **distance** of sites from water quality stations?
 * Consider a **cumulative effect**?
 
@@ -196,7 +197,7 @@ WQ and restoration sites
 
 * Can we plyr the data to identify a signal?
 * How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of **site type**?
+* Consider an effect of restoration **site type**?
 * Consider **distance** of sites from water quality stations?
 * Consider a **cumulative effect**?
 
@@ -208,7 +209,7 @@ transition: none
 WQ and restoration sites: **Spatial match**
 
 <div align="center">
-<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+<img src="final_pres-figure/ptplo.jpg" style="width: 150px;">
 </div>
 
 Data plyring
@@ -217,7 +218,7 @@ transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
-<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+<img src="final_pres-figure/ptplo.jpg" style="width: 150px;">
 </div>
 
 WQ and restoration sites: **Temporal match**
@@ -231,7 +232,7 @@ transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
-<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+<img src="final_pres-figure/ptplo.jpg" style="width: 150px;">
 </div>
 
 WQ and restoration sites: **Temporal match**, **before/after**
@@ -245,7 +246,7 @@ transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
-<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+<img src="final_pres-figure/ptplo.jpg" style="width: 150px;">
 </div>
 
 WQ and restoration sites: **Temporal match**, **before/after**, **slice**
