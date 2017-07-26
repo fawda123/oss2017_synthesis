@@ -2,7 +2,7 @@
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
-author: Kirsten Dorans, Patricia Varela, Marcus Beck, Jessica Renee Henkel, Kathryn Ireland, Ed Sherwood
+author: Ed Sherwood, Jessica Renee Henkel, Kathryn Ireland, Marcus Beck, Kirsten Dorans, Patricia Varela
 date: July 28, 2017
 autosize: true
 css: oss.css
@@ -64,13 +64,14 @@ incremental: false
 </div>
 
 ***
-* Rich WQ Monitoring Datatset (1974-Present)
+* Rich WQ Monitoring Datatset (1974-)
 * Info on a Variety of Different Restoration Activities
       * Habitat Establishment
       * Habitat Enhancement
       * Habitat Protection
       * Stormwater Controls
       * Point Source Controls
+
 
 Workflow
 ========================================================
