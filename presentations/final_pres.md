@@ -18,7 +18,7 @@ cat('By', aut)
 ```
 
 ```
-By Kathryn Ireland, Patricia Varela, Jessica Renee Henkel, Ed Sherwood, Marcus Beck, Kirsten Dorans
+By Jessica Renee Henkel, Kathryn Ireland, Kirsten Dorans, Ed Sherwood, Marcus Beck, Patricia Varela
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -88,7 +88,7 @@ Tampa Bay Restoration Sites
 ===============
 
 <div align="center">
-<img src="final_pres-figure/restmap.tif" style="width: 1000px;">
+<img src="final_pres-figure/restmap.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -123,7 +123,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap1.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap1.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -137,7 +137,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap2.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap2.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -152,7 +152,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap3.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap3.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -168,7 +168,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap4.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap4.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -185,7 +185,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap5.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap5.jpg" style="width: 1000px;">
 </div>
 
 ***

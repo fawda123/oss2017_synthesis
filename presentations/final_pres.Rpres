@@ -113,12 +113,12 @@ pbase <- ggmap(map) +
 
 p <- pbase +
   geom_point(data = reststat, aes(x = lon, y = lat), size = 4, pch = 21, fill = 'green', alpha = 0.8) +
-tiff('final_pres-figure/restmap.tif', width = 4, height = 5, units = 'in', res = 150, compression = 'lzw')
+jpeg('final_pres-figure/restmap.jpg', width = 4, height = 6, units = 'in', res = 150)
 p
 dev.off()
 ```
 <div align="center">
-<img src="final_pres-figure/restmap.tif" style="width: 1000px;">
+<img src="final_pres-figure/restmap.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -186,7 +186,7 @@ p <- pbase +
   geom_point(data = reststat, aes(x = lon, y = lat), size = 4, pch = 21, fill = 'green', alpha = 0.8) +
 geom_point(data = wqstat, aes(x = lon, y = lat), size = 3, pch = 16, color = 'black', alpha = 0.8)
 
-tiff('final_pres-figure/clomap1.tif', width = 4, height = 5, units = 'in', res = 150, compression = 'lzw')
+jpeg('final_pres-figure/clomap1.jpg', width = 4, height = 5, units = 'in', res = 150)
 p
 dev.off()
 
@@ -196,7 +196,7 @@ pbase <- pbase +
   geom_point(data = restall, aes(x = lon, y = lat, fill = `Restoration\ngroup`), size = 4, pch = 21, alpha = 0.8) +
 geom_point(data = wqstat, aes(x = lon, y = lat), size = 3, pch = 16, color = 'black', alpha = 0.8)
 
-tiff('final_pres-figure/clomap2.tif', width = 4, height = 5, units = 'in', res = 150, compression = 'lzw')
+jpeg('final_pres-figure/clomap2.jpg', width = 4, height = 5, units = 'in', res = 150)
 pbase
 dev.off()
 
@@ -208,19 +208,19 @@ toplo1 <- filter(toplo, rnk %in% 1)
 p <- pbase + 
   geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
-tiff('final_pres-figure/clomap3.tif', width = 4, height = 5, units = 'in', res = 150, compression = 'lzw')
+jpeg('final_pres-figure/clomap3.jpg', width = 4, height = 5, units = 'in', res = 150)
 p
 dev.off()
 
 ##
 # closest two restoration, by group
 
-toplo2 <- filter(toplo, rnk %in% 2)
+toplo2 <- filter(toplo, rnk %in% 1:2)
 
 p <- pbase + 
   geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
-tiff('final_pres-figure/clomap4.tif', width = 4, height = 5, units = 'in', res = 150, compression = 'lzw')
+jpeg('final_pres-figure/clomap4.jpg', width = 4, height = 5, units = 'in', res = 150)
 p
 dev.off()
 
@@ -232,13 +232,13 @@ toplo3 <- toplo
 p <- pbase + 
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
-tiff('final_pres-figure/clomap5.tif', width = 4, height = 5, units = 'in', res = 150, compression = 'lzw')
+jpeg('final_pres-figure/clomap5.jpg', width = 4, height = 5, units = 'in', res = 150)
 p
 dev.off()
 ```
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap1.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap1.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -252,7 +252,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap2.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap2.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -267,7 +267,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap3.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap3.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -283,7 +283,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap4.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap4.jpg" style="width: 1000px;">
 </div>
 
 ***
@@ -300,7 +300,7 @@ incremental: false
 
 Water quality stations and restoration sites
 <div align="center">
-<img src="final_pres-figure/clomap5.tif" style="width: 1000px;">
+<img src="final_pres-figure/clomap5.jpg" style="width: 1000px;">
 </div>
 
 ***
