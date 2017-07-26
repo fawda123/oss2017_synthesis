@@ -18,7 +18,7 @@ cat('By', aut)
 ```
 
 ```
-By Kirsten Dorans, Ed Sherwood, Jessica Renee Henkel, Marcus Beck, Kathryn Ireland, Patricia Varela
+By Kirsten Dorans, Kathryn Ireland, Marcus Beck, Ed Sherwood, Jessica Renee Henkel, Patricia Varela
 ```
   
 Deepwater Horizon Settlement Agreement
