@@ -637,11 +637,157 @@ restoration sites...
 <img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
 </div>
 
+<<<<<<< Updated upstream
+=======
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality stations matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst2.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality stations matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+incremental: true
+
+* In other words, what is the **conditional distribution** of chlorophyll given **restoration type** and **before/after** effect?  
+
+* Similar to a **two-way** ANOVA...
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration\right)$$
+
+* This can be extrapolated to additional 'treatments', or a **three-way** ANOVA
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
+
+Data plyring
+========================================================
+Conditional distributions on **two-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+```{r, results = 'hide'}
+toplo <- chlcdt %>% 
+  select(hab, wtr, salev, data) %>% 
+  unnest %>% 
+  rename(
+    Salinity = salev
+  ) %>% 
+  mutate(
+   Salinity = factor(Salinity, levels = c('lo', 'md', 'hi'))
+  )
+
+lab <- expression(paste("Chl-a (", italic(mu), "g ", L^-1, ")"))
+
+p <- ggplot() + 
+  geom_histogram(data = toplo, aes(x = cval, y = ..density.., group = Salinity, fill = Salinity)) + 
+  facet_grid(hab ~ wtr) + 
+  theme_bw() + 
+  scale_x_continuous(lab) + 
+  scale_y_continuous('Density')
+
+jpeg('final_pres-figure/chlsaldst1.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+
+toplo2 <- chlcdt %>% 
+  select(hab, wtr, salev, prd) %>% 
+  unnest %>% 
+  rename(
+    Salinity = salev
+  ) %>% 
+  mutate(
+   Salinity = factor(Salinity, levels = c('lo', 'md', 'hi'))
+  )
+
+p <- p + 
+  geom_line(data = toplo2, aes(x = cval, y = est, group = Salinity), col = 'blue')
+
+jpeg('final_pres-figure/chlsaldst2.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+
+p <- ggplot(toplo2) + 
+  geom_line(aes(x = cval, y = cumest, colour = Salinity, group = Salinity)) + 
+  facet_grid(hab ~ wtr) + 
+  theme_bw() + 
+  scale_x_continuous(lab) + 
+  scale_y_continuous('Density')
+
+jpeg('final_pres-figure/chlsaldst3.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+
+```
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst1.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst2.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst3.jpg" style="width: 2200px;">
+</div>
+
 Bayesian Network
 ========================================================
-Patricia
-* Specifics of BN
-* Outcomes/interpretation/applications
+incremental: true
+
+* **Water quality** (chlorophyll) responds to **restoration** with varying effects by **salinity**
+* In the **frequentist** framework - mean chlorophyll varies given treatment
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
+
+* In the **Bayesian** framework - probability of an event depends on occurrence of other events 
+
+$$P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
+
+>>>>>>> Stashed changes
+Bayesian Network
+========================================================
+
+What is the probability of low/medium/high chlorophyll given other events?
+
+* Do water quality conditions differ by **restoration type**?
+* Does it differ by **salinity** as a natural covariate?
+* Is the change in agreement with expectation?
+
+BN lets us evaluate **potential outcomes** based on **conditional distributions**
 
 Conclusion
 ========================================================

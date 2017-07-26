@@ -18,7 +18,11 @@ cat('By', aut)
 ```
 
 ```
+<<<<<<< Updated upstream
 By Kirsten Dorans, Kathryn Ireland, Marcus Beck, Ed Sherwood, Jessica Renee Henkel, Patricia Varela
+=======
+By Kathryn Ireland, Patricia Varela, Kirsten Dorans, Marcus Beck, Jessica Renee Henkel, Ed Sherwood
+>>>>>>> Stashed changes
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -412,11 +416,105 @@ restoration sites...
 <img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
 </div>
 
+<<<<<<< Updated upstream
+=======
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality stations matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst2.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality stations matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+incremental: true
+
+* In other words, what is the **conditional distribution** of chlorophyll given **restoration type** and **before/after** effect?  
+
+* Similar to a **two-way** ANOVA...
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration\right)$$
+
+* This can be extrapolated to additional 'treatments', or a **three-way** ANOVA
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
+
+Data plyring
+========================================================
+Conditional distributions on **two-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst1.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst2.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst3.jpg" style="width: 2200px;">
+</div>
+
 Bayesian Network
 ========================================================
-Patricia
-* Specifics of BN
-* Outcomes/interpretation/applications
+incremental: true
+
+* **Water quality** (chlorophyll) responds to **restoration** with varying effects by **salinity**
+* In the **frequentist** framework - mean chlorophyll varies given treatment
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
+
+* In the **Bayesian** framework - probability of an event depends on occurrence of other events 
+
+$$P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
+
+>>>>>>> Stashed changes
+Bayesian Network
+========================================================
+
+What is the probability of low/medium/high chlorophyll given other events?
+
+* Do water quality conditions differ by **restoration type**?
+* Does it differ by **salinity** as a natural covariate?
+* Is the change in agreement with expectation?
+
+BN lets us evaluate **potential outcomes** based on **conditional distributions**
 
 Conclusion
 ========================================================
