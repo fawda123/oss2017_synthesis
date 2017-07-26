@@ -1,12 +1,17 @@
 
+<insertHTML:[columns.html]
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
+<<<<<<< HEAD
 author: Ed Sherwood, Jessica Renee Henkel, Kathryn Ireland, Marcus Beck, Kirsten Dorans, Patricia Varela
+=======
+author: Kirsten Dorans, Patricia Varela, Kathryn Ireland, Marcus Beck, Ed Sherwood, Jessica Renee Henkel
+>>>>>>> 5c8d10b995981953effcc3cd6f2f4a3c95c79de5
 date: July 28, 2017
 autosize: true
 css: oss.css
-
+  
 Deepwater Horizon Settlement Agreement
 ========================================================
 <img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2000px;"/>
@@ -22,6 +27,7 @@ Cumulative Effects of Restoration Activities?
 
 * Vision to make it portable
 * Why Bayesian networks
+
 Benefits
 =============
 
@@ -29,7 +35,6 @@ Benefits
 * Explicit quantification of uncertainty and model updates with new data
 * More focused restoration towards specific regional issues
 * Improved ability to predict outcomes of proposed restoration projects
-
 
 Tampa Bay was gross
 ========================================================
@@ -79,16 +84,29 @@ Kirsten/Katie
 * Model diagram
 * Merging restoration diagram
 
-Marcus
-* Merging wq/restoration data
-* Merging with BN
-
-Bayesian Network
+Data plyring
 ========================================================
-Patricia
-* Specifics of BN
-* Outcomes/interpretation/applications
+incremental: true
 
-Conclusion
+* Can we identify a change in water quality from restoration?
+* What data do we have?
+* Can we *plyr* the data to identify a signal?
+* Can we *plyr* the data as input to a BN?
+
+Data plyring
 ========================================================
-* Next steps (all)
+incremental: true
+
+Water quality data: 40 years, monthly, 45 stations
+
+
+Data plyring
+========================================================
+
+Water quality data: 40 years, monthly, 45 stations
+
+
+
+```
+Error in eval(expr, envir, enclos) : object 'pbase' not found
+```
