@@ -11,6 +11,7 @@ library(geosphere)
 library(stringi)
 library(tibble)
 library(leaflet)
+library(visNetwork)
 
 # load data
 data(restdat)
@@ -86,7 +87,6 @@ A Network
 #<div align="center" style="width: 2000px; height: 720px">
 #<iframe src="final_pres-figure/bayes_network.html"></iframe>
 #</div>
-library(visNetwork)
 nodes <- data.frame(id=1:39, 
                     label = c("Dredging", "Exotic\nControl", "FW\nWetlands", 
                               "Hydrologic\nRestoration", "Management", "Mangroves", 
@@ -116,7 +116,7 @@ edges <- data.frame(from= c(1, 2, 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11
                            35, 35, 36, 36, 36, 36, 36, 37, 38, 39, 37, 38, 39, 37, 38,
                            39, 37, 38, 39, 37, 38, 39, 38, 39, 39)
 )
-visNetwork(nodes, edges, main = "Group 1: Bayesian Network Skeleton", width = "1920px", height = "720px") %>%
+p <- visNetwork(nodes, edges, main = "Group 1: Bayesian Network Skeleton", width = "1920px", height = "720px") %>%
   visEdges(arrows = "to") %>%
   visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%
   visGroups(groupname = "Technology", color = "red", shape = "square") %>%
@@ -124,8 +124,10 @@ visNetwork(nodes, edges, main = "Group 1: Bayesian Network Skeleton", width = "1
   visGroups(groupname = "WQ Response", color = "lightgreen", shape = "circle") %>%
   visLegend(main = "Bayesian Parameter") %>%
   visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE)
-
+htmlwidgets::saveWidget(p, "bayes_network.html")
 ```
+
+<iframe src="bayes_network.html" style="position:absolute;height:100%;width:100%"></iframe>
 
 Tampa Bay was gross
 ========================================================
