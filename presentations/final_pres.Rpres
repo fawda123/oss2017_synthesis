@@ -45,6 +45,21 @@ Deepwater Horizon Settlement Agreement
 Over $10B in Potential Restoration Activities
 ========================================================
 <img src="final_pres-figure/RESTORE_Funding_chart.jpg" alt="Drawing" style="width: 800px;"/>
+Graphic: eli-ocean.org
+
+Cumulative Effects of Restoration Activities?
+========================================================
+*Despite considerable investments in aquatic ecosystem restoration consistent and comprehensive effectiveness evaluation continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
+
+
+Cumulative Effects of Restoration Activities?
+========================================================
+
+<img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
+
+
+* Vision to make it portable
+* Why Bayesian networks
 
 Cumulative Effects of Restoration Activities?
 ========================================================
@@ -53,7 +68,6 @@ Cumulative Effects of Restoration Activities?
 
 * Vision to make it portable
 * Why Bayesian networks
-
 Benefits
 =============
 
@@ -62,47 +76,141 @@ Benefits
 * More focused restoration towards specific regional issues
 * Improved ability to predict outcomes of proposed restoration projects
 
+```{r}
+#Ed 
+#Tampa Bay Background
+```
+A Network
+========================================================
+```{r}
+#<div align="center" style="width: 2000px; height: 720px">
+#<iframe src="final_pres-figure/bayes_network.html"></iframe>
+#</div>
+library(visNetwork)
+nodes <- data.frame(id=1:39, 
+                    label = c("Dredging", "Exotic\nControl", "FW\nWetlands", 
+                              "Hydrologic\nRestoration", "Management", "Mangroves", 
+                              "Oyster\nHabitat", "Salt\nMarsh", "Seagrass", "Uplands", 
+                              "Acquisition", "Education", "Protection\nManagment", 
+                              "Atmospheric\nDeposition", "Agricultural\nBMP", 
+                              "Alum\nTreatment\nBMP", "Baffle Box\nBMP", "CDS Unit\nBMP",
+                              "SW\nManagement", "Stormwater\nPond BMP", "Treatment\nTrain BMP", 
+                              "Wetland\nTreatment BMP", "Stormwater\nEducation", "Stormwater\nRegulation", 
+                              "Send NPS\nto WWTP", "Street\nSweeping", "On Site\nBMP", "Increase\nReuse", 
+                              "PS\nManagment", "Additional PS\nTreatment", "PS\nRegulation", 
+                              "Habitat\nEnhancement", "Habitat\nEstablishment", "Habitat\nProtection", 
+                              "Stormwater\nControl", "Point Source\nControl", "Salinity", "Dissolved\nOxygen",
+                              "Chlorophyll-a"), 
+                    group = c(rep("Technology", 31), rep("Activity", 5), 
+                              rep("WQ Response",3)),
+                    level = c(rep(1, 31), rep(2, 5), rep(3, 2), rep(4, 1)),
+                    shape = c(rep("square", 31), rep("ellipse", 5), rep("circle", 3)),
+                    color = c(rep("red", 31), rep("lightblue", 5), rep("lightgreen",3 ))
+                    )                  
+edges <- data.frame(from= c(1, 2, 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 12,
+                            13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
+                            28, 29, 30, 31, 32, 32, 32, 33, 33, 33, 34, 34, 34, 35, 35,
+                            35, 36, 36, 36, 37, 37, 38), 
+                    to = c(32, 32, 32, 33, 32, 32, 32, 33, 32, 33, 32, 33, 32, 33, 32, 
+                           33, 34, 34, 34, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35,
+                           35, 35, 36, 36, 36, 36, 36, 37, 38, 39, 37, 38, 39, 37, 38,
+                           39, 37, 38, 39, 37, 38, 39, 38, 39, 39)
+)
+visNetwork(nodes, edges, main = "Group 1: Bayesian Network Skeleton", width = "1920px", height = "720px") %>%
+  visEdges(arrows = "to") %>%
+  visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%
+  visGroups(groupname = "Technology", color = "red", shape = "square") %>%
+  visGroups(groupname = "Activity", color = "lightblue", shape = "ellipse") %>% 
+  visGroups(groupname = "WQ Response", color = "lightgreen", shape = "circle") %>%
+  visLegend(main = "Bayesian Parameter") %>%
+  visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE)
+
+```
+
 Tampa Bay was gross
 ========================================================
-<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 400px;"/>
+<div align="center">
+<div align="left">
+<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 600px;"/>
+</div>
+***
 
-<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 400px;"/>
+<div align="right">
+<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 600px;"/>
+</div>
+</div>
 
-Tampa Bay is not as gross
+Tampa Bay is a lot better now
 ========================================================
-![](prop_pres-figure/tb.jpg)
+<div align="center">
+<div align="left">
+<img src="final_pres-figure/pre_rest_sh.jpg" alt="Drawing" style="width: 800px;"/>
+</div>
+***
 
-Tampa Bay is not as gross
-========================================================
-<img src="prop_pres-figure/TB_Sunset.jpg" alt="Drawing" style="width: 800px;"/>
+<div align="right">
+<img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 800px;"/>
+</div>
+</div>
 
 But how much less gross??
 ========================================================
 ![](prop_pres-figure/tampa_bay_restoration.jpg)
 
-But how much less gross??
-========================================================
-![](prop_pres-figure/network.png)
-Ed 
-* Tampa Bay Background
 
-Tampa Bay Data Sources
+Water Quality Monitoring in Tampa Bay 
 ========================================================
 incremental: false
-
 <div align="center">
 <img src="final_pres-figure/Fig3_EPHC_Sample_Sites.png">
 </div>
 
 ***
 * Rich WQ Monitoring Datatset (1974-)
+      * 45 Stations in TB
       * Chlorophyll, salinity, dissolved oxygen, etc.
       * Depth-integrated
       * QAQC
 * Time series, monthly step - ~500 obs. per site
+* Available as an EXCEL spreadsheet <ftp://ftp.epchc.org>
 
-Tampa Bay Restoration Sites
+Tampa Bay "Restoration" Sites: Various Sources of Info
 ===============
+incremental: false
+
+* "Softer" Restoration -> Local ordinances (e.g. ferilizer restrictions), Education, etc.
+* "Soft" Restoration -> Habitat Creation, Enhancement and Management/Protection Measures
+* "Hard" Restoration -> Stormwater BMPs, Point Source Reductions through Time, Regulations
+
+Tampa Bay Restoration Site Info: First Source
+===============
+incremental: false
+
+<div align="center">
+<img src="final_pres-figure/water_atlas.png">
+</div>
+
+***
+* Tracking "traditional" restoration sites since ~1990s
+* Include habitat creation, enhancement and acquisitions
+* <http://http://maps.wateratlas.usf.edu/tampabay/>
+
+Tampa Bay Restoration Site Info: Second Source
+===============
+incremental: false
+
+<div astyle="position: relative;">
+<img src="final_pres-figure/apdb.png"style="position: absolute;"/>
+  <span id="overlay_img"><img src="final_pres-figure/apdb_form.png"/></span>
+</div>
+
+***
+* Tracking "traditional" restoration sites since ~1990s
+* Include habitat creation, enhancement and acquisitions
+* <http://apdb.tbeptech.org>
+
+Other Option
+==============
 ```{r, echo = F, results = 'hide'}
 ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.5)
 map <- get_stamenmap(ext, zoom = 10, maptype = "toner-lite")
@@ -134,12 +242,12 @@ dev.off()
 
 Overall Workflow
 ========================================================
-<img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2000px;"/>
+<img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2500px;"/>
 
 
 Developing Restoration Dataset
 ========================================================
-<img src="final_pres-figure/restoration_activities.png" alt="Drawing" style="width: 2000px;"/>
+<img src="final_pres-figure/restoration_activities.png" alt="Drawing" style="width: 2500px;"/>
 
 
 Data plyring
