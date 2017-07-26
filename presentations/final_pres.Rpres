@@ -21,6 +21,13 @@ data(wqstat)
 data(wqmtch)
 data(chlchgout)
 data(chlchg)
+data(chlcdt)
+
+# source R files
+source('R/get_chg.R')
+source('R/get_clo.R')
+source('R/get_cdt.R')
+source('R/get_brk.R')
 ```
 <insertHTML:[columns.html]
 
@@ -613,6 +620,7 @@ restoration sites...
 head(chlchg, 20)
 ```
 
+
 Data plyring
 ========================================================
 transition: none
@@ -629,6 +637,29 @@ p <- ggplot() +
 jpeg('final_pres-figure/chldst1.jpg', width = 7, height = 4, units = 'in', res = 300)
 p
 dev.off()
+
+
+toplo2 <- get_cdt(chlchg, 'hab', 'wtr') %>% 
+  select(hab, wtr, prd) %>% 
+  unnest
+
+p <- p + 
+  geom_line(data = toplo2, aes(x = cval, y = est), col = 'blue')
+
+jpeg('final_pres-figure/chldst2.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+
+p <- ggplot(toplo2) + 
+  geom_line(aes(x = cval, y = cumest), col = 'blue') + 
+  facet_grid(hab ~ wtr) + 
+  theme_bw() + 
+  scale_x_continuous(lab) + 
+  scale_y_continuous('Density')
+
+jpeg('final_pres-figure/chldst3.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
 ```
 
 What do the data look like? For **many** water quality station matched to **many**
@@ -637,8 +668,6 @@ restoration sites...
 <img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
 </div>
 
-<<<<<<< Updated upstream
-=======
 Data plyring
 ========================================================
 transition: none
@@ -777,7 +806,6 @@ $$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \
 
 $$P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
 
->>>>>>> Stashed changes
 Bayesian Network
 ========================================================
 

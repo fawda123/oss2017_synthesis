@@ -18,11 +18,7 @@ cat('By', aut)
 ```
 
 ```
-<<<<<<< Updated upstream
-By Kirsten Dorans, Kathryn Ireland, Marcus Beck, Ed Sherwood, Jessica Renee Henkel, Patricia Varela
-=======
-By Kathryn Ireland, Patricia Varela, Kirsten Dorans, Marcus Beck, Jessica Renee Henkel, Ed Sherwood
->>>>>>> Stashed changes
+By Kathryn Ireland, Ed Sherwood, Marcus Beck, Jessica Renee Henkel, Patricia Varela, Kirsten Dorans
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -66,9 +62,8 @@ Benefits
 
 A Network
 ========================================================
+* <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html>
 
-
-<iframe src="bayes_network.html" style="position:absolute;height:100%;width:100%"></iframe>
 
 Tampa Bay was gross
 ========================================================
@@ -405,6 +400,7 @@ restoration sites...
 20    11 hab_bef wtr_bef  8.264508
 ```
 
+
 Data plyring
 ========================================================
 transition: none
@@ -416,8 +412,6 @@ restoration sites...
 <img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
 </div>
 
-<<<<<<< Updated upstream
-=======
 Data plyring
 ========================================================
 transition: none
@@ -504,7 +498,6 @@ $$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \
 
 $$P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
 
->>>>>>> Stashed changes
 Bayesian Network
 ========================================================
 
