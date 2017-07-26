@@ -18,6 +18,8 @@ data(reststat)
 data(wqdat)
 data(wqstat)
 data(wqmtch)
+data(chlchgout)
+data(chlchg)
 ```
 <insertHTML:[columns.html]
 
@@ -357,7 +359,8 @@ tmdf1 <- list(
   unnest %>% 
   mutate(
     name = factor(name, levels = levs), 
-    grp = gsub('[0-9]$', '', name)
+    grp = gsub('[0-9]$', '', name),
+    x = factor('wq')
   )
   
 p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
@@ -433,6 +436,7 @@ tmdf4 <- list(
 p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
   geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) + 
   geom_segment(data = tmdf4, aes(x = x, y = value, xend = name, yend = value), linetype = 'dashed') + 
+  geom_segment(data = tmdf1, aes(x = x, y = value, xend = name, yend = value), color = 'grey', linetype = 'dashed') + 
   geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = Before), 
             label = 'Before', vjust = -0.5, size = 3) +
   geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = After), 
@@ -498,6 +502,73 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 <img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
 </div>
 
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **one** water quality station matched to **many**
+restoration sites...
+
+WQ and restoration sites: **Temporal match**, **before/after**, **slice**
+<div align="center">
+<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
+</div>
+
+```{r, echo = FALSE}
+datex <- filter(chlchgout, stat %in% 7) 
+datex
+```
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **one** water quality station matched to **many**
+restoration sites...
+
+WQ and restoration sites: **Temporal match**, **before/after**, **slice**
+<div align="center">
+<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
+</div>
+
+```{r, echo = FALSE}
+datex <- filter(chlchg, stat %in% 7) 
+datex
+```
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality station matched to **many**
+restoration sites...
+```{r, echo = FALSE}
+head(chlchg, 20)
+```
+
+Data plyring
+========================================================
+transition: none
+```{r, echo = FALSE, results = 'hide'}
+toplo <- chlchg
+lab <- expression(paste("Chl-a (", italic(mu), "g ", L^-1, ")"))
+p <- ggplot() + 
+  geom_histogram(data = toplo, aes(x = cval, y = ..density..)) + 
+  facet_grid(hab ~ wtr) + 
+  theme_bw() + 
+  scale_x_continuous(lab) + 
+  scale_y_continuous('Density')
+
+jpeg('final_pres-figure/chldst1.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+```
+
+What do the data look like? For **many** water quality station matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
+</div>
 
 Bayesian Network
 ========================================================

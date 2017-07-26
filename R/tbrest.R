@@ -144,7 +144,11 @@ leaflet(lplo) %>%
   )
 
 ## ------------------------------------------------------------------------
+salchgout <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf, chgout = TRUE)
 salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf)
+save(salchgout, file = 'data/salchgout.RData')
+save(salchg, file = 'data/salchg.RData')
+head(salchgout)
 head(salchg)
 
 ## ------------------------------------------------------------------------
@@ -167,8 +171,11 @@ ggplot(toplo, aes(x = cval, y = cumest)) +
 
 ## ----eval = T, fig.height = 4, fig.width = 8, message = F, warning = F----
 # get chlorophyll changes
+chlchgout <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf, chgout = TRUE)
 chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf)
-  
+save(chlchgout, file = 'data/chlchgout.RData')
+save(chlchg, file = 'data/chlchg.RData')
+
 # merge with salinity, bet salinity levels
 salbrk <- salbrk %>% 
   group_by(hab, wtr) %>% 

@@ -2,7 +2,7 @@
 #'
 #' @param yrdf year diff to summarize wq data, in years before/after restoration projects
 #'
-get_chg <- function(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5){
+get_chg <- function(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5, chgout = FALSE){
   
   # get only date, station, relevant wq variable
   names(wqdat)[names(wqdat) %in% wqvar] <- 'wqvar'
@@ -87,8 +87,11 @@ get_chg <- function(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = 5){
     ) %>%
     unite('cmb', resgrp, trt)
   
+    # return temporary chg object if T
+    if(chgout) return(chg)
+  
     # get combinations
-
+    
     # combine temporal categories by restoration typ
     chgcmb <- chg %>% 
       group_by(stat) %>% 

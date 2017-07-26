@@ -18,7 +18,7 @@ cat('By', aut)
 ```
 
 ```
-By Kirsten Dorans, Ed Sherwood, Patricia Varela, Kathryn Ireland, Marcus Beck, Jessica Renee Henkel
+By Patricia Varela, Kathryn Ireland, Kirsten Dorans, Jessica Renee Henkel, Marcus Beck, Ed Sherwood
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -257,6 +257,96 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 <img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
 </div>
 
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **one** water quality station matched to **many**
+restoration sites...
+
+WQ and restoration sites: **Temporal match**, **before/after**, **slice**
+<div align="center">
+<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
+</div>
+
+
+```
+# A tibble: 4 x 3
+# Groups:   stat [1]
+   stat     cmb     cval
+  <int>   <chr>    <dbl>
+1     7 hab_aft 8.255185
+2     7 hab_bef 8.350187
+3     7 wtr_aft 8.053273
+4     7 wtr_bef 8.129733
+```
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **one** water quality station matched to **many**
+restoration sites...
+
+WQ and restoration sites: **Temporal match**, **before/after**, **slice**
+<div align="center">
+<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
+</div>
+
+
+```
+# A tibble: 4 x 4
+   stat     hab     wtr     cval
+  <int>  <fctr>  <fctr>    <dbl>
+1     7 hab_aft wtr_aft 8.154229
+2     7 hab_aft wtr_bef 8.192459
+3     7 hab_bef wtr_aft 8.201730
+4     7 hab_bef wtr_bef 8.239960
+```
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality station matched to **many**
+restoration sites...
+
+```
+# A tibble: 20 x 4
+    stat     hab     wtr      cval
+   <int>  <fctr>  <fctr>     <dbl>
+ 1     6 hab_aft wtr_aft  8.903273
+ 2     6 hab_aft wtr_bef 11.720206
+ 3     6 hab_bef wtr_aft 11.902951
+ 4     6 hab_bef wtr_bef 14.719883
+ 5     7 hab_aft wtr_aft  8.154229
+ 6     7 hab_aft wtr_bef  8.192459
+ 7     7 hab_bef wtr_aft  8.201730
+ 8     7 hab_bef wtr_bef  8.239960
+ 9     8 hab_aft wtr_aft 19.867100
+10     8 hab_aft wtr_bef 17.444274
+11     8 hab_bef wtr_aft 17.331973
+12     8 hab_bef wtr_bef 14.909147
+13     9 hab_aft wtr_aft  9.030021
+14     9 hab_aft wtr_bef  8.621069
+15     9 hab_bef wtr_aft  8.398558
+16     9 hab_bef wtr_bef  7.989606
+17    11 hab_aft wtr_aft  6.576058
+18    11 hab_aft wtr_bef  6.727664
+19    11 hab_bef wtr_aft  8.112902
+20    11 hab_bef wtr_bef  8.264508
+```
+
+Data plyring
+========================================================
+transition: none
+
+
+What do the data look like? For **many** water quality station matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
+</div>
 
 Bayesian Network
 ========================================================
