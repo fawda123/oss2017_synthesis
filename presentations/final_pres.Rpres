@@ -20,6 +20,13 @@ data(wqstat)
 data(wqmtch)
 data(chlchgout)
 data(chlchg)
+data(chlcdt)
+
+# source R files
+source('R/get_chg.R')
+source('R/get_clo.R')
+source('R/get_cdt.R')
+source('R/get_brk.R')
 ```
 <insertHTML:[columns.html]
 
@@ -33,9 +40,8 @@ css: oss.css
 # randomize author order
 aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Ireland', 'Ed Sherwood', 'Patricia Varela') %>% 
   sample %>% 
-  paste(collapse = ', ')
-
-cat('By', aut)
+  paste(collapse = ', ') %>% 
+  cat('By', .)
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -540,7 +546,7 @@ Data plyring
 ========================================================
 transition: none
 
-What do the data look like? For **many** water quality station matched to **many**
+What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
 ```{r, echo = FALSE}
 head(chlchg, 20)
@@ -562,13 +568,168 @@ p <- ggplot() +
 jpeg('final_pres-figure/chldst1.jpg', width = 7, height = 4, units = 'in', res = 300)
 p
 dev.off()
+
+
+toplo2 <- get_cdt(chlchg, 'hab', 'wtr') %>% 
+  select(hab, wtr, prd) %>% 
+  unnest
+
+p <- p + 
+  geom_line(data = toplo2, aes(x = cval, y = est), col = 'blue')
+
+jpeg('final_pres-figure/chldst2.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+
+p <- ggplot(toplo2) + 
+  geom_line(aes(x = cval, y = cumest), col = 'blue') + 
+  facet_grid(hab ~ wtr) + 
+  theme_bw() + 
+  scale_x_continuous(lab) + 
+  scale_y_continuous('Density')
+
+jpeg('final_pres-figure/chldst3.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
 ```
 
-What do the data look like? For **many** water quality station matched to **many**
+What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
 <div align="center">
 <img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
 </div>
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality stations matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst2.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality stations matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+incremental: true
+
+* In other words, what is the **conditional distribution** of chlorophyll given **restoration type** and **before/after** effect?  
+
+* Similar to a **two-way** ANOVA...
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration\right)$$
+
+* This can be extrapolated to additional 'treatments', or a **three-way** ANOVA
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
+
+Data plyring
+========================================================
+Conditional distributions on **two-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+```{r, results = 'hide'}
+toplo <- chlcdt %>% 
+  select(hab, wtr, salev, data) %>% 
+  unnest %>% 
+  rename(
+    Salinity = salev
+  ) %>% 
+  mutate(
+   Salinity = factor(Salinity, levels = c('lo', 'md', 'hi'))
+  )
+
+lab <- expression(paste("Chl-a (", italic(mu), "g ", L^-1, ")"))
+
+p <- ggplot() + 
+  geom_histogram(data = toplo, aes(x = cval, y = ..density.., group = Salinity, fill = Salinity)) + 
+  facet_grid(hab ~ wtr) + 
+  theme_bw() + 
+  scale_x_continuous(lab) + 
+  scale_y_continuous('Density')
+
+jpeg('final_pres-figure/chlsaldst1.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+
+toplo2 <- chlcdt %>% 
+  select(hab, wtr, salev, prd) %>% 
+  unnest %>% 
+  rename(
+    Salinity = salev
+  ) %>% 
+  mutate(
+   Salinity = factor(Salinity, levels = c('lo', 'md', 'hi'))
+  )
+
+p <- p + 
+  geom_line(data = toplo2, aes(x = cval, y = est, group = Salinity), col = 'blue')
+
+jpeg('final_pres-figure/chlsaldst2.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+
+p <- ggplot(toplo2) + 
+  geom_line(aes(x = cval, y = cumest, colour = Salinity, group = Salinity)) + 
+  facet_grid(hab ~ wtr) + 
+  theme_bw() + 
+  scale_x_continuous(lab) + 
+  scale_y_continuous('Density')
+
+jpeg('final_pres-figure/chlsaldst3.jpg', width = 7, height = 4, units = 'in', res = 300)
+p
+dev.off()
+
+```
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst1.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst2.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst3.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+
+* **Water quality** (chlorophyll) responds to **restoration** with varying effects by **salinity**
+* In the **frequentist** framework - mean chlorophyll varies given treatment
+* In the **Bayesian** framework - probability of an event depends on occurrence of other events 
 
 Bayesian Network
 ========================================================

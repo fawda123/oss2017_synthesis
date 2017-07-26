@@ -12,13 +12,12 @@ css: oss.css
 # randomize author order
 aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Ireland', 'Ed Sherwood', 'Patricia Varela') %>% 
   sample %>% 
-  paste(collapse = ', ')
-
-cat('By', aut)
+  paste(collapse = ', ') %>% 
+  cat('By', .)
 ```
 
 ```
-By Patricia Varela, Kathryn Ireland, Kirsten Dorans, Jessica Renee Henkel, Marcus Beck, Ed Sherwood
+By Kathryn Ireland, Jessica Renee Henkel, Marcus Beck, Patricia Varela, Ed Sherwood, Kirsten Dorans
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -308,7 +307,7 @@ Data plyring
 ========================================================
 transition: none
 
-What do the data look like? For **many** water quality station matched to **many**
+What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
 
 ```
@@ -342,11 +341,91 @@ Data plyring
 transition: none
 
 
-What do the data look like? For **many** water quality station matched to **many**
+What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
 <div align="center">
 <img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
 </div>
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality stations matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst2.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+What do the data look like? For **many** water quality stations matched to **many**
+restoration sites...
+<div align="center">
+<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+incremental: true
+
+* In other words, what is the **conditional distribution** of chlorophyll given **restoration type** and **before/after** effect?  
+
+* Similar to a **two-way** ANOVA...
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration\right)$$
+
+* This can be extrapolated to additional 'treatments', or a **three-way** ANOVA
+
+$$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
+
+Data plyring
+========================================================
+Conditional distributions on **two-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst1.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst2.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+Conditional distributions on **three-levels**:
+
+<div align="center">
+<img src="final_pres-figure/chlsaldst3.jpg" style="width: 2200px;">
+</div>
+
+Data plyring
+========================================================
+
+* **Water quality** (chlorophyll) responds to **restoration** with varying effects by **salinity**
+* In the **frequentist** framework - mean chlorophyll varies given treatment
+* In the **Bayesian** framework - probability of an event depends on occurrence of other events 
 
 Bayesian Network
 ========================================================
