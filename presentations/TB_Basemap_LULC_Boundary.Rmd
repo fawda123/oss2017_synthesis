@@ -1,0 +1,21 @@
+---
+title: "TB Basemap"
+author: "Ed Sherwood <esherwood@tbep.org>"
+date: "July 26, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(leaflet)
+library(rgdal)
+#Change to your path
+setwd("/media/reddrum/STORAGE/NCEAS/nceas_oss/oss2017_synthesis")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Get data
+```{r}
+tblulc <- readOGR("../data-raw/SWFWMD_2011_LULC_Merged_BS_Intersect_Dissolve_LAND_ONLY.shp")
+
+```
+
