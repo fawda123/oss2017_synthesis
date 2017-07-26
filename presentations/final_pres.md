@@ -3,7 +3,7 @@
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
-author: Kirsten Dorans, Patricia Varela, Kathryn Ireland, Marcus Beck, Ed Sherwood, Jessica Renee Henkel
+author: Jessica Renee Henkel, Ed Sherwood, Kathryn Ireland, Kirsten Dorans, Marcus Beck, Patricia Varela
 date: July 28, 2017
 autosize: true
 css: oss.css
@@ -65,13 +65,17 @@ incremental: false
 </div>
 
 ***
-* Rich WQ Monitoring Datatset (1974-Present)
+* Rich WQ Monitoring Datatset (1974-)
 * Info on a Variety of Different Restoration Activities
       * Habitat Establishment
       * Habitat Enhancement
       * Habitat Protection
       * Stormwater Controls
       * Point Source Controls
+
+Tampa Bay Restoration Sites
+===============
+
 
 Workflow
 ========================================================
@@ -103,5 +107,5 @@ Water quality data: 40 years, monthly, 45 stations
 
 
 ```
-Error in eval(expr, envir, enclos) : object 'pbase' not found
+Error in FUN(X[[i]], ...) : object 'type\ngroup' not found
 ```
