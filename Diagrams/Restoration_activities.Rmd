@@ -100,15 +100,15 @@ The grViz statement we are going to use to define the relationships requires a s
 
 ```{r}
 #define the edges
-edge1<-define_edge(varnames[1],processes[1])
-edge2<-define_edge(varnames[2],processes[1])
-edge3<-define_edge(processes[1],varnames[3])
-edge4<-define_edge(varnames[3],processes[2])
-edge5<-define_edge(processes[2],varnames[4])
-edge6<-define_edge(varnames[4],processes[4])
-edge7<-define_edge(varnames[5],processes[3])
-edge8<-define_edge(processes[3],varnames[6])
-edge9<-define_edge(varnames[6], processes[4])
+edge1<-define_edgec(wtnames[1],processes[1])
+edge2<-define_edge(wtnames[2],processes[1])
+edge3<-define_edge(processes[1],wtnames[3])
+edge4<-define_edge(wtnames[3],processes[2])
+edge5<-define_edge(processes[2],wtnames[4])
+edge6<-define_edge(wtnames[4],processes[4])
+edge7<-define_edge(habnames[1],processes[3])
+edge8<-define_edge(processes[3],habnames[2])
+edge9<-define_edge(habnames[2], processes[4])
 edge10<-define_edge(processes[4],restname)
 
 #now, bind them all together in one vector to use later:
@@ -173,6 +173,7 @@ digraph {
                           ",
                          paste(edges,collapse=''),
                           "
+                    
                          
                           
                           
