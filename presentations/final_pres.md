@@ -17,7 +17,11 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
 ```
 
 ```
+<<<<<<< Updated upstream
 By Kathryn Ireland, Jessica Renee Henkel, Marcus Beck, Patricia Varela, Ed Sherwood, Kirsten Dorans
+=======
+By Kirsten Dorans, Patricia Varela, Kathryn Ireland, Jessica Renee Henkel, Ed Sherwood, Marcus Beck
+>>>>>>> Stashed changes
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -44,241 +48,30 @@ Benefits
 * More focused restoration towards specific regional issues
 * Improved ability to predict outcomes of proposed restoration projects
 
-Tampa Bay was gross
+
+A Network
 ========================================================
-<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 400px;"/>
-
-<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 400px;"/>
-
-Tampa Bay is not as gross
-========================================================
-![](prop_pres-figure/tb.jpg)
-
-Tampa Bay is not as gross
-========================================================
-<img src="prop_pres-figure/TB_Sunset.jpg" alt="Drawing" style="width: 800px;"/>
-
-But how much less gross??
-========================================================
-![](prop_pres-figure/tampa_bay_restoration.jpg)
-
-But how much less gross??
-========================================================
-![](prop_pres-figure/network.png)
-Ed 
-* Tampa Bay Background
-
-Tampa Bay Data Sources
-========================================================
-incremental: false
-
-<div align="center">
-<img src="final_pres-figure/Fig3_EPHC_Sample_Sites.png">
-</div>
-
-***
-* Rich WQ Monitoring Datatset (1974-)
-      * Chlorophyll, salinity, dissolved oxygen, etc.
-      * Depth-integrated
-      * QAQC
-* Time series, monthly step - ~500 obs. per site
-
-Tampa Bay Restoration Sites
-===============
-
-<div align="center">
-<img src="final_pres-figure/restmap.jpg" style="width: 1000px;">
-</div>
-
-***
-* Restoration sites in Tampa Bay, watershed
-      * Habitat Establishment
-      * Habitat Enhancement
-      * Habitat Protection
-      * Stormwater Controls
-      * Point Source Controls
-* 571 projects, 1971 - 2016
-
-Overall Workflow
-========================================================
-<img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2000px;"/>
 
 
-Developing Restoration Dataset
-========================================================
-<img src="final_pres-figure/restoration_activities.png" alt="Drawing" style="width: 2000px;"/>
 
 
-Data plyring
-========================================================
-incremental: true
-
-* Can we identify a change in water quality from restoration?
-* What data do we have?
-* Can we plyr the data to identify a signal?
-* Can we plyr the data as input to a BN?
-
-Data plyring
-========================================================
-incremental: false
-transition: none
 
 
-WQ and restoration sites
-<div align="center">
-<img src="final_pres-figure/clomap1.jpg" style="width: 1000px;">
-</div>
-
-***
-
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
-
-Data plyring
-========================================================
-incremental: false
-transition: none
-
-WQ and restoration sites
-<div align="center">
-<img src="final_pres-figure/clomap2.jpg" style="width: 1000px;">
-</div>
-
-***
-
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of restoration **site type**?
-
-Data plyring
-========================================================
-incremental: false
-transition: none
-
-WQ and restoration sites
-<div align="center">
-<img src="final_pres-figure/clomap3.jpg" style="width: 1000px;">
-</div>
-
-***
-
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of restoration **site type**?
-* Consider **distance** of sites from water quality stations?
-
-Data plyring
-========================================================
-incremental: false
-transition: none
-
-WQ and restoration sites
-<div align="center">
-<img src="final_pres-figure/clomap4.jpg" style="width: 1000px;">
-</div>
-
-***
-
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of restoration **site type**?
-* Consider **distance** of sites from water quality stations?
-* Consider a **cumulative effect**?
-
-Data plyring
-========================================================
-incremental: false
-transition: none
-
-WQ and restoration sites
-<div align="center">
-<img src="final_pres-figure/clomap5.jpg" style="width: 1000px;">
-</div>
-
-***
-
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of restoration **site type**?
-* Consider **distance** of sites from water quality stations?
-* Consider a **cumulative effect**?
-
-Data plyring
-========================================================
-transition: none
 
 
-WQ and restoration sites: **Spatial match**
 
-<div align="center">
-<img src="final_pres-figure/ptplo.jpg" style="width: 150px;">
-</div>
 
-Data plyring
-========================================================
-transition: none
 
-WQ and restoration sites: **Spatial match**
-<div align="center">
-<img src="final_pres-figure/ptplo.jpg" style="width: 150px;">
-</div>
 
-WQ and restoration sites: **Temporal match**
-<div align="center">
-<img src="final_pres-figure/tmplo1.jpg" style="width: 2000px;">
-</div>
 
-Data plyring
-========================================================
-transition: none
 
-WQ and restoration sites: **Spatial match**
-<div align="center">
-<img src="final_pres-figure/ptplo.jpg" style="width: 150px;">
-</div>
 
-WQ and restoration sites: **Temporal match**, **before/after**
-<div align="center">
-<img src="final_pres-figure/tmplo2.jpg" style="width: 2000px;">
-</div>
-
-Data plyring
-========================================================
-transition: none
-
-WQ and restoration sites: **Spatial match**
-<div align="center">
-<img src="final_pres-figure/ptplo.jpg" style="width: 150px;">
-</div>
-
-WQ and restoration sites: **Temporal match**, **before/after**, **slice**
-<div align="center">
-<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
-</div>
-
-Data plyring
-========================================================
-transition: none
-
-What do the data look like? For **one** water quality station matched to **many**
-restoration sites...
-
-WQ and restoration sites: **Temporal match**, **before/after**, **slice**
-<div align="center">
-<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
-</div>
 
 
 ```
-# A tibble: 4 x 3
-# Groups:   stat [1]
-   stat     cmb     cval
-  <int>   <chr>    <dbl>
-1     7 hab_aft 8.255185
-2     7 hab_bef 8.350187
-3     7 wtr_aft 8.053273
-4     7 wtr_bef 8.129733
+Error in file(con, "rb") : cannot open the connection
 ```
+<<<<<<< Updated upstream
 
 Data plyring
 ========================================================
@@ -436,3 +229,5 @@ Patricia
 Conclusion
 ========================================================
 * Next steps (all)
+=======
+>>>>>>> Stashed changes
