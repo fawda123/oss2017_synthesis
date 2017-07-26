@@ -18,7 +18,7 @@ cat('By', aut)
 ```
 
 ```
-By Patricia Varela, Kathryn Ireland, Kirsten Dorans, Jessica Renee Henkel, Marcus Beck, Ed Sherwood
+By Jessica Renee Henkel, Kathryn Ireland, Patricia Varela, Marcus Beck, Kirsten Dorans, Ed Sherwood
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -28,6 +28,21 @@ Deepwater Horizon Settlement Agreement
 Over $10B in Potential Restoration Activities
 ========================================================
 <img src="final_pres-figure/RESTORE_Funding_chart.jpg" alt="Drawing" style="width: 800px;"/>
+Graphic: eli-ocean.org
+
+Cumulative Effects of Restoration Activities?
+========================================================
+*Despite considerable investments in aquatic ecosystem restoration consistent and comprehensive effectiveness evaluation continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
+
+
+Cumulative Effects of Restoration Activities?
+========================================================
+
+<img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
+
+
+* Vision to make it portable
+* Why Bayesian networks
 
 Cumulative Effects of Restoration Activities?
 ========================================================
@@ -36,7 +51,6 @@ Cumulative Effects of Restoration Activities?
 
 * Vision to make it portable
 * Why Bayesian networks
-
 Benefits
 =============
 
