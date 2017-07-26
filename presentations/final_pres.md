@@ -1,32 +1,9 @@
-```{r setup, echo = FALSE}
-# chunk options
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
-# load libraries
-library(tidyverse)
-library(readxl)
-library(ggmap)
-library(lubridate)
-library(geosphere)
-library(stringi)
-library(tibble)
-library(leaflet)
-
-# load data
-data(restdat)
-data(reststat)
-data(wqdat)
-data(wqstat)
-data(wqmtch)
-
-# randomize author order
-aut <- sample(c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Ireland', 'Ed Sherwood', 'Patricia Varela'))
-```
 <insertHTML:[columns.html]
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
-author: `r aut`
+author: Kirsten Dorans, Patricia Varela, Kathryn Ireland, Marcus Beck, Ed Sherwood, Jessica Renee Henkel
 date: July 28, 2017
 autosize: true
 css: oss.css
@@ -122,18 +99,9 @@ Data plyring
 ========================================================
 
 Water quality data: 40 years, monthly, 45 stations
-```{r, echo = F}
-prest <- pbase + 
-  geom_point(data = reststat, aes(x = lon, y = lat), size = 2)
-prest
+
+
+
 ```
-
-Bayesian Network
-========================================================
-Patricia
-* Specifics of BN
-* Outcomes/interpretation/applications
-
-Conclusion
-========================================================
-* Next steps (all)
+Error in eval(expr, envir, enclos) : object 'pbase' not found
+```
