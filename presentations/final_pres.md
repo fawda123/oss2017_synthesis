@@ -18,7 +18,7 @@ cat('By', aut)
 ```
 
 ```
-By Marcus Beck, Patricia Varela, Ed Sherwood, Kirsten Dorans, Jessica Renee Henkel, Kathryn Ireland
+By Ed Sherwood, Marcus Beck, Patricia Varela, Kirsten Dorans, Jessica Renee Henkel, Kathryn Ireland
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -100,12 +100,15 @@ Tampa Bay Restoration Sites
       * Point Source Controls
 * 571 projects, 1971 - 2016
 
-
-Workflow
+Overall Workflow
 ========================================================
-Kirsten/Katie
-* Model diagram
-* Merging restoration diagram
+<img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2000px;"/>
+
+
+Developing Restoration Dataset
+========================================================
+<img src="final_pres-figure/restoration_activities.png" alt="Drawing" style="width: 2000px;"/>
+
 
 Data plyring
 ========================================================
