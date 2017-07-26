@@ -344,6 +344,8 @@ jpeg('final_pres-figure/ptplo.jpg', width = 3, height = 3, units = 'in', res = 1
 p
 dev.off()
 
+levs <- c('wq', 'hab1', 'hab2', 'wtr1', 'wtr2')
+
 tmdf1 <- list(
   wq = c(1974, 2016),
   wtr1 = 1996, 
@@ -354,7 +356,7 @@ tmdf1 <- list(
   enframe %>% 
   unnest %>% 
   mutate(
-    name = factor(name, levels = c('wq', 'hab1', 'hab2', 'wtr1', 'wtr2')), 
+    name = factor(name, levels = levs), 
     grp = gsub('[0-9]$', '', name)
   )
   
@@ -382,13 +384,25 @@ tmdf2 <- list(
   enframe %>% 
   unnest %>% 
   mutate(
-    name = factor(name, levels = c('wq', 'hab1', 'hab2', 'wtr1', 'wtr2')), 
+    name = factor(name, levels = levs), 
     grp = gsub('[0-9]$', '', name)
+  )
+
+tmdf3 <- data.frame(
+  Before = c(1974, 1981, 2004, 1991, 1975),
+  After = c(2016, 1991, 2014, 2001, 1985)
+  ) %>% 
+  mutate(
+    name = factor(levs, levels = levs)
   )
 
 p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
   geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) + 
   geom_path(size = 1, lineend = 'butt') + 
+  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = Before), 
+            label = 'Before', vjust = -0.5, size = 3) +
+  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = After), 
+            label = 'After', vjust = -0.5, size = 3) +
   coord_flip() + 
   geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) + 
   theme_bw() + 
@@ -401,7 +415,7 @@ jpeg('final_pres-figure/tmplo2.jpg', width = 7, height = 1.5, units = 'in', res 
 p
 dev.off()
 
-tmdf3 <- list(
+tmdf4 <- list(
   wq = c(1974, 2016),
   wtr1 = c(1991, 2001),
   wtr2 = c(1975, 1985),
@@ -411,14 +425,18 @@ tmdf3 <- list(
   enframe %>% 
   unnest %>% 
   mutate(
-    name = factor(name, levels = c('wq', 'hab1', 'hab2', 'wtr1', 'wtr2')), 
+    name = factor(name, levels = levs), 
     grp = gsub('[0-9]$', '', name), 
     x = factor('wq')
   )
 
 p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
   geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) + 
-  geom_segment(data = tmdf3, aes(x = x, y = value, xend = name, yend = value), linetype = 'dashed') + 
+  geom_segment(data = tmdf4, aes(x = x, y = value, xend = name, yend = value), linetype = 'dashed') + 
+  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = Before), 
+            label = 'Before', vjust = -0.5, size = 3) +
+  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = After), 
+            label = 'After', vjust = -0.5, size = 3) +
   geom_path(size = 1, lineend = 'butt') + 
   coord_flip() + 
   geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) + 
