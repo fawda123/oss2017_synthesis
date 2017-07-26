@@ -18,7 +18,7 @@ cat('By', aut)
 ```
 
 ```
-By Jessica Renee Henkel, Kathryn Ireland, Kirsten Dorans, Ed Sherwood, Marcus Beck, Patricia Varela
+By Patricia Varela, Jessica Renee Henkel, Kirsten Dorans, Ed Sherwood, Marcus Beck, Kathryn Ireland
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -113,88 +113,100 @@ incremental: true
 
 * Can we identify a change in water quality from restoration?
 * What data do we have?
-* Can we *plyr* the data to identify a signal?
-* Can we *plyr* the data as input to a BN?
+* Can we plyr the data to identify a signal?
+* Can we plyr the data as input to a BN?
 
 Data plyring
 ========================================================
 incremental: false
 
 
-Water quality stations and restoration sites
+WQ and restoration sites
 <div align="center">
 <img src="final_pres-figure/clomap1.jpg" style="width: 1000px;">
 </div>
 
 ***
 
-* Can we *plyr* the data to identify a signal?
+* Can we plyr the data to identify a signal?
 * How can continuous water quality be linked to discrete restoration activites?
 
 Data plyring
 ========================================================
 incremental: false
+transition: none
 
-Water quality stations and restoration sites
+WQ and restoration sites
 <div align="center">
 <img src="final_pres-figure/clomap2.jpg" style="width: 1000px;">
 </div>
 
 ***
 
-* Can we *plyr* the data to identify a signal?
+* Can we plyr the data to identify a signal?
 * How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of site type?
+* Consider an effect of restoration **site type**?
 
 Data plyring
 ========================================================
 incremental: false
+transition: none
 
-Water quality stations and restoration sites
+WQ and restoration sites
 <div align="center">
 <img src="final_pres-figure/clomap3.jpg" style="width: 1000px;">
 </div>
 
 ***
 
-* Can we *plyr* the data to identify a signal?
+* Can we plyr the data to identify a signal?
 * How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of site type?
-* Consider distance of sites from water quality stations?
+* Consider an effect of **site type**?
+* Consider **distance** of sites from water quality stations?
 
 Data plyring
 ========================================================
 incremental: false
+transition: none
 
-Water quality stations and restoration sites
+WQ and restoration sites
 <div align="center">
 <img src="final_pres-figure/clomap4.jpg" style="width: 1000px;">
 </div>
 
 ***
 
-* Can we *plyr* the data to identify a signal?
+* Can we plyr the data to identify a signal?
 * How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of site type?
-* Consider distance of sites from water quality stations?
-* Consider a cumulative effect?
+* Consider an effect of **site type**?
+* Consider **distance** of sites from water quality stations?
+* Consider a **cumulative effect**?
 
 Data plyring
 ========================================================
 incremental: false
+transition: none
 
-Water quality stations and restoration sites
+WQ and restoration sites
 <div align="center">
 <img src="final_pres-figure/clomap5.jpg" style="width: 1000px;">
 </div>
 
 ***
 
-* Can we *plyr* the data to identify a signal?
+* Can we plyr the data to identify a signal?
 * How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of site type?
-* Consider distance of sites from water quality stations?
-* Consider a cumulative effect?
+* Consider an effect of **site type**?
+* Consider **distance** of sites from water quality stations?
+* Consider a **cumulative effect**?
+
+Data plyring
+========================================================
+
+WQ and restoration sites
+<div align="center">
+<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+</div>
 
 Bayesian Network
 ========================================================
