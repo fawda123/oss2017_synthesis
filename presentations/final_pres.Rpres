@@ -317,8 +317,13 @@ WQ and restoration sites
 
 Data plyring
 ========================================================
+transition: none
+
 ```{r, results = 'hide'}
-ptplo <- filter(toplo, stat %in% 7 & rnk %in% c(1:2))
+ptplo <- dplyr::filter(toplo, stat %in% 7 & rnk %in% c(1:2)) %>% 
+  mutate(
+    id = factor(id, levels = as.character(id), labels = c('hab1', 'hab2', 'wtr1', 'wtr2'))
+  )
 
 p <- ggplot(ptplo) +
   geom_segment(aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 2) +
@@ -334,11 +339,143 @@ geom_point(aes(x = lon.x, y = lat.x), size = 6, pch = 16, color = 'black', alpha
 jpeg('final_pres-figure/ptplo.jpg', width = 3, height = 3, units = 'in', res = 150)
 p
 dev.off()
+
+tmdf1 <- list(
+  wq = c(1974, 2016),
+  wtr1 = 1996, 
+  wtr2 = 1980, 
+  hab1 = 1986, 
+  hab2 = 2009
+  ) %>%
+  enframe %>% 
+  unnest %>% 
+  mutate(
+    name = factor(name, levels = c('wq', 'hab1', 'hab2', 'wtr1', 'wtr2')), 
+    grp = gsub('[0-9]$', '', name)
+  )
+  
+p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
+  geom_path(size = 1, lineend = 'butt') + 
+  coord_flip() + 
+  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) + 
+  theme_bw() + 
+  theme(line = element_blank(),
+        title = element_blank(),
+        legend.position = 'none'
+        )
+
+jpeg('final_pres-figure/tmplo1.jpg', width = 7, height = 1.5, units = 'in', res = 300)
+p
+dev.off()
+
+tmdf2 <- list(
+  wq = c(1974, 2016),
+  wtr1 = c(1991, 1996, 2001),
+  wtr2 = c(1975, 1980, 1985),
+  hab1 = c(1981, 1986, 1991),
+  hab2 = c(2004, 2009, 2014)
+  ) %>%
+  enframe %>% 
+  unnest %>% 
+  mutate(
+    name = factor(name, levels = c('wq', 'hab1', 'hab2', 'wtr1', 'wtr2')), 
+    grp = gsub('[0-9]$', '', name)
+  )
+
+p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
+  geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) + 
+  geom_path(size = 1, lineend = 'butt') + 
+  coord_flip() + 
+  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) + 
+  theme_bw() + 
+  theme(line = element_blank(),
+        title = element_blank(),
+        legend.position = 'none'
+        )
+
+jpeg('final_pres-figure/tmplo2.jpg', width = 7, height = 1.5, units = 'in', res = 300)
+p
+dev.off()
+
+tmdf3 <- list(
+  wq = c(1974, 2016),
+  wtr1 = c(1991, 2001),
+  wtr2 = c(1975, 1985),
+  hab1 = c(1981, 1991),
+  hab2 = c(2004, 2014)
+  ) %>%
+  enframe %>% 
+  unnest %>% 
+  mutate(
+    name = factor(name, levels = c('wq', 'hab1', 'hab2', 'wtr1', 'wtr2')), 
+    grp = gsub('[0-9]$', '', name), 
+    x = factor('wq')
+  )
+
+p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
+  geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) + 
+  geom_segment(data = tmdf3, aes(x = x, y = value, xend = name, yend = value), linetype = 'dashed') + 
+  geom_path(size = 1, lineend = 'butt') + 
+  coord_flip() + 
+  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) + 
+  theme_bw() + 
+  theme(line = element_blank(),
+        title = element_blank(),
+        legend.position = 'none'
+        )
+
+jpeg('final_pres-figure/tmplo3.jpg', width = 7, height = 1.5, units = 'in', res = 300)
+p
+dev.off()
 ```
-WQ and restoration sites
+WQ and restoration sites: **Spatial match**
+
 <div align="center">
 <img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
 </div>
+
+Data plyring
+========================================================
+transition: none
+
+WQ and restoration sites: **Spatial match**
+<div align="center">
+<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+</div>
+
+WQ and restoration sites: **Temporal match**
+<div align="center">
+<img src="final_pres-figure/tmplo1.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+WQ and restoration sites: **Spatial match**
+<div align="center">
+<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+</div>
+
+WQ and restoration sites: **Temporal match**, **before/after**
+<div align="center">
+<img src="final_pres-figure/tmplo2.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+WQ and restoration sites: **Spatial match**
+<div align="center">
+<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+</div>
+
+WQ and restoration sites: **Temporal match**, **before/after**, **slice**
+<div align="center">
+<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
+</div>
+
 
 Bayesian Network
 ========================================================

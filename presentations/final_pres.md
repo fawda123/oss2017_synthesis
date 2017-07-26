@@ -18,7 +18,7 @@ cat('By', aut)
 ```
 
 ```
-By Patricia Varela, Jessica Renee Henkel, Kirsten Dorans, Ed Sherwood, Marcus Beck, Kathryn Ireland
+By Marcus Beck, Ed Sherwood, Kathryn Ireland, Jessica Renee Henkel, Patricia Varela, Kirsten Dorans
 ```
   
 Deepwater Horizon Settlement Agreement
@@ -202,11 +202,57 @@ WQ and restoration sites
 
 Data plyring
 ========================================================
+transition: none
 
-WQ and restoration sites
+
+WQ and restoration sites: **Spatial match**
+
 <div align="center">
 <img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
 </div>
+
+Data plyring
+========================================================
+transition: none
+
+WQ and restoration sites: **Spatial match**
+<div align="center">
+<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+</div>
+
+WQ and restoration sites: **Temporal match**
+<div align="center">
+<img src="final_pres-figure/tmplo1.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+WQ and restoration sites: **Spatial match**
+<div align="center">
+<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+</div>
+
+WQ and restoration sites: **Temporal match**, **before/after**
+<div align="center">
+<img src="final_pres-figure/tmplo2.jpg" style="width: 2000px;">
+</div>
+
+Data plyring
+========================================================
+transition: none
+
+WQ and restoration sites: **Spatial match**
+<div align="center">
+<img src="final_pres-figure/ptplo.jpg" style="width: 300px;">
+</div>
+
+WQ and restoration sites: **Temporal match**, **before/after**, **slice**
+<div align="center">
+<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
+</div>
+
 
 Bayesian Network
 ========================================================
