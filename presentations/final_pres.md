@@ -3,10 +3,23 @@
 
 Use of prior knowledge to inform restoration projects in estuaries of GOM
 ========================================================
-author: Jessica Renee Henkel, Ed Sherwood, Kathryn Ireland, Kirsten Dorans, Marcus Beck, Patricia Varela
 date: July 28, 2017
 autosize: true
 css: oss.css
+
+
+```r
+# randomize author order
+aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Ireland', 'Ed Sherwood', 'Patricia Varela') %>% 
+  sample %>% 
+  paste(collapse = ', ')
+
+cat('By', aut)
+```
+
+```
+By Kathryn Ireland, Patricia Varela, Jessica Renee Henkel, Ed Sherwood, Marcus Beck, Kirsten Dorans
+```
   
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -61,20 +74,31 @@ Tampa Bay Data Sources
 incremental: false
 
 <div align="center">
-<img src="prop_pres-figure/Fig3_EPCHC_Sample_Sites.png">
+<img src="final_pres-figure/Fig3_EPHC_Sample_Sites.png">
 </div>
 
 ***
 * Rich WQ Monitoring Datatset (1974-)
-* Info on a Variety of Different Restoration Activities
+      * Chlorophyll, salinity, dissolved oxygen, etc.
+      * Depth-integrated
+      * QAQC
+* Time series, monthly step - ~500 obs. per site
+
+Tampa Bay Restoration Sites
+===============
+
+<div align="center">
+<img src="final_pres-figure/restmap.tif" style="width: 1000px;">
+</div>
+
+***
+* Restoration sites in Tampa Bay, watershed
       * Habitat Establishment
       * Habitat Enhancement
       * Habitat Protection
       * Stormwater Controls
       * Point Source Controls
-
-Tampa Bay Restoration Sites
-===============
+* 571 projects, 1971 - 2016
 
 
 Workflow
@@ -94,18 +118,90 @@ incremental: true
 
 Data plyring
 ========================================================
-incremental: true
+incremental: false
 
-Water quality data: 40 years, monthly, 45 stations
 
+Water quality stations and restoration sites
+<div align="center">
+<img src="final_pres-figure/clomap1.tif" style="width: 1000px;">
+</div>
+
+***
+
+* Can we *plyr* the data to identify a signal?
+* How can continuous water quality be linked to discrete restoration activites?
 
 Data plyring
 ========================================================
+incremental: false
 
-Water quality data: 40 years, monthly, 45 stations
+Water quality stations and restoration sites
+<div align="center">
+<img src="final_pres-figure/clomap2.tif" style="width: 1000px;">
+</div>
 
+***
 
+* Can we *plyr* the data to identify a signal?
+* How can continuous water quality be linked to discrete restoration activites?
+* Consider an effect of site type?
 
-```
-Error in FUN(X[[i]], ...) : object 'type\ngroup' not found
-```
+Data plyring
+========================================================
+incremental: false
+
+Water quality stations and restoration sites
+<div align="center">
+<img src="final_pres-figure/clomap3.tif" style="width: 1000px;">
+</div>
+
+***
+
+* Can we *plyr* the data to identify a signal?
+* How can continuous water quality be linked to discrete restoration activites?
+* Consider an effect of site type?
+* Consider distance of sites from water quality stations?
+
+Data plyring
+========================================================
+incremental: false
+
+Water quality stations and restoration sites
+<div align="center">
+<img src="final_pres-figure/clomap4.tif" style="width: 1000px;">
+</div>
+
+***
+
+* Can we *plyr* the data to identify a signal?
+* How can continuous water quality be linked to discrete restoration activites?
+* Consider an effect of site type?
+* Consider distance of sites from water quality stations?
+* Consider a cumulative effect?
+
+Data plyring
+========================================================
+incremental: false
+
+Water quality stations and restoration sites
+<div align="center">
+<img src="final_pres-figure/clomap5.tif" style="width: 1000px;">
+</div>
+
+***
+
+* Can we *plyr* the data to identify a signal?
+* How can continuous water quality be linked to discrete restoration activites?
+* Consider an effect of site type?
+* Consider distance of sites from water quality stations?
+* Consider a cumulative effect?
+
+Bayesian Network
+========================================================
+Patricia
+* Specifics of BN
+* Outcomes/interpretation/applications
+
+Conclusion
+========================================================
+* Next steps (all)
