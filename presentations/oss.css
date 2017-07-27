@@ -367,3 +367,9 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+<style>
+  .vspace {
+     margin-bottom: 3cm;
+  }
+</style>

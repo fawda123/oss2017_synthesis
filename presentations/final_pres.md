@@ -6,7 +6,7 @@ Use of prior knowledge to inform restoration projects in estuaries of GOM
 date: July 28, 2017
 autosize: true
 css: oss.css
-
+transition: none
 
 
 ```r
@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Ed Sherwood, Patricia Varela, Marcus Beck, Kathryn Ireland, Kirsten Dorans, Jessica Renee Henkel
+By Patricia Varela, Jessica Renee Henkel, Marcus Beck, Kathryn Ireland, Ed Sherwood, Kirsten Dorans
   
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -32,35 +32,50 @@ Cumulative Effects of Restoration Activities?
 ========================================================
 * Despite considerable **investments** in aquatic ecosystem restoration, consistent and comprehensive **effectiveness evaluation** continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
 
+<img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
 
-Cumulative Effects of Restoration Activities?
+Unique Problems --> Unique Solutions
 ========================================================
+<img src="final_pres-figure/SByBayes_Group.jpg" alt="Drawing" style="width: 2000px;"/>
 
-<img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
 
+Bayesian Networks to support Decision-Making
+========================================================
+* Graphical modeling method based on influence diagrams.
+
+* Represents the cause and effect dependencies of a process.
+
+* Used for decision making and artificial intelligence. [Korb and Nicholson, 2004]
+
+<img src="final_pres-figure/SimpleNetwork.png" alt="Drawing" style="width: 200px;"/>
+
+<<<<<<< HEAD
 * Vision to make it portable
-* Why Bayesian networks
+
+Bayesian networks
+========================================================
+* Graphical modeling method based on influence diagrams.
+* Represents the cause and effect dependencies of a process.
+* Nodes are probability distributions and connectors are dependencies.
+* Reasoning under uncertainty. 
+* Used for decision making and artificial intelligence.
+[Korb and Nicholson, 2004]
 
 
 Benefits
 =============
-
-* A general and flexible framework that can be applied to unique locations and is not limited by data availability
-* Explicit quantification of uncertainty and model updates with new data
-* More focused restoration towards specific regional issues
-* Improved ability to predict outcomes of proposed restoration projects
-
+=======
+>>>>>>> 23f1fba0a7d40615df630cbe76e85c0b54c0e5af
 
 A Network
 ========================================================
 * <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html>
 
-
 Tampa Bay was gross
 ========================================================
 <div align="center">
 <div align="left">
-<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 600px;"/>
+<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 640px;"/>
 </div>
 ***
 
@@ -82,10 +97,38 @@ Tampa Bay is a lot better now
 </div>
 </div>
 
-But how much less gross??
+Cumulative Effects of Restoration Activities?
 ========================================================
-![](prop_pres-figure/tampa_bay_restoration.jpg)
+<img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
+Short-tem Goals
+=============
+*  Apply a bayesian decision network as a support tool that incorporates:
+    * Expert knowledge of restoration activities
+    * Empirical observations
+    * Theoretical framework 
+* Test hypotheses about the effects of different types of restoration activities on water quality in Tampa Bay
+
+Long-term Goals
+=============
+* Develop a general and flexible framework that can be applied to unique locations and is not limited by data availability
+* Explicit quantification of uncertainty and model updates with new data
+* More focused restoration towards specific regional issues
+* Improved ability to predict outcomes of proposed restoration projects
+
+Other goals?
+========================================================
+incremental: true
+
+<div align="center" class="vspace"><b><i>
+Can we use disparate data to prioritize future restoration projects aimed at improving water quality?
+</i></b></div>
+
+* **Synthesize** data in space and time to evaluate cumulative effects of restoration projcts
+
+* **Apply** a Bayesian Decision Network with empirical observations to evaluate likelihood of potential outcomes
+
+* **Expand** the scope of analysis to alternative systems using a generalized framework
 
 Water Quality Monitoring in Tampa Bay 
 ========================================================
@@ -103,13 +146,13 @@ incremental: false
 * Time series, monthly step - ~500 obs. per site
 * Available as an EXCEL spreadsheet <ftp://ftp.epchc.org>
 
-Tampa Bay "Restoration" Sites: Various Sources of Info
+Tampa Bay Restoration Sites: Various Sources of Info
 ===============
 incremental: false
 
-* "Softer" Restoration -> Local ordinances (e.g. ferilizer restrictions), Education, etc.
-* "Soft" Restoration -> Habitat Creation, Enhancement and Management/Protection Measures
-* "Hard" Restoration -> Stormwater BMPs, Point Source Reductions through Time, Regulations
+* **"Softer" Restoration** -> Local ordinances (e.g. ferilizer restrictions), Education, etc.
+* **"Soft" Restoration** -> Habitat Creation, Enhancement and Management/Protection Measures
+* **"Hard" Restoration** -> Stormwater BMPs, Point Source Reductions through Time, Regulations
 
 Tampa Bay Restoration Site Info: First Source
 ===============
@@ -141,8 +184,8 @@ incremental: false
 Other Option
 ==============
 
-<div align="center">
-<img src="final_pres-figure/restmap.jpg" style="width: 1000px;">
+<div astyle="position: relative;">
+<img src="final_pres-figure/restmap.jpg"style="position: absolute;"/>
 </div>
 
 ***
@@ -163,128 +206,6 @@ Developing Restoration Dataset
 ========================================================
 <img src="final_pres-figure/restoration_activities.png" alt="Drawing" style="width: 2500px;"/>
 
-Developing Restoration Dataset
-========================================================
-* Water Treatment Projects
-  * Two Raw Datasets: <http://apdb.tbeptech.org>
-    * Descriptions of All WT Projects
-    * Names/location of Completed WT Projects
-  * dplyr:  combine dataset (*left_join*), subset (*filter*) to subbasins of interest, find WT projects not listed as complete for further investigation (*anti-join*)
-  
-
-```
-# A tibble: 6 x 19
-  HeaderID                                 Project_Name      Bay_Segment
-     <int>                                        <chr>            <chr>
-1        8     Delany Creek Wetland Restoration Project Hillsborough Bay
-2       10               Cone Ranch Restoration Project Hillsborough Bay
-3       11       29th or 30th Street Outfall/ Mckay Bay Hillsborough Bay
-4       14              Palma Ceia Area Stormwater Pond Hillsborough Bay
-5       15                North Tampa Pond Enlargements Hillsborough Bay
-6       19 East Lake (Alum) Stormwater Retrofit Project Hillsborough Bay
-# ... with 16 more variables: Lead_Entity <chr>, Completion_Date <int>,
-#   TP_Reduction_lbs_yr <dbl>, TN_Reduction_lbs_yr <dbl>,
-#   TSS_Reduction_lbs_yr <int>, ProjectName <chr>,
-#   OngoingInitiation <int>, DiscontinuedDate <int>, CompletionDate <int>,
-#   ActualProjectCost <chr>, FundingSource <chr>,
-#   ProjectDescriptionText <chr>, NonPointProject <int>,
-#   PointProject <int>, ProjectLatitude <dbl>, ProjectLongitude <dbl>
-```
-
-
-Developing Restoration Dataset
-========================================================
-* Water Treatment Projects
-  * Manual categorization of WT projects by technique = Categorized WT Projects
-
-  * Broad classification: 5 unique WT project activities
-
-```
-[1] "Nonpoint_Source"       "Habitat_Enhancement"   "Habitat_Establishment"
-[4] "Habitat_Protection"    "Point_Source"         
-```
-
-Developing Restoration Dataset
-========================================================
-* Water Treatment Projects
-  * Finer classification: 26 unique WT project technologies
-
-```
- [1] "BMP_Wetland_Treatment"  "Hydrologic_Restoration"
- [3] "BMP_Baffle_Box"         "BMP_Stormwater_Pond"   
- [5] "FW_Wetlands"            "BMP_Management"        
- [7] "Acquisition"            "BMP_On_Site"           
- [9] "PS_Treatment"           "Mangroves"             
-[11] "Send_to_WWTP"           "BMP_Alum_Treatment"    
-[13] "BMP_Treatment_Train"    "Uplands"               
-[15] "Dredging"               "Education"             
-[17] "Increase_Reuse"         "Management"            
-[19] "Atmospheric_Deposition" "Protection_Management" 
-[21] "Regulation"             "Exotic_Control"        
-[23] "Saltmarsh"              "BMP_CDS_Unit"          
-[25] "BMP_Agricultural"       "Street_Sweeping"       
-```
-
-Developing Restoration Dataset
-========================================================
-* Habitat Restoration Projects
-  * Raw dataset: <http://http://maps.wateratlas.usf.edu/tampabay/>
-  * Manual categorization of Habitat Restoration projects by technique = Categorized Habitation Restoration Projects
-  * Broad classification: 3 unique WT project activities
-
-```
-[1] "Habitat_Enhancement"   "Habitat_Establishment" "Habitat_Protection"   
-```
-
-Developing Restoration Dataset
-========================================================
-* Habitat Restoration Projects  
-  * Finer classification: 9 unique habitat restoration technologies
-
-```
-[1] "Hydrologic_Restoration" "Exotic_Control"        
-[3] "FW_Wetlands"            "Mangroves"             
-[5] "Saltmarsh"              "Protection_Management" 
-[7] "Seagrass_Habitat"       "Oyster_Habitat"        
-[9] "Acquisition"           
-```
-
-Developing Restoration Dataset
-========================================================
-* Merge the WT Projects with the Habitat Restoration Projects
-   * *filter* on lat/lon, separate into tables of activity location vs tables of activity & technology, combine WT/Habitat location tables, combine WT/Habitat descriptive tables
-  * All Restoration Activities
-    * 5 types of project activities
-
-```
-[1] "HABITAT_ENHANCEMENT"   "HABITAT_ESTABLISHMENT" "HABITAT_PROTECTION"   
-[4] "NONPOINT_SOURCE"       "POINT_SOURCE"         
-```
- 
-Developing Restoration Dataset
-========================================================
-* 28 types of project technologies
-
-    
-
-```
- [1] "HYDROLOGIC_RESTORATION" "EXOTIC_CONTROL"        
- [3] "FW_WETLANDS"            "MANGROVES"             
- [5] "SALTMARSH"              "PROTECTION_MANAGEMENT" 
- [7] "SEAGRASS_HABITAT"       "OYSTER_HABITAT"        
- [9] "ACQUISITION"            "BMP_WETLAND_TREATMENT" 
-[11] "BMP_BAFFLE_BOX"         "BMP_STORMWATER_POND"   
-[13] "BMP_MANAGEMENT"         "BMP_ON_SITE"           
-[15] "PS_TREATMENT"           "SEND_TO_WWTP"          
-[17] "BMP_ALUM_TREATMENT"     "BMP_TREATMENT_TRAIN"   
-[19] "UPLANDS"                "DREDGING"              
-[21] "EDUCATION"              "INCREASE_REUSE"        
-[23] "MANAGEMENT"             "ATMOSPHERIC_DEPOSITION"
-[25] "REGULATION"             "BMP_CDS_UNIT"          
-[27] "BMP_AGRICULTURAL"       "STREET_SWEEPING"       
-```
-
-
 
 Data plyring
 ========================================================
@@ -298,7 +219,6 @@ incremental: true
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 
 WQ and restoration sites
@@ -314,7 +234,6 @@ WQ and restoration sites
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 WQ and restoration sites
 <div align="center">
@@ -330,7 +249,6 @@ WQ and restoration sites
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 WQ and restoration sites
 <div align="center">
@@ -347,7 +265,6 @@ WQ and restoration sites
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 WQ and restoration sites
 <div align="center">
@@ -365,7 +282,6 @@ WQ and restoration sites
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 WQ and restoration sites
 <div align="center">
@@ -382,7 +298,6 @@ WQ and restoration sites
 
 Data plyring
 ========================================================
-transition: none
 
 
 WQ and restoration sites: **Spatial match**
@@ -393,7 +308,6 @@ WQ and restoration sites: **Spatial match**
 
 Data plyring
 ========================================================
-transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
@@ -407,7 +321,6 @@ WQ and restoration sites: **Temporal match**
 
 Data plyring
 ========================================================
-transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
@@ -421,7 +334,6 @@ WQ and restoration sites: **Temporal match**, **before/after**
 
 Data plyring
 ========================================================
-transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
@@ -435,7 +347,6 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **one** water quality station matched to **many**
 restoration sites...
@@ -459,7 +370,6 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **one** water quality station matched to **many**
 restoration sites...
@@ -482,7 +392,6 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **many** water quality station matched to **many**
 restoration sites...
@@ -513,10 +422,8 @@ restoration sites...
 20    11 hab_bef wtr_bef  8.264508
 ```
 
-
 Data plyring
 ========================================================
-transition: none
 
 
 What do the data look like? For **many** water quality station matched to **many**
@@ -527,7 +434,6 @@ restoration sites...
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
@@ -537,7 +443,6 @@ restoration sites...
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
@@ -569,7 +474,6 @@ Conditional distributions on **two-levels**:
 
 Data plyring
 ========================================================
-transition: none
 
 
 Conditional distributions on **three-levels**:
@@ -580,7 +484,6 @@ Conditional distributions on **three-levels**:
 
 Data plyring
 ========================================================
-transition: none
 
 Conditional distributions on **three-levels**:
 
@@ -590,7 +493,6 @@ Conditional distributions on **three-levels**:
 
 Data plyring
 ========================================================
-transition: none
 
 Conditional distributions on **three-levels**:
 
@@ -603,16 +505,18 @@ Bayesian Network
 incremental: true
 
 * **Water quality** (chlorophyll) responds to **restoration** with varying effects by **salinity**
+
 * In the **frequentist** framework - mean chlorophyll varies given treatment
 
 $$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
 
 * In the **Bayesian** framework - probability of an event depends on occurrence of other events 
 
-$$P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
+$$ P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
 
 Bayesian Network
 ========================================================
+incremental: true
 
 What is the probability of low/medium/high chlorophyll given other events?
 
@@ -620,17 +524,49 @@ What is the probability of low/medium/high chlorophyll given other events?
 * Does it differ by **salinity** as a natural covariate?
 * Is the change in agreement with expectation?
 
-BN lets us evaluate **potential outcomes** based on **conditional distributions**
+BN lets us evaluate likelihood of **potential outcomes** given **conditional distributions**
 
-Conclusion
+Guiding Restoration Decision Making?
 ========================================================
-* Next steps (all)
 
-Acknowledgments
+<img src="final_pres-figure/Idealic_Bayesian_Networks1.jpg" alt="Drawing" style="width: 2000px;"/>
+
+
+Guiding Restoration Decision Making?
 ========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks2.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks3.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks4.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks5.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Lessons Learned and Next Steps:
+========================================================
+rPres is for masochists
 
 
 <div align="center">
 <img src="final_pres-figure/hex.png" style="width: 300px;">
 </div>
+
+Low-tech Data Synthesis
+========================================================
+
+<img src="final_pres-figure/Whiteboard_graphic.jpg" alt="Drawing" style="width: 800px;"/>
+
+Acknowledgments
+========================================================
+
 

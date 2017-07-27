@@ -36,7 +36,7 @@ Use of prior knowledge to inform restoration projects in estuaries of GOM
 date: July 28, 2017
 autosize: true
 css: oss.css
-
+transition: none
 
 ```{r echo = TRUE}
 # randomize author order
@@ -61,23 +61,22 @@ Cumulative Effects of Restoration Activities?
 ========================================================
 * Despite considerable **investments** in aquatic ecosystem restoration, consistent and comprehensive **effectiveness evaluation** continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
 
+<img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
 
-Cumulative Effects of Restoration Activities?
+Unique Problems --> Unique Solutions
 ========================================================
-
-<img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
-
-* Vision to make it portable
-* Why Bayesian networks
+<img src="final_pres-figure/SByBayes_Group.jpg" alt="Drawing" style="width: 2000px;"/>
 
 
-Benefits
-=============
+Bayesian Networks to support Decision-Making
+========================================================
+* Graphical modeling method based on influence diagrams.
 
-* A general and flexible framework that can be applied to unique locations and is not limited by data availability
-* Explicit quantification of uncertainty and model updates with new data
-* More focused restoration towards specific regional issues
-* Improved ability to predict outcomes of proposed restoration projects
+* Represents the cause and effect dependencies of a process.
+
+* Used for decision making and artificial intelligence. [Korb and Nicholson, 2004]
+
+<img src="final_pres-figure/SimpleNetwork.png" alt="Drawing" style="width: 200px;"/>
 
 ```{r}
 #Ed 
@@ -87,12 +86,11 @@ A Network
 ========================================================
 * <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html>
 
-
 Tampa Bay was gross
 ========================================================
 <div align="center">
 <div align="left">
-<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 600px;"/>
+<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 640px;"/>
 </div>
 ***
 
@@ -114,10 +112,38 @@ Tampa Bay is a lot better now
 </div>
 </div>
 
-But how much less gross??
+Cumulative Effects of Restoration Activities?
 ========================================================
-![](prop_pres-figure/tampa_bay_restoration.jpg)
+<img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
+Short-tem Goals
+=============
+*  Apply a bayesian decision network as a support tool that incorporates:
+    * Expert knowledge of restoration activities
+    * Empirical observations
+    * Theoretical framework 
+* Test hypotheses about the effects of different types of restoration activities on water quality in Tampa Bay
+
+Long-term Goals
+=============
+* Develop a general and flexible framework that can be applied to unique locations and is not limited by data availability
+* Explicit quantification of uncertainty and model updates with new data
+* More focused restoration towards specific regional issues
+* Improved ability to predict outcomes of proposed restoration projects
+
+Other goals?
+========================================================
+incremental: true
+
+<div align="center" class="vspace"><b><i>
+Can we use disparate data to prioritize future restoration projects aimed at improving water quality?
+</i></b></div>
+
+* **Synthesize** data in space and time to evaluate cumulative effects of restoration projcts
+
+* **Apply** a Bayesian Decision Network with empirical observations to evaluate likelihood of potential outcomes
+
+* **Expand** the scope of analysis to alternative systems using a generalized framework
 
 Water Quality Monitoring in Tampa Bay 
 ========================================================
@@ -135,13 +161,13 @@ incremental: false
 * Time series, monthly step - ~500 obs. per site
 * Available as an EXCEL spreadsheet <ftp://ftp.epchc.org>
 
-Tampa Bay "Restoration" Sites: Various Sources of Info
+Tampa Bay Restoration Sites: Various Sources of Info
 ===============
 incremental: false
 
-* "Softer" Restoration -> Local ordinances (e.g. ferilizer restrictions), Education, etc.
-* "Soft" Restoration -> Habitat Creation, Enhancement and Management/Protection Measures
-* "Hard" Restoration -> Stormwater BMPs, Point Source Reductions through Time, Regulations
+* **"Softer" Restoration** -> Local ordinances (e.g. ferilizer restrictions), Education, etc.
+* **"Soft" Restoration** -> Habitat Creation, Enhancement and Management/Protection Measures
+* **"Hard" Restoration** -> Stormwater BMPs, Point Source Reductions through Time, Regulations
 
 Tampa Bay Restoration Site Info: First Source
 ===============
@@ -188,8 +214,8 @@ jpeg('final_pres-figure/restmap.jpg', width = 4, height = 6, units = 'in', res =
 p
 dev.off()
 ```
-<div align="center">
-<img src="final_pres-figure/restmap.jpg" style="width: 1000px;">
+<div astyle="position: relative;">
+<img src="final_pres-figure/restmap.jpg"style="position: absolute;"/>
 </div>
 
 ***
@@ -299,7 +325,6 @@ incremental: true
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 ```{r, echo = F, results = 'hide'}
 ## 
@@ -400,7 +425,6 @@ WQ and restoration sites
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 WQ and restoration sites
 <div align="center">
@@ -416,7 +440,6 @@ WQ and restoration sites
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 WQ and restoration sites
 <div align="center">
@@ -433,7 +456,6 @@ WQ and restoration sites
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 WQ and restoration sites
 <div align="center">
@@ -451,7 +473,6 @@ WQ and restoration sites
 Data plyring
 ========================================================
 incremental: false
-transition: none
 
 WQ and restoration sites
 <div align="center">
@@ -468,7 +489,6 @@ WQ and restoration sites
 
 Data plyring
 ========================================================
-transition: none
 
 ```{r, results = 'hide'}
 ptplo <- dplyr::filter(toplo, stat %in% 7 & rnk %in% c(1:2)) %>% 
@@ -607,7 +627,6 @@ WQ and restoration sites: **Spatial match**
 
 Data plyring
 ========================================================
-transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
@@ -621,7 +640,6 @@ WQ and restoration sites: **Temporal match**
 
 Data plyring
 ========================================================
-transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
@@ -635,7 +653,6 @@ WQ and restoration sites: **Temporal match**, **before/after**
 
 Data plyring
 ========================================================
-transition: none
 
 WQ and restoration sites: **Spatial match**
 <div align="center">
@@ -649,7 +666,6 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **one** water quality station matched to **many**
 restoration sites...
@@ -666,7 +682,6 @@ datex
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **one** water quality station matched to **many**
 restoration sites...
@@ -683,7 +698,6 @@ datex
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **many** water quality station matched to **many**
 restoration sites...
@@ -691,10 +705,8 @@ restoration sites...
 head(chlchg, 20)
 ```
 
-
 Data plyring
 ========================================================
-transition: none
 ```{r, echo = FALSE, results = 'hide'}
 toplo <- chlchg
 lab <- expression(paste("Chl-a (", italic(mu), "g ", L^-1, ")"))
@@ -741,7 +753,6 @@ restoration sites...
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
@@ -751,7 +762,6 @@ restoration sites...
 
 Data plyring
 ========================================================
-transition: none
 
 What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
@@ -783,7 +793,6 @@ Conditional distributions on **two-levels**:
 
 Data plyring
 ========================================================
-transition: none
 
 ```{r, results = 'hide'}
 toplo <- chlcdt %>% 
@@ -846,7 +855,6 @@ Conditional distributions on **three-levels**:
 
 Data plyring
 ========================================================
-transition: none
 
 Conditional distributions on **three-levels**:
 
@@ -856,7 +864,6 @@ Conditional distributions on **three-levels**:
 
 Data plyring
 ========================================================
-transition: none
 
 Conditional distributions on **three-levels**:
 
@@ -869,16 +876,18 @@ Bayesian Network
 incremental: true
 
 * **Water quality** (chlorophyll) responds to **restoration** with varying effects by **salinity**
+
 * In the **frequentist** framework - mean chlorophyll varies given treatment
 
 $$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
 
 * In the **Bayesian** framework - probability of an event depends on occurrence of other events 
 
-$$P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
+$$ P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
 
 Bayesian Network
 ========================================================
+incremental: true
 
 What is the probability of low/medium/high chlorophyll given other events?
 
@@ -886,14 +895,37 @@ What is the probability of low/medium/high chlorophyll given other events?
 * Does it differ by **salinity** as a natural covariate?
 * Is the change in agreement with expectation?
 
-BN lets us evaluate **potential outcomes** based on **conditional distributions**
+BN lets us evaluate likelihood of **potential outcomes** given **conditional distributions**
 
-Conclusion
+Guiding Restoration Decision Making?
 ========================================================
-* Next steps (all)
 
-Acknowledgments
+<img src="final_pres-figure/Idealic_Bayesian_Networks1.jpg" alt="Drawing" style="width: 2000px;"/>
+
+
+Guiding Restoration Decision Making?
 ========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks2.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks3.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks4.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks5.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Lessons Learned and Next Steps:
+========================================================
+rPres is for masochists
 ```{r eval = FALSE}
 library(hexSticker)
 
@@ -932,4 +964,13 @@ sticker(p, package="Death by Bayes", s_height = 1, s_width = 1, s_x = 1, s_y = 0
 <div align="center">
 <img src="final_pres-figure/hex.png" style="width: 300px;">
 </div>
+
+Low-tech Data Synthesis
+========================================================
+
+<img src="final_pres-figure/Whiteboard_graphic.jpg" alt="Drawing" style="width: 800px;"/>
+
+Acknowledgments
+========================================================
+
 
