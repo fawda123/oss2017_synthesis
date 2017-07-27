@@ -250,6 +250,8 @@ salchg <- select(allchg, stat, hab, wtr, salev, saval)
 save(salchg, file = 'data/salchg.RData', compress = 'xz')
 
 chlcdt <- get_cdt(allchg, 'hab', 'wtr', 'salev')
+save(chlcdt, file = 'data/chlcdt.RData', compress = 'xz')
+
 chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'hab', 'wtr', 'salev')
 chlbrk %>% 
   print(n = nrow(.))
