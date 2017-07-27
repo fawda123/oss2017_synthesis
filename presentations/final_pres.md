@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Marcus Beck, Patricia Varela, Kathryn Ireland, Ed Sherwood, Kirsten Dorans, Jessica Renee Henkel
+By Patricia Varela, Kirsten Dorans, Jessica Renee Henkel, Kathryn Ireland, Ed Sherwood, Marcus Beck
   
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -503,3 +503,12 @@ BN lets us evaluate **potential outcomes** based on **conditional distributions*
 Conclusion
 ========================================================
 * Next steps (all)
+
+Acknowledgments
+========================================================
+
+
+<div align="center">
+<img src="final_pres-figure/hex.png" style="width: 300px;">
+</div>
+

@@ -815,3 +815,45 @@ BN lets us evaluate **potential outcomes** based on **conditional distributions*
 Conclusion
 ========================================================
 * Next steps (all)
+
+Acknowledgments
+========================================================
+```{r eval = FALSE}
+library(hexSticker)
+
+data(chlcdt)
+lab <- expression(paste("Chl-a (", italic(mu), "g ", L^-1, ")"))
+
+toplo2 <- chlcdt %>% 
+  select(hab, wtr, salev, prd) %>% 
+  unnest %>% 
+  rename(
+    Salinity = salev
+  ) %>% 
+  mutate(
+    Salinity = factor(Salinity, levels = c('lo', 'md', 'hi'))
+  )
+
+
+p <- ggplot(toplo2) + 
+  geom_line(aes(x = cval, y = cumest, colour = Salinity, group = Salinity)) + 
+  facet_grid(hab ~ wtr) + 
+  theme_bw() + 
+  scale_x_continuous(lab) + 
+  scale_y_continuous('Density') + 
+  theme_void() + 
+  theme(
+    legend.position = 'none',
+    strip.text.x = element_blank(),
+    strip.text.y = element_blank()
+    )
+
+
+sticker(p, package="Death by Bayes", s_height = 1, s_width = 1, s_x = 1, s_y = 0.75, 
+        filename="presentations/final_pres-figure/hex.png", p_size = 16, h_color = 'red', h_fill = 'lightgrey')
+```
+
+<div align="center">
+<img src="final_pres-figure/hex.png" style="width: 300px;">
+</div>
+
