@@ -49,6 +49,23 @@ Bayesian Networks to support Decision-Making
 
 <img src="final_pres-figure/SimpleNetwork.png" alt="Drawing" style="width: 200px;"/>
 
+<<<<<<< HEAD
+* Vision to make it portable
+
+Bayesian networks
+========================================================
+* Graphical modeling method based on influence diagrams.
+* Represents the cause and effect dependencies of a process.
+* Nodes are probability distributions and connectors are dependencies.
+* Reasoning under uncertainty. 
+* Used for decision making and artificial intelligence.
+[Korb and Nicholson, 2004]
+
+
+Benefits
+=============
+=======
+>>>>>>> 23f1fba0a7d40615df630cbe76e85c0b54c0e5af
 
 A Network
 ========================================================
