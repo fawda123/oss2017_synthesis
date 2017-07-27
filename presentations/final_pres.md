@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Kirsten Dorans, Jessica Renee Henkel, Patricia Varela, Ed Sherwood, Kathryn Ireland, Marcus Beck
+By Patricia Varela, Jessica Renee Henkel, Marcus Beck, Kathryn Ireland, Ed Sherwood, Kirsten Dorans
   
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -32,13 +32,27 @@ Cumulative Effects of Restoration Activities?
 ========================================================
 * Despite considerable **investments** in aquatic ecosystem restoration, consistent and comprehensive **effectiveness evaluation** continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
 
-<img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
+<img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
+
+Unique Problems --> Unique Solutions
+========================================================
+<img src="final_pres-figure/SByBayes_Group.jpg" alt="Drawing" style="width: 2000px;"/>
+
+
+Bayesian Networks to support Decision-Making
+========================================================
+* Graphical modeling method based on influence diagrams.
+
+* Represents the cause and effect dependencies of a process.
+
+* Used for decision making and artificial intelligence. [Korb and Nicholson, 2004]
+
+<img src="final_pres-figure/SimpleNetwork.png" alt="Drawing" style="width: 200px;"/>
 
 
 A Network
 ========================================================
 * <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html>
-
 
 Tampa Bay was gross
 ========================================================
@@ -66,7 +80,26 @@ Tampa Bay is a lot better now
 </div>
 </div>
 
-But how much less gross and why??
+Cumulative Effects of Restoration Activities?
+========================================================
+<img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
+
+Short-tem Goals
+=============
+*  Apply a bayesian decision network as a support tool that incorporates:
+    * Expert knowledge of restoration activities
+    * Empirical observations
+    * Theoretical framework 
+* Test hypotheses about the effects of different types of restoration activities on water quality in Tampa Bay
+
+Long-term Goals
+=============
+* Develop a general and flexible framework that can be applied to unique locations and is not limited by data availability
+* Explicit quantification of uncertainty and model updates with new data
+* More focused restoration towards specific regional issues
+* Improved ability to predict outcomes of proposed restoration projects
+
+Other goals?
 ========================================================
 incremental: true
 
@@ -79,8 +112,6 @@ Can we use disparate data to prioritize future restoration projects aimed at imp
 * **Apply** a Bayesian Decision Network with empirical observations to evaluate likelihood of potential outcomes
 
 * **Expand** the scope of analysis to alternative systems using a generalized framework
-
-
 
 Water Quality Monitoring in Tampa Bay 
 ========================================================
@@ -478,15 +509,47 @@ What is the probability of low/medium/high chlorophyll given other events?
 
 BN lets us evaluate likelihood of **potential outcomes** given **conditional distributions**
 
-Conclusion
+Guiding Restoration Decision Making?
 ========================================================
-* Next steps (all)
 
-Acknowledgments
+<img src="final_pres-figure/Idealic_Bayesian_Networks1.jpg" alt="Drawing" style="width: 2000px;"/>
+
+
+Guiding Restoration Decision Making?
 ========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks2.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks3.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks4.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks5.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Lessons Learned and Next Steps:
+========================================================
+rPres is for masochists
 
 
 <div align="center">
 <img src="final_pres-figure/hex.png" style="width: 300px;">
 </div>
+
+Low-tech Data Synthesis
+========================================================
+
+<img src="final_pres-figure/Whiteboard_graphic.jpg" alt="Drawing" style="width: 800px;"/>
+
+Acknowledgments
+========================================================
+
 
