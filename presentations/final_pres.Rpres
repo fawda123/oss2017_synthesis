@@ -37,14 +37,14 @@ date: July 28, 2017
 autosize: true
 css: oss.css
 
+
 ```{r echo = TRUE}
 # randomize author order
 aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Ireland', 'Ed Sherwood', 'Patricia Varela') %>% 
   sample %>% 
   paste(collapse = ', ')
-
-cat('By', aut)
 ```
+`r paste('By', aut)`
   
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -52,12 +52,13 @@ Deepwater Horizon Settlement Agreement
 
 Over $10B in Potential Restoration Activities
 ========================================================
-<img src="final_pres-figure/RESTORE_Funding_chart.jpg" alt="Drawing" style="width: 800px;"/>
-Graphic: eli-ocean.org
+<img src="final_pres-figure/RESTORE_Funding_chart.jpg" alt="Drawing" style="width: 700px;"/>
+
+<font size="3">Graphic: eli-ocean.org</font>
 
 Cumulative Effects of Restoration Activities?
 ========================================================
-*Despite considerable investments in aquatic ecosystem restoration consistent and comprehensive effectiveness evaluation continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
+* Despite considerable investments in aquatic ecosystem restoration consistent and comprehensive effectiveness evaluation continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
 
 
 Cumulative Effects of Restoration Activities?
