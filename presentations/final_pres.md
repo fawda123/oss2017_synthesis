@@ -21,7 +21,17 @@ Cumulative Effects of Restoration Activities?
 
 
 * Vision to make it portable
-* Why Bayesian networks
+
+Bayesian networks
+========================================================
+* Graphical modeling method based on influence diagrams.
+* Represents the cause and effect dependencies of a process.
+* Nodes are probability distributions and connectors are dependencies.
+* Reasoning under uncertainty. 
+* Used for decision making and artificial intelligence.
+[Korb and Nicholson, 2004]
+
+
 Benefits
 =============
 
