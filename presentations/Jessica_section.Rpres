@@ -31,31 +31,66 @@ Unique Problems --> Unique Solutions
 
 Bayesian Networks to support Decision-Making
 ========================================================
-<div\>
 * Graphical modeling method based on influence diagrams.
+
 * Represents the cause and effect dependencies of a process.
-* Nodes are probability distributions and connectors are dependencies.
+
 * Used for decision making and artificial intelligence. [Korb and Nicholson, 2004]
 
-<div\>
-<img src="final_pres-figure/SimpleNetwork.png" alt="Drawing" style="width: 300px;"/>
+
+<img src="final_pres-figure/SimpleNetwork.png" alt="Drawing" style="width: 200px;"/>
+
+
+Tampa Bay was gross
+========================================================
+<div align="center">
+<div align="left">
+<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 600px;"/>
+</div>
+***
+
+<div align="right">
+<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 600px;"/>
+</div>
+</div>
+
+Tampa Bay is a lot better now
+========================================================
+<div align="center">
+<div align="left">
+<img src="final_pres-figure/pre_rest_sh.jpg" alt="Drawing" style="width: 800px;"/>
+</div>
+***
+
+<div align="right">
+<img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 800px;"/>
+</div>
+</div>
+
+But how much less gross??
+========================================================
+![](prop_pres-figure/tampa_bay_restoration.jpg)
 
 Cumulative Effects of Restoration Activities?
 ========================================================
 <img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
-Long-Term Project Goals
+Short-tem Goals
 =============
+*  Apply a bayesian decision network as a support tool that incorporates:
+    * Expert knowledge of restoration activities
+    * Empirical observations
+    * Theoretical framework 
+* Test hypotheses about the effects of different types of restoration activities on water quality in Tampa Bay
 
-* Development of a general and flexible framework that can be applied to unique locations and is not limited by data availability
+Long-term Goals
+=============
+* Develop a general and flexible framework that can be applied to unique locations and is not limited by data availability
 * Explicit quantification of uncertainty and model updates with new data
 * More focused restoration towards specific regional issues
 * Improved ability to predict outcomes of proposed restoration projects
 
-Guiding Restoration Decision Making?
-========================================================
-
-<img src="final_pres-figure/BNRestorationModel.jpg" alt="Drawing" style="width: 2000px;"/>
+#The slides below are for the end of the presentation
 
 Guiding Restoration Decision Making?
 ========================================================
@@ -85,7 +120,7 @@ Guiding Restoration Decision Making?
 
 Lessons Learned and Next Steps:
 ========================================================
-
+rPres is for masochists
 
 Low-tech Data Synthesis
 ========================================================
