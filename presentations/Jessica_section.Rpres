@@ -19,29 +19,15 @@ Despite considerable investments in aquatic ecosystem restoration consistent and
 
 <img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
 
-Cumulative Effects of Restoration Activities?
-========================================================
-Despite considerable investments in aquatic ecosystem restoration consistent and comprehensive effectiveness evaluation continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
-
-<img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
 
 Cumulative Effects of Restoration Activities?
 ========================================================
+<img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
-<img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
-
-
-* Vision to make it portable
-* Why Bayesian networks
 
 Cumulative Effects of Restoration Activities?
 ========================================================
-<img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
 
-
-* Vision to make it portable
-* Why Bayesian networks
-Benefits
 =============
 
 * A general and flexible framework that can be applied to unique locations and is not limited by data availability
@@ -52,7 +38,8 @@ Benefits
 Guiding Restoration Decision Making?
 ========================================================
 
-<img src="final_pres-figure/Idealic_Bayesian_Networks1.jpg" alt="Drawing" style="width: 2000px;"/>
+<img src="final_pres-figure/BNRestorationModel.jpg" alt="Drawing" style="width: 2000px;"/>
+
 
 Guiding Restoration Decision Making?
 ========================================================
@@ -68,3 +55,8 @@ Guiding Restoration Decision Making?
 ========================================================
 
 <img src="final_pres-figure/Idealic_Bayesian_Networks4.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks5.jpg" alt="Drawing" style="width: 2000px;"/>
