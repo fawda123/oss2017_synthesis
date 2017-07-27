@@ -13,23 +13,23 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Develop a More Complex Diagram to Illustrate the Bayesian Network
 ```{r}
 nodes <- data.frame(id=1:39, 
-                    label = c("Dredging", "Exotic Control", "FW Wetlands", 
-                              "Hydrologic Restoration", "Management", "Mangroves", 
-                              "Oyster Habitat", "Salt Marsh", "Seagrass", "Uplands", 
-                              "Acquisition", "Education", "Protection or Managment", 
-                              "Atmospheric Deposition", "Agricultural BMP", 
-                              "Alum Treatment BMP", "Baffle Box BMP", "CDS Unit BMP",
-                              "SW Management", "Stormwater Pond BMP", "Treatment Train BMP", 
-                              "Wetland Treatment BMP", "Stormwater Education", "Stormwater Regulation", 
-                              "Send NPS to WWTP", "Street Sweeping", "On Site BMP", "Increase Reuse", 
-                              "PS Managment", "Additional PS Treatment", "PS Regulation", 
-                              "Habitat Enhancement", "Habitat Establishment", "Habitat Protection", 
-                              "Stormwater Control", "Point Source Control", "Salinity", "Dissolved Oxygen",
+                    label = c("Dredging", "Exotic\nControl", "FW\nWetlands", 
+                              "Hydrologic\nRestoration", "Management", "Mangroves", 
+                              "Oyster\nHabitat", "Salt\nMarsh", "Seagrass", "Uplands", 
+                              "Acquisition", "Education", "Protection\nManagment", 
+                              "Atmospheric\nDeposition", "Agricultural\nBMP", 
+                              "Alum\nTreatment\nBMP", "Baffle Box\nBMP", "CDS Unit\nBMP",
+                              "SW\nManagement", "Stormwater\nPond BMP", "Treatment\nTrain BMP", 
+                              "Wetland\nTreatment BMP", "Stormwater\nEducation", "Stormwater\nRegulation", 
+                              "Send NPS\nto WWTP", "Street\nSweeping", "On Site\nBMP", "Increase\nReuse", 
+                              "PS\nManagment", "Additional PS\nTreatment", "PS\nRegulation", 
+                              "Habitat\nEnhancement", "Habitat\nEstablishment", "Habitat\nProtection", 
+                              "Stormwater\nControl", "Point Source\nControl", "Salinity", "Dissolved\nOxygen",
                               "Chlorophyll-a"), 
                     group = c(rep("Technology", 31), rep("Activity", 5), 
                               rep("WQ Response",3)),
                     level = c(rep(1, 31), rep(2, 5), rep(3, 2), rep(4, 1)),
-                    shape = c(rep("ellipse", 31), rep("square", 5), rep("circle", 3)),
+                    shape = c(rep("square", 31), rep("ellipse", 5), rep("circle", 3)),
                     color = c(rep("red", 31), rep("lightblue", 5), rep("lightgreen",3 ))
                     )                  
 edges <- data.frame(from= c(1, 2, 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 12,
@@ -41,11 +41,14 @@ edges <- data.frame(from= c(1, 2, 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11
                            35, 35, 36, 36, 36, 36, 36, 37, 38, 39, 37, 38, 39, 37, 38,
                            39, 37, 38, 39, 37, 38, 39, 38, 39, 39)
 )
-visNetwork(nodes, edges, main = "Group 1: Bayesian Network Skeleton", width = "100%") %>%
+p <- visNetwork(nodes, edges, main = "Group 1: Bayesian Network Skeleton", width = "100%") %>%
   visEdges(arrows = "to") %>%
-  visGroups(groupname = "Technology", color = "red", shape = "ellipse") %>%
-  visGroups(groupname = "Activity", color = "lightblue", shape = "square") %>% 
-  visGroups(groupname = "WQ Response", color = list(background= "white", border= "black"), shape = "circle") %>%
+  visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE) %>%
+  visGroups(groupname = "Technology", color = "red", shape = "square") %>%
+  visGroups(groupname = "Activity", color = "lightblue", shape = "ellipse") %>% 
+  visGroups(groupname = "WQ Response", color = "lightgreen", shape = "circle") %>%
   visLegend(main = "Bayesian Parameter") %>%
-  visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE) 
+  visHierarchicalLayout() # same as   visLayout(hierarchical = TRUE)
+  htmlwidgets::saveWidget(p, "../presentations/bayes_network.html")
+p
 ```

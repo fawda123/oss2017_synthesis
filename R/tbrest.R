@@ -42,6 +42,8 @@ head(wqstat)
 
 ## ------------------------------------------------------------------------
 wqmtch <- get_clo(restdat, reststat, wqstat, resgrp = 'top', mtch = mtch)
+save(wqmtch, file = 'data/wqmtch.RData', compress = 'xz')
+
 head(wqmtch)
 
 ## ----message = F, warning = F, fig.width = 7, fig.height = 8, eval = T----
@@ -142,7 +144,11 @@ leaflet(lplo) %>%
   )
 
 ## ------------------------------------------------------------------------
+salchgout <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf, chgout = TRUE)
 salchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'sal', yrdf = yrdf)
+save(salchgout, file = 'data/salchgout.RData')
+save(salchg, file = 'data/salchg.RData')
+head(salchgout)
 head(salchg)
 
 ## ------------------------------------------------------------------------
@@ -165,8 +171,11 @@ ggplot(toplo, aes(x = cval, y = cumest)) +
 
 ## ----eval = T, fig.height = 4, fig.width = 8, message = F, warning = F----
 # get chlorophyll changes
+chlchgout <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf, chgout = TRUE)
 chlchg <- get_chg(wqdat, wqmtch, statdat, restdat, wqvar = 'chla', yrdf = yrdf)
-  
+save(chlchgout, file = 'data/chlchgout.RData')
+save(chlchg, file = 'data/chlchg.RData')
+
 # merge with salinity, bet salinity levels
 salbrk <- salbrk %>% 
   group_by(hab, wtr) %>% 
@@ -181,9 +190,10 @@ allchg <- full_join(chlchg, salchg, by = c('hab', 'wtr', 'stat')) %>%
   left_join(salbrk, by = c('hab', 'wtr')) %>% 
   mutate(
     sallev = pmap(list(data, levs), function(data, levs){
-
+      # browser()
       out <- data %>% 
         mutate(
+          saval = salev,
           salev = cut(salev, breaks = c(-Inf, levs$qts, Inf), labels = c('lo', 'md', 'hi')),
           salev = as.character(salev)
         )
@@ -194,8 +204,12 @@ allchg <- full_join(chlchg, salchg, by = c('hab', 'wtr', 'stat')) %>%
   ) %>% 
   select(-data, -levs) %>% 
   unnest
+salchg <- select(allchg, stat, hab, wtr, salev, saval)
+save(salchg, file = 'data/salchg.RData', compress = 'xz')
 
 chlcdt <- get_cdt(allchg, 'hab', 'wtr', 'salev')
+save(chlcdt, file = 'data/chlcdt.RData', compress = 'xz')
+
 chlbrk <- get_brk(chlcdt, c(0.33, 0.66), 'hab', 'wtr', 'salev')
 chlbrk %>% 
   print(n = nrow(.))

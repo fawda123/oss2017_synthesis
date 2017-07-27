@@ -1,5 +1,5 @@
 .reveal h1 {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .reveal h1,
@@ -45,7 +45,7 @@
 
 .reveal pre code {
   display: block; padding: 0.5em;
-  font-size: 1.6em;
+  font-size: 1em;
   line-height: 1.1em;
   background-color: white;
   overflow: visible;
@@ -357,3 +357,19 @@ body {
  html:-moz-full-screen-ancestor {
    background-color: inherit;
  }
+ 
+.img-with-text {
+    text-align: justify;
+    width: 700px;
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
+
+<style>
+  .vspace {
+     margin-bottom: 3cm;
+  }
+</style>

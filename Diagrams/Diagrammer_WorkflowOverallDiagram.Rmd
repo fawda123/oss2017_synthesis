@@ -1,13 +1,13 @@
 ---
 title: "Merging Restoration Data"
 author: "Kirsten Dorans (kdorans@mail.harvard.edu)"
-date: "July 24, 2017"
+date: "July 26, 2017"
 output: html_document
 ---
 
 #Make a workflow diagram for developing the restoration activities data
 
-The goal of this script is to develop a workflow diagram showing how the water treatment projects were merged with habitation restoration projects to arrive at our final "restoration activities".
+The goal of this script is to develop a workflow diagram showing overall workflow
 
 Modified from Katie's code: Restoration_activities.Rmd (almost all of the code created by Katie!! :) ) 
 
@@ -49,7 +49,7 @@ varnames<-c("Restoration \nActivities",
 
 #write a list of process steps
 processes<-c("Spatial\nJoin", 
-             "Pre/Post\nCalculations", 
+             "Before/After\nCalculations", 
              "Bayesian\n Network\n Model",
              "Interpretation")
 
