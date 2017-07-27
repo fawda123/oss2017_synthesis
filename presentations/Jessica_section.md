@@ -6,7 +6,7 @@ autosize: true
 
 Deepwater Horizon Settlement Agreement
 ========================================================
-<img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2000px;"/>
+<img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 3000px;"/>
 
 Over $10B in Restoration Activities
 ========================================================
@@ -19,18 +19,35 @@ Despite considerable investments in aquatic ecosystem restoration consistent and
 
 <img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
 
+Cumulative Effects of Restoration Activities?
+========================================================
+
+<img src="final_pres-figure/DWHTrackerImage.jpg" alt="Photo" style="width: 3000px;"/>
+
+Unique Problems --> Unique Solutions
+========================================================
+<img src="final_pres-figure/SByBayes_Group.jpg" alt="Drawing" style="width: 2000px;"/>
+
+
+Bayesian Networks to support Decision-Making
+========================================================
+<div\>
+* Graphical modeling method based on influence diagrams.
+* Represents the cause and effect dependencies of a process.
+* Nodes are probability distributions and connectors are dependencies.
+* Used for decision making and artificial intelligence. [Korb and Nicholson, 2004]
+
+<div\>
+<img src="final_pres-figure/SimpleNetwork.png" alt="Drawing" style="width: 300px;"/>
 
 Cumulative Effects of Restoration Activities?
 ========================================================
 <img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
-
-Cumulative Effects of Restoration Activities?
-========================================================
-
+Long-Term Project Goals
 =============
 
-* A general and flexible framework that can be applied to unique locations and is not limited by data availability
+* Development of a general and flexible framework that can be applied to unique locations and is not limited by data availability
 * Explicit quantification of uncertainty and model updates with new data
 * More focused restoration towards specific regional issues
 * Improved ability to predict outcomes of proposed restoration projects
@@ -39,6 +56,11 @@ Guiding Restoration Decision Making?
 ========================================================
 
 <img src="final_pres-figure/BNRestorationModel.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Guiding Restoration Decision Making?
+========================================================
+
+<img src="final_pres-figure/Idealic_Bayesian_Networks1.jpg" alt="Drawing" style="width: 2000px;"/>
 
 
 Guiding Restoration Decision Making?
@@ -60,3 +82,12 @@ Guiding Restoration Decision Making?
 ========================================================
 
 <img src="final_pres-figure/Idealic_Bayesian_Networks5.jpg" alt="Drawing" style="width: 2000px;"/>
+
+Lessons Learned and Next Steps:
+========================================================
+
+
+Low-tech Data Synthesis
+========================================================
+
+<img src="final_pres-figure/Whiteboard_graphic.jpg" alt="Drawing" style="width: 800px;"/>
