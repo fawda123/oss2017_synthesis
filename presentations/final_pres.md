@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Patricia Varela, Kathryn Ireland, Kirsten Dorans, Jessica Renee Henkel, Ed Sherwood, Marcus Beck
+By Marcus Beck, Patricia Varela, Kathryn Ireland, Ed Sherwood, Kirsten Dorans, Jessica Renee Henkel
   
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -23,13 +23,14 @@ Deepwater Horizon Settlement Agreement
 
 Over $10B in Potential Restoration Activities
 ========================================================
-<img src="final_pres-figure/RESTORE_Funding_chart.jpg" alt="Drawing" style="width: 700px;"/>
-
-<font size="3">Graphic: eli-ocean.org</font>
+<div class="img-with-text">
+    <img src="final_pres-figure/RESTORE_Funding_chart.jpg" />
+    <p><font size = "3">Graphic: eli-ocean.org</font></p>
+</div>
 
 Cumulative Effects of Restoration Activities?
 ========================================================
-* Despite considerable investments in aquatic ecosystem restoration consistent and comprehensive effectiveness evaluation continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
+* Despite considerable **investments** in aquatic ecosystem restoration, consistent and comprehensive **effectiveness evaluation** continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
 
 
 Cumulative Effects of Restoration Activities?
@@ -37,17 +38,10 @@ Cumulative Effects of Restoration Activities?
 
 <img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
 
-
 * Vision to make it portable
 * Why Bayesian networks
 
-Cumulative Effects of Restoration Activities?
-========================================================
-<img src="final_pres-figure/firework.png" alt="Drawing" style="width: 2000px;"/>
 
-
-* Vision to make it portable
-* Why Bayesian networks
 Benefits
 =============
 
@@ -448,7 +442,7 @@ Data plyring
 Conditional distributions on **two-levels**:
 
 <div align="center">
-<img src="final_pres-figure/chldst3.jpg" style="width: 2000px;">
+<img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
 </div>
 
 Data plyring

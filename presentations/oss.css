@@ -358,3 +358,12 @@ body {
    background-color: inherit;
  }
  
+.img-with-text {
+    text-align: justify;
+    width: 700px;
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+}
