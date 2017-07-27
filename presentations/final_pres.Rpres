@@ -210,6 +210,82 @@ Developing Restoration Dataset
 ========================================================
 <img src="final_pres-figure/restoration_activities.png" alt="Drawing" style="width: 2500px;"/>
 
+Developing Restoration Dataset
+========================================================
+* Water Treatment Projects
+  * Two Raw Datasets: <http://apdb.tbeptech.org>
+    * Descriptions of All WT Projects
+    * Names/location of Completed WT Projects
+  * dplyr:  combine dataset (*left_join*), subset (*filter*) to subbasins of interest, find WT projects not listed as complete for further investigation (*anti-join*)
+  
+```{r echo=F}
+setwd("~/oss/synth/synth_git")
+completed_TBDATA<-read_csv("data-raw/CompletedTBData_fromScript.csv")
+head(completed_TBDATA)
+```
+
+
+Developing Restoration Dataset
+========================================================
+* Water Treatment Projects
+  * Manual categorization of WT projects by technique = Categorized WT Projects
+```{r}
+setwd("~/oss/synth/synth_git")
+categorized_WT<-read_csv("data-raw/apdb_completed_categorized.csv")
+```
+  * Broad classification: 5 unique WT project activities
+```{r}
+unique(categorized_WT$Project_Activity)
+```
+
+Developing Restoration Dataset
+========================================================
+* Water Treatment Projects
+  * Finer classification: 26 unique WT project technologies
+```{r}
+unique(categorized_WT$Project_Technology)
+```
+
+Developing Restoration Dataset
+========================================================
+* Habitat Restoration Projects
+  * Raw dataset: <http://http://maps.wateratlas.usf.edu/tampabay/>
+  * Manual categorization of Habitat Restoration projects by technique = Categorized Habitation Restoration Projects
+  * Broad classification: 3 unique WT project activities
+```{r}
+setwd("~/oss/synth/synth_git")
+categorized_hab<-read_csv("data-raw/TBEP_Restoration Database_11_21_07_JRH.csv")
+unique(categorized_hab$Project_Activity)
+```
+
+Developing Restoration Dataset
+========================================================
+* Habitat Restoration Projects  
+  * Finer classification: 9 unique habitat restoration technologies
+```{r}
+unique(categorized_hab$Project_Technology)
+```
+
+Developing Restoration Dataset
+========================================================
+* Merge the WT Projects with the Habitat Restoration Projects
+   * *filter* on lat/lon, separate into tables of activity location vs tables of activity & technology, combine WT/Habitat location tables, combine WT/Habitat descriptive tables
+  * All Restoration Activities
+    * 5 types of project activities
+```{r}
+unique(restdat$type)
+```
+ 
+Developing Restoration Dataset
+========================================================
+* 28 types of project technologies
+
+    
+```{r}
+unique(restdat$tech)
+```
+
+
 
 Data plyring
 ========================================================

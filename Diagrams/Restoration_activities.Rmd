@@ -35,10 +35,10 @@ I chose to store the names of the initial and derived datasets in a vector calle
 
 ```{r set-vars}
 #set up a list of the names of variables
-wtnames<-c("Descriptions of\n All WT Treatment\n Projects", 
+wtnames<-c("Descriptions of\n All WT\n Projects", 
             "Completed\nWT \nProjects", 
             "Completed WT\n Project &\nDescriptions",
-            "Categorized\n WT Treatment\n Projects")
+            "Categorized\n WT\n Projects")
 print("Here are the wtnames:")
 wtnames
 
@@ -100,7 +100,7 @@ The grViz statement we are going to use to define the relationships requires a s
 
 ```{r}
 #define the edges
-edge1<-define_edgec(wtnames[1],processes[1])
+edge1<-define_edge(wtnames[1],processes[1])
 edge2<-define_edge(wtnames[2],processes[1])
 edge3<-define_edge(processes[1],wtnames[3])
 edge4<-define_edge(wtnames[3],processes[2])
