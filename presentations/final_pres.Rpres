@@ -265,8 +265,7 @@ Developing Restoration Dataset
   * dplyr:  combine dataset (*left_join*), subset (*filter*) to subbasins of interest, find WT projects not listed as complete for further investigation (*anti-join*)
   
 ```{r echo=F}
-setwd("~/oss/synth/synth_git")
-completed_TBDATA<-read_csv("data-raw/CompletedTBData_fromScript.csv")
+completed_TBDATA<-read_csv("../data-raw/CompletedTBData_fromScript.csv")
 head(completed_TBDATA)
 ```
 
@@ -276,8 +275,7 @@ Developing Restoration Dataset
 * Water Treatment Projects
   * Manual categorization of WT projects by technique = Categorized WT Projects
 ```{r}
-setwd("~/oss/synth/synth_git")
-categorized_WT<-read_csv("data-raw/apdb_completed_categorized.csv")
+categorized_WT<-read_csv("../data-raw/apdb_completed_categorized.csv")
 ```
   * Broad classification: 5 unique WT project activities
 ```{r}
@@ -299,8 +297,7 @@ Developing Restoration Dataset
   * Manual categorization of Habitat Restoration projects by technique = Categorized Habitation Restoration Projects
   * Broad classification: 3 unique WT project activities
 ```{r}
-setwd("~/oss/synth/synth_git")
-categorized_hab<-read_csv("data-raw/TBEP_Restoration Database_11_21_07_JRH.csv")
+categorized_hab<-read_csv("../data-raw/TBEP_Restoration Database_11_21_07_JRH.csv")
 unique(categorized_hab$Project_Activity)
 ```
 

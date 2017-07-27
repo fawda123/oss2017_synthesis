@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Patricia Varela, Jessica Renee Henkel, Marcus Beck, Kathryn Ireland, Ed Sherwood, Kirsten Dorans
+By Kirsten Dorans, Jessica Renee Henkel, Marcus Beck, Kathryn Ireland, Patricia Varela, Ed Sherwood
   
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -39,37 +39,40 @@ Unique Problems --> Unique Solutions
 <img src="final_pres-figure/SByBayes_Group.jpg" alt="Drawing" style="width: 2000px;"/>
 
 
-Bayesian Networks to support Decision-Making
-========================================================
-* Graphical modeling method based on influence diagrams.
-
-* Represents the cause and effect dependencies of a process.
-
-* Used for decision making and artificial intelligence. [Korb and Nicholson, 2004]
-
-<img src="final_pres-figure/SimpleNetwork.png" alt="Drawing" style="width: 200px;"/>
-
-<<<<<<< HEAD
-* Vision to make it portable
-
-Bayesian networks
-========================================================
-* Graphical modeling method based on influence diagrams.
-* Represents the cause and effect dependencies of a process.
-* Nodes are probability distributions and connectors are dependencies.
-* Reasoning under uncertainty. 
-* Used for decision making and artificial intelligence.
-[Korb and Nicholson, 2004]
-
-
-Benefits
-=============
-=======
->>>>>>> 23f1fba0a7d40615df630cbe76e85c0b54c0e5af
-
 A Network
 ========================================================
 * <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html>
+
+Bayesian Networks
+========================================================
+
+* Graphical modeling method based on influence diagrams.
+* Represents the cause and effect dependencies of a process.
+* Nodes are probability distributions and connectors are dependencies.
+
+$$P\left(H \mid E\right) = \frac{P\left(E \mid H\right) \cdot P\left(H \right)}{P \left(E\right)}$$
+
+***
+<div align="center">
+<img src="final_pres-figure/GenericBN.jpg" style="width: 400x;">
+</div>
+
+Bayesian Networks
+========================================================
+
+<div align="center">
+<img src="final_pres-figure/MathBN.jpg" style="width: 3000px;">
+</div>
+
+```{}
+library(bnlearn)
+net = model2network("[X1][X2][Xn][X_Child|X1:X2:Xn]")
+```
+
+***
+<div align="center">
+<img src="final_pres-figure/BN_comp_example.jpg" style="width: 1000px;">
+</div>
 
 Tampa Bay was gross
 ========================================================
@@ -205,6 +208,128 @@ Overall Workflow
 Developing Restoration Dataset
 ========================================================
 <img src="final_pres-figure/restoration_activities.png" alt="Drawing" style="width: 2500px;"/>
+
+Developing Restoration Dataset
+========================================================
+* Water Treatment Projects
+  * Two Raw Datasets: <http://apdb.tbeptech.org>
+    * Descriptions of All WT Projects
+    * Names/location of Completed WT Projects
+  * dplyr:  combine dataset (*left_join*), subset (*filter*) to subbasins of interest, find WT projects not listed as complete for further investigation (*anti-join*)
+  
+
+```
+# A tibble: 6 x 19
+  HeaderID                                 Project_Name      Bay_Segment
+     <int>                                        <chr>            <chr>
+1        8     Delany Creek Wetland Restoration Project Hillsborough Bay
+2       10               Cone Ranch Restoration Project Hillsborough Bay
+3       11       29th or 30th Street Outfall/ Mckay Bay Hillsborough Bay
+4       14              Palma Ceia Area Stormwater Pond Hillsborough Bay
+5       15                North Tampa Pond Enlargements Hillsborough Bay
+6       19 East Lake (Alum) Stormwater Retrofit Project Hillsborough Bay
+# ... with 16 more variables: Lead_Entity <chr>, Completion_Date <int>,
+#   TP_Reduction_lbs_yr <dbl>, TN_Reduction_lbs_yr <dbl>,
+#   TSS_Reduction_lbs_yr <int>, ProjectName <chr>,
+#   OngoingInitiation <int>, DiscontinuedDate <int>, CompletionDate <int>,
+#   ActualProjectCost <chr>, FundingSource <chr>,
+#   ProjectDescriptionText <chr>, NonPointProject <int>,
+#   PointProject <int>, ProjectLatitude <dbl>, ProjectLongitude <dbl>
+```
+
+
+Developing Restoration Dataset
+========================================================
+* Water Treatment Projects
+  * Manual categorization of WT projects by technique = Categorized WT Projects
+
+  * Broad classification: 5 unique WT project activities
+
+```
+[1] "Nonpoint_Source"       "Habitat_Enhancement"   "Habitat_Establishment"
+[4] "Habitat_Protection"    "Point_Source"         
+```
+
+Developing Restoration Dataset
+========================================================
+* Water Treatment Projects
+  * Finer classification: 26 unique WT project technologies
+
+```
+ [1] "BMP_Wetland_Treatment"  "Hydrologic_Restoration"
+ [3] "BMP_Baffle_Box"         "BMP_Stormwater_Pond"   
+ [5] "FW_Wetlands"            "BMP_Management"        
+ [7] "Acquisition"            "BMP_On_Site"           
+ [9] "PS_Treatment"           "Mangroves"             
+[11] "Send_to_WWTP"           "BMP_Alum_Treatment"    
+[13] "BMP_Treatment_Train"    "Uplands"               
+[15] "Dredging"               "Education"             
+[17] "Increase_Reuse"         "Management"            
+[19] "Atmospheric_Deposition" "Protection_Management" 
+[21] "Regulation"             "Exotic_Control"        
+[23] "Saltmarsh"              "BMP_CDS_Unit"          
+[25] "BMP_Agricultural"       "Street_Sweeping"       
+```
+
+Developing Restoration Dataset
+========================================================
+* Habitat Restoration Projects
+  * Raw dataset: <http://http://maps.wateratlas.usf.edu/tampabay/>
+  * Manual categorization of Habitat Restoration projects by technique = Categorized Habitation Restoration Projects
+  * Broad classification: 3 unique WT project activities
+
+```
+[1] "Habitat_Enhancement"   "Habitat_Establishment" "Habitat_Protection"   
+```
+
+Developing Restoration Dataset
+========================================================
+* Habitat Restoration Projects  
+  * Finer classification: 9 unique habitat restoration technologies
+
+```
+[1] "Hydrologic_Restoration" "Exotic_Control"        
+[3] "FW_Wetlands"            "Mangroves"             
+[5] "Saltmarsh"              "Protection_Management" 
+[7] "Seagrass_Habitat"       "Oyster_Habitat"        
+[9] "Acquisition"           
+```
+
+Developing Restoration Dataset
+========================================================
+* Merge the WT Projects with the Habitat Restoration Projects
+   * *filter* on lat/lon, separate into tables of activity location vs tables of activity & technology, combine WT/Habitat location tables, combine WT/Habitat descriptive tables
+  * All Restoration Activities
+    * 5 types of project activities
+
+```
+[1] "HABITAT_ENHANCEMENT"   "HABITAT_ESTABLISHMENT" "HABITAT_PROTECTION"   
+[4] "NONPOINT_SOURCE"       "POINT_SOURCE"         
+```
+ 
+Developing Restoration Dataset
+========================================================
+* 28 types of project technologies
+
+    
+
+```
+ [1] "HYDROLOGIC_RESTORATION" "EXOTIC_CONTROL"        
+ [3] "FW_WETLANDS"            "MANGROVES"             
+ [5] "SALTMARSH"              "PROTECTION_MANAGEMENT" 
+ [7] "SEAGRASS_HABITAT"       "OYSTER_HABITAT"        
+ [9] "ACQUISITION"            "BMP_WETLAND_TREATMENT" 
+[11] "BMP_BAFFLE_BOX"         "BMP_STORMWATER_POND"   
+[13] "BMP_MANAGEMENT"         "BMP_ON_SITE"           
+[15] "PS_TREATMENT"           "SEND_TO_WWTP"          
+[17] "BMP_ALUM_TREATMENT"     "BMP_TREATMENT_TRAIN"   
+[19] "UPLANDS"                "DREDGING"              
+[21] "EDUCATION"              "INCREASE_REUSE"        
+[23] "MANAGEMENT"             "ATMOSPHERIC_DEPOSITION"
+[25] "REGULATION"             "BMP_CDS_UNIT"          
+[27] "BMP_AGRICULTURAL"       "STREET_SWEEPING"       
+```
+
 
 
 Data plyring
@@ -526,11 +651,38 @@ What is the probability of low/medium/high chlorophyll given other events?
 
 BN lets us evaluate likelihood of **potential outcomes** given **conditional distributions**
 
+Training Conditional Probability Tables
+========================================================
+
+<div align="center">
+<img src="final_pres-figure/CPT_From_Data.jpg" style="width: 1000px;">
+</div>
+
+Results Small Model
+========================================================
+<div align="center">
+<img src="final_pres-figure/SmallBNGeNIe.jpg" style="width: 1000px;">
+</div>
+
+Results Small Model
+========================================================
+
+Salinity
+<div align="center">
+<img src="final_pres-figure/Salinity.jpg" style="width: 3000px;">
+</div>
+
+***
+
+Chlorophyll
+<div align="center">
+<img src="final_pres-figure/Chlorophyll.jpg" style="width: 3000px;">
+</div>
+
 Guiding Restoration Decision Making?
 ========================================================
 
 <img src="final_pres-figure/Idealic_Bayesian_Networks1.jpg" alt="Drawing" style="width: 2000px;"/>
-
 
 Guiding Restoration Decision Making?
 ========================================================
@@ -554,8 +706,9 @@ Guiding Restoration Decision Making?
 
 Lessons Learned and Next Steps:
 ========================================================
-rPres is for masochists
 
+
+rPres is for masochists
 
 <div align="center">
 <img src="final_pres-figure/hex.png" style="width: 300px;">
@@ -565,8 +718,5 @@ Low-tech Data Synthesis
 ========================================================
 
 <img src="final_pres-figure/Whiteboard_graphic.jpg" alt="Drawing" style="width: 800px;"/>
-
-Acknowledgments
-========================================================
 
 
