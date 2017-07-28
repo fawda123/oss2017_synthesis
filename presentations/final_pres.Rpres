@@ -45,15 +45,15 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   paste(collapse = ', ')
 ```
 `r paste('By', aut)`
-  
+
 Deepwater Horizon Settlement Agreement
 ========================================================
-<img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2000px;"/>
+<img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2300px;"/>
 
 $10B in Potential Restoration Activities
 ========================================================
-<div class="img-with-text">
-    <img src="final_pres-figure/RESTORE_Funding_chart.jpg" />
+<div class="img-with-text" align="center">
+    <img src="final_pres-figure/RESTORE_Funding_chart.jpg" style="width: 1000px;"/>
     <p><font size = "3">Graphic: eli-ocean.org</font></p>
 </div>
 
@@ -63,14 +63,9 @@ Cumulative Effects of Restoration Activities?
 
 <img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
 
-Unique Problems --> Unique Solutions
+Unique Problems -> Unique Solutions
 ========================================================
 <img src="final_pres-figure/SByBayes_Group.jpg" alt="Drawing" style="width: 2000px;"/>
-
-```{r}
-#Ed 
-#Tampa Bay Background
-```
 
 Bayesian Networks
 ========================================================
@@ -88,19 +83,15 @@ $$P\left(H \mid E\right) = \frac{P\left(E \mid H\right) \cdot P\left(H \right)}{
 
 Tampa Bay - from bad to good
 ========================================================
-<div align="center">
-<div align="left">
-<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 800px;"/>
-</div>
-***
 
-<div align="right">
-<img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 800px;"/>
-</div>
-</div>
+<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 900px;"/>
+***
+<img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 415px;"/>
+
 
 Cumulative Effects of Restoration Activities?
 ========================================================
+<p> </p>
 <img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
 Project goals
@@ -110,6 +101,7 @@ incremental: true
 <div align="center" class="vspace"><b><i>
 Can we use disparate data to prioritize future restoration projects aimed at improving water quality?
 </i></b></div>
+<p> </p>
 
 * **Synthesize** data in space and time to evaluate cumulative effects of restoration projects
 
@@ -121,7 +113,7 @@ Overall Workflow
 ========================================================
 <img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2500px;"/>
 
-WQ Monitoring in Tampa Bay 
+WQ Monitoring in Tampa Bay
 ========================================================
 incremental: false
 <div align="center">
@@ -133,7 +125,7 @@ incremental: false
 * Time series, monthly step - ~500 obs. per site
 * Available as an EXCEL spreadsheet <ftp://ftp.epchc.org>
 
-TB Restoration Sites: Various Sources of Info
+TB Restoration Sites: Various Sources 
 ===============
 incremental: false
 
@@ -176,13 +168,12 @@ Developing Restoration Dataset
 ========================================================
 * Water Treatment Projects
   * Two Raw Datasets: <http://apdb.tbeptech.org>
-    * Descriptions of All WT Projects
-    * Names/location of Completed WT Projects
+  * Descriptions, names, location
   * dplyr:  combine dataset (*left_join*), subset (*filter*) to subbasins of interest, find WT projects not listed as complete for further investigation (*anti-join*)
-  
+
 ```{r echo=F}
 completed_TBDATA<-read_csv("../data-raw/CompletedTBData_fromScript.csv")
-head(completed_TBDATA)
+head(completed_TBDATA, 5)
 ```
 
 Developing Restoration Dataset
@@ -218,7 +209,7 @@ unique(categorized_hab$Project_Activity)
 
 Developing Restoration Dataset
 ========================================================
-* Habitat Restoration Projects  
+* Habitat Restoration Projects
   * Finer classification: 9 unique habitat restoration technologies
 ```{r}
 unique(categorized_hab$Project_Technology)
@@ -257,6 +248,7 @@ dev.off()
 
 Cumulative Effects of Restoration Activities?
 ========================================================
+<p> </p>
 <img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
 Cumulative Effects of Restoration Activities?
@@ -278,8 +270,6 @@ incremental: true
 <div align="center">
 
 * Can we identify a change in water quality from restoration?
-* What data do we have?
-* Can we plyr the data to identify a signal?
 * Can we plyr the data as input to a BN?
 
 Data plyring
@@ -287,18 +277,18 @@ Data plyring
 incremental: false
 
 ```{r, echo = F, results = 'hide'}
-## 
+##
 # plots
 
 # combine lat/lon for the plot
-toplo <- wqmtch %>% 
-  left_join(wqstat, by = 'stat') %>% 
-  left_join(reststat, by = 'id') %>% 
+toplo <- wqmtch %>%
+  left_join(wqstat, by = 'stat') %>%
+  left_join(reststat, by = 'id') %>%
   rename(
     `Restoration\ngroup` = resgrp,
     `Distance (dd)` = dist
   )
-    
+
 # restoration project grouping column
 resgrp <- 'top'
 restall <- left_join(restdat, reststat, by = 'id')
@@ -312,13 +302,13 @@ pbase <- ggmap(map) +
   theme_bw() +
   theme(
     axis.title.x = element_blank(),
-    axis.title.y = element_blank(), 
+    axis.title.y = element_blank(),
     legend.position = 'none'
   )
 
 ##
 # restoration, wq
-p <- pbase + 
+p <- pbase +
   geom_point(data = reststat, aes(x = lon, y = lat), size = 4, pch = 21, fill = 'green', alpha = 0.8) +
 geom_point(data = wqstat, aes(x = lon, y = lat), size = 3, pch = 16, color = 'black', alpha = 0.8)
 
@@ -328,7 +318,7 @@ dev.off()
 
 ##
 # restoration by group, wq
-pbase <- pbase + 
+pbase <- pbase +
   geom_point(data = restall, aes(x = lon, y = lat, fill = `Restoration\ngroup`), size = 4, pch = 21, alpha = 0.8) +
 geom_point(data = wqstat, aes(x = lon, y = lat), size = 3, pch = 16, color = 'black', alpha = 0.8)
 
@@ -341,7 +331,7 @@ dev.off()
 
 toplo1 <- filter(toplo, rnk %in% 1)
 
-p <- pbase + 
+p <- pbase +
   geom_segment(data = toplo1, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
 jpeg('final_pres-figure/clomap3.jpg', width = 4, height = 5, units = 'in', res = 150)
@@ -353,7 +343,7 @@ dev.off()
 
 toplo2 <- filter(toplo, rnk %in% 1:2)
 
-p <- pbase + 
+p <- pbase +
   geom_segment(data = toplo2, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
 jpeg('final_pres-figure/clomap4.jpg', width = 4, height = 5, units = 'in', res = 150)
@@ -365,7 +355,7 @@ dev.off()
 
 toplo3 <- toplo
 
-p <- pbase + 
+p <- pbase +
   geom_segment(data = toplo3, aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 1)
 
 jpeg('final_pres-figure/clomap5.jpg', width = 4, height = 5, units = 'in', res = 150)
@@ -379,8 +369,8 @@ WQ and restoration sites
 
 ***
 
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
+* Can we identify a change in water quality from restoration?
+* Can we plyr the data as input to a BN?
 
 Data plyring
 ========================================================
@@ -393,8 +383,8 @@ WQ and restoration sites
 
 ***
 
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
+* Can we identify a change in water quality from restoration?
+* Can we plyr the data as input to a BN?
 * Consider an effect of restoration **site type**?
 
 Data plyring
@@ -408,27 +398,10 @@ WQ and restoration sites
 
 ***
 
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
+* Can we identify a change in water quality from restoration?
+* Can we plyr the data as input to a BN?
 * Consider an effect of restoration **site type**?
 * Consider **distance** of sites from water quality stations?
-
-Data plyring
-========================================================
-incremental: false
-
-WQ and restoration sites
-<div align="center">
-<img src="final_pres-figure/clomap4.jpg" style="width: 1000px;">
-</div>
-
-***
-
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of restoration **site type**?
-* Consider **distance** of sites from water quality stations?
-* Consider a **cumulative effect**?
 
 Data plyring
 ========================================================
@@ -441,8 +414,8 @@ WQ and restoration sites
 
 ***
 
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
+* Can we identify a change in water quality from restoration?
+* Can we plyr the data as input to a BN?
 * Consider an effect of restoration **site type**?
 * Consider **distance** of sites from water quality stations?
 * Consider a **cumulative effect**?
@@ -451,7 +424,7 @@ Data plyring
 ========================================================
 
 ```{r, results = 'hide'}
-ptplo <- dplyr::filter(toplo, stat %in% 7 & rnk %in% c(1:2)) %>% 
+ptplo <- dplyr::filter(toplo, stat %in% 7 & rnk %in% c(1:2)) %>%
   mutate(
     id = factor(id, levels = as.character(id), labels = c('hab1', 'hab2', 'wtr1', 'wtr2'))
   )
@@ -459,14 +432,14 @@ ptplo <- dplyr::filter(toplo, stat %in% 7 & rnk %in% c(1:2)) %>%
 p <- ggplot(ptplo) +
   geom_segment(aes(x = lon.x, y = lat.x, xend = lon.y, yend = lat.y, alpha = -`Distance (dd)`, linetype = `Restoration\ngroup`), size = 2) +
   geom_point(aes(x = lon.y, y = lat.y, fill = `Restoration\ngroup`), size = 8, pch = 21, alpha = 0.8) +
-geom_point(aes(x = lon.x, y = lat.x), size = 6, pch = 16, color = 'black', alpha = 0.8) + 
-  theme_minimal() + 
+geom_point(aes(x = lon.x, y = lat.x), size = 6, pch = 16, color = 'black', alpha = 0.8) +
+  theme_minimal() +
   theme(line = element_blank(),
         text = element_blank(),
         title = element_blank(),
         legend.position = 'none'
         )
-    
+
 jpeg('final_pres-figure/ptplo.jpg', width = 3, height = 3, units = 'in', res = 150)
 p
 dev.off()
@@ -475,24 +448,24 @@ levs <- c('wq', 'hab1', 'hab2', 'wtr1', 'wtr2')
 
 tmdf1 <- list(
   wq = c(1974, 2016),
-  wtr1 = 1996, 
-  wtr2 = 1980, 
-  hab1 = 1986, 
+  wtr1 = 1996,
+  wtr2 = 1980,
+  hab1 = 1986,
   hab2 = 2009
   ) %>%
-  enframe %>% 
-  unnest %>% 
+  enframe %>%
+  unnest %>%
   mutate(
-    name = factor(name, levels = levs), 
+    name = factor(name, levels = levs),
     grp = gsub('[0-9]$', '', name),
     x = factor('wq')
   )
-  
-p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
-  geom_path(size = 1, lineend = 'butt') + 
-  coord_flip() + 
-  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) + 
-  theme_bw() + 
+
+p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) +
+  geom_path(size = 1, lineend = 'butt') +
+  coord_flip() +
+  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) +
+  theme_bw() +
   theme(line = element_blank(),
         title = element_blank(),
         legend.position = 'none'
@@ -509,31 +482,31 @@ tmdf2 <- list(
   hab1 = c(1981, 1986, 1991),
   hab2 = c(2004, 2009, 2014)
   ) %>%
-  enframe %>% 
-  unnest %>% 
+  enframe %>%
+  unnest %>%
   mutate(
-    name = factor(name, levels = levs), 
+    name = factor(name, levels = levs),
     grp = gsub('[0-9]$', '', name)
   )
 
 tmdf3 <- data.frame(
   Before = c(1974, 1981, 2004, 1991, 1975),
   After = c(2016, 1991, 2014, 2001, 1985)
-  ) %>% 
+  ) %>%
   mutate(
     name = factor(levs, levels = levs)
   )
 
-p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
-  geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) + 
-  geom_path(size = 1, lineend = 'butt') + 
-  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = Before), 
+p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) +
+  geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) +
+  geom_path(size = 1, lineend = 'butt') +
+  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = Before),
             label = 'Before', vjust = -0.5, size = 3) +
-  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = After), 
+  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = After),
             label = 'After', vjust = -0.5, size = 3) +
-  coord_flip() + 
-  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) + 
-  theme_bw() + 
+  coord_flip() +
+  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) +
+  theme_bw() +
   theme(line = element_blank(),
         title = element_blank(),
         legend.position = 'none'
@@ -550,26 +523,26 @@ tmdf4 <- list(
   hab1 = c(1981, 1991),
   hab2 = c(2004, 2014)
   ) %>%
-  enframe %>% 
-  unnest %>% 
+  enframe %>%
+  unnest %>%
   mutate(
-    name = factor(name, levels = levs), 
-    grp = gsub('[0-9]$', '', name), 
+    name = factor(name, levels = levs),
+    grp = gsub('[0-9]$', '', name),
     x = factor('wq')
   )
 
-p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) + 
-  geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) + 
-  geom_segment(data = tmdf4, aes(x = x, y = value, xend = name, yend = value), linetype = 'dashed') + 
-  geom_segment(data = tmdf1, aes(x = x, y = value, xend = name, yend = value), color = 'grey', linetype = 'dashed') + 
-  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = Before), 
+p <- ggplot(tmdf1, aes(x = name, y = value, group = name)) +
+  geom_path(data = tmdf2, aes(x = name, y = value, group = name), size = 1) +
+  geom_segment(data = tmdf4, aes(x = x, y = value, xend = name, yend = value), linetype = 'dashed') +
+  geom_segment(data = tmdf1, aes(x = x, y = value, xend = name, yend = value), color = 'grey', linetype = 'dashed') +
+  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = Before),
             label = 'Before', vjust = -0.5, size = 3) +
-  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = After), 
+  geom_text(data = filter(tmdf3, !name %in% 'wq'), aes(x = name, y = After),
             label = 'After', vjust = -0.5, size = 3) +
-  geom_path(size = 1, lineend = 'butt') + 
-  coord_flip() + 
-  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) + 
-  theme_bw() + 
+  geom_path(size = 1, lineend = 'butt') +
+  coord_flip() +
+  geom_point(data = filter(tmdf1, !name %in% 'wq'), aes(fill = grp), pch = 21, size = 3) +
+  theme_bw() +
   theme(line = element_blank(),
         title = element_blank(),
         legend.position = 'none'
@@ -627,22 +600,6 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 Data plyring
 ========================================================
 
-What do the data look like? For **one** water quality stations matched to **many**
-restoration sites...
-
-WQ and restoration sites: **Temporal match**, **before/after**, **slice**
-<div align="center">
-<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
-</div>
-
-```{r, echo = FALSE}
-datex <- filter(chlchgout, stat %in% 7) 
-datex
-```
-
-Data plyring
-========================================================
-
 What do the data look like? For **one** water quality station matched to **many**
 restoration sites...
 
@@ -652,7 +609,7 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 </div>
 
 ```{r, echo = FALSE}
-datex <- filter(chlchg, stat %in% 7) 
+datex <- filter(chlchgout, stat %in% 7)
 datex
 ```
 
@@ -670,11 +627,11 @@ Data plyring
 ```{r, echo = FALSE, results = 'hide'}
 toplo <- chlchg
 lab <- expression(paste("Chl-a (", italic(mu), "g ", L^-1, ")"))
-p <- ggplot() + 
-  geom_histogram(data = toplo, aes(x = cval, y = ..density..)) + 
-  facet_grid(hab ~ wtr) + 
-  theme_bw() + 
-  scale_x_continuous(lab) + 
+p <- ggplot() +
+  geom_histogram(data = toplo, aes(x = cval, y = ..density..)) +
+  facet_grid(hab ~ wtr) +
+  theme_bw() +
+  scale_x_continuous(lab) +
   scale_y_continuous('Density')
 
 jpeg('final_pres-figure/chldst1.jpg', width = 7, height = 4, units = 'in', res = 300)
@@ -682,22 +639,22 @@ p
 dev.off()
 
 
-toplo2 <- get_cdt(chlchg, 'hab', 'wtr') %>% 
-  select(hab, wtr, prd) %>% 
+toplo2 <- get_cdt(chlchg, 'hab', 'wtr') %>%
+  select(hab, wtr, prd) %>%
   unnest
 
-p <- p + 
+p <- p +
   geom_line(data = toplo2, aes(x = cval, y = est), col = 'blue')
 
 jpeg('final_pres-figure/chldst2.jpg', width = 7, height = 4, units = 'in', res = 300)
 p
 dev.off()
 
-p <- ggplot(toplo2) + 
-  geom_line(aes(x = cval, y = cumest), col = 'blue') + 
-  facet_grid(hab ~ wtr) + 
-  theme_bw() + 
-  scale_x_continuous(lab) + 
+p <- ggplot(toplo2) +
+  geom_line(aes(x = cval, y = cumest), col = 'blue') +
+  facet_grid(hab ~ wtr) +
+  theme_bw() +
+  scale_x_continuous(lab) +
   scale_y_continuous('Density')
 
 jpeg('final_pres-figure/chldst3.jpg', width = 7, height = 4, units = 'in', res = 300)
@@ -733,7 +690,7 @@ Data plyring
 ========================================================
 incremental: true
 
-* In other words, what is the **conditional distribution** of chlorophyll given **restoration type** and **before/after** effect?  
+* In other words, what is the **conditional distribution** of chlorophyll given **restoration type** and **before/after** effect?
 
 * Similar to a **two-way** ANOVA...
 
@@ -755,51 +712,51 @@ Data plyring
 ========================================================
 
 ```{r, results = 'hide'}
-toplo <- chlcdt %>% 
-  select(hab, wtr, salev, data) %>% 
-  unnest %>% 
+toplo <- chlcdt %>%
+  select(hab, wtr, salev, data) %>%
+  unnest %>%
   rename(
     Salinity = salev
-  ) %>% 
+  ) %>%
   mutate(
    Salinity = factor(Salinity, levels = c('lo', 'md', 'hi'))
   )
 
 lab <- expression(paste("Chl-a (", italic(mu), "g ", L^-1, ")"))
 
-p <- ggplot() + 
-  geom_histogram(data = toplo, aes(x = cval, y = ..density.., group = Salinity, fill = Salinity)) + 
-  facet_grid(hab ~ wtr) + 
-  theme_bw() + 
-  scale_x_continuous(lab) + 
+p <- ggplot() +
+  geom_histogram(data = toplo, aes(x = cval, y = ..density.., group = Salinity, fill = Salinity)) +
+  facet_grid(hab ~ wtr) +
+  theme_bw() +
+  scale_x_continuous(lab) +
   scale_y_continuous('Density')
 
 jpeg('final_pres-figure/chlsaldst1.jpg', width = 7, height = 4, units = 'in', res = 300)
 p
 dev.off()
 
-toplo2 <- chlcdt %>% 
-  select(hab, wtr, salev, prd) %>% 
-  unnest %>% 
+toplo2 <- chlcdt %>%
+  select(hab, wtr, salev, prd) %>%
+  unnest %>%
   rename(
     Salinity = salev
-  ) %>% 
+  ) %>%
   mutate(
    Salinity = factor(Salinity, levels = c('lo', 'md', 'hi'))
   )
 
-p <- p + 
+p <- p +
   geom_line(data = toplo2, aes(x = cval, y = est, group = Salinity), col = 'blue')
 
 jpeg('final_pres-figure/chlsaldst2.jpg', width = 7, height = 4, units = 'in', res = 300)
 p
 dev.off()
 
-p <- ggplot(toplo2) + 
-  geom_line(aes(x = cval, y = cumest, colour = Salinity, group = Salinity)) + 
-  facet_grid(hab ~ wtr) + 
-  theme_bw() + 
-  scale_x_continuous(lab) + 
+p <- ggplot(toplo2) +
+  geom_line(aes(x = cval, y = cumest, colour = Salinity, group = Salinity)) +
+  facet_grid(hab ~ wtr) +
+  theme_bw() +
+  scale_x_continuous(lab) +
   scale_y_continuous('Density')
 
 jpeg('final_pres-figure/chlsaldst3.jpg', width = 7, height = 4, units = 'in', res = 300)
@@ -845,7 +802,7 @@ incremental: true
 
 $$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
 
-* In the **Bayesian** framework - probability of an event depends on occurrence of other events 
+* In the **Bayesian** framework - probability of an event depends on occurrence of other events
 
 $$ P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
 
@@ -925,7 +882,7 @@ Guiding Restoration Decision Making?
 
 <img src="final_pres-figure/Idealic_Bayesian_Networks5.jpg" alt="Drawing" style="width: 2000px;"/>
 
-Lessons Learned and Next Steps:
+Lessons Learned
 ========================================================
 ```{r eval = FALSE}
 library(hexSticker)
@@ -933,24 +890,24 @@ library(hexSticker)
 data(chlcdt)
 lab <- expression(paste("Chl-a (", italic(mu), "g ", L^-1, ")"))
 
-toplo2 <- chlcdt %>% 
-  select(hab, wtr, salev, prd) %>% 
-  unnest %>% 
+toplo2 <- chlcdt %>%
+  select(hab, wtr, salev, prd) %>%
+  unnest %>%
   rename(
     Salinity = salev
-  ) %>% 
+  ) %>%
   mutate(
     Salinity = factor(Salinity, levels = c('lo', 'md', 'hi'))
   )
 
 
-p <- ggplot(toplo2) + 
-  geom_line(aes(x = cval, y = cumest, colour = Salinity, group = Salinity)) + 
-  facet_grid(hab ~ wtr) + 
-  theme_bw() + 
-  scale_x_continuous(lab) + 
-  scale_y_continuous('Density') + 
-  theme_void() + 
+p <- ggplot(toplo2) +
+  geom_line(aes(x = cval, y = cumest, colour = Salinity, group = Salinity)) +
+  facet_grid(hab ~ wtr) +
+  theme_bw() +
+  scale_x_continuous(lab) +
+  scale_y_continuous('Density') +
+  theme_void() +
   theme(
     legend.position = 'none',
     strip.text.x = element_blank(),
@@ -958,12 +915,18 @@ p <- ggplot(toplo2) +
     )
 
 
-sticker(p, package="Death by Bayes", s_height = 1, s_width = 1, s_x = 1, s_y = 0.75, 
-        filename="presentations/final_pres-figure/hex.png", p_size = 16, h_color = 'red', h_fill = 'lightgrey')
+sticker(p, package="Death by Bayes", s_height = 1, s_width = 1, s_x = 1, s_y = 0.75,
+        filename="presentations/final_pres-figure/hex.png", p_size = 16, h_color = 'red', h_fill = 'lightgrey', spotlight = TRUE)
+
+p <- 'http://i.imgur.com/l9oaKFr.png'
+sticker(p, package="Rpres", s_height = 0.5, s_width = 0.5, s_x = 1, s_y = 0.75,
+        filename="presentations/final_pres-figure/rpreshex.png", p_size = 16, h_color = 'green', h_fill = 'lightblue', spotlight = TRUE)
 ```
 
-rPres is for masochists
-
+<div align="center">
+<img src="final_pres-figure/rpreshex.png" style="width: 300px;">
+</div>
+***
 <div align="center">
 <img src="final_pres-figure/hex.png" style="width: 300px;">
 </div>
