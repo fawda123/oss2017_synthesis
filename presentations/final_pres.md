@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Ed Sherwood, Kathryn Ireland, Patricia Varela, Jessica Renee Henkel, Kirsten Dorans, Marcus Beck
+By Patricia Varela, Kathryn Ireland, Jessica Renee Henkel, Marcus Beck, Kirsten Dorans, Ed Sherwood
 
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -127,7 +127,7 @@ incremental: false
 
 ***
 * Tracking infrastructure improvements since ~1990s
-* Include habitat creation, enhancement and acquisitions
+* Includes stormwater treatment, industrial/domestic point source controls
 * <http://apdb.tbeptech.org>
 
 Overall Workflow
