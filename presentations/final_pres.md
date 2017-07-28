@@ -15,13 +15,13 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Patricia Varela, Ed Sherwood, Marcus Beck, Kathryn Ireland, Jessica Renee Henkel, Kirsten Dorans
+By Marcus Beck, Kathryn Ireland, Jessica Renee Henkel, Kirsten Dorans, Patricia Varela, Ed Sherwood
   
 Deepwater Horizon Settlement Agreement
 ========================================================
 <img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2000px;"/>
 
-~ $10B in Potential Restoration Activities
+$10B in Potential Restoration Activities
 ========================================================
 <div class="img-with-text">
     <img src="final_pres-figure/RESTORE_Funding_chart.jpg" />
@@ -247,7 +247,9 @@ Cumulative Effects of Restoration Activities?
 
 Cumulative Effects of Restoration Activities?
 ========================================================
-Simple model...
+A simple model (aka minimum viable product)
+
+<img src="final_pres-figure/SmallBN.JPG" alt="Drawing" style="width: 600px;"/>
 
 Overall Workflow
 ========================================================
@@ -256,6 +258,10 @@ Overall Workflow
 Data plyring
 ========================================================
 incremental: true
+
+<div align="center">
+<img src="final_pres-figure/dplyrhex.png" alt="Drawing" style="width: 200px;"/>
+<div align="center">
 
 * Can we identify a change in water quality from restoration?
 * What data do we have?
@@ -394,7 +400,7 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 Data plyring
 ========================================================
 
-What do the data look like? For **one** water quality station matched to **many**
+What do the data look like? For **one** water quality stations matched to **many**
 restoration sites...
 
 WQ and restoration sites: **Temporal match**, **before/after**, **slice**
@@ -439,7 +445,7 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 Data plyring
 ========================================================
 
-What do the data look like? For **many** water quality station matched to **many**
+What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
 
 ```
@@ -472,7 +478,7 @@ Data plyring
 ========================================================
 
 
-What do the data look like? For **many** water quality station matched to **many**
+What do the data look like? For **many** water quality stations matched to **many**
 restoration sites...
 <div align="center">
 <img src="final_pres-figure/chldst1.jpg" style="width: 2000px;">
@@ -576,25 +582,35 @@ What is the probability of low/medium/high chlorophyll given other events?
 
 BN lets us evaluate likelihood of **potential outcomes** given **conditional distributions**
 
-Training Conditional Probability Tables
+Bayesian Network
 ========================================================
 <div align="center">
 <img src="final_pres-figure/chlsaldst3.jpg" style="width: 2000px;">
 </div>
 
-Training Conditional Probability Tables
+Bayesian Network
 ========================================================
-New figures.... small mod
-
-Training Conditional Probability Tables
-========================================================
-one slide per smal mod scenario
+<img src="final_pres-figure/SmallBN.JPG" alt="Drawing" style="width: 600px;"/>
 
 Results Small Model
 ========================================================
-<div align="center">
-<img src="final_pres-figure/SmallBNGeNIe.jpg" style="width: 1000px;">
-</div>
+<img src="final_pres-figure/Res1-PreHRPreWT.JPG" alt="Drawing" style="width: 600px;"/>
+
+Results Small Model
+========================================================
+<img src="final_pres-figure/Res3-PreHRPostWT.JPG" alt="Drawing" style="width: 600px;"/>
+
+Results Small Model
+========================================================
+<img src="final_pres-figure/Res4-PostHRPreWT.JPG" alt="Drawing" style="width: 600px;"/>
+
+Results Small Model
+========================================================
+<img src="final_pres-figure/Res2-PostHRPostWT.JPG" alt="Drawing" style="width: 600px;"/>
+
+Results Small Model
+========================================================
+<img src="final_pres-figure/SmallBNGeNIe.jpg" alt="Drawing" style="width: 1000px;"/>
 
 Overall Workflow
 ========================================================
@@ -645,13 +661,13 @@ Low-tech Data Synthesis
 
 <img src="final_pres-figure/Whiteboard_graphic.jpg" alt="Drawing" style="width: 800px;"/>
 
-Supplmental
+Supplemental
 ========================================================
 
-GitHub:
+GitHub: [https://github.com/fawda123/oss2017_synthesis](https://github.com/fawda123/oss2017_synthesis)
 
-Extra slides:
+Extra slides: [final_pres_supp](https://fawda123.github.io/oss2017_synthesis/presentations/final_pres_supp)
 
-Shiny:
+Shiny: [http://tbeptech.org:3939/content/5/](http://tbeptech.org:3939/content/5/)
 
-Jiggly plot:
+Jiggly plot: [bayes_network](https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html)
