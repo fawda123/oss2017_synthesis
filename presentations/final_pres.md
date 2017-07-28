@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Patricia Varela, Kathryn Ireland, Jessica Renee Henkel, Marcus Beck, Kirsten Dorans, Ed Sherwood
+By Patricia Varela, Kathryn Ireland, Jessica Renee Henkel, Kirsten Dorans, Marcus Beck, Ed Sherwood
 
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -33,6 +33,13 @@ Cumulative Effects of Restoration Activities?
 * Despite considerable **investments** in aquatic ecosystem restoration, consistent and comprehensive **effectiveness evaluation** continues to elude practitioners at geographic scales. (Diefenderfer et al. 2016)
 
 <img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
+
+Tampa Bay - from bad to good
+========================================================
+
+<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 900px;"/>
+***
+<img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 415px;"/>
 
 Unique Problems -> Unique Solutions
 ========================================================
@@ -56,13 +63,6 @@ Cumulative Effects of Restoration Activities?
 ========================================================
 <p> </p>
 <img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
-
-Tampa Bay - from bad to good
-========================================================
-
-<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 900px;"/>
-***
-<img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 415px;"/>
 
 Project goals
 ========================================================
