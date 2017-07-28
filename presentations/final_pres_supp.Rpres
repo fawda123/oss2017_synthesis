@@ -1,0 +1,92 @@
+```{r setup, echo = FALSE}
+# chunk options
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+# load libraries
+library(tidyverse)
+library(readxl)
+library(ggmap)
+library(lubridate)
+library(geosphere)
+library(stringi)
+library(tibble)
+library(leaflet)
+library(visNetwork)
+
+# load data
+data(restdat)
+data(reststat)
+data(wqdat)
+data(wqstat)
+data(wqmtch)
+data(chlchgout)
+data(chlchg)
+data(chlcdt)
+
+# source R files
+source('R/get_chg.R')
+source('R/get_clo.R')
+source('R/get_cdt.R')
+source('R/get_brk.R')
+```
+<insertHTML:[columns.html]
+
+Use of prior knowledge to inform restoration projects in estuaries of GOM - Supplement
+========================================================
+date: July 28, 2017
+autosize: true
+css: oss.css
+transition: none
+
+```{r echo = TRUE}
+# randomize author order
+aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Ireland', 'Ed Sherwood', 'Patricia Varela') %>% 
+  sample %>% 
+  paste(collapse = ', ')
+```
+`r paste('By', aut)`
+
+Developing Restoration Dataset
+========================================================
+<img src="final_pres_supp-figure/restoration_activities.png" alt="Drawing" style="width: 2500px;"/>
+
+Developing Restoration Dataset
+========================================================
+* Merge the WT Projects with the Habitat Restoration Projects
+   * *filter* on lat/lon, separate into tables of activity location vs tables of activity & technology, combine WT/Habitat location tables, combine WT/Habitat descriptive tables
+  * All Restoration Activities
+    * 5 types of project activities
+```{r}
+unique(restdat$type)
+```
+ 
+Developing Restoration Dataset
+========================================================
+* 28 types of project technologies
+
+```{r}
+unique(restdat$tech)
+```
+
+Bayesian Networks
+========================================================
+
+<div align="center">
+<img src="final_pres_supp-figure/MathBN.jpg" style="width: 3000px;">
+</div>
+
+```{}
+library(bnlearn)
+net = model2network("[X1][X2][Xn][X_Child|X1:X2:Xn]")
+```
+
+***
+<div align="center">
+<img src="final_pres_supp-figure/BN_comp_example.jpg" style="width: 1000px;">
+</div>
+
+Training Conditional Probability Tables
+========================================================
+<div align="center">
+<img src="final_pres_supp-figure/CPT_From_Data.jpg" style="width: 1000px;">
+</div>

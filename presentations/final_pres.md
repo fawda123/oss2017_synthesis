@@ -15,13 +15,13 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Kirsten Dorans, Jessica Renee Henkel, Marcus Beck, Kathryn Ireland, Patricia Varela, Ed Sherwood
+By Patricia Varela, Ed Sherwood, Marcus Beck, Kathryn Ireland, Jessica Renee Henkel, Kirsten Dorans
   
 Deepwater Horizon Settlement Agreement
 ========================================================
 <img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2000px;"/>
 
-Over $10B in Potential Restoration Activities
+~ $10B in Potential Restoration Activities
 ========================================================
 <div class="img-with-text">
     <img src="final_pres-figure/RESTORE_Funding_chart.jpg" />
@@ -39,16 +39,13 @@ Unique Problems --> Unique Solutions
 <img src="final_pres-figure/SByBayes_Group.jpg" alt="Drawing" style="width: 2000px;"/>
 
 
-A Network
-========================================================
-* <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html>
 
 Bayesian Networks
 ========================================================
 
 * Graphical modeling method based on influence diagrams.
 * Represents the cause and effect dependencies of a process.
-* Nodes are probability distributions and connectors are dependencies.
+* Used to inform decision-making (Korb and Nicholson, 2004)
 
 $$P\left(H \mid E\right) = \frac{P\left(E \mid H\right) \cdot P\left(H \right)}{P \left(E\right)}$$
 
@@ -57,41 +54,11 @@ $$P\left(H \mid E\right) = \frac{P\left(E \mid H\right) \cdot P\left(H \right)}{
 <img src="final_pres-figure/GenericBN.jpg" style="width: 400x;">
 </div>
 
-Bayesian Networks
-========================================================
-
-<div align="center">
-<img src="final_pres-figure/MathBN.jpg" style="width: 3000px;">
-</div>
-
-```{}
-library(bnlearn)
-net = model2network("[X1][X2][Xn][X_Child|X1:X2:Xn]")
-```
-
-***
-<div align="center">
-<img src="final_pres-figure/BN_comp_example.jpg" style="width: 1000px;">
-</div>
-
-Tampa Bay was gross
+Tampa Bay - from bad to good
 ========================================================
 <div align="center">
 <div align="left">
-<img src="prop_pres-figure/TB_Dead_Fish.jpg" alt="Drawing" style="width: 640px;"/>
-</div>
-***
-
-<div align="right">
-<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 600px;"/>
-</div>
-</div>
-
-Tampa Bay is a lot better now
-========================================================
-<div align="center">
-<div align="left">
-<img src="final_pres-figure/pre_rest_sh.jpg" alt="Drawing" style="width: 800px;"/>
+<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 800px;"/>
 </div>
 ***
 
@@ -104,22 +71,7 @@ Cumulative Effects of Restoration Activities?
 ========================================================
 <img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
-Short-tem Goals
-=============
-*  Apply a bayesian decision network as a support tool that incorporates:
-    * Expert knowledge of restoration activities
-    * Empirical observations
-    * Theoretical framework 
-* Test hypotheses about the effects of different types of restoration activities on water quality in Tampa Bay
-
-Long-term Goals
-=============
-* Develop a general and flexible framework that can be applied to unique locations and is not limited by data availability
-* Explicit quantification of uncertainty and model updates with new data
-* More focused restoration towards specific regional issues
-* Improved ability to predict outcomes of proposed restoration projects
-
-Other goals?
+Project goals
 ========================================================
 incremental: true
 
@@ -127,13 +79,17 @@ incremental: true
 Can we use disparate data to prioritize future restoration projects aimed at improving water quality?
 </i></b></div>
 
-* **Synthesize** data in space and time to evaluate cumulative effects of restoration projcts
+* **Synthesize** data in space and time to evaluate cumulative effects of restoration projects
 
-* **Apply** a Bayesian Decision Network with empirical observations to evaluate likelihood of potential outcomes
+* **Develop** a Bayesian Decision Network with empirical observations to evaluate likelihood of potential outcomes
 
-* **Expand** the scope of analysis to alternative systems using a generalized framework
+* **Expand** to other estuaries using a flexible framework
 
-Water Quality Monitoring in Tampa Bay 
+Overall Workflow
+========================================================
+<img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2500px;"/>
+
+WQ Monitoring in Tampa Bay 
 ========================================================
 incremental: false
 <div align="center">
@@ -142,14 +98,10 @@ incremental: false
 
 ***
 * Rich WQ Monitoring Datatset (1974-)
-      * 45 Stations in TB
-      * Chlorophyll, salinity, dissolved oxygen, etc.
-      * Depth-integrated
-      * QAQC
 * Time series, monthly step - ~500 obs. per site
 * Available as an EXCEL spreadsheet <ftp://ftp.epchc.org>
 
-Tampa Bay Restoration Sites: Various Sources of Info
+TB Restoration Sites: Various Sources of Info
 ===============
 incremental: false
 
@@ -157,7 +109,7 @@ incremental: false
 * **"Soft" Restoration** -> Habitat Creation, Enhancement and Management/Protection Measures
 * **"Hard" Restoration** -> Stormwater BMPs, Point Source Reductions through Time, Regulations
 
-Tampa Bay Restoration Site Info: First Source
+TB Restoration Site Info: First Source
 ===============
 incremental: false
 
@@ -166,11 +118,11 @@ incremental: false
 </div>
 
 ***
-* Tracking "traditional" restoration sites since ~1990s
+* Tracking "traditional" restoration sites since ~1970s
 * Include habitat creation, enhancement and acquisitions
-* <http://http://maps.wateratlas.usf.edu/tampabay/>
+* <http://maps.wateratlas.usf.edu/tampabay/>
 
-Tampa Bay Restoration Site Info: Second Source
+TB Restoration Site Info: Second Source
 ===============
 incremental: false
 
@@ -180,34 +132,13 @@ incremental: false
 </div>
 
 ***
-* Tracking "traditional" restoration sites since ~1990s
+* Tracking infrastructure improvements since ~1990s
 * Include habitat creation, enhancement and acquisitions
 * <http://apdb.tbeptech.org>
-
-Other Option
-==============
-
-<div astyle="position: relative;">
-<img src="final_pres-figure/restmap.jpg"style="position: absolute;"/>
-</div>
-
-***
-* Restoration sites in Tampa Bay, watershed
-      * Habitat Establishment
-      * Habitat Enhancement
-      * Habitat Protection
-      * Stormwater Controls
-      * Point Source Controls
-* 571 projects, 1971 - 2016
 
 Overall Workflow
 ========================================================
 <img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2500px;"/>
-
-
-Developing Restoration Dataset
-========================================================
-<img src="final_pres-figure/restoration_activities.png" alt="Drawing" style="width: 2500px;"/>
 
 Developing Restoration Dataset
 ========================================================
@@ -236,7 +167,6 @@ Developing Restoration Dataset
 #   ProjectDescriptionText <chr>, NonPointProject <int>,
 #   PointProject <int>, ProjectLatitude <dbl>, ProjectLongitude <dbl>
 ```
-
 
 Developing Restoration Dataset
 ========================================================
@@ -295,42 +225,33 @@ Developing Restoration Dataset
 [9] "Acquisition"           
 ```
 
-Developing Restoration Dataset
+Combined Restoration Data
+==============
+
+<div astyle="position: relative;">
+<img src="final_pres-figure/restmap.jpg"style="position: absolute;"/>
+</div>
+
+***
+* Restoration sites in Tampa Bay, watershed
+      * Habitat Establishment
+      * Habitat Enhancement
+      * Habitat Protection
+      * Stormwater Controls
+      * Point Source Controls
+* 571 projects, 1971 - 2016
+
+Cumulative Effects of Restoration Activities?
 ========================================================
-* Merge the WT Projects with the Habitat Restoration Projects
-   * *filter* on lat/lon, separate into tables of activity location vs tables of activity & technology, combine WT/Habitat location tables, combine WT/Habitat descriptive tables
-  * All Restoration Activities
-    * 5 types of project activities
+<img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
-```
-[1] "HABITAT_ENHANCEMENT"   "HABITAT_ESTABLISHMENT" "HABITAT_PROTECTION"   
-[4] "NONPOINT_SOURCE"       "POINT_SOURCE"         
-```
- 
-Developing Restoration Dataset
+Cumulative Effects of Restoration Activities?
 ========================================================
-* 28 types of project technologies
+Simple model...
 
-    
-
-```
- [1] "HYDROLOGIC_RESTORATION" "EXOTIC_CONTROL"        
- [3] "FW_WETLANDS"            "MANGROVES"             
- [5] "SALTMARSH"              "PROTECTION_MANAGEMENT" 
- [7] "SEAGRASS_HABITAT"       "OYSTER_HABITAT"        
- [9] "ACQUISITION"            "BMP_WETLAND_TREATMENT" 
-[11] "BMP_BAFFLE_BOX"         "BMP_STORMWATER_POND"   
-[13] "BMP_MANAGEMENT"         "BMP_ON_SITE"           
-[15] "PS_TREATMENT"           "SEND_TO_WWTP"          
-[17] "BMP_ALUM_TREATMENT"     "BMP_TREATMENT_TRAIN"   
-[19] "UPLANDS"                "DREDGING"              
-[21] "EDUCATION"              "INCREASE_REUSE"        
-[23] "MANAGEMENT"             "ATMOSPHERIC_DEPOSITION"
-[25] "REGULATION"             "BMP_CDS_UNIT"          
-[27] "BMP_AGRICULTURAL"       "STREET_SWEEPING"       
-```
-
-
+Overall Workflow
+========================================================
+<img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2500px;"/>
 
 Data plyring
 ========================================================
@@ -625,6 +546,10 @@ Conditional distributions on **three-levels**:
 <img src="final_pres-figure/chlsaldst3.jpg" style="width: 2200px;">
 </div>
 
+Overall Workflow
+========================================================
+<img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2500px;"/>
+
 Bayesian Network
 ========================================================
 incremental: true
@@ -653,10 +578,17 @@ BN lets us evaluate likelihood of **potential outcomes** given **conditional dis
 
 Training Conditional Probability Tables
 ========================================================
-
 <div align="center">
-<img src="final_pres-figure/CPT_From_Data.jpg" style="width: 1000px;">
+<img src="final_pres-figure/chlsaldst3.jpg" style="width: 2000px;">
 </div>
+
+Training Conditional Probability Tables
+========================================================
+New figures.... small mod
+
+Training Conditional Probability Tables
+========================================================
+one slide per smal mod scenario
 
 Results Small Model
 ========================================================
@@ -664,20 +596,14 @@ Results Small Model
 <img src="final_pres-figure/SmallBNGeNIe.jpg" style="width: 1000px;">
 </div>
 
-Results Small Model
+Overall Workflow
+========================================================
+<img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2500px;"/>
+
+Guiding Restoration Decision Making?
 ========================================================
 
-Salinity
-<div align="center">
-<img src="final_pres-figure/Salinity.jpg" style="width: 3000px;">
-</div>
-
-***
-
-Chlorophyll
-<div align="center">
-<img src="final_pres-figure/Chlorophyll.jpg" style="width: 3000px;">
-</div>
+<img src="final_pres-figure/BNRestorationModel.jpg" alt="Drawing" style="width: 2000px;"/>
 
 Guiding Restoration Decision Making?
 ========================================================
@@ -719,4 +645,13 @@ Low-tech Data Synthesis
 
 <img src="final_pres-figure/Whiteboard_graphic.jpg" alt="Drawing" style="width: 800px;"/>
 
+Supplmental
+========================================================
 
+GitHub:
+
+Extra slides:
+
+Shiny:
+
+Jiggly plot:
