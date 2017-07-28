@@ -1,0 +1,68 @@
+---
+title: "Tampa Bay Chlorophyll-a Data"
+author: "Ed Sherwood <esherwood@tbep.org>"
+date: "July 27, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(lubridate)
+library(dplyr)
+library(RColorBrewer)
+library(leaflet)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+data(wqdat)
+data(wqstat)
+x <- wqdat
+x$year <- year(x$datetime)
+
+ext <- make_bbox(wqstat$lon, wqstat$lat, f = 0.2)
+map <- get_stamenmap(ext, zoom = 12, maptype = "toner-lite")
+map <- get_googlemap("tampa bay", zoom = 12, size = c(1000, 1000), scale = 2)
+    
+yr_mean <- x %>%
+            select(stat, year, chla) %>%
+            drop_na() %>% 
+            group_by(stat, year) %>% 
+            summarise(chla_mean = mean(chla))
+yr_mean <- full_join(yr_mean,wqstat,"stat")
+write.csv(yr_mean,file="yr_mean.csv")
+plotdata <- filter(yr_mean, year==2006)
+plotdata <- full_join(plotdata,wqstat,"stat")
+
+pbase <- ggmap(map) +
+  theme_bw() +
+  theme(
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank()
+  ) +
+  geom_point(data = plotdata, aes(x = lon, y = lat, size = chla_mean, color = chla_mean)) +
+  scale_color_gradient(high="darkgreen", low="lightgreen")
+pbase
+plotdata <- filter(Points, year==2006)
+qpal <- colorNumeric("RdYlBu", plotdata$chla_mean, n = 5)
+leaflet(plotdata) %>% 
+  addTiles() %>%
+#  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addCircleMarkers(~lon, ~lat, 
+                   popup = ~as.character(paste('WQ ',stat)),
+                   radius = ~chla_mean,
+                   color = ~qpal(chla_mean),
+                   stroke = FALSE,
+                   fillOpacity = 0.6,
+                   group = 'Water quality'
+                   ) %>%
+  addLegend(title="Chlorophyll-a", pal = qpal, values = ~chla_mean, labFormat = labelFormat(suffix = " ug/L"), opacity = 1)
+
+  addLegend(colors = c("green", "green", "green"), 
+                  labels = c(a, b, c), 
+                  title = "Chlorophyll-a (ug/L)")
+
+
+```
+

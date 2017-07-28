@@ -1,0 +1,11 @@
+name: tb_chla
+title: tb_chla
+account: esherwoo77
+server: tbeptech.org
+appId: 5
+bundleId: 28
+url: http://tbeptech.org:3939/content/5/
+when: 1501187822.36214
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: wqdat.RData|wqstat.RData
