@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Patricia Varela, Kathryn Ireland, Jessica Renee Henkel, Kirsten Dorans, Marcus Beck, Ed Sherwood
+By Kirsten Dorans, Kathryn Ireland, Ed Sherwood, Jessica Renee Henkel, Marcus Beck, Patricia Varela
 
 Deepwater Horizon Settlement Agreement
 ========================================================
@@ -34,7 +34,7 @@ Cumulative Effects of Restoration Activities?
 
 <img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
 
-Tampa Bay - from bad to good
+Tampa Bay - from gross to less gross
 ========================================================
 
 <img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 900px;"/>
