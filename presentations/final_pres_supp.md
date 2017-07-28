@@ -15,7 +15,7 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Kathryn Ireland, Ed Sherwood, Kirsten Dorans, Jessica Renee Henkel, Marcus Beck, Patricia Varela
+By Marcus Beck, Jessica Renee Henkel, Ed Sherwood, Kirsten Dorans, Patricia Varela, Kathryn Ireland
 
 Developing Restoration Dataset
 ========================================================

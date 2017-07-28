@@ -126,7 +126,7 @@
 .section .reveal h2,
 .section .reveal p {
    color: black;
-   margin-top: 50px;
+   margin-top: 10px;
 }
 
 .sub-section .reveal .state-background {
@@ -136,7 +136,7 @@
 .sub-section .reveal h2,
 .sub-section .reveal p {
   color: #63717B;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .reveal strong {
