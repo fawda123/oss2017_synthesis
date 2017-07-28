@@ -81,18 +81,17 @@ $$P\left(H \mid E\right) = \frac{P\left(E \mid H\right) \cdot P\left(H \right)}{
 <img src="final_pres-figure/GenericBN.jpg" style="width: 400x;">
 </div>
 
+Cumulative Effects of Restoration Activities?
+========================================================
+<p> </p>
+<img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
+
 Tampa Bay - from bad to good
 ========================================================
 
 <img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 900px;"/>
 ***
 <img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 415px;"/>
-
-
-Cumulative Effects of Restoration Activities?
-========================================================
-<p> </p>
-<img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
 Project goals
 ========================================================
@@ -943,6 +942,6 @@ GitHub: [https://github.com/fawda123/oss2017_synthesis](https://github.com/fawda
 
 Extra slides: [final_pres_supp](https://fawda123.github.io/oss2017_synthesis/presentations/final_pres_supp)
 
-Shiny: [http://tbeptech.org:3939/content/5/](http://tbeptech.org:3939/content/5/)
+Shiny: [http://tbeptech.org:3939/content/5/](http://tbeptech.org:3939/content/5/), [http://tbeptech.org:3939/content/6/](http://tbeptech.org:3939/content/6/)
 
 Jiggly plot: [bayes_network](https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html)
