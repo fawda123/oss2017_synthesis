@@ -50,14 +50,14 @@ leaflet(plotdata) %>%
   addTiles() %>%
 #  addProviderTiles(providers$CartoDB.Positron) %>% 
   addCircleMarkers(~lon, ~lat, 
-                   popup = ~as.character(paste('WQ ',stat)),
+                   popup = ~as.character(paste('WQ ',stat, ' = ', chla_mean, ' ug/L')),
                    radius = ~chla_mean,
                    color = ~qpal(chla_mean),
                    stroke = FALSE,
                    fillOpacity = 0.6,
                    group = 'Water quality'
                    ) %>%
-  addLegend(title="Chlorophyll-a", pal = qpal, values = ~chla_mean, labFormat = labelFormat(suffix = " ug/L"), opacity = 1)
+  addLegend(title="Chlorophyll-a", pal = qpal, values = ~chla_mean, labFormat =   labelFormat(suffix = " ug/L"), opacity = 1)
 
   addLegend(colors = c("green", "green", "green"), 
                   labels = c(a, b, c), 

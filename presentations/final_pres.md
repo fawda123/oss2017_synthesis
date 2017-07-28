@@ -15,16 +15,16 @@ aut <- c('Marcus Beck', 'Kirsten Dorans', 'Jessica Renee Henkel', 'Kathryn Irela
   sample %>% 
   paste(collapse = ', ')
 ```
-By Marcus Beck, Kathryn Ireland, Jessica Renee Henkel, Kirsten Dorans, Patricia Varela, Ed Sherwood
-  
+By Kirsten Dorans, Kathryn Ireland, Ed Sherwood, Jessica Renee Henkel, Marcus Beck, Patricia Varela
+
 Deepwater Horizon Settlement Agreement
 ========================================================
-<img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2000px;"/>
+<img src="prop_pres-figure/consent.jpg" alt="Drawing" style="width: 2300px;"/>
 
 $10B in Potential Restoration Activities
 ========================================================
-<div class="img-with-text">
-    <img src="final_pres-figure/RESTORE_Funding_chart.jpg" />
+<div class="img-with-text" align="center">
+    <img src="final_pres-figure/RESTORE_Funding_chart.jpg" style="width: 1000px;"/>
     <p><font size = "3">Graphic: eli-ocean.org</font></p>
 </div>
 
@@ -34,11 +34,16 @@ Cumulative Effects of Restoration Activities?
 
 <img src="final_pres-figure/Measuring_Effects_graphic.png" alt="Photo" style="width: 3000px;"/>
 
-Unique Problems --> Unique Solutions
+Tampa Bay - from gross to less gross
+========================================================
+
+<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 900px;"/>
+***
+<img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 415px;"/>
+
+Unique Problems -> Unique Solutions
 ========================================================
 <img src="final_pres-figure/SByBayes_Group.jpg" alt="Drawing" style="width: 2000px;"/>
-
-
 
 Bayesian Networks
 ========================================================
@@ -54,21 +59,9 @@ $$P\left(H \mid E\right) = \frac{P\left(E \mid H\right) \cdot P\left(H \right)}{
 <img src="final_pres-figure/GenericBN.jpg" style="width: 400x;">
 </div>
 
-Tampa Bay - from bad to good
-========================================================
-<div align="center">
-<div align="left">
-<img src="prop_pres-figure/TB_Algae.png" alt="Drawing" style="width: 800px;"/>
-</div>
-***
-
-<div align="right">
-<img src="final_pres-figure/post_rest_sh.jpg" alt="Drawing" style="width: 800px;"/>
-</div>
-</div>
-
 Cumulative Effects of Restoration Activities?
 ========================================================
+<p> </p>
 <img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
 Project goals
@@ -78,6 +71,7 @@ incremental: true
 <div align="center" class="vspace"><b><i>
 Can we use disparate data to prioritize future restoration projects aimed at improving water quality?
 </i></b></div>
+<p> </p>
 
 * **Synthesize** data in space and time to evaluate cumulative effects of restoration projects
 
@@ -89,7 +83,7 @@ Overall Workflow
 ========================================================
 <img src="final_pres-figure/WorkflowOverall.png" alt="Drawing" style="width: 2500px;"/>
 
-WQ Monitoring in Tampa Bay 
+WQ Monitoring in Tampa Bay
 ========================================================
 incremental: false
 <div align="center">
@@ -101,7 +95,7 @@ incremental: false
 * Time series, monthly step - ~500 obs. per site
 * Available as an EXCEL spreadsheet <ftp://ftp.epchc.org>
 
-TB Restoration Sites: Various Sources of Info
+TB Restoration Sites: Various Sources 
 ===============
 incremental: false
 
@@ -133,7 +127,7 @@ incremental: false
 
 ***
 * Tracking infrastructure improvements since ~1990s
-* Include habitat creation, enhancement and acquisitions
+* Includes stormwater treatment, industrial/domestic point source controls
 * <http://apdb.tbeptech.org>
 
 Overall Workflow
@@ -144,21 +138,19 @@ Developing Restoration Dataset
 ========================================================
 * Water Treatment Projects
   * Two Raw Datasets: <http://apdb.tbeptech.org>
-    * Descriptions of All WT Projects
-    * Names/location of Completed WT Projects
+  * Descriptions, names, location
   * dplyr:  combine dataset (*left_join*), subset (*filter*) to subbasins of interest, find WT projects not listed as complete for further investigation (*anti-join*)
-  
+
 
 ```
-# A tibble: 6 x 19
-  HeaderID                                 Project_Name      Bay_Segment
-     <int>                                        <chr>            <chr>
-1        8     Delany Creek Wetland Restoration Project Hillsborough Bay
-2       10               Cone Ranch Restoration Project Hillsborough Bay
-3       11       29th or 30th Street Outfall/ Mckay Bay Hillsborough Bay
-4       14              Palma Ceia Area Stormwater Pond Hillsborough Bay
-5       15                North Tampa Pond Enlargements Hillsborough Bay
-6       19 East Lake (Alum) Stormwater Retrofit Project Hillsborough Bay
+# A tibble: 5 x 19
+  HeaderID                             Project_Name      Bay_Segment
+     <int>                                    <chr>            <chr>
+1        8 Delany Creek Wetland Restoration Project Hillsborough Bay
+2       10           Cone Ranch Restoration Project Hillsborough Bay
+3       11   29th or 30th Street Outfall/ Mckay Bay Hillsborough Bay
+4       14          Palma Ceia Area Stormwater Pond Hillsborough Bay
+5       15            North Tampa Pond Enlargements Hillsborough Bay
 # ... with 16 more variables: Lead_Entity <chr>, Completion_Date <int>,
 #   TP_Reduction_lbs_yr <dbl>, TN_Reduction_lbs_yr <dbl>,
 #   TSS_Reduction_lbs_yr <int>, ProjectName <chr>,
@@ -214,7 +206,7 @@ Developing Restoration Dataset
 
 Developing Restoration Dataset
 ========================================================
-* Habitat Restoration Projects  
+* Habitat Restoration Projects
   * Finer classification: 9 unique habitat restoration technologies
 
 ```
@@ -243,6 +235,7 @@ Combined Restoration Data
 
 Cumulative Effects of Restoration Activities?
 ========================================================
+<p> </p>
 <img src="final_pres-figure/BNRestorationModel.JPG" alt="Drawing" style="width: 2000px;"/>
 
 Cumulative Effects of Restoration Activities?
@@ -264,8 +257,6 @@ incremental: true
 <div align="center">
 
 * Can we identify a change in water quality from restoration?
-* What data do we have?
-* Can we plyr the data to identify a signal?
 * Can we plyr the data as input to a BN?
 
 Data plyring
@@ -280,8 +271,8 @@ WQ and restoration sites
 
 ***
 
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
+* Can we identify a change in water quality from restoration?
+* Can we plyr the data as input to a BN?
 
 Data plyring
 ========================================================
@@ -294,8 +285,8 @@ WQ and restoration sites
 
 ***
 
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
+* Can we identify a change in water quality from restoration?
+* Can we plyr the data as input to a BN?
 * Consider an effect of restoration **site type**?
 
 Data plyring
@@ -309,27 +300,10 @@ WQ and restoration sites
 
 ***
 
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
+* Can we identify a change in water quality from restoration?
+* Can we plyr the data as input to a BN?
 * Consider an effect of restoration **site type**?
 * Consider **distance** of sites from water quality stations?
-
-Data plyring
-========================================================
-incremental: false
-
-WQ and restoration sites
-<div align="center">
-<img src="final_pres-figure/clomap4.jpg" style="width: 1000px;">
-</div>
-
-***
-
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
-* Consider an effect of restoration **site type**?
-* Consider **distance** of sites from water quality stations?
-* Consider a **cumulative effect**?
 
 Data plyring
 ========================================================
@@ -342,8 +316,8 @@ WQ and restoration sites
 
 ***
 
-* Can we plyr the data to identify a signal?
-* How can continuous water quality be linked to discrete restoration activites?
+* Can we identify a change in water quality from restoration?
+* Can we plyr the data as input to a BN?
 * Consider an effect of restoration **site type**?
 * Consider **distance** of sites from water quality stations?
 * Consider a **cumulative effect**?
@@ -400,7 +374,7 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 Data plyring
 ========================================================
 
-What do the data look like? For **one** water quality stations matched to **many**
+What do the data look like? For **one** water quality station matched to **many**
 restoration sites...
 
 WQ and restoration sites: **Temporal match**, **before/after**, **slice**
@@ -418,28 +392,6 @@ WQ and restoration sites: **Temporal match**, **before/after**, **slice**
 2     7 hab_bef 8.350187
 3     7 wtr_aft 8.053273
 4     7 wtr_bef 8.129733
-```
-
-Data plyring
-========================================================
-
-What do the data look like? For **one** water quality station matched to **many**
-restoration sites...
-
-WQ and restoration sites: **Temporal match**, **before/after**, **slice**
-<div align="center">
-<img src="final_pres-figure/tmplo3.jpg" style="width: 2000px;">
-</div>
-
-
-```
-# A tibble: 4 x 4
-   stat     hab     wtr     cval
-  <int>  <fctr>  <fctr>    <dbl>
-1     7 hab_aft wtr_aft 8.154229
-2     7 hab_aft wtr_bef 8.192459
-3     7 hab_bef wtr_aft 8.201730
-4     7 hab_bef wtr_bef 8.239960
 ```
 
 Data plyring
@@ -506,7 +458,7 @@ Data plyring
 ========================================================
 incremental: true
 
-* In other words, what is the **conditional distribution** of chlorophyll given **restoration type** and **before/after** effect?  
+* In other words, what is the **conditional distribution** of chlorophyll given **restoration type** and **before/after** effect?
 
 * Similar to a **two-way** ANOVA...
 
@@ -566,7 +518,7 @@ incremental: true
 
 $$ Chl \sim\ f\left(Water \space\ treatment \times Habitat \space\ restoration \times Salinity \right)$$
 
-* In the **Bayesian** framework - probability of an event depends on occurrence of other events 
+* In the **Bayesian** framework - probability of an event depends on occurrence of other events
 
 $$ P\left(Chl \mid Event\right) = \frac{P\left(Event \mid Chl\right) \cdot P\left(Chl \right)}{P \left(Event\right)}$$
 
@@ -646,12 +598,14 @@ Guiding Restoration Decision Making?
 
 <img src="final_pres-figure/Idealic_Bayesian_Networks5.jpg" alt="Drawing" style="width: 2000px;"/>
 
-Lessons Learned and Next Steps:
+Lessons Learned
 ========================================================
 
 
-rPres is for masochists
-
+<div align="center">
+<img src="final_pres-figure/rpreshex.png" style="width: 300px;">
+</div>
+***
 <div align="center">
 <img src="final_pres-figure/hex.png" style="width: 300px;">
 </div>
@@ -668,6 +622,6 @@ GitHub: [https://github.com/fawda123/oss2017_synthesis](https://github.com/fawda
 
 Extra slides: [final_pres_supp](https://fawda123.github.io/oss2017_synthesis/presentations/final_pres_supp)
 
-Shiny: [http://tbeptech.org:3939/content/5/](http://tbeptech.org:3939/content/5/)
+Shiny: [http://tbeptech.org:3939/content/5/](http://tbeptech.org:3939/content/5/), [http://tbeptech.org:3939/content/6/](http://tbeptech.org:3939/content/6/)
 
 Jiggly plot: [bayes_network](https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html)

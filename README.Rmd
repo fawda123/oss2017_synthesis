@@ -31,6 +31,12 @@ Data aggregation: <https://fawda123.github.io/oss2017_synthesis/tbrest>
 
 Final presentation: <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres>
 
+Extra slides: <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres_supp>
+
+Shiny: <http://tbeptech.org:3939/content/5/>, <http://tbeptech.org:3939/content/6/>
+
+Jiggly plot: <https://fawda123.github.io/oss2017_synthesis/presentations/final_pres-figure/bayes_network.html>
+
 ### Repository info
 
 Folders:
