@@ -11,24 +11,24 @@ library(shiny)
 library(leaflet)
 library(RColorBrewer)
 plotdata <-read.csv("yr_mean.csv")
-qpal <- colorNumeric("Greens", plotdata$chla_mean, n = 5)
+qpal <- colorNumeric("Greens", as.integer(plotdata$chla_mean), n = 5)
 
 shinyServer(function(input, output, session) {
   filteredData <- reactive({
-    plotdata <- plotdata[plotdata$year==input$year , ]
+    plotdata <- plotdata[plotdata$yr==input$year , ]
     })
 #  colorpal <- reactive({
 #    colorNumeric(input$colors, plotdata$chla_mean)
 #  })
   output$map <- renderLeaflet({
     leaflet(plotdata) %>% 
-      addTiles() %>% 
+      #addTiles() %>% 
+      addProviderTiles(providers$CartoDB.Positron) %>%
       fitBounds(~min(lon), ~min(lat), ~max(lon), ~max(lat))
-      #  addProviderTiles(providers$CartoDB.Positron) %>% 
   })
   observe({
   leafletProxy("map", data = filteredData()) %>%
-        clearShapes() %>%
+    clearMarkers() %>%
   
     addCircleMarkers(~lon, ~lat, 
                        popup = ~as.character(paste('WQ ',stat, ' = ', chla_mean, ' ug/L')),

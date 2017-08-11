@@ -1,0 +1,74 @@
+---
+title: "Subset_EPCHC_Raw_Data"
+author: "Ed Sherwood <esherwood@epchc.org>"
+date: "August 11, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(readr)
+library(tidyverse)
+library(lubridate)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+# raw
+wqdat_raw <- read_csv("../data-raw/epchc_clean_data_07162017.csv", 
+    col_types = cols(Cond_Bottom_umho_cm = col_double(), 
+        Cond_Mid_umho_cm = col_double(), 
+        Cond_Top_umho_cm = col_double(), 
+        DIN = col_double(), DIN_DIP_RATIO = col_double(), 
+        DO_Bottom_mg_L = col_double(), DO_Sat_Bottom__ = col_double(), 
+        DO_Sat_Mid__ = col_double(), DO_Sat_Top__ = col_double(), 
+        DO_Top_mg_L = col_double(), DUM_DATE = col_date(format = "%d%b%Y"), 
+        N_KJEL = col_double(), N_NH3 = col_double(), 
+        Sal_Bottom_ppth = col_double(), Sal_Top_ppth = col_double(), 
+        SampleTime = col_date(format = "%d%b%Y"), 
+        TN_TOTAL = col_double(), TN_TP_RATIO = col_double(), 
+        TSS = col_double(), Temp_Water_Bottom_degC = col_double(), 
+        Temp_Water_Mid_degC = col_double(), 
+        Temp_Water_Top_degC = col_double(), 
+        chl_a = col_double(), color = col_double(), 
+        pH_Bottom = col_double(), pH_Top = col_double(), 
+        turb_ntu = col_double()))
+View(wqdat_raw)
+
+wqdat <- wqdat_raw %>% 
+  rename(
+    yr = YEAR,
+    mo = month,
+    dttm = SampleTime,
+    stat = epchc_station, 
+    lat = Latitude, 
+    lon = Longitude,
+    sallo = Sal_Bottom_ppth, 
+    salmd = Sal_Mid_ppth,
+    salhi = Sal_Top_ppth, 
+    dolo = DO_Bottom_mg_L,
+    domd = DO_Mid_mg_L, 
+    dohi = DO_Top_mg_L,
+    chla = chl_a
+  ) %>% 
+  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
+  gather('var', 'val', sallo:chla) %>% 
+  mutate(val = as.numeric(val)) %>% 
+  spread('var', 'val') %>% 
+  rowwise() %>%
+  mutate(
+    sal = mean(c(sallo, salmd, salhi), na.rm = TRUE),
+    do = mean(c(dolo, domd, dohi), na.rm = TRUE)
+  )
+
+yr_mean <- wqdat %>%
+            select(stat, yr, chla) %>%
+            drop_na() %>% 
+            group_by(stat, yr) %>% 
+            summarise(chla_mean = mean(chla))
+yr_mean <- full_join(yr_mean,wqstat,"stat")
+write.csv(yr_mean,file="yr_mean.csv")
+
+```
+
