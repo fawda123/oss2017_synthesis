@@ -21,7 +21,8 @@ shinyUI(bootstrapPage(
                             min = 1974, 
                             max = 2016,
                             value = 1974, 
-                            step = 1
+                            step = 1,
+                            sep = ""
                 ),
                 #selectInput("colors", "Color Scheme",
                 #            rownames(subset(brewer.pal.info, category %in% c("seq", "div")))
