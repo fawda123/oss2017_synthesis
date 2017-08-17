@@ -23,7 +23,7 @@ shinyServer(function(input, output, session) {
   output$map <- renderLeaflet({
     leaflet(plotdata) %>% 
       #addTiles() %>% 
-      addProviderTiles(providers$CartoDB.Positron) %>%
+      addProviderTiles(providers$Esri.WorldImagery) %>%
       fitBounds(~min(lon), ~min(lat), ~max(lon), ~max(lat))
   })
   observe({
