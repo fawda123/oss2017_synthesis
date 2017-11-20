@@ -1,4 +1,5 @@
 # process the wq data, save as station data and station location files
+library(tidyverse)
 
 # raw
 wqdat_raw <- read_csv('data-raw/epchc_clean_data_07162017.csv')
@@ -19,10 +20,11 @@ wqdat <- wqdat_raw %>%
     dolo = DO_Bottom_mg_L,
     domd = DO_Mid_mg_L, 
     dohi = DO_Top_mg_L,
-    chla = chl_a
+    chla = chl_a, 
+    tn = TN_TOTAL
   ) %>% 
-  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla) %>% 
-  gather('var', 'val', sallo:chla) %>% 
+  select(stat, yr, mo, dttm, lat, lon, sallo, salmd, salhi, dolo, domd, dohi, chla, tn) %>% 
+  gather('var', 'val', sallo:tn) %>% 
   mutate(val = as.numeric(val)) %>% 
   spread('var', 'val') %>% 
   rowwise() %>%
